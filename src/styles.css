@@ -4,7 +4,8 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-color:lightcyan;
+    background-color:rgba(0, 0, 0, 0.949);
+    background-image: url("/assets/CPC 3 BG.jpg");
   }
   
   .container {
@@ -15,6 +16,24 @@ body {
     height: 100vh;
   }
   
+  header {
+    width:100%;
+    height: 200px;
+    background-color: #000d4200;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    
+  }
+.home-logo {
+  width:200px;
+}
+
+.home-logo:hover {
+  opacity: .45;
+  cursor: pointer;
+}
+
   .logo {
     margin-bottom: 20px;
   }
@@ -33,10 +52,13 @@ body {
     width: 200px;
     height: 200px;
     margin: 10px;
-    border-radius: 40%;
-    background-color: #5f7fff;
+    border-radius: 20px;
+    background-color: #000d427c;
+    border-style:solid;
+    border-color:lightblue;
     color: white;
-    font-size: 18px;
+    font-size: 16px;
+    text-transform: uppercase;
     font-weight: bold;
     text-decoration: none;
     transition: background-color 0.3s ease;
