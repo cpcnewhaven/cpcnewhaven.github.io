@@ -1,5 +1,11 @@
 /*styles*/
 
+:root {
+  --cpcBlue1: #1cb0ff;
+  --cpcBlueBorder : navy;
+}
+
+
 body {
     margin: 0;
     padding: 0;
@@ -67,6 +73,25 @@ body {
   .button:hover {
     background-color: #4567aa;
   }
+
+  .live-button {
+    display: block;
+    background-color: var(--cpcBlue1);
+    color: var(--cpcBlueBorder);
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    min-width:200px;
+    font-weight:700;
+    border-style:dotted;
+    border-color: var(--cpcBlueBorder);
+    border-width:1px;
+}
+
+.live-button:hover {
+    opacity:.5;
+    
+}
   
   @media (max-width: 600px) {
     .button {
@@ -74,3 +99,5 @@ body {
       height: 150px;
     }
   }
+
+
