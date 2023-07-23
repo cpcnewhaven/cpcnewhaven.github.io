@@ -38,18 +38,155 @@
   <header>
   <a href="../index.html"><img src="../assets/CPC LOGO.png" alt="Logo" class="home-logo"></a>
 </header>
+
+ <style>
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+    background-color: #f2f2f2;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+}
+
+.magazine-container {
+    max-width: 800px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    margin: 0 auto;
+}
+
+.magazine-card {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.magazine-section h2 {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.youtube-button {
+    display: block;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: #aaaaaa;
+    cursor: pointer;
+}
+
+ </style>
+    <main>
+      <div class="magazine-container">
+          <div class="magazine-card">
+              <div class="magazine-section">
+                  <h2>Sunday Worship</h2>
+                  <p>10:30am</p>
+              </div>
+              <div class="magazine-section">
+                  <button class="youtube-button" onclick="openYouTubeModal()">Link to View on YouTube</button>
+              </div>
+          </div>
+
+          <div class="magazine-card">
+              <div class="magazine-section">
+                  <h2>Sunday Bulletin 7/23/23</h2>
+              </div>
+          </div>
+
+          <div class="magazine-card">
+              <div class="magazine-section">
+                  <h2>Online Giving</h2>
+                  <p>(or text GIVE to 860-467-0010)</p>
+              </div>
+          </div>
+
+          <div class="magazine-card">
+              <div class="magazine-section">
+                  <h2>Submit a Request for Prayer or a Pastoral Visit</h2>
+              </div>
+          </div>
+      </div>
+
+      <div id="youtubeModal" class="modal">
+          <div class="modal-content">
+              <span class="close" onclick="closeYouTubeModal()">&times;</span>
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/YOUR_YOUTUBE_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+          </div>
+      </div>
+  </main> 
+  <script>
+    // Function to open YouTube modal
+function openYouTubeModal() {
+    var modal = document.getElementById("youtubeModal");
+    modal.style.display = "block";
+}
+
+// Function to close YouTube modal when clicking outside the modal content
+window.onclick = function(event) {
+    var modal = document.getElementById("youtubeModal");
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+// Function to close YouTube modal when clicking on the close button (x)
+function closeYouTubeModal() {
+    var modal = document.getElementById("youtubeModal");
+    modal.style.display = "none";
+}
+
+  </script>
   <div class="container">
     
     <div class="buttons">
-      <a href="./live.html" class="button">Live Stream</a>
-      <a href="latest-podcast.html" class="button">Latest Podcast</a>
-      <a href="weekly-announcements.html" class="button">Weekly Announcements</a>
-      <a href="archives.html" class="button">CPC Pedia</a>
+      <a href="/src/live.html" class="button">Live Stream</a>
+      <a href="/src/latest-podcast.html" class="button">Latest Podcast</a>
+      <a href="/src/weekly.html" class="button">Weekly Announcements</a>
+      <a href="/src/lifegroups.html" class="button">Lifegroups</a>
+      <a href="/src/archives.html" class="button">CPC Pedia</a>
     </div>
   </div>
-  <main>
-    This is where the Main Live Content Will Go 
-  </main>
   <div class="full-footer">
     <div class="footer-inner-wrap">
     <p>
