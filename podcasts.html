@@ -49,9 +49,9 @@
                         episode => {
                             const episodeElement = document.createElement("div");
                             episodeElement.classList.add("episode");
-                            episodeElement.setAttribute("data-name", episode.name);
-                            episodeElement.setAttribute("data-podcast", episode.podcast);
-                            episodeElement.setAttribute("data-show", episode.show)
+                            episodeElement.setAttribute("Name", episode.name);
+                            episodeElement.setAttribute("Podcast", episode.podcast);
+                            episodeElement.setAttribute("Show", episode.show)
 
                             episodeElement.innerHTML = `
                                 <h2>${episode.name}</h2>
