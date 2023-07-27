@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Podcast Episodes</title>
+    <style>
+        /* Add your CSS styles here */
+    </style>
+</head>
+<body>
+    <h1>Podcast Episodes</h1>
+    <div>
+        <label for="hostFilter">Filter by Show:</label>
+        <input type="text" id="showFilter">
+    </div>
+    <div>
+        <label for="showFilter">Filter by Host/Speaker:</label>
+        <input type="text" id="hostFilter">
+    </div>
+    <div>
+        <label for="topicFilter">Filter by Topic:</label>
+        <input type="text" id="topicFilter">
+    </div>
+    <div>
+        <label for="dateFilter">Filter by Date:</label>
+        <input type="date" id="dateFilter">
+    </div>
+    <div id="episodeList">
+        <!-- Podcast episodes will be dynamically added here -->
+    </div>
+
+    <script>
+        // JavaScript code to fetch and display podcast episodes
+        // and implement filtering
+        const episodeList = document.getElementById("episodeList");
+        const hostFilter = document.getElementById("hostFilter");
+        const showFilter = document.getElementById("showFilter");
+        const topicFilter = document.getElementById("topicFilter");
+        const dateFilter = document.getElementById("dateFilter");
+
+        // Function to fetch podcast episodes from your JSON data or backend
+        function fetchPodcastEpisodes() {
+            // Implement your code to fetch the episodes from the server or JSON data
+            // and populate the episodeList with the retrieved data
+        }
+
+        // Function to apply filters to the episodes
+        function applyFilters() {
+            const episodes = document.querySelectorAll(".episode");
+            const hostValue = hostFilter.value.toLowerCase();
+            const showValue = showFilter.value.toLowerCase();
+            const topicValue = topicFilter.value.toLowerCase();
+            const dateValue = dateFilter.value;
+
+            episodes.forEach(function(episode) {
+                const host = episode.getAttribute("data-host").toLowerCase();
+                const show = episode.getAttribute("data-show").toLowerCase();
+                const topic = episode.getAttribute("data-topic").toLowerCase();
+                const date = episode.getAttribute("data-date");
+
+                if (
+                    host.includes(hostValue) &&
+                    show.includes(showValue) &&
+                    topic.includes(topicValue) &&
+                    (dateValue === "" || date === dateValue)
+                ) {
+                    episode.style.display = "block"; // Show episode
+                } else {
+                    episode.style.display = "none"; // Hide episode
+                }
+            });
+        }
+
+        // Event listeners for the filter inputs
+        hostFilter.addEventListener("input", applyFilters);
+        showFilter.addEventListener("input", applyFilters);
+        topicFilter.addEventListener("input", applyFilters);
+        dateFilter.addEventListener("change", applyFilters);
+
+        // Fetch and display podcast episodes when the page loads
+        fetchPodcastEpisodes();
+    </script>
+</body>
+</html>
