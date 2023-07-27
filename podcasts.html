@@ -41,7 +41,31 @@
         function fetchPodcastEpisodes() {
             // Implement your code to fetch the episodes from the server or JSON data
             // and populate the episodeList with the retrieved data
+
+            fetch("podcasts.json")
+                .then(response => response.json())
+                .then(data => {
+                    data.forEach(
+                        episode => {
+                            const episodeElement = document.createElement("div");
+                            episodeElement.classList.add("episode");
+                            episodeElement.setAttribute("data-name", episode.name);
+                            episodeElement.setAttribute("data-podcast", episode.podcast);
+                            episodeElement.setAttribute("data-show", episode.show)
+
+                            episodeElement.innerHTML = `
+                                <h2>${episode.name}</h2>
+                                <p>${episode.podcast}</p>
+                                <p>${episode.show}</p>
+                            `;
+
+                            episodeList.appendChild(episodeElement);
+                        }
+                    );                    
+                })
+                .catch(error => console.error("Error fetching data:", error));
         }
+        fetchPodcastEpisodes();
 
         // Function to apply filters to the episodes
         function applyFilters() {
