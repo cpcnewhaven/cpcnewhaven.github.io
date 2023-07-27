@@ -9,11 +9,17 @@
 <body>
     <h1>Podcast Episodes</h1>
     <div>
-        <label for="hostFilter">Filter by Show:</label>
-        <input type="text" id="showFilter">
+        <label for="podcastFilter">Filter by Podcast:</label>
+		<select id="podcastFilter">
+			<option value="">All</option>
+			<option value="the-sunday-sermon">The Sunday Sermon</option>
+			<option value="school-of-discipleship">School of Discipleship</option>
+			<option value="compline-homilies">Compline</option>
+			<option value="smoking-theologians">Smokin' Theologians</option>
+		</select>
     </div>
     <div>
-        <label for="showFilter">Filter by Host/Speaker:</label>
+        <label for="Filter">Filter by Host/Speaker:</label>
         <input type="text" id="hostFilter">
     </div>
     <div>
@@ -25,7 +31,11 @@
         <input type="date" id="dateFilter">
     </div>
     <div id="episodeList">
-        <!-- Podcast episodes will be dynamically added here -->
+        <table>
+			<tr><th>Podcast</th><th>Show</th><th>Series</th><th>Episode</th><th>Name</th></tr>
+		<!-- Podcast episodes will be dynamically added here -->
+			</table>
+				
     </div>
 
     <script>
@@ -49,15 +59,32 @@
                         episode => {
                             const episodeElement = document.createElement("div");
                             episodeElement.classList.add("episode");
-                            episodeElement.setAttribute("Name", episode.name);
-                            episodeElement.setAttribute("Podcast", episode.podcast);
-                            episodeElement.setAttribute("Show", episode.show)
+							episodeElement.setAttribute("data-podcast", episode.Podcast);
+                            episodeElement.setAttribute("data-show", episode.Show)
+                            episodeElement.setAttribute("data-name", episode.Name);
+							episodeElement.setAttribute("data-series", episode.Series);
+							episodeElement.setAttribute("data-episode", episode.Episode);
+							episodeElement.setAttribute("data-scripture", episode.Scripture);
+							episodeElement.setAttribute("data-description", episode.Description);
+							episodeElement.setAttribute("data-artwork", episode['Episode Artwork']);
+                            episodeElement.setAttribute("data-spotify",episode.Spotify);
 
                             episodeElement.innerHTML = `
-                                <h2>${episode.name}</h2>
-                                <p>${episode.podcast}</p>
-                                <p>${episode.show}</p>
-                            `;
+								<tr>
+									<td>${episode.Podcast}</td>
+									<td>Show:${episode.Show}</td>
+									<td>${episode.Series}</td>
+									<td>${episode.Episode}</td>
+									<td>${episode.Name}</td>
+								</tr>
+								<tr>
+									<td>${episode.Scripture}</td>
+									<td>${episode.Description}</td>
+									<td>${episode.Artwork}</td>
+									<td>${episode.Spotify}</td>
+									<td></td>
+								</tr>
+							`;
 
                             episodeList.appendChild(episodeElement);
                         }
@@ -65,28 +92,17 @@
                 })
                 .catch(error => console.error("Error fetching data:", error));
         }
-        fetchPodcastEpisodes();
+
 
         // Function to apply filters to the episodes
         function applyFilters() {
             const episodes = document.querySelectorAll(".episode");
-            const hostValue = hostFilter.value.toLowerCase();
-            const showValue = showFilter.value.toLowerCase();
-            const topicValue = topicFilter.value.toLowerCase();
-            const dateValue = dateFilter.value;
+            const podcastValue = podcastFilter.value.toLowerCase();
 
             episodes.forEach(function(episode) {
-                const host = episode.getAttribute("data-host").toLowerCase();
-                const show = episode.getAttribute("data-show").toLowerCase();
-                const topic = episode.getAttribute("data-topic").toLowerCase();
-                const date = episode.getAttribute("data-date");
-
-                if (
-                    host.includes(hostValue) &&
-                    show.includes(showValue) &&
-                    topic.includes(topicValue) &&
-                    (dateValue === "" || date === dateValue)
-                ) {
+                const podcast = episode.getAttribute("data-podcast").toLowerCase();
+                
+                if (podcast.includes(podcastValue)) {
                     episode.style.display = "block"; // Show episode
                 } else {
                     episode.style.display = "none"; // Hide episode
@@ -95,11 +111,8 @@
         }
 
         // Event listeners for the filter inputs
-        hostFilter.addEventListener("input", applyFilters);
-        showFilter.addEventListener("input", applyFilters);
-        topicFilter.addEventListener("input", applyFilters);
-        dateFilter.addEventListener("change", applyFilters);
-
+        podcastFilter.addEventListener("change", applyFilters);
+ 
         // Fetch and display podcast episodes when the page loads
         fetchPodcastEpisodes();
     </script>
