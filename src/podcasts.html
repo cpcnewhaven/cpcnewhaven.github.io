@@ -5,7 +5,8 @@
     <style>
     /* styles.css */
     body {
-        background-image: linear-gradient(to right, #1e3c72, #2a5298);
+        background-image: url(../assets/CPC\ 3a\ BG.jpg);
+        background-attachment: fixed;
         color: #EEEBDD;
         font-family: Arial, sans-serif;
         margin: 0;
@@ -41,13 +42,13 @@
         background-color: #0040ff;
     }
     a {
-        color: #1DB954;
+        color: #1d9ab9;
     }
     /* Neumorphism */
     .neumorphic {
         border-radius: 1rem;
-        background: #292e35;
-        box-shadow:  20px 20px 60px #1e2329, -20px -20px 60px #364349;
+        /*background: #292e35;*/
+        /*box-shadow:  20px 20px 60px #1e2329, -20px -20px 60px #364349;*/
         width: 90%;
         margin: 20px auto;
     }
@@ -60,9 +61,26 @@
             width: 98%;
         }
     }
+
+
+    .home-logo {
+        width:200px;
+        text-align:center;
+        margin:0px;
+    }
+
+    header {
+        display:flex;
+        justify-content: center;
+        margin:0px;
+    }
+
     </style>
 </head>
 <body>
+    <header>
+    <img src="../assets/CPC LOGO.png" alt="Logo" class="home-logo">
+    </header>
     <h1>Podcast Episodes</h1>
     <div class="filter-container neumorphic">
         <div>
@@ -93,6 +111,76 @@
         <!-- Podcast episodes will be dynamically added here -->
         </table>
     </div>
+
+    <!-- STYLES FOR PODCAST SCRIPT -->
+    <style>
+        /* ... existing CSS ... */
+    
+        .episodeCard {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 2em;
+            padding: 1em;
+            background: #f7f7f7;
+            border-radius: 1em;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+        }
+    
+        .episodeHeader {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1em;
+        }
+    
+        .podcastArtwork {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+    
+        .episodeDetails {
+            text-align: center;
+            margin: 1em 0;
+        }
+    
+        .episodeDescription {
+            text-align: justify;
+        }
+    
+        /* Responsiveness */
+        @media (max-width: 600px) {
+            .episodeCard {
+                width: 90%;
+            }
+    
+            .podcastArtwork {
+                width: 80px;
+                height: 80px;
+            }
+        }
+
+    /*Episode Styles*/
+
+    /*text styles*/
+    .textShow {
+        color:rgb(255, 255, 255);
+        text-transform: uppercase;
+        font-weight:700;
+
+    }
+
+    .textEpName {
+        font-size:32px;
+        line-height:1;
+        color:white;
+    }
+
+   
+    </style>
+    
     <script>
         // JavaScript code to fetch and display podcast episodes
         // and implement filtering
@@ -126,12 +214,12 @@
                             episodeElement.setAttribute("data-spotify",episode.Spotify);
 
                             episodeElement.innerHTML = `
-								<tr>
+								<tr class="episodeTR">
 									<td><img class="podcastArtwork" src="${episode.Artwork}">${episode.Podcast}</td>
-									<td>${episode.Show}</td>
+									<td><p class="textShow">${episode.Show}</p></td>
 									<td>${episode.Series}</td>
 									<td>${episode.Episode}</td>
-									<td>${episode.Name}</td>
+									<td><p class="textEpName">${episode.Name}</p></td>
 								</tr>
 								<tr>
 									<td>${episode.Scripture}</td>
@@ -179,5 +267,16 @@
         // Fetch and display podcast episodes when the page loads
         fetchPodcastEpisodes();
     </script>
+
+
+<style>
+     /* EPISODE LAYOUT STYLES */
+     .episodeTR {
+        background-color:red;
+        border-style:solid;
+        border-color:white;
+    }
+    
+</style>
 </body>
 </html>
