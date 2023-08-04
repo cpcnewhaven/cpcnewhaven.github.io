@@ -94,7 +94,90 @@
         </table>
     </div>
     <script>
-    // The rest of your JavaScript code goes here
+        // JavaScript code to fetch and display podcast episodes
+        // and implement filtering
+        const episodeList = document.getElementById("episodeList");
+        const hostFilter = document.getElementById("hostFilter");
+        const showFilter = document.getElementById("showFilter");
+        const topicFilter = document.getElementById("topicFilter");
+        const dateFilter = document.getElementById("dateFilter");
+
+        // Function to fetch podcast episodes from your JSON data or backend
+        function fetchPodcastEpisodes() {
+            // Implement your code to fetch the episodes from the server or JSON data
+            // and populate the episodeList with the retrieved data
+
+            fetch("podcasts.json")
+                .then(response => response.json())
+                .then(data => {
+                    data.forEach(
+                        episode => {
+                            const episodeElement = document.createElement("div");
+                            episodeElement.classList.add("episode");
+							episodeElement.setAttribute("data-podcast", episode.Podcast);
+                            episodeElement.setAttribute("data-show", episode.Show)
+                            episodeElement.setAttribute("data-name", episode.Name);
+							episodeElement.setAttribute("data-series", episode.Series);
+							episodeElement.setAttribute("data-episode", episode.Episode);
+							episodeElement.setAttribute("data-speaker", episode.Speaker);
+							episodeElement.setAttribute("data-scripture", episode.Scripture);
+							episodeElement.setAttribute("data-description", episode.Description);
+							episodeElement.setAttribute("data-artwork", episode.Artwork);
+                            episodeElement.setAttribute("data-spotify",episode.Spotify);
+
+                            episodeElement.innerHTML = `
+								<tr>
+									<td><img class="podcastArtwork" src="${episode.Artwork}">${episode.Podcast}</td>
+									<td>${episode.Show}</td>
+									<td>${episode.Series}</td>
+									<td>${episode.Episode}</td>
+									<td>${episode.Name}</td>
+								</tr>
+								<tr>
+									<td>${episode.Scripture}</td>
+									<td>${episode.Description}</td>
+									
+									<td><a href="${episode.Spotify}">[Spotify]</a></td>
+									<td></td>
+								</tr>
+							`;
+
+                            episodeList.appendChild(episodeElement);
+                        }
+                    );                    
+                })
+                .catch(error => console.error("Error fetching data:", error));
+        }
+
+
+        // Function to apply filters to the episodes
+        function applyFilters() {
+            const episodes = document.querySelectorAll(".episode");
+            const podcastValue = podcastFilter.value.toLowerCase();
+			const hostValue = hostFilter.value.toLowerCase();
+
+            episodes.forEach(function(episode) {
+                const podcast = episode.getAttribute("data-podcast").toLowerCase();
+				const host = episode.getAttribute("data-speaker").toLowerCase();
+                
+                if (
+					podcast.includes(podcastValue) && 
+					host.includes(hostValue)
+				) 
+				{
+                    episode.style.display = "block"; // Show episode
+                } else {
+                    episode.style.display = "none"; // Hide episode
+                }
+            });
+        }
+
+        // Event listeners for the filter inputs
+        podcastFilter.addEventListener("change", applyFilters);
+		hostFilter.addEventListener("change", applyFilters);
+ 
+        // Fetch and display podcast episodes when the page loads
+        fetchPodcastEpisodes();
     </script>
 </body>
 </html>
