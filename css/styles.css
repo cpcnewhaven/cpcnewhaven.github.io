@@ -1,0 +1,70 @@
+body {
+        background-image: url(../assets/CPC\ 3a\ BG.jpg);
+        background-attachment: fixed;
+        color: #EEEBDD;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    h1 {
+        padding: 20px;
+        text-align: center;
+        color: #f7f7f7;
+    }
+    .filter-container, #episodeList {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+    .filter-container > div {
+        margin: 10px 0;
+    }
+    #episodeList {
+        overflow-x: auto;
+    }
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+    td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+    tr:nth-child(even) {
+        background-color: #0040ff;
+    }
+    a {
+        color: #1d9ab9;
+    }
+    /* Neumorphism */
+    .neumorphic {
+        border-radius: 1rem;
+        /*background: #292e35;*/
+        /*box-shadow:  20px 20px 60px #1e2329, -20px -20px 60px #364349;*/
+        width: 90%;
+        margin: 20px auto;
+    }
+    /* Responsiveness */
+    @media (max-width: 600px) {
+        table {
+            font-size: 0.8em;
+        }
+        .neumorphic {
+            width: 98%;
+        }
+    }
+
+
+    .home-logo {
+        width:200px;
+        text-align:center;
+        margin:0px;
+    }
+
+    header {
+        display:flex;
+        justify-content: center;
+        margin:0px;
+    }

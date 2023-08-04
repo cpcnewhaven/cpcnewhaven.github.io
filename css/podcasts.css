@@ -1,0 +1,45 @@
+        .episodeCard {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 2em;
+            padding: 1em;
+            background: #f7f7f7;
+            border-radius: 1em;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+        }
+    
+        .episodeHeader {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1em;
+        }
+    
+        .podcastArtwork {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+    
+        .episodeDetails {
+            text-align: center;
+            margin: 1em 0;
+        }
+    
+        .episodeDescription {
+            text-align: justify;
+        }
+    
+        /* Responsiveness */
+        @media (max-width: 600px) {
+            .episodeCard {
+                width: 90%;
+            }
+    
+            .podcastArtwork {
+                width: 80px;
+                height: 80px;
+            }
+        }

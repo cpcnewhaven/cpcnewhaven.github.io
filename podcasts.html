@@ -2,84 +2,14 @@
 <html>
 <head>
     <title>Podcast Episodes</title>
-    <style>
-    /* styles.css */
-    body {
-        background-image: url(../assets/CPC\ 3a\ BG.jpg);
-        background-attachment: fixed;
-        color: #EEEBDD;
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-    }
-    h1 {
-        padding: 20px;
-        text-align: center;
-        color: #f7f7f7;
-    }
-    .filter-container, #episodeList {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 20px;
-    }
-    .filter-container > div {
-        margin: 10px 0;
-    }
-    #episodeList {
-        overflow-x: auto;
-    }
-    table {
-        border-collapse: collapse;
-        width: 100%;
-    }
-    td, th {
-        border: 1px solid #dddddd;
-        text-align: left;
-        padding: 8px;
-    }
-    tr:nth-child(even) {
-        background-color: #0040ff;
-    }
-    a {
-        color: #1d9ab9;
-    }
-    /* Neumorphism */
-    .neumorphic {
-        border-radius: 1rem;
-        /*background: #292e35;*/
-        /*box-shadow:  20px 20px 60px #1e2329, -20px -20px 60px #364349;*/
-        width: 90%;
-        margin: 20px auto;
-    }
-    /* Responsiveness */
-    @media (max-width: 600px) {
-        table {
-            font-size: 0.8em;
-        }
-        .neumorphic {
-            width: 98%;
-        }
-    }
-
-
-    .home-logo {
-        width:200px;
-        text-align:center;
-        margin:0px;
-    }
-
-    header {
-        display:flex;
-        justify-content: center;
-        margin:0px;
-    }
-
-    </style>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/podcasts.css">
+    <link rel="stylesheet" href="css/episodes.css">
+    <link rel="stylesheet" href="css/episodeLayout.css">
 </head>
 <body>
     <header>
-    <img src="../assets/CPC LOGO.png" alt="Logo" class="home-logo">
+    <img src="assets/CPC LOGO.png" alt="Logo" class="home-logo">
     </header>
     <h1>Podcast Episodes</h1>
     <div class="filter-container neumorphic">
@@ -87,23 +17,43 @@
             <label for="podcastFilter">Filter by Podcast:</label>
             <select id="podcastFilter">
                 <option value="">All</option>
-                <option value="the-sunday-sermon">The Sunday Sermon</option>
-                <option value="school-of-discipleship">School of Discipleship</option>
-                <option value="compline-homilies">Compline</option>
-                <option value="smoking-theologians">Smokin' Theologians</option>
+                <option value="The Sunday Sermon">The Sunday Sermon</option>
+                <option value="Compline">Compline</option>
+                <option value="School of Discipleship">School of Discipleship</option>
+                <option value="Smokin' Theologians">Smokin' Theologians</option>
             </select>
         </div>
         <div>
             <label for="hostFilter">Filter by Host/Speaker:</label>
             <select id="hostFilter">
                 <option value="">All</option>
-                <option value="Rev. Jefferson Bennett">Rev. Jefferson Bennett</option>
-                <option value="Rev. Preston Graham, Jr.">Rev. Preston Graham, Jr.</option>
-                <option value="Rev. Craig Luekens">Rev. Craig Luekens</option>
-                <option value="Rev. Jerry Ornelas">Rev. Jerry Ornelas</option>
-                <option value="guest-preacher">Guest Preacher</option>
+                <option value="Chip Anderson">Rev. Chip Anderson</option>
+                <option value="Jefferson Bennett">Rev. Jefferson Bennett</option>
+                <option value="Curran Bishop">Rev. Curran Bishop</option>
+                <option value="Mike Brunjes">Mike Brunjes</option>
+                <option value="Alex Gonzalez">Alex Gonzalez</option>
+                <option value="Preston Graham">Rev. Preston Graham, Jr.</option>
+                <option value="Andrew Holbrook">Andrew Holbrook</option>
+                <option value="Craig Luekens">Rev. Craig Luekens</option>
+                <option value="Jerry Ornelas">Rev. Jerry Ornelas</option>
+                <option value="Guest Preacher">Guest Preacher</option>
+                <option value="John Roney">John Roney</option>
             </select>
         </div>
+        <div
+            <label for="showFilter">Filter by Show:</label>
+            <select id="showFilter">
+                <option value="">All</option>
+                <option value="The Sunday Sermon">The Sunday Sermon</option>
+                <option value="Biblical Studies">Biblical Studies</option>
+                <option value="Church History">Church History</option>
+                <option value="Compline">Compline Homilies</option>
+                <option value="Evangelism/Apologetics">Evangelism/Apologetics</option>
+                <option value="Gospel in Life">Gospel in Life</option>
+                <option value="Leadership">Leadership</option>
+                <option value="Theology">Theology</option>
+                <option value="Smokin' Theologians">Smokin' Theologians</option>
+            </select>
     </div>
     <div class="neumorphic" id="episodeList">
         <table>
@@ -111,76 +61,7 @@
         <!-- Podcast episodes will be dynamically added here -->
         </table>
     </div>
-
-    <!-- STYLES FOR PODCAST SCRIPT -->
-    <style>
-        /* ... existing CSS ... */
-    
-        .episodeCard {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-bottom: 2em;
-            padding: 1em;
-            background: #f7f7f7;
-            border-radius: 1em;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-        }
-    
-        .episodeHeader {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 1em;
-        }
-    
-        .podcastArtwork {
-            width: 100px;
-            height: 100px;
-            object-fit: cover;
-            border-radius: 50%;
-        }
-    
-        .episodeDetails {
-            text-align: center;
-            margin: 1em 0;
-        }
-    
-        .episodeDescription {
-            text-align: justify;
-        }
-    
-        /* Responsiveness */
-        @media (max-width: 600px) {
-            .episodeCard {
-                width: 90%;
-            }
-    
-            .podcastArtwork {
-                width: 80px;
-                height: 80px;
-            }
-        }
-
-    /*Episode Styles*/
-
-    /*text styles*/
-    .textShow {
-        color:rgb(255, 255, 255);
-        text-transform: uppercase;
-        font-weight:700;
-
-    }
-
-    .textEpName {
-        font-size:32px;
-        line-height:1;
-        color:white;
-    }
-
-   
-    </style>
-    
+  
     <script>
         // JavaScript code to fetch and display podcast episodes
         // and implement filtering
@@ -211,7 +92,7 @@
 							episodeElement.setAttribute("data-scripture", episode.Scripture);
 							episodeElement.setAttribute("data-description", episode.Description);
 							episodeElement.setAttribute("data-artwork", episode.Artwork);
-                            episodeElement.setAttribute("data-spotify",episode.Spotify);
+                            episodeElement.setAttribute("data-spotify", episode.Spotify);
 
                             episodeElement.innerHTML = `
 								<tr class="episodeTR">
@@ -243,14 +124,19 @@
             const episodes = document.querySelectorAll(".episode");
             const podcastValue = podcastFilter.value.toLowerCase();
 			const hostValue = hostFilter.value.toLowerCase();
+            const showValue = showFilter.value.toLowerCase();
+
 
             episodes.forEach(function(episode) {
                 const podcast = episode.getAttribute("data-podcast").toLowerCase();
 				const host = episode.getAttribute("data-speaker").toLowerCase();
+                const show = episode.getAttribute("data-show").toLowerCase();
+                
                 
                 if (
 					podcast.includes(podcastValue) && 
-					host.includes(hostValue)
+					host.includes(hostValue) &&
+                    show.includes(showValue)
 				) 
 				{
                     episode.style.display = "block"; // Show episode
@@ -258,25 +144,16 @@
                     episode.style.display = "none"; // Hide episode
                 }
             });
-        }
+        };
 
         // Event listeners for the filter inputs
         podcastFilter.addEventListener("change", applyFilters);
 		hostFilter.addEventListener("change", applyFilters);
+        showFilter.addEventListener("change", applyFilters);
  
         // Fetch and display podcast episodes when the page loads
         fetchPodcastEpisodes();
     </script>
 
-
-<style>
-     /* EPISODE LAYOUT STYLES */
-     .episodeTR {
-        background-color:red;
-        border-style:solid;
-        border-color:white;
-    }
-    
-</style>
 </body>
 </html>
