@@ -5,11 +5,99 @@
       <link rel="stylesheet" href="./styles.css">
 
     <style>
-        /* Add your CSS styles here */
+/* styles.css */
+
+body {
+    background-image:url('../assets/CPC 3 BG.jpg');
+    color: #EEEBDD; /* Light color for the text */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    padding: 20px;
+    text-align: center;
+    color: #f7f7f7;
+}
+
+div {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+label {
+    margin-right: 10px;
+}
+
+#episodeList {
+    display: grid;
+    justify-items: center;
+    padding: 20px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #0040ff;
+}
+
+a {
+    color: #1DB954; /* Spotify Green */
+}
+
+/* Neumorphism */
+.neumorphic {
+    border-radius: 1rem;
+    background: #292e35;
+    box-shadow:  20px 20px 60px #1e2329, 
+                -20px -20px 60px #364349;
+}
+
+/* Responsiveness */
+@media (max-width: 600px) {
+    table {
+        font-size: 0.8em;
+    }
+}
     </style>
 </head>
 <body>
     <h1>Podcast Episodes</h1>
+    <!-- Neumorphic Container for Filter -->
+<div class="neumorphic">
+    <div>
+        <label for="podcastFilter">Filter by Podcast:</label>
+		<select id="podcastFilter">
+			<!-- options -->
+		</select>
+    </div>
+    <div>
+        <label for="hostFilter">Filter by Host/Speaker:</label>
+        <select id="hostFilter">
+			<!-- options -->
+		</select>
+    </div>
+
+
+<!-- Neumorphic Container for Episodes -->
+<div class="neumorphic" id="episodeList">
+    <table>
+		<!-- table content -->
+	</table>
+</div>
+
     <div>
         <label for="podcastFilter">Filter by Podcast:</label>
 		<select id="podcastFilter">
@@ -39,6 +127,10 @@
 			</table>
 				
     </div>
+</div>
+
+
+<!-- CONDITIONS AND SCRIPTS -->
 
     <script>
         // JavaScript code to fetch and display podcast episodes
