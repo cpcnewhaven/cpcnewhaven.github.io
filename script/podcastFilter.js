@@ -39,7 +39,7 @@ function fetchPodcastEpisodes(jsonData) {
 					if (!episode.YouTube) {
 						YT = ""} 
 					else {
-						YT = '<img class="imgYT" src="https://i3.ytimg.com/vi/' + episode.YouTube.replace('https://youtu.be/','') + '/maxresdefault.jpg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>';
+						YT = '<a href="' + episode.YouTube +'"><img class="imgYT" src="https://i3.ytimg.com/vi/' + episode.YouTube.replace('https://youtu.be/','').replace('(?:\?t=.*$)','') + '/maxresdefault.jpg" </a>';
 					}
 
 					if (!episode.Spotify){
