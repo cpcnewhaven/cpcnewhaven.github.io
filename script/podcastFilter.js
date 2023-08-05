@@ -30,22 +30,45 @@ function fetchPodcastEpisodes(jsonData) {
 					episodeElement.setAttribute("data-spotify", episode.Spotify);
 					episodeElement.setAttribute("data-bulletin", episode.Bulletin);
 					episodeElement.setAttribute("data-artwork", episode.Artwork);
+
+					if (!episode.Episode) {
+						EP = ""}
+					else {
+						EP = "Episode " + episode.Episode + ":";
+					}
+					if (!episode.YouTube) {
+						YT = ""} 
+					else {
+						YT = '<img class="imgYT" src="https://i3.ytimg.com/vi/' + episode.YouTube.replace('https://youtu.be/','') + '/maxresdefault.jpg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>';
+					}
+
+					if (!episode.Spotify){
+						SP = ""}
+					else {
+						SP = "<a href=" + episode.Spotify + ">[Spotify]</a>";
+					}
+
+					if (!episode.AudioFile){
+						AF = ""}
+					else {
+						AF = "<a href=" + episode.AudioFile + ">[MP3]</a>";
+
+					}
+
+					if (!episode.Bulletin){
+						BU = ""}
+					else {
+						BU = "<a href=" + episode.Bulletin + ">[Bulletin]</a>";
+					}
 					
 
 					episodeElement.innerHTML = `
 						<tr class="episodeTR">
 							<td><img class="podcastArtwork" src="${episode.Artwork}">${episode.Podcast}</td>
-							<td><p class="textShow">${episode.Show}</p></td>
-							<td>${episode.Series}</td>
-							<td>${episode.Episode}</td>
-							<td><p class="textEpName">${episode.Title}</p></td>
-						</tr>
-						<tr>
-							<td>${episode.Scripture}</td>
-							<td>${episode.Description}</td>
-							
-							<td><a href="${episode.Spotify}">[Spotify]</a></td>
-							<td></td>
+							<td><p class="textShow">${episode.Show}: ${episode.Series}</p></td>
+							<td><p class="textEpName">${EP} ${episode.Title}</p></td>
+							<td>${episode.Description}<br>${episode.Scripture}</td>
+							<td>${YT} ${SP} ${AF} ${BU}</td>
 						</tr>
 					`;
 
