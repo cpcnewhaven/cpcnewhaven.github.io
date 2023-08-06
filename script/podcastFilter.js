@@ -36,8 +36,15 @@ function fetchPodcastEpisodes(jsonData) {
 					if (!episode.Episode) {
 						EP = ""}
 					else {
-						EP = "Episode " + episode.Episode + ":";
+						EP = "Episode " + episode.Episode + ": ";
 					}
+					
+					if (!episode.Date) {
+						DT = ""}
+					else {
+						DT = " | " + episode.Date;
+					}
+
 					if (!episode.YouTube) {
 						YT = ""} 
 					else {
@@ -68,7 +75,7 @@ function fetchPodcastEpisodes(jsonData) {
 						<tr class="episodeTR">
 							<td><img class="podcastArtwork" src="${episode.Artwork}">${episode.Podcast}</td>
 							<td><p class="textShow">${episode.Show}: ${episode.Series}</p></td>
-							<td><p class="textEpName">${EP} ${episode.Title} | ${episode.Date}</p></td>
+							<td><p class="textEpName">${EP}${episode.Title}${DT}</p></td>
 							<td>${episode.Description}<br>${episode.Scripture}</td>
 							<td>${YT} ${SP} ${AF} ${BU}</td>
 						</tr>
