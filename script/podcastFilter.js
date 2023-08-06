@@ -54,7 +54,8 @@ function fetchPodcastEpisodes(jsonData) {
 					if (!episode.Spotify){
 						SP = ""}
 					else {
-						SP = "<a href=" + episode.Spotify + ">[Spotify]</a>";
+						SP = '<iframe class="iframeSP" style="border-radius:12px" src="' + episode.Spotify + '"?utm_source=generator" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>'
+						//SP = "<a href=" + episode.Spotify + ">[Spotify]</a>";
 					}
 
 					if (!episode.AudioFile){

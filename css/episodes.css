@@ -1,18 +1,23 @@
-   /*text styles*/
-    .textShow {
-        color:rgb(255, 255, 255);
-        text-transform: uppercase;
-        font-weight:700;
+/*text styles*/
+.textShow {
+    color:rgb(255, 255, 255);
+    text-transform: uppercase;
+    font-weight:700;
+}
 
-    }
+.textEpName {
+    font-size:32px;
+    line-height:1;
+    color:white;
+}
 
-    .textEpName {
-        font-size:32px;
-        line-height:1;
-        color:white;
-    }
+.imgYT {
+    width: 320px;
+    height: 180px;
+}
 
-    .imgYT {
-        width: 320px;
-        height: 180px;
-    }
+.iframeSP{
+    width: 320px;
+    height: 180px;
+    border-radius: 12px;
+}
