@@ -4,7 +4,8 @@ const podcastFilter = document.getElementById("podcastFilter");
 const showFilter = document.getElementById("showFilter");
 const hostFilter = document.getElementById("hostFilter");
 const topicFilter = document.getElementById("topicFilter");
-const dateFilter = document.getElementById("dateFilter");
+const yearFilter = document.getElementById("yearFilter");
+const monthFilter = document.getElementById("monthFilter");
 
 // Function to fetch podcast episodes from JSON data or backend
 function fetchPodcastEpisodes(jsonData) {
@@ -22,6 +23,7 @@ function fetchPodcastEpisodes(jsonData) {
 					episodeElement.setAttribute("data-series", episode.Series);
 					episodeElement.setAttribute("data-episode", episode.Episode);
 					episodeElement.setAttribute("data-name", episode.Title);
+					episodeElement.setAttribute("data-date", episode.Date);
 					episodeElement.setAttribute("data-speaker", episode.Speaker);
 					episodeElement.setAttribute("data-scripture", episode.Scripture);
 					episodeElement.setAttribute("data-description", episode.Description);
@@ -66,7 +68,7 @@ function fetchPodcastEpisodes(jsonData) {
 						<tr class="episodeTR">
 							<td><img class="podcastArtwork" src="${episode.Artwork}">${episode.Podcast}</td>
 							<td><p class="textShow">${episode.Show}: ${episode.Series}</p></td>
-							<td><p class="textEpName">${EP} ${episode.Title}</p></td>
+							<td><p class="textEpName">${EP} ${episode.Title} | ${episode.Date}</p></td>
 							<td>${episode.Description}<br>${episode.Scripture}</td>
 							<td>${YT} ${SP} ${AF} ${BU}</td>
 						</tr>
@@ -86,18 +88,24 @@ function applyFilters() {
 	const podcastValue = podcastFilter.value.toLowerCase();
 	const hostValue = hostFilter.value.toLowerCase();
 	const showValue = showFilter.value.toLowerCase();
+	const yearValue = yearFilter.value.toLowerCase();
+	const monthValue = monthFilter.value.toLowerCase();
 
 
 	episodes.forEach(function(episode) {
 		const podcast = episode.getAttribute("data-podcast").toLowerCase();
 		const host = episode.getAttribute("data-speaker").toLowerCase();
 		const show = episode.getAttribute("data-show").toLowerCase();
-		
+		const date = new Date(episode.getAttribute("data-date"))
+		const year = date.getFullYear();
+		const month = date.getMonth();
 		
 		if (
 			podcast.includes(podcastValue) && 
 			host.includes(hostValue) &&
-			show.includes(showValue)
+			show.includes(showValue) &&
+			(yearValue == "" || year == yearValue) &&
+			(monthValue == "" || month == monthValue)
 		) 
 		{
 			episode.style.display = "block"; // Show episode
