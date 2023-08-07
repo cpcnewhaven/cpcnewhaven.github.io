@@ -1,1 +1,73 @@
-<iframe style="border-radius:12px" src="https://open.spotify.com/embed/show/22kjUJyC0VH3cMfCSe9kEk?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Latest Podcast</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="../script/youtubeModal.js"></script>
+    <script src="../script/scripts.js"></script>
+</head>
+<body>
+    <script>
+        modifiedTitle();
+    </script>
+
+    <header>
+        <a href="../index.html"><img src="../assets/CPC LOGO.png" alt="Logo" class="home-logo"></a>
+    </header>
+    <header>
+        <h1>Latest Podcast</h1>
+    </header>
+    <main>
+        <div class="row">
+            <div class="column-3"></div>
+            <div id="spotify" class="column-3">
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/show/22kjUJyC0VH3cMfCSe9kEk?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+            <div class="column-3"></div>
+        </div>
+        <div class="row">
+            <div class="column-3"></div>
+            <div class="column-3">
+                <div id="youtubeModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeYouTubeModal()">&times;</span>
+                        <iframe width="100%" height="352" src="https://www.youtube.com/playlist?list=PL7xij5KggExvD0S8Aq3oTT0XhMqFCyZ2l" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="column-3"></div>
+        </div>
+            
+        </div>
+  </main> 
+  <script>
+    window.onclick = function(event) {
+        var modal = document.getElementById("youtubeModal");
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+  </script>
+  <div class="container">
+    
+    <div class="buttons">
+      <a href="live.html" class="button">Live Stream</a>
+      <a href="latest-podcast.html" class="button">Latest Podcast</a>
+      <a href="weekly.html" class="button">Weekly Announcements</a>
+      <a href="lifegroups.html" class="button">Lifegroups</a>
+      <a href="archives.html" class="button">CPC Pedia</a>
+    </div>
+  </div>
+  <div class="full-footer">
+    <div class="footer-inner-wrap">
+      <div class="copywright-wrap">
+        <p>
+        <a href="tel:2037776960">203.777.6960</a> | admin@cpcnewhaven.org | 135 Whitney Ave. New Haven CT 06510
+        <br>
+        &copy; 2023 Christ Presbyterian Church.
+      </p>
+        </div>
+      </div>
+      </div>
+</body>
+</html>
