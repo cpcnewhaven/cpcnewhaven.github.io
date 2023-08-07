@@ -16,8 +16,12 @@
     height: 180px;
 }
 
-.iframeSP{
-    width: 320px;
-    height: 180px;
+.imgSP{
+    width: 240px;
+    height: 75px;
     border-radius: 12px;
+    vertical-align: top;
+    background-image: url('https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_RGB_Green.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
 }

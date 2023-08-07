@@ -54,8 +54,8 @@ function fetchPodcastEpisodes(jsonData) {
 					if (!episode.Spotify){
 						SP = ""}
 					else {
-						SP = '<iframe class="iframeSP" style="border-radius:12px" src="' + episode.Spotify + '"?utm_source=generator" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>'
-						//SP = "<a href=" + episode.Spotify + ">[Spotify]</a>";
+						//SP = '<iframe class="iframeSP" style="border-radius:12px" src="' + episode.Spotify + '"?utm_source=generator" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>'
+						SP = '<a href="' + episode.Spotify + '"><img class="imgSP"></a>';
 					}
 
 					if (!episode.AudioFile){
@@ -77,7 +77,7 @@ function fetchPodcastEpisodes(jsonData) {
 							<td><img class="podcastArtwork" src="${episode.Artwork}">${episode.Podcast}</td>
 							<td><p class="textShow">${episode.Show}: ${episode.Series}</p></td>
 							<td><p class="textEpName">${EP}${episode.Title}${DT}</p></td>
-							<td>${episode.Description}<br>${episode.Scripture}</td>
+							<td>${episode.Description}<br>${episode.Scripture}<br></td>
 							<td>${YT} ${SP} ${AF} ${BU}</td>
 						</tr>
 					`;
