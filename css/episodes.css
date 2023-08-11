@@ -1,11 +1,11 @@
 /*text styles*/
-.textShow {
+.showName {
     color:rgb(255, 255, 255);
     text-transform: uppercase;
     font-weight:700;
 }
 
-.textEpName {
+.episodeTitle {
     font-size:32px;
     line-height:1;
     color:white;
