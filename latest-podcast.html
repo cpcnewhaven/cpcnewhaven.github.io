@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Latest Podcast</title>
+    <!-- link rel="stylesheet" href="css/styles.css">-->
+    <script src="../script/youtubeModal.js"></script>
+    <script src="../script/scripts.js"></script>
+</head>
+<body>
+    <script>
+        modifiedTitle();
+    </script>
+
+    <header>
+        <a href="../index.html"><img src="../assets/CPC LOGO.png" alt="Logo" class="home-logo"></a>
+    </header>
+    <header>
+        <h1>Latest Podcast</h1>
+    </header>
+    <main>
+        <div class="row">
+            <div class="column-3"></div>
+            <div id="spotify" class="column-3">
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/show/22kjUJyC0VH3cMfCSe9kEk?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+            <div class="column-3"></div>
+        </div>
+        <div class="row">
+            <div class="column-3"></div>
+            <div class="column-3">
+                <!--div id="youtubeModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeYouTubeModal()">&times;</span>
+                        <iframe width="100%" height="352" src="https://www.youtube.com/playlist?list=PL7xij5KggExvD0S8Aq3oTT0XhMqFCyZ2l" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div-->
+                <iframe width="100%" height="352" src="https://www.youtube.com/embed/videoseries?list=PL7xij5KggExvD0S8Aq3oTT0XhMqFCyZ2l" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div class="column-3"></div>
+        </div>
+            
+        </div>
+  </main> 
+  <script>
+    window.onclick = function(event) {
+        var modal = document.getElementById("youtubeModal");
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+  </script>
+
+  <!-- Bottom Footer Controls -->
+<div id="footer-controls" class="buttons">
+    <a href="live.html" class="button">Live Stream</a>
+    <a href="latest-podcast.html" class="button">Latest Podcast</a>
+    <a href="weekly.html" class="button">Weekly Announcements</a>
+    <a href="lifegroups.html" class="button">Lifegroups</a>
+    <a href="archives.html" class="button">CPC Archives</a>
+    <a href="yearbook.html" class="button">Yearbook</a>
+</div>
+
+ <style>
+    /* ... existing CSS ... */
+
+/* Bottom Footer Controls */
+#footer-controls {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.95); /* slightly transparent white for some translucency */
+    padding: 10px 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1); /* subtle border at the top */
+    box-shadow: 0px -3px 10px rgba(0, 0, 0, 0.1); /* subtle shadow for depth */
+    z-index: 1000; /* ensure it stays on top */
+    display: flex; /* for horizontal alignment of children */
+    justify-content: center; /* center items horizontally */
+    align-items: center; /* center items vertically */
+    flex-wrap: wrap; /* allows the buttons to wrap onto the next line if there isn't enough space */
+}
+
+.button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: #2196F3; /* blue shade */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s ease; /* smooth color transition */
+    font-size: 16px;
+    margin: 5px;
+    text-decoration: none; /* remove underline from links */
+}
+
+.button:hover {
+    background-color: #1976D2; /* a bit darker shade of blue on hover */
+}
+
+/* ... rest of the CSS ... */
+</style>
+
+<!-- Bottom Footer Controls -->
+<div id="footer-controls" class="buttons">
+    <a href="live.html" class="button">Live Stream</a>
+    <a href="latest-podcast.html" class="button">Latest Podcast</a>
+    <a href="weekly.html" class="button">Weekly Announcements</a>
+    <a href="lifegroups.html" class="button">Lifegroups</a>
+    <a href="archives.html" class="button">CPC Archives</a>
+    <a href="yearbook.html" class="button">Yearbook</a>
+</div>
+
+
+  <div class="full-footer">
+    <div class="footer-inner-wrap">
+      <div class="copywright-wrap">
+        <p>
+        <a href="tel:2037776960">203.777.6960</a> | admin@cpcnewhaven.org | 135 Whitney Ave. New Haven CT 06510
+        <br>
+        &copy; 2023 Christ Presbyterian Church.
+      </p>
+        </div>
+      </div>
+      </div>
+</body>
+</html>
