@@ -73,13 +73,23 @@ function fetchPodcastEpisodes(jsonData) {
 					
 
 					episodeElement.innerHTML = `
-						<tr class="episodeTR">
-							<td><img class="podcastArtwork" src="${episode.Artwork}">${episode.Podcast}</td>
-							<td><p class="textShow">${episode.Show}: ${episode.Series}</p></td>
-							<td><p class="textEpName">${EP}${episode.Title}${DT}</p></td>
-							<td>${episode.Description}<br>${episode.Scripture}<br></td>
-							<td>${YT} ${SP} ${AF} ${BU}</td>
-						</tr>
+						<div class="episode">
+							<img class="episodeArtwork" src="${episode.Artwork}">
+							<span class="podcastName"${episode.Podcast}</span>
+							<span class="showName">${episode.Show}</span>: 
+							<span class="seriesName">${episode.Series}</span>
+							<span class="episodeNumber">${EP}</span>
+							<span class="episodeTitle">${episode.Title}</span>
+							<span class="episodeDate">${DT}</span>
+							<br>
+							<span class="episodeDescription">${episode.Description}</span>
+							<span class="episodeScripture">${episode.Scripture}</span>
+							<br>
+							<span class="episodeYouTube>${YT} </span>
+							<span class="episodeSpodity">${SP} </span>
+							<span class="episodeAudioFile">${AF} </span>
+							<span class="episodeBulletin">${BU}</span>
+						</div>
 					`;
 
 					episodeList.appendChild(episodeElement);
