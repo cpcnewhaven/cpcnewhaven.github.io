@@ -1,0 +1,49 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+}
+
+.home-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: #f2f2f2;
+}
+
+.time-display {
+    font-size: 5em;
+    margin-bottom: 20px;
+}
+
+.voice-assistant-icon img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+.search-box {
+    width: 70%;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    outline: none;
+    font-size: 1.2em;
+}
+
+
+
+.live-stream {
+    margin-bottom: 20px;
+}
+
+/* If you want to make the video responsive, you can use these styles */
+.live-stream iframe {
+    max-width: 90%; 
+    width: 100%; 
+    height: auto;
+}
