@@ -21,6 +21,8 @@ li {
 .time-display {
     font-size: 5em;
     margin-bottom: 20px;
+    color:white;
+    font-family:barlow;
 }
 
 .voice-assistant-icon img {
