@@ -67,7 +67,7 @@
 
   
     <div class="home-screen">
-      CPC NEW HAVEN
+<img src="CPC LOGO.png">
         <div class="time-display" id="timeDisplay"></div>
        
         <input type="text" class="search-box" placeholder="...">
@@ -89,6 +89,38 @@
 
 <script src="scripts.js"></script>
 <!-- ... other parts of your HTML -->
+
+
+
+<script>
+    window.onload = function() {
+        var body = document.getElementsByTagName('body')[0];
+        var img = document.createElement('img');
+        img.src = 'https://source.unsplash.com/random/1920x1080?nature,landscape';
+        img.style.position = 'fixed';
+        img.style.top = '0';
+        img.style.left = '0';
+        img.style.width = '100%';
+        img.style.height = '100%';
+        img.style.objectFit = 'cover';
+        img.style.zIndex = '-1'; // Changed zIndex to 1 so that it is behind the content
+        body.appendChild(img);
+
+        var overlay = document.createElement('div');
+        overlay.style.position = 'fixed';
+        overlay.style.top = '0';
+        overlay.style.left = '0';
+        overlay.style.width = '100%';
+        overlay.style.height = '100%';
+        overlay.style.backgroundColor = 'rgba(0, 0, 0, 0.6)';
+        overlay.style.zIndex = '-1'; // Kept zIndex as 0 so that it is in front of the body background
+        body.appendChild(overlay);
+    };
+</script>
+
+
+
+
 
 </body>
 
