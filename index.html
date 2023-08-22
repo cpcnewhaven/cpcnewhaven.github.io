@@ -9,12 +9,68 @@
     <script src="scripts.js" defer></script>
 </head>
 
+
 <body>
+
+    <div class="top-bar" style="display: flex; background: rgba(0,0,0,0.1); border: 1px solid rgba(0,0,139,0.6); backdrop-filter: blur(10px);">
+        <div class="logo">
+            <a href="index.html">
+                <img src="CPC LOGO.png" alt="Logo" style="height: 52px;">
+            </a>
+        </div>
+        <div class="center-column">
+            <div class="time" id="timeDisplay"></div>
+            <div class="date" id="dateDisplay"></div>
+        </div>
+        <div class="user">
+            <img src="user-icon.png" alt="User Icon">
+            <span id="username" style="font-family: 'Barlow', sans-serif;">Hello, 'username'</span>
+            <button id="googleSignUp" style="background: rgba(0,0,0,0.1); border: 1px solid rgba(0,0,139,0.6); backdrop-filter: blur(10px); font-family: 'Barlow', sans-serif;">Sign Up with Google</button>
+        </div>
+    </div>
+    <script>
+        document.getElementById('googleSignUp').addEventListener('click', function() {
+            // Code to sign up with Google goes here
+        });
+    </script>
+
+
+  
+    <div class="sermon-feed" style="position: fixed; top: 0; right: 0;">
+        <button class="live-sermon-button" onclick="window.location.href='live.html';">Live Worship</button>
+    </div>
+
+    <style>
+        .live-sermon-button {
+            background-color: #ff7b7b79; /* Green */
+            border: none;
+            color: rgb(255, 67, 67);
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+            border-style: solid;
+            border-width: 1px;
+            border-color: rgb(255, 67, 67);
+        }
+
+        .live-sermon-button:hover {
+            background-color: white; 
+            color: black; 
+        }
+    </style>
+
+
+
+  
     <div class="home-screen">
       CPC NEW HAVEN
         <div class="time-display" id="timeDisplay"></div>
        
-        <input type="text" class="search-box" placeholder="Search...">
+        <input type="text" class="search-box" placeholder="...">
     </div>
     <!-- ... other parts of your HTML -->
 
@@ -30,6 +86,8 @@
  
 </div>
 
+
+<script src="scripts.js"></script>
 <!-- ... other parts of your HTML -->
 
 </body>
