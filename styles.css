@@ -5,6 +5,10 @@ body, html {
     font-family: 'Arial', sans-serif;
 }
 
+li {
+    font-size:100px;
+}
+
 .home-screen {
     display: flex;
     flex-direction: column;
@@ -47,3 +51,42 @@ body, html {
     width: 100%; 
     height: auto;
 }
+
+.live-sermon-button {
+    background-color: #ff0e0ea2; /* Green */
+    border: none;
+    color: rgb(255, 255, 255);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(255, 67, 67);
+}
+
+.live-sermon-button:hover {
+    background-color: rgba(2, 133, 255, 0.301); 
+    color: rgb(255, 255, 255); 
+}
+
+        /* Import Barlow font and set responsive font size */
+        @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&display=swap');
+        .events-list li {
+            font-family: 'Barlow', sans-serif;
+            font-size: calc(10px + 2vmin); /* Responsive font size */
+            color: white;
+        }
+        /* Add thumbnail images */
+        .events-list li::before {
+            content: '';
+            display: inline-block;
+            height: 50px;
+            width: 50px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin-right: 10px;
+        }
