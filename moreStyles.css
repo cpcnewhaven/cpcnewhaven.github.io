@@ -1,0 +1,205 @@
+
+    /* Add padding and centering to sections */
+    section {
+      padding: 0 10%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    /* Mobile responsive styling */
+    @media (max-width: 600px) {
+      section {
+        padding: 0 10%;
+      }
+    }
+
+    table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  text-align: left;
+  font-weight: bold;
+}
+
+/* Section Styling */
+section {
+
+  padding: 0 200px;
+  margin-bottom: 20px;
+}
+
+
+
+h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: white;
+  text-align: center;
+}
+
+/* Mobile Responsive Styling */
+@media (max-width: 600px) {
+  table {
+    font-size: 14px;
+  }
+  
+  th, td {
+    padding: 10px;
+  }
+  
+  h2 {
+    font-size: 1.2em;
+  }
+}
+
+h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: rgb(255, 255, 255);
+}
+
+p {
+  font-size: 1.25em;
+  line-height: 1.5;
+  color:white;
+}
+
+h1 {
+  font-size: 5em;
+  margin-bottom: 10px;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul li {
+  font-size: 14px;
+  line-height: 1.5;
+  color: white;
+}
+
+ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  color: white;
+  font-size: 14px;
+}
+
+th, td {
+  padding: 5px;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  text-align: left;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: white;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  table {
+    font-size: 12px;
+  }
+  
+  th, td {
+    padding: 3px;
+  }
+  
+  h2 {
+    font-size: 1.2em;
+  }
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  color:white;
+}
+
+th, td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  text-align: left;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color:white;
+  text-align:center;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  color: white;
+  font-size: 14px;
+}
+
+th, td {
+  padding: 5px;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  text-align: left;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: white;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  table {
+      font-size: 12px;
+  }
+  
+  th, td {
+      padding: 3px;
+  }
+  
+  h2 {
+      font-size: 1.2em;
+  }
+}
