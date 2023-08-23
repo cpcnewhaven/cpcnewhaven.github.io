@@ -106,3 +106,21 @@ li {
             background-repeat: no-repeat;
             margin-right: 10px;
         }
+
+/*TOP BAR */
+        .time {
+            color:white;
+          }
+        
+          .date {
+            color:white;
+          }
+        
+          .top-bar {
+            display:flex;
+            align-items: space-between;
+          }
+        
+          #username {
+            color:white;
+          }
