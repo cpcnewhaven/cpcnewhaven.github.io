@@ -1,8 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Website Form Editor</title>
+    <title>Website Editor</title>
+
+
     <style>
+        .form-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .form-editor {
+            width: calc(33.33% - 20px);
+            margin-bottom: 20px;
+        }
+    </style>
+    
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Barlow', sans-serif;
+            font-size: 20px;
+            color: white;
+        }
+
         body {
             background-image: url("https://source.unsplash.com/featured/?sunsets");
             background-size: cover;
@@ -10,42 +34,68 @@
             background-position: center;
             background-attachment: fixed;
         }
-        
-        .overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.8);
-            z-index: -1;
-        }
-        
+
         .form-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-        
-        .form-editor {
             background-color: rgba(255, 255, 255, 0.5);
             padding: 20px;
             border-radius: 10px;
             text-align: center;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
         }
-        
-        .logo {
-            text-align: center;
-            margin-bottom: 20px;
+
+        .form-editor input[type="text"],
+        .form-editor textarea,
+        .form-editor select {
+            opacity: 0.7;
+            font-family: 'Barlow', sans-serif;
+            background-color: rgba(255, 255, 255, 0.3);
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 10px;
+            width: 100%;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .form-editor input[type="text"]:focus,
+        .form-editor textarea:focus,
+        .form-editor select:focus {
+            opacity: 1;
+        }
+
+        .form-editor button[type="submit"] {
+            opacity: 0.7;
+            font-family: 'Barlow', sans-serif;
+            background-color: rgba(255, 255, 255, 0.3);
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            margin-top: 10px;
+            cursor: pointer;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .form-editor button[type="submit"]:hover {
+            opacity: 1;
         }
     </style>
+
 </head>
 <body>
 
     <body>
 
-    <div class="splash-screen" style="background-image: url('@CPC LOGO.png'); height: 100vh;">
+    <div class="splash-screen">
+        <!-- Content of the splash screen -->
+        <div class="logo">
+            <!-- Place your logo here -->
+        </div>
+        <div class="splash-text">
+            <h1>CPC Backend For Editor </h1>
+            <p>Click the button below to get started.</p>
+            <button id="splashButton">Get Started</button>
+    </div>
         <!-- Content of the splash screen -->
     </div>
 
@@ -53,13 +103,16 @@
 
 
     <div class="overlay"></div>
+
+<section>
+
     <div class="form-container">
         <div class="form-editor">
             <div class="logo">
                 <!-- Place your logo here -->
             </div>
             
-            <h1>Website Form Editor</h1>
+            <h1>Website Event MGMT</h1>
             <form>
                 <label for="eventName">Event Name:</label>
                 <input type="text" id="eventName" name="eventName" style="opacity: 0.5; font-family: 'Barlow', sans-serif;">
@@ -75,5 +128,147 @@
             </form>
         </div>
     </div>
+</section>
+<section>
+
+    <div class="form-container">
+        <div class="form-editor">
+            <div class="logo">
+                <!-- Place your logo here -->
+            </div>
+            
+            <h1>Archive Addition</h1>
+            <form>
+                <label for="eventName">Event Name:</label>
+                <input type="text" id="eventName" name="eventName" style="opacity: 0.5; font-family: 'Barlow', sans-serif;">
+                
+                <label for="formType">Form Type:</label>
+                <select id="formType" name="formType" style="opacity: 0.5; font-family: 'Barlow', sans-serif;">
+                    <option value="contact">Contact Form</option>
+                    <option value="registration">Registration Form</option>
+                    <option value="survey">Survey Form</option>
+                </select>
+
+                <label for="articleTitle">Article Title:</label>
+                <input type="text" id="articleTitle" name="articleTitle" style="opacity: 0.5; font-family: 'Barlow', sans-serif;">
+
+                <label for="author">Author:</label>
+                <input type="text" id="author" name="author" style="opacity: 0.5; font-family: 'Barlow', sans-serif;">
+
+                <label for="content">Content:</label>
+                <textarea id="content" name="content" style="opacity: 0.5; font-family: 'Barlow', sans-serif;"></textarea>
+
+                <label for="tags">Tags:</label>
+                <input type="text" id="tags" name="tags" style="opacity: 0.5; font-family: 'Barlow', sans-serif;">
+
+                <label for="yearPublished">Year Published:</label>
+                <input type="text" id="yearPublished" name="yearPublished" style="opacity: 0.5; font-family: 'Barlow', sans-serif;">
+
+                <label for="yearArchived">Year Archived:</label>
+                <input type="text" id="yearArchived" name="yearArchived" style="opacity: 0.5; font-family: 'Barlow', sans-serif;">
+
+                <label for="writtenBy">Written By:</label>
+                <input type="text" id="writtenBy" name="writtenBy" style="opacity: 0.5; font-family: 'Barlow', sans-serif;">
+
+                <label for="maintainedBy">Maintained By:</label>
+                <input type="text" id="maintainedBy" name="maintainedBy" style="opacity: 0.5; font-family: 'Barlow', sans-serif;">
+
+                <label for="scriptureReferenced">Scripture Referenced:</label>
+                <input type="text" id="scriptureReferenced" name="scriptureReferenced" style="opacity: 0.5; font-family: 'Barlow', sans-serif;">
+                
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+</section>
+<section>
+
+    <div class="form-container">
+        <div class="form-editor">
+            <div class="logo">
+                <!-- Place your logo here -->
+            </div>
+            
+            <h1>Podcast Submission to Archive</h1>
+            <form>
+                <label for="eventName">Podcast Name</label>
+                <input type="text" id="eventName" name="eventName" style="opacity: 0.5; font-family: 'Barlow', sans-serif;">
+                
+                <label for="podcastName">Podcast Name:</label>
+                <input type="text" id="podcastName" name="podcastName" style="opacity: 0.5; font-family: 'Barlow', sans-serif;">
+
+                <label for="episodeNumber">Episode Number:</label>
+                <input type="text" id="episodeNumber" name="episodeNumber" style="opacity: 0.5; font-family: 'Barlow', sans-serif;">
+
+                <label for="publishedDate">Published Date:</label>
+                <input type="text" id="publishedDate" name="publishedDate" style="opacity: 0.5; font-family: 'Barlow', sans-serif;">
+
+                <label for="podcastType">Podcast Type:</label>
+                <select id="podcastType" name="podcastType" style="opacity: 0.5; font-family: 'Barlow', sans-serif;">
+                    <option value="interview">Interview</option>
+                    <option value="discussion">Discussion</option>
+                    <option value="educational">Educational</option>
+                </select>
+
+                <label for="showNotes">Show Notes:</label>
+                <textarea id="showNotes" name="showNotes" style="opacity: 0.5; font-family: 'Barlow', sans-serif;"></textarea>
+
+                <label for="podcastUpload">Podcast Upload:</label>
+                <input type="file" id="podcastUpload" name="podcastUpload">
+
+                <label for="artworkUpload">Artwork Upload:</label>
+                <input type="file" id="artworkUpload" name="artworkUpload">
+
+                <button type="submit">Submit</button>
+               
+                
+                
+                <button type="submit">Sumit</button>
+            </form>
+        </div>
+    </div>
+</section>
+<section>
+
+    <div class="form-container">
+        <div class="form-editor">
+            <div class="logo">
+                <!-- Place your logo here -->
+            </div>
+            
+            <h1>Event Additions</h1>
+            <form>
+                <label for="eventName">Event Name:</label>
+                <input type="text" id="eventName" name="eventName" style="opacity: 0.5; font-family: 'Barlow', sans-serif;">
+                
+                <label for="formType">Form Type:</label>
+                
+                <label for="formType">Form Type:</label>
+                
+                <label for="eventTime">Event Time:</label>
+                <input type="text" id="eventTime" name="eventTime" style="opacity: 0.5; font-family: 'Barlow', sans-serif;">
+
+                <label for="eventLocation">Event Location:</label>
+                <input type="text" id="eventLocation" name="eventLocation" style="opacity: 0.5; font-family: 'Barlow', sans-serif;">
+
+                <label for="eventMinistry">Event Ministry:</label>
+                <input type="text" id="eventMinistry" name="eventMinistry" style="opacity: 0.5; font-family: 'Barlow', sans-serif;">
+
+                <label for="eventSponsor">Sponsored By:</label>
+                <input type="text" id="eventSponsor" name="eventSponsor" style="opacity: 0.5; font-family: 'Barlow', sans-serif;">
+
+                <label for="eventDetails">Event Details:</label>
+                <textarea id="eventDetails" name="eventDetails" style="opacity: 0.5; font-family: 'Barlow', sans-serif;"></textarea>
+
+                <label for="paidEvent">Paid Event:</label>
+                <input type="checkbox" id="paidEvent" name="paidEvent" style="opacity: 0.5; font-family: 'Barlow', sans-serif;">
+
+
+                
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+</section>
 </body>
 </html>
