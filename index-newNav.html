@@ -23,7 +23,7 @@
 
 <style>
     /* Add the following CSS code */
-.top-nav {
+.top-nav-bar {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -32,12 +32,22 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(10px);
   padding: 10px;
-  position:fixed;
-  
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+.top-nav {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .top-nav li {
-  list-style: none;
+  margin: 0;
 }
 
 .top-nav a {
@@ -52,6 +62,46 @@
 .top-nav a:hover {
   background: rgba(255, 255, 255, 0.2);
   border-radius: 5px;
+}
+
+.center-column {
+  display: flex;
+  align-items: center;
+}
+
+.time,
+.date {
+  color: white;
+  margin: 0 10px;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+}
+
+.user img {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.user span {
+  color: white;
+}
+
+.sermon-feed {
+  margin-left: auto;
+}
+
+.live-sermon-button {
+  background-color: #fff;
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 </style>
@@ -79,7 +129,9 @@
     <div class="sermon-feed">
         <button class="live-sermon-button" onclick="window.location.href='live.html';">Live Worship</button>
     </div>
+
 </div>
+
 
 <div class="home-screen">
     <img src="CPC LOGO.png">
@@ -113,7 +165,7 @@
 
 
 <!-- WELCOME SECTION -->
-<section>
+<section id="ongoing">
     <h1>New Haven, CT</h1>
     <p>As a church committed to Greater New Haven, we hope to serve and reach both downtown New Haven and the surrounding edge towns. We believe that the gospel transcends all ethnic, social, and demographic boundaries. We are ambitious for the glory of God and aim to extend a Christ-centered gospel throughout Greater New Haven.</p>
     <h1>Connect</h1>
@@ -257,9 +309,7 @@
 <!-- GENERAL ANNOUNCEMENTS -->
 
 <section>
-    <style>
 
-      </style>
     <h2>GENERAL ANNOUNCEMENTS</h2>
     <hr>
     <table>
@@ -394,7 +444,16 @@
 </script>
 
 
-
+<h1>
+    Experimental Features (Beta IN PROGRESS)
+</h1>
+<nav>
+    <ul>
+        <li>
+            <a href="masterForm.html">Master Form</a>
+        </li>
+    </ul>
+</nav>
 </body>
 
 </html>
