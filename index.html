@@ -185,7 +185,7 @@ html {
 <style>
 
 .search-box {
-  background-color: rgba(225, 225, 225, 0.2);
+  background-color: rgba(225, 225, 225, 0.726);
   border: none;
   border-radius: 5px;
   padding: 10px;
@@ -523,6 +523,98 @@ html {
 <!-- ... other parts of your HTML -->
 
 
+<style>
+    .cpcWeekly {
+        background-color: rgba(0, 0, 0, 0.6);
+        border-radius: 10px;
+        padding: 20px;
+        font-size: 16px;
+        line-height: 1.5;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        color: white;
+    }
+
+    .cpcWeekly pre {
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 2px;
+        border-radius: 7.5px;
+        color: white;
+        max-width: 100%;
+        overflow-x: scroll;
+    }
+
+    .cpcWeekly h1,
+    {
+        font-size: 1.2em;
+        line-height: .1em;
+        margin: 0.5em 0;
+    }
+    .cpcWeekly h2,
+    .cpcWeekly h3 {
+        margin: 0.5em 0;
+    }
+
+    .cpcWeekly h3 {
+        font-size:1.5em;
+        margin: 0.25em 0;
+    }
+
+    .cpcWeekly a {
+        color: white;
+        text-decoration: underline;
+    }
+
+    .cpcWeekly ul {
+        padding-left: 20px;
+    }
+
+    @media (max-width: 600px) {
+        .cpcWeekly {
+            font-size: 14px;
+        }
+    }
+</style>
+
+
+<section class="cpcWeekly">
+    <h2>Experimental = CPC Weekly </h2>
+
+    <h2>10:30am Worship This Sunday</h2>
+    <p>Sermon Text: Psalm 143:1-12 | <a href="#">Bulletin</a> | Sunday Music: <a href="#">YouTube</a> | <a href="#">Spotify</a></p>
+    <pre>
+        [1] Hear my prayer, O LORD;
+            give ear to my pleas for mercy!
+            In your faithfulness answer me, in your righteousness!
+        ...
+        [12] And in your steadfast love you will cut off my enemies,
+            and you will destroy all the adversaries of my soul,
+            for I am your servant.
+    </pre>
+    <h2>Sermon Preview</h2>
+    <h3>This Sunday at CPC Playlist</h3>
+    <p>Highlights.<br>Fellowship Meal This Sunday: Join us for a fellowship lunch after worship every Sunday! ... Reach out to <a href="mailto:gerard.elena@gmail.com">Elena Gerard</a>, you would be warmly welcomed into the fold!</p>
+    <h3>Sunday Funday 9/10</h3>
+    <p>Let’s wrap-up the old season and welcome the new with fun, food, and fellowship for all ages on the lawn!</p>
+    <h3>Ministry Year Kick-Off Sunday 9/17:</h3>
+    <ul>
+        <li>8:30am | Prayer in the Parlor: Prayer moves back to 8:30am before Sunday School.</li>
+        <li>9:30am | Children’s Sunday School and Adult Sunday Studies Begin...</li>
+        <li>12:00pm: Congregational Meeting and Lunch...</li>
+    </ul>
+    <p>We Heart Announcements/ers: ... Reach out to Annie.<br>Bridges of Hope (BOH) Opportunities.</p>
+    <h3>I Heart New Haven Day | Saturday 8/26</h3>
+    <p>Each year, Bridges of Hope members gather together... This year's event will be Aug 26, 2023...</p>
+    <h3>Mentoring Program | 2023-2024 School Year</h3>
+    <p>Are you looking for a way to love our city? ... <a href="#">Contact Rafa</a> or <a href="#">complete the initial application here</a>.</p>
+
+</section>
+
 
 <script>
     window.onload = function() {
@@ -550,15 +642,15 @@ html {
     };
 </script>
 
-<h1>
-    Experimental Features (Beta IN PROGRESS)
-</h1>
+<h2>
+    Experimental Features and In Progress
+</h2>
 <nav>
   <div class="user">
     <img src="https://source.unsplash.com/random/52x52?avatar" alt="User Icon">
     <span id="username">Hello, 'username'</span>
 </div>
-    <ul>
+    <ul style="padding:20px;"">
         <li>
             <a href="masterForm.html">Master Form</a>
         </li>
