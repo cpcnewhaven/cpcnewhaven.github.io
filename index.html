@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- AS OF 8.24.23 - hard forks -->
+
 <head>
 
     <!-- SEO for Google -->
@@ -21,7 +21,17 @@
 
 <body>
 
-<style>
+  <style>
+    /* CSS */
+html {
+  font-family: sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+
+  box-sizing: border-box;
+}
+
+
     /* Add the following CSS code */
 .top-nav-bar {
   display: flex;
@@ -77,6 +87,7 @@
 
 .user {
   display: flex;
+  flex-direction:column;
   align-items: center;
 }
 
@@ -102,15 +113,55 @@
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
+  margin-right:20px;
 }
+
+#googleSignUp {
+  background-color: #fff;
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right:20px;
+}
+
+#username {
+  font-size:8px;
+}
+
+
+
+.timeDisplayWidget {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0);
+  border-radius: 5px;
+  padding: 10px;
+  width: 30px;
+  margin: 7.5px 10px ;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  font-weight:900;
+}
+
+.time, .date {
+  margin: 0;
+  padding: 5px;
+}
+
 
 </style>
 
 <div class="top-nav-bar">
 
     <nav>
+ 
         <ul class="top-nav">
-            <li><a href="#save-the-dates">Save the Dates</a></li>
+            <li><a href="#savethedate">Save the Dates</a></li>
             <li><a href="#ongoing">Ongoing</a></li>
             <li><a href="#announcements">Announcements</a></li>
             <li><a href="#life-groups">Life Groups</a></li>
@@ -118,14 +169,9 @@
         </ul>
     </nav>
     <div class="center-column">
-        <div class="time" id="timeDisplay"></div>
-        <div class="date" id="dateDisplay"></div>
+
     </div>
-    <div class="user">
-        <img src="https://source.unsplash.com/random/52x52?avatar" alt="User Icon">
-        <span id="username">Hello, 'username'</span>
-        <button id="googleSignUp">Sign Up with Google</button>
-    </div>
+
     <div class="sermon-feed">
         <button class="live-sermon-button" onclick="window.location.href='live.html';">Live Worship</button>
     </div>
@@ -133,24 +179,64 @@
 </div>
 
 
-<div class="home-screen">
-    <img src="CPC LOGO.png">
-    
-           
-            <input type="text" class="search-box" placeholder="...">
-        </div>
 
+ <!-- SEARCH -->
 
+<style>
+
+.search-box {
+  background-color: rgba(225, 225, 225, 0.2);
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  width: 80%;
+  outline: none;
+}
+
+.results {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+  padding: 10px;
+  width: 300px;
+  margin: 10px auto;
+  display: none;
+}
+
+.result-item {
+  margin: 5px 0;
+}
+
+</style>
 <script>
-    document.getElementById('googleSignUp').addEventListener('click', function() {
-        // Code to sign up with Google goes here
-    });
-</script>
-
-
+    document.getElementById('search-box').addEventListener('keyup', function () {
+  let searchQuery = this.value;
+  let results = document.getElementById('results');
+  results.innerHTML = ''; // Clear previous results
+  results.style.display = 'none'; // Hide results by default
   
-    
-    <!-- ... other parts of your HTML -->
+  if (searchQuery.trim() === '') return; // Do nothing if query is empty
+
+  let contentItems = document.querySelectorAll('.content-item'); // Assuming you have elements with class 'content-item' that contain the content you want to search through
+
+  contentItems.forEach(function (item) {
+    if (item.textContent.toLowerCase().includes(searchQuery.toLowerCase())) {
+      let resultItem = document.createElement('div');
+      resultItem.className = 'result-item';
+      resultItem.textContent = item.textContent;
+      results.appendChild(resultItem);
+      results.style.display = 'block'; // Show results if there are any
+    }
+  });
+});
+
+</script>
+<div class="home-screen">
+  
+  <img src="CPC LOGO.png">
+  <
+  <input type="text" id="search-box" class="search-box" placeholder="...">
+</div>
+<div id="results" class="results"></div>
 
 <div class="home-screen">
 
@@ -163,9 +249,15 @@
 </div>
 
 
+<!-- TIME SECTION -->
+<section class="timeDisplayWidget">
+<div class="time" id="timeDisplay"></div>
+<div class="date" id="dateDisplay"></div>
+</section>
+
 
 <!-- WELCOME SECTION -->
-<section id="ongoing">
+<section>
     <h1>New Haven, CT</h1>
     <p>As a church committed to Greater New Haven, we hope to serve and reach both downtown New Haven and the surrounding edge towns. We believe that the gospel transcends all ethnic, social, and demographic boundaries. We are ambitious for the glory of God and aim to extend a Christ-centered gospel throughout Greater New Haven.</p>
     <h1>Connect</h1>
@@ -226,8 +318,21 @@
     
 <!-- SAVE THE DATE -->
 
-<section>
+<section id="savethedate" class="bigSlide">
     <style>
+
+      .bigSlide {
+        background-color: #0000008d;
+        margin: 2em;
+        border-radius: 7.5px;
+      }
+
+      .bigSlide h2 {
+        font-size:3em;
+        line-height:1em;
+        
+
+      }
 
     </style>
     <h2>Save the Dates</h2>
@@ -309,7 +414,9 @@
 <!-- GENERAL ANNOUNCEMENTS -->
 
 <section>
+    <style>
 
+      </style>
     <h2>GENERAL ANNOUNCEMENTS</h2>
     <hr>
     <table>
@@ -443,17 +550,27 @@
     };
 </script>
 
-
 <h1>
     Experimental Features (Beta IN PROGRESS)
 </h1>
 <nav>
+  <div class="user">
+    <img src="https://source.unsplash.com/random/52x52?avatar" alt="User Icon">
+    <span id="username">Hello, 'username'</span>
+</div>
     <ul>
         <li>
             <a href="masterForm.html">Master Form</a>
         </li>
+        <li>
+            <a href="index-newNav.html">index New Nav</a>
+        </li>
+        <li>
+            <a href="yearbook.html">yearbook</a>
+        </li>
     </ul>
 </nav>
+
 </body>
 
 </html>

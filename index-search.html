@@ -21,46 +21,168 @@
 
 <body>
 
-    <div class="top-bar" style="display: flex; background: rgba(0,0,0,0.1); border: 1px solid rgba(0,0,139,0.6); backdrop-filter: blur(10px);">
-        <div class="logo">
-            <a href="index.html">
-                <img src="CPC LOGO.png" alt="Logo" style="width: 100%; height: 52px;">
-            </a>
-        </div>
-        <div class="center-column">
-            <div class="time" id="timeDisplay"></div>
-            <div class="date" id="dateDisplay"></div>
-        </div>
-        <div class="user">
-            <img src="https://source.unsplash.com/random/52x52?avatar" alt="User Icon">
-            <span id="username" style="font-family: 'Barlow', sans-serif;">Hello, 'username'</span>
-            <button id="googleSignUp" style="background: rgba(0,0,0,0.1); border: 1px solid rgba(0,0,139,0.6); backdrop-filter: blur(10px); font-family: 'Barlow', sans-serif;">Sign Up with Google</button>
-        </div>
+  <style>
+    /* CSS */
+html {
+  font-family: sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+
+  box-sizing: border-box;
+}
+
+
+    /* Add the following CSS code */
+.top-nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+.top-nav {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.top-nav li {
+  margin: 0;
+}
+
+.top-nav a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  margin: 0 5px;
+  font-family: 'Barlow', sans-serif;
+  font-size: 16px;
+}
+
+.top-nav a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+}
+
+.center-column {
+  display: flex;
+  align-items: center;
+}
+
+.time,
+.date {
+  color: white;
+  margin: 0 10px;
+}
+
+.user {
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+}
+
+.user img {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.user span {
+  color: white;
+}
+
+.sermon-feed {
+  margin-left: auto;
+}
+
+.live-sermon-button {
+  background-color: #fff;
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right:20px;
+}
+
+#googleSignUp {
+  background-color: #fff;
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right:20px;
+}
+
+#username {
+  font-size:8px;
+}
+
+
+
+.timeDisplayWidget {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0);
+  border-radius: 5px;
+  padding: 10px;
+  width: 30px;
+  margin: 7.5px 10px ;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  font-weight:900;
+}
+
+.time, .date {
+  margin: 0;
+  padding: 5px;
+}
+
+
+</style>
+
+<div class="top-nav-bar">
+
+    <nav>
+ 
+        <ul class="top-nav">
+            <li><a href="#savethedate">Save the Dates</a></li>
+            <li><a href="#ongoing">Ongoing</a></li>
+            <li><a href="#announcements">Announcements</a></li>
+            <li><a href="#life-groups">Life Groups</a></li>
+            <li><a href="connect.html">Connect</a></li>
+        </ul>
+    </nav>
+    <div class="center-column">
+
     </div>
-    <script>
-        document.getElementById('googleSignUp').addEventListener('click', function() {
-            // Code to sign up with Google goes here
-        });
-    </script>
 
-
-  
-    <div class="sermon-feed" style="position: fixed; top: 0; right: 0;">
+    <div class="sermon-feed">
         <button class="live-sermon-button" onclick="window.location.href='live.html';">Live Worship</button>
     </div>
 
-    <style>
-
-    </style>
+</div>
 
 
 
  <!-- SEARCH -->
 
 <style>
-
-
-
 
 .search-box {
   background-color: rgba(225, 225, 225, 0.2);
@@ -109,13 +231,15 @@
 
 </script>
 <div class="home-screen">
+  
   <img src="CPC LOGO.png">
+  <
   <input type="text" id="search-box" class="search-box" placeholder="...">
 </div>
 <div id="results" class="results"></div>
 
 <div class="home-screen">
-  <div class="time-display" id="timeDisplay"></div>
+
   
 
   
@@ -125,7 +249,11 @@
 </div>
 
 
-
+<!-- TIME SECTION -->
+<section class="timeDisplayWidget">
+<div class="time" id="timeDisplay"></div>
+<div class="date" id="dateDisplay"></div>
+</section>
 
 
 <!-- WELCOME SECTION -->
@@ -190,8 +318,21 @@
     
 <!-- SAVE THE DATE -->
 
-<section>
+<section id="savethedate" class="bigSlide">
     <style>
+
+      .bigSlide {
+        background-color: #0000008d;
+        margin: 2em;
+        border-radius: 7.5px;
+      }
+
+      .bigSlide h2 {
+        font-size:3em;
+        line-height:1em;
+        
+
+      }
 
     </style>
     <h2>Save the Dates</h2>
@@ -413,6 +554,10 @@
     Experimental Features (Beta IN PROGRESS)
 </h1>
 <nav>
+  <div class="user">
+    <img src="https://source.unsplash.com/random/52x52?avatar" alt="User Icon">
+    <span id="username">Hello, 'username'</span>
+</div>
     <ul>
         <li>
             <a href="masterForm.html">Master Form</a>
