@@ -4,50 +4,38 @@ let events = [
         date: "10 September",
         event: "Sunday Funday",
         time: "After Worship",
-        location: "CPC Lawn"
+        location: "CPC Lawn",
+        desc: "Come to the Sunday Worship!"
     },
     {
         date: "17 September",
         event: "Ministry Year Kick-Off!",
         time: "",
-        location: ""
+        location: "",
+        desc: "Come to the Sunday Worship!"
     },
     {
         date: "23 September",
         event: "Men & Kids Can Cook Tailgate (Cornell @ Yale Football)",
         time: "10am",
-        location: "Contact Pat (pat.clendenen@gmail.com)"
+        location: "Cornell @ Yale Football",
+        desc: "Come to the Sunday Worship!"
     },
     {
         date: "01 October",
         event: "Installation Service of Senior Pastor",
         time: "4:30pm",
-        location: ""
+        location: "",
+        desc: "Come to the worship service for the installation of the senior pastor "
     },
     {
         date: "17 September",
         event: "Ministry Year Kick-Off!",
         time: "",
-        location: ""
+        location: "",
+        desc: ""
     },
-    {
-        date: "23 September",
-        event: "Men & Kids Can Cook Tailgate (Cornell @ Yale Football)",
-        time: "10am",
-        location: "Contact Pat (pat.clendenen@gmail.com)"
-    },
-    {
-        date: "01 October",
-        event: "Installation Service of Senior Pastor",
-        time: "4:30pm",
-        location: ""
-    },
-    {
-        date: "08 October",
-        event: "Newcomer Lunch",
-        time: "After Worship",
-        location: "Lecture Room"
-    }
+
     // ... add more events here
 ];
 
