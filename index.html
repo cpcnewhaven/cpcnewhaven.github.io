@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 
@@ -389,3 +390,581 @@
 </body>
 
 </html>
+=======
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- AS OF 8.27.23 -->
+<head>
+
+    <!-- SEO for Google -->
+    <meta name="description" content="CPC New Haven is a church committed to serving and reaching the Greater New Haven area. We believe in the power of the gospel to transform lives and communities. Join us for worship and fellowship.">
+    <meta name="keywords" content="CPC New Haven, church, Greater New Haven, gospel, worship, fellowship">
+    <meta name="author" content="CPC New Haven">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CPC New Haven</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="moreStyles.css">
+    <script src="scripts.js" defer></script>
+
+</head>
+
+
+
+<body>
+
+  <style>
+    /* CSS */
+html {
+  font-family: sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+
+  box-sizing: border-box;
+}
+
+
+    /* Add the following CSS code */
+.top-nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+.top-nav {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.top-nav li {
+  margin: 0;
+}
+
+.top-nav a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  margin: 0 5px;
+  font-family: 'Barlow', sans-serif;
+  font-size: 16px;
+}
+
+.top-nav a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+}
+
+.center-column {
+  display: flex;
+  align-items: center;
+}
+
+.time,
+.date {
+  color: white;
+  margin: 0 10px;
+}
+
+.user {
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+}
+
+.user img {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.user span {
+  color: white;
+}
+
+.sermon-feed {
+  margin-left: auto;
+}
+
+.live-sermon-button {
+  background-color: #fff;
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right:20px;
+}
+
+#googleSignUp {
+  background-color: #fff;
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right:20px;
+}
+
+#username {
+  font-size:8px;
+}
+
+
+
+.timeDisplayWidget {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0);
+  border-radius: 5px;
+  padding: 10px;
+  width: 30px;
+  margin: 7.5px 10px ;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  font-weight:900;
+}
+
+.time, .date {
+  margin: 0;
+  padding: 5px;
+}
+
+
+</style>
+
+<div class="top-nav-bar">
+
+    <nav>
+ 
+        <ul class="top-nav">
+            <li><a href="#savethedate">Save the Dates</a></li>
+            <li><a href="#ongoing">Ongoing</a></li>
+            <li><a href="#announcements">Announcements</a></li>
+            <li><a href="#life-groups">Life Groups</a></li>
+            <li><a href="connect.html">Connect</a></li>
+        </ul>
+    </nav>
+    <div class="center-column">
+
+    </div>
+
+    <div class="sermon-feed">
+        <button class="live-sermon-button" onclick="window.location.href='live.html';">Live Worship</button>
+    </div>
+
+</div>
+
+
+
+ <!-- SEARCH -->
+
+<style>
+
+.search-box {
+  background-color: rgba(225, 225, 225, 0.2);
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  width: 80%;
+  outline: none;
+}
+
+.results {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+  padding: 10px;
+  width: 300px;
+  margin: 10px auto;
+  display: none;
+}
+
+.result-item {
+  margin: 5px 0;
+}
+
+</style>
+<script>
+    document.getElementById('search-box').addEventListener('keyup', function () {
+  let searchQuery = this.value;
+  let results = document.getElementById('results');
+  results.innerHTML = ''; // Clear previous results
+  results.style.display = 'none'; // Hide results by default
+  
+  if (searchQuery.trim() === '') return; // Do nothing if query is empty
+
+  let contentItems = document.querySelectorAll('.content-item'); // Assuming you have elements with class 'content-item' that contain the content you want to search through
+
+  contentItems.forEach(function (item) {
+    if (item.textContent.toLowerCase().includes(searchQuery.toLowerCase())) {
+      let resultItem = document.createElement('div');
+      resultItem.className = 'result-item';
+      resultItem.textContent = item.textContent;
+      results.appendChild(resultItem);
+      results.style.display = 'block'; // Show results if there are any
+    }
+  });
+});
+
+</script>
+<div class="home-screen">
+  
+  <img src="CPC LOGO.png">
+  <
+  <input type="text" id="search-box" class="search-box" placeholder="...">
+</div>
+<div id="results" class="results"></div>
+
+<div class="home-screen">
+
+  
+
+  
+  
+  
+ 
+</div>
+
+
+<!-- TIME SECTION -->
+<section class="timeDisplayWidget">
+<div class="time" id="timeDisplay"></div>
+<div class="date" id="dateDisplay"></div>
+</section>
+
+
+<!-- WELCOME SECTION -->
+<section>
+    <h1>New Haven, CT</h1>
+    <p>As a church committed to Greater New Haven, we hope to serve and reach both downtown New Haven and the surrounding edge towns. We believe that the gospel transcends all ethnic, social, and demographic boundaries. We are ambitious for the glory of God and aim to extend a Christ-centered gospel throughout Greater New Haven.</p>
+    <h1>Connect</h1>
+    <p>We want to connect with you so please take the time to fill out a Welcome Card located in the pews and place it in the offering basket or return it to the Welcome Table. You may also include a prayer request on the reverse side. Your requests are prayed for during the week. Also, visit the Welcome Table for a Welcome Brochure!</p>
+    <h1>Children</h1>
+    <p>We value families worshiping together and welcome children of all ages to join us in worship at their parents’ discretion (see the booklet “Together in God’s Presence” at the children’s ministry table). Childcare is available for parents who wish to take advantage of it. Look for this icon in the bulletin to know when to drop off and pick up your children. Supplementary children’s sermon material is available in the foyer.</p>
+    <h1>Parking</h1>
+    <p>When parking on Sundays please reserve our parking lot for visitors, parents with small children, and those who need to park closer. Two Yale parking lots north of the church on Whitney Ave. are available to us also. Lot 16: Gibbs Lab at Whitney Ave. and Humphrey St., and the Whitney Ave. Garage located behind 221 Whitney Ave. For safety, exit our lot on the Bradley St. side only.</p>
+    <h1>Worship</h1>
+    <p>We highly recommend that you participate bodily in worship, however, when necessity or mercy requires, you may access a live stream video of our full service at <a href="cpcnewhaven.org/live">cpcnewhaven.org/live</a>. You may also view a recorded version or listen to our sermons at <a href="podcasts.cpcnewhaven.org">podcasts.cpcnewhaven.org</a>. We do believe that there is a mystical communion of Christ in heaven with the body of Christ on earth by the Holy Spirit when you participate in person in worship.</p>
+  </section>
+
+
+
+
+
+
+
+<!-- HIGHLIGHTS HEADER -->
+<section>
+    <style>
+
+    </style>
+    <h1>Highlights</h1>
+</section>
+<!-- HIGHLIGHTS -->
+<section>
+    <style>
+
+  </style>
+
+    <h2>NEW HERE?</h2>
+    <p>Say hi! We’d love to get to know you. Fill out a Welcome Card from the pew and return it to the Welcome Bar in the foyer, and pick up a gift just for you! Check out the Connect Board in the foyer for opportunities to get to know other members of the congregation.</p>
+  </section>
+  
+  <section>
+    <h2>WEEKLY FELLOWSHIP MEALS RESUME TODAY</h2>
+    <p>Join us for a fellowship lunch after worship every Sunday! We hope you can stay and get to know one-another. If you’re new, we’d love to meet you and this is a great opportunity to do so! Suggested donation of $5 per meal, maximum of $20 per household (guests and kids eat free). Don't let costs hinder you from joining, we'd love to have you come anyway!</p>
+  </section>
+  
+  <section>
+    <h2>SUNDAY FUNDAY PLANNING DURING LUNCH TODAY</h2>
+    <p>Sunday Funday planning is underway and we'd love to have you join our team! Help CPC welcome newcomers to New Haven, celebrate the beginning of a new season, and enjoy our family fellowship after worship with fun and food for all generations. We'll meet to discuss the vision and logistics of the event today after worship during lunch (Sunday Funday itself is 9/10). Anyone is welcome, just show up and meet Colleen Rice in the Lecture Room with your lunch!</p>
+  </section>
+  
+  <section>
+    <h2>LAST DAY TO REGISTER FOR I HEART NEW HAVEN DAY IS TODAY</h2>
+    <p>As a capstone to our CPC Impact Summer, join Bridges of Hope (BOH) with other churches throughout Greater New Haven in a day of service to our city on Saturday 8/26. This year we will be gathering at the New Haven Green for worship at 9 AM and then dispersing to sites across the city for service from 10 AM until approximately 2 PM. Families are welcome! Please register each member of your family separately, as a waiver is needed for each one.</p>
+    <style>
+
+      </style>
+    <ul>
+      <li>Learn more and sign up to volunteer online at: <a href="cpcnewhaven.org/impact">cpcnewhaven.org/impact</a></li>
+      <li>Deadline to register: TODAY Sunday 8/20!</li>
+      <li>Register on-site today: see Tyler Rice in the foyer!</li>
+    </ul>
+  </section>
+    
+<!-- SAVE THE DATE -->
+
+<section id="savethedate" class="bigSlide">
+    <style>
+
+      .bigSlide {
+        background-color: #0000008d;
+        margin: 2em;
+        border-radius: 7.5px;
+      }
+
+      .bigSlide h2 {
+        font-size:3em;
+        line-height:1em;
+        
+
+      }
+
+    </style>
+    <h2>Save the Dates</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Event</th>
+          <th>Time</th>
+          <th>Location</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>10 September</td>
+          <td>Sunday Funday</td>
+          <td>After Worship</td>
+          <td>CPC Lawn</td>
+        </tr>
+        <tr>
+          <td>17 September</td>
+          <td>Ministry Year Kick-Off!</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>23 September</td>
+          <td>Men & Kids Can Cook Tailgate (Cornell @ Yale Football)</td>
+          <td>10am</td>
+          <td>Contact Pat (pat.clendenen@gmail.com)</td>
+        </tr>
+        <tr>
+          <td>01 October</td>
+          <td>Installation Service of Senior Pastor</td>
+          <td>4:30pm</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>08 October</td>
+          <td>Newcomer Lunch</td>
+          <td>After Worship</td>
+<td>Lecture Room</td>
+</tr>
+</tbody>
+</table>
+</section>
+         
+
+
+<!-- ONGOING WEEKLY -->
+<section>
+    <style>
+
+    </style>
+    <h2>Ongoing Weekly Events</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Day</th>
+                <th>Time</th>
+                <th>Event</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Sundays</td>
+                <td>9:30am</td>
+                <td>Prayer in the Parlor: Join with fellow members before worship to pray.</td>
+            </tr>
+            <tr>
+                <td>Sundays</td>
+                <td>12:00pm</td>
+                <td>Fellowship Meal: Join us for a fellowship lunch after worship every Sunday! We hope you can stay and get to know one-another. If you’re new here, we’d love to meet you and this is a great opportunity to do so! Suggested donation of $5 per meal, with a maximum of $20 per household (guests and kids eat free). Don't let costs hinder you from joining, we'd love to have you come anyway!</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<!-- GENERAL ANNOUNCEMENTS -->
+
+<section>
+    <style>
+
+      </style>
+    <h2>GENERAL ANNOUNCEMENTS</h2>
+    <hr>
+    <table>
+      <tr>
+        <td>LIFE GROUPS:</td>
+        <td>Do you have a group for the new year? If not, to find one text LIFEGROUPS to 860-467-0010 or see a list in the foyer. Life groups are authentic and small gatherings where we experience and share Christ.</td>
+      </tr>
+      <tr>
+        <td>CONNECT BOARD:</td>
+        <td>Want to join or share some fun this summer? Text CONNECT to 860-467-0010 (or go to connect.cpcnewhaven.org). On the website, click the “Get Notified” button to receive weekly emails and to send new event details out in real time. This is your way to share an event or invitation with the whole congregation! You can also post it on the physical connect board in the foyer. Questions? Email Colleen Rice (c.mccormack418@gmail.com).</td>
+      </tr>
+      <tr>
+        <td>PASTORAL COUNSELING AVAILABLE:</td>
+        <td>Would you like to speak one-on-one with a CPC pastor? We desire to connect the truths of scripture to the realities of life, whether you are going through suffering or just need wisdom. Sign-up confidentially at cpcnewhaven.org/pastoral-counseling or text PASTORCONSULT to 860-467-0010.</td>
+      </tr>
+      <tr>
+        <td>BOH MENTORING PROGRAM | 2023-2024 SCHOOL YEAR:</td>
+        <td>Invest in the life of a New Haven child and their family with Bridges of Hope (BOH)! Our vision is to provide a safe place for students from low-income families to receive academic help and grow emotionally and spiritually alongside a caring adult. Volunteers should be over 18 and willing to commit one night a week to spending time with a 1st-8th grader from 5:15-7pm. Duties will include homework help, short devotions, and small group recreation. Mentors agree to attend 4 hours of training and orientation in early Sept. and Jan., and communicate regularly with their mentee's parents. Contact Rafa (rafael.luna@bridgesnewhaven.org) or go to: bridgesnewhaven.org/mentoring</td>
+      </tr>
+    </table>
+  </section>
+
+<!-- LIFE GROUP SECTION -->
+  <section>
+    <style>
+    /* Table Styling */
+
+</style>
+    <h2>LIFE GROUPS</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Contact</th>
+          <th>Meeting Schedule</th>
+          <th>Location</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Colleen Rice</td>
+          <td>Weekly on Thursdays at 7pm</td>
+          <td>Varies from week to week</td>
+        </tr>
+        <tr>
+          <td>Julie Walker</td>
+          <td>2nd and 4th Sundays of each month at 2pm</td>
+          <td>Different members' homes</td>
+        </tr>
+        <tr>
+          <td>Kaitlyn Jessee</td>
+          <td>2nd and 4th Sundays of each month</td>
+          <td>Either mid or late afternoon</td>
+        </tr>
+        <tr>
+          <td>Lisa Tweed</td>
+          <td>2nd Saturday of each month from 4:30pm-7:30pm</td>
+          <td>Madison</td>
+        </tr>
+        <tr>
+          <td>Peggy Kebabian</td>
+          <td>Twice monthly, 2nd Wed. at 7:30pm via Zoom, and the 4th Sun. at 1pm in person</td>
+          <td>Guilford</td>
+        </tr>
+        <tr>
+          <td>Stacy Roney</td>
+          <td>Twice monthly, once on the 2nd Saturday at 6pm, and another time for a joint activity</td>
+          <td>Trumbull</td>
+        </tr>
+        <tr>
+          <td>Miranda Healy</td>
+          <td>2nd Sunday of each month at 4pm</td>
+          <td>Woodbridge/Westville</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+<section>
+    <style>
+        .ministry-section {
+            margin-bottom: 2rem;
+            color:white;
+        }
+
+        .ministry-section h3 {
+            margin-bottom: 0.5rem;
+        }
+
+        .ministry-section p {
+            margin-bottom: 0.5rem;
+        }
+
+        .ministry-section a {
+            color:white;
+        }
+    </style>
+  <div class="ministry-section">
+    <h3>MINISTRY GROUPS</h3>
+    <p>Youth | Youth ministry takes place through our Sunday School lessons and one-on-one discipleship with Pastor Jerry (<a href="mailto:Jerry.Ornelas@cpcnewhaven.org">Jerry.Ornelas@cpcnewhaven.org</a>), along with seasonal activities.</p>
+    <p>College Students | We love students! Contact Pastor Jerry (<a href="mailto:jerry.ornelas@cpcnewhaven.org">jerry.ornelas@cpcnewhaven.org</a>).</p>
+    <p>Graduate Students | We have several different weekly options. If interested in Graduate student ministry, please contact Pastor Craig (<a href="mailto:Craig.Luekens@cpcnewhaven.org">Craig.Luekens@cpcnewhaven.org</a>).</p>
+</div>
+</section>
+<script src="scripts.js"></script>
+<!-- ... other parts of your HTML -->
+
+
+
+<script>
+    window.onload = function() {
+        var body = document.getElementsByTagName('body')[0];
+        var img = document.createElement('img');
+        img.src = 'https://source.unsplash.com/random/1920x1080?nature,landscape';
+        img.style.position = 'fixed';
+        img.style.top = '0';
+        img.style.left = '0';
+        img.style.width = '100%';
+        img.style.height = '100%';
+        img.style.objectFit = 'cover';
+        img.style.zIndex = '-1'; // Changed zIndex to 1 so that it is behind the content
+        body.appendChild(img);
+
+        var overlay = document.createElement('div');
+        overlay.style.position = 'fixed';
+        overlay.style.top = '0';
+        overlay.style.left = '0';
+        overlay.style.width = '100%';
+        overlay.style.height = '100%';
+        overlay.style.backgroundColor = 'rgba(0, 0, 0, 0.26)';
+        overlay.style.zIndex = '-1'; // Kept zIndex as 0 so that it is in front of the body background
+        body.appendChild(overlay);
+    };
+</script>
+
+<h1>
+    Experimental Features (Beta IN PROGRESS)
+</h1>
+<nav>
+  <div class="user">
+    <img src="https://source.unsplash.com/random/52x52?avatar" alt="User Icon">
+    <span id="username">Hello, 'username'</span>
+</div>
+    <ul>
+        <li>
+            <a href="masterForm.html">Master Form</a>
+        </li>
+        <li>
+            <a href="index-newNav.html">index New Nav</a>
+        </li>
+        <li>
+            <a href="yearbook.html">yearbook</a>
+        </li>
+    </ul>
+</nav>
+
+</body>
+
+</html>
+>>>>>>> origin/main
