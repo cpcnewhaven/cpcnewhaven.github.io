@@ -345,29 +345,55 @@ contentItems.forEach(function (item) {
 });
 
 </script>
+
+
+<!-- BACKGROUND SCRIPT IMAGES -->
+<style>
+  #backgroundImage {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    transition: opacity 1s ease-in-out;
+    opacity: 0;
+  }
+</style>
+
 <script>
   window.onload = function() {
-      var body = document.getElementsByTagName('body')[0];
-      var img = document.createElement('img');
-      img.src = 'https://source.unsplash.com/random/1920x1080?nature,landscape';
-      img.style.position = 'fixed';
-      img.style.top = '0';
-      img.style.left = '0';
-      img.style.width = '100%';
-      img.style.height = '100%';
-      img.style.objectFit = 'cover';
-      img.style.zIndex = '-1'; // Changed zIndex to 1 so that it is behind the content
-      body.appendChild(img);
+    var body = document.getElementsByTagName('body')[0];
+    var img = document.createElement('img');
+    img.id = 'backgroundImage';
+    body.appendChild(img);
 
-      var overlay = document.createElement('div');
-      overlay.style.position = 'fixed';
-      overlay.style.top = '0';
-      overlay.style.left = '0';
-      overlay.style.width = '100%';
-      overlay.style.height = '100%';
-      overlay.style.backgroundColor = 'rgba(0, 0, 0, 0.26)';
-      overlay.style.zIndex = '-1'; // Kept zIndex as 0 so that it is in front of the body background
-      body.appendChild(overlay);
+    var overlay = document.createElement('div');
+    overlay.style.position = 'fixed';
+    overlay.style.top = '0';
+    overlay.style.left = '0';
+    overlay.style.width = '100%';
+    overlay.style.height = '100%';
+    overlay.style.backgroundColor = 'rgba(0, 0, 0, 0.26)';
+    overlay.style.zIndex = '-1';
+    body.appendChild(overlay);
+
+    // Function to change the image
+    function changeImage() {
+      var imageNumber = Math.floor(Math.random() * 10) + 1;
+      img.src = 'websiteBG/' + imageNumber + '.png';
+      img.style.opacity = '0';
+      setTimeout(function() {
+        img.style.opacity = '1';
+      }, 100);
+    }
+
+    // Change the image immediately on page load
+    changeImage();
+
+    // Then change the image every 12 seconds
+    setInterval(changeImage, 12000);
   };
 </script>
 
