@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="index-addon.css">
     <script src="scripts.js" defer></script>
     <script src="events.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -50,6 +51,70 @@
 <section class="timeDisplayWidget">
 <div class="time" id="timeDisplay"></div>
 <div class="date" id="dateDisplay"></div>
+</section>
+
+
+<style>
+ .weekly-announcements {
+  width:100%;
+    min-height:100vh;
+    padding:10px;
+    background-color:rgba(0, 0, 0, 0.445);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0;
+  }
+
+  .weekly-announcements-header {
+    margin-top:20px;
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+    backdrop-filter: blur(10px); /* Blur the elements behind the div */
+    border-radius: 10px; /* Optional: Rounded corners */
+    padding: 10px; /* Some padding */
+    border: 1px solid rgba(255, 255, 255, 0.18); /* A border can help the effect stand out more */
+  }
+
+  .weekly-announcements-body {
+    margin-top:20px;
+    width:80%;
+    margin: 0 auto; /* This will center the div if it has a specified width */
+    font-size: 32px; /* Increase the font size for better legibility */
+    line-height: 1.5; /* Increase the line height for better legibility */
+    color: #333; /* Dark text color for better contrast */
+    background-color: #35353563; /* Light background for better contrast */
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+    backdrop-filter: blur(10px); /* Blur the elements behind the div */
+    border-radius: 10px; /* Optional: Rounded corners */
+    padding: 10px; /* Some padding */
+    border: 1px solid rgba(255, 255, 255, 0.18); /* A border can help the effect stand out more */
+    font-family: 'Barlow', sans-serif; /* Set the font to Barlow */
+  }
+
+
+</style>
+<section class="weekly-announcements">
+  <div class="weekly-announcements-header">
+  <h1>Weekly Preview</h1>
+  <h2>Preview for 9/17/23</h2></div>
+  <div class="weekly-announcements-body">
+    <ul style="font-size: 30px;">
+      <li><strong>8:30am Prayer in the Parlor:</strong> Prayer moves back to 8:30am before Sunday School.</li>
+      <li><strong>9:30am Children’s Sunday School and Adult Sunday Studies Begin:</strong> Join us for Children’s SS, and “What We Believe: Knowing and Loving Our Doctrines” (formerly called Confessional Theology) in the Fellowship Hall for adults.</li>
+      <li><strong>12:00pm Congregational Meeting and Lunch:</strong> All are invited to join us in the Fellowship Hall for lunch and a look at the ministry year ahead.</li>
+    </ul>
+
+    <h1>
+      Sermon Preview
+    </h1>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    
+  </div>
+  
+
+
+
 </section>
 
 
