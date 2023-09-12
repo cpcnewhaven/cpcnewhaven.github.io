@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Small Groups This Fall</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            text-align: left;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        @media screen and (max-width: 600px) {
+            th, td {
+                display: block;
+                width: auto;
+            }
+            th {
+                display: none; /* hide headers */
+            }
+            td {
+                margin-bottom: 0.625rem;
+            }
+            td:before {
+                content: attr(data-label);
+                float: left;
+                text-transform: uppercase;
+                font-weight: bold;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>SMALL GROUPS THIS FALL</h1>
+    <p>Life Groups are our way of doing church in the small with all sorts of people engaged in prayer, teaching, fellowship and care.</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Location & Time</th>
+                <th>Contact Person</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td data-label="Location & Time">Downtown New Haven Wednesday</td>
+                <td data-label="Contact Person">Colleen Rice</td>
+                <td data-label="Email">colleenmmrice@gmail.com</td>
+            </tr>
+            <tr>
+                <td data-label="Location & Time">Downtown New Haven Thursday</td>
+                <td data-label="Contact Person">Joshua Kebabian</td>
+                <td data-label="Email">jkebabian@gmail.com</td>
+            </tr>
+            <tr>
+                <td data-label="Location & Time">Shoreline Saturday</td>
+                <td data-label="Contact Person">Cliff Bogue</td>
+                <td data-label="Email">clifford.bogue@me.com</td>
+            </tr>
+            <tr>
+                <td data-label="Location & Time">Trumbull Saturday</td>
+                <td data-label="Contact Person">Stacy Roney</td>
+                <td data-label="Email">mrsprofdoc@icloud.com</td>
+            </tr>
+            <tr>
+                <td data-label="Location & Time">East Rock Sunday</td>
+                <td data-label="Contact Person">Kaitlyn Jessee</td>
+                <td data-label="Email">kaijessee@gmail.com</td>
+            </tr>
+            <tr>
+                <td data-label="Location & Time">Hamden-Cheshire Sunday</td>
+                <td data-label="Contact Person">Julie Walker</td>
+                <td data-label="Email">walkerfj@comcast.net</td>
+            </tr>
+            <tr>
+                <td data-label="Location & Time">West Side (Woodbridge/Westville) Sunday</td>
+                <td data-label="Contact Person">Miranda Healy</td>
+                <td data-label="Email">mirandajrdn8@gmail.com</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
