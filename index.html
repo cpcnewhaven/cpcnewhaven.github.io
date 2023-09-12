@@ -123,7 +123,53 @@
 
 </section>
 
+<!-- NEW WELCOME PART 2 -->
+<!-- CSS OF WELCOME -->
+<style>
+  .weekly-preview-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 16px;
+}
 
+.weekly-preview-item {
+    width: 100%;
+    min-height: 300px;
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    padding: 16px;
+}
+
+@media (max-width: 768px) {
+    .weekly-preview-item {
+        min-height: auto;
+    }
+}
+
+</style>
+<!-- HTML OF WELCOME-->
+<section class="weekly-preview-container">
+  <div class="weekly-preview-item">
+      <h2>Title 1</h2>
+      <p>Some text here.</p>
+      <a href="#">Link 1</a> | <a href="#">Link 2</a>
+      <img src="https://via.placeholder.com/50" alt="Image 1">
+  </div>
+  <div class="weekly-preview-item">
+      <h2>Title 2</h2>
+      <p>Some text here.</p>
+      <a href="#">Link 1</a> | <a href="#">Link 2</a>
+      <img src="https://via.placeholder.com/50" alt="Image 2">
+  </div>
+  <div class="weekly-preview-item">
+      <h2>Title 3</h2>
+      <p>Some text here.</p>
+      <a href="#">Link 1</a> | <a href="#">Link 2</a>
+      <img src="https://via.placeholder.com/50" alt="Image 3">
+  </div>
+  <!-- Add more grid items as needed -->
+</section>
 
 
 <section id="savethedate" class="bigSlide">
