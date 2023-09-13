@@ -41,10 +41,30 @@
 
 </div>
 <!-- END OF TOP NAV BAR-->
+<style>
+  .subHeader-text {
+    font-size:10vh;;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+    line-height:80%;
+    margin:0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add this line */
 
+  }
+
+  .home-screen h3 {
+    color:white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.17); /* Add this line */
+
+  }
+</style>
 <!-- FIRST HOME SCREEN -->
 <div class="home-screen">
   <a href="#"><img src="CPC LOGO.png"></a>
+  <p class="subHeader-text">Sunday Worship 10:30am</p> 
+  <h3>135 Whitney Ave - New Haven, CT </h3>
+  
   <p>This website is in Beta - to use the old website visit <a href="https://cpcnewhaven.org" style="color: white;">here</a></p>
   <input type="text" id="search-box" class="search-box" placeholder="...">
 </div>
@@ -73,11 +93,14 @@
 .weekly-preview-item {
     width: 100%;
     min-height: 300px;
-    background-color: #f1f1f1;
+    background-color: #000000a1;
+    color:white;
+    border-radius:20px;
     border: 1px solid #ccc;
     box-sizing: border-box;
     padding: 16px;
-    color:black;
+    backdrop-filter: blur(4px); /* Add this line */
+
 }
 
 @media (max-width: 768px) {
@@ -121,9 +144,15 @@
       <a href="#">Link 1</a> | <a href="#">Link 2</a>
       <img src="https://via.placeholder.com/50" alt="Image 3">
   </div>
-  <div class="weekly-preview-item">
-    <h2>Title 3</h2>
-    <p>Some text here.</p>
+  <div class="weekly-preview-item" id="ministryGroups">
+    <h3>MINISTRY GROUPS</h3>
+        <p>Some text here.</p>
+    <div class="ministry-section">
+      
+      <p>Youth | Youth ministry takes place through our Sunday School lessons and one-on-one discipleship with Pastor Jerry (<a href="mailto:Jerry.Ornelas@cpcnewhaven.org">Jerry.Ornelas@cpcnewhaven.org</a>), along with seasonal activities.</p>
+      <p>College Students | We love students! Contact Pastor Jerry (<a href="mailto:jerry.ornelas@cpcnewhaven.org">jerry.ornelas@cpcnewhaven.org</a>).</p>
+      <p>Graduate Students | We have several different weekly options. If interested in Graduate student ministry, please contact Pastor Craig (<a href="mailto:Craig.Luekens@cpcnewhaven.org">Craig.Luekens@cpcnewhaven.org</a>).</p>
+  </div>
     <a href="#">Link 1</a> | <a href="#">Link 2</a>
     <img src="https://via.placeholder.com/50" alt="Image 3">
 </div>
@@ -141,12 +170,7 @@
 
 <section>
 
-  <div class="ministry-section">
-    <h3>MINISTRY GROUPS</h3>
-    <p>Youth | Youth ministry takes place through our Sunday School lessons and one-on-one discipleship with Pastor Jerry (<a href="mailto:Jerry.Ornelas@cpcnewhaven.org">Jerry.Ornelas@cpcnewhaven.org</a>), along with seasonal activities.</p>
-    <p>College Students | We love students! Contact Pastor Jerry (<a href="mailto:jerry.ornelas@cpcnewhaven.org">jerry.ornelas@cpcnewhaven.org</a>).</p>
-    <p>Graduate Students | We have several different weekly options. If interested in Graduate student ministry, please contact Pastor Craig (<a href="mailto:Craig.Luekens@cpcnewhaven.org">Craig.Luekens@cpcnewhaven.org</a>).</p>
-</div>
+
 </section>
 <script src="scripts.js"></script></section>
 
