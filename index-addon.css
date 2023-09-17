@@ -238,3 +238,27 @@ html {
 .ministry-section a {
     color:white;
 }
+
+
+.weekly-preview-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 16px;
+  padding: 1em;
+}
+
+.weekly-preview-item {
+  background-color: #000000a1;
+  color:white;
+  border-radius:20px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  padding: 16px;
+  backdrop-filter: blur(4px);
+}
+
+@media (max-width: 768px) {
+  .weekly-preview-item {
+      min-height: auto;
+  }
+}
