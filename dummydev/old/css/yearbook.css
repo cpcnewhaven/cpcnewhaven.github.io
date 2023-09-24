@@ -1,0 +1,92 @@
+#yearbook {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.photo-card {
+    border: 1px solid #d1d1d1;
+    padding: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 320px;
+}
+
+.photo-card img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.photo-card p {
+    margin: 5px 0;
+    font-size: 16px;
+    text-align: center;
+}
+
+.photo-card p.year-text {
+    font-size: 14px;
+    color: #555;
+    font-style: italic;
+}
+
+
+/* ... existing CSS ... */
+
+#controls {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.95); /* slightly transparent white for some translucency */
+    padding: 10px 0; 
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* subtle border at the bottom */
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1); /* subtle shadow for depth */
+    z-index: 1000; /* ensure it stays on top */
+    display: flex; /* for horizontal alignment of children */
+    justify-content: center; /* center items horizontally */
+    align-items: center; /* center items vertically */
+}
+
+#searchBar {
+    /* ... existing styles ... */
+    margin: 0 20px; /* added space around search bar for better separation */
+}
+
+/* ... existing CSS ... */
+
+/* Bottom Footer Controls */
+#footer-controls {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.95); /* slightly transparent white for some translucency */
+    padding: 10px 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1); /* subtle border at the top */
+    box-shadow: 0px -3px 10px rgba(0, 0, 0, 0.1); /* subtle shadow for depth */
+    z-index: 1000; /* ensure it stays on top */
+    display: flex; /* for horizontal alignment of children */
+    justify-content: center; /* center items horizontally */
+    align-items: center; /* center items vertically */
+    flex-wrap: wrap; /* allows the buttons to wrap onto the next line if there isn't enough space */
+}
+
+.button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: #2196F3; /* blue shade */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s ease; /* smooth color transition */
+    font-size: 16px;
+    margin: 5px;
+    text-decoration: none; /* remove underline from links */
+}
+
+.button:hover {
+    background-color: #1976D2; /* a bit darker shade of blue on hover */
+}
+
+/* ... rest of the CSS ... */

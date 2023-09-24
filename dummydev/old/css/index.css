@@ -1,0 +1,66 @@
+/* INDEX CSS */
+body {
+    background-image:url('../assets/CPC 3 BG.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    
+  }
+
+  .full-footer {
+    background-color: #bebebe34;
+    width: 100%;
+   
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-align:center;
+    font-size:12px;
+  }
+
+  .footer-inner-wrap {
+    width: 90%;
+    color:white;
+  }
+
+  /* ... existing CSS ... */
+
+/* Bottom Footer Controls */
+#footer-controls {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.95); /* slightly transparent white for some translucency */
+  padding: 10px 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1); /* subtle border at the top */
+  box-shadow: 0px -3px 10px rgba(0, 0, 0, 0.1); /* subtle shadow for depth */
+  z-index: 1000; /* ensure it stays on top */
+  display: flex; /* for horizontal alignment of children */
+  justify-content: center; /* center items horizontally */
+  align-items: center; /* center items vertically */
+  flex-wrap: wrap; /* allows the buttons to wrap onto the next line if there isn't enough space */
+}
+
+.button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  background-color: #2196F3; /* blue shade */
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s ease; /* smooth color transition */
+  font-size: 16px;
+  margin: 5px;
+  text-decoration: none; /* remove underline from links */
+}
+
+.button:hover {
+  background-color: #1976D2; /* a bit darker shade of blue on hover */
+}
+
+/* ... rest of the CSS ... */

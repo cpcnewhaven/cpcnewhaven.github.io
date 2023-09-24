@@ -1,0 +1,200 @@
+body {
+    background-image: url('../assets/CPC\ 3a\ BG.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #EEEBDD;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+h1 {
+    padding: 20px;
+    text-align: center;
+    color: #f7f7f7;
+}
+.filter-container, #episodeList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+.filter-container > div {
+    margin: 10px 0;
+}
+#episodeList {
+    overflow-x: auto;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+tr:nth-child(even) {
+    background-color: #0040ff;
+}
+a {
+    color: #1d9ab9;
+}
+/* Neumorphism */
+.neumorphic {
+    border-radius: 1rem;
+/*background: #292e35;*/
+    /*box-shadow:  20px 20px 60px #1e2329, -20px -20px 60px #364349;*/
+    width: 90%;
+    margin: 20px auto;
+}
+    /* Responsiveness */
+    @media (max-width: 600px) {
+    table {
+        font-size: 0.8em;
+    }
+    .neumorphic {
+        width: 98%;
+    }
+}
+
+
+.home-logo {
+    width:200px;
+    text-align:center;
+    margin:0px;
+}
+
+header {
+    display:flex;
+    justify-content: center;
+    margin:0px;
+}
+
+.container {
+    margin: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align:center;
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    border-radius: 20px;
+    background-color: #000d427c;
+    border-style:solid;
+    border-color:lightblue;
+    color: white;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: #4567aa;
+  }
+
+  .live-button {
+    display: block;
+    background-color: var(--cpcBlue1);
+    color: var(--cpcBlueBorder);
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    min-width:200px;
+    font-weight:700;
+    border-style:dotted;
+    border-color: var(--cpcBlueBorder);
+    border-width:1px;
+}
+
+.live-button:hover {
+    opacity:.5;
+    
+}
+
+.full-footer {
+    background-color: #bebebe34;
+    width: 100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-align:center;
+    font-size:12px;
+}
+
+.footer-inner-wrap {
+    width: 90%;
+    color:white;
+}
+
+.row{
+    display: flex;
+}
+.column-2 {
+    flex: 50%;
+}
+.column-3 {
+    flex: 33%;
+}
+.column-4 {
+    flex: 25%;
+}
+
+
+
+/* ... existing CSS ... */
+
+/* Bottom Footer Controls */
+#footer-controls {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.95); /* slightly transparent white for some translucency */
+    padding: 10px 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1); /* subtle border at the top */
+    box-shadow: 0px -3px 10px rgba(0, 0, 0, 0.1); /* subtle shadow for depth */
+    z-index: 1000; /* ensure it stays on top */
+    display: flex; /* for horizontal alignment of children */
+    justify-content: center; /* center items horizontally */
+    align-items: center; /* center items vertically */
+    flex-wrap: wrap; /* allows the buttons to wrap onto the next line if there isn't enough space */
+}
+
+.button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: #2196F3; /* blue shade */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s ease; /* smooth color transition */
+    font-size: 16px;
+    margin: 5px;
+    text-decoration: none; /* remove underline from links */
+}
+
+.button:hover {
+    background-color: #1976D2; /* a bit darker shade of blue on hover */
+}
+
+/* ... rest of the CSS ... */
+
