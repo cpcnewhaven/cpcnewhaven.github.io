@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://unpkg.com/vue@2.6.14/dist/vue.js"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yearbook Page</title>
+    <link rel="stylesheet" href="../css/yearbook.css">
+    <style>
+        #mosaic {
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+          grid-gap: 10px;
+        }
+    
+        .lightbox {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0, 0, 0, 0.8);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+    
+        .lightbox img {
+          max-width: 90%;
+          max-height: 90%;
+        }
+      </style>
+
+</head>
+<body>
+    <div id="app">
+        <div id="mosaic">
+          <img v-for="imageUrl in imageUrls" :key="imageUrl" :src="imageUrl" @click="openLightbox(imageUrl)" />
+        </div>
+        <div v-if="lightboxImageUrl" class="lightbox" @click="closeLightbox">
+          <img :src="lightboxImageUrl" />
+        </div>
+      </div>
+    
+      <script>
+        new Vue({
+          el: '#app',
+          data() {
+            return {
+              imageUrls: [],
+              lightboxImageUrl: null,
+            };
+          },
+          mounted() {
+            fetch("./yearbook-images")
+              .then((response) => response.text())
+              .then((data) => {
+                this.imageUrls = data.split("\n");
+              })
+              .catch((error) => {
+                console.error("Error fetching image URLs:", error);
+              });
+          },
+          methods: {
+            openLightbox(imageUrl) {
+              this.lightboxImageUrl = imageUrl;
+            },
+            closeLightbox() {
+              this.lightboxImageUrl = null;
+            },
+          },
+        });
+      </script>
+
+<!-- ... rest of the HTML code ... -->
+<div id="controls">
+    <input type="text" id="searchBar" onkeyup="filterPhotos()" placeholder="Search by Name or Year">
+    <button onclick="sortByName()">Sort A-Z</button>
+    <button onclick="sortByYear()">Sort by Year Joined</button>
+    <button onclick="sortByRecentMember()">Sort by Most Recent</button>
+</div>
+<!-- ... rest of the HTML code ... -->
+<style>
+    .year-column {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  transform: rotate(-90deg);
+  transform-origin: top left;
+}
+</style>
+<div id="mosaic"></div>
+
+
+    <div id="yearbook">
+        <!-- Photos will be appended here by the JavaScript -->
+    </div>
+<!-- Bottom Footer Controls -->
+<div id="footer-controls" class="buttons">
+    <a href="index.html" class="button">Home</a>
+    <a href="live.html" class="button">Live Stream</a>
+    <a href="latest-podcast.html" class="button">Latest Podcast</a>
+    <a href="weekly.html" class="button">Weekly Announcements</a>
+    <a href="lifegroups.html" class="button">Lifegroups</a>
+    <a href="archives.html" class="button">CPC Archives</a>
+    <a href="yearbook.html" class="button">Yearbook</a>
+</div>
+    <!-- SCRIPT THAT PULLS FROM GOOGLE DRIVE -->
+    <script src="./yearbook-mosaic-maker.js"></script>
+    <script src="/yearbook.js"></script>
+</body>
+</html>
