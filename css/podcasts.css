@@ -3,11 +3,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
+
   }
   
   /* Set a minimal background */
   body {
-    background-color: #f2f2f2;
     font-family: Arial, sans-serif;
   }
   
