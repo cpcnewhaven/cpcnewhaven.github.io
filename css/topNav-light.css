@@ -1,19 +1,20 @@
  /* Add the following CSS code */
-.top-nav-bar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: transparent;
-  border: none;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-  backdrop-filter: blur(10px);
-  padding: 10px;
-  position: relative;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 999;
-}
+ .top-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white; /* change background color to white */
+    color: black; /* change font color to black */
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5); /* change border color to black */
+    backdrop-filter: none; /* remove backdrop filter */
+    padding: 10px;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+  }
 
 .top-nav {
   display: flex;
@@ -27,12 +28,13 @@
 }
 
 .top-nav a {
-  color: white;
+  color: black;
   text-decoration: none;
   padding: 10px;
   margin: 0 5px;
   font-family: 'Barlow', sans-serif;
   font-size: 16px;
+  text-align:left;
 }
 
 .top-nav a:hover {
