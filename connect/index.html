@@ -188,95 +188,11 @@
 
 
 <style>
-    .event-form-section {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 100%;
-        background: rgba(255, 255, 255, 0.1);
-        backdrop-filter: blur(10px);
-    }
-
-    .event-form-container {
-        background: rgba(255, 255, 255, 0.5);
-        padding: 40px;
-        border-radius: 10px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        max-width: 800px;
-        width: 100%;
-    }
-
-    .event-form h2 {
-        color: #333;
-        margin-bottom: 20px;
-    }
-
-    .event-form p {
-        color: #555;
-        font-size: 14px;
-        margin-bottom: 20px;
-    }
-
-    .event-form label {
-        display: block;
-        color: #444;
-        font-weight: bold;
-        margin-top: 20px;
-    }
-
-    .event-form input,
-    .event-form textarea {
-        width: 100%;
-        padding: 10px;
-        border: none;
-        border-radius: 5px;
-        background: rgba(255, 255, 255, 0.8);
-        margin-top: 5px;
-    }
-
-    .event-form button {
-        display: block;
-        margin-top: 20px;
-        padding: 10px;
-        border: none;
-        background: #555;
-        color: #fff;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: background 0.3s;
-    }
-
-    .event-form button:hover {
-        background: #444;
-    }
+   
 </style>
 
 
-            <!-- CREATE EVENT -->
-            <section class="event-form-section">
-                <div class="event-form-container">
-                    <h2>CONNECT: Create an Event</h2>
-                    <p>A person from the CPC community, and their contact information, must be included with each post. The idea is that you're inviting people to join you! :) Events are not sponsored by CPC and should not include "CPC" in the title.</p>
-                    <form class="event-form">
-                        <label for="respondent">Change Respondent</label>
-                        <p>Alex Gonzalez</p>
-                        <p>alex@cpcnewhaven.org</p>
-                        <label for="event-title">Event Title*</label>
-                        <input type="text" id="event-title" placeholder="Type your answer" maxlength="60">
-                        <label for="event-description">Event Description*</label>
-                        <textarea id="event-description" placeholder="Tell us about your event!"></textarea>
-                        <label for="event-date">Event Date*</label>
-                        <input type="text" id="event-date" placeholder="This can be the actual event date, or the first date of an ongoing meeting, or a deadline.">
-                        <label for="event-time">Event Time</label>
-                        <input type="text" id="event-time" placeholder="Include the start and end time if applicable." maxlength="60">
-                        <label for="event-location">Event Location</label>
-                        <input type="text" id="event-location" placeholder="Type your answer" maxlength="60">
-                        <label for="event-image">Event Image</label>
-                        <input type="file" id="event-image">
-                        <button type="submit">CHOOSE FILE</button>
-                    </form>
-                </div>
-            </section>
+          
             
 
 
@@ -309,7 +225,29 @@
         </section>
 
 
+  <!-- CREATE EVENT -->
+  <section class="event-form-section">
+    <div class="event-form-container">
+        <h2>CONNECT: Create an Event</h2>
+        <p>A person from the CPC community, and their contact information, must be included with each post. The idea is that you're inviting people to join you! :) Events are not sponsored by CPC and should not include "CPC" in the title.</p>
+        <form class="event-form">
 
+            <label for="event-title">Event Title*</label>
+            <input type="text" id="event-title" placeholder="Type your answer" maxlength="60">
+            <label for="event-description">Event Description*</label>
+            <textarea id="event-description" placeholder="Tell us about your event!"></textarea>
+            <label for="event-date">Event Date*</label>
+            <input type="text" id="event-date" placeholder="This can be the actual event date, or the first date of an ongoing meeting, or a deadline.">
+            <label for="event-time">Event Time</label>
+            <input type="text" id="event-time" placeholder="Include the start and end time if applicable." maxlength="60">
+            <label for="event-location">Event Location</label>
+            <input type="text" id="event-location" placeholder="Type your answer" maxlength="60">
+            <label for="event-image">Event Image</label>
+            <input type="file" id="event-image">
+            <button type="submit">CHOOSE FILE</button>
+        </form>
+    </div>
+</section>
     <footer>
         <div class="logo">
             <a href="index.html">

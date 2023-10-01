@@ -45,39 +45,49 @@ footer {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.event-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 3fr));
-    gap: 20px;
-}
 
-.event-card {
-    background-color: rgba(0, 51, 68, 0); /* baby blue glass background */
-    padding: 20px;
-    border-radius: 5px;
-    border: 2px solid #a8a8a8;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
+    .event-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
 
-.event-card h3 {
-    margin-top: 0;
-    color: #800000;
-}
 
-.event-card p {
-    color: #555;
-}
-
-.event-card a {
-    display: inline-block;
-    padding: 10px;
-    background: #ff7d7d00;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 10px;
-}
+    .event-card {
+        background-color: rgba(0, 51, 68, 0);
+        padding: 20px;
+        border-radius: 5px;
+        border: solid #000000;
+        border-width: 1px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: space-between; /* Spread out the content */
+    }
+    
+    .event-card h3 {
+        
+        color: #000000;
+        flex: 1; /* Allow the heading to take up remaining space */
+    }
+    
+    .event-card p {
+        color: #000000;
+        font-size:16px;
+        flex: 1; /* Allow the paragraph to take up remaining space */
+    }
+    
+    .event-card a {
+        display: inline-block;
+        padding: 10px;
+        background: #ff7d7d00;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        margin-top: 10px;
+        flex-shrink: 0; /* Prevent the button from shrinking */
+    }
 
 .splash-section {
     display: flex;
@@ -158,3 +168,39 @@ footer {
     font-weight:600;
 
 }
+
+.event-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .event-form label {
+    margin-top: 10px;
+  }
+  
+  .event-form input,
+  .event-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .event-form button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #993333;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .event-form button:hover {
+    background-color: #800000;
+  }
