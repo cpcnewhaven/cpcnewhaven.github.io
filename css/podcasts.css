@@ -16,6 +16,10 @@
     background-color: #333;
     padding: 10px;
   }
+
+  main {
+    padding:50px;
+  }
   
   .top-nav {
     list-style: none;
@@ -56,10 +60,12 @@
   table {
     width: 100%;
     border-collapse: collapse;
-    margin: 20px 0;
+    margin: 20px auto;
     background-color: #fff;
     border: 1px solid rgba(0, 0, 0, 0.1);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+
   }
   
   th, td {
@@ -89,5 +95,18 @@
     background-color: rgba(0, 0, 0, 0.1);
   }
   
-  /* Add ArtTo create a beautiful and minimal Art Deco-inspired design for the `index.html` page, you can use the following CSS code:
   
+  @media (max-width: 600px) {
+  table {
+    margin: 20px 10px; /* Adjust the margin for mobile devices */
+}
+body {
+    margin:0px;
+    padding:0px;
+}
+
+main {
+    padding:0px;
+    margin:0px;
+}
+}
