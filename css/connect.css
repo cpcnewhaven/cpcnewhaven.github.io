@@ -1,10 +1,10 @@
 /*connect css*/
 
 body {
-    margin: 0;
+    margin: 20px;
     padding: 0;
     font-family: 'Georgia', serif;
-    background-color: #ccff422b;
+    background-color: #f0f0f0e5;
 }
 
 header {
@@ -30,17 +30,19 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width:100%;
+    width: 100%;
     height: 100vh;
     background-color: #ccff422b;
 }
 
 .event-scheduler,
 .group-form {
-    margin: 20px 0;
-    background: #f5f5f5;
+    margin: 20px;
+    background: rgba(255, 255, 255, 0.8);
     padding: 20px;
-    border: 1px solid #ee5d5d;
+    border: 1px solid #000b9e;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .event-grid {
@@ -50,7 +52,7 @@ footer {
 }
 
 .event-card {
-    background-color: #ccff422b;
+    background-color: rgba(0, 51, 68, 0); /* baby blue glass background */
     padding: 20px;
     border-radius: 5px;
     border: 2px solid #a8a8a8;
@@ -70,19 +72,9 @@ footer {
 .event-card a {
     display: inline-block;
     padding: 10px;
-    background: #ff7d7d;
+    background: #ff7d7d00;
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
     margin-top: 10px;
-}
-
-.event-card a:hover {
-    background: #993333;
-}
-
-
-
-.logo img {
-    filter: invert(1);
 }
