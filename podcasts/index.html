@@ -21,6 +21,10 @@
    </nav>
    <main>
    <h1>CPC New Haven Podcasts</h1>
+   <form id="searchForm">
+    <input type="text" id="searchInput" placeholder="Search Psalms by dates or episode titles">
+    <button type="submit">Search</button>
+  </form>
   <h2>Sunday Sermons</h2>
   
   <table>
@@ -206,5 +210,47 @@
       </div>
     </section>
   </footer>
+  <!-- SCRIPTS -->
+  <script>
+  document.getElementById('searchForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent form submission
+  
+    // Get the search query from the input element
+    var searchQuery = document.getElementById('searchInput').value.toLowerCase();
+  
+    // Get all the rows in the table
+    var rows = document.querySelectorAll('table tbody tr');
+  
+    // Loop through each row and check if it matches the search query
+    rows.forEach(function(row) {
+      var date = row.querySelector('td:nth-child(1)').textContent.toLowerCase();
+      var title = row.querySelector('td:nth-child(4)').textContent.toLowerCase();
+  
+      // Show or hide the row based on the search query
+      if (date.includes(searchQuery) || title.includes(searchQuery)) {
+        row.style.display = '';
+      } else {
+        row.style.display = 'none';
+      }
+    });
+  });
+  </script>
+  <style>
+    #searchForm {
+  margin-bottom: 20px;
+}
+
+#searchInput {
+  width: 300px;
+  padding: 5px;
+  font-size: 16px;
+}
+
+
+
+table tbody tr[style="display:"] {
+  display: table-row;
+}
+  </style>
 </body>
 </html>
