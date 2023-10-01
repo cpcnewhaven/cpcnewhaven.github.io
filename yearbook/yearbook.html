@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yearbook Page</title>
+    <link rel="stylesheet" href="yearbook.css">
+</head>
+<body>
+
+
+<!-- ... rest of the HTML code ... -->
+<div id="controls">
+    <input type="text" id="searchBar" onkeyup="filterPhotos()" placeholder="Search by Name or Year">
+    <button onclick="sortByName()">Sort A-Z</button>
+    <button onclick="sortByYear()">Sort by Year Joined</button>
+    <button onclick="sortByRecentMember()">Sort by Most Recent</button>
+</div>
+<!-- ... rest of the HTML code ... -->
+
+<div id="yearbook">
+    <div id="galleryGrid"></div>
+  </div>
+
+
+
+<!-- Bottom Footer Controls -->
+<div id="footer-controls" class="buttons">
+    <a href="index.html" class="button">Home</a>
+    <a href="live.html" class="button">Live Stream</a>
+    <a href="latest-podcast.html" class="button">Latest Podcast</a>
+    <a href="weekly.html" class="button">Weekly Announcements</a>
+    <a href="lifegroups.html" class="button">Lifegroups</a>
+    <a href="archives.html" class="button">CPC Archives</a>
+    <a href="yearbook.html" class="button">Yearbook</a>
+</div>
+
+<script>
+    var galleryGrid = document.getElementById('galleryGrid');
+
+fetch('/yearbook/gallery/2023')
+  .then(response => response.text())
+  .then(data => {
+    var parser = new DOMParser();
+    var html = parser.parseFromString(data, 'text/html');
+    var images = html.querySelectorAll('a[href$=".jpg"], a[href$=".png"], a[href$=".jpeg"]');
+
+    images.forEach(function(image) {
+      var imageUrl = '/yearbook/gallery/2023/' + image.getAttribute('href');
+      var imageElement = document.createElement('img');
+      imageElement.src = imageUrl;
+      galleryGrid.appendChild(imageElement);
+    });
+  });
+</script>
+
+</body>
+</html>
