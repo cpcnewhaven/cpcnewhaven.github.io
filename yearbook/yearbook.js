@@ -1,76 +1,38 @@
-let jsonData = [];
-
-// Fetching JSON data from the "names.json" file located inside the "script" directory
-fetch('names.json')
-    .then(response => {
-        if (!response.ok) {
-            throw new Error('Network response was not ok');
-        }
-        return response.json();
-    })
-    .then(data => {
-        jsonData = data;
-        displayPhotos();
-    })
-    .catch(error => {
-        console.error('Error fetching JSON:', error);
+// Fetch the JSON data from yearbook.json
+fetch('yearbook.json')
+  .then(response => response.json())
+  .then(data => {
+    // Gallery element
+    const galleryGrid = document.getElementById('galleryGrid');
+    
+    // Lightbox elements
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    
+    // Create gallery from JSON data
+    data.forEach((image) => {
+      const imgElement = document.createElement('img');
+      imgElement.src = image.url;
+      imgElement.alt = image.id;
+  
+      // Open lightbox on click
+      imgElement.addEventListener('click', () => {
+        lightboxImg.src = image.url;
+        lightboxImg.alt = image.id;
+        lightbox.classList.remove('hidden');
+      });
+  
+      galleryGrid.appendChild(imgElement);
     });
+  })
+  .catch(error => {
+    console.error('Error fetching JSON data:', error);
+  });
 
-function displayPhotos(data = jsonData) {
-    let yearbookDiv = document.getElementById('yearbook');
-    data.forEach(person => {
-        let photoCard = document.createElement('div');
-        photoCard.className = 'photo-card';
-        
-        let img = document.createElement('img');
-        img.src = person.imageURL;
-        
-        let nameP = document.createElement('p');
-        nameP.textContent = person.name;
-
-        let yearP = document.createElement('p');
-        yearP.textContent = "Joined CPC in " + person.year;
-        yearP.className = "year-text";
-        
-        photoCard.appendChild(img);
-        photoCard.appendChild(nameP);
-        photoCard.appendChild(yearP);
-        
-        yearbookDiv.appendChild(photoCard);
-    });
-}
-
-function sortByName() {
-    jsonData.sort((a, b) => a.name.localeCompare(b.name));
-    clearPhotos();
-    displayPhotos();
-}
-
-function sortByYear() {
-    jsonData.sort((a, b) => a.year.localeCompare(b.year));
-    clearPhotos();
-    displayPhotos();
-}
-
-function sortByRecentMember() {
-    jsonData.sort((a, b) => b.year.localeCompare(a.year));
-    clearPhotos();
-    displayPhotos();
-}
-
-function filterPhotos() {
-    clearPhotos();
-    let searchTerm = document.getElementById('searchBar').value.toLowerCase();
-    let filteredData = jsonData.filter(person => 
-        person.name.toLowerCase().includes(searchTerm) ||
-        person.year.includes(searchTerm)
-    );
-    displayPhotos(filteredData);
-}
-
-function clearPhotos() {
-    let yearbookDiv = document.getElementById('yearbook');
-    while (yearbookDiv.firstChild) {
-        yearbookDiv.removeChild(yearbookDiv.firstChild);
-    }
-}
+// Close lightbox on click outside image
+document.getElementById('lightbox').addEventListener('click', (event) => {
+  const lightboxImg = document.getElementById('lightbox-img');
+  if (event.target !== lightboxImg) {
+    document.getElementById('lightbox').classList.add('hidden');
+  }
+});
