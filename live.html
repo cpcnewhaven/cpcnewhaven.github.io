@@ -36,14 +36,57 @@
 
 
 </div>    
+<style>
+    <style>
+    /* Existing styles */
+
+    /* Footer styles */
+    footer {
+        background-color: white;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .footer-details {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .detail-section {
+        margin: 10px;
+    }
+
+    .big-button {
+        background-color: white;
+        color: black;
+        border: 2px solid black;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    #broadcast-title {
+        font-size: 24px;
+        margin-top: 10px;
+    }
+
+    #description {
+        font-size: 16px;
+        margin-top: 10px;
+    }
+
+    #date {
+        font-size: 14px;
+        margin-top: 10px;
+    }
+</style>
+</style>
 <script src="live.js"></script>    
-    <div class="detail-section">
-        <button class="big-button" id="bulletin">Bulletin for 10/10/2021</button>
-        <button class="big-button" id="scripture">John 3:16</button>
-        <h2 id="broadcast-title">Sunday Service</h2>
-        <p id="description">Join us for our Sunday service!</p>
-        <p id="date">10/10/2021</p>
-    </div>
+<footer>
+
+</footer>
 
     <!-- div class="detail-section">
         <button class="big-button" id="bulletin">Today's Bulletin</button>
@@ -172,31 +215,7 @@
         </div>
     </section>
 
-    <script>
-        window.onload = function() {
-            var body = document.getElementsByTagName('body')[0];
-            var img = document.createElement('img');
-            img.src = 'https://source.unsplash.com/random/1920x1080?nature, space';
-            img.style.position = 'fixed';
-            img.style.top = '0';
-            img.style.left = '0';
-            img.style.width = '100%';
-            img.style.height = '100%';
-            img.style.objectFit = 'cover';
-            img.style.zIndex = '-1'; // Changed zIndex to 1 so that it is behind the content
-            body.appendChild(img);
-    
-            var overlay = document.createElement('div');
-            overlay.style.position = 'fixed';
-            overlay.style.top = '0';
-            overlay.style.left = '0';
-            overlay.style.width = '100%';
-            overlay.style.height = '100%';
-            overlay.style.backgroundColor = 'rgba(0, 0, 0, 0.6)';
-            overlay.style.zIndex = '-1'; // Kept zIndex as 0 so that it is in front of the body background
-            body.appendChild(overlay);
-        };
-    </script>
+ 
 
     <footer>
         <div class="logo-container">
