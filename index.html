@@ -16,7 +16,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&display=swap" rel="stylesheet">
     <!-- SWITCH AND PULL EVERYTHING FROM THE INDEX CSS FILE -->
     <link rel="stylesheet" href="index.css">
-</head>
+    <link rel="stylesheet" href="homepage.css">
+  </head>
 
 <body>
 <div class="top-nav-bar">
@@ -41,36 +42,13 @@
 
 </div>
 <!-- END OF TOP NAV BAR-->
-<style>
-  .subHeader-text {
-    font-size:10vh;;
-    font-weight: 700;
-    color: white;
-    text-align: center;
-    line-height:80%;
-    margin:0;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add this line */
 
-  }
-
-  .home-screen h3 {
-    color:white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.17); /* Add this line */
-
-  }
-</style>
 <!-- FIRST HOME SCREEN -->
 <div class="home-screen">
   <a href="#"><img src="CPC LOGO.png"></a>
   <p class="subHeader-text">Sunday Worship 10:30am</p> 
   <h3>135 Whitney Ave - New Haven, CT </h3>
-  <style>
-  .monotype-font {
-    font-family: monospace;
-    text-transform:uppercase;
-    color:rgba(255, 255, 255, 0.493);
-  }
-</style>
+
 
 <p class="monotype-font">This website is in Beta - to use the old website visit <a href="https://cpcnewhaven.org" style="color: white;">here</a></p>
 
@@ -90,15 +68,7 @@
 </section>
 
 <style>
-  .compact-table {
-    width: 100%;
-    border-collapse: collapse;
-}
 
-.compact-table td {
-    padding: 5px;
-    text-align: left;
-}
 </style>
 
 <section class="weekly-preview-container" id="upcomingWorship">
@@ -172,36 +142,7 @@
     </ul>
 </nav>
 
-<br>
-<br>
 
-<!-- SCRIPT -->
-<!-- SEARCH -->
-
-
-<script>
-  document.getElementById('search-box').addEventListener('keyup', function () {
-let searchQuery = this.value;
-let results = document.getElementById('results');
-results.innerHTML = ''; // Clear previous results
-results.style.display = 'none'; // Hide results by default
-
-if (searchQuery.trim() === '') return; // Do nothing if query is empty
-
-let contentItems = document.querySelectorAll('.content-item'); // Assuming you have elements with class 'content-item' that contain the content you want to search through
-
-contentItems.forEach(function (item) {
-  if (item.textContent.toLowerCase().includes(searchQuery.toLowerCase())) {
-    let resultItem = document.createElement('div');
-    resultItem.className = 'result-item';
-    resultItem.textContent = item.textContent;
-    results.appendChild(resultItem);
-    results.style.display = 'block'; // Show results if there are any
-  }
-});
-});
-
-</script>
 <!-- SCRIPT = POPULATE -->
 <script>
 
@@ -275,17 +216,7 @@ contentItems.forEach(function (item) {
 
 <!-- BACKGROUND SCRIPT IMAGES -->
 <style>
-  #backgroundImage {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
-    transition: opacity 1s ease-in-out;
-    opacity: 0;
-  }
+
 </style>
 
 <script>

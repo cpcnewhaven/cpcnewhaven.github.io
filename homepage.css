@@ -1,0 +1,44 @@
+  .compact-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.compact-table td {
+    padding: 5px;
+    text-align: left;
+}
+
+.subHeader-text {
+    font-size:10vh;;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+    line-height:80%;
+    margin:0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add this line */
+
+  }
+
+  .home-screen h3 {
+    color:white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.17); /* Add this line */
+
+  }
+
+  .monotype-font {
+    font-family: monospace;
+    text-transform:uppercase;
+    color:rgba(255, 255, 255, 0.493);
+  }
+
+  #backgroundImage {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    transition: opacity 1s ease-in-out;
+    opacity: 0;
+  }
