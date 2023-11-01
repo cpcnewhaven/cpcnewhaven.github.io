@@ -100,109 +100,11 @@
     text-align: left;
 }
 </style>
-<!-- NEW WELCOME PART 1 -->
-<section class="weekly-preview-container" id="upcomingWorship">
-    <div id="sundayWorship" class="weekly-preview-item"><h2>Sunday Worship</h2>
-      <ul>
-        <li>8:30am | Prayer in the Parlor: Prayer moves back to 8:30am before Sunday School.</li>
-        <li>9:30am | Children’s Sunday School and Adult Sunday Studies Begin...</li>
-        <li>12:00pm: Congregational Meeting and Lunch...</li>
-    </ul></div>
-    <div id="sermonPreview" class="weekly-preview-item"><h2>Sermon Preview</h2>
 
-    <p>Sermon Text: Psalm 143:1-12 | <a href="#">Bulletin</a> | Sunday Music: <a href="#">YouTube</a> | <a href="#">Spotify</a></p></div>
-    <div class="weekly-preview-item">
-      <h2>Ongoing Weekly</h2>
-      <table class="compact-table">
-        <tr>
-            <td>Sundays | 8:30am</td>
-            <td>Prayer in the Parlor: Join with fellow members before worship to pray.</td>
-        </tr>
-        <tr>
-            <td>Sundays | 9:30am</td>
-            <td>Children’s Sunday School and Adult Sunday Studies: Children meet in their respective classrooms (see flyer in the foyer), and adults meet in the Fellowship Hall for “What We Believe: Knowing and Loving Our Doctrines” (formerly called Confessional Theology).</td>
-        </tr>
-        <tr>
-            <td>Sundays | 12:00pm</td>
-            <td>Fellowship Meal: Join us for a fellowship lunch after worship every Sunday! We hope you can stay and get to know one-another. If you’re new, we’d love to meet you and this is a great opportunity to do so! </td>
-        </tr>
-        <tr>
-            <td>BEGINS 9/22| Fridays | 7am-10am</td>
-            <td>Drop-in Time with Pastor Craig: Anyone is invited to come to Craig’s office, 2nd floor of the old building (you can ring the Bradley St. doorbell), for a casual time of discussion, Q&A, prayer, coffee, tea, really whatever you want to make it!</td>
-        </tr>
-    </table>
-</div>
-    </div>
-    <div class="weekly-preview-item" id="ministryGroups"><h2>Save the Dates</h2>
-      <table class="compact-table">
-        <tr>
-            <td>01 October | 4:30pm</td>
-            <td>Installation Service of Senior Pastor: Join us for a special worship service of installation for our new Senior Pastor! The service is followed by dinner (there will be no fellowship lunch after morning worship today).</td>
-        </tr>
-        <tr>
-            <td>08 October | After Worship</td>
-            <td>Newcomer Lunch: Grab lunch and join us to learn more about CPC and meet some of our leadership teams.</td>
-        </tr>
-        <tr>
-            <td>15 October | During Worship</td>
-            <td>Membership Joining: During worship we will welcome our new members to CPC and celebrate them after! If you are interested in learning more about the process of membership, reach out to Annie (annie.mchugh@cpcnewhaven.org) to set up an initial pastoral meeting.</td>
-        </tr>
-        <tr>
-            <td>22 October | 9:30am</td>
-            <td>Special Adult Sunday Studies: Join us for Adult Sunday Studies in the Fellowship Hall with a special class led by Pastor Jerry called Christian Formation for Parents (and the Rest of Us).</td>
-        </tr>
-    </table></div>
-    
-    <div class="weekly-preview-item"><h2>Podcast</h2>
-      <table class="compact-table">
-        <style>
-          .listen-button {
-            display: inline-block;
-            padding: 5px 10px;
-            background-color: #1DB954; /* Spotify green */
-            color: white;
-            text-decoration: none;
-            border-radius: 5.5px;
-            text-align: center;
-        }
-        .listen-button:hover {
-            background-color: #1ED760; /* Lighter Spotify green */
-        }
-        </style>
-        <tr>
-            <th>Podcast</th>
-            <th>Date</th>
-            <th>Action</th>
-        </tr>
-        <tr>
-            <td>Podcast 1</td>
-            <td>01/01</td>
-            <td><a href="https://spotify.com/podcast1" class="listen-button">Listen</a></td>
-        </tr>
-        <tr>
-            <td>Podcast 2</td>
-            <td>02/01</td>
-            <td><a href="https://spotify.com/podcast2" class="listen-button">Listen</a></td>
-        </tr>
-        <tr>
-            <td>Podcast 3</td>
-            <td>03/01</td>
-            <td><a href="https://spotify.com/podcast3" class="listen-button">Listen</a></td>
-        </tr>
-        <tr>
-            <td>Podcast 4</td>
-            <td>04/01</td>
-            <td><a href="https://spotify.com/podcast4" class="listen-button">Listen</a></td>
-        </tr>
-        <tr>
-            <td>Podcast 5</td>
-            <td>05/01</td>
-            <td><a href="https://spotify.com/podcast5" class="listen-button">Listen</a></td>
-        </tr>
-    </table>
-    
-    </div>
+<section class="weekly-preview-container" id="upcomingWorship">
+  <!-- Content will be dynamically inserted here -->
 </section>
+
 
 
 <!-- NEW WELCOME PART 2 -->
@@ -270,6 +172,9 @@
     </ul>
 </nav>
 
+<br>
+<br>
+
 <!-- SCRIPT -->
 <!-- SEARCH -->
 
@@ -296,6 +201,75 @@ contentItems.forEach(function (item) {
 });
 });
 
+</script>
+<!-- SCRIPT = POPULATE -->
+<script>
+
+    async function loadWeeklyPreview() {
+      const response = await fetch('./data/weeklypreview.json');
+      const jsonData = await response.json();
+
+      const container = document.getElementById('upcomingWorship');
+
+      jsonData.weeklyPreview.forEach(item => {
+        const div = document.createElement('div');
+        div.id = item.id;
+        div.classList.add('weekly-preview-item');
+
+        const h2 = document.createElement('h2');
+        h2.innerText = item.title;
+        div.appendChild(h2);
+
+        if (item.type === 'list') {
+          const ul = document.createElement('ul');
+          item.content.forEach(liText => {
+            const li = document.createElement('li');
+            li.innerText = liText;
+            ul.appendChild(li);
+          });
+          div.appendChild(ul);
+        }
+
+        if (item.type === 'paragraph') {
+          const p = document.createElement('p');
+          p.innerText = item.content;
+          item.links.forEach(link => {
+            const a = document.createElement('a');
+            a.innerText = link.text;
+            a.href = link.url;
+            p.appendChild(a);
+          });
+          div.appendChild(p);
+        }
+
+        if (item.type === 'table') {
+  const table = document.createElement('table');
+  table.classList.add('compact-table');
+
+  item.rows.forEach(row => {
+    const tr = document.createElement('tr');
+
+    const tdLeft = document.createElement('td');
+    tdLeft.innerText = row.left;
+    tr.appendChild(tdLeft);
+
+    const tdRight = document.createElement('td');
+    tdRight.innerText = row.right;
+    tr.appendChild(tdRight);
+
+    table.appendChild(tr);
+  });
+
+  div.appendChild(table);
+}
+        container.appendChild(div);
+      });
+    }
+
+    window.addEventListener('DOMContentLoaded', (event) => {
+      loadWeeklyPreview();
+    });
+ 
 </script>
 
 
