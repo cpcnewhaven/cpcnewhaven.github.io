@@ -1,15 +1,6 @@
 {
     "weeklyPreview": [
-      {
-        "id": "sundayWorship",
-        "title": "Sunday Worship",
-        "type": "list",
-        "content": [
-          "8:30am | Prayer in the Parlor: Prayer moves back to 8:30am before Sunday School.",
-          "9:30am | Children’s Sunday School and Adult Sunday Studies Begin...",
-          "12:00pm: Congregational Meeting and Lunch..."
-        ]
-      },
+
       {
         "id": "sermonPreview",
         "title": "Sermon Preview",
@@ -21,13 +12,7 @@
           { "text": "Spotify", "url": "#" }
         ]
       },
-      {
-        "id": "ongoingWeekly",
-        "title": "Ongoing Weekly",
-        "type": "table",
-        "rows": [
-        ]
-      },
+
       {
         "id": "ministryGroups",
         "title": "Save the Dates",

@@ -42,3 +42,33 @@
     transition: opacity 1s ease-in-out;
     opacity: 0;
   }
+
+  .weekly-preview-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 16px;
+}
+
+.weekly-preview-item {
+    width: 100%;
+    min-height: 800px;
+    background-color: #000000a1;
+    color:white;
+    border-radius:20px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    padding: 16px;
+    backdrop-filter: blur(4px); /* Add this line */
+
+}
+
+.weekly-preview-item:hover {
+  border-color:white;
+  background-color:rgba(0, 0, 0, 0.253);
+}
+
+@media (max-width: 768px) {
+    .weekly-preview-item {
+        min-height: auto;
+    }
+}
