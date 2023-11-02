@@ -11,7 +11,10 @@ html {
     background-color: #fff;
 }
 
-
+a {
+    color:white;
+    text-decoration: none;
+}
 
 
 .detail-section {
@@ -66,4 +69,30 @@ html {
             margin: 20px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-        }
+        }.top-nav-bar {
+            background-color: #333;
+            overflow: hidden;
+          }
+          
+          .top-nav {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+          }
+          
+          .nav-button {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+            border: none;
+            border-radius: 4px;
+          }
+          
+          .nav-button:hover {
+            background-color: #555;
+          }
