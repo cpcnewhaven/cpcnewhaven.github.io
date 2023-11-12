@@ -1,11 +1,28 @@
-  /* CSS */
-  html {
-    font-family: sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
-  
-    box-sizing: border-box;
-  }
+
+  @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&display=swap');
+
+body {
+  font-family: sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+
+  box-sizing: border-box;
+  font-family: 'Barlow', sans-serif;
+  font-size: 1.245rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: left;
+  background-color: #0c0d1a;
+}
+
+
+
+li {
+    font-size:100px;
+}
+
+
   
   
   .top-nav-bar {
@@ -127,88 +144,10 @@
       outline: none;
     }
     
-    .results {
-      background-color: rgba(255, 255, 255, 0.5);
-      border-radius: 5px;
-      padding: 10px;
-      width: 300px;
-      margin: 10px auto;
-      display: none;
-    }
+
+  
+  
     
-    .result-item {
-      margin: 5px 0;
-    }
-  
-    .bigSlide {
-      background-color: #7474748d;
-      margin: 2em;
-      border-radius: 7.5px;
-    }
-  
-    .bigSlide h2 {
-      font-size:3em;
-      line-height:1em;
-      
-  
-    }
-  
-  
-    .cpcWeekly {
-      background-color: rgba(0, 0, 0, 0.6);
-      border-radius: 10px;
-      padding: 20px;
-      font-size: 16px;
-      line-height: 1.5;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: flex-start;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      backdrop-filter: blur(10px);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      color: white;
-  }
-  
-  .cpcWeekly pre {
-      background-color: rgba(0, 0, 0, 0.5);
-      padding: 2px;
-      border-radius: 7.5px;
-      color: white;
-      max-width: 100%;
-      overflow-x: scroll;
-  }
-  
-  .cpcWeekly h1,
-  {
-      font-size: 1.2em;
-      line-height: .1em;
-      margin: 0.5em 0;
-  }
-  .cpcWeekly h2,
-  .cpcWeekly h3 {
-      margin: 0.5em 0;
-  }
-  
-  .cpcWeekly h3 {
-      font-size:1.5em;
-      margin: 0.25em 0;
-  }
-  
-  .cpcWeekly a {
-      color: white;
-      text-decoration: underline;
-  }
-  
-  .cpcWeekly ul {
-      padding-left: 20px;
-  }
-  
-  @media (max-width: 600px) {
-      .cpcWeekly {
-          font-size: 14px;
-      }
-  }
   
   .ministry-section {
       margin-bottom: 2rem;
@@ -235,48 +174,17 @@
     padding: 1em;
   }
   
-  .weekly-preview-item {
-    background-color: #000000a1;
-    color:white;
-    border-radius:20px;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-    padding: 16px;
-    backdrop-filter: blur(4px);
-  }
-  
-  @media (max-width: 768px) {
-    .weekly-preview-item {
-        min-height: auto;
-    }
-  }  
   
   
-  .compact-table {
+  .subHeader-wrap h3 {
     width: 100%;
-    border-collapse: collapse;
-}
-
-.compact-table td {
-    padding: 5px;
-    text-align: left;
-}
-
-.subHeader-text {
-    font-size:10vh;;
-    font-weight: 700;
-    color: white;
     text-align: center;
-    line-height:80%;
-    margin:0;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add this line */
-
-  }
-
-  .home-screen h3 {
+    margin: 0;
+    backdrop-filter: blur(10px);
     color:white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.17); /* Add this line */
-
+    font-weight: 300;
+      text-shadow: 0 0 3px rgb(0, 0, 0);
+    
   }
 
   .monotype-font {
@@ -421,29 +329,7 @@ hr {
 
 
 
-@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&display=swap');
 
-html {
-    font-family: 'Barlow', sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 1.5;
-    color: #212529;
-    text-align: left;
-    background-color: #fff;
-}
-
-
-body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    font-family: 'Arial', sans-serif;
-}
-
-li {
-    font-size:100px;
-}
 
 .home-screen {
     display: flex;
@@ -467,52 +353,11 @@ li {
     margin-bottom: 20px;
 }
 
-.search-box {
-    width: 70%;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 30px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    outline: none;
-    font-size: 1.2em;
-}
 
 
-
-.live-stream {
-    margin-bottom: 20px;
-}
-
-/* If you want to make the video responsive, you can use these styles */
-.live-stream iframe {
-    max-width: 90%; 
-    width: 100%; 
-    height: auto;
-}
-
-.live-sermon-button {
-    background-color: #ff0e0ea2; /* Green */
-    border: none;
-    color: rgb(255, 255, 255);
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    transition-duration: 0.4s;
-    cursor: pointer;
-    border-style: solid;
-    border-width: 1px;
-    border-color: rgb(255, 67, 67);
-}
-
-.live-sermon-button:hover {
-    background-color: rgba(2, 133, 255, 0.301); 
-    color: rgb(255, 255, 255); 
-}
 
         /* Import Barlow font and set responsive font size */
-        @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&display=swap');
+       
         .events-list li {
             font-family: 'Barlow', sans-serif;
             font-size: calc(10px + 2vmin); /* Responsive font size */
