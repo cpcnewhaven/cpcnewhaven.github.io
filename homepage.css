@@ -13,9 +13,24 @@ body {
   line-height: 1.5;
   color: #212529;
   text-align: left;
-  background-color: #0c0d1a;
+
+}
+body {
+  background: radial-gradient(circle, #d6d6d6, #020535);
+  animation: gradientAnimation 10s ease infinite;
 }
 
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 
 
 li {
