@@ -312,7 +312,51 @@ This is a 100% - 100vh - section - for the sake of dev
     setInterval(changeImage, 12000);
   };
 </script>
+<!-- Add JavaScript to handle scrolling to top -->
+<!-- Add Font Awesome library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
+<!-- Add the button at the bottom of the page -->
+<button onclick="scrollToTop()" id="scrollToTopBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+
+<!-- Add CSS to make the button fixed at the bottom and show/hide based on scroll -->
+<style>
+  #scrollToTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    font-size: 24px;
+    border: none;
+    outline: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 50%;
+  }
+
+  #scrollToTopBtn:hover {
+    background-color: #555;
+  }
+</style>
+<script>
+  window.onscroll = function() {scrollFunction()};
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      document.getElementById("scrollToTopBtn").style.display = "block";
+    } else {
+      document.getElementById("scrollToTopBtn").style.display = "none";
+    }
+  }
+
+  function scrollToTop() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+  }
+</script>
 
 <script src="scripts.js" defer></script>
 <script src="events.js" defer></script>
