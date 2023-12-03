@@ -257,3 +257,50 @@ z-index:3;
   color: #47a0ff; /* Change color on hover */
   transform: scale(1.1); /* Make the text grow slightly on hover */
 }
+
+#podcasts {
+  display:flex;
+  flex-direction: column;
+}
+
+#podcasts table {
+position:relative;
+z-index: 3;
+}
+
+
+#podcasts table {
+  width: 100%;
+  border-collapse: collapse;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+#podcasts th, td {
+  padding: 10px;
+  text-align: left;
+}
+
+#podcasts th {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+#podcasts tr:nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+#podcasts tr:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+#podcasts a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+#podcasts a:hover {
+  color: #dddddd;
+}
