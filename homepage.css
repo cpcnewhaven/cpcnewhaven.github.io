@@ -179,7 +179,7 @@ header.sticky nav a {
   padding: 20px;
 }
 
-#space {
+#announcements {
 background-color: #001f3f;
 color: white;
 padding: 20px;
@@ -189,15 +189,14 @@ justify-content: center;
 }
 
 /* Style the h1 and p elements */
-#space h1 {
-font-size: 2em;
-margin-bottom: 10px;
-z-index:3;
-line-height: 85%;
-padding:10px;
+@media screen and (max-width: 600px) {
+  #announcements h1 {
+    font-size: 60px;
+  }
 }
 
-#space p {
+
+#announcements p {
 font-size: 1.2em;
 line-height: 1.6;
 margin-bottom: 20px;
@@ -206,19 +205,17 @@ z-index:2;
 padding:25px;
 }
 
-/* Add text outline and adjust subheader */
-#space h2 {
+#announcements h2 {
 font-size: 1.5em;
 margin-top: 20px;
 text-align: center;
 text-transform: uppercase;
-text-decoration: underline;
-text-decoration-color: #ffdc00;
-text-decoration-thickness: 2px;
-text-decoration-style: double;
+position:relative;
+z-index:3;
+line-height:85%;
 }
 
-#space h3 {
+#announcements h3 {
 line-height: 25%;
 text-align:center;
 padding:10px;
