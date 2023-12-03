@@ -261,6 +261,14 @@ z-index:3;
 #podcasts {
   display:flex;
   flex-direction: column;
+  min-height:100vh;
+}
+
+#podcasts h1,h2,h3, p, a {
+  display: relative;
+  z-index: 3;
+  line-height:85%;
+  text-align: center;
 }
 
 #podcasts table {
@@ -303,4 +311,28 @@ z-index: 3;
 
 #podcasts a:hover {
   color: #dddddd;
+}
+
+.subscribe-icons {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  position: relative;
+  z-index: 3;
+  
+}
+
+.subscribe-icons a {
+  color: black;
+  font-size: 2em;
+  transition: color 0.3s ease;
+  margin: 5px;
+}
+
+.subscribe-icons a:hover {
+  color: white;
 }
