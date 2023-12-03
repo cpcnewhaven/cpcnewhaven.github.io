@@ -192,12 +192,16 @@ body {
 #space h1 {
   font-size: 2em;
   margin-bottom: 10px;
+  z-index:3;
 }
 
 #space p {
   font-size: 1.2em;
   line-height: 1.6;
   margin-bottom: 20px;
+  position: relative;
+  z-index:2;
+  padding:25px;
 }
 
 /* Add text outline and adjust subheader */
