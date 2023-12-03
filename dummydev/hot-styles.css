@@ -193,6 +193,8 @@ body {
   font-size: 2em;
   margin-bottom: 10px;
   z-index:3;
+  line-height: 85%;
+  padding:10px;
 }
 
 #space p {
@@ -214,4 +216,27 @@ body {
   text-decoration-color: #ffdc00;
   text-decoration-thickness: 2px;
   text-decoration-style: double;
+}
+
+#space h3 {
+  line-height: 25%;
+  text-align:center;
+  padding:10px;
+  color:white;
+}
+
+
+#worship {
+  display:flex;
+  flex-direction: column;
+}
+
+#about {
+  display:flex;
+  flex-direction: column;
+}
+
+#about h2,p {
+  position: relative;
+  z-index:3;
 }
