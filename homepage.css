@@ -74,7 +74,7 @@ header nav {
   position: fixed;
   left: 0;
   right: 0;
-  width: 640px;
+  width: 740px;
   margin: 0 auto;
   top: 120px;
   background-color: rgba(255, 255, 255, 0.05);
@@ -120,7 +120,7 @@ header nav button {
   transform: scale(0);
 }
 header nav button span {
-  width: 40%;
+  width: 35%;
   background: #fff;
   height: 2px;
   display: block;

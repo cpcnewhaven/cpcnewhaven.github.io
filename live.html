@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CPC New Haven Church - 135 Whitney Ave New Haven, CT. We are a church committed to serving and reaching the Greater New Haven area. Join us for worship and fellowship.">
+    <meta name="keywords" content="CPC New Haven, Church, New Haven, CT, Worship, Fellowship">
+    <meta name="author" content="CPC New Haven">
+    <title>Live - CPC New Haven Church</title>
+<link rel="stylesheet" href="./homepage.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    </head>
+    <body>
+        <div id="give">
+            <a href="#">Give</a>
+        </div>
+        <header id="myHeader" class="">
+            <img id="logo" src="../assets/cpcLOGO.png" alt="CPC Logo">
+  
+            <nav>
+                <a href="#worship">worship</a>
+                <a href="#about">about</a>
+                <a href="#podcasts">Podcasts</a>
+                <a href="#events">events</a>
+                <a href="#announcements">announcements</a>
+                <a href="#connect">connect</a>
+                <a href="#">Live</a>
+                <button id="openmenu">
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </header>
+        <div id="page" class="">
+            <section id="worship">
+                <h1>Live</h1>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/QG5AqPdkdMs?si=GM1uAcipIAVoopeI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>               
+                <div class="subscribe-icons">
+                    <a href="your_spotify_link" target="_blank"><i class="fab fa-spotify"></i></a>
+                    <a href="your_apple_podcasts_link" target="_blank"><i class="fab fa-apple"></i></a>
+                    <a href="your_youtube_link" target="_blank"><i class="fab fa-youtube"></i></a>
+                </div>
+            </section>
+
+
+        </div>
+        <a id="fixedlink" target="_blank" rel="nofollow noopener" href="#">135 Whitney Ave - New Haven, CT | Sunday Worship 10:30am </a>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    var header = document.getElementById('myHeader');
+	  var page = document.getElementById('page');
+    var openMenuButton = document.getElementById('openmenu');
+
+    window.addEventListener('scroll', function() {
+				page.classList.remove('menuopen');
+        if (window.scrollY >= 100) {
+            header.classList.add('sticky');
+        } else {
+            header.classList.remove('sticky');
+        }
+    });
+
+    // Event listener to remove the sticky class when the button is clicked
+    openMenuButton.addEventListener('click', function() {
+        header.classList.remove('sticky');
+				page.classList.add('menuopen');
+    });
+	
+	var links = document.querySelectorAll('a[href^="#"]');
+
+    links.forEach(function(link) {
+        link.addEventListener('click', function(event) {
+            // Prevent the default action
+            event.preventDefault();
+
+            // Get the target element
+            var targetId = this.getAttribute('href');
+            var targetElement = document.querySelector(targetId);
+
+            // Smooth scroll to target
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+});
+
+    </script>
+    
+    
+    </body>
+</html>
