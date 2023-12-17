@@ -6,8 +6,8 @@
     <meta name="description" content="CPC New Haven Church - 135 Whitney Ave New Haven, CT. We are a church committed to serving and reaching the Greater New Haven area. Join us for worship and fellowship.">
     <meta name="keywords" content="CPC New Haven, Church, New Haven, CT, Worship, Fellowship">
     <meta name="author" content="CPC New Haven">
-    <title>Live - CPC New Haven Church</title>
-<link rel="stylesheet" href="./homepage.css">
+    <title>CPC New Haven Church</title>
+<link rel="stylesheet" href="../homepage.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     </head>
     <body>
@@ -22,9 +22,9 @@
                 <a href="#about">about</a>
                 <a href="#podcasts">Podcasts</a>
                 <a href="#events">events</a>
-                <a href="./src/announcements.html">announcements</a>
+                <a href="./src/announcements.html">Announcements</a>
                 <a href="#connect">connect</a>
-                <a href="#">Live</a>
+                <a href="live.html">Live</a>
                 <button id="openmenu">
                     <span></span>
                     <span></span>
@@ -32,15 +32,16 @@
             </nav>
         </header>
         <div id="page" class="">
-            <section id="worship">
-                <h1>Live</h1>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/QG5AqPdkdMs?si=GM1uAcipIAVoopeI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>               
-                <div class="subscribe-icons">
-                    <a href="your_spotify_link" target="_blank"><i class="fab fa-spotify"></i></a>
-                    <a href="your_apple_podcasts_link" target="_blank"><i class="fab fa-apple"></i></a>
-                    <a href="your_youtube_link" target="_blank"><i class="fab fa-youtube"></i></a>
-                </div>
-            </section>
+            <section id="worship" style="background-image:url(https://assets.codepen.io/214624/vision.jpg)">
+                <h1>Announcements</h1>
+          
+                <!-- Announcements Section -->
+    <section id="announcements" style="background-image:url(https://assets.codepen.io/214624/space.jpg)">
+        <h1>Announcements</h1>
+        <!-- Announcements will be populated here by the JavaScript -->
+    </section>
+               
+
 
 
         </div>
@@ -88,7 +89,7 @@
 });
 
     </script>
-    
-    
+    <!-- DYNAMIC ANNOUNCEMNTS -->
+    <script src="../src/announcements.js"></script>    
     </body>
 </html>
