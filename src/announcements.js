@@ -25,7 +25,7 @@ function renderAnnouncements(announcements) {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-    fetch('../data/announcements/announcements_week50-23.json')
+    fetch('../data/announcements/2023/announcements_week51-23.json')
         .then(response => response.json())
         .then(data => {
             renderAnnouncements(data.announcements);
