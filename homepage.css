@@ -13,6 +13,10 @@ body.stop {
   overflow: hidden;
 }
 
+section h1 {
+  font-size:120px;
+}
+
 #page {
   position: relative;
   transition: 1s all ease-in-out;
@@ -43,12 +47,7 @@ section:after {
   height: 100%;
   width: 100%;
 }
-section h1 {
-  font-size: 120px;
-  margin: 0;
-  z-index: 2;
-  position: relative;
-}
+
 
 header {
   z-index: 99999;
@@ -416,3 +415,106 @@ z-index: 3;
   background-color: #4CAF50;
   color: white;
 }
+
+/*ABOUT SECTION STYLES */
+
+#about p {
+  max-width: 700px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+}
+#about p span {
+  font-weight: bold;
+}
+
+/*Background images */
+#about {
+  background-image: url('/assets/websiteBG/2.png');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+  background-attachment: fixed;
+
+}
+
+#about::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8); /* Dark overlay color */
+  z-index: 1;
+}
+
+#about::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  background: url('/assets/websiteBG/2.png');
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+}
+
+
+
+
+
+
+
+
+
+
+
+#announcements, #worship, #connect, #podcasts, #events {
+  background-image: url('/assets/websiteBG/2.png');
+  background-size: cover;
+  background-position: center;
+}
+
+
+#worship {
+  background-image: url('/assets/websiteBG/2.png');
+  background-size: cover;
+  background-position: center;
+}
+
+#worship {
+  transition: background-image 0.5s ease-in-out; /* Adjust the duration and timing function as needed */
+}
+
+#worship h1 { 
+  font-size: 75px;
+   margin: 0; 
+   z-index: 2; 
+   position: relative; 
+   text-align:center;
+   line-height: 90%;
+   margin-bottom: 73px;
+  }
+
+  #worship h2 {
+    font-size:52px;
+   
+  }
+
+  #worship h3 {
+    font-size:36px;
+    margin-top: 30px;
+    margin-bottom: 8px;
+  }
+
+  
+
+  #worship p {
+    margin: 0px;
+    font-size:28px;
+    font-weight: 700;
+  }
