@@ -34,9 +34,18 @@
         </header>
         <div id="page" class="">
             <section id="worship">
-                <h1>Live</h1>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/QG5AqPdkdMs?si=GM1uAcipIAVoopeI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>               
+             
+                <section id="events">
+                    <!-- Content will be populated by events.json and renderEvents function -->
+                </section> 
+
+                <section id="events-suggest">
+                    <p>Have an idea for an event? <a href="#">Add to the Connect board</a></p>
+                </section>
+
+               
                 <div class="subscribe-icons">
+                    <h2>Subscribe to CPC on the Interwebs</h2>
                     <a href="your_spotify_link" target="_blank"><i class="fab fa-spotify"></i></a>
                     <a href="your_apple_podcasts_link" target="_blank"><i class="fab fa-apple"></i></a>
                     <a href="your_youtube_link" target="_blank"><i class="fab fa-youtube"></i></a>
@@ -89,7 +98,7 @@
 });
 
     </script>
-    
+        <script src="./src/fetch-events.js"></script>
     
     </body>
 </html>
