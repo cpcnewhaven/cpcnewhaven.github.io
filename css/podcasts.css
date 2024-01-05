@@ -111,3 +111,7 @@ main {
     margin:0px;
 }
 }
+#podcasts {
+display:flex;
+flex-direction: column;
+}
