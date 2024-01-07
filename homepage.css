@@ -30,7 +30,7 @@ section h1 {
 section {
   display: flex;
   min-height: 100vh;
-  padding: 50px;
+  padding: 30px;
   justify-content: center;
   align-items: center;
   background: #222;
@@ -230,9 +230,29 @@ display:flex;
 flex-direction: column;
 }
 
+#about p {
+  font-size:22px;
+  line-height: 130%;
+  text-align:left;
+  margin: 0px;
+
+}
+
+#about h1 {
+  font-size:120px;
+  position: relative;
+  z-index: 4;
+  margin: 0px;
+}
+
 #about h2,p {
 position: relative;
 z-index:3;
+}
+
+#about button {
+  position: relative;
+  z-index: 4;
 }
 
 #connect {
@@ -429,7 +449,7 @@ z-index: 3;
 
 /*Background images */
 #about {
-  background-image: url('/assets/websiteBG/2.png');
+  background-image: url('/assets/websiteBG/8.png');
   background-size: cover;
   background-position: center;
   position: relative;
