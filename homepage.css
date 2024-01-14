@@ -274,6 +274,9 @@ z-index:3;
   display:flex;
   flex-direction: column;
 }
+#connect h1 {
+  margin: 0;
+}
 
 #connect a {
   font-size: 30px; /* Adjust size as needed */
@@ -288,6 +291,33 @@ z-index:3;
 #connect a:hover {
   color: #47a0ff; /* Change color on hover */
   transform: scale(1.1); /* Make the text grow slightly on hover */
+}
+
+.vertical-menu {
+  list-style-type: none;
+  padding: 0;
+}
+
+.vertical-menu li {
+  margin-bottom: 10px;
+}
+
+.vertical-menu button {
+  padding: 10px;
+  background-color: #4caf4f00;
+  border-style: solid;
+  border-color: white;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.vertical-menu button:hover {
+  background-color: #45a049;
 }
 
 #podcasts {
@@ -447,7 +477,7 @@ z-index: 3;
 }
 
 .give-menu-item button:hover {
-  background-color: #4CAF50;
+  background-color: #4c6faf;
   color: white;
 }
 
