@@ -1,15 +1,20 @@
-function changeBackgroundImageEvents() {
+// JavaScript code to randomly change background images every 5 seconds
+
+function changeBackgroundImage() {
     var min = 2;
     var max = 4;
     var randomNum = Math.floor(Math.random() * (max - min + 1)) + min;
-    var imageUrl = '/assets/websiteBG-events/' + randomNum + '.png';    var eventsElement = document.getElementById('events');
-    eventsElement.style.opacity = 0;
-    eventsElement.style.backgroundImage = 'url(' + imageUrl + ')';
+    var imageUrl = '/assets/websiteBG-podcasts/' + randomNum + '.jpg';
+    var worshipElement = document.getElementById('events');
+    worshipElement.style.opacity = 0; // Start with the image invisible
+    worshipElement.style.backgroundImage = 'url(' + imageUrl + ')';
     setTimeout(function() {
-      eventsElement.style.opacity = 1;
-    }, 100);
-}
+      worshipElement.style.opacity = 1; // Fade in the new image
+    }, 100); // Adjust the duration as needed
+  }
 
-changeBackgroundImageEvents();
+// Change background image on page load
+changeBackgroundImage();
 
-setInterval(changeBackgroundImageEvents, 7500);
+// Change background image every 5 seconds
+setInterval(changeBackgroundImage, 7500);
