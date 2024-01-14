@@ -192,8 +192,18 @@ flex-direction:column;
 justify-content: center;
 }
 
-#announcements h1 {
-  font-size:72px;
+
+
+/* Add the following CSS to make the position relative and center the "Announcements" heading on the screen */
+.announcement-title h1 {
+  position: relative;
+  z-index: 30;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 120px;
+  margin: 0px;
+  text-align: center;
 }
 
 
@@ -498,7 +508,7 @@ z-index: 3;
 
 
 
-#announcements, #worship, #connect, #podcasts, #events {
+#worship, #connect, #podcasts, #events {
   background-image: url('/assets/websiteBG/2.png');
   background-size: cover;
   background-position: center;
@@ -548,3 +558,9 @@ z-index: 3;
     position: relative;
     z-index: 5;
   }
+
+  #events {
+    position: relative;
+    background-attachment: fixed;
+  }
+

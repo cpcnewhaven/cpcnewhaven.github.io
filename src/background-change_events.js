@@ -4,7 +4,7 @@ function changeBackgroundImage() {
     var min = 2;
     var max = 4;
     var randomNum = Math.floor(Math.random() * (max - min + 1)) + min;
-    var imageUrl = '/assets/websiteBG-podcasts/' + randomNum + '.jpg';
+    var imageUrl = '/assets/websiteBG-events/' + randomNum + '.png';
     var worshipElement = document.getElementById('events');
     worshipElement.style.opacity = 0; // Start with the image invisible
     worshipElement.style.backgroundImage = 'url(' + imageUrl + ')';

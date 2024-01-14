@@ -8,6 +8,7 @@ function createAnnouncementHtml(announcement) {
 
     return `
         <div class="announcement">
+       
             <h2>${title}</h2>
             ${date ? `<p><strong>Date:</strong> ${date}</p>` : ''}
             ${time ? `<p><strong>Time:</strong> ${time}</p>` : ''}
