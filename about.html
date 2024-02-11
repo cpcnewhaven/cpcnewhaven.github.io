@@ -6,8 +6,9 @@
     <meta name="description" content="CPC New Haven Church - 135 Whitney Ave New Haven, CT. We are a church committed to serving and reaching the Greater New Haven area. Join us for worship and fellowship.">
     <meta name="keywords" content="CPC New Haven, Church, New Haven, CT, Worship, Fellowship">
     <meta name="author" content="CPC New Haven">
-    <title>Live - CPC New Haven Church</title>
+    <title>About - CPC New Haven Church</title>
 <link rel="stylesheet" href="./homepage.css">
+<link rel="stylesheet" href="./css/about.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     </head>
     <body>
@@ -32,28 +33,24 @@
                 </button>
             </nav>
         </header>
+        <!-- Add this HTML inside the body tag of your about.html file -->
+<div class="sidenav" id="mySidenav">
+    <a href="#about-section">About Section</a>
+    <a href="#about-worship-info">Worship Information</a>
+    <a href="#about-driving-directions">Driving Directions</a>
+</div>
+
+<!-- Add this HTML for the hamburger menu -->
+<div class="hamburger-menu" id="hamburger-menu">
+    <i class="fas fa-bars"></i>
+</div>
         <div id="page" class="">
             <section id="worship">
                 <h1>About</h1>
      
             </section>
 
-            <style>
-                 #about-section p {
-        color: rgb(255, 255, 255);
-        font-size: clamp(1.2rem, 2.5vw, 1.8rem); /* Increased font size */
-        line-height: 1.6;
-        font-family: Arial, sans-serif;
-    }
-
-    #about-section p::first-line {
-        font-size: 2em; /* Adjust size as needed */
-        float: left;
-        padding-right: 0.1em;
-        font-weight: bold;
-    }
-            </style>
-            <section id="about-section">
+    <section id="about-section">
                 <div>
                     <h2>What to expect</h2>
                    <p>
@@ -62,10 +59,32 @@
                     <p>Below you'll find relevant information for planning your fist few visits to CPC.  We want you to be as comfortable as possible worshipping with us and hope the following helps make your visit logistically smooth and open to knowing our community.
                     </p>
                    <p>If you'd like to hear from some of our CPC New Haven Alumni, please watch this video slideshow of what they shared during our 25th Anniversary! Use the controls in the bottom left hand corner and play each video individually.           </p>     </div>
-                </p> 
-                </section>
-
-        <section id="about-driving-directions">
+                </p>
+            </div> 
+    </section>
+    <section id="about-worship-info">
+        <div id="worship-info">
+        <h2>Worship Information</h2>
+        <p>
+            <strong>Directions and Time</strong><br>
+            (Map)<br>
+            135 Whitney Avenue<br>
+            New Haven, CT 06510<br><br>
+            We are located next to the Yale School of Management, at the corner of Whitney Ave. and Bradley St.<br><br>
+            <strong>Sunday Morning Worship:</strong> We hold one service with communion at 10:30am. Masks are optional at CPC for everyone regardless of vaccination status. The Downstairs Sanctuary is reserved for those who prefer to wear a mask.<br><br>
+            <strong>What to Wear:</strong> Attire ranges from t-shirts and jeans to more formal wear. Wear what makes you feel comfortable.<br><br>
+            <strong>Parking:</strong> Limited parking on-site. Additional parking available on Bradley Street and at nearby Yale parking lots.<br><br>
+            <strong>Worship:</strong> You'll receive a worship bulletin guiding you through the service.<br><br>
+            <strong>A Safe Place:</strong> CPC is a welcoming and accepting community where all are encouraged to come as they are.<br><br>
+            <strong>Children:</strong> Children are welcome in worship. Childcare available if needed.<br><br>
+            <strong>Welcome Cards:</strong> Fill out a Welcome Card for follow-up and support.<br><br>
+            <strong>Children's Sunday School & Adult Studies:</strong> Classes available before worship.<br><br>
+            <strong>Fellowship Lunch:</strong> Shared meal after service on most Sundays.<br><br>
+            <strong>Enjoy:</strong> Pick up our Welcome Brochure for more information and feel free to ask questions.
+        </p>
+    </div>
+    </section>
+<section id="about-driving-directions">
                 <div id="about-driving-directions">
                     <h2>Directions and Time</h2>
                     <p>(Map)</p>
@@ -74,58 +93,146 @@
                     <p>We are located next to the Yale School of Management, at the corner of Whitney Ave. and Bradley St.</p>
                     <p>Sunday Morning Worship: We hold one service with communion at 10:30am. If you are unable to attend in-person, join us live online <a href="live.html">here</a>.</p>
                 </div>
-        </section>
-
-        </div>
-
-
-
+         
+                <div id="about-what-to-wear">
+                    <h2>What to Wear</h2>
+                    <p>
+                        You will find a wide range of attire, from t-shirts and jeans to the occasional bowtie. Wear what makes you feel comfortable worshiping God.
+                    </p>
+               
+                
+                <div id="about-parking-info">
+                    <h2>Parking</h2>
+                    <p>
+                        There is parking available on our property, however, there isn't enough for everyone. Additional parking can be found on Bradley Street beside our building, on Whitney before you get to our building coming from Trumbull St/Downtown, and at two Yale parking lots north of the church on Whitney Ave. Lot 16: Gibbs Lab at Whitney Ave. and Humphrey St., and the Whitney Ave. Garage located behind 221 Whitney Ave. For safety, exit our lot on the Bradley St. side only.
+                    </p>
+                </div>
+                <div id="about-worship">
+                    <h2>Worship</h2>
+                    <p>
+                        As you enter the sanctuary, you'll be greeted by folks who will hand you a worship bulletin that will direct you through every step of our service including explanations of why we are carrying out each element.
+                    </p>
+                </div>
+                <div id="about-safe-place">
+                    <h2>Safe Place</h2>
+                    <p>
+                        People often tell us that they've found CPC to be a very friendly place, but more than friendly, it is often talked about as a "safe" place where people can be "in route" no matter what the location of your spiritual journey. The spirituality of CPC is very much about grace as this not only makes it okay to be morally flawed and/or broken in some way, but expected even. There will be people there that are not yet Christians, people who are Christians and left the church and are venturing back into the church, and even people who have been going to church for a long time but are finding that the closer they get to God the more they see how flawed they are in comparison, and how much more loved and accepted than they ever expected possible because of what Christ accomplishes for us. So come as you are, both outwardly and inwardly, and let happen what happens. It is safe!
+                    </p>
+                </div>
+                <div id="about-children">
+                    <h2>Children</h2>
+                    <p>
+                        We love our children and enjoy having them in worship. That being said, we do have a quality and carefully managed childcare located in the children's wing of the church (at end of foyer) for any and all children who at any time during the service are getting "antsy" or are distracting their parents from worship. It is intentionally a "free time" for guided play to allow children to release some energy before they rejoin their parents after the sermon. The booklet "Together in God's Presence: Children and Families Together in Covenant Worship" explains our philosophy of children in relation to worshiping together with some very practical ways to help your children experience worship for themselves even if they don't understand much of it.
+                    </p>
+                </div>
+                <div id="about-welcome-cards">
+                    <h2>Welcome Cards</h2>
+                    <p>
+                        Please fill out a Welcome Card so that we have an opportunity to greet you and follow up in case you have any questions. There is space to also include a prayer request or request to speak to a pastor about a spiritual concern.
+                    </p>
+                </div>
+                <div id="about-childrens-sunday-school">
+                    <h2>Children's Sunday School & Adult Sunday Studies</h2>
+                    <p>
+                        Before worship during the academic year, you are welcome to join us at 9:30am for our School of Discipleship (see current classes here). During this time, children aged 2.5 - High School are invited to participate in age-specific Sunday School classes located throughout the church building (see more about our Children's Ministry here).
+                    </p>
+                </div>
+                <div id="about-fellowship-lunch">
+                    <h2>Fellowship Lunch</h2>
+                    <p>
+                        On most Sundays throughout the year our worship service is followed by a shared fellowship meal at about 12pm. The meal is free to visitors and an enjoyable way to get to know some people while eating a catered meal.
+                    </p>
+                </div>
+                
+                <div id="about-enjoy">
+                    <h2>Enjoy</h2>
+                    <p>
+                        Please pick up our Welcome Brochure and other materials from the foyer for more information about our church and programs. Feel free to ask anyone questions about the service, our programs, our people, or our faith. We are happy to help!
+                    </p>
+                </div>
+            
+</section>
+<section id="about-membership">
+    <div>
+        <h2>About Membership</h2>
+        <p>
+            Throughout history, special relationships have been set apart by the taking of vows. What exactly is a vow? A vow is a “confession” regarding the meaning of one's participation in a given institution. Therefore, vows are ordinarily limited to initiation ceremonies. And according to the Bible, there are three such institutions that enjoy divine sanction--the church, the state, and the family. Vows are used to initiate a church relationship, or perhaps one’s service in an office of the church. We will review briefly the biblical rationale that relates to the taking of vows in the church sphere.
+        </p>
+        <p>
+            According to the apostle Paul, one becomes a Christian when “you confess with your lips that Jesus is Lord, and believe in your heart that God raised him from the dead” (Romans 10:9). Who are we “confessing” to with our lips and in what context? Related to this, what else could it mean for the elders to “watch over the flock of God” if not a flock that can be defined by some “initiation” ceremony in relation to the exchange of vows? Or, in the words of Hebrews, what else could it mean to “obey your leaders and submit to them, for they are keeping watch over your souls and will give an account,” apart from some willing and voluntary way to form an association that is predicated upon the taking of vows one to another? (see 1 Peter 5, Hebrews 13:17). And when the church is exhorted to “remove such a one” from “the assembly” as the ultimate, albeit tragic, expression of church discipline, what else could it mean except that the person was joined to the assembly by some con- fession that is later deemed broken? (1 Corinthians 5:3-5). Or, when we are exhorted to support one another even through our financial means, how could such benefits be distributed except that it means something to bind one’s self to another through the authenticating protections of an initiation ceremony? (2 Corinthians 8).
+        </p>
+        <p>
+            And so, for these abbreviated reasons, we believe that church membership as a good thing. It sets people apart into a special relationship with each other, where the terms are clear and where loyalties for the mutual benefit of all are expressed and preserved. Membership is simply a way to say: “I confess my faith in solidarity with you so as to enjoy the mutual support of one another until, for whatever reason, someone is led elsewhere.”
+        </p>
+        <p>
+            For more information on becoming a member at CPC, please contact us.
+        </p>
+        <p>
+            For further reading, refer to "Good News of Church Membership."
+        </p>
+    </div>
+</section>
+<section id="about-commitments">
+    <div>
+        <h2>Commitments</h2>
+        <p>
+            Christ Presbyterian Church, New Haven is a member of the Presbyterian Church in America (PCA). As one of many communions in the church universal, the PCA may be distinguished by its affirmation of what has been described as the "Reformed system of faith" as reflected in the Westminster Confession of Faith. The PCA is characterized by its emphasis on both personal revival and theological reformation. By promoting reformation and revival, we seek to carry out the Great Commission with Biblical integrity and personal authenticity unto the glory of God.
+        </p>
+        <h3>Five Basic Commitments</h3>
+        <ol>
+            <li>
+                <strong>We are committed to the Old and New Testament Scriptures as our only rule of faith and practice.</strong>
+                <p>
+                    We are committed to the Old and New Testament Scriptures as our only rule of faith and practice. While believing that God powerfully manifest his infinite glory in a general way through creation, our Christian faith and practice is grounded in God's works of redemption in history as explained to us through the divinely appointed means of inspired Scripture. We believe that all things necessary for salvation are sufficiently revealed to us by the Holy Spirit speaking through the Scriptures of the Old and New Testaments. We believe also that all special revelation has ceased until the next and final redemptive act of God in history when Christ will return to judge the living and the dead. It is, therefore, our ambition to teach the whole counsel of God's word, not adding to, or subtracting from, anything contained within it, recognizing no other source for divine revelation, whether by ecclesiastical traditions or private revelations.
+                </p>
+                <p><strong>WHY SHOULD I CARE?</strong> To liberate all of us from oppressive, human-made opinions and guard the gracious gospel against manipulation and self-serving abuses.</p>
+            </li>
+            <li>
+                <strong>We are committed to the teachings of grace as they are summarized in the historic Westminster Confession of Faith.</strong>
+                <p>
+                    We are committed to the teachings of grace as they are summarized in the historic Westminster Confession of Faith. Whereas the Holy Scriptures is our only rule of faith and practice, our Church unity is predicated upon a consensus about what the Scriptures principally teach. Our consensus is reflected in the 350-year--old Westminster Confession of Faith. In summary, it affirms that God is no less sovereign in our salvation than He is sovereign in our creation to the praise of God's glorious grace! This means that we are accepted by God, from beginning to end, not by our own works or attempts at being approved by God, but by faith alone in the perfect and all sufficient work of Christ on our behalf, faith itself being the free gift of God! While many people join our church without knowing or affirming all the teachings contained in the Westminster Confession of Faith, our church, when acting and speaking corporately, seeks to be in accord with the Westminster Standards.
+                </p>
+                <p><strong>WHY SHOULD I CARE?</strong> To affirm the sovereignty of grace, to connect us to wise men and women who have gone before us, and to prevent as much as possible our historical and cultural blind-spots.</p>
+            </li>
+            <li>
+                <strong>We are committed to God-centered worship designed after a covenantal pattern that is in the mediated presence of Christ through word and sacrament.</strong>
+                <p>
+                    We are committed to God-centered worship designed after a covenantal pattern that is in the mediated presence of Christ through word and sacrament. In every period of redemptive history, God has chosen to mediate his saving presence among his people as regulated through the divine institutions of word, sacrament and prayers. Today, through the sacraments of the Lord's Supper and Christian Baptism, together with the preaching of God's word and corporate prayers (both sung and unsung), God has promised to be with us until the end of the age. Our worship is set to the pattern of covenant initiation and renewal including the weekly participation of the Lord's supper. Our music and style of worship is "blended" to reflect the vernacular context of those God has brought to our city. Our desire is for our worship to be as God-centered as our theology, communicating the truth and grace of God to the nations. We welcome all believers together with those who are searching.
+                </p>
+                <p><strong>WHY SHOULD I CARE?</strong> Not only is it biblical, but it keeps us grounded in the gospel every week, secured upon Christ's redemption accomplished. Our worship embodies the gospel as we experience God's presence.</p>
+            </li>
+            <li>
+                <strong>We are committed to being a multi-cultural church and church planting movement.</strong>
+                <p>
+                    We are committed to being a multi-cultural church and church planting movement. We believe that the church, the household of God, is an essential element of the gospel into which people of every tribe and nation are welcomed. While affirming that every follower of Christ is called to be a witness to the truth and grace of God revealed in Jesus Christ in both word and deed, we also believe that true evangelism is best accomplished through church planting. It is therefore our ambition to be not only a growing church, but also a growing church planting movement. While holding to a time-honored understanding of faith, we are strategically progressive. Our aim is to plant churches that reach the different cultures in our city, New England and the world.
+                    => WHY SHOULD I CARE? Because no one culture is closer to God than another, you don't have to become American (or Western, or whatever!) to become Christian, and the corporte witness of the gospel is the best testament to its power
+                </p>
+                <p><strong>WHY SHOULD I CARE?</strong> Because no one culture is closer to God than another, you don't have to become American (or Western, or whatever!) to become Christian, and the corporate witness of the gospel is the best testament to its power!</p>
+            </li>
+            <li>
+                <strong>We are committed to a high view of Christian calling as reflected in the vocational spheres of family, church, and public service.</strong>
+                <p>
+                    We are committed to a high view of Christian calling as reflected in the vocational spheres of family, church and public service. We believe that God has placed into our lives the boundaries of our habitation that reflect his own sovereign design to accomplish his work in the world. His work extends into the spheres of family, church and civil vocations. We desire to help people find a balance that is unique to their individual callings which reflects a high view of vocation and calling in these three spheres of service. While believing that the Christian Scriptures does not address all things pertaining to life in this world, we do affirm that we should take "every thought captive to the obedience of Christ" and that the Christian worldview is applicable and relevant to all spheres of life. Our ultimate commitment is to the restoration of "calling" that we might more and more glorify God and enjoy Him forever!
+                </p>
+                <p><strong>WHY SHOULD I CARE?</strong> Because God didn't make us just one way or with one part of ourselves, but made ALL of us, and he deserves it all to be offered as a thank offering.</p>
+            </li>
+        </ol>
+    </div>
+</section>
 
 
 
         <a id="fixedlink" target="_blank" rel="nofollow noopener" href="#">135 Whitney Ave - New Haven, CT | Sunday Worship 10:30am </a>
+
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-    var header = document.getElementById('myHeader');
-	  var page = document.getElementById('page');
-    var openMenuButton = document.getElementById('openmenu');
-
-    window.addEventListener('scroll', function() {
-				page.classList.remove('menuopen');
-        if (window.scrollY >= 100) {
-            header.classList.add('sticky');
-        } else {
-            header.classList.remove('sticky');
-        }
-    });
-
-    // Event listener to remove the sticky class when the button is clicked
-    openMenuButton.addEventListener('click', function() {
-        header.classList.remove('sticky');
-				page.classList.add('menuopen');
-    });
-	
-	var links = document.querySelectorAll('a[href^="#"]');
-
-    links.forEach(function(link) {
-        link.addEventListener('click', function(event) {
-            // Prevent the default action
-            event.preventDefault();
-
-            // Get the target element
-            var targetId = this.getAttribute('href');
-            var targetElement = document.querySelector(targetId);
-
-            // Smooth scroll to target
-            if (targetElement) {
-                targetElement.scrollIntoView({
-                    behavior: 'smooth'
-                });
-            }
-        });
-    });
+        document.getElementById('hamburger-menu').addEventListener('click', function() {
+    var sidenav = document.getElementById('mySidenav');
+    if (sidenav.style.left === "-250px") {
+        sidenav.style.left = "0";
+    } else {
+        sidenav.style.left = "-250px";
+    }
 });
-
     </script>
     
     
