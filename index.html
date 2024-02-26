@@ -10,6 +10,7 @@
     <meta name="author" content="CPC New Haven">
     <title>CPC New Haven Church</title>
     <link rel="stylesheet" href="./homepage.css">
+    <link rel="stylesheet" href="./src/css/global-nav-bar.css">
     <link rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   </head>
@@ -26,9 +27,54 @@
         <a href="announcements.html">Announcements</a>
         <a href="#connect">Community</a>
         <a href="live.html">Live</a>
+        <a href="resources.html">Resources</a>
 
       </nav>
     </header>
+
+    <!-- Inside <header> or <nav> -->
+    <div class="hamburger-menu" id="hamburgerMenu">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-navigation" id="mobileNavigation">
+      <a href="#worship">Worship</a>
+      <a href="about.html">About</a>
+      <a href="podcasts.html">Podcasts</a>
+      <a href="events.html">Events</a>
+      <a href="announcements.html">Announcements</a>
+      <a href="#connect">Community</a>
+      <a href="live.html">Live</a>
+      <a href="resources.html">Resources</a>
+      <button id="closeMenuButton">Close</button> <!-- Exit button -->
+
+    </div>
+
+    <script>
+      document.getElementById('hamburgerMenu').addEventListener('click', function() {
+        document.getElementById('mobileNavigation').classList.toggle('active');
+      });
+  
+      // Close menu when the exit button is clicked
+      document.getElementById('closeMenuButton').addEventListener('click', function() {
+        document.getElementById('mobileNavigation').classList.remove('active');
+      });
+  
+      // Close the menu when clicking outside of it
+      document.addEventListener('click', function(event) {
+        var isClickInsideMenu = document.getElementById('mobileNavigation').contains(event.target);
+        var isMenuActive = document.getElementById('mobileNavigation').classList.contains('active');
+        var isHamburgerMenuClick = document.getElementById('hamburgerMenu').contains(event.target);
+  
+        if (!isClickInsideMenu && isMenuActive && !isHamburgerMenuClick) {
+          document.getElementById('mobileNavigation').classList.remove('active');
+        }
+      });
+    </script>
+
     <!--header id="myHeader" class="">
           <a href="index.html">
             <img id="logo" src="../assets/cpcLOGO.png" alt="CPC Logo"></a>
