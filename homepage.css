@@ -87,19 +87,6 @@ section:after {
 
 
 
-/* Add the following CSS to make the position relative and center the "Announcements" heading on the screen */
-.announcement-title h1 {
-  position: relative;
-  z-index: 30;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 120px;
-  margin: 0px;
-  text-align: center;
-}
-
-
 #announcements p {
   font-size: 1.2em;
   line-height: 1.6;
@@ -107,11 +94,17 @@ section:after {
   position: relative;
   z-index: 2;
   padding: 25px;
-  max-width: 720px;
+  max-width: 60ch;
+  /* Updated max-width */
+  margin-left: auto;
+  /* Center align */
+  margin-right: auto;
+  text-align: left;
+  /* Center align */
 }
 
 #announcements h2 {
-  font-size: 1.5em;
+  font-size: 1.85em;
   margin-top: 20px;
   text-align: center;
   text-transform: uppercase;
@@ -125,6 +118,25 @@ section:after {
   text-align: center;
   padding: 10px;
   color: white;
+}
+
+@media (max-width: 768px) {
+  #announcements p {
+    padding: 15px;
+    /* Reduced padding for smaller screens */
+    font-size: 1em;
+    /* Smaller font size for better readability on small devices */
+  }
+
+  #announcements h2 {
+    font-size: 1.2em;
+    /* Adjusted for smaller screens */
+  }
+
+  #announcements h3 {
+    font-size: 0.9em;
+    /* Adjusted for smaller screens */
+  }
 }
 
 
