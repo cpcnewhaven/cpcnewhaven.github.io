@@ -83,60 +83,6 @@ section:after {
 }
 
 
-.sticky {
-  position: -webkit-sticky;
-  /* Safari */
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  /* Background color of the nav bar */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  /* Optional: adds a shadow for better visibility */
-}
-
-/* Top Navigation Styles */
-.main-navigation {
-  display: flex;
-  justify-content: center;
-  /* Center the navigation items horizontally */
-  align-items: center;
-  /* Center the navigation items vertically */
-  position: sticky;
-  /* Make it stick to the top */
-  top: 0;
-  z-index: 1000;
-  /* Ensure it stays above other content */
-  background: rgba(255, 255, 255, 0.2);
-  /* Increase transparency for glass effect */
-  backdrop-filter: blur(10px);
-  /* Blur effect for the glass-like appearance */
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-  /* Optional: adds a subtle border */
-  padding: 10px 0;
-  /* Add some padding */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  /* Optional: adds a shadow for better visibility */
-  width: 100%;
-  /* Ensure the navigation bar spans the entire width */
-}
-
-.main-navigation a {
-  color: #ffffff;
-  /* Text color */
-  text-decoration: none;
-  /* Remove underline from links */
-  font-size: 16px;
-  /* Adjust the font size as needed */
-  margin: 0 15px;
-  /* Space out the navigation items */
-  transition: color 0.3s ease;
-  /* Smooth transition for hover effects */
-}
-
-.main-navigation a:hover {
-  color: #47a0ff;
-  /* Change color on hover */
-}
 
 
 
@@ -563,4 +509,14 @@ li {
 #events {
   position: relative;
   background-attachment: fixed;
+}
+
+
+.announcement {
+  border: 2px solid #ffffff;
+  /* Blue border */
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  /* Rounded corners */
 }
