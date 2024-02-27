@@ -1,61 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="CPC New Haven Church - 135 Whitney Ave New Haven, CT. We are a church committed to serving and reaching the Greater New Haven area. Join us for worship and fellowship.">
-    <meta name="keywords" content="CPC New Haven, Church, New Haven, CT, Worship, Fellowship">
-    <meta name="author" content="CPC New Haven">
-    <title>Live - CPC New Haven Church</title>
-<link rel="stylesheet" href="./homepage.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description"
+            content="CPC New Haven Church - 135 Whitney Ave New Haven, CT. We are a church committed to serving and reaching the Greater New Haven area. Join us for worship and fellowship.">
+        <meta name="keywords"
+            content="CPC New Haven, Church, New Haven, CT, Worship, Fellowship">
+        <meta name="author" content="CPC New Haven">
+        <title>Events - CPC New Haven Church</title>
+        <link rel="stylesheet" href="./homepage.css">
+
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <link rel="stylesheet" href="./src/css/global-nav-bar.css">
     </head>
     <body>
         <div id="give">
-            <a href="#">Give</a>
+            <a href="./give.html">Give</a>
         </div>
-        <header id="myHeader" class="">
-            <a href="index.html">
-                <img id="logo" src="../assets/cpcLOGO.png" alt="CPC Logo"></a>
-  
-            <nav>
-                <a href="lifegroup.html">Life Group</a>
-                <a href="about.html">about</a>
+        <header id="stickyHeader" class="sticky">
+            <nav class="main-navigation">
+                <a href="worship.html">Worship</a>
+                <a href="about.html">About</a>
                 <a href="podcasts.html">Podcasts</a>
-                <a href="events.html">events</a>
-                <a href="./src/announcements.html">announcements</a>
-                <a href="#connect">connect</a>
+                <a href="events.html">Events</a>
+                <a href="announcements.html">Announcements</a>
+                <a href="community.html">Community</a>
                 <a href="live.html">Live</a>
-                <button id="openmenu">
-                    <span></span>
-                    <span></span>
-                </button>
+                <a href="resources.html">Resources</a>
+
             </nav>
         </header>
-        <div id="page" class="">
-            <section id="worship">
-             
-                <section id="events">
-                    <!-- Content will be populated by events.json and renderEvents function -->
-                </section> 
 
-                <section id="events-suggest">
-                    <p>Have an idea for an event? <a href="#">Add to the Connect board</a></p>
-                </section>
+        <!-- Inside <header> or <nav> -->
+        <div class="hamburger-menu" id="hamburgerMenu">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
 
-               
-                <div class="subscribe-icons">
-                    <h2>Subscribe to CPC on the Interwebs</h2>
-                    <a href="your_spotify_link" target="_blank"><i class="fab fa-spotify"></i></a>
-                    <a href="your_apple_podcasts_link" target="_blank"><i class="fab fa-apple"></i></a>
-                    <a href="your_youtube_link" target="_blank"><i class="fab fa-youtube"></i></a>
-                </div>
-            </section>
-
+        <!-- Mobile Navigation -->
+        <div class="mobile-navigation" id="mobileNavigation">
+            <a href="#worship">Worship</a>
+            <a href="about.html">About</a>
+            <a href="podcasts.html">Podcasts</a>
+            <a href="events.html">Events</a>
+            <a href="announcements.html">Announcements</a>
+            <a href="community.html">Community</a>
+            <a href="live.html">Live</a>
+            <a href="resources.html">Resources</a>
+            <button id="closeMenuButton">Close</button> <!-- Exit button -->
 
         </div>
-        <a id="fixedlink" target="_blank" rel="nofollow noopener" href="#">135 Whitney Ave - New Haven, CT | Sunday Worship 10:30am </a>
-    <script>
+        <div id="page" class>
+
+            <div id="events">
+                <!-- Content will be populated by events.json and renderEvents function -->
+            </div>
+
+            <div id="events-suggest">
+                <p>Have an idea for an event? <a href="#">Add to the Connect
+                        board</a></p>
+            </div>
+
+            <div class="subscribe-icons">
+                <h2>Subscribe to CPC on the Interwebs</h2>
+                <a href="your_spotify_link" target="_blank"><i
+                        class="fab fa-spotify"></i></a>
+                <a href="your_apple_podcasts_link" target="_blank"><i
+                        class="fab fa-apple"></i></a>
+                <a href="your_youtube_link" target="_blank"><i
+                        class="fab fa-youtube"></i></a>
+            </div>
+
+        </div>
+        <a id="fixedlink" target="_blank" rel="nofollow noopener" href="#">135
+            Whitney Ave - New Haven, CT | Sunday Worship 10:30am </a>
+        <script>
         document.addEventListener('DOMContentLoaded', function() {
     var header = document.getElementById('myHeader');
 	  var page = document.getElementById('page');
@@ -99,6 +121,6 @@
 
     </script>
         <script src="./src/fetch-events.js"></script>
-    
+
     </body>
 </html>
