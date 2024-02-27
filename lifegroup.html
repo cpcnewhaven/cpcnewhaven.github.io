@@ -1,41 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="CPC New Haven Church - 135 Whitney Ave New Haven, CT. We are a church committed to serving and reaching the Greater New Haven area. Join us for worship and fellowship.">
-    <meta name="keywords" content="CPC New Haven, Church, New Haven, CT, Worship, Fellowship">
-    <meta name="author" content="CPC New Haven">
-    <title>Live - CPC New Haven Church</title>
-<link rel="stylesheet" href="./homepage.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description"
+            content="CPC New Haven Church - 135 Whitney Ave New Haven, CT. We are a church committed to serving and reaching the Greater New Haven area. Join us for worship and fellowship.">
+        <meta name="keywords"
+            content="CPC New Haven, Church, New Haven, CT, Worship, Fellowship">
+        <meta name="author" content="CPC New Haven">
+        <title>Live - CPC New Haven Church</title>
+        <link rel="stylesheet" href="./homepage.css">
+        <link rel="stylesheet" href="./src/css/global-nav-bar.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     </head>
     <body>
         <div id="give">
-            <a href="#">Give</a>
+            <a href="./give.html">Give</a>
         </div>
-        <header id="myHeader" class="">
-            <a href="index.html">
-                <img id="logo" src="../assets/cpcLOGO.png" alt="CPC Logo"></a>
-  
-            <nav>
-                <a href="lifegroup.html">Life Group</a>
-                <a href="about.html">about</a>
+        <header id="stickyHeader" class="sticky">
+            <nav class="main-navigation">
+                <a href="index.html">Worship</a>
+                <a href="about.html">About</a>
                 <a href="podcasts.html">Podcasts</a>
-                <a href="events.html">events</a>
-                <a href="announcements.html">announcements</a>
-                <a href="#connect">connect</a>
+                <a href="events.html">Events</a>
+                <a href="announcements.html">Announcements</a>
+                <a href="community.html">Community</a>
                 <a href="live.html">Live</a>
-                <button id="openmenu">
-                    <span></span>
-                    <span></span>
-                </button>
+                <a href="resources.html">Resources</a>
+
             </nav>
         </header>
-        <div id="page" class="">
+
+        <!-- Inside <header> or <nav> -->
+        <div class="hamburger-menu" id="hamburgerMenu">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div class="mobile-navigation" id="mobileNavigation">
+            <a href="index.html">Worship</a>
+            <a href="about.html">About</a>
+            <a href="podcasts.html">Podcasts</a>
+            <a href="events.html">Events</a>
+            <a href="announcements.html">Announcements</a>
+            <a href="community.html">Community</a>
+            <a href="live.html">Live</a>
+            <a href="resources.html">Resources</a>
+            <button id="closeMenuButton">Close</button> <!-- Exit button -->
+
+        </div>
+        <div id="page" class>
             <section id="worship">
                 <h1>Life Groups</h1>
-     
+
             </section>
             <style>
                 section {
@@ -48,25 +68,51 @@
         font-size: clamp(1.2rem, 2.5vw, 1.8rem); /* Increased font size */
         line-height: 1.6;
         font-family: Arial, sans-serif;
+        max-width: 60ch;
+        text-align: left;
                 }
             </style>
 
             <section id="lifegroup-introduction">
-                <p>"God has so composed the body, giving greater honor to the part that lacked it, that there may be no division in the body, but that the members may have the same care for one another. If one member suffers, all suffer together; if one member is honored, all rejoice together." - 1 Corinthians 12:24-26</p>
-                <p>God's people are the hands and feet of Christ.  We cannot experience God and grow spiritually in a truly gospel-centered and biblical way if we are living in isolation. Neither can we say we are flourishing if our brother or sister in Christ is suffering. Bound together with covenant communion, God brings us into new relationships where sacrifice is freedom and giving to others is where we find life.</p>
-                <img src="https://www.csmedia1.com/cpcnewhaven.org/life-group-header-1200-400-px.jpg">
-                <p>Life Groups are our way of doing church in the small with all sorts of people engaged in prayer, teaching, fellowship and care.  They are the vehicle that we use to help its participants continue to experience Christ outside of our worship gatherings and to impart the pastoral care that Christ provides through the love of His people. Thus, the worship, teaching, fellowship, and care for one another supply a more intimate and hands-on encounter with the living Christ.</p>
-                <p>Click the image above for an interactive map and meeting times! Select one location at a time and click the "directions" icon to see its proximity to your location. Contact the leaders for exact addresses and meeting times.</p>
+                <p>"God has so composed the body, giving greater honor to the part that lacked it, that there may be no division in the body, but that the members may have the same care for one another. If one member suffers, all suffer together; if one member is honored, all rejoice together."
+                    - 1 Corinthians 12:24-26</p>
+                <p>God's people are the hands and feet of Christ. We cannot
+                    experience God and grow spiritually in a truly
+                    gospel-centered and biblical way if we are living in
+                    isolation. Neither can we say we are flourishing if our
+                    brother or sister in Christ is suffering. Bound together
+                    with covenant communion, God brings us into new
+                    relationships where sacrifice is freedom and giving to
+                    others is where we find life.</p>
+                <img
+                    src="https://www.csmedia1.com/cpcnewhaven.org/life-group-header-1200-400-px.jpg">
+                <p>Life Groups are our way of doing church in the small with all
+                    sorts of people engaged in prayer, teaching, fellowship and
+                    care. They are the vehicle that we use to help its
+                    participants continue to experience Christ outside of our
+                    worship gatherings and to impart the pastoral care that
+                    Christ provides through the love of His people. Thus, the
+                    worship, teaching, fellowship, and care for one another
+                    supply a more intimate and hands-on encounter with the
+                    living Christ.</p>
+                <p>Click the image above for an interactive map and meeting
+                    times! Select one location at a time and click the
+                    "directions" icon to see its proximity to your location.
+                    Contact the leaders for exact addresses and meeting
+                    times.</p>
             </section>
-            
+
             <section id="lifegroup-contacts">
                 <p>Hamden Cheshire Life Group | Contact: Julie Walker</p>
-                <p>Downtown New Haven Wednesday Life Group | Contact: Colleen Rice</p>
-                <p>Downtown New Haven Thursday Life Group | Contact: Alicia Kebabian</p>
+                <p>Downtown New Haven Wednesday Life Group | Contact: Colleen
+                    Rice</p>
+                <p>Downtown New Haven Thursday Life Group | Contact: Alicia
+                    Kebabian</p>
                 <p>East Rock Life Group | Contact: Kaitlyn Jessee</p>
                 <p>Trumbull Life Group | Contact: Stacy Roney</p>
                 <p>Shoreline Saturday Life Group | Contact: Cliff Bogue</p>
-                <p>West Side Life Group (Woodbridge/Westville) | Contact: Miranda Healy</p>
+                <p>West Side Life Group (Woodbridge/Westville) | Contact:
+                    Miranda Healy</p>
             </section>
 
             <br>
@@ -74,13 +120,24 @@
             <section id="discipleship-groups">
                 <h2>Discipleship Groups</h2>
                 <h3>SMALL GROUPS</h3>
-    
-                <p>Christian discipleship is the application of the gospel to every aspect of life.  The very gospel that sets us free from the fear of divine and human condemnation is the same power that transforms our relationships, work, and worship.  Biblical discipleship, including word, worship, and fellowship, exists at CPC primarily through Sunday worship, courses offered through the School of Discipleship, and Men’s and Women’s Discipleship Groups.</p>
-                <p>We encourage all congregation members to participate in both a Life Group and a Discipleship Group.  Although there are components of study in each Discipleship Group, their focus is on living and sharing truth through mutual accountability, study, and prayer.</p>
+
+                <p>Christian discipleship is the application of the gospel to
+                    every aspect of life. The very gospel that sets us free from
+                    the fear of divine and human condemnation is the same power
+                    that transforms our relationships, work, and worship.
+                    Biblical discipleship, including word, worship, and
+                    fellowship, exists at CPC primarily through Sunday worship,
+                    courses offered through the School of Discipleship, and
+                    Men’s and Women’s Discipleship Groups.</p>
+                <p>We encourage all congregation members to participate in both
+                    a Life Group and a Discipleship Group. Although there are
+                    components of study in each Discipleship Group, their focus
+                    is on living and sharing truth through mutual
+                    accountability, study, and prayer.</p>
                 <p>Men’s | Contact: David Taylor</p>
                 <p>Women’s | Contact: Diane Miller</p>
                 <p>Mom’s | Contact: Meg Bogue</p>
-                <p>Young at Heart (co-ed 60+) |  Contact: Stacy Roney</p>
+                <p>Young at Heart (co-ed 60+) | Contact: Stacy Roney</p>
             </section>
             <style>
                  #about-section p {
@@ -103,28 +160,27 @@
     }
             </style>
 
-
-        <section id="about-driving-directions">
+            <section id="about-driving-directions">
                 <div id="about-driving-directions">
                     <img src="./assets/cpcLOGO.png">
                     <h2>Directions and Time</h2>
                     <p>(Map)</p>
                     <p>135 Whitney Avenue</p>
                     <p>New Haven, CT 06510</p>
-                    <p>We are located next to the Yale School of Management, at the corner of Whitney Ave. and Bradley St.</p>
-                    <p>Sunday Morning Worship: We hold one service with communion at 10:30am. If you are unable to attend in-person, join us live online <a href="live.html">here</a>.</p>
+                    <p>We are located next to the Yale School of Management, at
+                        the corner of Whitney Ave. and Bradley St.</p>
+                    <p>Sunday Morning Worship: We hold one service with
+                        communion at 10:30am. If you are unable to attend
+                        in-person, join us live online <a
+                            href="live.html">here</a>.</p>
                 </div>
-        </section>
+            </section>
 
         </div>
 
-
-
-
-
-
-        <a id="fixedlink" target="_blank" rel="nofollow noopener" href="#">135 Whitney Ave - New Haven, CT | Sunday Worship 10:30am </a>
-    <script>
+        <a id="fixedlink" target="_blank" rel="nofollow noopener" href="#">135
+            Whitney Ave - New Haven, CT | Sunday Worship 10:30am </a>
+        <script>
         document.addEventListener('DOMContentLoaded', function() {
     var header = document.getElementById('myHeader');
 	  var page = document.getElementById('page');
@@ -167,7 +223,6 @@
 });
 
     </script>
-    
-    
+
     </body>
 </html>

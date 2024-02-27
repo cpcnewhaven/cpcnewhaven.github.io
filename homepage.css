@@ -21,6 +21,10 @@ button {
 
 section h1 {
   font-size: 120px;
+  max-width: 60ch;
+  color: white;
+  position: relative;
+  z-index: 3;
 }
 
 #page {
@@ -40,8 +44,7 @@ section {
   padding: 30px;
   justify-content: center;
   align-items: center;
-  background: #222;
-  color: #fff;
+
   position: relative;
 }
 
@@ -50,8 +53,7 @@ section:after {
   position: absolute;
   left: 0;
   top: 0;
-  background: #000;
-  opacity: 0.5;
+
   height: 100%;
   width: 100%;
 }
@@ -148,6 +150,7 @@ section:after {
 #about {
   display: flex;
   flex-direction: column;
+  background-color: black;
 }
 
 #about p {
@@ -161,7 +164,7 @@ section:after {
 #about h1 {
   font-size: 120px;
   position: relative;
-  z-index: 4;
+  z-index: 10;
   margin: 0px;
 }
 
@@ -292,6 +295,8 @@ td {
   color: #dddddd;
 }
 
+
+
 .subscribe-icons {
   display: flex;
   justify-content: space-around;
@@ -380,7 +385,8 @@ td {
 /*ABOUT SECTION STYLES */
 
 #about p {
-  max-width: 700px;
+  max-width: 60ch;
+  line-height: 100%;
   margin: 0 auto;
   font-family: Arial, sans-serif;
 }
@@ -399,6 +405,8 @@ td {
   background-attachment: fixed;
 
 }
+
+
 
 #about::before {
   content: "";
@@ -421,7 +429,7 @@ td {
   height: 100%;
   background: url('/assets/websiteBG/2.png');
   background-size: cover;
-  background-position: center;
+  background-position: left;
   z-index: -1;
   transform: translate(-50%, -50%);
 }
@@ -430,6 +438,31 @@ td {
 
 
 
+
+
+
+.styled-section {
+  min-height: 100vh;
+  background-color: black;
+  color: white;
+  /* Assuming you want the text color to be white for contrast */
+  max-width: 60ch;
+  margin: auto;
+  /* Centers the section if the parent is wider */
+  padding: 20px;
+  /* Adds some spacing inside the sections */
+}
+
+.styled-section h1,
+h2,
+h3 {
+  margin: 50px;
+}
+
+.styled-section p {
+  font-size: 16px !important;
+
+}
 
 
 
@@ -443,6 +476,31 @@ td {
   background-image: url('/assets/websiteBG/2.png');
   background-size: cover;
   background-position: center;
+}
+
+#worship-a {
+  color: rgb(255, 255, 255) !important;
+  background-image: url('/assets/websiteBG/2.png');
+  background-size: cover;
+  background-position: bottom;
+  position: relative;
+}
+
+#worship-a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  /* Adjust the black overlay opacity as needed */
+  z-index: 1;
+}
+
+#worship-a * {
+  position: relative;
+  z-index: 2;
 }
 
 

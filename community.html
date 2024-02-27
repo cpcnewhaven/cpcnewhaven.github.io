@@ -13,6 +13,78 @@
         <link rel="stylesheet" href="../homepage.css">
         <link rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <style>
+    /* Existing styles... */
+
+    /* New styles for community events table */
+    .community-events-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+        background: rgba(255, 255, 255, 0);
+        font-family: Arial, sans-serif; /* Google Sheets uses Arial */
+        box-shadow: none; /* Removing box shadow for a flatter look */
+        border: 1px solid #e0e0e0; /* Light grey border around the table */
+        border-radius: 0; /* Optional: Remove for a sharper look */
+    }
+
+    .community-events-table th,
+    .community-events-table td {
+        padding: 12px 15px;
+        text-align: left;
+        font-size: 16px;
+        border-bottom: 2px solid #e0e0e0; /* Subtle border for separation */
+        border-right: 1px solid #e0e0e0; /* Adds vertical separation */
+    }
+
+    .community-events-table th {
+        font-weight: bold;
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Last th element should not have a right border */
+    .community-events-table th:last-child {
+        border-right: none;
+    }
+
+    .community-events-table tr {
+        min-height: 50vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+
+
+
+
+    .community-events-table a {
+        color: #ffffff;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    .community-events-table a:hover {
+        color: #dddddd;
+    }
+
+    /* Last td in every row should not have a right border */
+    .community-events-table tr td:last-child {
+        border-right: none;
+    }
+
+    /* Additional styling to match the vibe of announcements in homepage.css */
+    #communityEventsTableContainer {
+        padding: 20px;
+        background-color: #001f3f; /* Dark blue background */
+        border-radius: 10px;
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        backdrop-filter: blur(4px);
+        margin: 20px auto;
+        max-width: 90%;
+    }
+            </style>
     </head>
     <body>
         <div id="give">
@@ -53,65 +125,27 @@
 
         </div>
         <div id="page" class>
-            <section id="worship"
+            <div id="community"
                 style="background-image:url(https://assets.codepen.io/214624/vision.jpg)">
-                <h1>Announcements</h1>
+                <h1>Community</h1>
+                <div id="communityEventsTableContainer"></div>
 
-                <!-- Announcements Section -->
-                <section id="announcements"
-                    style="background-image:url(https://assets.codepen.io/214624/space.jpg)">
-                    <h1>Announcements</h1>
-                    <!-- Announcements will be populated here by the JavaScript -->
-                </section>
+                <div class="full-monte">
+                    <h2>Want to be a part?</h2>
+                    <div class="vertical-menu">
 
+                        <a>Do this</a>
+                        <a href="#">Do That</a>
+
+                    </div>
+                </div>
             </div>
             <a id="fixedlink" target="_blank" rel="nofollow noopener"
                 href="#">135 Whitney Ave - New Haven, CT | Sunday Worship
                 10:30am </a>
-            <script>
-        document.addEventListener('DOMContentLoaded', function() {
-    var header = document.getElementById('myHeader');
-	  var page = document.getElementById('page');
-    var openMenuButton = document.getElementById('openmenu');
 
-    window.addEventListener('scroll', function() {
-				page.classList.remove('menuopen');
-        if (window.scrollY >= 100) {
-            header.classList.add('sticky');
-        } else {
-            header.classList.remove('sticky');
-        }
-    });
+            <!-- DYNAMIC Community -->
 
-    // Event listener to remove the sticky class when the button is clicked
-    openMenuButton.addEventListener('click', function() {
-        header.classList.remove('sticky');
-				page.classList.add('menuopen');
-    });
-	
-	var links = document.querySelectorAll('a[href^="#"]');
-
-    links.forEach(function(link) {
-        link.addEventListener('click', function(event) {
-            // Prevent the default action
-            event.preventDefault();
-
-            // Get the target element
-            var targetId = this.getAttribute('href');
-            var targetElement = document.querySelector(targetId);
-
-            // Smooth scroll to target
-            if (targetElement) {
-                targetElement.scrollIntoView({
-                    behavior: 'smooth'
-                });
-            }
-        });
-    });
-});
-
-    </script>
-            <!-- DYNAMIC ANNOUNCEMNTS -->
-            <script src="../src/announcements.js"></script>
+            <script src="/src/js/load-community-events.js"></script>
         </body>
     </html>
