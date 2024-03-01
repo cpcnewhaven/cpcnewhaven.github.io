@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&display=swap');
+
+body {
+    font-family: 'Barlow', sans-serif;
+    background-color: #00030d;
+    /* Brighter background */
+    color: #333;
+    /* Darker text for better contrast */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    padding: 50px;
+    padding-bottom: 500px;
+}
+
+.video-container {
+    width: 90%;
+    /* Slightly larger to match the container size */
+    height: 0;
+    padding-bottom: 50.25%;
+    /* Adjusted for a more precise 16:9 aspect ratio */
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-style: solid;
+    border-color: white;
+
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-style: solid;
+    border-radius: 10px;
+
+
+}
+
+.container {
+    text-align: center;
+    padding: 40px;
+    /* Increased padding for a larger container */
+    border-radius: 10px;
+    background-color: #ffffff;
+    /* Brighter and solid background color */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.12);
+    /* Softer shadow for a cleaner look */
+    min-width: 80%;
+    max-width: 90%;
+    /* Increased max-width to flush with the video container */
+    margin-top: -5px;
+    /* Adjusted margin to align closely with the video container */
+    font-weight: 400;
+    /* Default font weight for better readability */
+}
+
+a {
+    color: #1e00ff;
+    /* Brighter blue for links */
+    text-decoration: none;
+    margin: 10px;
+    font-weight: 600;
+    /* Slightly bolder links for better legibility */
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+    /* Darker shade on hover for a subtle effect */
+}
+
+h1,
+h2 {
+    color: #333;
+    /* Darker color for headers for better contrast */
+    font-weight: 600;
+    /* Slightly bolder headers for emphasis */
+    margin: 20px 0;
+    /* Added margin for better spacing */
+}
+
+#fixedlink {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #000000;
+    /* Brighter background for visibility */
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: 600;
+    text-align: center;
+    /* Bolder font for better legibility */
+}
