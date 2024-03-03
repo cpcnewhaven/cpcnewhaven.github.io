@@ -1,0 +1,41 @@
+#lifegroup-contacts p {
+    color: #ffffff; /* Example text color */
+    font-size: 16px; /* Example font size for desktop */
+}
+
+#lifegroup-contacts p strong {
+    font-weight: bold;
+    color: #ffffff; /* Example title color */
+    font-size: 18px; /* Example title font size for desktop */
+}
+
+body {
+    margin: 20px;
+    font-family: 'Barlow', sans-serif; /* Set Barlow as the default font */
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    border: 1px solid #ccc;
+    text-align: left;
+    padding: 8px;
+}
+th {
+    background-color: #f2f2f2;
+}
+/* Responsive Design Adjustments */
+@media (max-width: 768px) {
+    #lifegroup-contacts p {
+        font-size: 14px; /* Smaller font size for mobile */
+    }
+
+    #lifegroup-contacts p strong {
+        font-size: 16px; /* Slightly larger title font size for mobile */
+    }
+
+    body {
+        margin: 10px; /* Smaller margin for mobile */
+    }
+}

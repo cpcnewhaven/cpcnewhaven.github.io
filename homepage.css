@@ -585,6 +585,53 @@ h3 {
   z-index: 2;
 }
 
+/* General styling for the events list */
+.calendar-preview ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.calendar-preview li {
+  margin-bottom: 10px; /* Space between items */
+}
+
+.event-date {
+  font-weight: bold;
+  font-size: 1.1em; /* Slightly larger and bolder for visibility */
+  color: #007BFF; /* Example color: blue */
+}
+
+.event-description {
+  font-size: 1em;
+  color: #ffffff; /* Darker text for readability */
+}
+
+.view-all-events-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #007BFF; /* Example button color: blue */
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.view-all-events-btn:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+.event-date {
+  font-weight: bold;
+  font-size: 1.1em; /* Slightly larger and bolder for visibility */
+  color: #007BFF; /* Example color: blue */
+}
+
+/* Example of styling a specific event title using its unique ID */
+#event-title-0 {
+  color: #D9534F; /* Example color: red */
+}
+
+
 #podcasts {
   position: relative;
   background-image: url('/assets/websiteBG/yourPodcastImageHere.png'); /* Replace with your desired background image */
