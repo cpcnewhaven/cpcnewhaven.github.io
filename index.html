@@ -21,6 +21,7 @@
     </div>
     <header id="stickyHeader" class="sticky">
       <nav class="main-navigation">
+        <a href="index.html">Home</a>
         <a href="worship.html">Worship</a>
         <a href="about.html">About</a>
         <a href="podcasts.html">Podcasts</a>
@@ -54,8 +55,9 @@
 
     </div>
 
-
     <div id="page" class>
+
+      <!-- HOMEPAGE DYNAMIC SPLASH -->
       <section id="worship">
         <h1>Join us where "heaven meets earth"!
         </h1>
@@ -64,6 +66,7 @@
         <h3>“The Church: The Mystery Hidden For Ages In God”</h3>
         <p>Rev. Jerry Ornelas | Ephesians 3:1-13</p>
       </section>
+      <!-- END OF HOMEPAGE DYNMAIC SPLASH-->
 
       <section id="about">
         <h1>About Us</h1>
@@ -141,11 +144,11 @@
 
       <section id="events">
         <!-- Place this in the body where you want the events preview to appear -->
-<div id="events-preview">
-  <!-- Content will be populated by fetch-events-preview.js -->
-</div>
+        <div id="events-preview">
+          <!-- Content will be populated by fetch-events-preview.js -->
+        </div>
         <!-- Content will be populated by events.json and renderEvents function -->
-      
+
       </section>
       <div class="announcement-title"><h1>Announcements</h1></div>
       <section id="announcements">
@@ -172,8 +175,10 @@
       href="https://www.google.com/maps/search/?api=1&query=135+Whitney+Ave,+New+Haven,+CT">135
       Whitney Ave - New Haven, CT | Sunday Worship 10:30am</a>
 
+    <!-- UPDATE AND FETCH HOMEPAGE BASED ON SOURCE OF TRUTH-->
+    <script src="./src/js/updateContent.js"></script>
     <!-- Working SCRIPTS-->
-  
+
     <script src="./src/js/fetch-events-preview.js"></script>
     <script src="./src/nav-code.js"></script>
     <script src="./src/background-change_connect.js"></script>

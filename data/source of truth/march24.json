@@ -1,0 +1,22 @@
+{
+    "sermons": [
+      {
+        "title": "Join us where \"heaven meets earth\"!",
+        "serviceTime": "Come Worship with us | Sundays 10:30 am",
+        "upcomingSermonTitle": "“The Church: The Mystery Hidden For Ages In God”",
+        "sermonDetails": "Rev. Jerry Ornelas | Ephesians 3:1-13",
+        "lastAltered": "2023-03-24",
+        "launchSunday": "2023-03-26",
+        "isActive": false
+      },
+      {
+        "title": "Easter Service",
+        "serviceTime": "Celebrate Easter with us | Sunday 10:30 am",
+        "upcomingSermonTitle": "“Resurrection: The Victory Over Death”",
+        "sermonDetails": "Rev. Jerry Ornelas | 1 Corinthians 15:1-58",
+        "lastAltered": "2023-03-31", 
+        "launchSunday": "2023-04-07", 
+        "isActive": true 
+      }
+    ]
+  }
