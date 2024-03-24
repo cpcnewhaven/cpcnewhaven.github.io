@@ -145,6 +145,28 @@ section:after {
 #worship {
   display: flex;
   flex-direction: column;
+  background-image: url('/assets/websiteBG/2.png');
+  /* Adjust the path as necessary */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+#worship::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  /* Dark overlay */
+  z-index: 1;
+}
+
+#worship * {
+  position: relative;
+  z-index: 2;
 }
 
 #about {
@@ -158,7 +180,10 @@ section:after {
   line-height: 130%;
   text-align: left;
   margin: 0px;
-
+  max-width: 60ch;
+  line-height: 100%;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
 }
 
 #about h1 {
@@ -186,6 +211,8 @@ p {
 
 #connect h1 {
   margin: 0;
+  position: relative;
+  z-index: 5;
 }
 
 #connect a {
@@ -239,6 +266,29 @@ p {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  position: relative;
+  background-image: url('/assets/websiteBG/yourPodcastImageHere.png');
+  /* Replace with your desired background image */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+#podcasts::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.75);
+  /* This creates the overlay effect */
+  z-index: 1;
+}
+
+#podcasts * {
+  position: relative;
+  z-index: 2;
 }
 
 #podcasts h1,
@@ -563,7 +613,8 @@ h3 {
 
 #events {
   position: relative;
-  background-image: url('/assets/websiteBG/yourImageHere.png'); /* Replace with your desired background image */
+  background-image: url('/assets/websiteBG/yourImageHere.png');
+  /* Replace with your desired background image */
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -576,7 +627,8 @@ h3 {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.8); /* This creates the overlay effect */
+  background: rgba(0, 0, 0, 0.8);
+  /* This creates the overlay effect */
   z-index: 1;
 }
 
@@ -592,49 +644,59 @@ h3 {
 }
 
 .calendar-preview li {
-  margin-bottom: 10px; /* Space between items */
+  margin-bottom: 10px;
+  /* Space between items */
 }
 
 .event-date {
   font-weight: bold;
-  font-size: 1.1em; /* Slightly larger and bolder for visibility */
-  color: #007BFF; /* Example color: blue */
+  font-size: 1.1em;
+  /* Slightly larger and bolder for visibility */
+  color: #007BFF;
+  /* Example color: blue */
 }
 
 .event-description {
   font-size: 1em;
-  color: #ffffff; /* Darker text for readability */
+  color: #ffffff;
+  /* Darker text for readability */
 }
 
 .view-all-events-btn {
   display: inline-block;
   margin-top: 20px;
   padding: 10px 20px;
-  background-color: #007BFF; /* Example button color: blue */
+  background-color: #007BFF;
+  /* Example button color: blue */
   color: white;
   text-decoration: none;
   border-radius: 5px;
 }
 
 .view-all-events-btn:hover {
-  background-color: #0056b3; /* Darker blue on hover */
+  background-color: #0056b3;
+  /* Darker blue on hover */
 }
 
 .event-date {
   font-weight: bold;
-  font-size: 1.1em; /* Slightly larger and bolder for visibility */
-  color: #007BFF; /* Example color: blue */
+  font-size: 1.1em;
+  /* Slightly larger and bolder for visibility */
+  color: #007BFF;
+  /* Example color: blue */
 }
 
 /* Example of styling a specific event title using its unique ID */
 #event-title-0 {
-  color: #D9534F; /* Example color: red */
+  color: #D9534F;
+  /* Example color: red */
 }
 
 
 #podcasts {
   position: relative;
-  background-image: url('/assets/websiteBG/yourPodcastImageHere.png'); /* Replace with your desired background image */
+  background-image: url('/assets/websiteBG/yourPodcastImageHere.png');
+  /* Replace with your desired background image */
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -647,8 +709,25 @@ h3 {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.75); /* This creates the overlay effect */
+  background: rgba(0, 0, 0, 0.75);
+  /* This creates the overlay effect */
   z-index: 1;
+}
+
+#podcasts * {
+  position: relative;
+  z-index: 2;
+}
+
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: rgba(0, 0, 0, 0.75);
+/* This creates the overlay effect */
+z-index: 1;
 }
 
 #podcasts * {
