@@ -1,0 +1,85 @@
+.calendar {
+    margin: 0 auto;
+    margin-bottom: 20px;
+    max-width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.events-list {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+    /* Full width */
+    display: flex;
+    flex-direction: column;
+
+    max-width: 50ch;
+    /* Set max width to 60ch */
+
+}
+
+.event {
+    margin-bottom: 10px;
+    width: 100%;
+    /* Full width */
+    text-align: center;
+    /* Center text */
+}
+
+.event-date {
+    font-weight: bold;
+}
+
+.event-description {
+    margin-left: 5px;
+}
+
+body {
+    background-color: #000000;
+    /* Light gray background */
+
+    align-items: center;
+    height: 100vh;
+    /* Full height */
+    margin: 0;
+    /* Remove default margin */
+    text-align: left;
+    /* Align text to the left */
+    margin-left: auto;
+    /* Center the content horizontally */
+    margin-right: auto;
+    /* Center the content horizontally */
+}
+
+
+.events-page .calendar {
+    /* Unique styles for calendar within events page */
+}
+
+.events-page .events-list {
+    /* Override styles for events list specifically for events page */
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    max-width: 50ch;
+    /* Adjusted max width */
+}
+
+.events-page .event {
+    /* Specific event styling for events page */
+    margin-bottom: 10px;
+    text-align: left;
+    /* Align text to the left */
+}
+
+.events-page .event-date {
+    font-weight: bold;
+}
+
+.events-page .event-description {
+    margin-left: 5px;
+}
