@@ -8,7 +8,7 @@
 }
 
 .events-list {
-    list-style-type: none;
+    list-style-type: none; /* No bullet points */
     padding: 0;
     width: 100%;
     /* Full width */
@@ -26,6 +26,12 @@
     /* Full width */
     text-align: center;
     /* Center text */
+    background-color: #f5f5f5; /* Default background color */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+.event:hover {
+    background-color: #e2e2e2; /* Highlight color on hover */
 }
 
 .event-date {
@@ -81,4 +87,14 @@ body {
 
 .events-page .event-description {
     margin-left: 5px;
+}
+
+/* Style for the 'add to the connect board' link */
+.add-to-connect-board-link {
+    color: #007bff; /* Different color for the link */
+    cursor: pointer; /* Change cursor to pointer to indicate it's clickable */
+}
+
+.add-to-connect-board-link:hover {
+    color: #0056b3; /* Darker shade on hover for better user interaction */
 }
