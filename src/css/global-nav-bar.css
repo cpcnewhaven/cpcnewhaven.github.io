@@ -21,7 +21,7 @@
     top: 0;
     z-index: 1000;
     /* Ensure it stays above other content */
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.12);
     /* Increase transparency for glass effect */
     backdrop-filter: blur(10px);
     /* Blur effect for the glass-like appearance */
