@@ -16,7 +16,21 @@
         "sermonDetails": "Rev. Jerry Ornelas | 1 Corinthians 15:1-58",
         "lastAltered": "2023-03-31", 
         "launchSunday": "2023-04-07", 
-        "isActive": true 
+        "isActive": false 
+      },
+      {
+        "title": "The Narrow Road to New Life",
+        "serviceTime": "Join us | Sundays 10:30 am",
+        "upcomingSermonTitle": "The New Story Begins",
+        "sermonDetails": "Luke 24:36-53 | Rev. Craig Luekens | Week 5",
+        "lastAltered": "2023-03-31",
+        "launchSunday": "2024-03-31",
+        "isActive": false,
+        "resources": {
+          "playlist": "https://www.youtube.com/playlist?list=PL7xij5KggExv4leAY_s7wzGGNYf6utVA5",
+          "preview": "https://youtu.be/6acA_fqVXYg",
+          "bulletin": "https://www.csmedia1.com/cpcnewhaven.org/bulletin_2024-03-31_.pdf"
+        }
       }
     ]
   }
