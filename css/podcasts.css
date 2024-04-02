@@ -1,117 +1,163 @@
 /* Reset default styles */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 
 
-  }
-  
-  /* Set a minimal background */
-  body {
-    font-family: Arial, sans-serif;
-  }
-  
-  /* Style the navigation menu */
-  nav {
-    background-color: #333;
-    padding: 10px;
-  }
-
-  main {
-    padding:50px;
-  }
-  
-  .top-nav {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .top-nav li {
-    margin: 0 10px;
-  }
-  
-  .top-nav a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 16px;
-    padding: 5px 10px;
-  }
-  
-  .top-nav a:hover {
-    background-color: #555;
-  }
-  
-  /* Style the header */
-  h1 {
-    text-align: center;
-    margin: 20px 0;
-    font-size: 32px;
-    color: #333;
-  }
-  
-  h2 {
-    font-size: 24px;
-    color: #333;
-    margin-bottom: 10px;
-  }
-  
-  /* Style the table */
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px auto;
-    background-color: #fff;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    max-width: 900px;
-
-  }
-  
-  th, td {
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    text-align: left;
-    padding: 8px;
-  }
-  
-  th {
-    background-color: #929292;
-  }
-  
-  /* Style the button */
-  .glass-button {
-    background-color: transparent;
-    border: none;
-    color: #333;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 4px;
-    border: 1px solid #333;
-    transition: background-color 0.3s ease;
-  }
-  
-  .glass-button:hover {
-    background-color: rgba(0, 0, 0, 0.1);
-  }
-  
-  
-  @media (max-width: 600px) {
-  table {
-    margin: 20px 10px; /* Adjust the margin for mobile devices */
 }
+
+/* Set a minimal background */
 body {
-    margin:0px;
-    padding:0px;
+  font-family: Arial, sans-serif;
+}
+
+/* Style the navigation menu */
+nav {
+  background-color: #333;
+  padding: 10px;
 }
 
 main {
-    padding:0px;
-    margin:0px;
+  padding: 50px;
 }
+
+.top-nav {
+  list-style: none;
+  display: flex;
+  justify-content: center;
 }
+
+.top-nav li {
+  margin: 0 10px;
+}
+
+.top-nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 5px 10px;
+}
+
+.top-nav a:hover {
+  background-color: #555;
+}
+
+/* Style the header */
+h1 {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 32px;
+  color: #333;
+}
+
+h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Style the table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px auto;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+
+}
+
+th,
+td {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  text-align: left;
+  padding: 8px;
+}
+
+th {
+  background-color: #929292;
+}
+
+/* Style the button */
+.glass-button {
+  background-color: transparent;
+  border: none;
+  color: #333;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  border: 1px solid #333;
+  transition: background-color 0.3s ease;
+}
+
+.glass-button:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+
+@media (max-width: 600px) {
+  table {
+    margin: 20px 10px;
+    /* Adjust the margin for mobile devices */
+  }
+
+  body {
+    margin: 0px;
+    padding: 0px;
+  }
+
+  main {
+    padding: 0px;
+    margin: 0px;
+  }
+}
+
 #podcasts {
-display:flex;
-flex-direction: column;
+  display: flex;
+  flex-direction: column;
+}
+
+#podcast-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#podcast-table th,
+#podcast-table td {
+  text-align: left;
+  padding: 12px;
+  border-bottom: 1px solid #ccc;
+}
+
+#podcast-table th {
+  background-color: #f8f8f8;
+}
+
+#podcast-table td img {
+  width: 100px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.podcast-title {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.podcast-info {
+  font-size: 0.9em;
+  color: #666;
+}
+
+.podcast-link {
+  color: #007bff;
+  text-decoration: none;
+  font-size: 0.9em;
+}
+
+.podcast-link:hover {
+  text-decoration: underline;
 }

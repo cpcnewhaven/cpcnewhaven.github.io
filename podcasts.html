@@ -107,7 +107,49 @@
     });
 });
 
-    </script>
+document.addEventListener('DOMContentLoaded', function() {
+    const podcastsData = [
+        {
+            "title": "Beyond The Sunday Sermon | Episode 1 | The Key to Everything Being Gospel-Centered",
+            "publishedDate": "Wed Sep 13 2023",
+            "episodeLink": "https://open.spotify.com/episode/0sM382GuIQGhhEPfeDNOYD?si=e0c5da5ada784e9e",
+            "speaker": "craig-luekens",
+            "artwork": "https://uploads-ssl.webflow.com/6089f3f789959927b6a157cb/6517178dbb1605725f861921_beyondThumb.png"
+        },
+        {
+            "title": "Beyond the Sunday Sermon | Episode 2 | The Identity of the Church: Being Missional and The Presence of Christ",
+            "publishedDate": "Wed Sep 20 2023",
+            "episodeLink": "https://open.spotify.com/episode/5uqhceKRbJVqFND76kO3lD?si=7465b7aee6ac45a0",
+            "speaker": "craig-luekens",
+            "artwork": "https://uploads-ssl.webflow.com/6089f3f789959927b6a157cb/6517182501e3198c8ad0b78c_beyond2a.png"
+        }
+        // Add the rest of your podcast entries here
+    ];
+
+    const table = document.querySelector('#podcast-table table');
+    let tableHTML = `<tr>
+        <th>Cover</th>
+        <th>Title</th>
+        <th>Date</th>
+        <th>Speaker</th>
+        <th>Link</th>
+    </tr>`;
+
+    podcastsData.forEach(podcast => {
+        tableHTML += `<tr>
+            <td><img src="${podcast.artwork}" alt="Podcast Cover"></td>
+            <td>
+                <div class="podcast-title">${podcast.title}</div>
+            </td>
+            <td>${podcast.publishedDate}</td>
+            <td>${podcast.speaker}</td>
+            <td><a href="${podcast.episodeLink}" class="podcast-link" target="_blank">Listen</a></td>
+        </tr>`;
+    });
+
+    table.innerHTML = tableHTML;
+});
+</script>
 
     </body>
 </html>
