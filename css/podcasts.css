@@ -133,7 +133,7 @@ th {
 }
 
 #podcast-table th {
-  background-color: #f8f8f8;
+  background-color: #878787a9;
 }
 
 #podcast-table td img {
@@ -159,5 +159,46 @@ th {
 }
 
 .podcast-link:hover {
+  text-decoration: underline;
+}
+
+/* Unique styles for the pre-April podcast table */
+#preAprilPodcastTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px auto;
+  background-color: #f9f9f9;
+  /* Slightly different background for distinction */
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  max-width: 900px;
+}
+
+#preAprilPodcastTable th,
+#preAprilPodcastTable td {
+  text-align: left;
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+  /* Lighter border for a softer look */
+}
+
+#preAprilPodcastTable th {
+  background-color: #a8a8a8;
+  /* Different header background for distinction */
+}
+
+#preAprilPodcastTable td img {
+  width: 100px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.preAprilPodcastLink {
+  color: #007bff;
+  text-decoration: none;
+  font-size: 0.9em;
+}
+
+.preAprilPodcastLink:hover {
   text-decoration: underline;
 }
