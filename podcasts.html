@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description"
@@ -20,6 +22,7 @@
         </div>
         <header id="stickyHeader" class="sticky">
             <nav class="main-navigation">
+                <a href="index.html">Home</a>
                 <a href="worship.html">Worship</a>
                 <a href="about.html">About</a>
                 <a href="podcasts.html">Podcasts</a>
@@ -41,7 +44,8 @@
 
         <!-- Mobile Navigation -->
         <div class="mobile-navigation" id="mobileNavigation">
-            <a href="#worship">Worship</a>
+            <a href="index.html">Home</a>
+            <a href="worship.html">Worship</a>
             <a href="about.html">About</a>
             <a href="podcasts.html">Podcasts</a>
             <a href="events.html">Events</a>
@@ -78,24 +82,15 @@ document.addEventListener('DOMContentLoaded', function() {
             let tableHTML = `<tr>
                 <th>Cover</th>
                 <th>Title</th>
-                <th>Date</th>
-                <th>Speaker</th>
                 <th>Link</th>
             </tr>`;
 
             podcastsData.forEach(podcast => {
-                const publishedDate = new Date(podcast.publishedDate).toLocaleDateString('en-US', {
-                    year: 'numeric',
-                    month: 'long',
-                    day: 'numeric'
-                });
                 tableHTML += `<tr>
                     <td><img src="${podcast.artwork}" alt="Podcast Cover" style="width:100px;"></td>
                     <td>
                         <div class="podcast-title">${podcast.title}</div>
                     </td>
-                    <td>${publishedDate}</td>
-                    <td>${podcast.speaker}</td>
                     <td><a href="${podcast.episodeLink}" class="podcast-link" target="_blank">Listen</a></td>
                 </tr>`;
             });
@@ -106,6 +101,50 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 
-        <script src="./src/js/podcast_fetchOldJS_PushTable.js"></script>
+        <script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Fetch the CSV file
+    fetch('data/podcast/preAprilPodcast.csv')
+        .then(response => response.text())
+        .then(csvData => {
+            // Parse the CSV data
+            Papa.parse(csvData, {
+                header: true,
+                complete: function(results) {
+                    const episodes = results.data;
+                    const container = document.getElementById('old-podcast-container');
+
+                    // Create a table element
+                    const table = document.createElement('table');
+                    table.id = 'preAprilPodcastTable'; // Unique ID for the table
+
+                    // Table header
+                    let tableHTML = `<tr>
+                        <th>Cover</th>
+                        <th>Title</th>
+                        <th>Link</th>
+                    </tr>`;
+
+                    // Populate the table with episodes data
+                    episodes.forEach(episode => {
+                        tableHTML += `<tr>
+                            <td><img src="${episode['Cover']}" alt="Podcast Cover" style="width:100px;"></td>
+                            <td>${episode['Name']}</td>
+                            <td><a href="${episode['Episode Link']}" class="preAprilPodcastLink" target="_blank">Listen</a></td>
+                        </tr>`;
+                    });
+
+                    // Set the innerHTML of the table
+                    table.innerHTML = tableHTML;
+
+                    // Append the table to the container
+                    container.appendChild(table);
+                }
+            });
+        })
+        .catch(error => console.error('Error loading podcast data:', error));
+});
+</script>
+
     </body>
 </html>

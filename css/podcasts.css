@@ -194,9 +194,11 @@ th {
 }
 
 .preAprilPodcastLink {
-  color: #007bff;
+  color: #11bbff;
   text-decoration: none;
-  font-size: 0.9em;
+  font-size: 0.7em;
+  text-transform: uppercase;
+  font-weight: 900;
 }
 
 .preAprilPodcastLink:hover {
