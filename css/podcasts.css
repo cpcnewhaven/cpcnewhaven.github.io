@@ -10,6 +10,8 @@
 /* Set a minimal background */
 body {
   font-family: Arial, sans-serif;
+  color: white;
+  background-color: black;
 }
 
 /* Style the navigation menu */
@@ -48,12 +50,12 @@ h1 {
   text-align: center;
   margin: 20px 0;
   font-size: 32px;
-  color: #333;
+  color: white;
 }
 
 h2 {
   font-size: 24px;
-  color: #333;
+  color: white;
   margin-bottom: 10px;
 }
 
@@ -62,7 +64,7 @@ table {
   width: 100%;
   border-collapse: collapse;
   margin: 20px auto;
-  background-color: #fff;
+  background-color: #ffffff1a;
   border: 1px solid rgba(0, 0, 0, 0.1);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   max-width: 900px;
@@ -167,7 +169,7 @@ th {
   width: 100%;
   border-collapse: collapse;
   margin: 20px auto;
-  background-color: #f9f9f9;
+  background-color: #f9f9f91a;
   /* Slightly different background for distinction */
   border: 1px solid rgba(0, 0, 0, 0.05);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
