@@ -59,6 +59,16 @@
         <div id="page-podcast">
             <section id="podcast-table">
                 <h1>Podcasts</h1>
+                <div id="new-podcast-search">
+                    <input type="text" id="newPodcastSearchInput"
+                        placeholder="Search podcasts...">
+                </div>
+                <div id="new-podcast-filters">
+                    <select id="newPodcastSort">
+                        <option value="date">Date Released</option>
+                        <option value="bible">Bible Chapter and Verse</option>
+                    </select>
+                </div>
                 <table>
 
                 </table>
@@ -68,7 +78,16 @@
         </div>
 
         <h1>Podcast Pre-April 2024</h1>
-
+        <div id="old-podcast-search">
+            <input type="text" id="oldPodcastSearchInput"
+                placeholder="Search podcasts...">
+        </div>
+        <div id="old-podcast-filters">
+            <select id="oldPodcastSort">
+                <option value="date">Date Released</option>
+                <option value="bible">Bible Chapter and Verse</option>
+            </select>
+        </div>
         <div id="old-podcast-container"></div>
 
         <a id="fixedlink" target="_blank" rel="nofollow noopener" href="#">135
@@ -78,24 +97,56 @@ document.addEventListener('DOMContentLoaded', function() {
     fetch('data/podcast/total-podcast.json')
         .then(response => response.json())
         .then(podcastsData => {
-            const table = document.querySelector('#podcast-table table');
-            let tableHTML = `<tr>
-                <th>Cover</th>
-                <th>Title</th>
-                <th>Link</th>
-            </tr>`;
+            const searchInput = document.getElementById('newPodcastSearchInput');
+            const sortSelect = document.getElementById('newPodcastSort');
+            let podcasts = podcastsData;
 
-            podcastsData.forEach(podcast => {
-                tableHTML += `<tr>
-                    <td><img src="${podcast.artwork}" alt="Podcast Cover" style="width:100px;"></td>
-                    <td>
-                        <div class="podcast-title">${podcast.title}</div>
-                    </td>
-                    <td><a href="${podcast.episodeLink}" class="podcast-link" target="_blank">Listen</a></td>
+            function sortPodcasts(sortBy) {
+                if (sortBy === 'date') {
+                    podcasts.sort((a, b) => new Date(b.dateReleased) - new Date(a.dateReleased));
+                } else if (sortBy === 'bible') {
+                    // Example sorting function for Bible references, adjust according to your data structure
+                    podcasts.sort((a, b) => {
+                        // Implement custom sorting logic here
+                        return a.bibleReference.localeCompare(b.bibleReference);
+                    });
+                }
+                renderTable(podcasts);
+            }
+
+            function renderTable(data) {
+                const table = document.querySelector('#podcast-table table');
+                let tableHTML = `<tr>
+                    <th>Cover</th>
+                    <th>Title</th>
+                    <th>Date Released</th>
+                    <th>Bible Reference</th>
+                    <th>Link</th>
                 </tr>`;
+
+                data.forEach(podcast => {
+                    tableHTML += `<tr>
+                        <td><img src="${podcast.artwork}" alt="Podcast Cover" style="width:100px;"></td>
+                        <td>${podcast.title}</td>
+                        <td>${podcast.dateReleased}</td>
+                        <td>${podcast.bibleReference}</td>
+                        <td><a href="${podcast.episodeLink}" class="podcast-link" target="_blank">Listen</a></td>
+                    </tr>`;
+                });
+
+                table.innerHTML = tableHTML;
+            }
+
+            searchInput.addEventListener('input', () => {
+                const filteredPodcasts = podcasts.filter(podcast => podcast.title.toLowerCase().includes(searchInput.value.toLowerCase()));
+                renderTable(filteredPodcasts);
             });
 
-            table.innerHTML = tableHTML;
+            sortSelect.addEventListener('change', () => {
+                sortPodcasts(sortSelect.value);
+            });
+
+            renderTable(podcasts); // Initial render
         })
         .catch(error => console.error('Error loading podcast data:', error));
 });
@@ -107,38 +158,62 @@ document.addEventListener('DOMContentLoaded', function() {
     fetch('data/podcast/preAprilPodcast.csv')
         .then(response => response.text())
         .then(csvData => {
-            // Parse the CSV data
             Papa.parse(csvData, {
                 header: true,
                 complete: function(results) {
                     const episodes = results.data;
+                    const searchInput = document.getElementById('oldPodcastSearchInput');
+                    const sortSelect = document.getElementById('oldPodcastSort');
                     const container = document.getElementById('old-podcast-container');
+                    let table = document.createElement('table');
+                    table.id = 'preAprilPodcastTable';
 
-                    // Create a table element
-                    const table = document.createElement('table');
-                    table.id = 'preAprilPodcastTable'; // Unique ID for the table
+                    function sortEpisodes(sortBy) {
+                        if (sortBy === 'date') {
+                            episodes.sort((a, b) => new Date(b['Date Released']) - new Date(a['Date Released']));
+                        } else if (sortBy === 'bible') {
+                            // Example sorting function for Bible references, adjust according to your data structure
+                            episodes.sort((a, b) => {
+                                // Implement custom sorting logic here
+                                return a['Bible Reference'].localeCompare(b['Bible Reference']);
+                            });
+                        }
+                        renderTable(episodes);
+                    }
 
-                    // Table header
-                    let tableHTML = `<tr>
-                        <th>Cover</th>
-                        <th>Title</th>
-                        <th>Link</th>
-                    </tr>`;
-
-                    // Populate the table with episodes data
-                    episodes.forEach(episode => {
-                        tableHTML += `<tr>
-                            <td><img src="${episode['Cover']}" alt="Podcast Cover" style="width:100px;"></td>
-                            <td>${episode['Name']}</td>
-                            <td><a href="${episode['Episode Link']}" class="preAprilPodcastLink" target="_blank">Listen</a></td>
+                    function renderTable(data) {
+                        let tableHTML = `<tr>
+                            <th>Cover</th>
+                            <th>Title</th>
+                            <th>Date Released</th>
+                            <th>Bible Reference</th>
+                            <th>Link</th>
                         </tr>`;
+
+                        data.forEach(episode => {
+                            tableHTML += `<tr>
+                                <td><img src="${episode['Cover']}" alt="Podcast Cover" style="width:100px;"></td>
+                                <td>${episode['Name']}</td>
+                                <td>${episode['Date Released']}</td>
+                                <td>${episode['Bible Reference']}</td>
+                                <td><a href="${episode['Episode Link']}" class="preAprilPodcastLink" target="_blank">Listen</a></td>
+                            </tr>`;
+                        });
+
+                        table.innerHTML = tableHTML;
+                    }
+
+                    searchInput.addEventListener('input', () => {
+                        const filteredEpisodes = episodes.filter(episode => episode['Name'].toLowerCase().includes(searchInput.value.toLowerCase()));
+                        renderTable(filteredEpisodes);
                     });
 
-                    // Set the innerHTML of the table
-                    table.innerHTML = tableHTML;
+                    sortSelect.addEventListener('change', () => {
+                        sortEpisodes(sortSelect.value);
+                    });
 
-                    // Append the table to the container
                     container.appendChild(table);
+                    renderTable(episodes); // Initial render
                 }
             });
         })
