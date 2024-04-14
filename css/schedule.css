@@ -1,0 +1,33 @@
+#pastoral-counseling {
+  background-color: #f0f0f0; /* Light background for contrast */
+  color: #333; /* Dark text for readability */
+  padding: 20px;
+  margin: 20px auto; /* Center the section */
+  max-width: 800px; /* Adjust based on your design preference */
+  border-radius: 10px; /* Optional: adds rounded corners */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional: adds a subtle shadow */
+}
+
+#pastoral-counseling h1 {
+  text-align: center; /* Centers the title */
+}
+
+#pastoral-counseling form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Adds space between form fields */
+}
+
+#pastoral-counseling button {
+  align-self: center; /* Center the submit button */
+  padding: 10px 20px; /* Larger click area */
+  background-color: #4CAF50; /* Green background */
+  color: white; /* White text */
+  border: none;
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Changes cursor to indicate clickable */
+}
+
+#pastoral-counseling button:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
