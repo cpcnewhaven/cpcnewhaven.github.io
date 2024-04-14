@@ -9,7 +9,7 @@
       content="CPC New Haven, Church, New Haven, CT, Worship, Fellowship">
     <meta name="author" content="CPC New Haven">
     <title>CPC New Haven Church</title>
-    <link rel="stylesheet" href="./homepage.css">
+    <link rel="stylesheet" href="./src/css/homepage.css">
     <link rel="stylesheet" href="./src/css/global-nav-bar.css">
     <link rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
@@ -78,7 +78,10 @@
         </div -->
       </section>
       <!-- END OF HOMEPAGE DYNAMIC SPLASH-->
-
+      <div class="highlights-title"><h1>Highlights</h1></div>
+      <section id="highlights">
+        <!-- Highlights will be populated here by the JavaScript -->
+      </section>
       <section id="podcasts">
         <h1>Podcasts</h1>
 
@@ -92,64 +95,20 @@
               <th>Sermon Title</th>
               <th>Spotify</th>
               <th>Apple</th>
-
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>8.27.23</td>
-              <td>PSLAMS</td>
-              <td>PSALM 143:1-121</td>
-              <td>“Wrestling with God in Turmoil and Confidence”</td>
-              <td><a href="#">Listen on Spotify</a></td>
-              <td><a href="#">Listen on Apple</a></td>
-
-            </tr>
-            <tr>
-              <td>8.13.23</td>
-              <td>PSLAMS</td>
-              <td>PSALM 118:1-29</td>
-              <td>Life in Jesus: Fighting (the Right!) Battles in Light of the
-                Victory of God</td>
-              <td><a href="#">Listen on Spotify</a></td>
-              <td><a href="#">Listen on Apple</a></td>
-            </tr>
-            <tr>
-              <td>8.06.23</td>
-              <td>JOHN</td>
-              <td>ACTS 28:17-31</td>
-              <td>"Luke’s Final Word: Our Messy, Impossible, Unstoppable
-                Missional Task”</td>
-              <td><a href="#">Listen on Spotify</a></td>
-              <td><a href="#">Listen on Apple</a></td>
-            </tr>
+            <!-- Dynamic content will be inserted here by updateContent.js -->
           </tbody>
         </table>
         <h2>Subscribe</h2>
         <div class="subscribe-icons">
-          <a href="your_spotify_link" target="_blank"><i
-              class="fab fa-spotify"></i></a>
-          <a href="your_apple_podcasts_link" target="_blank"><i
-              class="fab fa-apple"></i></a>
-          <a href="your_youtube_link" target="_blank"><i
-              class="fab fa-youtube"></i></a>
+          <a href="your_spotify_link" target="_blank"><i class="fab fa-spotify"></i></a>
+          <a href="your_apple_podcasts_link" target="_blank"><i class="fab fa-apple"></i></a>
+          <a href="your_youtube_link" target="_blank"><i class="fab fa-youtube"></i></a>
         </div>
       </section>
-
-      <section id="events">
-        <!-- Place this in the body where you want the events preview to appear -->
-        <div id="events-preview">
-          <!-- Content will be populated by fetch-events-preview.js -->
-        </div>
-        <!-- Content will be populated by events.json and renderEvents function -->
-
-      </section>
-      <div class="announcement-title"><h1>Announcements</h1></div>
-      <section id="announcements">
-
-        <!-- Announcements will be populated here by the JavaScript -->
-      </section>
-      
+     
       <section id="about">
         <h1>About Us</h1>
         <p> "Aspiring to be a gospel centered community, we talk a lot about
@@ -198,6 +157,9 @@
     <script src="./src/background-change_podcasts.js"></script>
     <script src="./src/background-change_worship.js"></script>
     <script src="./src/announcements.js"></script>
+    <!-- Fetch Latest 3 Podcasts and Display on Homepage -->
+    <script src="./src/js/homepage-fetch-latestPodcasts.js"></script>
+    <script src="./src/js/fetch-highlights-display-homepage.js"></script>
     <!-- CLOSE AND TOGGLE NAVIGATION -->
     <script src="./src/js/function_toggle_mobileMenu.js"></script>
   </body>

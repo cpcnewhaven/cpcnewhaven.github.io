@@ -1,5 +1,13 @@
 document.addEventListener('DOMContentLoaded', function() {
     fetch('data/source of truth/upcomingSundays.json')
+      .then(response => response.json())
+      .then(data => {
+        // Existing sermon update logic...
+      })
+      .catch(error => console.error('Error loading the sermon data:', error));
+
+    // New code to fetch and update podcasts
+    fetch('data/podcast/total-podcast.json')
       .then(response => {
         if (!response.ok) {
             throw new Error('Network response was not ok');
@@ -7,31 +15,28 @@ document.addEventListener('DOMContentLoaded', function() {
         return response.json();
       })
       .then(data => {
-        const activeSermon = data.sermons.find(sermon => sermon.isActive);
+        const podcastsContainer = document.querySelector('#podcasts tbody');
+        if (!podcastsContainer) return;
 
-        if (activeSermon) {
-          // Safely update elements if they exist
-          const updateTextContent = (selector, text) => {
-            const element = document.querySelector(selector);
-            if (element) element.textContent = text;
-          };
+        // Clear existing rows
+        podcastsContainer.innerHTML = '';
 
-          updateTextContent('#worship h1', activeSermon.title);
-          updateTextContent('#worship h2', activeSermon.serviceTime);
-          updateTextContent('#worship h3', activeSermon.upcomingSermonTitle);
-          updateTextContent('#worship .sermon-details', activeSermon.sermonDetails);
-          updateTextContent('#pastorName', activeSermon.pastorName);
-          updateTextContent('#bookTitle', activeSermon.bookTitle);
+        // Sort podcasts by publishedDate in descending order and take the latest 3
+        const sortedPodcasts = data.podcasts.sort((a, b) => new Date(b.publishedDate) - new Date(a.publishedDate)).slice(0, 3);
 
-          // Show separator if both pastorName and bookTitle are present
-          const separator = document.querySelector('#separator');
-          if (separator) {
-            separator.style.display = (activeSermon.pastorName && activeSermon.bookTitle) ? 'inline' : 'none';
-          }
-        } else {
-          const worshipSection = document.querySelector('#worship');
-          if (worshipSection) worshipSection.style.display = 'none';
-        }
+        // Append new rows for each of the latest 3 podcasts
+        sortedPodcasts.forEach(podcast => {
+          const row = document.createElement('tr');
+          row.innerHTML = `
+            <td>${new Date(podcast.publishedDate).toLocaleDateString()}</td>
+            <td>${podcast.series}</td>
+            <td>${podcast.passage}</td>
+            <td>${podcast.title}</td>
+            <td><a href="${podcast.spotifyLink}">Listen on Spotify</a></td>
+            <td><a href="${podcast.appleLink}">Listen on Apple</a></td>
+          `;
+          podcastsContainer.appendChild(row);
+        });
       })
-      .catch(error => console.error('Error loading the sermon data:', error));
+      .catch(error => console.error('Error loading the podcasts data:', error));
 });

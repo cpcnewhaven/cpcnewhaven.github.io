@@ -750,3 +750,38 @@ h3 {
   position: relative;
   z-index: 2;
 }
+
+#highlights {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.highlight {
+  background-color: #f0f0f0; /* Light grey background */
+  color: #333; /* Dark text color for contrast */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Soft shadow for depth */
+  aspect-ratio: 16 / 9;
+}
+
+.highlight h2 {
+  font-size: 2em; /* Big and bold title */
+  margin-bottom: 10px;
+}
+
+.highlight p {
+  font-size: 1.2em; /* Slightly larger paragraph text */
+}
+
+.highlight-date {
+  font-style: italic;
+  margin-top: 10px;
+}
