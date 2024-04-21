@@ -1,0 +1,148 @@
+/* Worship Page Specific Styles for a Beautiful Online Magazine Look */
+
+body {
+  line-height: 1.6;
+  color: #333; /* Dark grey for softer reading */
+  background: #f4f4f4; /* Light background for ease of reading */
+  font-size: 18px;
+  font-weight: 400;
+  font-family: "Georgia", "Times New Roman", serif; /* Classic magazine font */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding-bottom: 200px;
+}
+
+#worship {
+  display: flex;
+  flex-direction: column;
+  background-image: url('/assets/websiteBG/worship-bg.png'); /* Elegant background image */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  padding: 50px 0; /* Add padding for breathing space */
+}
+
+#worship::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3); /* Lighter overlay for readability */
+  z-index: 1;
+}
+
+#worship * {
+  position: relative;
+  z-index: 2;
+  color: #ffffff; /* White text for contrast */
+}
+
+#worship h1 {
+  font-size: 60px; /* Slightly smaller for elegance */
+  font-family: "Merriweather", serif; /* Serif font for headings */
+  margin: 0 auto; /* Center heading */
+  text-align: center;
+  max-width: 800px; /* Limit width for readability */
+  padding: 20px; /* Add padding for aesthetic spacing */
+}
+
+#worship h2, #worship p {
+  font-size: 24px; /* Adjusted for readability */
+  font-weight: 400; /* Lighter font-weight for a more elegant look */
+  text-align: justify; /* Justified text for magazine-like formatting */
+  max-width: 800px; /* Limit width for readability */
+  margin: 20px auto; /* Center content blocks */
+  padding: 10px; /* Add padding for aesthetic spacing */
+}
+
+#give {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.8); /* Semi-transparent white for subtlety */
+  padding: 10px 20px; /* Larger padding for a button-like appearance */
+  border-radius: 5px; /* Rounded corners for a softer look */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Soft shadow for depth */
+  z-index: 999;
+}
+
+#give a {
+  color: #333; /* Dark text for elegance */
+  text-decoration: none;
+  font-weight: 600; /* Semi-bold for emphasis */
+}
+
+#give a:hover {
+  color: #666; /* Lighter on hover for interaction feedback */
+}
+
+#fixedlink {
+  position: fixed;
+  bottom: 0;
+  z-index: 9999;
+  right: 0;
+  left: 0;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px; /* Slightly larger for visibility */
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 15px; /* Adjusted padding for balance */
+  background: rgba(0, 0, 0, 0.7); /* Darker background for contrast */
+  border-top: 3px solid #fff; /* Add a top border for a defined edge */
+}
+
+/* Mobile Navigation Styles */
+.mobile-navigation {
+  display: none; /* Initially hidden */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9); /* Dark background for focus */
+  z-index: 1000;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.mobile-navigation a {
+  color: #ffffff;
+  font-size: 24px;
+  padding: 15px;
+  text-decoration: none;
+  font-weight: 600; /* Semi-bold for readability */
+}
+
+.mobile-navigation button {
+  background-color: #4c6faf;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Styling for the hamburger menu icon */
+.hamburger-menu {
+  display: none; /* Hide by default, show in mobile view */
+  flex-direction: column;
+  cursor: pointer;
+  padding: 20px;
+  z-index: 1001; /* Above the mobile navigation */
+}
+
+.hamburger-menu div {
+  height: 3px;
+  background: white;
+  margin: 5px 0;
+  transition: 0.4s;
+}
