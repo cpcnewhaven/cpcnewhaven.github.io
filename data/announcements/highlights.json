@@ -1,19 +1,38 @@
 {
-  "announcements": [ {
+  "announcements": [
+    {
       "title": "NEXT SUNDAY-ELDER ORDINATION",
       "description": "We are grateful for God’s provision of two new Ruling Elders for the shepherding of our church. Next Sunday in the worship service Tyler Rice and Joshua Kebabian will be ordained to this sacred office. All members will be taking a vow as well. Praise God for His faithful undershepherds!",
-      "dateEntered": "2024-04-14"
+      "dateEntered": "2024-04-14",
+      "active" : "false"
     },
     {
       "title": "I HEART NEW HAVEN DAY JUNE 1ST",
       "description": "Mark your calendars for June 1st for Bridges of Hope’s annual I Heart New Haven Day! This is an exciting day joining with other churches around the city to love the greater New Haven area with projects such as clean up, gardening, painting, and repair at places like soup kitchens, local schools, animal shelters and many other places. As always, we’ll gather on the green for worship and prayer first, and then disperse out to our projects. Please register now!",
-      "dateEntered": "2024-04-14"
+      "dateEntered": "2024-04-14",
+      "backgroundIMG": "https://static01.nyt.com/images/2022/06/05/realestate/01LIVING-NEWHAVEN-01/01LIVING-NEWHAVEN-videoSixteenByNineJumbo1600.jpg" 
     },
     {
       "title": "ALL ARE WELCOME TO JOIN US FOR LUNCH DOWNSTAIRS",
       "description": "VISITORS EAT FREE",
       "dateEntered": "2024-04-14"
+    },
+    {
+      "title": "REGULAR SUNDAY SCHEDULE",
+      "description": "● 8:30am: Prayer in the Parlor\n● 9:30am: Children’s Sunday School\n● 9:30am: Adult Sunday Studies, in Fellowship Hall\n● 10:30am: Worship Service\n● 12:00pm: Fellowship Lunch\nNEXT SUNDAY IS THE LAST DAY OF SUNDAY SCHOOL AND FELLOWSHIP LUNCH\nWe begin our summer schedule May 26, with no weekly prayer, Sunday school, or Lunches.\nAdult Sunday Studies wraps up with a final session on Sexuality and Gender May 19. Stay tuned for dates of occasional summer Sunday lunches.",
+      "dateEntered": "2024-04-14",
+      "active": "false"
+    },
+    {
+      "title": "JOINT ASCENSION SERVICE MAY 19TH 4PM @CPC EAST LYME",
+      "description": "We will be worshiping with the other local Mission Anabaino churches and church plants, this time at the worship service of our newest church plant in East Lyme. Let’s join together in praise with brothers and sisters from the Hill, Fairfield, Norwalk, Wallingford, Milford, and East Lyme! There will be a meal afterwards, which is a great chance to fellowship with other Christians from around Southern CT. Location is Niantic Baptist Church building, 443 Main St., Niantic, CT 06357. Note the change in date from previously published.",
+      "dateEntered": "2024-04-14",
+      "backgroundIMG": "https://ctvisit.com/sites/default/files/styles/square_600x600/public/mccooksunrise.jpg?itok=gUbFV7yD"
+    },
+    {
+      "title": "WOMEN’S HAPPY HOUR MAY 31ST",
+      "description": "Please join the Women of CPC as we gather on the terrace of Il Gabbiano on Friday, May 31st from 4-7:30pm (we will be inside if the weather doesn't cooperate). Appetizers are on us and Happy Hour drink pricing is from 4-5pm. Come kick off the weekend, catch up with each other, and have a little fun with your CPC sisters. Il Gabbiano is located at 50 Long Wharf Drive in New Haven. We hope to see you there!",
+      "dateEntered": "2024-04-14"
     }
-
   ]
 }
