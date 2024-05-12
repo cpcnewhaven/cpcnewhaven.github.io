@@ -26,7 +26,8 @@
 
 .highlight p {
   font-size: 1.2em; 
-  max-width: 50ch;
+  max-width: 80ch;
+  line-height: 95%;
 }
 
 .highlight ul, li {

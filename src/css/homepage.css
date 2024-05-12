@@ -556,39 +556,10 @@ h3 {
   z-index: 2;
 }
 
-#connect {
-  background-image: url('/assets/websiteBG/2.png');
-  /* Adjust the path as necessary */
-  background-size: cover;
-  background-position: center;
-  position: relative;
-}
-
-#connect::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  /* Dark overlay */
-  z-index: 1;
-}
-
-#connect * {
-  position: relative;
-  z-index: 2;
-}
 
 
 
-#connect {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh; /* This makes the section take up the full viewport height */
-}
+
 
 .vertical-menu {
   list-style: none;
