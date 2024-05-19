@@ -21,7 +21,7 @@
     top: 0;
     z-index: 1000;
     /* Ensure it stays above other content */
-    background: rgba(255, 255, 255, 0.12);
+    background: rgba(0, 0, 0, 0.74);
     /* Increase transparency for glass effect */
     backdrop-filter: blur(10px);
     /* Blur effect for the glass-like appearance */
@@ -49,7 +49,7 @@
 }
 
 .main-navigation a:hover {
-    color: #47a0ff;
+    color: #ffffff;
     /* Change color on hover */
 }
 

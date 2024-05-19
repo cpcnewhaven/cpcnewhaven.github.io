@@ -2,6 +2,19 @@ footer {
   background-color: #f8f8f8;
   padding: 20px;
   text-align: center;
+  position: fixed;
+  bottom: 0;
+  z-index: 9999;
+  right: 0;
+  left: 0;
+  text-decoration: none;
+  color: #000; /* Black text for visibility */
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  background: #fff; /* White background for contrast */
+  border-top: 3px solid #000; /* Black top border for a defined edge */
+  font-family: "Barlow", sans-serif;
 }
 
 footer section#subscribeAndFollow {
@@ -36,4 +49,10 @@ footer ul li a {
 
 footer ul li a:hover {
   color: #666;
+}
+
+footer a {
+  color: #000; /* Ensuring the link color is black for visibility */
+  text-decoration: none; /* No underline for the links */
+}
 }
