@@ -1,0 +1,62 @@
+/* Announcements Page Specific Styles for a Beautiful Online Magazine Look */
+
+body {
+    line-height: 1.6;
+    color: #000; /* Changed to black for stronger contrast */
+    font-size: 18px;
+    font-weight: 400;
+    font-family: "Barlow", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    padding-bottom: 200px;
+    background-color: #fff; /* Set background to white */
+}
+
+#announcements {
+  display: flex;
+  flex-direction: column;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  padding: 50px 0;
+  max-width: 730px;
+  margin: 0 auto;
+  background-color: #fff; /* Set background to white */
+}
+
+#announcements::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+#announcements * {
+  position: relative;
+  z-index: 2;
+  color: #000; /* Set text color to black */
+}
+
+#announcements h1 {
+  font-size: 48px;
+  font-family: "Barlow", sans-serif;
+  margin: 0 auto;
+  text-align: center;
+  max-width: 680px;
+  padding: 20px;
+}
+
+#announcements h2, #announcements p {
+  font-size: 21px;
+  font-weight: 400;
+  text-align: left;
+  max-width: 680px;
+  margin: 20px auto;
+  padding: 10px;
+  font-family: "Barlow", sans-serif;
+  line-height: 1.8;
+}
+

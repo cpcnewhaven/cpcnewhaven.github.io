@@ -1,107 +1,69 @@
+body {
+    line-height: 1.6;
+    color: #000; /* Changed to black for stronger contrast */
+    font-size: 18px;
+    font-weight: 400;
+    font-family: "Barlow", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    padding-bottom: 200px;
+    background-color: #fff; /* Set background to white */
+}
+
 .calendar {
     margin: 0 auto;
     margin-bottom: 20px;
-    max-width: 90%;
+    max-width: 730px; /* Adjusted to match worship.css */
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #fff; /* Set background to white */
 }
 
 .events-list {
     list-style-type: none;
-    /* No bullet points */
     padding: 0;
     width: 100%;
-    /* Full width */
     display: flex;
     flex-direction: column;
-
-    max-width: 50ch;
-    /* Set max width to 60ch */
-
+    max-width: 680px; /* Adjusted to match worship.css */
 }
 
 .event {
     margin-bottom: 10px;
     width: 100%;
-    /* Full width */
-    text-align: center;
-    /* Center text */
+    text-align: left; /* Changed to left to match worship.css */
     background-color: #f5f5f5;
-    /* Default background color */
-    transition: n background-color 0.3s;
-    /* Smooth transition for background color */
+    transition: background-color 0.3s;
+    padding: 10px; /* Added padding */
+    font-size: 21px; /* Adjusted font size */
+    font-family: "Barlow", sans-serif; /* Set font family */
+    line-height: 1.8; /* Adjusted line height */
 }
 
 .event:hover {
     background-color: #e2e2e2;
-    /* Highlight color on hover */
 }
 
 .event-date {
     font-weight: bold;
+    font-size: 48px; /* Adjusted font size for emphasis */
+    text-align: center; /* Centered text */
 }
 
 .event-description {
     margin-left: 5px;
+    font-size: 21px; /* Adjusted font size */
+    padding: 10px; /* Added padding */
 }
 
-body {
-    /* Light gray background */
-
-    align-items: center;
-    height: 100vh;
-    /* Full height */
-    margin: 0;
-    /* Remove default margin */
-    text-align: left;
-    /* Align text to the left */
-    margin-left: auto;
-    /* Center the content horizontally */
-    margin-right: auto;
-    /* Center the content horizontally */
-}
-
-
-.events-page .calendar {
-    /* Unique styles for calendar within events page */
-}
-
-.events-page .events-list {
-    /* Override styles for events list specifically for events page */
-    list-style-type: none;
-    padding: 0;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    max-width: 50ch;
-    /* Adjusted max width */
-}
-
-.events-page .event {
-    /* Specific event styling for events page */
-    margin-bottom: 10px;
-    text-align: left;
-    /* Align text to the left */
-}
-
-.events-page .event-date {
-    font-weight: bold;
-}
-
-.events-page .event-description {
-    margin-left: 5px;
-}
-
-/* Style for the 'add to the connect board' link */
 .add-to-connect-board-link {
     color: #007bff;
-    /* Different color for the link */
     cursor: pointer;
-    /* Change cursor to pointer to indicate it's clickable */
+    font-family: "Barlow", sans-serif; /* Set font family */
 }
 
 .add-to-connect-board-link:hover {
     color: #0056b3;
-    /* Darker shade on hover for better user interaction */
+}
 }

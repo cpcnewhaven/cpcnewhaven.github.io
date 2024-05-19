@@ -29,6 +29,15 @@ section h1, section h2 {
     padding: 20px;
 }
 
+section h3 {
+    font-size: 36px; /* Appropriate size for subheaders */
+    font-family: "Barlow", sans-serif;
+    margin: 10px auto;
+    text-align: center;
+    max-width: 680px;
+    padding: 15px;
+}
+
 section p {
     font-size: 21px; /* Adjusted font size to match worship.css */
     font-weight: 400;
@@ -38,6 +47,20 @@ section p {
     padding: 10px;
     font-family: "Barlow", sans-serif;
     line-height: 1.8;
+}
+
+ul {
+    list-style-type: none; /* Removes default list styling */
+    padding: 0;
+    margin: 20px auto;
+}
+
+li {
+    font-size: 18px; /* Consistent with body font size */
+    line-height: 1.8;
+    padding: 5px 0; /* Adds vertical spacing between list items */
+    font-family: "Barlow", sans-serif;
+    margin: 20px auto;
 }
 
 /* If fixed position elements are needed, add similar styles here */

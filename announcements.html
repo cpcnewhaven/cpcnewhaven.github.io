@@ -10,14 +10,14 @@
         <meta name="author" content="CPC New Haven">
         <link rel="stylesheet" href="src/css/global-nav-bar.css">
         <title>Announcements | CPC New Haven Church</title>
-        <link rel="stylesheet" href="../homepage.css">
+        <link rel="stylesheet" href="./src/css/footer.css">
+        <link rel="stylesheet" href="./src/css/announcements.css">
+
         <link rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     </head>
     <body>
-        <div id="give">
-            <a href="./give.html">Give</a>
-        </div>
+
         <header id="stickyHeader" class="sticky">
             <nav class="main-navigation">
                 <a href="index.html">Home</a>
@@ -54,21 +54,24 @@
 
         </div>
         <div id="page" class>
-            <section id="worship"
-                style="background-image:url(https://assets.codepen.io/214624/vision.jpg)">
+            <section >
                 <h1>Announcements</h1>
 
                 <!-- Announcements Section -->
-                <section id="announcements"
-                    style="background-image:url(https://assets.codepen.io/214624/space.jpg)">
+                <section id="announcements">
                     <h1>Announcements</h1>
                     <!-- Announcements will be populated here by the JavaScript -->
                 </section>
 
             </div>
-            <a id="fixedlink" target="_blank" rel="nofollow noopener"
-                href="#">135 Whitney Ave - New Haven, CT | Sunday Worship
-                10:30am </a>
+            <footer>
+                <a id="fixedlink" target="_blank" rel="nofollow noopener" href="#">
+                    135 Whitney Ave - New Haven, CT | Sunday Worship 10:30am
+                </a>|
+                <a href="give.html" target="_blank" rel="nofollow noopener">
+                    Give
+                </a>
+            </footer>
             <script>
         document.addEventListener('DOMContentLoaded', function() {
     var header = document.getElementById('myHeader');
