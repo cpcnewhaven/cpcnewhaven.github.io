@@ -1,0 +1,10 @@
+.splash-header {
+    font-size: 48px; /* Large font size for splash effect */
+    color: #000000; /* Bright color for visibility */
+    text-align: center; /* Center the text */
+    padding: 20px; /* Add some padding */
+    background-color: #ffffff; /* Light background to stand out */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    margin-top: 00px; /* Space from top */
+}
