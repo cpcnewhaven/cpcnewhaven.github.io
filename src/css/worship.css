@@ -1,27 +1,27 @@
 /* Worship Page Specific Styles for a Beautiful Online Magazine Look */
 
-
 body {
     line-height: 1.6;
-    color: #333; /* Dark grey for softer reading */
-    background: #f4f4f4; /* Light background for ease of reading */
+    color: #000; /* Changed to black for stronger contrast */
     font-size: 18px;
     font-weight: 400;
-    font-family: "Barlow", sans-serif; /* Updated to Barlow */
+    font-family: "Barlow", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     padding-bottom: 200px;
-  }
-  
+    background-color: #fff; /* Set background to white */
+}
 
 #worship {
   display: flex;
   flex-direction: column;
-  background-image: url('/assets/websiteBG/worship-bg.png'); /* Elegant background image */
   background-size: cover;
   background-position: center;
   position: relative;
-  padding: 50px 0; /* Add padding for breathing space */
+  padding: 50px 0;
+  max-width: 730px;
+  margin: 0 auto;
+  background-color: #fff; /* Set background to white */
 }
 
 #worship::before {
@@ -31,57 +31,47 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.3); /* Lighter overlay for readability */
   z-index: 1;
 }
 
 #worship * {
   position: relative;
   z-index: 2;
-  color: #ffffff; /* White text for contrast */
-  font-family: "Barlow", sans-serif; /* Updated to Barlow */
+  color: #000; /* Set text color to black */
 }
 
 #worship h1 {
-  font-size: 60px; /* Slightly smaller for elegance */
-  font-family: "Barlow", sans-serif; /* Updated to Barlow */
-  margin: 0 auto; /* Center heading */
+  font-size: 48px;
+  font-family: "Barlow", sans-serif;
+  margin: 0 auto;
   text-align: center;
-  max-width: 800px; /* Limit width for readability */
-  padding: 20px; /* Add padding for aesthetic spacing */
+  max-width: 680px;
+  padding: 20px;
 }
 
 #worship h2, #worship p {
-  font-size: 24px; /* Adjusted for readability */
-  font-weight: 400; /* Lighter font-weight for a more elegant look */
-  text-align: justify; /* Justified text for magazine-like formatting */
-  max-width: 800px; /* Limit width for readability */
-  margin: 20px auto; /* Center content blocks */
-  padding: 10px; /* Add padding for aesthetic spacing */
-  font-family: "Barlow", sans-serif; /* Updated to Barlow */
+  font-size: 21px;
+  font-weight: 400;
+  text-align: left;
+  max-width: 680px;
+  margin: 20px auto;
+  padding: 10px;
+  font-family: "Barlow", sans-serif;
+  line-height: 1.8;
 }
 
 #give {
   position: fixed;
   top: 20px;
   right: 20px;
-  background: rgba(255, 255, 255, 0.8); /* Semi-transparent white for subtlety */
-  padding: 10px 20px; /* Larger padding for a button-like appearance */
-  border-radius: 5px; /* Rounded corners for a softer look */
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Soft shadow for depth */
+  background: rgba(0, 0, 0, 0.8); /* Dark background for button */
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
   z-index: 999;
 }
 
-#give a {
-  color: #333; /* Dark text for elegance */
-  text-decoration: none;
-  font-weight: 600; /* Semi-bold for emphasis */
-  font-family: "Barlow", sans-serif; /* Updated to Barlow */
-}
 
-#give a:hover {
-  color: #666; /* Lighter on hover for interaction feedback */
-}
 
 #fixedlink {
   position: fixed;
@@ -91,67 +81,12 @@ body {
   left: 0;
   text-align: center;
   text-decoration: none;
-  color: #fff;
-  font-size: 16px; /* Slightly larger for visibility */
+  color: #000; /* Black text for visibility */
+  font-size: 16px;
   font-weight: 700;
   letter-spacing: 1px;
-  padding: 15px; /* Adjusted padding for balance */
-  background: rgba(0, 0, 0, 0.7); /* Darker background for contrast */
-  border-top: 3px solid #fff; /* Add a top border for a defined edge */
-  font-family: "Barlow", sans-serif; /* Updated to Barlow */
-}
-
-/* Mobile Navigation Styles */
-.mobile-navigation {
-  display: none; /* Initially hidden */
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.9); /* Dark background for focus */
-  z-index: 1000;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.mobile-navigation a {
-  color: #ffffff;
-  font-size: 24px;
   padding: 15px;
-  text-decoration: none;
-  font-weight: 600; /* Semi-bold for readability */
-  font-family: "Barlow", sans-serif; /* Updated to Barlow */
-}
-
-.mobile-navigation button {
-  background-color: #4c6faf;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  text-align: center;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  border-radius: 5px;
-  font-family: "Barlow", sans-serif; /* Updated to Barlow */
-}
-
-/* Styling for the hamburger menu icon */
-.hamburger-menu {
-  display: none; /* Hide by default, show in mobile view */
-  flex-direction: column;
-  cursor: pointer;
-  padding: 20px;
-  z-index: 1001; /* Above the mobile navigation */
-}
-
-.hamburger-menu div {
-  height: 3px;
-  background: white;
-  margin: 5px 0;
-  transition: 0.4s;
-  font-family: "Barlow", sans-serif; /* Updated to Barlow */
+  background: #fff; /* White background for contrast */
+  border-top: 3px solid #000; /* Black top border for a defined edge */
+  font-family: "Barlow", sans-serif;
 }
