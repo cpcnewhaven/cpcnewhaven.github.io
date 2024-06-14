@@ -8,12 +8,15 @@ footer {
   right: 0;
   left: 0;
   text-decoration: none;
-  color: #000; /* Black text for visibility */
+  color: #000;
+  /* Black text for visibility */
   font-size: 16px;
   font-weight: 700;
   letter-spacing: 1px;
-  background: #fff; /* White background for contrast */
-  border-top: 3px solid #000; /* Black top border for a defined edge */
+  background: #fff;
+  /* White background for contrast */
+  border-top: 3px solid #000;
+  /* Black top border for a defined edge */
   font-family: "Barlow", sans-serif;
 }
 
@@ -52,7 +55,8 @@ footer ul li a:hover {
 }
 
 footer a {
-  color: #000; /* Ensuring the link color is black for visibility */
-  text-decoration: none; /* No underline for the links */
-}
+  color: #000;
+  /* Ensuring the link color is black for visibility */
+  text-decoration: none;
+  /* No underline for the links */
 }
