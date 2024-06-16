@@ -138,36 +138,7 @@ p {
   z-index: 4;
 }
 
-#connect {
-  display: flex;
-  flex-direction: column;
-}
 
-#connect h1 {
-  margin: 0;
-  position: relative;
-  z-index: 5;
-}
-
-#connect a {
-  font-size: 30px;
-  /* Adjust size as needed */
-  color: white;
-  text-decoration: none;
-  /* Removes underline */
-  position: relative;
-  z-index: 3;
-  line-height: 85%;
-  transition: color 0.3s ease, transform 0.3s ease;
-  /* Add transition for smooth animation */
-}
-
-#connect a:hover {
-  color: #47a0ff;
-  /* Change color on hover */
-  transform: scale(1.1);
-  /* Make the text grow slightly on hover */
-}
 
 .vertical-menu {
   list-style-type: none;
@@ -452,7 +423,6 @@ h3 {
 
 
 #worship,
-#connect,
 #podcasts,
 #events {
   background-image: url('/assets/websiteBG/2.png');
