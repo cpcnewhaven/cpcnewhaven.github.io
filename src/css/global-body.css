@@ -27,6 +27,30 @@ p {
 
 }
 
+button {
+    width: 200px; /* Fixed width */
+    height: 50px; /* Fixed height */
+    background-color: #ffffff; /* Background color */
+    color: rgb(0, 0, 0); /* Text color */
+    border: none; /* No borders */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    border-style:solid;
+    border-color: black;
+    font-size: calc(1em * 0.5 + 0.5vw); /* Responsive font size */
+    transition: background-color 0.23s; /* Smooth transition for hover effect */
+}
+
+button:hover {
+    background-color: #d2d2d2; /* Darker shade on hover */
+    color: black;
+}
+
 .splash {
     width: 100%;
     height: 20vh;
@@ -92,7 +116,10 @@ li {
     padding: 5px 0;
     /* Adds vertical spacing between list items */
     font-family: "Barlow", sans-serif;
-    margin: 20px auto;
+    margin: 2px auto;
 }
 
-/* If fixed position elements are needed, add similar styles here */
+a {
+    text-decoration: none;
+    
+}

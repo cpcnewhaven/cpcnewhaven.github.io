@@ -60,27 +60,15 @@
 
 
       <!-- HOMEPAGE DYNAMIC SPLASH -->
-      <section id="worship">
-
-        <h2>Come Worship with us <span>Sundays @ 10:30am</span>
-        <p>Upcoming Sermon</p>
-        <p>Sunday Sermon Title</p>
-        <p>Book Series | <span>Date</span></p>
+      <section id="worship-a">
+        <h2>Come Worship with us <span>Sundays @ 10:30am</span></h2>
         <hr>
-      </h4>
-        <p class="sermon-details">Sermon details will be updated here.</p>
+        <p id="sermonTitle">Upcoming Sermon</p>
+        <p id="sermonScripture">Scripture Reference</p>
+        <p id="sermonDate">Sermon Date</p>
         <p>
-          <span id="pastorName"></span><span id="separator" style="display: none;"> | </span>
-          <span id="bookTitle"></span>
+          <span id="pastorName"></span>
         </p>
-        <!-- Sunday Preview YouTube Video -->
-        <!--div class="youtube-video-container">
-          <iframe width="560" height="315"
-            src="https://www.youtube.com/embed/6acA_fqVXYg"
-            title="YouTube video player" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen></iframe>
-        </div -->
       </section>
       <!-- END OF HOMEPAGE DYNAMIC SPLASH-->
       <section id="highlights-title">
@@ -197,5 +185,9 @@
     <script src="./src/js/fetch-highlights-display-homepage.js"></script>
     <!-- CLOSE AND TOGGLE NAVIGATION -->
     <script src="./src/js/function_toggle_mobileMenu.js"></script>
+  
+    <script src="./src/js/updateSermonContent.js"></script>
+  
+  
   </body>
 </html>
