@@ -9,17 +9,16 @@
       content="CPC New Haven, Church, New Haven, CT, Worship, Fellowship">
     <meta name="author" content="CPC New Haven">
     <title>CPC New Haven Church</title>
+    <link rel="stylesheet" href="./src/css/global-body.css">
 <link rel="stylesheet" href="./src/css/footer-cta.css">
-    <link rel="stylesheet" href="./src/css/homepage.css">
+    <!--link rel="stylesheet" href="./src/css/homepage.css" -->
     <link rel="stylesheet" href="./src/css/global-nav-bar.css">
     <link rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
   </head>
   <body>
-    <div id="give">
-      <a href="./give.html">Give</a>
-    </div>
+
     <header id="stickyHeader" class="sticky">
       <nav class="main-navigation">
         <a href="index.html">Home</a>
@@ -62,10 +61,13 @@
 
       <!-- HOMEPAGE DYNAMIC SPLASH -->
       <section id="worship">
-        <h1>Join us where "heaven meets earth"!</h1>
-        <h2>Come Worship with us | Sundays 10:30 am</h2>
+
+        <h2>Come Worship with us <span>Sundays @ 10:30am</span>
         <p>Upcoming Sermon</p>
-        <h3>Sermon Title</h3>
+        <p>Sunday Sermon Title</p>
+        <p>Book Series | <span>Date</span></p>
+        <hr>
+      </h4>
         <p class="sermon-details">Sermon details will be updated here.</p>
         <p>
           <span id="pastorName"></span><span id="separator" style="display: none;"> | </span>
@@ -81,7 +83,8 @@
         </div -->
       </section>
       <!-- END OF HOMEPAGE DYNAMIC SPLASH-->
-      <div class="highlights-title"><h1>Highlights</h1></div>
+      <section id="highlights-title">
+        <h1>Highlights</h1></section>
       <section id="highlights">
         <!-- Highlights will be populated here by the JavaScript -->
       </section>
