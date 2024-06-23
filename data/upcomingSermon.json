@@ -1,7 +1,16 @@
-{
-  "title": "That You May Know: Unconditional Grace and the Hardening of Pharaoh’s Heart",
-  "author": "Rev. Craig Luekens",
-  "scripture": "Exodus 7:1-13",
-  "date": "2024-06-16",
-  "active": true
-}
+[
+  {
+    "title": "That You May Know: Unconditional Grace and the Hardening of Pharaoh’s Heart",
+    "author": "Rev. Craig Luekens",
+    "scripture": "Exodus 7:1-13",
+    "date": "2024-06-16",
+    "active": false
+  },
+  {
+    "title": "There Will Be Blood: God’s Judgment and Our Only Hope",
+    "author": "Rev. Craig Luekens",
+    "scripture": "Exodus 7:14-25",
+    "date": "2024-06-23",
+    "active": true
+  }
+]
