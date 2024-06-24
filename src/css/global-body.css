@@ -23,7 +23,7 @@ h1,h2,h3,h4 {
 }
 
 button {
-    width: 200px; /* Fixed width */
+    width: 220px; /* Fixed width */
     height: 50px; /* Fixed height */
     background-color: #ffffff; /* Background color */
     color: rgb(0, 0, 0); /* Text color */
@@ -37,13 +37,14 @@ button {
     overflow: hidden;
     border-style:solid;
     border-color: black;
-    font-size: calc(1em * 0.5 + 0.5vw); /* Responsive font size */
+    font-size: calc(1em * 0.6 + 0.6vw); /* Slightly larger responsive font size */
     transition: background-color 0.23s; /* Smooth transition for hover effect */
+    // End of the Selection
 }
 
 button:hover {
-    background-color: #d2d2d2; /* Darker shade on hover */
-    color: black;
+    background-color: #4e4e4e; /* Darker shade on hover */
+    color: rgb(255, 255, 255);
 }
 
 
@@ -128,3 +129,32 @@ a {
     text-decoration: none;
     
 }
+
+/*CONTENT LAYOUTS*/
+
+.left-content {
+    display:flex;
+    flex-direction:column;
+    align-items: left;
+    justify-content: center;
+    text-align: left;
+  }
+  .center-content {
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /*Top SPlashes */
+
+  .top-splash-welcome {
+    background-color: yellow;
+    padding: 10px;
+    margin: 0;
+  }
+
+  .mid-splash-welcome {
+    background-color: teal;
+  }

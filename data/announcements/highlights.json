@@ -11,25 +11,37 @@
       "description": "Mark your calendars for June 1st for Bridges of Hope’s annual I Heart New Haven Day! This is an exciting day joining with other churches around the city to love the greater New Haven area with projects such as clean up, gardening, painting, and repair at places like soup kitchens, local schools, animal shelters and many other places. As always, we’ll gather on the green for worship and prayer first, and then disperse out to our projects. Please register now!",
       "dateEntered": "2024-04-14",
       "backgroundIMG": "https://static01.nyt.com/images/2022/06/05/realestate/01LIVING-NEWHAVEN-01/01LIVING-NEWHAVEN-videoSixteenByNineJumbo1600.jpg",
-      "active": "true"
+      "active": "false"
     },
     {
       "title": "ALL ARE WELCOME TO JOIN US FOR LUNCH DOWNSTAIRS",
       "description": "VISITORS EAT FREE",
       "dateEntered": "2024-04-14",
-      "active": "true"
+      "active": "false"
     },
     {
       "title": "JOINT ASCENSION SERVICE MAY 19TH 4PM @CPC EAST LYME",
       "description": "We will be worshiping with the other local Mission Anabaino churches and church plants, this time at the worship service of our newest church plant in East Lyme. Let’s join together in praise with brothers and sisters from the Hill, Fairfield, Norwalk, Wallingford, Milford, and East Lyme! There will be a meal afterwards, which is a great chance to fellowship with other Christians from around Southern CT. Location is Niantic Baptist Church building, 443 Main St., Niantic, CT 06357. Note the change in date from previously published.",
       "dateEntered": "2024-04-14",
       "backgroundIMG": "https://ctvisit.com/sites/default/files/styles/square_600x600/public/mccooksunrise.jpg?itok=gUbFV7yD",
-      "active": "true"
+      "active": "false"
     },
     {
       "title": "WOMEN’S HAPPY HOUR MAY 31ST",
       "description": "Please join the Women of CPC as we gather on the terrace of Il Gabbiano on Friday, May 31st from 4-7:30pm (we will be inside if the weather doesn't cooperate). Appetizers are on us and Happy Hour drink pricing is from 4-5pm. Come kick off the weekend, catch up with each other, and have a little fun with your CPC sisters. Il Gabbiano is located at 50 Long Wharf Drive in New Haven. We hope to see you there!",
       "dateEntered": "2024-04-14",
+      "active": "false"
+    },
+    {
+      "title": "JOIN THE GREEN TEAM!",
+      "description": "If you are interested in serving your church while getting exercise AND having fun-in-the-sun when the weather is not, well, WINTER!, then contact jennifer@cpcnewhaven.org right away! We are in need of anyone who has two legs, at least 20/50 vision, and an hour or so available every 6-8 weeks during the growing season to help keep our beautiful non-native shortgrass meadow under control, and ready for picnics. All those interested in free, impromptu fine gardening and horticulture lessons from a certified professional may also apply.",
+      "dateEntered": "2024-06-24", 
+      "active": "true"
+    },
+    {
+      "title": "PASTOR’S BOOK PICK - The Life We’re Looking For",
+      "description": "This summer, we’re suggesting that you pick up Andy Crouch’s latest book - The Life We’re Looking For: Reclaiming Relationship in a Technological World. This is a perfect followup to The Soul of Shame, as it gets us to reconsider all the ways we are distracted or prevented from deeper relationships. Crouch is a wonderfully thoughtful and practical Christian thinker, who served as a Campus Minister at Harvard, and now works primarily as a consultant at Praxis for redemptive entrepreneurship. This is a great summer read to help us all prioritize and re-calibrate our lives around Christ! Copies are in the foyer, pay what you can.",
+      "dateEntered": "2024-06-24", 
       "active": "true"
     }
   ]

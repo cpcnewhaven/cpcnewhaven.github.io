@@ -1,17 +1,19 @@
 #worship-a {
     display: flex;
     flex-direction: row;
-    grid-gap: 20px;
+    grid-gap: 10px;
     align-items: center;
     background-color: #ececec; /* Light grey background */
-    padding: 20px;
+    padding: 10px;
     border-radius: 8px;
-    width: 100%;
-    height: 100%; /* Ensure it takes full height */
+    width: 94%;
+    height: 100%; 
     
     /* Responsive adjustments for mobile */
     @media (max-width: 600px) {
         flex-direction: column;
+        background-color: white;
+        border-style: none;
     }
 }
 
@@ -20,19 +22,43 @@
     border-width: .4px;
     padding: 10px;
     width: 30vw;
-    height: 200px;
+    height: 150px;
+    min-height: 100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
 
     /* Responsive adjustments for mobile */
     @media (max-width: 600px) {
         width: 90vw; /* Adjust width for mobile screens */
         overflow-y: scroll;
+        border-style:none;
+        text-align: center!important;
     }
+}
+
+.worship-widget p {
+  font-size: 14px;
+  line-height: 95%;
+  text-align: left;
+}
+
+.worship-widget a {
+  color: black;
+  font-weight: 600;
+  padding: 0;
+
+}
+
+.worship-widget a:hover {
+  color: rgb(126, 126, 126);
 }
 
 #worship-a h2, #worship-a p {
   margin: 0;
   padding: 5px;
   text-align: center;
+  color: black;
 }
 
 #worship-a span {

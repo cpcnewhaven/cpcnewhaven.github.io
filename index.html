@@ -59,95 +59,102 @@
     <div id="page">
 
 
-<section>
+<section class="top-splash-welcome">
   <h2>Come Worship with us <span>Sundays @ 10:30am</span></h2>
 </section>
       <!-- HOMEPAGE DYNAMIC SPLASH -->
       <section id="worship-a">
+
         <div class="worship-widget">
-          <a href="#">Link for Latest Bulletin</a>
-        </div>
-        <div class="worship-widget">
-       <h2>Upcoming Sermon</h2>
+          <div class="left-content"><h4>Upcoming Sermon</h2></div>
         <hr>
+        <div class="center-content">
         <p id="sermonTitle">Upcoming Sermon</p>
         <p id="sermonScripture">Scripture Reference</p>
         <p id="sermonDate">Sermon Date</p>
-        <p id="pastorName"></span></div>
+        <p id="pastorName"></span></div></div>
 
           <div class="worship-widget">
             YouTube Video of Preview
           </div>
+        <div class="worship-widget">
+          <div class="left-content">
+          <a href="https://www.youtube.com/c/CPCNewHaven/live">Link for Latest Bulletin</a>
+          <a href="https://secure.acceptiva.com/?cst=3bc0a4">Online Giving</a>
+          <a href="https://cpcnewhaven.ccbchurch.com/goto/forms/2/responses/new">Request for Prayer or Pastoral Visit</a>
+        </div></div>
+
+       
+
+       
     </section>
+    <style>
+
+    </style>
+    <section id="about">
+      <div class="mid-splash-welcome">
+      <h1 class="headline">About Us</h1></div>
+      <p> "Aspiring to be a gospel centered community, we talk a lot about
+        making this a "safe place" for real-time sinful people to be in
+        journey with Christ. There is no limit to God's grace as accomplished
+        for us by Christ. And aspiring to not just learn about Christ and the
+        good news of the gospel we talk a lot about participating in Christ's
+        presence. We do this both in the mystery of "one-anothering" in the
+        power of the Holy Spirit, and in the mystery of sacramental worship
+        wherein we "do" the gospel in the ancient temple pattern of four
+        movements. Through it all, Christ is in the midst of us by the Holy
+        Spirit as our prophet, priest and king! So I hope you will join us and
+        enjoy our journey together in Christ."
+      </p>
+      <div class="center-content">
+      <a href="about.html"><button>Learn More</button></a>
+    </div>
+    </section>
+
       <!-- END OF HOMEPAGE DYNAMIC SPLASH-->
-      <section id="highlights-title">
-        <h1 class="headline">Highlights</h1></section>
+      <section class="mid-splash-welcome">
+        <h1 class="headline">Highlights</h1>
+      
+      </section>
+
       <section id="highlights">
         <!-- Highlights will be populated here by the JavaScript -->
       </section>
+
+
+
+
+
+
       <section id="podcasts">
 
-        <h1>Podcasts</h1>
+      
+        <div class="mid-splash-welcome">   
+          <h1 class="headline">Podcasts</h1></div>
+        <div class="center-content">
 
-        <h2>Recent Episodes</h2>
-        <table>
-          <thead>
-            <tr>
-              <th>Date</th>
-              <th>Series</th>
-              <th>Passage</th>
-              <th>Sermon Title</th>
-              <th>Spotify</th>
-              <th>Apple</th>
-            </tr>
-          </thead>
-          <tbody>
-            <!-- Dynamic content will be inserted here by updateContent.js -->
-          </tbody>
-        </table>
+        <h2>Latest Podcast</h2>
+         
+        <iframe src="https://podcasters.spotify.com/pod/show/cpcpodcasts/embed" height="142px" width="400px" frameborder="0" scrolling="no"></iframe>
+      </div>
+      <p>Subscribe to CPC Podcasts: Listen to our School of Discipleship classes, previous
+        Sunday Sermons, and other inspiring conversations with our pastors. Visit podcasts.cpcnewhaven.org or subscribe wherever you listen.</p>
+      <div class="center-content">
         <h2>Subscribe</h2>
-        <div class="subscribe-icons">
+        <div class="subscribe-icons-a">
           <a href="your_spotify_link" target="_blank"><i class="fab fa-spotify"></i></a>
           <a href="your_apple_podcasts_link" target="_blank"><i class="fab fa-apple"></i></a>
           <a href="your_youtube_link" target="_blank"><i class="fab fa-youtube"></i></a>
-        </div>
-        <h2>Latest Podcast</h2>
-        <iframe src="https://podcasters.spotify.com/pod/show/cpcpodcasts/embed" height="102px" width="400px" frameborder="0" scrolling="no"></iframe>
+        </div></div>
       </section>
      
-      <section id="about">
-        <h1>About Us</h1>
-        <p> "Aspiring to be a gospel centered community, we talk a lot about
-          making this a "safe place" for real-time sinful people to be in
-          journey with Christ. There is no limit to God's grace as accomplished
-          for us by Christ. And aspiring to not just learn about Christ and the
-          good news of the gospel we talk a lot about participating in Christ's
-          presence. We do this both in the mystery of "one-anothering" in the
-          power of the Holy Spirit, and in the mystery of sacramental worship
-          wherein we "do" the gospel in the ancient temple pattern of four
-          movements. Through it all, Christ is in the midst of us by the Holy
-          Spirit as our prophet, priest and king! So I hope you will join us and
-          enjoy our journey together in Christ."
-        </p>
-        <a href="about.html"><button>Learn More</button></a>
-      </section>
 
 
 
 
     </div>
-<!-- SECTION FOR DYNAMIC VIDEO SLIDE OF CPC ANNOUNCEMENTS FROM YOUTUBE PLAYLIST -->
-<section style="position: relative; width: 100%; height: 100vh; overflow: hidden;">
-  <div class="announcements-video-container" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
-    <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
-            src="https://www.youtube.com/embed/UjDPEOOErBU?autoplay=1&mute=1&loop=1&playlist=UjDPEOOErBU"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen></iframe>
-  </div>
-</section>
-<section id="connect">
+
+<section class="mid-splash-welcome" id="connect">
   <h1 class="headline">Connect</h1>
   <ul class="vertical-menu">
     <li><a href="lifegroup.html"><button>Join a Life
@@ -174,10 +181,26 @@
         </div>
     </section>
 -->
+
+
+        <!-- SECTION FOR DYNAMIC VIDEO SLIDE OF CPC ANNOUNCEMENTS FROM YOUTUBE PLAYLIST -->
+        <section style="position: relative; width: 100%; height: 100vh; overflow: hidden;">
+          <div class="announcements-video-container" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+            <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+                    src="https://www.youtube.com/embed/UjDPEOOErBU?autoplay=1&mute=1&loop=1&playlist=UjDPEOOErBU"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+          </div>
+        </section>
+
+
+<footer>
     <a id="fixedlink" target="_blank" rel="nofollow noopener"
       href="https://www.google.com/maps/search/?api=1&query=135+Whitney+Ave,+New+Haven,+CT">135
       Whitney Ave - New Haven, CT | Sunday Worship 10:30am</a>
-
+    </footer>
     <!-- UPDATE AND FETCH HOMEPAGE BASED ON SOURCE OF TRUTH-->
     <script src="./src/js/updateContent.js"></script>
     <!-- Working SCRIPTS-->
@@ -190,7 +213,7 @@
     <script src="./src/background-change_worship.js"></script>
     <script src="./src/announcements.js"></script>
     <!-- Fetch Latest 3 Podcasts and Display on Homepage -->
-    <script src="./src/js/homepage-fetch-latestPodcasts.js"></script>
+    <!--script src="./src/js/homepage-fetch-latestPodcasts.js"></script-->
     <script src="./src/js/fetch-highlights-display-homepage.js"></script>
     <!-- CLOSE AND TOGGLE NAVIGATION -->
     <script src="./src/js/function_toggle_mobileMenu.js"></script>
