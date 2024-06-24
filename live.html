@@ -5,10 +5,48 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Live - CPC New Haven Church</title>
         <link rel="stylesheet" href="/src/css/live.css">
+        <link rel="stylesheet" href="./src/css/global-body.css">
+        <link rel="stylesheet" href="./src/css/global-nav-bar.css">
         <link rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     </head>
     <body>
+        <header id="stickyHeader" class="sticky">
+            <nav class="main-navigation">
+              <a href="index.html">Home</a>
+              <a href="worship.html">Worship</a>
+              <a href="about.html">About</a>
+              <a href="podcasts.html">Podcasts</a>
+              <a href="events.html">Events</a>
+              <a href="announcements.html">Announcements</a>
+              <a href="community.html">Community</a>
+              <a href="live.html">Live</a>
+              <a href="resources.html">Resources</a>
+      
+            </nav>
+          </header>
+      
+          <!-- Inside <header> or <nav> -->
+          <div class="hamburger-menu" id="hamburgerMenu">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+      
+          <!-- Mobile Navigation -->
+          <div class="mobile-navigation" id="mobileNavigation">
+            <a href="#worship">Worship</a>
+            <a href="about.html">About</a>
+            <a href="podcasts.html">Podcasts</a>
+            <a href="events.html">Events</a>
+            <a href="announcements.html">Announcements</a>
+            <a href="community.html">Community</a>
+            <a href="live.html">Live</a>
+            <a href="resources.html">Resources</a>
+            <button id="closeMenuButton">Close</button> <!-- Exit button -->
+      
+          </div>
+<section>
         <div class="video-container">
             <iframe width="560" height="315"
                 src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
@@ -16,6 +54,7 @@
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen></iframe>
         </div>
+    </section>      
         <div class="container">
             <section class="sermon-info">
                 <h1>Sermon Title</h1>
@@ -26,6 +65,7 @@
                     Bulletin</a>
             </section>
             <section class="social-links">
+                <div class="center-content">
                 <h2>Follow Us</h2>
                 <a href="https://www.instagram.com" target="_blank"><i
                         class="fab fa-instagram"></i> Instagram</a>
@@ -37,10 +77,7 @@
                         class="fab fa-spotify"></i> Spotify</a>
                 <a href="https://podcasts.apple.com" target="_blank"><i
                         class="fab fa-apple"></i> Apple Podcasts</a>
-                <a href="https://podcasts.google.com" target="_blank"><i
-                        class="fab fa-google"></i> Google Podcasts</a>
-                <a href="https://mailchimp.com" target="_blank"><i
-                        class="fas fa-envelope"></i> Mailchimp</a>
+
             </section>
             <section class="notification-signup">
                 <h2>Get Notified</h2>
