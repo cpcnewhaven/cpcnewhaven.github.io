@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    fetch('../data/events.json')
+    fetch('./data/events.json')
         .then(response => response.json())
         .then(data => {
             renderEventsByMonth(data.events);
@@ -9,29 +9,33 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function renderEventsByMonth(eventsData) {
     const eventsContainer = document.getElementById('events');
-    let htmlContent = '<h1>Events</h1>';
+    let htmlContent = '<div class="events-grid">'; // Start grid container
 
-    // Group events by month
-    const months = ["Mar", "Apr", "May", "Jun"]; // Specify the months you want to include
+    // Dynamically determine months from events data
     const eventsByMonth = {};
     eventsData.forEach(event => {
         const month = event.date.split(' ')[1]; // Assuming date format is "DD MMM"
-        if (months.includes(month)) {
-            if (!eventsByMonth[month]) {
-                eventsByMonth[month] = [];
-            }
-            eventsByMonth[month].push(event);
+        if (!eventsByMonth[month]) {
+            eventsByMonth[month] = [];
         }
+        eventsByMonth[month].push(event);
     });
 
-    // Generate HTML content for each month
-    Object.keys(eventsByMonth).forEach(month => {
+    // Sort months with August first, then the rest in descending order
+    const monthOrder = ["Aug", "Jul", "Jun", "May", "Apr", "Mar", "Feb", "Jan", "Sep", "Oct", "Nov", "Dec"];
+    const sortedMonths = Object.keys(eventsByMonth).sort((a, b) => {
+        return monthOrder.indexOf(a) - monthOrder.indexOf(b);
+    });
+
+    // Generate HTML content for each month in sorted order
+    sortedMonths.forEach(month => {
         htmlContent += `<div class="calendar" id="24Events-calendar-${month}"><h2>${month} 2024</h2><ul>`;
         eventsByMonth[month].forEach((event, index) => {
-            htmlContent += `<li id="24Events-${month}-${index}"><strong>${event.date}</strong> - ${event.description}</li>`;
+            htmlContent += `<li class="grid-item" id="24Events-${month}-${index}"><strong>${event.date}</strong> - ${event.description}</li>`; // Apply grid-item class
         });
         htmlContent += '</ul></div>';
     });
 
+    htmlContent += '</div>'; // Close grid container
     eventsContainer.innerHTML = htmlContent;
 }

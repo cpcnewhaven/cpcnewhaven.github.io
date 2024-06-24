@@ -5,8 +5,7 @@
     align-items: center;
     background-color: #ececec; /* Light grey background */
     padding: 10px;
-    border-radius: 8px;
-    width: 94%;
+  justify-content: center;
     height: 100%; 
     
     /* Responsive adjustments for mobile */
@@ -14,6 +13,7 @@
         flex-direction: column;
         background-color: white;
         border-style: none;
+        padding: 5px; /* Reduce padding for more space */
     }
 }
 
@@ -30,10 +30,12 @@
 
     /* Responsive adjustments for mobile */
     @media (max-width: 600px) {
-        width: 90vw; /* Adjust width for mobile screens */
+        width: 100%; /* Full width to utilize space */
         overflow-y: scroll;
         border-style:none;
         text-align: center!important;
+        padding: 5px; /* Reduce padding */
+        height: auto; /* Auto height for content variability */
     }
 }
 
