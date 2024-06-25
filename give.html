@@ -7,46 +7,99 @@
     <meta name="keywords" content="CPC New Haven, Church, New Haven, CT, Worship, Fellowship">
     <meta name="author" content="CPC New Haven">
     <title>CPC New Haven Church</title>
-<link rel="stylesheet" href="./homepage.css">
+    <link rel="stylesheet" href="./src/css/global-body.css">
+    <link rel="stylesheet" href="./src/css/footer.css">
+    <link rel="stylesheet" href="src/css/global-nav-bar.css">
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     </head>
     <body>
-        <div id="give">
-            <a href="#">Give</a>
-        </div>
-        <header id="myHeader" class="">
-            <img id="logo" src="../assets/cpcLOGO.png" alt="CPC Logo">
+
+     
   
-            <nav>
-                <a href="#worship">worship</a>
-                <a href="#about">about</a>
-                <a href="#podcasts">Podcasts</a>
-                <a href="#events">events</a>
-                <a href="#announcements">announcements</a>
-                <a href="#connect">connect</a>
-                <a href="live.html">Live</a>
-                <button id="openmenu">
-                    <span></span>
-                    <span></span>
-                </button>
-            </nav>
-        </header>
-        <div id="page" class="">
-            <section id="worship" style="background-image:url(https://assets.codepen.io/214624/vision.jpg)">
-                <h1>Give</h1>
-               <p>Ways to Give</p>
-               <div class="give-menu">
-                <div class="give-menu-item"><button>Give to the general fund</button></div>
-                <div class="give-menu-item"><button>Give to the mercy fund</button></div>
-                <div class="give-menu-item"><a href="mission_anabaino.html"><button>Give to Mission Anabaino</button></a></div>
+            <header id="stickyHeader" class="sticky">
+                <nav class="main-navigation">
+                    <a href="index.html">Home</a>
+                    <a href="worship.html">Worship</a>
+                    <a href="about.html">About</a>
+                    <a href="podcasts.html">Podcasts</a>
+                    <a href="events.html">Events</a>
+                    <a href="announcements.html">Announcements</a>
+                    <a href="community.html">Community</a>
+                    <a href="live.html">Live</a>
+                    <a href="resources.html">Resources</a>
+    
+                </nav>
+
+    </header>
+            <!-- Inside <header> or <nav> -->
+            <div class="hamburger-menu" id="hamburgerMenu">
+                <div></div>
+                <div></div>
+                <div></div>
             </div>
-                <h2>Sermon Title = This is the Title</h2>
+    
+            <!-- Mobile Navigation -->
+            <div class="mobile-navigation" id="mobileNavigation">
+                <a href="index.html">Home</a>
+                <a href="#worship">Worship</a>
+                <a href="about.html">About</a>
+                <a href="podcasts.html">Podcasts</a>
+                <a href="events.html">Events</a>
+                <a href="announcements.html">Announcements</a>
+                <a href="community.html">Community</a>
+                <a href="live.html">Live</a>
+                <a href="resources.html">Resources</a>
+                <button id="closeMenuButton">Close</button> <!-- Exit button -->
+    
+            </div>
+            <style>
+                .give-menu {
+    display: flex;
+    justify-content: space-between;
+}
+
+.give-menu-item {
+    flex: 1; /* Each item takes equal width */
+    margin: 0 10px; /* Spacing between columns */
+    text-align: center; /* Center-align the text and button */
+}
+
+.give-menu-item button {
+    width: 100%; /* Full width buttons */
+    margin-bottom: 10px; /* Space between button and description */
+}
+            </style>
+            <div class="top-splash-welcome">
+                <h1 class="headline">Give</h1>
+            </div>
+            <section>
+         
+                <h2>Ways to Give</h2>
+                <div class="center-content">
+                    <div class="give-menu" style="display: flex; justify-content: space-between;">
+                        <div class="give-menu-item">
+                            <button>Give to the general fund</button>
+                            <p>Description of the general fund and its purpose.</p>
+                        </div>
+                        <div class="give-menu-item">
+                            <button>Give to the mercy fund</button>
+                            <p>Description of the mercy fund and how it helps the community.</p>
+                        </div>
+                        <div class="give-menu-item">
+                            <a href="mission_anabaino.html"><button>Give to Mission Anabaino</button></a>
+                            <p>Details about Mission Anabaino and its objectives.</p>
+                        </div>
+                    </div>
+                </div>
             </section>
 
 
 
-        </div>
+
+        <footer>
         <a id="fixedlink" target="_blank" rel="nofollow noopener" href="#">135 Whitney Ave - New Haven, CT | Sunday Worship 10:30am </a>
+    </footer>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
     var header = document.getElementById('myHeader');

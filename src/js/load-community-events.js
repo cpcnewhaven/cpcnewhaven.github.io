@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    fetch('../data/community-events.json')
+    fetch('./data/community-events.json')
         .then(response => response.json())
         .then(data => {
             const container = document.getElementById('communityEventsTableContainer');
