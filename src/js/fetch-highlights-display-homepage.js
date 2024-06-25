@@ -27,11 +27,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 descriptionElement.textContent = announcement.description;
                 highlightElement.appendChild(descriptionElement);
 
-                const dateElement = document.createElement('p');
-                dateElement.classList.add('highlight-date');
-                dateElement.textContent = `Date: ${announcement.dateEntered}`;
-                highlightElement.appendChild(dateElement);
-
                 highlightsContainer.appendChild(highlightElement);
             });
         })
