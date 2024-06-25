@@ -150,12 +150,42 @@ a {
   /*Top SPlashes */
 
   .top-splash-welcome {
-    background-color: yellow;
+    background-color: rgba(10, 25, 47, 0.6); /* Dark blue with glass effect */
     padding: 10px;
     margin: 0px;
     text-align: center;
+    color: white!important;
+    backdrop-filter: blur(5px); /* Blur effect for glass-like appearance */
+  }
+
+  .top-splash-welcome h1,h2,h3,h4,p {
+    color: white;
   }
 
   .mid-splash-welcome {
     background-color: teal;
+  }
+
+
+  /*social buttons */
+  .subscribe-icons-a a {
+    display: inline-block;
+    width: 60px; /* Set the size of the icons */
+    height: 60px;
+    border-radius: 30px; /* Circular buttons */
+    background: rgba(0, 0, 0, 0.6); /* Dark glass effect */
+    color: white; /* Icon color */
+    text-align: center;
+    line-height: 60px; /* Center the icon vertically */
+    margin: 10px;
+    transition: background 0.3s, transform 0.3s;
+  }
+  
+  .subscribe-icons-a a:hover {
+    background: rgba(0, 0, 0, 0.8); /* Darker on hover */
+    transform: scale(1.1); /* Slightly larger on hover */
+  }
+  
+  .fab {
+    font-size: 24px; /* Larger icon size */
   }
