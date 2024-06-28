@@ -262,6 +262,8 @@ a {
     background-color: #f8f8f8;
     padding: 10px 0;
     border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 45px;
 }
 
 .submenu-menu {
@@ -281,4 +283,15 @@ a {
 .submenu-menu a:hover {
     background-color: #007aff;
     color: #fff;
+}
+
+
+.inner-page-section {
+    width: 100%;
+    min-height: 76vh;
+    display: flex;
+}
+
+.inner-page-section h2 {
+    margin-top: 150px;
 }
