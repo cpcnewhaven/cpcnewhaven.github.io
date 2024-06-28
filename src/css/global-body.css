@@ -22,6 +22,11 @@ h1,h2,h3,h4 {
     line-height: 95%;
 }
 
+a{
+    color: black;
+    text-decoration: underline;
+}
+
 button {
     width: 220px; /* Fixed width */
     height: 50px; /* Fixed height */
@@ -100,6 +105,18 @@ input::placeholder {
     @media (min-width: 600px) {
         font-size: 8rem; /* Larger font size for desktop */
     }
+}
+
+.heading-1 {
+    font-size: 92px;
+}
+
+.heading-2 {
+    font-size: 48px;
+}
+
+.body-text {
+    font-size: 18px
 }
 
 
@@ -237,3 +254,31 @@ a {
   .fab {
     font-size: 24px; /* Larger icon size */
   }
+
+
+  /* SUB MENU */
+
+  .submenu-container {
+    background-color: #f8f8f8;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.submenu-menu {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.submenu-menu a {
+    color: #333;
+    text-decoration: none;
+    padding: 10px 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.submenu-menu a:hover {
+    background-color: #007aff;
+    color: #fff;
+}
