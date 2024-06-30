@@ -58,8 +58,27 @@
 
     </div>
 
-    <div id="page">
+<style>
+  .splash-image {
+  height: 275px; /* Minimum height */
+  background-size: cover; /* Stretch the image to cover the entire section */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @media (max-width: 600px) {
+    .splash-image {
+      height: 150px; /* Adjusted height for mobile */
+    }
+  }
+}
+  
+</style>
 
+
+    <div id="page">
+      <section class="splash-image" id="home-image"></section>
       <section class="top-splash-welcome">
         <h2>Come Worship with us <span>Sundays @ 10:30am</span></h2>
       </section>
@@ -113,7 +132,6 @@
           <a href="about.html"><button>Learn More</button></a>
         </div>
       </section>
-
       <!-- END OF HOMEPAGE DYNAMIC SPLASH-->
       <section class="mid-splash-welcome">
         <h1 class="headline">Highlights</h1>
@@ -124,11 +142,7 @@
         <!-- Highlights will be populated here by the JavaScript -->
       </section>
 
-      <style>
-  /* Add these styles to your existing CSS file or within a <style> tag in the HTML head */
-
-</style>
-
+    
       <section id="podcasts-a">
 
         <div class="mid-splash-welcome">
@@ -225,6 +239,28 @@
     <script src="./src/js/function_toggle_mobileMenu.js"></script>
 
     <script src="./src/js/updateSermonContent.js"></script>
+
+
+
+<!-- UPDATE TOP IMAGE WITH JAVASCRIPT -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const splashImageSection = document.getElementById('home-image');
+    const imageUrl = './assets/websiteBG/1.png';
+    fetch(imageUrl)
+      .then(response => {
+        if (response.ok) {
+          splashImageSection.style.backgroundImage = `url(${imageUrl})`;
+        } else {
+          console.error('Image not found:', imageUrl);
+        }
+      })
+      .catch(error => {
+        console.error('Error fetching the image:', error);
+      });
+  });
+</script>
+
 
   </body>
 </html>
