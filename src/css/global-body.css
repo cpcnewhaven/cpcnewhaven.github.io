@@ -17,93 +17,132 @@ body {
     /* Added padding at the bottom */
 }
 
-h1,h2,h3,h4 {
+h1,
+h2,
+h3,
+h4 {
     font-family: "Barlow", sans-serif;
     line-height: 95%;
 }
 
-a{
+a {
     color: black;
     text-decoration: underline;
 }
 
 button {
-    width: 220px; /* Fixed width */
-    height: 50px; /* Fixed height */
-    background-color: #ffffff; /* Background color */
-    color: rgb(0, 0, 0); /* Text color */
-    border: none; /* No borders */
-    border-radius: 5px; /* Rounded corners */
-    cursor: pointer; /* Pointer cursor on hover */
+    width: 220px;
+    /* Fixed width */
+    height: 50px;
+    /* Fixed height */
+    background-color: #ffffff;
+    /* Background color */
+    color: rgb(0, 0, 0);
+    /* Text color */
+    border: none;
+    /* No borders */
+    border-radius: 5px;
+    /* Rounded corners */
+    cursor: pointer;
+    /* Pointer cursor on hover */
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     overflow: hidden;
-    border-style:solid;
+    border-style: solid;
     border-color: black;
-    font-size: calc(1em * 0.6 + 0.6vw); /* Slightly larger responsive font size */
-    transition: background-color 0.23s; /* Smooth transition for hover effect */
+    font-size: calc(1em * 0.6 + 0.6vw);
+    /* Slightly larger responsive font size */
+    transition: background-color 0.23s;
+    /* Smooth transition for hover effect */
 
 }
 
 button:hover {
-    background-color: #4e4e4e; /* Darker shade on hover */
+    background-color: #4e4e4e;
+    /* Darker shade on hover */
     color: rgb(255, 255, 255);
 }
 
 .button--prime {
-    width: 220px; /* Fixed width */
-    height: 50px; /* Fixed height */
-    background-color: #ffffff; /* Background color */
-    color: rgb(0, 0, 0); /* Text color */
-    border: none; /* No borders */
-    border-radius: 5px; /* Rounded corners */
-    cursor: pointer; /* Pointer cursor on hover */
+    width: 220px;
+    /* Fixed width */
+    height: 50px;
+    /* Fixed height */
+    background-color: #ffffff;
+    /* Background color */
+    color: rgb(0, 0, 0);
+    /* Text color */
+    border: none;
+    /* No borders */
+    border-radius: 5px;
+    /* Rounded corners */
+    cursor: pointer;
+    /* Pointer cursor on hover */
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     overflow: hidden;
-    border-style:solid;
+    border-style: solid;
     border-color: black;
-    font-size: calc(1em * 0.6 + 0.6vw); /* Slightly larger responsive font size */
-    transition: background-color 0.23s; /* Smooth transition for hover effect */
+    font-size: calc(1em * 0.6 + 0.6vw);
+    /* Slightly larger responsive font size */
+    transition: background-color 0.23s;
+    /* Smooth transition for hover effect */
 
 }
 
 .button--prime:hover {
-    background-color: #4e4e4e; /* Darker shade on hover */
+    background-color: #4e4e4e;
+    /* Darker shade on hover */
     color: rgb(255, 255, 255);
 }
 
 input {
-    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white for glass effect */
-    border: 2px solid rgba(255, 255, 255, 0.2); /* Light border for subtle definition */
-    border-radius: 8px; /* Rounded corners */
-    padding: 10px 15px; /* Comfortable padding */
-    font-size: 16px; /* Readable font size */
-    color: #000; /* Text color */
-    font-family: "Barlow", sans-serif; /* Consistent font family */
-    outline: none; /* Removes the default focus outline */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transitions for interactions */
+    background-color: rgba(255, 255, 255, 0.5);
+    /* Semi-transparent white for glass effect */
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    /* Light border for subtle definition */
+    border-radius: 8px;
+    /* Rounded corners */
+    padding: 10px 15px;
+    /* Comfortable padding */
+    font-size: 16px;
+    /* Readable font size */
+    color: #000;
+    /* Text color */
+    font-family: "Barlow", sans-serif;
+    /* Consistent font family */
+    outline: none;
+    /* Removes the default focus outline */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for depth */
+    transition: background-color 0.3s, box-shadow 0.3s;
+    /* Smooth transitions for interactions */
 }
 
 input:focus {
-    background-color: rgba(255, 255, 255, 0.75); /* Lighter background on focus */
-    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1); /* More prominent shadow on focus */
+    background-color: rgba(255, 255, 255, 0.75);
+    /* Lighter background on focus */
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
+    /* More prominent shadow on focus */
 }
 
 input::placeholder {
-    color: rgba(0, 0, 0, 0.5); /* Placeholder text color */
+    color: rgba(0, 0, 0, 0.5);
+    /* Placeholder text color */
 }
 
 /*typography*/
 .headline {
-    font-size: 4rem; /* Smaller font size for mobile */
+    font-size: 4rem;
+
+    /* Smaller font size for mobile */
     @media (min-width: 600px) {
-        font-size: 8rem; /* Larger font size for desktop */
+        font-size: 8rem;
+        /* Larger font size for desktop */
     }
 }
 
@@ -190,75 +229,91 @@ li {
 
 a {
     text-decoration: none;
-    
+
 }
 
 /*CONTENT LAYOUTS*/
 
 .left-content {
-    display:flex;
-    flex-direction:column;
+    display: flex;
+    flex-direction: column;
     align-items: left;
     justify-content: center;
     text-align: left;
-  }
-  .center-content {
-    display:flex;
+}
+
+.center-content {
+    display: flex;
     flex-direction: column;
     width: 100%;
     align-items: center;
     justify-content: center;
-  }
+}
 
-  /*Top SPlashes */
+/*Top SPlashes */
 
-  .top-splash-welcome {
-    padding: 10px;
-    margin: 0px;
+.top-splash-welcome {
+    padding: 20px;
+    margin-top: -20px;
+    margin-bottom: 0px;
     text-align: center;
-    color: rgb(0, 0, 0)!important;
-    backdrop-filter: blur(5px); /* Blur effect for glass-like appearance */
-  }
+    color: rgb(0, 0, 0) !important;
+    backdrop-filter: blur(5px);
+    /* Blur effect for glass-like appearance */
+}
 
-  .top-splash-welcome h1,h2,h3,h4,p {
+.top-splash-welcome h1,
+h2,
+h3,
+h4,
+p {
     color: rgb(0, 0, 0);
-  }
+}
 
-  .mid-splash-welcome {
+.mid-splash-welcome {
     background-color: rgba(0, 60, 109, 0.062);
     color: rgb(98, 98, 98);
-    backdrop-filter: blur(5px); /* Blur effect for glass-like appearance */
+    backdrop-filter: blur(5px);
+    /* Blur effect for glass-like appearance */
 
-  }
+}
 
 
-  /*social buttons */
-  .subscribe-icons-a a {
+/*social buttons */
+.subscribe-icons-a a {
     display: inline-block;
-    width: 60px; /* Set the size of the icons */
+    width: 60px;
+    /* Set the size of the icons */
     height: 60px;
-    border-radius: 30px; /* Circular buttons */
-    background: rgba(0, 0, 0, 0.6); /* Dark glass effect */
-    color: white; /* Icon color */
+    border-radius: 30px;
+    /* Circular buttons */
+    background: rgba(0, 0, 0, 0.6);
+    /* Dark glass effect */
+    color: white;
+    /* Icon color */
     text-align: center;
-    line-height: 60px; /* Center the icon vertically */
+    line-height: 60px;
+    /* Center the icon vertically */
     margin: 10px;
     transition: background 0.3s, transform 0.3s;
-  }
-  
-  .subscribe-icons-a a:hover {
-    background: rgba(0, 0, 0, 0.8); /* Darker on hover */
-    transform: scale(1.1); /* Slightly larger on hover */
-  }
-  
-  .fab {
-    font-size: 24px; /* Larger icon size */
-  }
+}
+
+.subscribe-icons-a a:hover {
+    background: rgba(0, 0, 0, 0.8);
+    /* Darker on hover */
+    transform: scale(1.1);
+    /* Slightly larger on hover */
+}
+
+.fab {
+    font-size: 24px;
+    /* Larger icon size */
+}
 
 
-  /* SUB MENU */
+/* SUB MENU */
 
-  .submenu-container {
+.submenu-container {
     background-color: #f8f8f8;
     padding: 10px 0;
     border-bottom: 1px solid #ddd;

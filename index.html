@@ -84,7 +84,6 @@
       </section>
       <!-- HOMEPAGE DYNAMIC SPLASH -->
       <section id="worship-a">
-
         <div class="worship-widget">
           <div class="left-content"><h4>Upcoming Sermon</h2></div>
           <hr>
@@ -240,26 +239,25 @@
     <script src="./src/js/updateSermonContent.js"></script>
 
     <script>
-  document.addEventListener("DOMContentLoaded", function() {
-    const splashImageSection = document.getElementById('home-image');
-    const imageFolder = './assets/websiteBG/';
-    const imageCount = 5; // Number of images in the folder
-    const randomIndex = Math.floor(Math.random() * imageCount) + 1;
-    const imageUrl = `${imageFolder}${randomIndex}.png`;
+      document.addEventListener("DOMContentLoaded", function() {
+          const splashImageSection = document.getElementById('home-image');
+          const totalImages = 14; // Total number of images in the folder
+          const randomIndex = Math.floor(Math.random() * totalImages) + 1;
+          const imageUrl = `./assets/websiteBG/${randomIndex}.png`;
     
-    fetch(imageUrl)
-      .then(response => {
-        if (response.ok) {
-          splashImageSection.style.backgroundImage = `url(${imageUrl})`;
-        } else {
-          console.error('Image not found:', imageUrl);
-        }
-      })
-      .catch(error => {
-        console.error('Error fetching the image:', error);
+          fetch(imageUrl)
+              .then(response => {
+                  if (response.ok) {
+                      splashImageSection.style.backgroundImage = `url(${imageUrl})`;
+                  } else {
+                      console.error('Image not found:', imageUrl);
+                  }
+              })
+              .catch(error => {
+                  console.error('Error fetching the image:', error);
+              });
       });
-  });
-</script>
+    </script>
 
   </body>
 </html>
