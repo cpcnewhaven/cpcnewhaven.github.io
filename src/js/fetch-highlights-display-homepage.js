@@ -3,6 +3,10 @@ document.addEventListener('DOMContentLoaded', function() {
         .then(response => response.json())
         .then(data => {
             const highlightsContainer = document.getElementById('highlights');
+            
+            // Sort announcements by dateAdded in descending order
+            data.announcements.sort((a, b) => new Date(b.dateAdded) - new Date(a.dateAdded));
+            
             data.announcements.forEach(announcement => {
                 // Check if the announcement is active
                 if (announcement.active === "false") {
