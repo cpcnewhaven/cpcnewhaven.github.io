@@ -58,24 +58,24 @@
 
     </div>
 
-<style>
-  .splash-image {
-  height: 275px; /* Minimum height */
-  background-size: cover; /* Stretch the image to cover the entire section */
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Prevent the image from repeating */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  @media (max-width: 600px) {
+    <style>
     .splash-image {
-      height: 150px; /* Adjusted height for mobile */
+      height: 56.25vw; /* 16:9 aspect ratio */
+      max-height: 350px; /* Maximum height of 350px */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
-  }
-}
-  
-</style>
-
+    @media (max-width: 600px) {
+      .splash-image {
+        height: 56.25vw; /* Maintain 16:9 aspect ratio for smaller screens */
+        max-height: 350px; /* Maximum height of 350px */
+      }
+    }
+  </style>
 
     <div id="page">
       <section class="splash-image" id="home-image"></section>
@@ -142,7 +142,6 @@
         <!-- Highlights will be populated here by the JavaScript -->
       </section>
 
-    
       <section id="podcasts-a">
 
         <div class="mid-splash-welcome">
@@ -240,13 +239,14 @@
 
     <script src="./src/js/updateSermonContent.js"></script>
 
-
-
-<!-- UPDATE TOP IMAGE WITH JAVASCRIPT -->
-<script>
+    <script>
   document.addEventListener("DOMContentLoaded", function() {
     const splashImageSection = document.getElementById('home-image');
-    const imageUrl = './assets/websiteBG/1.png';
+    const imageFolder = './assets/websiteBG/';
+    const imageCount = 5; // Number of images in the folder
+    const randomIndex = Math.floor(Math.random() * imageCount) + 1;
+    const imageUrl = `${imageFolder}${randomIndex}.png`;
+    
     fetch(imageUrl)
       .then(response => {
         if (response.ok) {
@@ -260,7 +260,6 @@
       });
   });
 </script>
-
 
   </body>
 </html>
