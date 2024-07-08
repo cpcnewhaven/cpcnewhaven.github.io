@@ -278,6 +278,28 @@ p {
 
 }
 
+.splash-image {
+    height: 56.25vw;
+    /* 16:9 aspect ratio */
+    max-height: 350px;
+    /* Maximum height of 350px */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 600px) {
+    .splash-image {
+        height: 56.25vw;
+        /* Maintain 16:9 aspect ratio for smaller screens */
+        max-height: 350px;
+        /* Maximum height of 350px */
+    }
+}
+
 
 /*social buttons */
 .subscribe-icons-a a {
