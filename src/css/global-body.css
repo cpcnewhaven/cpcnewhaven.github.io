@@ -259,8 +259,7 @@ a {
     text-align: center;
     color: rgb(0, 0, 0) !important;
     backdrop-filter: blur(5px);
-    display: flex;
-    align-items: center;
+
     /* Blur effect for glass-like appearance */
 }
 
