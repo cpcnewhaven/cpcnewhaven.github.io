@@ -537,3 +537,23 @@ p {
     min-height: 100%;
     overflow: hidden;
 }
+
+.sermon-info {
+    text-align: center;
+    padding: 20px;
+}
+
+.social-links {
+    text-align: center;
+    padding: 20px;
+}
+
+.notification-signup {
+    text-align: center;
+    padding: 20px;
+}
+
+.sharing-instructions {
+    text-align: center;
+    padding: 20px;
+}

@@ -64,52 +64,75 @@
         <div class="container">
             <div class="worship-widget">
                 <section class="sermon-info">
-                    <h1>Sermon Title</h1>
-                    <p>Passage Text: <span>John 3:16</span></p>
-                    <p>Date: <span>April 10, 2023</span></p>
-                    <p>Preacher: <span>John Doe</span></p>
-                    <a href="bulletin_link_here" target="_blank">Download
+                    <h1 id="sermon-title">Sermon Title</h1>
+                    <p>Passage Text: <span id="sermon-scripture">John
+                            3:16</span></p>
+                    <p>Date: <span id="sermon-date">April 10, 2023</span></p>
+                    <p>Preacher: <span id="sermon-author">John Doe</span></p>
+                    <a id="bulletin-link" href="bulletin_link_here"
+                        target="_blank">Download
                         Bulletin</a>
-                </div>
-            </section>
-            <section class="social-links">
-                <div class="center-content">
-                    <h2>Follow Us</h2>
-                    <a href="https://www.instagram.com" target="_blank"><i
-                            class="fab fa-instagram"></i> Instagram</a>
-                    <a href="https://www.facebook.com" target="_blank"><i
-                            class="fab fa-facebook-f"></i> Facebook</a>
-                    <a href="https://www.youtube.com" target="_blank"><i
-                            class="fab fa-youtube"></i> YouTube</a>
-                    <a href="https://open.spotify.com" target="_blank"><i
-                            class="fab fa-spotify"></i> Spotify</a>
-                    <a href="https://podcasts.apple.com" target="_blank"><i
-                            class="fab fa-apple"></i> Apple Podcasts</a>
-
-                </section>
-                <section class="notification-signup">
-                    <h2>Get Notified</h2>
-                    <form>
-                        <input type="email" placeholder="Email Address"
-                            required>
-                        <input type="tel" placeholder="Phone Number">
-                        <button type="submit">Subscribe</button>
-                    </form>
-                </section>
-                <section class="sharing-instructions">
-                    <h2>Help Us Spread the Word</h2>
-                    <p>Share our live stream link on your social media
-                        platforms.
-                        Let your friends and family know how they can join us
-                        online
-                        for our services. Every share helps us reach more people
-                        with our message of hope and community.</p>
                 </section>
             </div>
-            <footer>
-                <a id="fixedlink" target="_blank" rel="nofollow noopener"
-                    href="#">135 Whitney Ave - New Haven, CT | Sunday Worship
-                    10:30am </a>
-            </footer>
-        </body>
-    </html>
+            <section class="social-links">
+
+                <h2>Follow Us</h2>
+                <a href="https://www.instagram.com" target="_blank"><i
+                        class="fab fa-instagram"></i> Instagram</a>
+                <a href="https://www.facebook.com" target="_blank"><i
+                        class="fab fa-facebook-f"></i> Facebook</a>
+                <a href="https://www.youtube.com" target="_blank"><i
+                        class="fab fa-youtube"></i> YouTube</a>
+                <a href="https://open.spotify.com" target="_blank"><i
+                        class="fab fa-spotify"></i> Spotify</a>
+                <a href="https://podcasts.apple.com" target="_blank"><i
+                        class="fab fa-apple"></i> Apple Podcasts</a>
+
+            </section>
+            <section class="notification-signup">
+                <h2>Get Notified</h2>
+                <form>
+                    <input type="email" placeholder="Email Address"
+                        required>
+                    <input type="tel" placeholder="Phone Number">
+                    <br><br>
+                    <div
+                        style="display: flex; justify-content: center; align-items: center;">
+                        <button type="submit">Subscribe</button>
+                    </div>
+                </form>
+            </section>
+            <section class="sharing-instructions">
+                <h2>Help Us Spread the Word</h2>
+                <p>Share our live stream link on your social media
+                    platforms.
+                    Let your friends and family know how they can join us
+                    online
+                    for our services. Every share helps us reach more people
+                    with our message of hope and community.</p>
+            </section>
+        </div>
+        <footer>
+            <a id="fixedlink" target="_blank" rel="nofollow noopener"
+                href="#">135 Whitney Ave - New Haven, CT | Sunday Worship
+                10:30am </a>
+        </footer>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                fetch('./data/upcomingSermon.json')
+                    .then(response => response.json())
+                    .then(data => {
+                        const activeSermon = data.find(sermon => sermon.active);
+                        if (activeSermon) {
+                            document.getElementById('sermon-title').textContent = activeSermon.title;
+                            document.getElementById('sermon-scripture').textContent = activeSermon.scripture;
+                            document.getElementById('sermon-date').textContent = new Date(activeSermon.date).toLocaleDateString();
+                            document.getElementById('sermon-author').textContent = activeSermon.author;
+                            document.getElementById('bulletin-link').href = 'bulletin_link_here'; // Update with actual link if available
+                        }
+                    })
+                    .catch(error => console.error('Error fetching sermon data:', error));
+            });
+        </script>
+    </body>
+</html>
