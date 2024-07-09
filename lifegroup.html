@@ -8,20 +8,19 @@
         <meta name="keywords"
             content="CPC New Haven, Church, New Haven, CT, Worship, Fellowship">
         <meta name="author" content="CPC New Haven">
-        <title>Live - CPC New Haven Church</title>
-        <link rel="stylesheet" href="./homepage.css">
-        <link rel="stylesheet" href="./src/css/lifegroup.css">
+        <title>Life Groups - CPC New Haven Church</title>
         <link rel="stylesheet" href="./src/css/global-nav-bar.css">
+        <link rel="stylesheet" href="./src/css/global-body.css">
+        <link rel="stylesheet" href="./src/css/footer.css">
         <link rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     </head>
     <body>
-        <div id="give">
-            <a href="./give.html">Give</a>
-        </div>
+
         <header id="stickyHeader" class="sticky">
             <nav class="main-navigation">
-                <a href="index.html">Worship</a>
+                <a href="index.html">Home</a>
+                <a href="worship.html">Worship</a>
                 <a href="about.html">About</a>
                 <a href="podcasts.html">Podcasts</a>
                 <a href="events.html">Events</a>
@@ -29,7 +28,7 @@
                 <a href="community.html">Community</a>
                 <a href="live.html">Live</a>
                 <a href="resources.html">Resources</a>
-
+                <a href="give.html">Give</a>
             </nav>
         </header>
 
@@ -42,7 +41,8 @@
 
         <!-- Mobile Navigation -->
         <div class="mobile-navigation" id="mobileNavigation">
-            <a href="index.html">Worship</a>
+            <a href="index.html">Home</a>
+            <a href="worship.html">Worship</a>
             <a href="about.html">About</a>
             <a href="podcasts.html">Podcasts</a>
             <a href="events.html">Events</a>
@@ -50,76 +50,85 @@
             <a href="community.html">Community</a>
             <a href="live.html">Live</a>
             <a href="resources.html">Resources</a>
+            <a href="give.html">Give</a>
             <button id="closeMenuButton">Close</button> <!-- Exit button -->
-
         </div>
-        <div id="page" class>
-            <section id="worship">
-                <h1>Life Groups</h1>
 
+        <div id="page-lifegroup">
+
+            <section id="joining-a-lifegroup" class="inner-page-section">
+                <h2 class="headline">Joining a Life Group</h2>
+                <p class="body-text">Details about joining a Life Group...</p>
             </section>
-            <style>
-                section {
-                    display:flex;
-                    flex-direction: column;
-                }
 
-                section p {
-                    color: rgb(255, 255, 255);
-        font-size: clamp(1.2rem, 2.5vw, 1.8rem); /* Increased font size */
-        line-height: 1.6;
-        font-family: Arial, sans-serif;
-        max-width: 60ch;
-        text-align: left;
-                }
-            </style>
-
-            <section id="lifegroup-introduction">
-                <p>"God has so composed the body, giving greater honor to the part that lacked it, that there may be no division in the body, but that the members may have the same care for one another. If one member suffers, all suffer together; if one member is honored, all rejoice together."
+            <section id="lifegroup-introduction" class="inner-page-section">
+                <p
+                    class="body-text">"God has so composed the body, giving greater honor to the part that lacked it, that there may be no division in the body, but that the members may have the same care for one another. If one member suffers, all suffer together; if one member is honored, all rejoice together."
                     - 1 Corinthians 12:24-26</p>
-                <p>God's people are the hands and feet of Christ. We cannot
-                    experience God and grow spiritually in a truly
-                    gospel-centered and biblical way if we are living in
+                <p class="body-text">God's people are the hands and feet of
+                    Christ. We cannot experience God and grow spiritually in a
+                    truly gospel-centered and biblical way if we are living in
                     isolation. Neither can we say we are flourishing if our
                     brother or sister in Christ is suffering. Bound together
                     with covenant communion, God brings us into new
                     relationships where sacrifice is freedom and giving to
                     others is where we find life.</p>
-                <img
-                    src="https://www.csmedia1.com/cpcnewhaven.org/life-group-header-1200-400-px.jpg">
-                <p>Life Groups are our way of doing church in the small with all
-                    sorts of people engaged in prayer, teaching, fellowship and
-                    care. They are the vehicle that we use to help its
-                    participants continue to experience Christ outside of our
-                    worship gatherings and to impart the pastoral care that
-                    Christ provides through the love of His people. Thus, the
-                    worship, teaching, fellowship, and care for one another
-                    supply a more intimate and hands-on encounter with the
-                    living Christ.</p>
-                <p>Click the image above for an interactive map and meeting
-                    times! Select one location at a time and click the
-                    "directions" icon to see its proximity to your location.
-                    Contact the leaders for exact addresses and meeting
-                    times.</p>
+                <p class="body-text">Life Groups are our way of doing church in
+                    the small with all sorts of people engaged in prayer,
+                    teaching, fellowship and care. They are the vehicle that we
+                    use to help its participants continue to experience Christ
+                    outside of our worship gatherings and to impart the pastoral
+                    care that Christ provides through the love of His people.
+                    Thus, the worship, teaching, fellowship, and care for one
+                    another supply a more intimate and hands-on encounter with
+                    the living Christ.</p>
+                <p class="body-text">Click the image above for an interactive
+                    map and meeting times! Select one location at a time and
+                    click the "directions" icon to see its proximity to your
+                    location. Contact the leaders for exact addresses and
+                    meeting times.</p>
             </section>
 
-            <section id="lifegroup-contacts">
-                <p><strong>Hamden Cheshire Life Group</strong> | Contact: Julie Walker</p>
-                <p><strong>Downtown New Haven Wednesday Life Group</strong> | Contact: Colleen Rice</p>
-                <p><strong>Downtown New Haven Thursday Life Group</strong> | Contact: Alicia Kebabian</p>
-                <p><strong>East Rock Life Group</strong> | Contact: Kaitlyn Jessee</p>
-                <p><strong>Trumbull Life Group</strong> | Contact: Stacy Roney</p>
-                <p><strong>Shoreline Saturday Life Group</strong> | Contact: Cliff Bogue</p>
-                <p><strong>West Side Life Group (Woodbridge/Westville)</strong> | Contact: Miranda Healy</p>
+            <section id="lifegroup-contacts" class="styled-section">
+                <p class="body-text"><strong>Hamden Cheshire Life Group</strong>
+                    | Contact: Julie Walker</p>
+                <p class="body-text"><strong>Downtown New Haven Wednesday Life
+                        Group</strong> | Contact: Colleen Rice</p>
+                <p class="body-text"><strong>Downtown New Haven Thursday Life
+                        Group</strong> | Contact: Alicia Kebabian</p>
+                <p class="body-text"><strong>East Rock Life Group</strong> |
+                    Contact: Kaitlyn Jessee</p>
+                <p class="body-text"><strong>Trumbull Life Group</strong> |
+                    Contact: Stacy Roney</p>
+                <p class="body-text"><strong>Shoreline Saturday Life
+                        Group</strong> | Contact: Cliff Bogue</p>
+                <p class="body-text"><strong>West Side Life Group
+                        (Woodbridge/Westville)</strong> | Contact: Miranda
+                    Healy</p>
             </section>
-
-
-           
         </div>
+        <footer>
+            <a id="fixedlink" target="_blank" rel="nofollow noopener"
+                href="#">135 Whitney Ave - New Haven, CT | Sunday
+                Worship
+                10:30am </a>
+        </footer>
 
-        <a id="fixedlink" target="_blank" rel="nofollow noopener" href="#">135
-            Whitney Ave - New Haven, CT | Sunday Worship 10:30am </a>
+        <script>
+            document.getElementById('hamburgerMenu').addEventListener('click', function() {
+                var mobileNav = document.getElementById('mobileNavigation');
+                if (mobileNav.style.display === "block") {
+                    mobileNav.style.display = "none";
+                } else {
+                    mobileNav.style.display = "block";
+                }
+            });
 
+            document.getElementById('closeMenuButton').addEventListener('click', function() {
+                document.getElementById('mobileNavigation').style.display = "none";
+            });
+        </script>
 
+        <script src="./src/js/background-fetch-splash-image.js"></script>
     </body>
 </html>
