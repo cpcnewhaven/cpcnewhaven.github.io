@@ -450,10 +450,6 @@ h3 {
   z-index: 1;
 }
 
-#worship-a * {
-  position: relative;
-  z-index: 2;
-}
 
 
 #worship {
@@ -535,5 +531,6 @@ h3 {
   list-style: none;
   padding: 0;
   margin: 0;
-  text-align: center; /* Center the text/items in the list */
+  text-align: center;
+  /* Center the text/items in the list */
 }

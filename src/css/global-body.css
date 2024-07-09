@@ -135,6 +135,7 @@ input::placeholder {
     /* Placeholder text color */
 }
 
+
 /*typography*/
 .headline {
     font-size: 2.4rem;
@@ -144,6 +145,11 @@ input::placeholder {
         font-size: 8rem;
         /* Larger font size for desktop */
     }
+}
+
+.bold {
+    font-weight: 900;
+    font-size: 25px;
 }
 
 .heading-1 {
@@ -240,6 +246,9 @@ a {
     align-items: left;
     justify-content: center;
     text-align: left;
+    line-height: 95%;
+    margin: 0px;
+    padding: 0px;
 }
 
 .center-content {
@@ -410,4 +419,121 @@ p {
     height: auto;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#worship-ab {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    min-height: 500px !important;
+}
+
+.worship-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.worship-widget {
+    flex: 1;
+    min-width: 300px;
+    background: #ffffff;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    border: .4px solid;
+    width: 30vw;
+    height: 475px;
+    min-height: 100%;
+    display: flex;
+    align-items: top;
+    line-height: 95%;
+}
+
+.worship-widget h4,
+.worship-widget p,
+.worship-widget a {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+}
+
+.worship-widget p {
+    text-align: left;
+}
+
+.worship-widget a {
+    color: black;
+    font-weight: 600;
+    padding: 0;
+    display: block;
+    margin: 0.5rem 0;
+    color: #1c89ff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.worship-widget a:hover {
+    color: rgb(126, 126, 126);
+}
+
+#worship-a {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    background-color: rgba(0, 60, 109, 0.062);
+    padding: 10px;
+    justify-content: center;
+    height: 100%;
+}
+
+#worship-a h2,
+#worship-a p {
+    margin: 0;
+    padding: 5px;
+    text-align: center;
+    color: black;
+}
+
+#worship-a span {
+    display: block;
+    background-color: #007BFF;
+    color: white;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+#worship-a hr {
+    grid-column: span 2;
+}
+
+@media (max-width: 768px) {
+    .worship-widget {
+        min-width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    #worship-a {
+        flex-direction: column;
+        background-color: white;
+        border-style: none;
+        padding: 5px;
+    }
+
+    .worship-widget {
+        width: 100%;
+        overflow-y: scroll;
+        border-style: none;
+        text-align: center !important;
+        padding: 5px;
+        height: auto;
+    }
+}
+
+.sermon-image {
+    max-width: 100%;
+    min-height: 100%;
+    overflow: hidden;
 }

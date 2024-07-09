@@ -73,34 +73,34 @@
         <h2>Come Worship with us <span>Sundays @ 10:30am</span></h2>
       </section>
       <!-- HOMEPAGE DYNAMIC SPLASH -->
-      <section id="worship-a">
-        <div class="worship-widget">
-          <div class="left-content"><h4>Upcoming Sermon</h2></div>
-          <hr>
-          <div class="center-content">
-            <p id="sermonTitle">Latest Sermon</p>
-            <p id="sermonScripture">Scripture Reference</p>
-            <p id="sermonDate">Sermon Date</p>
-            <p id="pastorName"></span></div></div>
-
-        <div class="worship-widget">
-          <iframe width="560" height="100%"
-            src="https://www.youtube.com/embed/NlKcLdGYiWs"
-            title="YouTube video player" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen></iframe>
-        </div>
-        <div class="worship-widget">
-          <div class="left-content">
-            <a href="https://www.youtube.com/c/CPCNewHaven/live">Link for Latest
-              Podcast Sermon</a>
-            <a
-              href="https://cpcnewhaven.ccbchurch.com/goto/forms/2/responses/new">Request
-              for Prayer or Pastoral Visit</a>
-          </div></div>
-
+      <section id="worship-ab">
+        <div class="worship-container">
+          <div class="worship-widget">
+            <div class="center-content">
+              <img src="./assets/podcast-thumbnails/7.07.24 - CPC.jpg" alt="Sermon Image" class="sermon-image">
+             
+              </div>
+            </div>
+            <div class="worship-widget">
+              <div>
+                <p class="bold">Latest Sermon</p>
+                    <p id="sermonTitle" class="asermon-title"></p>
+                    <p id="sermonScripture" class="asermon-scripture"></p>
+                    <p id="pastorName" class="asermon-pastor"></p>
+                  <button class="play-button" onclick="openSpotify()">
+                    <i class="fas fa-play"></i>
+                  </button>
+                <a href="https://www.youtube.com/c/CPCNewHaven/live">Link for
+                  Latest Podcast Sermon</a>
+                <a
+                  href="https://cpcnewhaven.ccbchurch.com/goto/forms/2/responses/new">Request
+                  for Prayer or Pastoral Visit</a>
+              </div>
+            </div>
+          </div>
+          </div>
+          
       </section>
-
       <section id="about">
         <div class="mid-splash-welcome">
           <h1 class="headline">All are Welcome</h1></div>
@@ -229,50 +229,12 @@
 
     <script src="./src/js/updateSermonContent.js"></script>
 
+    <script src="./src/js/background-fetch-splash-image.js"></script>
+
     <script>
-      document.addEventListener("DOMContentLoaded", function() {
-          const splashImageSection = document.getElementById('home-image');
-          const midImageSection = document.getElementById('mid-image');
-          const totalImages = 14; // Total number of images in the folder
-          
-          // Generate two unique random indices
-          let randomIndices = [];
-          while (randomIndices.length < 2) {
-              let randomIndex = Math.floor(Math.random() * totalImages) + 1;
-              if (!randomIndices.includes(randomIndex)) {
-                  randomIndices.push(randomIndex);
-              }
-          }
-
-          const homeImageUrl = `./assets/websiteBG/${randomIndices[0]}.png`;
-          const midImageUrl = `./assets/websiteBG/${randomIndices[1]}.png`;
-
-          // Fetch and set the background image for home-image
-          fetch(homeImageUrl)
-              .then(response => {
-                  if (response.ok) {
-                      splashImageSection.style.backgroundImage = `url(${homeImageUrl})`;
-                  } else {
-                      console.error('Image not found:', homeImageUrl);
-                  }
-              })
-              .catch(error => {
-                  console.error('Error fetching the image:', error);
-              });
-
-          // Fetch and set the background image for mid-image
-          fetch(midImageUrl)
-              .then(response => {
-                  if (response.ok) {
-                      midImageSection.style.backgroundImage = `url(${midImageUrl})`;
-                  } else {
-                      console.error('Image not found:', midImageUrl);
-                  }
-              })
-              .catch(error => {
-                  console.error('Error fetching the image:', error);
-              });
-      });
+      function openSpotify() {
+        window.open('https://open.spotify.com/track/your_spotify_track_id', '_blank');
+      }
     </script>
 
   </body>
