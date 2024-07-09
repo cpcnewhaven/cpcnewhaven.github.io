@@ -137,7 +137,7 @@ input::placeholder {
 
 /*typography*/
 .headline {
-    font-size: 4rem;
+    font-size: 2.4rem;
 
     /* Smaller font size for mobile */
     @media (min-width: 600px) {
@@ -369,14 +369,19 @@ p {
 }
 
 .submenu-menu a {
-    color: #333;
+    color: #000000;
     text-decoration: none;
     padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    line-height: 95%;
     transition: background-color 0.3s, color 0.3s;
 }
 
 .submenu-menu a:hover {
-    background-color: #007aff;
+    background-color: #1c89ff;
     color: #fff;
 }
 
@@ -389,4 +394,20 @@ p {
 
 .inner-page-section h2 {
     margin-top: 150px;
+}
+
+
+/*Gallery Grid*/
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
