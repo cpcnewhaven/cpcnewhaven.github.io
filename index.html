@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="./src/css/upcoming-worship-preview.css">
     <link rel="stylesheet" href="./src/css/global-body.css">
     <link rel="stylesheet" href="src/css/footer.css">
-    <!--link rel="stylesheet" href="./src/css/homepage.css" -->
     <link rel="stylesheet" href="./src/css/global-nav-bar.css">
     <link rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
@@ -45,6 +44,8 @@
 
     <!-- Mobile Navigation -->
     <div class="mobile-navigation" id="mobileNavigation">
+      <button id="closeMenuButton">Close</button> <!-- Exit button -->
+
       <a href="#worship">Worship</a>
       <a href="about.html">About</a>
       <a href="podcasts.html">Podcasts</a>
@@ -278,6 +279,14 @@
         window.open('https://open.spotify.com/track/your_spotify_track_id', '_blank');
       }
     </script>
+    <script>
+      document.getElementById('hamburgerMenu').addEventListener('click', function() {
+        document.getElementById('mobileNavigation').style.display = 'flex';
+      });
 
+      document.getElementById('closeMenuButton').addEventListener('click', function() {
+        document.getElementById('mobileNavigation').style.display = 'none';
+      });
+    </script>
   </body>
 </html>
