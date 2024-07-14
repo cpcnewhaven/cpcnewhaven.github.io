@@ -102,37 +102,24 @@ button:hover {
 
 input {
     background-color: rgba(255, 255, 255, 0.5);
-    /* Semi-transparent white for glass effect */
     border: 2px solid rgba(255, 255, 255, 0.2);
-    /* Light border for subtle definition */
     border-radius: 8px;
-    /* Rounded corners */
     padding: 10px 15px;
-    /* Comfortable padding */
     font-size: 16px;
-    /* Readable font size */
     color: #000;
-    /* Text color */
     font-family: "Barlow", sans-serif;
-    /* Consistent font family */
     outline: none;
-    /* Removes the default focus outline */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    /* Subtle shadow for depth */
     transition: background-color 0.3s, box-shadow 0.3s;
-    /* Smooth transitions for interactions */
 }
 
 input:focus {
     background-color: rgba(255, 255, 255, 0.75);
-    /* Lighter background on focus */
     box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
-    /* More prominent shadow on focus */
 }
 
 input::placeholder {
     color: rgba(0, 0, 0, 0.5);
-    /* Placeholder text color */
 }
 
 
@@ -616,22 +603,73 @@ p {
     }
   }
 
-  /* New styles for mobile navigation */
+  /*Hamburger menu Logic */
+
+
+  
+
+.hamburger-menu-button-container {
+
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.714)!important;
+    top: 10px;
+    right: 10px;
+    width: 48px;
+    height: 48px;
+    border-radius: 5px;
+    z-index: 1000;
+    display:flex;
+    align-items:center;
+    justify-content: center;    
+
+  }
+
+  .hamburger-menu-button-container i {
+    color: white;
+  }
+
+  .mobile-navigation {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  }
+  
+  .mobile-navigation #closeMenuButton {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.714)!important;
+    top: 10px;
+    right: 10px;
+    height: 48px;
+    width: 48px;
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    color: white;
+    margin: 10px;
+    border-radius: 5px;
+    
+  }
+
   @media (max-width: 700px) {
     .main-navigation {
       display: none;
-    }
-
-    .hamburger-menu {
-      display: block;
-      cursor: pointer;
     }
 
     .mobile-navigation {
       display: none;
       flex-direction: column;
       align-items: center;
-      background-color: #fff;
+      background-color: #ffffffea;
       position: absolute;
       top: 0;
       left: 0;
@@ -640,75 +678,40 @@ p {
       z-index: 1000;
     }
 
-    .mobile-navigation a {
-      padding: 15px;
-      text-align: center;
-      width: 100%;
-      border-bottom: 1px solid #020202;
+
+
+    .mobile-navigation a:hover {
+        background-color: black!important;
+        color: white;
     }
 
     .mobile-navigation button {
-      margin-top: 20px;
+      margin-top: 10px;
+    }
+
+    .mobile-navigation button:hover {
+        background-color: black;
     }
   }
 
-  .hamburger-menu {
-    display: none;
-    cursor: pointer;
-    width: 30px;
-    height: 25px;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    padding: 5px;
-    color: white!important;
-    background-color: #333; /* Dark background color */
-    border-radius: 5px; /* Rounded corners */
-    position: fixed; /* Make the button fixed */
-    top: 10px; /* Adjust the top position */
-    right: 10px; /* Adjust the right position */
-}
-  
-  .hamburger-menu div {
-    width: 100%;
-    height: 3px;
-    background-color: #fff; /* White color for the lines */
+
+  #mobile-menu-logo {
+    width: 300px;
+    height: auto;
   }
-  
-  .mobile-navigation {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    background-color: #fff;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1000;
-    padding-top: 60px; /* Ensure space for close button */
-  }
-  
-  .mobile-navigation a {
-    padding: 15px;
+
+  .mobile-menu-link {
+    height: 50px;
     text-align: center;
     width: 100%;
-    border-bottom: 1px solid #ccc;
-  }
-  
-  .mobile-navigation button {
-    margin-top: 20px;
-    background-color: #333; /* Dark background color */
-    color: #fff; /* White text color */
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s, transform 0.3s;
-  }
-  
-  .mobile-navigation button:hover {
-    background-color: #555; /* Slightly lighter on hover */
-    transform: scale(1.05); /* Slightly larger on hover */
-  }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #020202;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+}
+
+.mobile-menu-link:hover {
+    background-color: #1c89ff; /* Beautiful background color on hover */
+    color: #fff; /* White text color on hover */
+}

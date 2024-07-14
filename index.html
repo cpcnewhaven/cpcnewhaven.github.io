@@ -35,33 +35,30 @@
       </nav>
     </header>
 
-    <!-- Inside <header> or <nav> -->
-    <div class="hamburger-menu" id="hamburgerMenu">
-      <div></div>
-      <div></div>
-      <div></div>
+    <div class="hamburger-menu-button-container" id="hamburgerMenu">
+      <i id="closeMobileMenuButton" class="fas fa-bars"></i>
     </div>
 
     <!-- Mobile Navigation -->
     <div class="mobile-navigation" id="mobileNavigation">
-      <button id="closeMenuButton">Close</button> <!-- Exit button -->
+  
 
-      <a href="#worship">Worship</a>
-      <a href="about.html">About</a>
-      <a href="podcasts.html">Podcasts</a>
-      <a href="events.html">Events</a>
-      <a href="announcements.html">Announcements</a>
-      <a href="community.html">Community</a>
-      <a href="live.html">Live</a>
-      <a href="resources.html">Resources</a>
-      <a href="give.html">Give</a>
-      <button id="closeMenuButton">Close</button> <!-- Exit button -->
+
+      <i id="closeMenuButton" class="fas fa-bars"></i> <!-- Exit button -->
+      <img src="./assets/CPC_LOGO_24.png" id="mobile-menu-logo">
+      <a class="mobile-menu-link" href="worship.html">Worship</a>
+      <a class="mobile-menu-link" href="about.html">About</a>
+      <a class="mobile-menu-link" href="podcasts.html">Podcasts</a>
+      <a class="mobile-menu-link" href="events.html">Events</a>
+      <a class="mobile-menu-link" href="announcements.html">Announcements</a>
+      <a class="mobile-menu-link" href="community.html">Community</a>
+      <a class="mobile-menu-link" href="live.html">Live</a>
+      <a class="mobile-menu-link" href="resources.html">Resources</a>
+      <a class="mobile-menu-link" href="give.html">Give</a>
 
     </div>
 
-    <style>
-
-  </style>
+  
 
     <div id="page">
       <section class="top-logo-container">
@@ -279,14 +276,6 @@
         window.open('https://open.spotify.com/track/your_spotify_track_id', '_blank');
       }
     </script>
-    <script>
-      document.getElementById('hamburgerMenu').addEventListener('click', function() {
-        document.getElementById('mobileNavigation').style.display = 'flex';
-      });
 
-      document.getElementById('closeMenuButton').addEventListener('click', function() {
-        document.getElementById('mobileNavigation').style.display = 'none';
-      });
-    </script>
   </body>
 </html>

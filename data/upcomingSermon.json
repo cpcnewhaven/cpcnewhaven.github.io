@@ -18,6 +18,15 @@
     "author": "Rev. Jerry Ornelas",
     "scripture": "Exodus 9:16-17, 27-28; 10:1-2, 27",
     "date": "2024-06-30",
+    "active": false
+  },
+  {
+
+    "title": "Paradise Found! Learning to Live the Epic, Not the Lyrics",
+    "author": "Rev. Preston Graham",
+    "scripture": "Revelation 22:1-15",
+    "date": "2024-07-14",
     "active": true
+
   }
 ]
