@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&display=swap');
 
-
-
 body {
     line-height: 1.6;
     color: #000;
@@ -288,10 +286,9 @@ p {
 }
 
 .splash-image {
-    height: 56.25vw;
-    /* 16:9 aspect ratio */
-    max-height: 420px;
-    /* Maximum height of 350px */
+    width: 100%;
+    height: 500px;
+    max-height: 500px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -520,8 +517,9 @@ p {
 }
 
 .sermon-image {
-    max-width: 100%;
-    min-height: 100%;
+    width: 100%;
+    min-height: 100px;
+    height: 100%;
     overflow: hidden;
 }
 
@@ -551,9 +549,9 @@ p {
     align-items: center;
     text-align: center;
     padding: 20px;
-  }
+}
 
-  .neumorphic-form {
+.neumorphic-form {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -563,72 +561,72 @@ p {
     border-radius: 10px;
     background: #ffffff;
     box-shadow: 9px 9px 16px rgba(163, 177, 198, 0.6), -9px -9px 16px rgba(255, 255, 255, 0.5);
-  }
+}
 
-  .neumorphic-form input,
-  .neumorphic-form button {
+.neumorphic-form input,
+.neumorphic-form button {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
     border: none;
     border-radius: 5px;
     outline: none;
-  }
+}
 
-  .neumorphic-form input {
+.neumorphic-form input {
     background: #ffffff;
     box-shadow: inset 3px 3px 6px rgba(163, 177, 198, 0.6), inset -3px -3px 6px rgba(255, 255, 255, 0.5);
-  }
+}
 
-  .neumorphic-form button {
+.neumorphic-form button {
     background: #ffffff;
     box-shadow: 3px 3px 6px rgba(163, 177, 198, 0.6), -3px -3px 6px rgba(255, 255, 255, 0.5);
     cursor: pointer;
     transition: all 0.3s ease;
-  }
+}
 
-  .neumorphic-form button:hover {
+.neumorphic-form button:hover {
     color: black;
     box-shadow: inset 3px 3px 6px rgba(163, 177, 198, 0.6), inset -3px -3px 6px rgba(255, 255, 255, 0.5);
-  }
+}
 
-  @media (max-width: 600px) {
+@media (max-width: 600px) {
     .neumorphic-form {
-      padding: 15px;
+        padding: 15px;
     }
 
     .neumorphic-form input,
     .neumorphic-form button {
-      padding: 8px;
+        padding: 8px;
     }
-  }
+}
 
-  /*Hamburger menu Logic */
+/*Hamburger menu Logic */
 
 
-  
+
 
 .hamburger-menu-button-container {
 
     position: fixed;
-    background-color: rgba(0, 0, 0, 0.714)!important;
+    background-color: rgba(0, 0, 0, 0.714) !important;
     top: 10px;
     right: 10px;
     width: 48px;
     height: 48px;
     border-radius: 5px;
     z-index: 1000;
-    display:flex;
-    align-items:center;
-    justify-content: center;    
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-  }
+}
 
-  .hamburger-menu-button-container i {
+.hamburger-menu-button-container i {
     color: white;
-  }
+}
 
-  .mobile-navigation {
+.mobile-navigation {
     display: none;
     flex-direction: column;
     align-items: center;
@@ -642,65 +640,65 @@ p {
     align-items: center;
     justify-content: center;
 
-  }
-  
-  .mobile-navigation #closeMenuButton {
+}
+
+.mobile-navigation #closeMenuButton {
     position: fixed;
-    background-color: rgba(0, 0, 0, 0.714)!important;
+    background-color: rgba(0, 0, 0, 0.714) !important;
     top: 10px;
     right: 10px;
     height: 48px;
     width: 48px;
     display: flex;
-    align-items:center;
-    justify-content:center;
+    align-items: center;
+    justify-content: center;
     color: white;
     margin: 10px;
     border-radius: 5px;
-    
-  }
 
-  @media (max-width: 700px) {
+}
+
+@media (max-width: 700px) {
     .main-navigation {
-      display: none;
+        display: none;
     }
 
     .mobile-navigation {
-      display: none;
-      flex-direction: column;
-      align-items: center;
-      background-color: #ffffffea;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 1000;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        background-color: #ffffffea;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1000;
     }
 
 
 
     .mobile-navigation a:hover {
-        background-color: black!important;
+        background-color: black !important;
         color: white;
     }
 
     .mobile-navigation button {
-      margin-top: 10px;
+        margin-top: 10px;
     }
 
     .mobile-navigation button:hover {
         background-color: black;
     }
-  }
+}
 
 
-  #mobile-menu-logo {
+#mobile-menu-logo {
     width: 300px;
     height: auto;
-  }
+}
 
-  .mobile-menu-link {
+.mobile-menu-link {
     height: 50px;
     text-align: center;
     width: 100%;
@@ -708,10 +706,13 @@ p {
     align-items: center;
     justify-content: center;
     border-bottom: 1px solid #020202;
-    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+    transition: background-color 0.3s, color 0.3s;
+    /* Smooth transition for hover effect */
 }
 
 .mobile-menu-link:hover {
-    background-color: #1c89ff; /* Beautiful background color on hover */
-    color: #fff; /* White text color on hover */
+    background-color: #1c89ff;
+    /* Beautiful background color on hover */
+    color: #fff;
+    /* White text color on hover */
 }
