@@ -150,19 +150,42 @@
                     loading="lazy"></iframe>
             </section>
 
+            <section id="podcast-table">
+                <h1>Podcasts</h1>
+                <p>Warning : This Page is in developmental mode - for a full
+                    fledge - fully functining podcast source - visit <a
+                        href="https://podcasts.cpcnewhaven.com">podcasts.cpcnewhaven.com</a></p>
+                <div id="new-podcast-filters">
+                    <select id="newPodcastSort">
+                        <option value="date">Date Released</option>
+                        <option value="bible">Bible Chapter and Verse</option>
+                    </select>
+                </div>
+                <div id="new-podcast-search">
+                    <input type="text" id="newPodcastSearchInput"
+                        placeholder="Search podcasts...">
+                </div>
+
+                <table>
+
+                </table>
+
+            </section>
+
         </div>
-        <section>
-            <div class="center-content">
-                <h2>Subscribe</h2>
-                <div class="subscribe-icons-a">
-                    <a href="your_spotify_link" target="_blank"><i
-                            class="fab fa-spotify"></i></a>
-                    <a href="your_apple_podcasts_link" target="_blank"><i
-                            class="fab fa-apple"></i></a>
-                    <a href="your_youtube_link" target="_blank"><i
-                            class="fab fa-youtube"></i></a>
-                </div></div>
-        </section>
+
+        <h1>Podcast Pre-April 2024</h1>
+        <div id="old-podcast-search">
+            <input type="text" id="oldPodcastSearchInput"
+                placeholder="Search podcasts...">
+        </div>
+        <div id="old-podcast-filters">
+            <select id="oldPodcastSort">
+                <option value="date">Date Released</option>
+                <option value="bible">Bible Chapter and Verse</option>
+            </select>
+        </div>
+        <div id="old-podcast-container"></div>
 
         <footer>
             <a id="fixedlink" target="_blank" rel="nofollow noopener"
