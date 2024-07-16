@@ -38,28 +38,29 @@
             </nav>
         </header>
 
-        <!-- Inside <header> or <nav> -->
-        <div class="hamburger-menu" id="hamburgerMenu">
-            <div></div>
-            <div></div>
-            <div></div>
+        <!-- MOBILE HAMBURGER -->
+        <div class="hamburger-menu-button-container" id="hamburgerMenu">
+            <i id="closeMobileMenuButton" class="fas fa-bars"></i>
         </div>
 
         <!-- Mobile Navigation -->
         <div class="mobile-navigation" id="mobileNavigation">
-            <a href="index.html">Home</a>
-            <a href="#worship">Worship</a>
-            <a href="about.html">About</a>
-            <a href="podcasts.html">Podcasts</a>
-            <a href="events.html">Events</a>
-            <a href="announcements.html">Announcements</a>
-            <a href="community.html">Community</a>
-            <a href="live.html">Live</a>
-            <a href="resources.html">Resources</a>
-            <a href="give.html">Give</a>
-            <button id="closeMenuButton">Close</button> <!-- Exit button -->
-
+            <i id="closeMenuButton" class="fas fa-bars"></i>
+            <!-- Exit button -->
+            <img src="./assets/CPC_LOGO_24.png" id="mobile-menu-logo">
+            <a class="mobile-menu-link" href="index.html">Home</a>
+            <a class="mobile-menu-link" href="worship.html">Worship</a>
+            <a class="mobile-menu-link" href="about.html">About</a>
+            <a class="mobile-menu-link" href="podcasts.html">Podcasts</a>
+            <a class="mobile-menu-link" href="events.html">Events</a>
+            <a class="mobile-menu-link"
+                href="announcements.html">Announcements</a>
+            <a class="mobile-menu-link" href="community.html">Community</a>
+            <a class="mobile-menu-link" href="live.html">Live</a>
+            <a class="mobile-menu-link" href="resources.html">Resources</a>
+            <a class="mobile-menu-link" href="give.html">Give</a>
         </div>
+
         <div class="top-splash-welcome">
             <h1 class="headline">Community</h1></div>
 
@@ -81,7 +82,7 @@
                 <!-- Sections for each submenu item -->
 
                 <section class="inner-page-section" id="life-groups">
-                    <h2 class="heading-2">Life Groups</h2>
+                    <h2 class="heading-2">Small Groups</h2>
                     <div
                         style="display: flex; justify-content: center; align-items: center;">
                         <button onclick="location.href='lifegroup.html'"
@@ -131,21 +132,391 @@
                 </section>
                 <section class="inner-page-section" id="ministries">
                     <h2 class="heading-2">Ministries</h2>
-                    <p class="body-text">Details about Ministries...</p>
-                    <p class="body-text">Ministry groups
-                        Youth: Youth ministry takes place through our sunday
-                        school lessons and one-on-one dicipleship with Pastor
-                        Jerry (jerry.ornelas@cpcnewhaven.org). along with
-                        seasonal activities.
+                    <div class="submenu-container">
+                        <div class="submenu-menu">
+                            <!-- indented under ministries the following -->
+                            <a href="#children">Children</a>
+                            <a href="#youth">Youth</a>
+                            <a href="#undergraduate">Undergraduate</a>
+                            <a href="#graduate">Graduate</a>
+                            <a href="#mercy">Mercy</a>
+                            <a href="#men">Men</a>
+                            <a href="#women">Women</a>
+                        </div>
+                    </div>
+                    <section class="inner-page-section" id="children">
+                        <h2 class="heading-2">Children's Christian
+                            Education</h2>
+                        <p class="body-text">
+                            In an attempt to assist our covenant families in
+                            raising their children in the grace of the gospel,
+                            we have developed a thoughtful and comprehensive
+                            approach towards providing your children with deep
+                            and enduring roots in the Christian faith. Our
+                            philosophy emphasizes close parent/church
+                            cooperation. As a result, our strategy for
+                            "making disciples" seeks to be primarily relational
+                            rather than programmatic.
+                        </p>
+                        <p class="body-text">
+                            Our curriculum represents both a deductive and
+                            inductive approach to education that is intended to
+                            give our children a lasting and full knowledge of
+                            the Christian faith. Our goal, then, is to help our
+                            children become faithful disciples of Christ, well
+                            prepared to live and defend the Gospel into the 21st
+                            century.
+                        </p>
+                        <p class="body-text">
+                            By the time a child leaves their home, they will
+                            have been trained in:
+                        </p>
+                        <ul class="body-text">
+                            <li>A comprehensive study of the Bible in all its
+                                various periods</li>
+                            <li>A systematic study and review of the essential
+                                teachings of the classic/evangelical Christian
+                                faith</li>
+                            <li>A precious collection of classic hymns to assist
+                                in private and public worship</li>
+                            <li>A practical and personal knowledge of Christ as
+                                experienced within the loving community of a
+                                Christ-centered church</li>
+                            <li>Deductive Bible Study: Children review the
+                                Westminster Shorter Catechisms and learn hymns
+                                often used in worship</li>
+                            <li>Inductive Bible Study: Each Sunday School class
+                                studies the Scripture using lessons and
+                                curricula most suited to each age</li>
+                        </ul>
+                    </section>
+                    <section class="inner-page-section" id="youth">
+                        <h2 class="heading-2">Youth</h2>
+                        <p class="body-text">
+                            Our youth ministry at CPC is the capstone of our
+                            broader children's ministry, and targets both junior
+                            and senior high. We have many various goings-on
+                            throughout the year, but here are some of the
+                            offerings we have for our youth:
+                        </p>
+                        <ul class="body-text">
+                            <li><strong>Sunday School:</strong> CPC's Sunday
+                                School program goes from preschool through
+                                graduation. Our goal is to partner with parents
+                                in the Christian discipleship of their kids, in
+                                order that our kids ultimately embrace the
+                                gospel of grace for themselves.</li>
+                            <li><strong>Converge Theology Camp:</strong> For one
+                                week each summer we set aside time to dig deep
+                                into the Bible and tackle issues of faith, such
+                                as apologetics, theology, and church
+                                history.</li>
+                            <li><strong>One-On-One Discipleship:</strong> Beyond
+                                our calendar events, we seek to schedule
+                                one-on-one time with students for discipleship.
+                                This takes the form of going out for lunch, ice
+                                cream, or anything that gives us an opportunity
+                                to deepen relationships and minister to the
+                                students' needs.</li>
+                        </ul>
+                        <p class="body-text">
+                            For any inquiries regarding our youth ministry,
+                            contact <a href="#"><span>Jerry Ornelas</span></a>
+                        </p>
+                    </section>
+                    <section class="inner-page-section" id="undergraduate">
+                        <h2 class="heading-2">Undergraduate</h2>
+                        <p class="body-text">
+                            CPC's college ministry is a collection of students
+                            from wide-ranging backgrounds gathered under the
+                            banner of Jesus Christ. Mostly made up of Yale,
+                            Southern (SCSU) and Gateway students, the college
+                            ministry also includes students from other area
+                            universities.
+                            CPC seeks to help students love Christ, love the
+                            church, and love the campus life to which they are
+                            called. Because we love the campus, we send campus
+                            ministers to the campus, but above all, we invite
+                            students to take part in the fullness of Christ
+                            through CPC's rich, communal Sunday morning worship.
+                            Students, please honor us with your presence and
+                            unique gifts!
+                        </p>
+                        <p class="body-text">
+                            <strong>One-on-One and Small Group
+                                Discipleship</strong><br>
+                            Depending on the need of the students or campus, we
+                            are also deeply committed to individual and small
+                            group discipleship on campus. This has been
+                            happening at Yale and Southern, and we look to serve
+                            students of all local campuses (Quinnipiac, Gateway,
+                            and Albertus Magnus) in the future.
+                        </p>
+                        <p class="body-text">
+                            <strong>Bridging the Church-Campus Gap</strong><br>
+                            This is our internship program for college students
+                            interested in learning more, investing more, being
+                            more knit in to the family of God. It is a great
+                            opportunity to serve, receive valuable theological
+                            training, and have practical experiences and
+                            opportunities within the church. Go here for more
+                            information on the internship.
+                        </p>
+                        <p class="body-text">
+                            <strong>Athletes in Action</strong><br>
+                            CPC supports several on-campus ministries at Yale
+                            including Athletes in Action: One World To Reach,
+                            One Language of Sport, One Message of Victory.
+                            Athletes in Action is a student-led sports ministry
+                            dedicated to building a community of fellowship
+                            founded in the loving character of Jesus Christ. We
+                            seek to reach out to students through large group
+                            meetings, fun activities, and individual
+                            connections. We welcome people of all backgrounds to
+                            explore the Christian faith. We meet weekly during
+                            the academic year and have Bible studies throughout
+                            the week, fellowship activities, and retreats
+                            throughout the year.
+                        </p>
+                        <p class="body-text">
+                            For all things college-related, contact Jerry
+                            Ornelas.
+                        </p>
+                    </section>
+                    <section class="inner-page-section" id="graduate">
+                        <h2 class="heading-2">Graduate</h2>
+                        <p class="body-text">
+                            The Graduate group exists to minister to men and
+                            women in their post-college years as they follow God
+                            through their academic, vocational, and relational
+                            callings. We seek to develop a deeper love for
+                            Christ and a richer involvement in the life of the
+                            Church.
+                        </p>
+                        <p class="body-text">
+                            <strong>Community</strong><br>
+                            The Grad Student Life Group meets weekly on
+                            Thursdays at 7pm @CPC for fellowship and study.
+                            Studies will be designed to help grad students think
+                            biblically about key topics relevant to them. We
+                            want the group to engage heart and mind as we pray
+                            together, share our lives together, and help each
+                            other walk faithfully. Contact Craig for more
+                            information. COVID-19 Update - We're continuing to
+                            meet via Zoom, Meeting ID 650-823-415.
+                        </p>
+                        <p class="body-text">
+                            <strong>On Campus Mini-Groups</strong><br>
+                            In many areas of campus, like the med school, law
+                            school, divinity school, and graduate school, we
+                            will begin small groups with the intent of providing
+                            respite from the busy yet often lonely life of a
+                            grad student. Meeting during the day throughout the
+                            week, these will include Scripture reading and
+                            meditation, prayer, and fellowship. Contact Craig to
+                            get involved in one near you.
+                        </p>
+                        <p class="body-text">
+                            <strong>Vocational Seminars</strong><br>
+                            Our church is blessed to have congregants in many
+                            fields that Graduates will enter, so these seminars
+                            will bring them together with students in that
+                            field. The goals include building multi-generational
+                            relationships, fostering a biblical worldview that
+                            is vocation-specific, and encouraging students on
+                            their journey. Stay tuned for dates and times
+                            throughout the year.
+                        </p>
+                        <p class="body-text">
+                            <strong>Get Involved</strong><br>
+                            Join the church family for School of Discipleship
+                            classes, Sunday Studies, church-wide events, and
+                            work days! You can also become a leader within the
+                            Graduate Group or through other ministries at CPC.
+                            We also have the following internships available:
+                        </p>
+                        <p class="body-text">
+                            For all things related to Graduates, contact Craig
+                            Luekens.
+                        </p>
+                    </section>
+                    <section class="inner-page-section" id="mercy">
+                        <h2 class="heading-2">Mercy</h2>
+                        <p class="body-text">Details about Mercy ministry...</p>
+                        <p class="body-text">
+                            THE QUESTION ANSWERED THEN AND NOW
+                            Imprisoned and faced with the ultimate cost of
+                            Christian discipleship, John the Baptist sent his
+                            disciples to inquire of Jesus, “Are you the one who
+                            is to come or shall we look for another?’” When
+                            John’s disciples found Jesus, his answer was as
+                            relevant then as it is today. Busy healing the sick,
+                            giving sight to the blind and casting out evil
+                            influences to those who were hopeless, Christ
+                            invoked the expectations of the prophets as
+                            validation of his messianic authenticity.
+                            Go and tell John what you have seen and heard: the
+                            blind receive their sight, the lame walk, lepers are
+                            cleansed, and the deaf hear, the dead are raised up,
+                            the poor have good news preached to them. (Luke
+                            7:22, cf. Isaiah 35:5f, 61:1)
+                            John’s question then is no less a question often
+                            raised today by the faithful and cynic alike. Are
+                            you (the body of Christ) legit? CPC envisions the
+                            embodiment of the same response of doing mercy under
+                            the power of Christ’s ascension ministry today, both
+                            in word and deed, as validation to the relevancy and
+                            power of Jesus Christ in our midst.
+                            As concerns the sacred “family of God,” we discern
+                            in Galatians 6:10, that along with the mandate to
+                            “do good to all” commanded of all Christians, there
+                            is the all-important adage, “and especially the
+                            household of faith" enjoined upon the local church
+                            especially. The biblical mandate to take care of one
+                            another in the family of God is both to preserve
+                            authentic and holistic love and effective witness.
+                            By this all will know that you are My disciples, if
+                            you have love for one another. (John 13:34-35)
+                            With these and other passages in mind, our church
+                            consensus concerning our privilege and duty to love
+                            one another in both inward and outward ways is
+                            summarized in our historic consensus of what the
+                            scriptures principally teach:
+                            All saints, that are united to Jesus Christ their
+                            head, by his Spirit, and by faith, have fellowship
+                            with him in his graces, sufferings, death,
+                            resurrection, and glory: and, being united to one
+                            another in love, they have communion in each other's
+                            gifts and graces, and are obliged to the performance
+                            of such duties, public and private, as do conduce to
+                            their mutual good, both in the inward and outward
+                            man. (Westminster Confession of Faith *Chapter 26
+                            section 1)
+                        </p>
+                        <p class="body-text">
+                            MERCY BEGINS WITH PARTICIPATING IN A CPC LIFE GROUP
+                            At CPC, participating in mercy begins with actively
+                            participating in one of our many Life Groups within
+                            and around greater New Haven. Each life group is as
+                            a "church in miniature" wherein we are each "seen"
+                            and "known" so that just "one-anothering" at a more
+                            intimate level facilitates mercy with and for one
+                            another often before a situation reaches a crisis.
+                            Each Life Group is assigned a trained Life Group
+                            Mercy Coordinator to assist each group's care for
+                            one another as needs arise. This care includes
+                            sharing in prayer, emotional and spiritual support,
+                            and tangible assistance as needed. If you are
+                            interested in doing and/or receiving mercy in an
+                            authentic and holistic way, start by joining a life
+                            group.
+                            Current Life Mercy Group Coordinators:
+                            Downtown New Haven Thursday: Allison Luekens
+                            Downtown New Haven Wednesday: Anna Graham
+                            East Rock: Bennie Finch
+                            Hamden/Cheshire: Elena Gerard
+                            West Side: Christine Hauser
+                            Trumbull: Ruth Phillips
+                            Shoreline: Meg Bogue
+                        </p>
+                        <p class="body-text">
+                            MERCY THAT INVOLVES THE VARIETY OF GIFTS AND ASSETS
+                            OF THE FULL BODY OF CHRIST AT CPC
+                            As needs become greater than can be dealt with at
+                            the Life Group level, or the need for a special
+                            expertise or asset not represented in the group is
+                            needed including financial assistance, the greater
+                            CPC body of Christ is made available. This is
+                            coordinated by the CPC Mercy Coordinator with the
+                            assistance and oversight of the Sr. Pastor. The CPC
+                            Coordinator works with the CPC Mercy Team consisting
+                            of CPC Life Coordinators and other select persons
+                            with skills or training relevant to the kinds of
+                            mercy needs that arise. This team meets quarterly or
+                            as needed to review the needs of the body of Christ
+                            and make recommendations to the Servant Leader Board
+                            and/or CPC Shepherds as needed.
+                            CPC Mercy Co-Coordinator: Kaitlyn Jessee
+                            CPC Mercy Co-Coordinator: David Korver
+                            Mercy Pastoral Liaison: Craig Luekens
+                        </p>
+                        <p class="body-text">
+                            IN NEED OF FINANCIAL ASSISTANCE?
+                            The CPC Mercy Fund is financed by our annual
+                            designated Christmas offering. We encourage all of
+                            our members and regular attenders to participate in
+                            this fund in the spirit of Acts 2:44-45: And all who
+                            believed were together and had all things in common.
+                            And they were selling their possessions and
+                            belongings and distributing the proceeds to all, as
+                            any had need.
+                            The process for applying for financial assistance
+                            ideally originates from the potential recipient,
+                            assisted by his/her Life Group Mercy Coordinator,
+                            filling out the CPC Mercy Fund application. Once the
+                            application is filled out, the two will then contact
+                            the CPC Mercy Coordinator who will in turn review
+                            with Sr. Pastor, and as needed other relevant
+                            members of the Mercy Team, toward presenting the
+                            request for approval by the Shepherd Leader Board.
+                            Those qualified to receive financial assistance must
+                            fulfill the following criteria:
+                            Complete Financial Mercy Fund Application
+                            Be a member in good standing of CPC New Haven (some
+                            exceptions can be made by those who are in process
+                            of becoming a member as a regular attender.)
+                            The recipient must agree to actively participate in
+                            a CPC Life Group.
+                        </p>
+                        <p class="body-text">
+                            MERCY PROJECT AND IMPACT WEEK
+                            One form of helping meet the outward needs of a
+                            person can be in the form of seeking assistance for
+                            projects that might not always require financial
+                            assistance but the "know-how" of someone in the
+                            congregation. A Mercy project can range from seeking
+                            help in financial planning, ride to the doctor, a
+                            home repair project, etc. Again, the first step
+                            would be to seek the assistance of your Life Group
+                            Mercy Coordinator. In the event that the Life Group
+                            needs the assistance of the greater Church, the CPC
+                            Mercy Coordinator is contacted wherein the full
+                            gifts and vocations of the body of Christ can be
+                            accessed. We also encourage everyone in the church
+                            to "tithe" a day or two vacation and participate in
+                            our annual Impact Week and the opportunity to do
+                            Mercy through Youth Camp and Mercy Projects
+                            throughout the city.
+                        </p>
+                    </section>
+                    <section class="inner-page-section" id="men">
+                        <h2 class="heading-2">Men</h2>
+                        <p class="body-text">
+                            The mission of CPC’s Men’s Ministry is to provide
+                            all men the opportunity to experience genuine
+                            Christian fellowship, build strong friendships, grow
+                            spiritually, and reach unbelieving friends. Through
+                            these opportunities, men will increasingly
+                            experience the transformative power of the Gospel of
+                            Jesus Christ in all spheres of their lives to the
+                            glory of God.
+                        </p>
+                    </section>
+                    <section class="inner-page-section" id="women">
+                        <h2 class="heading-2">Women</h2>
+                        <p class="body-text">
+                            Women at CPC are encouraged to live their lives in a
+                            gospel-centered (missional, sacramental,
+                            confessional, and communal) manner. We hope to see
+                            the fullness of the image of God expressed in both
+                            men and women, as they work in partnership with one
+                            another for the glory of God. Women's events seek to
+                            minister to women in their various phases and
+                            spheres of life.
+                        </p>
+                    </section>
+                </div>
 
-                        Collage Students: We love students! Contact Pastor Jerry
-                        (jerry.ornelas@cpcnewhaven.org)
-
-                        Graduate Students: We have several different weekly
-                        optians. If interested in graduate student ministry,
-                        please contact Pastor Craig
-                        (craig.mccartney@cpcnewhaven.org)</p>
-                </section>
                 <section class="inner-page-section" id="membership">
                     <h2 class="heading-2">Membership</h2>
                     <p class="body-text">Throughout history, special
@@ -211,9 +582,9 @@
                 <section class="inner-page-section" id="gallery">
                     <h2 class="heading-2">Gallery</h2>
                     <div class="gallery">
-                        <img src="https://via.placeholder.net/300x200"
+                        <img src="./assets/websiteBG/community-1.jpg"
                             alt="Church Life Image 1">
-                        <img src="https://via.placeholder.net/300x200"
+                        <img src="./assets/websiteBG/community-2.jpg"
                             alt="Church Life Image 2">
                         <img src="https://via.placeholder.net/300x200"
                             alt="Church Life Image 3">
@@ -231,6 +602,7 @@
                     <p class="body-text">Welcome to the Digital Yearbook 2024!
                         Explore the memories and highlights of our community
                         throughout the year.</p>
+                    <span>Coming Soon!</span>
 
                     <div class="yearbook-preview">
                         <p class="body-text">Details about Digital Yearbook
@@ -249,5 +621,6 @@
                 <script
                     src="./src/js/background-fetch-splash-image.js"></script>
                 <script src="./src/js/load-community-events.js"></script>
+                <script src="./src/js/function_toggle_mobileMenu.js"></script>
             </body>
         </html>

@@ -9,10 +9,8 @@ body {
     font-family: "Barlow", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: #fff;
-    /* White background for a clean look */
     padding-bottom: 200px;
-    /* Added padding at the bottom */
+    padding-right: 10px;
 }
 
 h1,
@@ -26,6 +24,10 @@ h4 {
 a {
     color: black;
     text-decoration: underline;
+}
+
+span {
+    font-weight: 900;
 }
 
 button {
@@ -336,6 +338,19 @@ p {
     /* Darker on hover */
     transform: scale(1.1);
     /* Slightly larger on hover */
+}
+
+.social-links-horizontal {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-links-horizontal a:hover {
+    color: rgb(98, 98, 98);
 }
 
 .fab {
@@ -699,7 +714,7 @@ p {
 
 
 #mobile-menu-logo {
-    width: 300px;
+    width: 100px;
     height: auto;
 }
 
