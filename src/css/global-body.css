@@ -164,7 +164,6 @@ input::placeholder {
 section {
     display: flex;
     flex-direction: column;
-    padding: 20px;
     margin-bottom: 20px;
     border-radius: 5px;
     text-align: left;
@@ -386,11 +385,13 @@ p {
     text-align: center;
     line-height: 95%;
     transition: background-color 0.3s, color 0.3s;
+    border-radius: 5px;
 }
 
 .submenu-menu a:hover {
-    background-color: #1c89ff;
+    background-color: #1c95ff;
     color: #fff;
+
 }
 
 
@@ -541,11 +542,17 @@ p {
     overflow: hidden;
 }
 
-
+.link-color-black {
+    color: #000;
+    text-decoration: underline;
+    font-weight: 900;
+}
 
 .sermon-info {
     text-align: center;
-    padding: 20px;
+    padding: 10px;
+    margin: 0px;
+    line-height: 95%;
 }
 
 .social-links {
