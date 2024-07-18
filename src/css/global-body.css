@@ -892,6 +892,7 @@ p {
     width: 100%;
     table-layout: fixed;
     border-collapse: collapse;
+    margin: auto;
 }
 
 .upcoming-event-table th {
