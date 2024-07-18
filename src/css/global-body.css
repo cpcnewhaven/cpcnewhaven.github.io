@@ -157,6 +157,8 @@ input::placeholder {
 .body-text {
     font-size: 18px;
     margin: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 
@@ -423,7 +425,8 @@ p {
 
 .inner-page-section {
     width: 100%;
-    min-height: 76vh;
+    min-height: 20vh;
+    padding-top: 20px;
     display: flex;
 }
 
