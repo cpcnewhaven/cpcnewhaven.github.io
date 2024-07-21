@@ -53,9 +53,9 @@
         </div>
         <section>
             <div class="center-content">
-                <div class="video-container">
-                    <iframe width="720" height="315"
-                        src="https://www.youtube.com/embed/o6LNZDcqKxI?si=31PeJoGH54BENolR"
+                <div class="video-container" style="margin-top: 100px;">
+                    <iframe id="sermon-video" width="720" height="315"
+                        src=""
                         title="YouTube video player" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         referrerpolicy="strict-origin-when-cross-origin"
@@ -120,23 +120,8 @@
                     href="#">135 Whitney Ave - New Haven, CT | Sunday Worship
                     10:30am </a>
             </footer>
-            <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                fetch('./data/upcomingSermon.json')
-                    .then(response => response.json())
-                    .then(data => {
-                        const activeSermon = data.find(sermon => sermon.active);
-                        if (activeSermon) {
-                            document.getElementById('sermon-title').textContent = activeSermon.title;
-                            document.getElementById('sermon-scripture').textContent = activeSermon.scripture;
-                            document.getElementById('sermon-date').textContent = new Date(activeSermon.date).toLocaleDateString();
-                            document.getElementById('sermon-author').textContent = activeSermon.author;
-                            document.getElementById('bulletin-link').href = 'bulletin_link_here'; // Update with actual link if available
-                        }
-                    })
-                    .catch(error => console.error('Error fetching sermon data:', error));
-            });
-        </script>
+
             <script src="./src/js/function_toggle_mobileMenu.js"></script>
+            <script src="./src/js/live-logic.js"></script>
         </body>
     </html>

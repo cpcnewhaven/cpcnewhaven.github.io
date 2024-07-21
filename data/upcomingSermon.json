@@ -1,20 +1,20 @@
 [
   {
-    "title": "That You May Know: Unconditional Grace and the Hardening of Pharaoh’s Heart",
+    "title": "That You May Know: Unconditional Grace and the Hardening of Pharaoh's Heart",
     "author": "Rev. Craig Luekens",
     "scripture": "Exodus 7:1-13",
     "date": "2024-06-16",
     "active": false
   },
   {
-    "title": "There Will Be Blood: God’s Judgment and Our Only Hope",
+    "title": "There Will Be Blood: God's Judgment and Our Only Hope",
     "author": "Rev. Craig Luekens",
     "scripture": "Exodus 7:14-25",
     "date": "2024-06-23",
     "active": false
   },
   {
-    "title": "The Hardening of Pharaoh's Heart & God’s Zeal To Deliver His People",
+    "title": "The Hardening of Pharaoh's Heart & God's Zeal To Deliver His People",
     "author": "Rev. Jerry Ornelas",
     "scripture": "Exodus 9:16-17, 27-28; 10:1-2, 27",
     "date": "2024-06-30",
@@ -26,7 +26,16 @@
     "author": "Rev. Preston Graham",
     "scripture": "Revelation 22:1-15",
     "date": "2024-07-14",
-    "active": true
+    "active": false
 
+  },
+  {
+    "title": "You've Been Warned: Darkness and the Grace of God",
+    "author": "Rev. Craig Luekens",
+    "scripture": "Exodus 10: 21-11.10",
+    "date": "2024-07-21",
+    "active": true,
+    "youtube_url": "https://www.youtube.com/live/Xkd97K3eT5g?si=lUND2fNAkJWzzjF9",
+    "bulletin_url": "data/bulletins/Bulletin_2024-07-21_.pdf"
   }
 ]
