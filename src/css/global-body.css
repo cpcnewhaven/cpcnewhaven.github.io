@@ -13,6 +13,10 @@ body {
     padding-right: 10px;
 }
 
+h1 {
+    font-size: 71px!important;
+}
+
 h1,
 h2,
 h3,
@@ -253,6 +257,10 @@ a {
     width: 100%;
     align-items: center;
     justify-content: center;
+}
+
+.list-left {
+    text-align: left;
 }
 
 /*Top SPlashes */
