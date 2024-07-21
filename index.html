@@ -9,7 +9,6 @@
       content="CPC New Haven, Church, New Haven, CT, Worship, Fellowship">
     <meta name="author" content="CPC New Haven">
     <title>CPC New Haven Church</title>
-    <link rel="stylesheet" href="./src/css/upcoming-worship-preview.css">
     <link rel="stylesheet" href="./src/css/global-body.css">
     <link rel="stylesheet" href="src/css/footer.css">
     <link rel="stylesheet" href="./src/css/global-nav-bar.css">
@@ -71,29 +70,25 @@
         <div class="worship-container">
           <div class="worship-widget">
             <div class="center-content">
-              <img src="./assets/podcast-thumbnails/7.14.24 - CPC.jpg" alt="Sermon Image" class="sermon-image">
-             
-              </div>
-            </div>
-            <div class="worship-widget">
-              <div>
-                <p class="bold">Latest Sermon</p>
-                    <p id="sermonTitle" class="asermon-title"></p>
-                    <p id="sermonScripture" class="asermon-scripture"></p>
-                    <p id="pastorName" class="asermon-pastor"></p>
-                  <button class="play-button" onclick="openSpotify()">
-                    <i class="fas fa-play"></i>
-                  </button>
-                <a href="https://www.youtube.com/c/CPCNewHaven/live">Link for
-                  Latest Podcast Sermon</a>
-                <a
-                  href="https://cpcnewhaven.ccbchurch.com/goto/forms/2/responses/new">Request
-                  for Prayer or Pastoral Visit</a>
-              </div>
+              <img src="./assets/podcast-thumbnails/7.14.24 - CPC.jpg" alt="Sermon Image" class="asermon-image">
             </div>
           </div>
+          <div class="worship-widget">
+            <div>
+              <h4>Latest Sermon</h4>
+              <p id="sermonTitle" class="asermon-title"></p>
+              <p id="sermonScripture" class="asermon-scripture"></p>
+              <p id="pastorName" class="asermon-pastor"></p>
+              <button class="play-button" onclick="openSpotify()">
+                <i class="fas fa-play"></i>
+              </button>
+              <a id="sermonYoutube" href="#" target="_blank">Watch on YouTube</a>
+              <a id="sermonBulletin" href="#" target="_blank">View Bulletin</a>
+              <a href="https://www.youtube.com/c/CPCNewHaven/live">Link for Latest Podcast Sermon</a>
+              <a href="https://cpcnewhaven.ccbchurch.com/goto/forms/2/responses/new">Request for Prayer or Pastoral Visit</a>
+            </div>
           </div>
-          
+        </div>
       </section>
       <section id="about">
         <div class="mid-splash-welcome">
@@ -188,13 +183,8 @@
     <!-- Working SCRIPTS-->
     <script src="./src/js/fetch-events-preview.js"></script>
     <script src="./src/nav-code.js"></script>
-    <script src="./src/background-change_connect.js"></script>
-    <script src="./src/background-change_events.js"></script>
-    <script src="./src/background-change_podcasts.js"></script>
-    <script src="./src/background-change_worship.js"></script>
     <script src="./src/announcements.js"></script>
     <!-- Fetch Latest 3 Podcasts and Display on Homepage -->
-    <!--script src="./src/js/homepage-fetch-latestPodcasts.js"></script-->
     <script src="./src/js/fetch-highlights-display-homepage.js"></script>
     <!-- CLOSE AND TOGGLE NAVIGATION -->
     <script src="./src/js/function_toggle_mobileMenu.js"></script>
