@@ -1063,3 +1063,18 @@ p {
     margin: 20px 0;
     /* Adjust margins to fit with the page layout */
 }
+
+.splash-custom {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.splash-custom img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
