@@ -14,7 +14,7 @@ body {
 }
 
 h1 {
-    font-size: 71px!important;
+    font-size: 71px !important;
 }
 
 h1,
@@ -23,7 +23,7 @@ h3,
 h4 {
     font-family: "Barlow", sans-serif;
     line-height: 95%;
-    
+
 }
 
 a {
@@ -164,7 +164,7 @@ input::placeholder {
     margin: auto;
     padding-top: 10px;
     padding-bottom: 10px;
-    text-align: left!important;
+    text-align: left !important;
 }
 
 
@@ -307,8 +307,17 @@ p {
     background-color: rgba(0, 60, 109, 0.002);
     color: rgb(0, 0, 0);
     backdrop-filter: blur(5px);
-    /* Blur effect for glass-like appearance */
+}
 
+.mid-splash-welcome.sticky {
+    position: -webkit-sticky;
+    /* For Safari */
+    position: sticky;
+    top: 0;
+    z-index: 500;
+    /* Ensure it stays above other content */
+    background-color: white;
+    /* Optional: to avoid transparency issues */
 }
 
 .splash-image {
@@ -435,7 +444,7 @@ p {
 
 .inner-page-section {
     width: 100%;
-    min-height: 20vh;
+    min-height: 100vh;
     padding-top: 20px;
     display: flex;
 }
@@ -580,7 +589,7 @@ p {
 }
 
 .asermon-title {
-    font-size: 32px!important;
+    font-size: 32px !important;
     line-height: 95%;
     font-weight: 700;
     margin-bottom: 10px;
@@ -592,14 +601,15 @@ p {
     margin-bottom: 10px;
 }
 
-.sermon-preacher, .sermon-scripture {
+.sermon-preacher,
+.sermon-scripture {
     font-size: 18px;
     font-weight: 400;
     margin-bottom: 5px;
 }
 
 .asermon-scripture {
-    font-size: 18px!important;
+    font-size: 18px !important;
     font-weight: 700;
     margin-bottom: 5px;
 }
@@ -608,30 +618,39 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%; /* Full width */
+    width: 100%;
+    /* Full width */
     height: 60px;
-    background: rgba(0, 0, 0, 0.705); /* Glass effect */
+    background: rgba(0, 0, 0, 0.705);
+    /* Glass effect */
     color: white;
     border: none;
-    border-radius: 10px; /* Slightly rounded corners */
+    border-radius: 10px;
+    /* Slightly rounded corners */
     cursor: pointer;
     margin: 20px auto;
     transition: background-color 0.3s, box-shadow 0.3s;
-    backdrop-filter: blur(10px); /* Glass effect */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08); /* Soft shadow */
-    padding: 10px; /* Padding for better spacing */
+    backdrop-filter: blur(10px);
+    /* Glass effect */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+    /* Soft shadow */
+    padding: 10px;
+    /* Padding for better spacing */
 }
 
 .play-button:hover {
     color: black;
-    background-color: rgba(255, 255, 255, 0.3); /* Slightly more opaque on hover */
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2), 0 4px 6px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
+    background-color: rgba(255, 255, 255, 0.3);
+    /* Slightly more opaque on hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2), 0 4px 6px rgba(0, 0, 0, 0.15);
+    /* Stronger shadow on hover */
 }
 
 
 
 .play-button span {
-    font-size: 1.2em; /* Adjust text size */
+    font-size: 1.2em;
+    /* Adjust text size */
     font-weight: bold;
 }
 
@@ -651,7 +670,8 @@ p {
 
 .sermon-image {
     width: 100%;
-    padding-top: 100%; /* 1:1 Aspect Ratio */
+    padding-top: 100%;
+    /* 1:1 Aspect Ratio */
     position: relative;
     overflow: hidden;
 }
