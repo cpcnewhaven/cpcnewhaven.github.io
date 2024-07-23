@@ -30,9 +30,7 @@
                 <a href="live.html">Live</a>
                 <a href="resources.html">Resources</a>
                 <a href="give.html">Give</a>
-
             </nav>
-
         </header>
         <!-- MOBILE HAMBURGER -->
         <div class="hamburger-menu-button-container" id="hamburgerMenu">
@@ -58,34 +56,33 @@
         </div>
 
         <style>
-                .give-menu {
-    display: flex;
-    justify-content: center;
-}
+            .give-menu {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh; /* Full height to center vertically */
+            }
 
-.give-menu-item {
-    flex: 1; /* Each item takes equal width */
-    margin: 0 10px; /* Spacing between columns */
-    text-align: center; /* Center-align the text and button */
-}
+            .give-menu-item {
+                text-align: center; /* Center-align the text and button */
+            }
 
-.give-menu-item button {
-    width: 100%; /* Full width buttons */
-    margin-bottom: 10px; /* Space between button and description */
-}
-            </style>
+            .give-menu-item button {
+                width: 200px; /* Fixed width for the button */
+                margin-bottom: 10px; /* Space between button and description */
+            }
+        </style>
         <div class="top-splash-welcome">
             <h1 class="headline">Give</h1>
         </div>
         <section>
-
             <div class="center-content">
-                <div class="give-menu"
-                    style="display: flex; justify-content: center;">
-                    <div class="give-menu-item">
-                        <a
-                            href="https://secure.acceptiva.com/?cst=3bc0a4"><button
-                                class="cta-button">Give Now</button></a>
+                <div class="give-menu">
+                    <div class="center-content">
+                        <div class="give-menu-item">
+                            <a href="https://secure.acceptiva.com/?cst=3bc0a4">
+                                <button class="cta-button">Give Now</button>
+                            </a></div>
                         <p>Your generous donation helps us serve the community
                             and fulfill our mission.</p>
                     </div>
@@ -100,47 +97,46 @@
         </footer>
         <script>
         document.addEventListener('DOMContentLoaded', function() {
-    var header = document.getElementById('myHeader');
-	  var page = document.getElementById('page');
-    var openMenuButton = document.getElementById('openmenu');
+            var header = document.getElementById('myHeader');
+            var page = document.getElementById('page');
+            var openMenuButton = document.getElementById('openmenu');
 
-    window.addEventListener('scroll', function() {
-				page.classList.remove('menuopen');
-        if (window.scrollY >= 100) {
-            header.classList.add('sticky');
-        } else {
-            header.classList.remove('sticky');
-        }
-    });
+            window.addEventListener('scroll', function() {
+                page.classList.remove('menuopen');
+                if (window.scrollY >= 100) {
+                    header.classList.add('sticky');
+                } else {
+                    header.classList.remove('sticky');
+                }
+            });
 
-    // Event listener to remove the sticky class when the button is clicked
-    openMenuButton.addEventListener('click', function() {
-        header.classList.remove('sticky');
-				page.classList.add('menuopen');
-    });
-	
-	var links = document.querySelectorAll('a[href^="#"]');
+            // Event listener to remove the sticky class when the button is clicked
+            openMenuButton.addEventListener('click', function() {
+                header.classList.remove('sticky');
+                page.classList.add('menuopen');
+            });
 
-    links.forEach(function(link) {
-        link.addEventListener('click', function(event) {
-            // Prevent the default action
-            event.preventDefault();
+            var links = document.querySelectorAll('a[href^="#"]');
 
-            // Get the target element
-            var targetId = this.getAttribute('href');
-            var targetElement = document.querySelector(targetId);
+            links.forEach(function(link) {
+                link.addEventListener('click', function(event) {
+                    // Prevent the default action
+                    event.preventDefault();
 
-            // Smooth scroll to target
-            if (targetElement) {
-                targetElement.scrollIntoView({
-                    behavior: 'smooth'
+                    // Get the target element
+                    var targetId = this.getAttribute('href');
+                    var targetElement = document.querySelector(targetId);
+
+                    // Smooth scroll to target
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
                 });
-            }
+            });
         });
-    });
-});
-
-    </script>
+        </script>
         <script src="./src/js/function_toggle_mobileMenu.js"></script>
     </body>
 </html>
