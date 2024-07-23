@@ -1,66 +1,17 @@
 {
   "events": [
     {
-      "day": "FRIDAY",
-      "date": "MAR 1",
-      "time": "7:00 pm",
-      "title": "Yale M Basketball vs. Dartmouth",
+      "day": "WEDNESDAY",
+      "date": "JUL 10",
+      "time": "2:00 pm",
+      "title": "Golf Outing",
       "detailsLink": "#"
     },
     {
       "day": "SATURDAY",
-      "date": "MAR 2",
-      "time": "3:00 pm",
-      "title": "Yale W. Basketball vs. Columbia",
-      "detailsLink": "#"
-    },
-    {
-      "day": "SUNDAY",
-      "date": "MAR 3",
-      "time": "1:00 pm",
-      "title": "Yale Gymnastics",
-      "detailsLink": "#"
-    },
-    {
-      "day": "SATURDAY",
-      "date": "MAR 9",
-      "time": "7:00 pm",
-      "title": "Yale M Basketball vs. Brown",
-      "detailsLink": "#"
-    },
-    {
-      "day": "THURSDAY",
-      "date": "MAR 14",
-      "time": "3:00 pm",
-      "title": "Women's Book Club",
-      "detailsLink": "#"
-    },
-    {
-      "day": "SUNDAY",
-      "date": "MAR 24",
-      "time": "1:00 pm",
-      "title": "FREE New Haven Symphony Orchestra Young People's Concert",
-      "detailsLink": "#"
-    },
-    {
-      "day": "THURSDAY",
-      "date": "APR 11",
-      "time": "3:00 pm",
-      "title": "Women's Book Club",
-      "detailsLink": "#"
-    },
-    {
-      "day": "THURSDAY",
-      "date": "MAY 9",
-      "time": "3:00 pm",
-      "title": "Women's Book Club",
-      "detailsLink": "#"
-    },
-    {
-      "day": "THURSDAY",
-      "date": "JUN 13",
-      "time": "3:00 pm",
-      "title": "Women's Book Club",
+      "date": "JUL 13",
+      "time": "1:15 pm",
+      "title": "Golf Outing",
       "detailsLink": "#"
     }
   ]
