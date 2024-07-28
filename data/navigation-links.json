@@ -1,0 +1,26 @@
+{
+  "mainNavigation": [
+    { "text": "Home", "href": "index.html" },
+    { "text": "Sundays", "href": "worship.html" },
+    { "text": "About", "href": "about.html" },
+    { "text": "Podcasts", "href": "podcasts.html" },
+    { "text": "Events", "href": "events.html" },
+    { "text": "Announcements", "href": "announcements.html" },
+    { "text": "Community", "href": "community.html" },
+    { "text": "Live", "href": "live.html" },
+    { "text": "Resources", "href": "resources.html" },
+    { "text": "Give", "href": "give.html" }
+  ],
+  "mobileNavigation": [
+    { "text": "Home", "href": "index.html" },
+    { "text": "Worship", "href": "worship.html" },
+    { "text": "About", "href": "about.html" },
+    { "text": "Podcasts", "href": "podcasts.html" },
+    { "text": "Events", "href": "events.html" },
+    { "text": "Announcements", "href": "announcements.html" },
+    { "text": "Community", "href": "community.html" },
+    { "text": "Live", "href": "live.html" },
+    { "text": "Resources", "href": "resources.html" },
+    { "text": "Give", "href": "give.html" }
+  ]
+}

@@ -23,6 +23,7 @@ h3,
 h4 {
     font-family: "Barlow", sans-serif;
     line-height: 95%;
+    margin: 0px;
 
 }
 
@@ -163,6 +164,8 @@ input::placeholder {
 
 .heading-2 {
     font-size: 48px;
+    margin: 0px;
+    margin: auto;
 }
 
 .body-text {
@@ -170,8 +173,14 @@ input::placeholder {
     margin: auto;
 
     text-align: left !important;
-    margin-top: 20px;
-    margin-bottom: 20px;
+}
+
+.center-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-width: 100%;
 }
 
 
