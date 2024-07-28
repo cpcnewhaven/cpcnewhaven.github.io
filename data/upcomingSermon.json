@@ -34,8 +34,17 @@
     "author": "Rev. Craig Luekens",
     "scripture": "Exodus 10: 21-11.10",
     "date": "2024-07-21",
-    "active": true,
+    "active": false,
     "youtube_url": "https://www.youtube.com/live/Xkd97K3eT5g?si=lUND2fNAkJWzzjF9",
     "bulletin_url": "data/bulletins/Bulletin_2024-07-21_.pdf"
+  },
+  {
+    "title": "You are What You Eat: Redemption and the Feast of Feasts",
+    "author": "Rev. Craig Luekens",
+    "scripture": "Exodus 12:1-28",
+    "date": "2024-07-28",
+    "active": true,
+    "youtube_url": "https://www.youtube.com/watch?v=OVPI0ytJ--k",
+    "bulletin_url": "data/bulletins/bulletin_2024-07-28.pdf"
   }
 ]

@@ -25,7 +25,6 @@
                 <a href="live.html">Live</a>
                 <a href="resources.html">Resources</a>
                 <a href="give.html">Give</a>
-
             </nav>
         </header>
 
@@ -44,103 +43,76 @@
             <a class="mobile-menu-link" href="about.html">About</a>
             <a class="mobile-menu-link" href="podcasts.html">Podcasts</a>
             <a class="mobile-menu-link" href="events.html">Events</a>
-            <a class="mobile-menu-link"
-                href="announcements.html">Announcements</a>
+            <a class="mobile-menu-link" href="announcements.html">Announcements</a>
             <a class="mobile-menu-link" href="community.html">Community</a>
             <a class="mobile-menu-link" href="live.html">Live</a>
             <a class="mobile-menu-link" href="resources.html">Resources</a>
             <a class="mobile-menu-link" href="give.html">Give</a>
         </div>
-        <section>
-            <div class="center-content">
-                <div class="video-container" style="margin-top: 100px;">
-                    <iframe id="sermon-video" width="720" height="315"
-                        src
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin"
-                        allowfullscreen></iframe>
-                </div>
-            </div>
+        <section id="youtube-feed">
+            <div class="center-content" style="margin-top: 100px;">
+            <iframe width="720" height="315" src="https://www.youtube.com/embed/OVPI0ytJ--k?si=G-bUB5oNeCgzgqSL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
         </section>
-        <section class=>
+        
+
+        <script>
+            fetch('data/upcomingSermon.json')
+                .then(response => response.json())
+                .then(data => {
+                    const activeSermon = data.find(sermon => sermon.active);
+                    if (activeSermon && activeSermon.youtube_url) {
+                        document.getElementById('sermon-video').src = activeSermon.youtube_url;
+                    }
+                })
+                .catch(error => console.error('Error fetching sermon data:', error));
+        </script>
+
+        <section>
             <div class="worship-widget-ab">
                 <section class="sermon-infoa">
                     <h1 id="sermon-title">Sermon Title</h1>
-                    <p>Passage Text: <span
-                            id="sermon-scripture">John
-                            3:16</span>
-                        <p>Preacher: <span
-                                id="sermon-author">John Doe</span></p>
-                        <p>Date: <span id="sermon-date">April
-                                10, 2023</span></p>
-                        <p><a id="bulletin-link" href="#"
-                                target="_blank">Download Bulletin</a></p>
-                    </section>
-                </div>
-
-                <section class="notification-signup">
-                    <h2>Get Notified when Live</h2>
-                    <form>
-                        <input type="email" placeholder="Email Address"
-                            required>
-                        <input type="tel" placeholder="Phone Number">
-                        <br><br>
-                        <div
-                            style="display: flex; justify-content: center; align-items: center;">
-                            <button type="submit">Subscribe</button>
-                        </div>
-                    </form>
-                </section>
-                <section class="sharing-instructions">
-                    <h2>Help Us Spread the Word</h2>
-                    <p>Share our live stream link on your social media
-                        platforms.
-                        Let your friends and family know how they can join us
-                        online
-                        for our services. Every share helps us reach more people
-                        with our message of hope and community.</p>
-                </section>
-                <h2>Follow and Share</h2>
-                <section class="social-links-horizontal">
-
-                    <a href="https://www.instagram.com" target="_blank"><i
-                            class="fab fa-instagram"></i> Instagram</a>
-                    <a href="https://www.facebook.com" target="_blank"><i
-                            class="fab fa-facebook-f"></i> Facebook</a>
-                    <a href="https://www.youtube.com" target="_blank"><i
-                            class="fab fa-youtube"></i> YouTube</a>
-                    <a href="https://open.spotify.com" target="_blank"><i
-                            class="fab fa-spotify"></i> Spotify</a>
-                    <a href="https://podcasts.apple.com" target="_blank"><i
-                            class="fab fa-apple"></i>Apple Podcasts</a>
+                    <p>Passage Text: <span id="sermon-scripture">John 3:16</span></p>
+                    <p>Preacher: <span id="sermon-author">John Doe</span></p>
+                    <p>Date: <span id="sermon-date">April 10, 2023</span></p>
+                    <p><a id="bulletin-link" href="#" target="_blank">Download Bulletin</a></p>
                 </section>
             </div>
-            <section id="footer-cta-a" class="styled-section-a">
-                <div class="form-container">
-                    <h2>Subscribe to our Newsletter</h2>
-                    <p class="body-text">Stay Connected with the Latest and
-                        Greatest from
-                        CPC New Haven</p>
-                    <form action="https://formspree.io/f/meojowwg" method="POST"
-                        class="neumorphic-form">
-                        <input type="text" name="name" placeholder="Your name"
-                            required>
-                        <!-- Added name input -->
-                        <input type="email" name="email"
-                            placeholder="Your email" required>
-                        <button type="submit">Subscribe to CPC New
-                            Haven</button>
-                    </form>
-                </div>
-            </section>
-            <footer>
-                <a id="fixedlink" target="_blank" rel="nofollow noopener"
-                    href="#">135 Whitney Ave - New Haven, CT | Sunday Worship
-                    10:30am </a>
-            </footer>
 
-            <script src="./src/js/function_toggle_mobileMenu.js"></script>
-            <script src="./src/js/live-logic.js"></script>
-        </body>
-    </html>
+
+            <section class="sharing-instructions">
+                <h2>Help Us Spread the Word</h2>
+                <p>Share our live stream link on your social media platforms.
+                    Let your friends and family know how they can join us online
+                    for our services. Every share helps us reach more people
+                    with our message of hope and community.</p>
+            </section>
+            <h2>Follow and Share</h2>
+            <section class="social-links-horizontal">
+                <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+                <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a>
+                <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i> YouTube</a>
+                <a href="https://open.spotify.com" target="_blank"><i class="fab fa-spotify"></i> Spotify</a>
+                <a href="https://podcasts.apple.com" target="_blank"><i class="fab fa-apple"></i>Apple Podcasts</a>
+            </section>
+        </div>
+        <section id="footer-cta-a" class="styled-section-a">
+            <div class="form-container">
+                <h2>Subscribe to our Newsletter</h2>
+                <p class="body-text">Stay Connected with the Latest and Greatest from CPC New Haven</p>
+                <form action="https://formspree.io/f/meojowwg" method="POST" class="neumorphic-form">
+                    <input type="text" name="name" placeholder="Your name" required>
+                    <!-- Added name input -->
+                    <input type="email" name="email" placeholder="Your email" required>
+                    <button type="submit">Subscribe to CPC New Haven</button>
+                </form>
+            </div>
+        </section>
+        <footer>
+            <a id="fixedlink" target="_blank" rel="nofollow noopener" href="#">135 Whitney Ave - New Haven, CT | Sunday Worship 10:30am </a>
+        </footer>
+
+        <script src="./src/js/function_toggle_mobileMenu.js"></script>
+        <script src="./src/js/live-logic.js"></script>
+    </body>
+</html>
