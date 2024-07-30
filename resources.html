@@ -23,7 +23,7 @@
 <header id="stickyHeader" class="sticky">
     <nav class="main-navigation">
         <a href="index.html">Home</a>
-        <a href="worship.html">Worship</a>
+        <a href="worship.html">Sundays</a>
         <a href="about.html">About</a>
         <a href="podcasts.html">Podcasts</a>
         <a href="events.html">Events</a>
@@ -40,6 +40,32 @@
 
 .dashboard-container {
     display: flex;
+}
+
+.bulletin-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.bulletin-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.bulletin-table a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.1em;
+}
+
+.bulletin-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.bulletin-table tr:hover {
+    background-color: #ddd;
 }
 
 .sidebar {
@@ -84,6 +110,19 @@
     flex-grow: 1;
     padding: 20px;
     margin-left: 250px;
+}
+
+/* Add these styles to your resources.css file */
+
+.bulletin-table a {
+    text-decoration: underline;
+    color: #333;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+
+.bulletin-table a:hover {
+    color: #007BFF; /* Change to your preferred hover color */
 }
 
 @media (max-width: 768px) {
@@ -135,7 +174,7 @@
 
         <h2>Table of Contents</h2>
         <ul>
-            <li><a href="#handouts">Adult Sunday Studies Handouts</a></li>
+            <li><a href="#handouts">Adult Sunday Studies</a></li>
             <li><a href="#bulletin-section">Bulletin Archive</a></li>
             <li><a href="#links-youtube-playlist">Sing at Home Playlist</a></li>
             <li><a href="#social-media">Social Media Links</a></li>
@@ -151,40 +190,47 @@
 
         <section class="splash-image" id="home-image"></section>
         <section id="handouts" class="inner-page-section" style="margin-top: 5px; margin-bottom: 200px;">
-            <h1>Adult Sunday Studies Handouts</h1>
+            <h1>Adult Sunday Studies</h1>
             <!-- Content for Handouts Adult Sunday Studies -->
             <br>
             <div style="text-align:left!important; padding-left:120px;">
             <h3 style="text-align:left; ">Handouts for "What We Believe" Class</h3>
-            <ul>
-                <li><a href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">
-                    Theology of Fasting
-                </a></li>
-                <li><a href="https://cpmfiles1.com/cpcnewhaven.org/the-narrow-road-to-new-life.pdf">
-                    Devotional The Narrow Road to Life</a>
-                 </a></li>
-                 <li><a href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">
-                     Theology of Fasting
-                 </a></li>
-                 <li><a href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_2-practices.pdf"">
-                     Practices of Fasting
-                 </a></li>
-            </ul>
+     
             <br>
-            <h3>Handouts for "Confessional Theology" Class</h3>
+            <img src="./assets/podcast-thumbnails/7.07.24 - CPC.jpg" style="width: 100%;">
+            <h3>Handouts for "What We Believe" Class</h3>
             <ul>
-                <li><a href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">
-                    Theology of Fasting
-                </a></li>
-                <li><a href="https://cpmfiles1.com/cpcnewhaven.org/the-narrow-road-to-new-life.pdf">
-                    Devotional The Narrow Road to Life</a>
-                 </a></li>
-                 <li><a href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">
-                     Theology of Fasting
-                 </a></li>
-                 <li><a href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_2-practices.pdf"">
-                     Practices of Fasting
-                 </a></li>
+                <li><a href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">1. Intro, Prologomena, Epistemology</a></li>
+                <li><a href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">2. Revelation - General and Special</a></li>
+                <li><a href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">3. Special Revelation, Biblical Interpretation</a></li>
+                <li><a href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">4. Biblical Interpretation, cont.</a></li>
+                <li><a href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">5. Doctrine of God - Attributes & Trinity</a></li>
+                <li><a href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">[Special SS on Christian Formation]</a></li>
+                <li><a href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">6. Doctrine of God - Attributes & Trinity, cont.</a></li>
+                <li><a href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">7. Doctrine of God</a></li>
+                <li><a href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">8. Creation & Providence</a></li>
+                <li><a href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">9. Humanity</a></li>
+                <li><a href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">10. Original Sin</a></li>
+                <li><a href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">11. Original Sin, cont.</a></li>
+                <li><a href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">12. Review & Preview thru Biblical Covenants</a></li>
+                <li><a href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">13. Person of Christ</a></li>
+                <li><a href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">14. Person of Christ, cont.</a></li>
+                <li><a href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">15. Work of Christ (Incar. and Atonement)</a></li>
+                <li><a href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">16. Work of Christ, cont. (Resurrection and Ascension)</a></li>
+                <li><a href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">17. Consummation & Judgment</a></li>
+                <li><a href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">18. Means of Grace - Total Christ & the Church</a></li>
+                <li><a href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">19. Means of Grace - Church as Communion & Institution</a></li>
+                <li><a href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">20. Means of Grace - Church Power</a></li>
+                <li><a href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">21. Means of Grace - Sacraments</a></li>
+                <li><a href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">22. Effectual Calling & Regeneration</a></li>
+                <li><a href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">23. Saving Faith & Repentance</a></li>
+                <li><a href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">24. Justification & Adoption</a></li>
+                <li><a href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">25. Sanctification</a></li>
+                <li><a href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">26. Assurance & Perseverance</a></li>
+                <li><a href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">27. Good Works, the Law of God, Christian Liberty, Prayer</a></li>
+                <li><a href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">28. Calling & Spheres; Church & State issues</a></li>
+                <li><a href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">29. Sexuality & Gender</a></li>
+                <li><a href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">30. Sexuality & Gender, cont.</a></li>
             </ul>
         </div>
         </section>
@@ -194,9 +240,17 @@
         <section id="bulletin-section" style="min-height: 50vh; margin-top: 5px; margin-bottom: 100px;" class="inner-page-section">
             <h1>Bulletin Archive</h1>
             <div class="center-content">
-                <a href="./data/bulletins/Bulletin_2024-07-21_.pdf">Bulletin from July 21, 2024</a>
-                <a href="./data/bulletins/bulletin_2024-07-14.pdf">Bulletin from July 14, 2024</a>
-                <a href="./data/bulletins/bulletin_2024-06-23.pdf">Bulletin from June 23, 2024</a>
+                <table class="bulletin-table">
+                    <tr>
+                        <td><a href="./data/bulletins/Bulletin_2024-07-21_.pdf">Bulletin from July 21, 2024</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="./data/bulletins/bulletin_2024-07-14.pdf">Bulletin from July 14, 2024</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="./data/bulletins/bulletin_2024-06-23.pdf">Bulletin from June 23, 2024</a></td>
+                    </tr>
+                </table>
             </div>
         </section>
 
