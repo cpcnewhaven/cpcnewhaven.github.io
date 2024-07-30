@@ -35,7 +35,74 @@
 
     </nav>
 </header>
+<style>
+    /* Add these styles to your resources.css file */
 
+.dashboard-container {
+    display: flex;
+}
+
+.sidebar {
+    width: 220px;
+    background-color: #f4f4f4;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    position: fixed;
+    height: 100vh;
+}
+
+.sidebar h1 {
+    font-size: 2rem!important;
+}
+
+.sidebar-logo {
+    width: 100px; /* Adjust the size as needed */
+    display: block;
+    margin: 0 auto 20px auto; /* Center the logo and add bottom margin */
+}
+
+.sidebar h1, .sidebar h2 {
+    text-align: center; /* Center align the headings */
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 10px 0;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.1em;
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+    margin-left: 250px;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        box-shadow: none;
+    }
+
+    .main-content {
+        margin-left: 0;
+    }
+
+    .dashboard-container {
+        flex-direction: column;
+    }
+}
+</style>
 
         <!-- MOBILE HAMBURGER -->
         <div class="hamburger-menu-button-container" id="hamburgerMenu">
@@ -60,103 +127,115 @@
             <a class="mobile-menu-link" href="give.html">Give</a>
         </div>
 
-<div class="top-splash-welcome">
-    <h1 class="headline">Resources</h1>
-</div>
+<div class="dashboard-container">
+    <!-- Sidebar -->
+    <div class="sidebar fixed-sidebar">
+        <img src="./assets/CPC_LOGO_24.png" class="sidebar-logo">
+        <h1>Resources</h1>
 
-<div class="submenu-container">
-    <div class="submenu-menu">
-        <a href="#handouts">Adult Sunday Studies Handouts</a>
-        <!-- indednt under small groups the following -->
-        <a href="#bulletin-section">Bulletin Archive</a>
-        <a href="#links-youtube-playlist">Sing at Home Playlist</a>
-        <a href="#social-media">Social Media Links</a>
+        <h2>Table of Contents</h2>
+        <ul>
+            <li><a href="#handouts">Adult Sunday Studies Handouts</a></li>
+            <li><a href="#bulletin-section">Bulletin Archive</a></li>
+            <li><a href="#links-youtube-playlist">Sing at Home Playlist</a></li>
+            <li><a href="#social-media">Social Media Links</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="top-splash-welcome">
+        </div>
+
+    
+
+        <section class="splash-image" id="home-image"></section>
+        <section id="handouts" class="inner-page-section" style="margin-top: 5px; margin-bottom: 200px;">
+            <h1>Adult Sunday Studies Handouts</h1>
+            <!-- Content for Handouts Adult Sunday Studies -->
+            <br>
+            <div style="text-align:left!important; padding-left:120px;">
+            <h3 style="text-align:left; ">Handouts for "What We Believe" Class</h3>
+            <ul>
+                <li><a href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">
+                    Theology of Fasting
+                </a></li>
+                <li><a href="https://cpmfiles1.com/cpcnewhaven.org/the-narrow-road-to-new-life.pdf">
+                    Devotional The Narrow Road to Life</a>
+                 </a></li>
+                 <li><a href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">
+                     Theology of Fasting
+                 </a></li>
+                 <li><a href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_2-practices.pdf"">
+                     Practices of Fasting
+                 </a></li>
+            </ul>
+            <br>
+            <h3>Handouts for "Confessional Theology" Class</h3>
+            <ul>
+                <li><a href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">
+                    Theology of Fasting
+                </a></li>
+                <li><a href="https://cpmfiles1.com/cpcnewhaven.org/the-narrow-road-to-new-life.pdf">
+                    Devotional The Narrow Road to Life</a>
+                 </a></li>
+                 <li><a href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">
+                     Theology of Fasting
+                 </a></li>
+                 <li><a href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_2-practices.pdf"">
+                     Practices of Fasting
+                 </a></li>
+            </ul>
+        </div>
+        </section>
+
+
+
+        <section id="bulletin-section" style="min-height: 50vh; margin-top: 5px; margin-bottom: 100px;" class="inner-page-section">
+            <h1>Bulletin Archive</h1>
+            <div class="center-content">
+                <a href="./data/bulletins/Bulletin_2024-07-21_.pdf">Bulletin from July 21, 2024</a>
+                <a href="./data/bulletins/bulletin_2024-07-14.pdf">Bulletin from July 14, 2024</a>
+                <a href="./data/bulletins/bulletin_2024-06-23.pdf">Bulletin from June 23, 2024</a>
+            </div>
+        </section>
+
+        <section id="links-youtube-playlist" class="inner-page-section">
+            <h1>Sing at Home Playlist</h1>
+            <div class="center-content list-left">
+                <a href="https://www.youtube.com/c/CPCNewHaven/live">CPC New Haven - Sunday Mourning Music</a>
+            </div>
+        </section>
+
+        <section id="social-media" class="inner-page-section">
+            <div class="center-content">
+                <h1>Our Social Media Channels</h1>
+                <div class="subscribe-icons-a">
+                    <a href="https://open.spotify.com/show/22kjUJyC0VH3cMfCSe9kEk?si=843112804a664618" target="_blank"><i
+                            class="fab fa-spotify"></i></a>
+                    <a href="your_apple_podcasts_link" target="_blank"><i
+                            class="fab fa-apple"></i></a>
+                    <a href="https://www.youtube.com/@CPCNewHaven" target="_blank"><i
+                            class="fab fa-youtube"></i></a>
+                </div></div>
+        </section>
+        <section id="footer-cta-a" class="styled-section-a">
+            <div class="form-container">
+              <h2>Subscribe to our Newsletter</h2>
+              <p class="body-text center-text">Our weekly newsletter goes out on Friday mornings with
+                Sunday Service information, highlights, upcoming events, and useful links.</p>
+              <form action="https://formspree.io/f/meojowwg" method="POST"
+                class="neumorphic-form">
+                <input type="text" name="name" placeholder="Your name" required>
+                <!-- Added name input -->
+                <input type="email" name="email" placeholder="Your email" required>
+                <button type="submit">Subscribe to CPC New Haven</button>
+              </form>
+            </div>
+          </section>
     </div>
 </div>
-<section class="splash-image" id="home-image"></section>
-<section id="handouts" class="inner-page-section" style="margin-top: 5px; margin-bottom: 200px;">
-    <h1>Adult Sunday Studies Handouts</h1>
-    <!-- Content for Handouts Adult Sunday Studies -->
-    <br>
-    <div style="text-align:left!important; padding-left:120px;">
-    <h3 style="text-align:left; ">Handouts for "What We Believe" Class</h3>
-    <ul>
-        <li><a href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">
-            Theology of Fasting
-        </a></li>
-        <li><a href="https://cpmfiles1.com/cpcnewhaven.org/the-narrow-road-to-new-life.pdf">
-            Devotional The Narrow Road to Life</a>
-         </a></li>
-         <li><a href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">
-             Theology of Fasting
-         </a></li>
-         <li><a href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_2-practices.pdf"">
-             Practices of Fasting
-         </a></li>
-    </ul>
-    <br>
-    <h3>Handouts for "Confessional Theology" Class</h3>
-    <ul>
-        <li><a href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">
-            Theology of Fasting
-        </a></li>
-        <li><a href="https://cpmfiles1.com/cpcnewhaven.org/the-narrow-road-to-new-life.pdf">
-            Devotional The Narrow Road to Life</a>
-         </a></li>
-         <li><a href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">
-             Theology of Fasting
-         </a></li>
-         <li><a href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_2-practices.pdf"">
-             Practices of Fasting
-         </a></li>
-    </ul>
-</div>
-</section>
 
-
-
-<section id="bulletin-section" style="min-height: 50vh; margin-top: 5px; margin-bottom: 100px;" class="inner-page-section">
-    <h1>Bulletin Archive</h1>
-    <div class="center-content">
-        <a href="./data/bulletins/Bulletin_2024-07-21_.pdf">Bulletin from July 21, 2024</a>
-        <a href="./data/bulletins/bulletin_2024-07-14.pdf">Bulletin from July 14, 2024</a>
-        <a href="./data/bulletins/bulletin_2024-06-23.pdf">Bulletin from June 23, 2024</a>
-    </div>
-</section>
-
-<section id="links-youtube-playlist" class="inner-page-section">
-    <h1>Sing at Home Playlist</h1>
-    <div class="center-content list-left">
-        <a href="https://www.youtube.com/c/CPCNewHaven/live">CPC New Haven - Sunday Mourning Music</a>
-    </div>
-</section>
-
-<section id="social-media" class="inner-page-section">
-    <div class="center-content">
-        <h1>Our Social Media Channels</h1>
-        <div class="subscribe-icons-a">
-            <a href="https://open.spotify.com/show/22kjUJyC0VH3cMfCSe9kEk?si=843112804a664618" target="_blank"><i
-                    class="fab fa-spotify"></i></a>
-            <a href="your_apple_podcasts_link" target="_blank"><i
-                    class="fab fa-apple"></i></a>
-            <a href="https://www.youtube.com/@CPCNewHaven" target="_blank"><i
-                    class="fab fa-youtube"></i></a>
-        </div></div>
-</section>
-<section id="footer-cta-a" class="styled-section-a">
-    <div class="form-container">
-      <h2>Subscribe to our Newsletter</h2>
-      <p class="body-text center-text">Our weekly newsletter goes out on Friday mornings with
-        Sunday Service information, highlights, upcoming events, and useful links.</p>
-      <form action="https://formspree.io/f/meojowwg" method="POST"
-        class="neumorphic-form">
-        <input type="text" name="name" placeholder="Your name" required>
-        <!-- Added name input -->
-        <input type="email" name="email" placeholder="Your email" required>
-        <button type="submit">Subscribe to CPC New Haven</button>
-      </form>
-    </div>
-  </section>
 <footer>
     <a id="fixedlink" target="_blank" rel="nofollow noopener"
         href="#">135 Whitney Ave - New Haven, CT | Sunday Worship
