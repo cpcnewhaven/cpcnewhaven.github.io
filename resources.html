@@ -140,6 +140,135 @@
         flex-direction: column;
     }
 }
+
+/* New styles for list tables */
+.list-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.list-table li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.list-table li:last-child {
+    border-bottom: none;
+}
+
+.list-table a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1em;
+    transition: color 0.3s ease;
+}
+
+.list-table a:hover {
+    color: #007BFF;
+}
+
+.list-number {
+    font-weight: bold;
+    margin-right: 10px;
+    min-width: 30px;
+}
+
+@media (max-width: 768px) {
+    .list-table li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .list-number {
+        margin-bottom: 5px;
+    }
+}
+
+/* Updated styles for the WWB section */
+#handouts, #spotify-playlists {
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+#handouts h1, #spotify-playlists h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.wwb-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.wwb-content img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+.wwb-content h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.list-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+}
+
+.list-table li {
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.list-table li:hover {
+    background-color: #f0f0f0;
+}
+
+.list-table a {
+    display: block;
+    padding: 15px;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.list-table a:hover {
+    color: #007BFF;
+}
+
+.list-number {
+    display: inline-block;
+    width: 30px;
+    text-align: right;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .wwb-content {
+        padding: 0 10px;
+    }
+
+    .list-table li {
+        margin-bottom: 10px;
+    }
+
+    .list-number {
+        display: block;
+        width: auto;
+        text-align: left;
+        margin-bottom: 5px;
+    }
+}
 </style>
 
         <!-- MOBILE HAMBURGER -->
@@ -187,231 +316,223 @@
                 </div>
 
                 <section class="splash-image" id="home-image"></section>
-                <section id="handouts" class="inner-page-section"
-                    style="margin-top: 5px; margin-bottom: 200px;">
+                <section id="handouts" class="inner-page-section">
                     <h1>Adult Sunday Studies</h1>
-                    <!-- Content for Handouts Adult Sunday Studies -->
-                    <br>
-                    <div style="text-align:left!important; padding-left:120px;">
-
-                        <br>
-                        <img src="./assets/podcast-thumbnails/7.07.24 - CPC.jpg"
-                            style="width: 100%;">
+                    <div class="wwb-content">
+                        <img src="./assets/podcast-thumbnails/wwb.jpg"
+                            alt="What We Believe">
                         <h3>Handouts for "What We Believe" Class</h3>
-                        <ul>
-                            <li><a
-                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">1.
+                        <ul class="list-table">
+                            <li><span class="list-number">1.</span><a
+                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">
                                     Intro, Prologomena, Epistemology</a></li>
-                            <li><a
-                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">2.
+                            <li><span class="list-number">2.</span><a
+                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">
                                     Revelation - General and Special</a></li>
-                            <li><a
-                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">3.
+                            <li><span class="list-number">3.</span><a
+                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">
                                     Special Revelation, Biblical
                                     Interpretation</a></li>
-                            <li><a
-                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">4.
+                            <li><span class="list-number">4.</span><a
+                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">
                                     Biblical Interpretation, cont.</a></li>
-                            <li><a
-                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">5.
+                            <li><span class="list-number">5.</span><a
+                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">
                                     Doctrine of God - Attributes &
                                     Trinity</a></li>
-                            <li><a
-                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">[Special
-                                    SS on Christian Formation]</a></li>
-                            <li><a
-                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">6.
+                            <li><span class="list-number">[Special
+                                    SS on Christian Formation]</span><a
+                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf"></a></li>
+                            <li><span class="list-number">6.</span><a
+                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">
                                     Doctrine of God - Attributes & Trinity,
                                     cont.</a></li>
-                            <li><a
-                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">7.
+                            <li><span class="list-number">7.</span><a
+                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">
                                     Doctrine of God</a></li>
-                            <li><a
-                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">8.
+                            <li><span class="list-number">8.</span><a
+                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">
                                     Creation & Providence</a></li>
-                            <li><a
-                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">9.
+                            <li><span class="list-number">9.</span><a
+                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">
                                     Humanity</a></li>
-                            <li><a
-                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">10.
+                            <li><span class="list-number">10.</span><a
+                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">
                                     Original Sin</a></li>
-                            <li><a
-                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">11.
+                            <li><span class="list-number">11.</span><a
+                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">
                                     Original Sin, cont.</a></li>
-                            <li><a
-                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">12.
+                            <li><span class="list-number">12.</span><a
+                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">
                                     Review & Preview thru Biblical
                                     Covenants</a></li>
-                            <li><a
-                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">13.
+                            <li><span class="list-number">13.</span><a
+                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">
                                     Person of Christ</a></li>
-                            <li><a
-                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">14.
+                            <li><span class="list-number">14.</span><a
+                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">
                                     Person of Christ, cont.</a></li>
-                            <li><a
-                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">15.
+                            <li><span class="list-number">15.</span><a
+                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">
                                     Work of Christ (Incar. and
                                     Atonement)</a></li>
-                            <li><a
-                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">16.
+                            <li><span class="list-number">16.</span><a
+                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">
                                     Work of Christ, cont. (Resurrection and
                                     Ascension)</a></li>
-                            <li><a
-                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">17.
+                            <li><span class="list-number">17.</span><a
+                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">
                                     Consummation & Judgment</a></li>
-                            <li><a
-                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">18.
+                            <li><span class="list-number">18.</span><a
+                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">
                                     Means of Grace - Total Christ & the
                                     Church</a></li>
-                            <li><a
-                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">19.
+                            <li><span class="list-number">19.</span><a
+                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">
                                     Means of Grace - Church as Communion &
                                     Institution</a></li>
-                            <li><a
-                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">20.
+                            <li><span class="list-number">20.</span><a
+                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">
                                     Means of Grace - Church Power</a></li>
-                            <li><a
-                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">21.
+                            <li><span class="list-number">21.</span><a
+                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">
                                     Means of Grace - Sacraments</a></li>
-                            <li><a
-                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">22.
+                            <li><span class="list-number">22.</span><a
+                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">
                                     Effectual Calling & Regeneration</a></li>
-                            <li><a
-                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">23.
+                            <li><span class="list-number">23.</span><a
+                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">
                                     Saving Faith & Repentance</a></li>
-                            <li><a
-                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">24.
+                            <li><span class="list-number">24.</span><a
+                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">
                                     Justification & Adoption</a></li>
-                            <li><a
-                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">25.
+                            <li><span class="list-number">25.</span><a
+                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">
                                     Sanctification</a></li>
-                            <li><a
-                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">26.
+                            <li><span class="list-number">26.</span><a
+                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">
                                     Assurance & Perseverance</a></li>
-                            <li><a
-                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">27.
+                            <li><span class="list-number">27.</span><a
+                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">
                                     Good Works, the Law of God, Christian
                                     Liberty, Prayer</a></li>
-                            <li><a
-                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">28.
+                            <li><span class="list-number">28.</span><a
+                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">
                                     Calling & Spheres; Church & State
                                     issues</a></li>
-                            <li><a
-                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">29.
+                            <li><span class="list-number">29.</span><a
+                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">
                                     Sexuality & Gender</a></li>
-                            <li><a
-                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">30.
+                            <li><span class="list-number">30.</span><a
+                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">
                                     Sexuality & Gender, cont.</a></li>
                         </ul>
                     </div>
                 </section>
-                <section id="spotify-playlists" class="inner-page-section"
-                    style="margin-top: 5px; margin-bottom: 200px;">
+                <section id="spotify-playlists" class="inner-page-section">
                     <h1>What We Believe: Spotify Playlist</h1>
-                    <br>
-                    <div style="text-align:left!important; padding-left:120px;">
-                        <br>
-                        <img src="./assets/spotify-logo.png"
-                            style="width: 100px; margin-bottom: 20px;">
+                    <div class="wwb-content">
+                        <img src="./assets/spotify-logo.png" alt="Spotify Logo"
+                            style="width: 100px;">
                         <h3>CPC New Haven "What We Believe" Class Playlists</h3>
-                        <ul>
-                            <li><a
-                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">1.
+                        <ul class="list-table">
+                            <li><span class="list-number">1.</span><a
+                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">
                                     Intro - Why Theology?</a></li>
-                            <li><a
-                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">2.
+                            <li><span class="list-number">2.</span><a
+                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">
                                     How Could the Finite ever Know the
                                     Infinite?</a></li>
-                            <li><a
-                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">3.
+                            <li><span class="list-number">3.</span><a
+                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">
                                     What is the Bible?</a></li>
-                            <li><a
-                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">4.
+                            <li><span class="list-number">4.</span><a
+                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">
                                     How do we Interpret the Bible?</a></li>
-                            <li><a
-                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">5.
+                            <li><span class="list-number">5.</span><a
+                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">
                                     Beholding Who God is</a></li>
-                            <li><a
-                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">6.
+                            <li><span class="list-number">6.</span><a
+                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">
                                     Beholding Who God Is, cont. (Attributes &
                                     Trinity)</a></li>
-                            <li><a
-                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">7.
+                            <li><span class="list-number">7.</span><a
+                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">
                                     Beholding Who God Is, cont.
                                     (Trinity)</a></li>
-                            <li><a
-                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">8.
+                            <li><span class="list-number">8.</span><a
+                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">
                                     Doctrine of God the Creator</a></li>
-                            <li><a
-                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">9.
+                            <li><span class="list-number">9.</span><a
+                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">
                                     Doctrine of Humanity - What is a
                                     Human?</a></li>
-                            <li><a
-                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">10.
+                            <li><span class="list-number">10.</span><a
+                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">
                                     Doctrine of Sin - What Have We
                                     Done?!</a></li>
-                            <li><a
-                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">11.
+                            <li><span class="list-number">11.</span><a
+                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">
                                     Implications of our Doctrine of Sin</a></li>
-                            <li><a
-                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">12.
+                            <li><span class="list-number">12.</span><a
+                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">
                                     Review & Preview thru Covenant
                                     Theology</a></li>
-                            <li><a
-                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">13.
+                            <li><span class="list-number">13.</span><a
+                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">
                                     The Person of Christ</a></li>
-                            <li><a
-                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">14.
+                            <li><span class="list-number">14.</span><a
+                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">
                                     The Person of Christ, cont.</a></li>
-                            <li><a
-                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">15.
+                            <li><span class="list-number">15.</span><a
+                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">
                                     The Work of Christ</a></li>
-                            <li><a
-                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">16.
+                            <li><span class="list-number">16.</span><a
+                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">
                                     The Work of Christ, cont.</a></li>
-                            <li><a
-                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">17.
+                            <li><span class="list-number">17.</span><a
+                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">
                                     The Work of Christ in Judgment and
                                     Consummation</a></li>
-                            <li><a
-                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">18.
+                            <li><span class="list-number">18.</span><a
+                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">
                                     The Church and Total Christ</a></li>
-                            <li><a
-                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">19.
+                            <li><span class="list-number">19.</span><a
+                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">
                                     The Church as Communion and
                                     Institution</a></li>
-                            <li><a
-                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">20.
+                            <li><span class="list-number">20.</span><a
+                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">
                                     Church Government</a></li>
-                            <li><a
-                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">21.
+                            <li><span class="list-number">21.</span><a
+                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">
                                     Sacraments</a></li>
-                            <li><a
-                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">22.
+                            <li><span class="list-number">22.</span><a
+                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">
                                     Election and Effectual Calling</a></li>
-                            <li><a
-                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">23.
+                            <li><span class="list-number">23.</span><a
+                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">
                                     Faith and Repentance</a></li>
-                            <li><a
-                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">24.
+                            <li><span class="list-number">24.</span><a
+                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">
                                     Justification and Adoption</a></li>
-                            <li><a
-                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">25.
+                            <li><span class="list-number">25.</span><a
+                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">
                                     Sanctification</a></li>
-                            <li><a
-                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">26.
+                            <li><span class="list-number">26.</span><a
+                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">
                                     Assurance & Perseverance</a></li>
-                            <li><a
-                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">27.
+                            <li><span class="list-number">27.</span><a
+                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">
                                     Good Works & Law of God</a></li>
-                            <li><a
-                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">28.
+                            <li><span class="list-number">28.</span><a
+                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">
                                     Vocations</a></li>
-                            <li><a
-                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">29.
+                            <li><span class="list-number">29.</span><a
+                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">
                                     Marriage, Sex & Gender</a></li>
-                            <li><a
-                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">30.
+                            <li><span class="list-number">30.</span><a
+                                    href="https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf">
                                     Marriage, Sex & Gender, cont.</a></li>
                         </ul>
                     </div>
