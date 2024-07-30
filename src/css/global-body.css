@@ -464,6 +464,20 @@ p {
 
 }
 
+@media (max-width: 767px) {
+    .submenu-container {
+        display: none;
+    }
+
+    .submenu-menu {
+        display: none;
+    }
+
+    .mobile-navigation .submenu {
+        display: none;
+    }
+}
+
 
 .inner-page-section {
     width: 100%;
