@@ -10,6 +10,7 @@
         <meta name="author" content="CPC New Haven">
         <title>Events - CPC New Haven Church</title>
         <link rel="stylesheet" href="./src/css/global-body.css">
+        <link rel="stylesheet" href="./src/css/events.css">
         <link rel="stylesheet" href="src/css/footer.css">
 
         <link rel="stylesheet"
@@ -112,23 +113,24 @@
                     </table>
                 </div>
             </section>
-
-
-
-
-            <section class="inner-page-section" id="connect-board">
-                <h2 class="heading-2">Connect Board</h2>
-                <div id="communityEventsTableContainer"></div>
-                <div class="center-content">
-                    <a
-                        href="https://cpcnewhaven.ccbchurch.com/goto/forms/135/responses/new">
-                        <button>Have an Idea for the Connect
-                            Board? </button></a></div>
+            <div class="center-content">See more events on the <a
+                    class="link-color-black"
+                    href="./connect.html">Connect
+                    Board</a></div>
+            <section id="event-calendar" class="inner-page-section">
+                <h2>Yearly Calendar</h2>
+                <div id="calendar-container"></div>
+                <div id="calendar-controls">
+                    <button id="prev-month">Previous</button>
+                    <span id="current-month"></span>
+                    <button id="next-month">Next</button>
+                </div>
             </section>
 
-          
-
-
+         
+            
+            </div>
+        </div>
 
         <section id="footer-cta-a" class="styled-section-a">
             <div class="form-container">
@@ -277,10 +279,5 @@
                 });
             });
         </script>
-
-
-
-<script src="./src/js/populate-navigation.js"></script>
-<script src="./src/js/load-community-events.js"></script>
     </body>
 </html>
