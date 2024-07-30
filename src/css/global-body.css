@@ -467,13 +467,14 @@ p {
 
 .inner-page-section {
     width: 100%;
-    min-height: 100vh;
+
     padding-top: 20px;
+    margin: 0;
     display: flex;
 }
 
 .inner-page-section h2 {
-    margin-top: 150px;
+    margin-top: 10px;
 }
 
 
