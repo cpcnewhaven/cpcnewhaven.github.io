@@ -12,7 +12,6 @@
         <title>Announcements | CPC New Haven Church</title>
         <link rel="stylesheet" href="./src/css/splash-header.css">
         <link rel="stylesheet" href="./src/css/footer.css">
-        <link rel="stylesheet" href="./src/css/announcements.css">
         <link rel="stylesheet" href="./src/css/global-body.css">
 
         <link rel="stylesheet"
@@ -22,19 +21,13 @@
 
         <header id="stickyHeader" class="sticky">
             <nav class="main-navigation">
-                <a href="index.html">Home</a>
-                <a href="worship.html">Worship</a>
-                <a href="about.html">About</a>
-                <a href="podcasts.html">Podcasts</a>
-                <a href="events.html">Events</a>
-                <a href="announcements.html">Announcements</a>
-                <a href="community.html">Community</a>
-                <a href="live.html">Live</a>
-                <a href="resources.html">Resources</a>
-                <a href="give.html">Give</a>
-
+                <!-- Navigation links will be populated here -->
             </nav>
         </header>
+
+        <div class="hamburger-menu-button-container" id="hamburgerMenu">
+            <i id="closeMobileMenuButton" class="fas fa-bars"></i>
+        </div>
 
         <div id="page" class>
             <div class="top-splash-welcome">
@@ -119,7 +112,9 @@
 
     </script>
         <!-- DYNAMIC ANNOUNCEMNTS -->
+        <script src="./src/js/populate-navigation.js"></script>
         <script src="./src/js/updateContent.js"></script>
         <script src="./src/js/fetch-highlights-display-homepage.js"></script>
+        <script src="./src/js/function_toggle_mobileMenu.js"></script>
     </body>
 </html>
