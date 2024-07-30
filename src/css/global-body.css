@@ -3,18 +3,24 @@
 body {
     line-height: 1.6;
     color: #000;
-    /* Black text for better contrast */
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 400;
     font-family: "Barlow", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    padding-bottom: 200px;
+    padding-bottom: 100px;
     padding-right: 10px;
+    padding-left: 10px;
 }
 
 h1 {
-    font-size: 71px !important;
+    font-size: 48px !important;
+}
+
+@media (min-width: 768px) {
+    h1 {
+        font-size: 71px !important;
+    }
 }
 
 h1,
@@ -24,7 +30,6 @@ h4 {
     font-family: "Barlow", sans-serif;
     line-height: 95%;
     margin: 0px;
-
 }
 
 a {
@@ -39,27 +44,19 @@ span {
 table {
     border-collapse: separate;
     border-spacing: 12px;
-    /* Adjust the spacing as needed */
-
 }
 
 button {
-    width: 220px;
-    /* Fixed width */
-    min-height: 60px;
+    width: 100%;
+    max-width: 220px;
+    min-height: 50px;
     height: 100%;
-    /* Fixed height */
     background-color: #ffffff;
-    /* Background color */
     color: rgb(0, 0, 0);
-    /* Text color */
     border: none;
-    /* No borders */
     border-radius: 5px;
     border-width: thin;
-    /* Rounded corners */
     cursor: pointer;
-    /* Pointer cursor on hover */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -67,38 +64,33 @@ button {
     overflow: hidden;
     border-style: solid;
     border-color: black;
-    font-size: calc(1em * 0.6 + 0.6vw);
-    /* Slightly larger responsive font size */
+    font-size: 16px;
     transition: background-color 0.23s;
-    /* Smooth transition for hover effect */
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
+}
 
+@media (min-width: 768px) {
+    button {
+        width: 220px;
+    }
 }
 
 button:hover {
     background-color: #4e4e4e;
-    /* Darker shade on hover */
     color: rgb(255, 255, 255) !important;
 }
 
 .button--prime {
     width: 220px;
-    /* Fixed width */
     height: 50px;
-    /* Fixed height */
     background-color: #ffffff;
-    /* Background color */
     color: rgb(0, 0, 0);
-    /* Text color */
     border: none;
-    /* No borders */
     border-radius: 5px;
-    /* Rounded corners */
     cursor: pointer;
-    /* Pointer cursor on hover */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -107,15 +99,11 @@ button:hover {
     border-style: solid;
     border-color: black;
     font-size: calc(1em * 0.6 + 0.6vw);
-    /* Slightly larger responsive font size */
     transition: background-color 0.23s;
-    /* Smooth transition for hover effect */
-
 }
 
 .button--prime:hover {
     background-color: #4e4e4e;
-    /* Darker shade on hover */
     color: rgb(255, 255, 255);
 }
 
@@ -141,37 +129,45 @@ input::placeholder {
     color: rgba(0, 0, 0, 0.5);
 }
 
-
-/*typography*/
 .headline {
-    font-size: 2.4rem;
+    font-size: 2rem;
+}
 
-    /* Smaller font size for mobile */
-    @media (min-width: 600px) {
-        font-size: 8rem;
-        /* Larger font size for desktop */
+@media (min-width: 600px) {
+    .headline {
+        font-size: 4rem;
     }
 }
 
 .bold {
-    font-weight: 900;
-    font-size: 25px;
+    font-weight: 700;
+    font-size: 20px;
 }
 
 .heading-1 {
-    font-size: 92px;
+    font-size: 48px;
+}
+
+@media (min-width: 768px) {
+    .heading-1 {
+        font-size: 92px;
+    }
 }
 
 .heading-2 {
-    font-size: 48px;
-    margin: 0px;
-    margin: auto;
+    font-size: 36px;
+    margin: 10px auto;
+}
+
+@media (min-width: 768px) {
+    .heading-2 {
+        font-size: 48px;
+    }
 }
 
 .body-text {
-    font-size: 18px;
-    margin: auto;
-
+    font-size: 16px;
+    margin: 10px auto;
     text-align: left !important;
 }
 
@@ -182,7 +178,6 @@ input::placeholder {
     text-align: center;
     min-width: 100%;
 }
-
 
 .splash {
     width: 100%;
@@ -222,7 +217,6 @@ section h3 {
 
 section p {
     font-size: 21px;
-    /* Adjusted font size to match worship.css */
     font-weight: 400;
     text-align: left;
     max-width: 680px;
@@ -234,27 +228,21 @@ section p {
 
 ul {
     list-style-type: none;
-    /* Removes default list styling */
     padding: 0;
     margin: 20px auto;
 }
 
 li {
     font-size: 18px;
-    /* Consistent with body font size */
     line-height: 1.8;
     padding: 5px 0;
-    /* Adds vertical spacing between list items */
     font-family: "Barlow", sans-serif;
     margin: 2px auto;
 }
 
 a {
     text-decoration: none;
-
 }
-
-/*CONTENT LAYOUTS*/
 
 .left-content {
     display: flex;
@@ -279,8 +267,6 @@ a {
     text-align: left;
 }
 
-/*Top SPlashes */
-
 .top-splash-welcome {
     padding: 20px;
     margin-top: -20px;
@@ -288,14 +274,11 @@ a {
     text-align: center;
     color: rgb(0, 0, 0) !important;
     backdrop-filter: blur(5px);
-
 }
 
 .top-splash-welcome h2 {
     font-size: 64px;
 }
-
-
 
 .top-logo-container {
     display: flex;
@@ -328,7 +311,6 @@ p {
 
 .mid-splash-welcome.sticky {
     position: -webkit-sticky;
-    /* For Safari */
     position: sticky;
     min-height: 10vh;
     display: flex;
@@ -336,11 +318,9 @@ p {
     justify-content: center;
     top: 0;
     z-index: 500;
-    /* Ensure it stays above other content */
     background-color: white;
     margin-top: 50px !important;
     padding-top: 30px !important;
-    /* Optional: to avoid transparency issues */
 }
 
 .splash-image {
@@ -348,15 +328,12 @@ p {
     height: 520px;
     background-size: cover;
     background-position: top center;
-    /* Align to the top */
     background-repeat: no-repeat;
     display: flex;
     align-items: flex-start;
-    /* Align content to the top */
     justify-content: center;
 }
 
-/* Breakpoints for different screen sizes */
 @media (max-width: 1200px) {
     .splash-image {
         height: 400px;
@@ -381,32 +358,22 @@ p {
     }
 }
 
-
-
-/*social buttons */
 .subscribe-icons-a a {
     display: inline-block;
     width: 60px;
-    /* Set the size of the icons */
     height: 60px;
     border-radius: 30px;
-    /* Circular buttons */
     background: rgba(0, 0, 0, 0.6);
-    /* Dark glass effect */
     color: white;
-    /* Icon color */
     text-align: center;
     line-height: 60px;
-    /* Center the icon vertically */
     margin: 10px;
     transition: background 0.3s, transform 0.3s;
 }
 
 .subscribe-icons-a a:hover {
     background: rgba(0, 0, 0, 0.8);
-    /* Darker on hover */
     transform: scale(1.1);
-    /* Slightly larger on hover */
 }
 
 .social-links-horizontal {
@@ -424,11 +391,7 @@ p {
 
 .fab {
     font-size: 24px;
-    /* Larger icon size */
 }
-
-
-/* SUB MENU */
 
 .submenu-container {
     background-color: #f8f8f8;
@@ -461,7 +424,6 @@ p {
 .submenu-menu a:hover {
     background-color: #1c95ff;
     color: #fff;
-
 }
 
 @media (max-width: 767px) {
@@ -478,10 +440,8 @@ p {
     }
 }
 
-
 .inner-page-section {
     width: 100%;
-
     padding-top: 20px;
     margin: 0;
     display: flex;
@@ -490,9 +450,6 @@ p {
 .inner-page-section h2 {
     margin-top: 10px;
 }
-
-
-/*Gallery Grid*/
 
 .gallery {
     display: grid;
@@ -671,38 +628,27 @@ p {
     align-items: center;
     justify-content: center;
     width: 100%;
-    /* Full width */
     height: 60px;
     background: rgba(0, 0, 0, 0.705);
-    /* Glass effect */
     color: white;
     border: none;
     border-radius: 10px;
-    /* Slightly rounded corners */
     cursor: pointer;
     margin: 20px auto;
     transition: background-color 0.3s, box-shadow 0.3s;
     backdrop-filter: blur(10px);
-    /* Glass effect */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
-    /* Soft shadow */
     padding: 10px;
-    /* Padding for better spacing */
 }
 
 .play-button:hover {
     color: black;
     background-color: rgba(255, 255, 255, 0.3);
-    /* Slightly more opaque on hover */
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2), 0 4px 6px rgba(0, 0, 0, 0.15);
-    /* Stronger shadow on hover */
 }
-
-
 
 .play-button span {
     font-size: 1.2em;
-    /* Adjust text size */
     font-weight: bold;
 }
 
@@ -719,11 +665,9 @@ p {
     }
 }
 
-
 .sermon-image {
     width: 100%;
     padding-top: 100%;
-    /* 1:1 Aspect Ratio */
     position: relative;
     overflow: hidden;
 }
@@ -798,6 +742,64 @@ p {
     box-shadow: 3px 3px 6px rgba(163, 177, 198, 0.6), -3px -3px 6px rgba(255, 255, 255, 0.5);
     cursor: pointer;
     transition: all 0.3s ease;
+}
+
+@media (min-width: 768px) {
+    body {
+        font-size: 18px;
+        padding-bottom: 200px;
+    }
+
+    .bold {
+        font-size: 25px;
+    }
+
+    .body-text {
+        font-size: 18px;
+    }
+}
+
+.full-width-container {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+#full-splash-image {
+    height: 300px;
+}
+
+@media (min-width: 768px) {
+    #full-splash-image {
+        height: 600px;
+    }
+}
+
+.staff-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+}
+
+.neumorphic-form {
+    padding: 15px;
+}
+
+.neumorphic-form input,
+.neumorphic-form button {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+@media (min-width: 768px) {
+    .neumorphic-form {
+        padding: 30px;
+    }
+
+    .neumorphic-form input,
+    .neumorphic-form button {
+        width: auto;
+    }
 }
 
 .neumorphic-form button:hover {
