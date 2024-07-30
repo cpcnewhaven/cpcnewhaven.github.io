@@ -8,18 +8,23 @@ body {
     font-family: "Barlow", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    padding-bottom: 100px;
-    padding-right: 10px;
-    padding-left: 10px;
+    padding-bottom: 60px;
+    padding-right: 15px;
+    padding-left: 15px;
 }
 
 h1 {
-    font-size: 48px !important;
+    font-size: 36px !important;
 }
 
 @media (min-width: 768px) {
+    body {
+        font-size: 18px;
+        padding-bottom: 100px;
+    }
+
     h1 {
-        font-size: 71px !important;
+        font-size: 48px !important;
     }
 }
 
@@ -49,7 +54,7 @@ table {
 button {
     width: 100%;
     max-width: 220px;
-    min-height: 50px;
+    min-height: 44px;
     height: 100%;
     background-color: #ffffff;
     color: rgb(0, 0, 0);
@@ -66,15 +71,13 @@ button {
     border-color: black;
     font-size: 16px;
     transition: background-color 0.23s;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 12px 20px;
 }
 
 @media (min-width: 768px) {
     button {
         width: 220px;
+        min-height: 50px;
     }
 }
 
@@ -111,7 +114,7 @@ input {
     background-color: rgba(255, 255, 255, 0.5);
     border: 2px solid rgba(255, 255, 255, 0.2);
     border-radius: 8px;
-    padding: 10px 15px;
+    padding: 12px 15px;
     font-size: 16px;
     color: #000;
     font-family: "Barlow", sans-serif;
@@ -130,12 +133,12 @@ input::placeholder {
 }
 
 .headline {
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 @media (min-width: 600px) {
     .headline {
-        font-size: 4rem;
+        font-size: 2rem;
     }
 }
 
@@ -428,15 +431,20 @@ p {
 
 @media (max-width: 767px) {
     .submenu-container {
-        display: none;
+        display: block;
     }
 
     .submenu-menu {
-        display: none;
+        display: block;
+        flex-direction: column;
+    }
+
+    .submenu-menu a {
+        padding: 15px 20px;
     }
 
     .mobile-navigation .submenu {
-        display: none;
+        display: block;
     }
 }
 
@@ -572,6 +580,7 @@ p {
         text-align: center !important;
         padding: 5px;
         height: auto;
+        max-height: 300px;
     }
 }
 
@@ -725,11 +734,12 @@ p {
 .neumorphic-form input,
 .neumorphic-form button {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     margin: 10px 0;
     border: none;
     border-radius: 5px;
     outline: none;
+    font-size: 16px;
 }
 
 .neumorphic-form input {
@@ -768,7 +778,6 @@ p {
 #full-splash-image {
     width: 100%;
     height: 300px;
-    /* Default height for mobile */
     background-size: cover;
     background-position: center;
     margin: 20px 0;
@@ -777,21 +786,18 @@ p {
 @media (min-width: 768px) {
     #full-splash-image {
         height: 400px;
-        /* Increased height for tablets */
     }
 }
 
 @media (min-width: 992px) {
     #full-splash-image {
         height: 500px;
-        /* Further increased height for small desktops */
     }
 }
 
 @media (min-width: 1200px) {
     #full-splash-image {
         height: 600px;
-        /* Full height for large desktops */
     }
 }
 
