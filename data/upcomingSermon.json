@@ -43,8 +43,19 @@
     "author": "Rev. Craig Luekens",
     "scripture": "Exodus 12:1-28",
     "date": "2024-07-28",
-    "active": true,
+    "active": false,
     "youtube_url": "https://www.youtube.com/watch?v=OVPI0ytJ--k",
     "bulletin_url": "data/bulletins/bulletin_2024-07-28.pdf"
+  },
+  {
+    "title": "By Grace Alone: Terrifying Judgement and Our Only Hope for Salvation",
+    "author": "Rev. Craig Luekens",
+    "scripture": "Exodus 12:29-51",
+    "date": "2024-08-04",
+    "active": true,
+    "youtube_url": "https://www.youtube.com/watch?v=Xkd97K3eT5g&t=2s",
+    "spotify_url": "https://open.spotify.com/episode/7lEBdM5V6qckwU6YgFAHvq?si=f4db6a58851a414b",
+    "bulletin_url": "data/bulletins/bulletin_2024-07-28.pdf",
+    "podcast-thumbnail_url": "#"
   }
 ]
