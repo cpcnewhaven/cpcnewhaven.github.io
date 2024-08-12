@@ -134,6 +134,7 @@ input::placeholder {
 
 .headline {
     font-size: 1.5rem;
+    margin: 0px;
 }
 
 @media (min-width: 600px) {
@@ -310,6 +311,7 @@ p {
     color: rgb(0, 0, 0);
     backdrop-filter: blur(5px);
     border-style: none;
+    margin-top: 10px;
 }
 
 .mid-splash-welcome.sticky {
@@ -321,9 +323,7 @@ p {
     justify-content: center;
     top: 0;
     z-index: 500;
-    background-color: white;
-    margin-top: 50px !important;
-    padding-top: 30px !important;
+    background-color: rgba(255, 255, 255, 0.866);
 }
 
 .splash-image {
@@ -668,10 +668,14 @@ p {
     margin: 0 auto;
 }
 
+.sermon-content {
+    max-height: none;
+}
+
 @media (max-width: 600px) {
     .asermon-image {
         width: 100%;
-        min-height: 300px;
+
     }
 }
 
