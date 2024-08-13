@@ -471,6 +471,22 @@ p {
     }
 }
 
+@media screen and (max-width: 767px) {
+    .submenu-container.hide-on-mobile {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .hide-on-mobile {
+        display: none !important;
+    }
+}
+
+
+
+
+
 .inner-page-section {
     width: 100%;
     padding-top: 20px;
@@ -1206,5 +1222,22 @@ p {
     height: auto;
     border: 2px solid #ccc;
     border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.compact-centered-image {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
