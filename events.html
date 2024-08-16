@@ -58,15 +58,49 @@
         </div>
         <div id="page-events" class="page">
             <div class="top-splash-welcome">
-                <h1 class="headline">Events</h1>
+                <h1 class="headline">Upcoming Events</h1>
+                <p class="subheadline">Join us for community and connection</p>
             </div>
+            <style>
+                .top-splash-welcome {
+                    height: 50vh;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    background-size: cover;
+                    background-position: center;
+                    color: white;
+                    text-align: center;
+                }
+
+                .headline {
+                    font-size: 4rem;
+                    font-weight: bold;
+                    margin-bottom: 1rem;
+                }
+
+                .subheadline {
+                    font-size: 1.5rem;
+                    max-width: 600px;
+                }
+
+                @media (max-width: 768px) {
+                    .headline {
+                        font-size: 3rem;
+                    }
+
+                    .subheadline {
+                        font-size: 1.2rem;
+                    }
+                }
+            </style>
 
             <section class="splash-image" id="home-image"></section>
 
-            <section id="upcoming-event-list" class="inner-page-section">
+            <section id="fall-preview" class="inner-page-section">
                 <div class="center-content">
-                    <h2>Upcoming Events</h2>
-                    <h3>CPC Summer Schedule</h3>
+                    <h2>A GLIMPSE INTO THE FALL SCHEDULE</h2>
                     <hr>
                     <table class="upcoming-event-table">
                         <thead>
@@ -77,71 +111,87 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td>Wednesdays</td>
-                                <td>Summer College Bible Study at 6pm</td>
+                                <td>9/8/24</td>
+                                <td>
+                                    <strong>Full Sunday Schedule
+                                        resumes</strong>
+                                    <ul>
+                                        <li>Prayer @ 8:30 AM</li>
+                                        <li>Children's and Adult Sunday Studies
+                                            @ 9:30 AM</li>
+                                        <li>Weekly Fellowship Lunches after
+                                            worship</li>
+                                    </ul>
+                                    <strong>Welcome Sunday</strong>
+                                    <ul>
+                                        <li>Lunch outdoors</li>
+                                        <li>Kids Crafts outdoors</li>
+                                    </ul>
+                                </td>
                             </tr>
                             <tr>
-                                <td>July 11, 18, 25</td>
-                                <td>Thursday Picnics</td>
+                                <td>9/15/24</td>
+                                <td>Congregational Meeting, discussing Annual
+                                    Ministry Plan</td>
                             </tr>
                             <tr>
-                                <td>Wednesdays</td>
-                                <td>Serving with CPC in the Hill (Evenings)</td>
+                                <td>9/22/24</td>
+                                <td>Ministry Fair</td>
                             </tr>
                             <tr>
-                                <td>July 28</td>
-                                <td>Monthly Sunday Fellowship Lunch</td>
+                                <td>10/5/24</td>
+                                <td>Women's Welcome Brunch</td>
                             </tr>
                             <tr>
-                                <td>July 14</td>
-                                <td>Men's Lunch @ Noon</td>
+                                <td>10/19/24</td>
+                                <td>Young Adults BBQ Hangout</td>
                             </tr>
                             <tr>
-                                <td>Sundays</td>
-                                <td>Weekly Sunday Morning Prayer - 9:30AM in the
-                                    Parlor</td>
+                                <td>Ongoing</td>
+                                <td>Life Groups & Discipleship Groups resume
+                                    regular schedule</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
             </section>
 
-            <section id="fall-preview" class="inner-page-section">
+            <section id="ongoing-events" class="inner-page-section">
                 <div class="center-content">
-                    <h2>Upcoming Events</h2>
-                    <h3>Glimpse into the Fall</h3>
+                    <h2>Ongoing Events</h2>
+                    <h3>Regular Activities at CPC</h3>
                     <hr>
-                    <table class="upcoming-event-table">
+                    <table class="ongoing-event-table">
                         <thead>
                             <tr>
-                                <th>Date</th>
+                                <th>Day</th>
                                 <th>Event</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>September 10</td>
-                                <td>Fall Kickoff Sunday</td>
+                                <td>Sundays</td>
+                                <td>Worship Service at 10:30 AM</td>
                             </tr>
                             <tr>
-                                <td>September 17</td>
-                                <td>New Members Class Begins</td>
+                                <td>Wednesdays</td>
+                                <td>Prayer Meeting at 7:00 PM</td>
                             </tr>
                             <tr>
-                                <td>October 1</td>
+                                <td>First Sunday of the Month</td>
                                 <td>Communion Sunday</td>
                             </tr>
                             <tr>
-                                <td>October 15</td>
-                                <td>Fall Festival</td>
+                                <td>Second Saturday of the Month</td>
+                                <td>Men's Breakfast at 8:00 AM</td>
                             </tr>
                             <tr>
-                                <td>November 5</td>
-                                <td>Daylight Saving Time Ends</td>
+                                <td>Third Thursday of the Month</td>
+                                <td>Women's Bible Study at 7:00 PM</td>
                             </tr>
                             <tr>
-                                <td>November 23</td>
-                                <td>Thanksgiving Day Service</td>
+                                <td>Last Friday of the Month</td>
+                                <td>Youth Group at 6:30 PM</td>
                             </tr>
                         </tbody>
                     </table>
@@ -237,87 +287,6 @@
             <script src="./src/fetch-events.js"></script>
             <script src="./src/js/background-fetch-splash-image.js"></script>
             <script src="./src/js/function_toggle_mobileMenu.js"></script>
-
-            <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                let currentDate = new Date();
-
-                // Fetch events and render calendar
-                fetch('./data/events.json')
-                    .then(response => response.json())
-                    .then(data => {
-                        renderCalendar(data.events, currentDate);
-                    });
-
-                function renderCalendar(events, date) {
-                    const calendarContainer = document.getElementById('calendar-container');
-                    const currentMonthElement = document.getElementById('current-month');
-                    const month = date.getMonth();
-                    const year = date.getFullYear();
-                    const months = [
-                        'January', 'February', 'March', 'April', 'May', 'June',
-                        'July', 'August', 'September', 'October', 'November', 'December'
-                    ];
-
-                    calendarContainer.innerHTML = ''; // Clear previous calendar
-                    currentMonthElement.textContent = `${months[month]} ${year}`;
-
-                    const monthDiv = document.createElement('div');
-                    monthDiv.classList.add('calendar-month');
-                    monthDiv.innerHTML = `<h3>${months[month]}</h3>`;
-                    const daysDiv = document.createElement('div');
-                    daysDiv.classList.add('calendar-days');
-
-                    // Get events for the current month
-                    const monthEvents = events.filter(event => {
-                        const eventDate = new Date(event.date + ' ' + year);
-                        return eventDate.getMonth() === month && eventDate.getFullYear() === year;
-                    });
-
-                    // Render days and events
-                    const daysInMonth = new Date(year, month + 1, 0).getDate();
-                    for (let day = 1; day <= daysInMonth; day++) {
-                        const dayDiv = document.createElement('div');
-                        dayDiv.classList.add('calendar-day');
-                        dayDiv.innerHTML = `<span>${day}</span>`;
-
-                        // Add events to the day
-                        monthEvents.forEach(event => {
-                            const eventDate = new Date(event.date + ' ' + year);
-                            if (eventDate.getDate() === day) {
-                                const eventDiv = document.createElement('div');
-                                eventDiv.classList.add('calendar-event');
-                                eventDiv.textContent = event.description;
-                                dayDiv.appendChild(eventDiv);
-                            }
-                        });
-
-                        daysDiv.appendChild(dayDiv);
-                    }
-
-                    monthDiv.appendChild(daysDiv);
-                    calendarContainer.appendChild(monthDiv);
-                }
-
-                document.getElementById('prev-month').addEventListener('click', function() {
-                    currentDate.setMonth(currentDate.getMonth() - 1);
-                    fetch('./data/events.json')
-                        .then(response => response.json())
-                        .then(data => {
-                            renderCalendar(data.events, currentDate);
-                        });
-                });
-
-                document.getElementById('next-month').addEventListener('click', function() {
-                    currentDate.setMonth(currentDate.getMonth() + 1);
-                    fetch('./data/events.json')
-                        .then(response => response.json())
-                        .then(data => {
-                            renderCalendar(data.events, currentDate);
-                        });
-                });
-            });
-        </script>
 
             <script src="./src/js/populate-navigation.js"></script>
             <script src="./src/js/load-community-events.js"></script>
