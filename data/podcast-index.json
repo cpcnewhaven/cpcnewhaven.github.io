@@ -1,0 +1,42 @@
+{
+    "podcastSeries": {
+        "title": "What We Believe",
+        "episodes": [
+            {
+                "number": 24,
+                "title": "Fasting & Prayer",
+                "link": "https://open.spotify.com/episode/4GSiIh5nnK2kRArI32Rzme?si=9929fb90f4774e88"
+            },
+            {
+                "number": 25,
+                "title": "Sanctification",
+                "link": "https://open.spotify.com/episode/6NtmDhbvNkyBXFXbCE0NV0?si=578bf00957ca4cfb"
+            },
+            {
+                "number": 26,
+                "title": "Assurance & Perseverance",
+                "link": "https://open.spotify.com/episode/5DRvPbCE9WuJ2jzlFZgHYn?si=d51aae9807be410e"
+            },
+            {
+                "number": 27,
+                "title": "Good Works & Law of God",
+                "link": "https://open.spotify.com/episode/0X1t6U8BhFWP6NVKOzK2mQ?si=4fc3814b80564203"
+            },
+            {
+                "number": 28,
+                "title": "Vocations",
+                "link": "https://open.spotify.com/episode/6pa26ZoIBb7lpp10ZLReYD?si=edd1dffd0f86479b"
+            },
+            {
+                "number": 29,
+                "title": "Marriage, Sex & Gender",
+                "link": "https://open.spotify.com/episode/65cuxutVdsrdcDOZPzaZz7?si=1381176186384113"
+            },
+            {
+                "number": 30,
+                "title": "Marriage, Sex & Gender, cont.",
+                "link": "https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf"
+            }
+        ]
+    }
+}

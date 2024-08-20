@@ -498,6 +498,53 @@ p {
     margin-top: 10px;
 }
 
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+    padding: 16px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+.gallery-item-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 8px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .gallery-item-info {
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .gallery-container {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+}
+
 .gallery {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -511,115 +558,106 @@ p {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-#worship-ab {
-    padding: 20px;
-    background-color: #f9f9f9;
+.worship-section {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background-color: #f8f8f8;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    min-height: 500px !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.worship-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
+.worship-section h3 {
+    text-align: center;
+    margin-bottom: 1rem;
 }
 
 .worship-widget {
-    flex: 1;
-    min-width: 300px;
-    background: #ffffff;
-    padding: 1rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    border: .4px solid;
-    width: 30vw;
-    height: 475px;
-    min-height: 100%;
     display: flex;
-    align-items: top;
-    line-height: 95%;
-}
-
-.worship-widget h4,
-.worship-widget p,
-.worship-widget a {
-    font-size: 1rem;
-    margin: 0.5rem 0;
-}
-
-.worship-widget p {
-    text-align: left;
-}
-
-.worship-widget a {
-    color: black;
-    font-weight: 600;
-    padding: 0;
-    display: block;
-    margin: 0.5rem 0;
-    color: #1c89ff;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-.worship-widget a:hover {
-    color: rgb(126, 126, 126);
-}
-
-#worship-a {
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
     align-items: center;
-    background-color: rgba(0, 60, 109, 0.062);
-    padding: 10px;
-    justify-content: center;
-    height: 100%;
+    gap: 1rem;
+    margin-bottom: 1rem;
 }
 
-#worship-a h2,
-#worship-a p {
-    margin: 0;
-    padding: 5px;
-    text-align: center;
-    color: black;
+.sermon-image {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
 }
 
-#worship-a span {
+.sermon-info {
+    flex: 1;
+}
+
+.sermon-title,
+.sermon-scripture,
+.sermon-pastor {
+    margin: 0.25rem 0;
+}
+
+.sermon-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.sermon-scripture,
+.sermon-pastor {
+    font-size: 0.9rem;
+}
+
+.worship-links {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.worship-links a {
     display: block;
-    background-color: #007BFF;
+    padding: 0.5rem;
+    background-color: #007bff;
     color: white;
-    padding: 5px;
+    text-decoration: none;
     border-radius: 4px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    font-size: 0.9rem;
 }
 
-#worship-a hr {
-    grid-column: span 2;
+.worship-links a:hover {
+    background-color: #0056b3;
 }
 
-@media (max-width: 768px) {
+.additional-links {
+    display: flex;
+    justify-content: space-between;
+}
+
+.additional-links a {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.additional-links a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 480px) {
     .worship-widget {
-        min-width: 100%;
-    }
-}
-
-@media (max-width: 600px) {
-    #worship-a {
         flex-direction: column;
-        background-color: white;
-        border-style: none;
-        padding: 5px;
+        text-align: center;
     }
 
-    .worship-widget {
+    .sermon-image {
         width: 100%;
-        overflow-y: scroll;
-        border-style: none;
-        text-align: center !important;
-        padding: 5px;
         height: auto;
-        max-height: 300px;
+        max-width: 200px;
+    }
+
+    .worship-links {
+        grid-template-columns: 1fr;
     }
 }
 

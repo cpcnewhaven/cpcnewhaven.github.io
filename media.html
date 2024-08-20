@@ -11,6 +11,73 @@
 
         <link rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <style>
+            #gallery-container {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+                gap: 20px;
+                padding: 20px;
+            }
+            .gallery-item {
+                border: 1px solid #dbdbdb;
+                border-radius: 3px;
+                overflow: hidden;
+            }
+            .image-container {
+                aspect-ratio: 1 / 1;
+                overflow: hidden;
+                cursor: pointer;
+            }
+            .image-container img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: transform 0.3s ease;
+            }
+            .image-container img:hover {
+                transform: scale(1.05);
+            }
+            .gallery-item-info {
+                padding: 12px;
+            }
+            .tags {
+                margin-bottom: 8px;
+            }
+            .tag {
+                color: #003569;
+                font-weight: bold;
+                margin-right: 5px;
+            }
+            .date {
+                color: #8e8e8e;
+                font-size: 0.9em;
+            }
+            #lightbox {
+                display: none;
+                position: fixed;
+                z-index: 1000;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.9);
+                justify-content: center;
+                align-items: center;
+            }
+            #lightbox-img {
+                max-width: 90%;
+                max-height: 90%;
+                object-fit: contain;
+            }
+            .close-btn {
+                position: absolute;
+                top: 20px;
+                right: 30px;
+                color: #fff;
+                font-size: 30px;
+                cursor: pointer;
+            }
+        </style>
     </head>
     <body>
         <header id="stickyHeader" class="sticky">
@@ -50,67 +117,18 @@
             <a class="mobile-menu-link" href="resources.html">Resources</a>
             <a class="mobile-menu-link" href="give.html">Give</a>
         </div>
-        <section id="youtube-feed">
-            <div class="center-content" style="margin-top: 100px;">
-                <iframe width="560" height="315"
-                    src="https://www.youtube.com/embed/GpneXiXSNso?si=10ywSYlIIMMCU9ZI"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin"
-                    allowfullscreen></iframe>
-            </div>
-        </section>
-
-        <script>
-            fetch('data/upcomingSermon.json')
-                .then(response => response.json())
-                .then(data => {
-                    const activeSermon = data.find(sermon => sermon.active);
-                    if (activeSermon && activeSermon.youtube_url) {
-                        document.getElementById('sermon-video').src = activeSermon.youtube_url;
-                    }
-                })
-                .catch(error => console.error('Error fetching sermon data:', error));
-        </script>
 
         <section>
-            <div class="worship-widget-ab">
-                <section class="sermon-infoa">
-                    <h1 id="sermon-title">Sermon Title</h1>
-                    <p>Passage Text: <span id="sermon-scripture">John
-                            3:16</span></p>
-                    <p>Preacher: <span id="sermon-author">John Doe</span></p>
-                    <p>Date: <span id="sermon-date">April 10, 2023</span></p>
-                    <!-- <p><a id="bulletin-link" href="#" target="_blank">Download
-                            Bulletin</a></p> -->
-                </section>
-            </div>
+            <h2>Media Gallery</h2>
+            <div id="gallery-container"></div>
+        </section>
 
-            <section class="sharing-instructions">
-                <h2>Help Us Spread the Word</h2>
-                <p>Share our live stream link on your social media platforms.
-                    Let your friends and family know how they can join us online
-                    for our services. Every share helps us reach more people
-                    with our message of hope and community.</p>
-            </section>
-            <h2>Follow and Share</h2>
-            <section class="social-links-horizontal">
-                <a href="https://www.instagram.com/cpcnewhaven/"
-                    target="_blank"><i class="fab fa-instagram"></i>
-                    Instagram</a>
-                <a href="https://www.facebook.com" target="_blank"><i
-                        class="fab fa-facebook-f"></i> Facebook</a>
-                <a href="https://www.youtube.com/@CPCNewHaven"
-                    target="_blank"><i class="fab fa-youtube"></i> YouTube</a>
-                <a
-                    href="https://open.spotify.com/show/22kjUJyC0VH3cMfCSe9kEk?si=03179c2d72e44829"
-                    target="_blank"><i class="fab fa-spotify"></i> Spotify</a>
-                <a
-                    href="https://podcasts.apple.com/us/podcast/cpc-new-haven-podcasts/id1553483670"
-                    target="_blank"><i class="fab fa-apple"></i>Apple
-                    Podcasts</a>
-            </section>
+        <!-- Lightbox -->
+        <div id="lightbox" onclick="closeLightbox()">
+            <span class="close-btn" onclick="closeLightbox()">&times;</span>
+            <img id="lightbox-img" src alt="Lightbox Image">
         </div>
+
         <section id="footer-cta-a" class="styled-section-a">
             <div class="form-container">
                 <h2>Subscribe to our Newsletter</h2>
@@ -137,5 +155,6 @@
 
         <script src="./src/js/function_toggle_mobileMenu.js"></script>
         <script src="./src/js/live-logic.js"></script>
+        <script src="./src/js/image-gallery.js"></script>
     </body>
 </html>

@@ -34,7 +34,7 @@
       <i id="closeMenuButton" class="fas fa-bars"></i> <!-- Exit button -->
       <img src="./assets/CPC_LOGO_24.png" id="mobile-menu-logo">
       <a class="mobile-menu-link" href="index.html">Home</a>
-      <a class="mobile-menu-link" href="worship.html">Worship</a>
+      <a class="mobile-menu-link" href="sundays.html">Sundays</a>
       <a class="mobile-menu-link" href="about.html">About</a>
       <a class="mobile-menu-link" href="podcasts.html">Podcasts</a>
       <a class="mobile-menu-link" href="events.html">Events</a>
@@ -55,44 +55,36 @@
         <h2>Come Worship with us <br<span>Sundays @ 10:30am</span></h2>
       </div>
       <!-- HOMEPAGE DYNAMIC SPLASH -->
-      <section id="worship-ab">
-        <div class="worship-container">
-          <div class="worship-widget">
-            <div class="center-content">
-              <h3>Latest Sermon</h3>
-              <img src="./assets/podcast-thumbnails/8.11.24 - CPC.jpg"
-              alt="Sermon Image" class="asermon-imagea" width="300" height="300">
-              <p id="sermonTitle" class="asermon-title-a"></p>
-              <p id="sermonScripture" class="asermon-scripture-a"
-                ></p>
-              <p id="pastorName" class="asermon-pastor-a"></p>    
-     
-            </div>
+      <section id="worship-ab" class="worship-section">
+        <h3>This Week's Sermon</h3>
+        <div class="worship-widget">
+          <img src="./assets/podcast-thumbnails/8.18.24 - CPC.jpg"
+            alt="Sermon Image" class="sermon-image" width="300" height="300">
+          <div class="sermon-info">
+            <p id="sermonTitle" class="sermon-title"></p>
+            <p id="sermonScripture" class="sermon-scripture"></p>
+            <p id="pastorName" class="sermon-pastor"></p>
           </div>
-          <div class="worship-widget">
-            <div style="max-height: none;">
-    
-              <a id="sermonYoutube"
-              href="https://www.youtube.com/watch?v=Xkd97K3eT5g"
-              target="_blank">Listen on Spotify</a>     <a id="sermonYoutube"
-              href="https://www.youtube.com/watch?v=Xkd97K3eT5g"
-              target="_blank">Listen on Apple Podcasts</a>
-              <a id="sermonYoutube"
-                href="https://www.youtube.com/watch?v=Xkd97K3eT5g"
-                target="_blank">Watch on
-                YouTube</a>
-              <a id="sermonBulletin"
-                href="./data/bulletins/Bulletin_2024-07-28.pdf"
-                target="_blank">View Bulletin</a>
-              <a
-                href="https://open.spotify.com/show/22kjUJyC0VH3cMfCSe9kEk?si=3d1e6177cca342c1">Link
-                for
-                Previous Week Podcast Sermon</a>
-              <a
-                href="https://cpcnewhaven.ccbchurch.com/goto/forms/2/responses/new">Request
-                for Prayer or Pastoral Visit</a>
-            </div>
-          </div>
+        </div>
+        <div class="worship-links">
+          <a id="sermonSpotify"
+            href="https://open.spotify.com/episode/7tQMwlLbtk19nP5wUIvWON?si=56d7fa76c9fe4c9b"
+            target="_blank">Spotify</a>
+          <a id="sermonApple" href="https://www.youtube.com/watch?v=GpneXiXSNso"
+            target="_blank">Apple Podcasts</a>
+          <a id="sermonYoutube"
+            href="https://www.youtube.com/watch?v=Xkd97K3eT5g"
+            target="_blank">YouTube</a>
+          <a id="sermonBulletin" href="./data/bulletins/Bulletin_2024-07-28.pdf"
+            target="_blank">Bulletin</a>
+        </div>
+        <div class="additional-links">
+          <a
+            href="https://open.spotify.com/show/22kjUJyC0VH3cMfCSe9kEk?si=3d1e6177cca342c1">Previous
+            Sermons</a>
+          <a
+            href="https://cpcnewhaven.ccbchurch.com/goto/forms/2/responses/new">Prayer
+            Request</a>
         </div>
       </section>
       <section id="about" class="inner-page-section">
@@ -146,10 +138,16 @@
             of
             Discipleship
             classes, previous
-            Sunday Sermons, and conversations with our pastors. Episodes are avaliable each week and can be found on Apple Podcasts and Spotify</p>
+            Sunday Sermons, and conversations with our pastors. Episodes are
+            avaliable each week and can be found on Apple Podcasts and
+            Spotify</p>
           <p style="font-weight: bold;">Latest Podcast</p>
           <div style="max-width: 600px; margin: 0 auto;">
-            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/4ln9alKIO8xUviidke4YH5?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe> </div>
+            <iframe style="border-radius:12px"
+              src="https://open.spotify.com/embed/episode/4ln9alKIO8xUviidke4YH5?utm_source=generator"
+              width="100%" height="352" frameBorder="0" allowfullscreen
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"></iframe> </div>
         </div>
 
         <br>
@@ -167,8 +165,10 @@
     <section id="footer-cta-a" class="styled-section-a">
       <div class="form-container">
         <h2>Subscribe to our Newsletter</h2>
-        <p class="body-text ">Our weekly newsletter goes out on Friday mornings with
-          Sunday Service information, highlights, upcoming events, and useful links.</p>
+        <p class="body-text ">Our weekly newsletter goes out on Friday mornings
+          with
+          Sunday Service information, highlights, upcoming events, and useful
+          links.</p>
         <form action="https://formspree.io/f/meojowwg" method="POST"
           class="neumorphic-form">
           <input type="text" name="name" placeholder="Your name" required>

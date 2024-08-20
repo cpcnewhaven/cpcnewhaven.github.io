@@ -1,0 +1,58 @@
+{
+  "images": [
+    {
+      "id": "53",
+      "name": "53.jpg",
+      "url": "https://storage.googleapis.com/cpc-public-website/53.jpg",
+      "size": "189.7 KB",
+      "type": "image/jpeg",
+      "created": "Jul 29, 2024, 4:59:26 PM",
+      "tags": ["event", "outdoor"]
+    },
+    {
+      "id": "54",
+      "name": "54.jpg",
+      "url": "https://storage.googleapis.com/cpc-public-website/54.jpg",
+      "size": "176.7 KB",
+      "type": "image/jpeg",
+      "created": "Jul 29, 2024, 4:59:26 PM",
+      "tags": ["portrait", "people"]
+    },
+    {
+      "id": "55",
+      "name": "55.jpg",
+      "url": "https://storage.googleapis.com/cpc-public-website/55.jpg",
+      "size": "102.5 KB",
+      "type": "image/jpeg",
+      "created": "Jul 29, 2024, 4:59:26 PM",
+      "tags": ["architecture", "building"]
+    },
+    {
+      "id": "56",
+      "name": "56.jpg",
+      "url": "https://storage.googleapis.com/cpc-public-website/56.jpg",
+      "size": "202.4 KB",
+      "type": "image/jpeg",
+      "created": "Jul 29, 2024, 4:59:26 PM",
+      "tags": ["nature", "scenery"]
+    },
+    {
+      "id": "57",
+      "name": "57.jpg",
+      "url": "https://storage.googleapis.com/cpc-public-website/57.jpg",
+      "size": "114.3 KB",
+      "type": "image/jpeg",
+      "created": "Jul 29, 2024, 4:59:26 PM",
+      "tags": ["animal", "wildlife"]
+    },
+    {
+      "id": "79",
+      "name": "79.jpg",
+      "url": "https://storage.googleapis.com/cpc-public-website/79.jpg",
+      "size": "103.2 KB",
+      "type": "image/jpeg",
+      "created": "Jul 29, 2024, 4:59:26 PM",
+      "tags": ["landscape", "sunset"]
+    }
+  ]
+}

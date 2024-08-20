@@ -63,9 +63,21 @@
     "author": "Rev. Jerry Ornelas",
     "scripture": "Exodus 13:1-22",
     "date": "2024-08-11",
-    "active": true,
+    "active": false,
     "youtube_url": "https://www.youtube.com/watch?v=Ub8_ESp-ka4",
     "spotify_url": "https://open.spotify.com/episode/4ln9alKIO8xUviidke4YH5?si=6ada3c2f3d8949b0",
+    "apple_podcasts_url": "https://podcasts.apple.com/us/podcast/cpc-new-haven-podcasts/id1553483670?i=1000665049862",
+    "bulletin_url": "",
+    "podcast-thumbnail_url": "#"
+  },
+  {
+    "title": "Be Silent and Watch! The Unstoppable and Salvific Grace of God",
+    "author": "Rev. Craig Luekens",
+    "scripture": "Exodus 14:1-31",
+    "date": "2024-08-19",
+    "active": true,
+    "youtube_url": "https://www.youtube.com/watch?v=GpneXiXSNso",
+    "spotify_url": "https://open.spotify.com/episode/7tQMwlLbtk19nP5wUIvWON?si=56d7fa76c9fe4c9b",
     "apple_podcasts_url": "https://podcasts.apple.com/us/podcast/cpc-new-haven-podcasts/id1553483670?i=1000665049862",
     "bulletin_url": "",
     "podcast-thumbnail_url": "#"
