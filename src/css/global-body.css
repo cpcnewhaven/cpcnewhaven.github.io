@@ -558,105 +558,129 @@ p {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.worship-section {
+.ag-worship-section {
     max-width: 600px;
     margin: 2rem auto;
     padding: 1rem;
     background-color: #f8f8f8;
     border-radius: 8px;
+    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.worship-section h3 {
+.ag-worship-heading {
     text-align: center;
     margin-bottom: 1rem;
+    font-size: 1.5em;
+    font-weight: 700;
 }
 
-.worship-widget {
+.ag-worship-widget {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     gap: 1rem;
     margin-bottom: 1rem;
 }
 
-.sermon-image {
+.ag-worship-image {
     width: 120px;
     height: 120px;
+    -o-object-fit: cover;
     object-fit: cover;
     border-radius: 8px;
 }
 
-.sermon-info {
+.ag-worship-info {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
     flex: 1;
 }
 
-.sermon-title,
-.sermon-scripture,
-.sermon-pastor {
+.ag-worship-title,
+.ag-worship-scripture,
+.ag-worship-pastor {
     margin: 0.25rem 0;
 }
 
-.sermon-title {
+.ag-worship-title {
     font-size: 1.1rem;
     font-weight: 700;
 }
 
-.sermon-scripture,
-.sermon-pastor {
+.ag-worship-scripture,
+.ag-worship-pastor {
     font-size: 0.9rem;
 }
 
-.worship-links {
+.ag-worship-links {
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 1fr 0.5rem 1fr;
     grid-template-columns: repeat(2, 1fr);
     gap: 0.5rem;
     margin-bottom: 1rem;
 }
 
-.worship-links a {
+.ag-worship-links a {
     display: block;
     padding: 0.5rem;
-    background-color: #007bff;
-    color: white;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
     text-decoration: none;
     border-radius: 4px;
     text-align: center;
+    border-style: solid;
+    border-width: thin;
+    -webkit-transition: background-color 0.3s ease;
+    -o-transition: background-color 0.3s ease;
     transition: background-color 0.3s ease;
     font-size: 0.9rem;
 }
 
-.worship-links a:hover {
-    background-color: #0056b3;
+.ag-worship-links a:hover {
+    background-color: #ebebeb;
 }
 
-.additional-links {
+.ag-worship-additional-links {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
 }
 
-.additional-links a {
+.ag-worship-additional-links a {
     color: #007bff;
     text-decoration: none;
     font-size: 0.9rem;
 }
 
-.additional-links a:hover {
+.ag-worship-additional-links a:hover {
     text-decoration: underline;
 }
 
 @media (max-width: 480px) {
-    .worship-widget {
+    .ag-worship-widget {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
         text-align: center;
     }
 
-    .sermon-image {
+    .ag-worship-image {
         width: 100%;
         height: auto;
         max-width: 200px;
     }
 
-    .worship-links {
+    .ag-worship-links {
+        -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
     }
 }

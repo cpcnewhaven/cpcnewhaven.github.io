@@ -1,58 +1,85 @@
 {
   "images": [
     {
-      "id": "53",
-      "name": "53.jpg",
-      "url": "https://storage.googleapis.com/cpc-public-website/53.jpg",
-      "size": "189.7 KB",
+      "id": "60",
+      "name": "60.jpg",
+      "url": "https://storage.googleapis.com/cpc-public-website/60.jpg",
+      "size": "150.2 KB",
       "type": "image/jpeg",
       "created": "Jul 29, 2024, 4:59:26 PM",
-      "tags": ["event", "outdoor"]
+      "tags": ["event", "indoor"]
     },
     {
-      "id": "54",
-      "name": "54.jpg",
-      "url": "https://storage.googleapis.com/cpc-public-website/54.jpg",
-      "size": "176.7 KB",
+      "id": "61",
+      "name": "61.jpg",
+      "url": "https://storage.googleapis.com/cpc-public-website/61.jpg",
+      "size": "185.6 KB",
       "type": "image/jpeg",
       "created": "Jul 29, 2024, 4:59:26 PM",
-      "tags": ["portrait", "people"]
+      "tags": ["group", "people"]
     },
     {
-      "id": "55",
-      "name": "55.jpg",
-      "url": "https://storage.googleapis.com/cpc-public-website/55.jpg",
-      "size": "102.5 KB",
+      "id": "62",
+      "name": "62.jpg",
+      "url": "https://storage.googleapis.com/cpc-public-website/62.jpg",
+      "size": "120.8 KB",
       "type": "image/jpeg",
       "created": "Jul 29, 2024, 4:59:26 PM",
-      "tags": ["architecture", "building"]
+      "tags": ["music", "worship"]
     },
     {
-      "id": "56",
-      "name": "56.jpg",
-      "url": "https://storage.googleapis.com/cpc-public-website/56.jpg",
-      "size": "202.4 KB",
+      "id": "63",
+      "name": "63.jpg",
+      "url": "https://storage.googleapis.com/cpc-public-website/63.jpg",
+      "size": "198.3 KB",
       "type": "image/jpeg",
       "created": "Jul 29, 2024, 4:59:26 PM",
-      "tags": ["nature", "scenery"]
+      "tags": ["outdoor", "community"]
     },
     {
-      "id": "57",
-      "name": "57.jpg",
-      "url": "https://storage.googleapis.com/cpc-public-website/57.jpg",
-      "size": "114.3 KB",
+      "id": "64",
+      "name": "64.jpg",
+      "url": "https://storage.googleapis.com/cpc-public-website/64.jpg",
+      "size": "167.5 KB",
       "type": "image/jpeg",
       "created": "Jul 29, 2024, 4:59:26 PM",
-      "tags": ["animal", "wildlife"]
+      "tags": ["children", "activity"]
     },
     {
-      "id": "79",
-      "name": "79.jpg",
-      "url": "https://storage.googleapis.com/cpc-public-website/79.jpg",
-      "size": "103.2 KB",
+      "id": "65",
+      "name": "65.jpg",
+      "url": "https://storage.googleapis.com/cpc-public-website/65.jpg",
+      "size": "142.1 KB",
       "type": "image/jpeg",
       "created": "Jul 29, 2024, 4:59:26 PM",
-      "tags": ["landscape", "sunset"]
+      "tags": ["sermon", "preaching"]
+    },
+    {
+      "id": "66",
+      "name": "66.jpg",
+      "url": "https://storage.googleapis.com/cpc-public-website/66.jpg",
+      "size": "176.9 KB",
+      "type": "image/jpeg",
+      "created": "Jul 29, 2024, 4:59:26 PM",
+      "tags": ["fellowship", "meal"]
+    },
+    {
+      "id": "67",
+      "name": "67.jpg",
+      "url": "https://storage.googleapis.com/cpc-public-website/67.jpg",
+      "size": "131.4 KB",
+      "type": "image/jpeg",
+      "created": "Jul 29, 2024, 4:59:26 PM",
+      "tags": ["baptism", "ceremony"]
+    },
+    {
+      "id": "68",
+      "name": "68.jpg",
+      "url": "https://storage.googleapis.com/cpc-public-website/68.jpg",
+      "size": "159.7 KB",
+      "type": "image/jpeg",
+      "created": "Jul 29, 2024, 4:59:26 PM",
+      "tags": ["volunteer", "service"]
     }
   ]
 }
