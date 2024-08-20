@@ -42,6 +42,37 @@
             .wwbclass-play-button:hover {
                 background-color: #1ED760;
             }
+
+            @media (max-width: 767px) {
+                .submenu-container {
+                    display: none;
+                }
+            }
+
+            .search-container {
+                margin: 20px auto;
+                max-width: 600px;
+            }
+
+            #podcastSearchInput {
+                width: 100%;
+                padding: 10px;
+                font-size: 16px;
+            }
+
+            #searchResults {
+                margin-top: 10px;
+            }
+
+            .search-result {
+                padding: 10px;
+                border-bottom: 1px solid #eee;
+                cursor: pointer;
+            }
+
+            .search-result:hover {
+                background-color: #f5f5f5;
+            }
         </style>
     </head>
     <body>
@@ -85,6 +116,12 @@
         </div>
 
         <div id="page-podcast-a">
+            <div class="search-container">
+                <input type="text" id="podcastSearchInput"
+                    placeholder="Search podcasts...">
+                <div id="searchResults"></div>
+            </div>
+
             <div class="top-splash-welcome">
                 <br>
                 <h1 class="headline">Podcasts</h1>
@@ -93,10 +130,11 @@
 
             <div class="submenu-container">
                 <div class="submenu-menu">
-                    <a href="#podcast-sunday-sermon">The Sunday Sermon</a>
-                    <!-- indednt under small groups the following -->
-                    <a href="#podcast-beyond">Beyond</a>
-                    <a href="#podcast-adult-study">Adult Sunday Studies</a>
+                    <a href="#podcast-sunday-sermon" class="submenu-item">The
+                        Sunday Sermon</a>
+                    <a href="#podcast-beyond" class="submenu-item">Beyond</a>
+                    <a href="#podcast-adult-study" class="submenu-item">Adult
+                        Sunday Studies</a>
                 </div>
             </div>
 
@@ -326,130 +364,62 @@
         </footer>
         <script>
 document.addEventListener('DOMContentLoaded', function() {
-    fetch('data/podcast/total-podcast.json')
-        .then(response => response.json())
-        .then(podcastsData => {
-            const searchInput = document.getElementById('newPodcastSearchInput');
-            const sortSelect = document.getElementById('newPodcastSort');
-            let podcasts = podcastsData;
+    const searchInput = document.getElementById('podcastSearchInput');
+    const searchResults = document.getElementById('searchResults');
+    let allPodcasts = [];
 
-            function sortPodcasts(sortBy) {
-                if (sortBy === 'date') {
-                    podcasts.sort((a, b) => new Date(b.dateReleased) - new Date(a.dateReleased));
-                } else if (sortBy === 'bible') {
-                    // Example sorting function for Bible references, adjust according to your data structure
-                    podcasts.sort((a, b) => {
-                        // Implement custom sorting logic here
-                        return a.bibleReference.localeCompare(b.bibleReference);
-                    });
-                }
-                renderTable(podcasts);
+    // Fetch all podcast data
+    Promise.all([
+        fetch('data/podcast/total-podcast.json').then(response => response.json()),
+        fetch('data/podcast/preAprilPodcast.csv').then(response => response.text())
+    ])
+    .then(([totalPodcastData, preAprilPodcastCSV]) => {
+        allPodcasts = totalPodcastData;
+        
+        // Parse CSV data
+        Papa.parse(preAprilPodcastCSV, {
+            header: true,
+            complete: function(results) {
+                allPodcasts = allPodcasts.concat(results.data.map(episode => ({
+                    title: episode.Name,
+                    dateReleased: episode['Date Released'],
+                    bibleReference: episode['Bible Reference'],
+                    episodeLink: episode['Episode Link'],
+                    artwork: episode.Cover
+                })));
+                
+                // Set up search functionality
+                searchInput.addEventListener('input', performSearch);
             }
+        });
+    })
+    .catch(error => console.error('Error loading podcast data:', error));
 
-            function renderTable(data) {
-                const table = document.querySelector('#podcast-table table');
-                let tableHTML = `<tr>
-                    <th>Cover</th>
-                    <th>Title</th>
-                    <th>Date Released</th>
-                    <th>Bible Reference</th>
-                    <th>Link</th>
-                </tr>`;
+    function performSearch() {
+        const query = searchInput.value.toLowerCase();
+        const results = allPodcasts.filter(podcast => 
+            podcast.title.toLowerCase().includes(query) ||
+            podcast.bibleReference.toLowerCase().includes(query)
+        );
 
-                data.forEach(podcast => {
-                    tableHTML += `<tr>
-                        <td><img src="${podcast.artwork}" alt="Podcast Cover" style="width:100px;"></td>
-                        <td>${podcast.title}</td>
-                        <td>${podcast.dateReleased}</td>
-                        <td>${podcast.bibleReference}</td>
-                        <td><a href="${podcast.episodeLink}" class="podcast-link" target="_blank">Listen</a></td>
-                    </tr>`;
-                });
+        displayResults(results);
+    }
 
-                table.innerHTML = tableHTML;
-            }
-
-            searchInput.addEventListener('input', () => {
-                const filteredPodcasts = podcasts.filter(podcast => podcast.title.toLowerCase().includes(searchInput.value.toLowerCase()));
-                renderTable(filteredPodcasts);
+    function displayResults(results) {
+        searchResults.innerHTML = '';
+        results.slice(0, 5).forEach(podcast => {
+            const resultElement = document.createElement('div');
+            resultElement.classList.add('search-result');
+            resultElement.innerHTML = `
+                <strong>${podcast.title}</strong><br>
+                ${podcast.dateReleased} - ${podcast.bibleReference}
+            `;
+            resultElement.addEventListener('click', () => {
+                window.open(podcast.episodeLink, '_blank');
             });
-
-            sortSelect.addEventListener('change', () => {
-                sortPodcasts(sortSelect.value);
-            });
-
-            renderTable(podcasts); // Initial render
-        })
-        .catch(error => console.error('Error loading podcast data:', error));
-});
-</script>
-
-        <script>
-document.addEventListener('DOMContentLoaded', function() {
-    // Fetch the CSV file
-    fetch('data/podcast/preAprilPodcast.csv')
-        .then(response => response.text())
-        .then(csvData => {
-            Papa.parse(csvData, {
-                header: true,
-                complete: function(results) {
-                    const episodes = results.data;
-                    const searchInput = document.getElementById('oldPodcastSearchInput');
-                    const sortSelect = document.getElementById('oldPodcastSort');
-                    const container = document.getElementById('old-podcast-container');
-                    let table = document.createElement('table');
-                    table.id = 'preAprilPodcastTable';
-
-                    function sortEpisodes(sortBy) {
-                        if (sortBy === 'date') {
-                            episodes.sort((a, b) => new Date(b['Date Released']) - new Date(a['Date Released']));
-                        } else if (sortBy === 'bible') {
-                            // Example sorting function for Bible references, adjust according to your data structure
-                            episodes.sort((a, b) => {
-                                // Implement custom sorting logic here
-                                return a['Bible Reference'].localeCompare(b['Bible Reference']);
-                            });
-                        }
-                        renderTable(episodes);
-                    }
-
-                    function renderTable(data) {
-                        let tableHTML = `<tr>
-                            <th>Cover</th>
-                            <th>Title</th>
-                            <th>Date Released</th>
-                            <th>Bible Reference</th>
-                            <th>Link</th>
-                        </tr>`;
-
-                        data.forEach(episode => {
-                            tableHTML += `<tr>
-                                <td><img src="${episode['Cover']}" alt="Podcast Cover" style="width:100px;"></td>
-                                <td>${episode['Name']}</td>
-                                <td>${episode['Date Released']}</td>
-                                <td>${episode['Bible Reference']}</td>
-                                <td><a href="${episode['Episode Link']}" class="preAprilPodcastLink" target="_blank">Listen</a></td>
-                            </tr>`;
-                        });
-
-                        table.innerHTML = tableHTML;
-                    }
-
-                    searchInput.addEventListener('input', () => {
-                        const filteredEpisodes = episodes.filter(episode => episode['Name'].toLowerCase().includes(searchInput.value.toLowerCase()));
-                        renderTable(filteredEpisodes);
-                    });
-
-                    sortSelect.addEventListener('change', () => {
-                        sortEpisodes(sortSelect.value);
-                    });
-
-                    container.appendChild(table);
-                    renderTable(episodes); // Initial render
-                }
-            });
-        })
-        .catch(error => console.error('Error loading podcast data:', error));
+            searchResults.appendChild(resultElement);
+        });
+    }
 });
 </script>
 
@@ -538,6 +508,49 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         })
         .catch(error => console.error('Error fetching the JSON file:', error));
+});
+</script>
+
+        <script>
+document.addEventListener('DOMContentLoaded', function() {
+    const searchInput = document.getElementById('podcastSearchInput');
+    const searchResults = document.getElementById('searchResults');
+
+    searchInput.addEventListener('input', function() {
+        const searchTerm = searchInput.value.toLowerCase();
+        const podcastSections = document.querySelectorAll('.inner-page-section');
+        let results = [];
+
+        podcastSections.forEach(section => {
+            const sectionTitle = section.querySelector('h2').textContent.toLowerCase();
+            const episodes = section.querySelectorAll('iframe');
+
+            episodes.forEach(episode => {
+                const episodeTitle = episode.getAttribute('src').split('/').pop().split('?')[0];
+                if (episodeTitle.includes(searchTerm)) {
+                    results.push({ title: episodeTitle, link: episode.getAttribute('src') });
+                }
+            });
+        });
+
+        displaySearchResults(results);
+    });
+
+    function displaySearchResults(results) {
+        searchResults.innerHTML = '';
+
+        if (results.length > 0) {
+            searchResults.style.display = 'block';
+            results.forEach(result => {
+                const resultItem = document.createElement('div');
+                resultItem.classList.add('search-result-item');
+                resultItem.innerHTML = `<a href="${result.link}" target="_blank">${result.title}</a>`;
+                searchResults.appendChild(resultItem);
+            });
+        } else {
+            searchResults.style.display = 'none';
+        }
+    }
 });
 </script>
     </body>
