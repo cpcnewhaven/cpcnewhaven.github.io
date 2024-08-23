@@ -4,21 +4,24 @@
     "author": "Rev. Craig Luekens",
     "scripture": "Exodus 7:1-13",
     "date": "2024-06-16",
-    "active": false
+    "active": false,
+    "status": "past"
   },
   {
     "title": "There Will Be Blood: God's Judgment and Our Only Hope",
     "author": "Rev. Craig Luekens",
     "scripture": "Exodus 7:14-25",
     "date": "2024-06-23",
-    "active": false
+    "active": false,
+    "status": "past"
   },
   {
     "title": "The Hardening of Pharaoh's Heart & God's Zeal To Deliver His People",
     "author": "Rev. Jerry Ornelas",
     "scripture": "Exodus 9:16-17, 27-28; 10:1-2, 27",
     "date": "2024-06-30",
-    "active": false
+    "active": false,
+    "status": "past"
   },
   {
 
@@ -26,7 +29,8 @@
     "author": "Rev. Preston Graham",
     "scripture": "Revelation 22:1-15",
     "date": "2024-07-14",
-    "active": false
+    "active": false,
+    "status": "past"
 
   },
   {
@@ -36,7 +40,8 @@
     "date": "2024-07-21",
     "active": false,
     "youtube_url": "https://www.youtube.com/live/Xkd97K3eT5g?si=lUND2fNAkJWzzjF9",
-    "bulletin_url": "data/bulletins/Bulletin_2024-07-21_.pdf"
+    "bulletin_url": "data/bulletins/Bulletin_2024-07-21_.pdf",
+    "status": "past"
   },
   {
     "title": "You are What You Eat: Redemption and the Feast of Feasts",
@@ -45,7 +50,8 @@
     "date": "2024-07-28",
     "active": false,
     "youtube_url": "https://www.youtube.com/watch?v=OVPI0ytJ--k",
-    "bulletin_url": "data/bulletins/bulletin_2024-07-28.pdf"
+    "bulletin_url": "data/bulletins/bulletin_2024-07-28.pdf",
+    "status": "past"
   },
   {
     "title": "By Grace Alone: Terrifying Judgement and Our Only Hope for Salvation",
@@ -56,7 +62,8 @@
     "youtube_url": "https://www.youtube.com/watch?v=Xkd97K3eT5g&t=2s",
     "spotify_url": "https://open.spotify.com/episode/7lEBdM5V6qckwU6YgFAHvq?si=f4db6a58851a414b",
     "bulletin_url": "data/bulletins/bulletin_2024-07-28.pdf",
-    "podcast-thumbnail_url": "#"
+    "podcast-thumbnail_url": "#",
+    "status": "past"
   },
   {
     "title": "A Meal, Bones, Cloud & Fire: A Freedom Too Deep for Mere Words",
@@ -68,18 +75,33 @@
     "spotify_url": "https://open.spotify.com/episode/4ln9alKIO8xUviidke4YH5?si=6ada3c2f3d8949b0",
     "apple_podcasts_url": "https://podcasts.apple.com/us/podcast/cpc-new-haven-podcasts/id1553483670?i=1000665049862",
     "bulletin_url": "",
-    "podcast-thumbnail_url": "#"
+    "podcast-thumbnail_url": "#",
+    "status": "past"
   },
   {
     "title": "Be Silent and Watch! The Unstoppable and Salvific Grace of God",
     "author": "Rev. Craig Luekens",
     "scripture": "Exodus 14:1-31",
     "date": "2024-08-19",
-    "active": true,
+    "active": false,
     "youtube_url": "https://www.youtube.com/watch?v=GpneXiXSNso",
     "spotify_url": "https://open.spotify.com/episode/7tQMwlLbtk19nP5wUIvWON?si=56d7fa76c9fe4c9b",
     "apple_podcasts_url": "https://podcasts.apple.com/us/podcast/cpc-new-haven-podcasts/id1553483670?i=1000665049862",
     "bulletin_url": "",
-    "podcast-thumbnail_url": "#"
+    "podcast-thumbnail_url": "#",
+    "status": "present"
+  },
+  {
+    "title": "Sing and Rejoice! Responding to the Grace of God",
+    "author": "Rev. Craig Luekens",
+    "scripture": "Exodus 15:1-21",
+    "date": "2024-09-01",
+    "active": true,
+    "youtube_url": "",
+    "spotify_url": "",
+    "apple_podcasts_url": "",
+    "bulletin_url": "",
+    "podcast-thumbnail_url": "#",
+    "status": "upcoming"
   }
 ]
