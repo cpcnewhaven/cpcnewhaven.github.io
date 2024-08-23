@@ -45,9 +45,43 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
           sermonApplePodcasts.style.display = 'none';
         }
+
+        // Add handling for the new status field
+        const sermonStatus = document.createElement('p');
+        sermonStatus.id = 'sermonStatus';
+        sermonStatus.textContent = getStatusText(activeSermon.status);
+        document.querySelector('.ag-worship-info').appendChild(sermonStatus);
+
+        // Update visibility of links based on sermon status
+        updateLinkVisibility(activeSermon.status);
       } else {
         console.error('No active sermon found.');
       }
     })
     .catch(error => console.error('Error loading the sermon data:', error));
 });
+
+function getStatusText(status) {
+  switch (status) {
+    case 'upcoming':
+      return 'Upcoming Sermon';
+    case 'past':
+      return 'Previous Sermon';
+    case 'present':
+      return 'Current Sermon';
+    case 'future':
+      return 'Future Sermon';
+    default:
+      return '';
+  }
+}
+
+function updateLinkVisibility(status) {
+  const links = ['sermonYoutube', 'sermonBulletin', 'sermonSpotify', 'sermonApplePodcasts'];
+  links.forEach(linkId => {
+    const link = document.getElementById(linkId);
+    if (link) {
+      link.style.display = (status === 'past' || status === 'present') ? 'block' : 'none';
+    }
+  });
+}
