@@ -69,10 +69,31 @@
       "active": "false"
     },
     {
-      "title": "Fellowship Lunch - August 25th",
-      "description": "12:00pm – 1:00pm\nCategory: Church-Wide\nJoin us after worship for a time to connect, refuel, and spend time in fellowship with one another. Suggested donation of $5 per meal, with a maximum of $20 per household (guests eat free). ",
-      "dateEntered": "2024-08-14",
-      "active": "true"
+      "id": "2024-001",
+      "title": "NEW BULLETIN THIS SUNDAY!",
+      "description": "The staff have been hard at work updating the bulletin, and we are unveiling the new one this Sunday. There are 2 main changes. First, we have removed the reasoning and biblical quotes that remain the same each week and created a separate insert that will live in the pews. This “Worship Guide” explains our movements of worship. Second, we removed the song lyrics, which will be a change for many people who have grown dependent on the text in hand. If you struggle with reading the slides for worship, we’re still providing a Large Print bulletin. With the lyrics removed, however, we hope it will encourage all of our eyes to be lifted up and singing in more communal ways. We know change can be difficult but hopefully it feels more like who we are and allows for more dynamic worship.",
+      "dateEntered": "2024-08-25",
+      "active": "true",
+      "type": "highlight",
+      "category": "highlight or ongoing"
+    },
+    {
+      "id": "2024-002",
+      "title": "FACILITIES TEAM NEEDS YOU!",
+      "description": "There are a number of small fixes and tweaks that are in need of attention around our building and grounds. If you’re interested in helping out - even if your handy skill level is low - please volunteer. Email fred.walker@yale.edu to help out.",
+      "dateEntered": "2024-08-25",
+      "active": "true",
+      "type": "highlight",
+      "category": "ongoing"
+    },
+    {
+      "id": "2024-003",
+      "title": "BOH MENTOR TRAINING SESSION",
+      "description": "This is a great opportunity for interested mentors to meet current mentors, see the mentoring program space and get ideas about becoming the best mentor they can be! This training will be Saturday, Aug 31 from 2-4pm. Contact Wayne Hammond (wayne.hammond@bridgesnewhaven.org or 203-993-3970) with any questions.",
+      "dateEntered": "2024-08-25",
+      "active": "true",
+      "type": "highlight",
+      "category": "highlight"
     }
   ]
 }
