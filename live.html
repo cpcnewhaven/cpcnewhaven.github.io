@@ -50,14 +50,11 @@
             <a class="mobile-menu-link" href="resources.html">Resources</a>
             <a class="mobile-menu-link" href="give.html">Give</a>
         </div>
+        <header>
+        </header>
         <section id="youtube-feed">
             <div class="center-content" style="margin-top: 100px;">
-                <iframe width="560" height="315"
-                    src="https://www.youtube.com/embed/GpneXiXSNso?si=10ywSYlIIMMCU9ZI"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin"
-                    allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/xBDAzJl2Tx8?si=S1eHncRTVQwsDsEq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
         </section>
 
@@ -85,6 +82,25 @@
                             Bulletin</a></p> -->
                 </section>
             </div>
+            <div class="center-content" style="margin-top: 20px;">
+                <button id="download-bulletin" class="download-button">Download Latest Bulletin</button>
+            </div>
+
+            <script>
+                document.getElementById('download-bulletin').addEventListener('click', function() {
+                    fetch('data/latestBulletin.json')
+                        .then(response => response.json())
+                        .then(data => {
+                            if (data && data.bulletin_url) {
+                                window.location.href = data.bulletin_url;
+                            } else {
+                                alert('Bulletin not available at the moment.');
+                            }
+                        })
+                        .catch(error => console.error('Error fetching bulletin data:', error));
+                });
+            </script>
+            <p class="body-text center"><span>Note:</span> This page updates and shows the live feed every Sunday at 10:30am </p>
 
             <section class="sharing-instructions">
                 <h2>Help Us Spread the Word</h2>
