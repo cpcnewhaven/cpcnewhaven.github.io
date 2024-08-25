@@ -4,8 +4,8 @@ document.addEventListener('DOMContentLoaded', function() {
         .then(data => {
             const highlightsContainer = document.getElementById('highlights');
             
-            // Sort announcements by dateAdded in descending order
-            data.announcements.sort((a, b) => new Date(b.dateAdded) - new Date(a.dateAdded));
+            // Sort announcements by dateEntered in descending order
+            data.announcements.sort((a, b) => new Date(b.dateEntered) - new Date(a.dateEntered));
             
             data.announcements.forEach(announcement => {
                 // Check if the announcement is active
@@ -14,7 +14,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
 
                 const highlightElement = document.createElement('div');
-                highlightElement.classList.add('highlight');
+                highlightElement.classList.add('announcement');
+                
+                // Add class based on type
+                if (announcement.type === "highlight") {
+                    highlightElement.classList.add('highlight');
+                } else if (announcement.type === "ongoing") {
+                    highlightElement.classList.add('ongoing');
+                }
 
                 // Set background image if available
                 if (announcement.backgroundIMG) {
@@ -28,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 highlightElement.appendChild(titleElement);
 
                 const descriptionElement = document.createElement('p');
-                descriptionElement.textContent = announcement.description;
+                descriptionElement.innerHTML = announcement.description; // Use innerHTML to render HTML content
                 highlightElement.appendChild(descriptionElement);
 
                 highlightsContainer.appendChild(highlightElement);
