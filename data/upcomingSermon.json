@@ -1,5 +1,6 @@
 [
   {
+    "id": "2024-01",
     "title": "That You May Know: Unconditional Grace and the Hardening of Pharaoh's Heart",
     "author": "Rev. Craig Luekens",
     "scripture": "Exodus 7:1-13",
@@ -8,6 +9,7 @@
     "status": "past"
   },
   {
+    "id": "2024-02",
     "title": "There Will Be Blood: God's Judgment and Our Only Hope",
     "author": "Rev. Craig Luekens",
     "scripture": "Exodus 7:14-25",
@@ -16,6 +18,7 @@
     "status": "past"
   },
   {
+    "id": "2024-03",
     "title": "The Hardening of Pharaoh's Heart & God's Zeal To Deliver His People",
     "author": "Rev. Jerry Ornelas",
     "scripture": "Exodus 9:16-17, 27-28; 10:1-2, 27",
@@ -24,16 +27,16 @@
     "status": "past"
   },
   {
-
+    "id": "2024-04",
     "title": "Paradise Found! Learning to Live the Epic, Not the Lyrics",
     "author": "Rev. Preston Graham",
     "scripture": "Revelation 22:1-15",
     "date": "2024-07-14",
     "active": false,
     "status": "past"
-
   },
   {
+    "id": "2024-05",
     "title": "You've Been Warned: Darkness and the Grace of God",
     "author": "Rev. Craig Luekens",
     "scripture": "Exodus 10: 21-11.10",
@@ -44,6 +47,7 @@
     "status": "past"
   },
   {
+    "id": "2024-06",
     "title": "You are What You Eat: Redemption and the Feast of Feasts",
     "author": "Rev. Craig Luekens",
     "scripture": "Exodus 12:1-28",
@@ -54,6 +58,7 @@
     "status": "past"
   },
   {
+    "id": "2024-07",
     "title": "By Grace Alone: Terrifying Judgement and Our Only Hope for Salvation",
     "author": "Rev. Craig Luekens",
     "scripture": "Exodus 12:29-51",
@@ -66,6 +71,7 @@
     "status": "past"
   },
   {
+    "id": "2024-08",
     "title": "A Meal, Bones, Cloud & Fire: A Freedom Too Deep for Mere Words",
     "author": "Rev. Jerry Ornelas",
     "scripture": "Exodus 13:1-22",
@@ -79,6 +85,7 @@
     "status": "past"
   },
   {
+    "id": "2024-09",
     "title": "Be Silent and Watch! The Unstoppable and Salvific Grace of God",
     "author": "Rev. Craig Luekens",
     "scripture": "Exodus 14:1-31",
@@ -92,6 +99,7 @@
     "status": "past"
   },
   {
+    "id": "2024-10",
     "title": "Sing and Rejoice! Responding to the Grace of God",
     "author": "Rev. Craig Luekens",
     "scripture": "Exodus 15:1-21",
@@ -101,7 +109,7 @@
     "spotify_url": "",
     "apple_podcasts_url": "",
     "bulletin_url": "",
-    "podcast-thumbnail_url": "#",
+    "podcast-thumbnail_url": "https://storage.googleapis.com/cpc-public-website/podcast-thumbnails/8.25.24%20-%20CPC.jpg",
     "status": "present"
   }
 ]
