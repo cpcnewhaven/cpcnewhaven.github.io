@@ -16,6 +16,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
       .warning-banner {
+        display: none;
         background-color: #ffcc00;
         color: #000;
         text-align: center;
@@ -29,10 +30,7 @@
     </style>
   </head>
   <body>
-    <div class="warning-banner">
-      Warning: This website is in beta mode - for the old website visit <a
-        href="https://cpcnewhaven.org">here</a>
-    </div>
+    <div id="warningBanner" class="warning-banner"></div>
 
     <header id="stickyHeader" class="sticky">
       <nav class="main-navigation">
@@ -243,5 +241,6 @@
     <script src="./photos/fetch-jubilee-images.js"></script>
     <script src="./src/js/populate-navigation.js"></script>
 
+    <script src="./src/js/dynamic-banner.js"></script>
   </body>
 </html>
