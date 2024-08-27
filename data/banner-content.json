@@ -1,8 +1,8 @@
 {
   "showBanner": true,
-  "bannerText": "Warning: This website is in beta mode - for the old website visit",
-  "linkText": "here",
-  "linkUrl": "https://cpcnewhaven.org",
+  "bannerText": "Warning: This website is in beta mode",
+  "buttonText": "Visit Old Website",
+  "buttonUrl": "https://cpcnewhaven.org",
   "enteredBy": "John Doe",
   "enteredDate": "2023-09-01",
   "displayWeeks": 4

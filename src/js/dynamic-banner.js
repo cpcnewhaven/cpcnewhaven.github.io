@@ -4,8 +4,15 @@ document.addEventListener('DOMContentLoaded', function() {
     .then(data => {
       if (shouldShowBanner(data)) {
         const bannerElement = document.getElementById('warningBanner');
-        bannerElement.innerHTML = `${data.bannerText} <a href="${data.linkUrl}">${data.linkText}</a>`;
-        bannerElement.style.display = 'block';
+        bannerElement.innerHTML = `
+          ${data.bannerText}
+          <button onclick="window.open('${data.buttonUrl}', '_blank')">${data.buttonText}</button>
+        `;
+        bannerElement.style.display = 'flex';
+        bannerElement.style.alignItems = 'center';
+        bannerElement.style.justifyContent = 'center';
+        bannerElement.style.flexWrap = 'wrap';
+        bannerElement.style.gap = '10px';
       }
     })
     .catch(error => console.error('Error loading banner content:', error));

@@ -57,6 +57,38 @@
             <a class="mobile-menu-link" href="give.html">Give</a>
 
         </div>
+        <style>
+            .staff-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 20px;
+            }
+
+            .staff-member {
+                text-align: center;
+            }
+
+            .staff-member img {
+                width: 150px;
+                height: 150px;
+                border-radius: 50%;
+                object-fit: cover;
+                object-position: center;
+            }
+
+            .staff-member h3 {
+                margin-bottom: 5px;
+            }
+
+            .staff-member h4 {
+                margin-top: 0;
+                font-weight: normal;
+            }
+
+            .read-more-button {
+                margin-top: 10px;
+            }
+        </style>
 
         <div id="page-about">
             <div class="top-splash-welcome">
@@ -364,10 +396,12 @@
                     and the ecumenically-oriented rediscovery of missional
                     ecclesiology.
 
-                    <br><br> <a href="https://anabaino.org"
+                    <br><br>
+                    <div class="center-content">
+                    <a href="https://anabaino.org"
                         style="text-decoration: underline"><h4>For more info,
                             visit
-                            anabaino.org</h4></a>
+                            anabaino.org</h4></a></div>
 
                 </p>
             </section>

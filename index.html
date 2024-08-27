@@ -23,14 +23,24 @@
         padding: 10px;
         font-weight: bold;
       }
-      .warning-banner a {
-        color: #0000EE;
-        text-decoration: underline;
+      .warning-banner button {
+        margin-left: 10px;
+        padding: 5px 10px;
+        background-color: #fff;
+        border: 1px solid #000;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .warning-banner button:hover {
+        background-color: #f0f0f0;
       }
     </style>
   </head>
   <body>
-    <div id="warningBanner" class="warning-banner"></div>
+    <div id="warningBanner" class="warning-banner">
+      <span id="bannerText"></span>
+      <button id="bannerButton"></button>
+    </div>
 
     <header id="stickyHeader" class="sticky">
       <nav class="main-navigation">
@@ -65,8 +75,13 @@
           class="top-splash-logo">
       </section>
       <section class="splash-image" id="home-image"></section>
+      
       <div class="top-splash-welcome">
+        <div style="background-color: rgb(255, 251, 0); width: 100%; padding: 10px; text-align: center;">
+          <p><span style="font-weight: bold;">Warning:</span> This website is in beta mode and may not work as expected - to view the old website please visit <a href="https://cpcnewhaven.github.io/old-website.html" style="text-decoration: underline;">here</a></p>
+        </div>
         <h2>Come Worship with us <br<span>Sundays @ 10:30am</span></h2>
+     
       </div>
       <section id="active-upcoming-sermon" style="display:none;">
         <h1>Upcoming Sermon</h1>
@@ -180,11 +195,8 @@
             Spotify</p>
           <p style="font-weight: bold;">Latest Podcast</p>
           <div style="max-width: 600px; margin: 0 auto;">
-            <iframe style="border-radius:12px"
-              src="https://open.spotify.com/embed/episode/7tQMwlLbtk19nP5wUIvWON?utm_source=generator"
-              width="100%" height="352" frameBorder="0" allowfullscreen
-              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-              loading="lazy"></iframe> </div>
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/4tEdmoInFsPqmR97rqI8EA?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
         </div>
 
         <br>
