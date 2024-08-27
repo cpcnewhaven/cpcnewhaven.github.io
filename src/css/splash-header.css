@@ -1,10 +1,51 @@
 .splash-header {
-    font-size: 48px; /* Large font size for splash effect */
-    color: #000000; /* Bright color for visibility */
-    text-align: center; /* Center the text */
-    padding: 20px; /* Add some padding */
-    background-color: #ffffff; /* Light background to stand out */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    margin-top: 00px; /* Space from top */
+    font-size: 48px;
+    color: #000;
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.top-splash-welcome {
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+}
+
+.headline, .headlinea {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-align: center;
+    padding: 20px;
+}
+
+.headlinea {
+    font-size: 6rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.subheadline {
+    font-size: 1.5rem;
+    max-width: 600px;
+}
+
+@media (max-width: 768px) {
+    .headline, .headlinea {
+        font-size: 3rem;
+    }
+
+    .subheadline {
+        font-size: 1.2rem;
+    }
 }
