@@ -2,11 +2,7 @@
     "podcastSeries": {
         "title": "What We Believe",
         "episodes": [
-            {
-                "number": 24,
-                "title": "Fasting & Prayer",
-                "link": "https://open.spotify.com/episode/4GSiIh5nnK2kRArI32Rzme?si=9929fb90f4774e88"
-            },
+
             {
                 "number": 25,
                 "title": "Sanctification",
@@ -31,11 +27,6 @@
                 "number": 29,
                 "title": "Marriage, Sex & Gender",
                 "link": "https://open.spotify.com/episode/65cuxutVdsrdcDOZPzaZz7?si=1381176186384113"
-            },
-            {
-                "number": 30,
-                "title": "Marriage, Sex & Gender, cont.",
-                "link": "https://cpmfiles1.com/cpcnewhaven.org/ss-fasting_1.pdf"
             }
         ]
     },
