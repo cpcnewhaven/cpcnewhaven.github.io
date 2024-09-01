@@ -1638,3 +1638,8 @@ p {
             flex: 1;
         }
     }
+
+    .sermon-infoa p {
+        margin: 0;
+        text-align: center;
+    }
