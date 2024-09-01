@@ -1642,3 +1642,43 @@ p {
         margin: 0;
         text-align: center;
     }
+
+/* Add these styles for the podcast table */
+.podcast-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-family: "Barlow", sans-serif;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.podcast-table th, .podcast-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.podcast-table th {
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.podcast-table tr:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.podcast-table a {
+    color: #1c95ff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.podcast-table a:hover {
+    color: #007bff;
+}
