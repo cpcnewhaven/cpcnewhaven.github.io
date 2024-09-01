@@ -139,6 +139,40 @@
                     flex-direction: column;
                 }
             }
+
+            .podcast-table {
+                width: 100%;
+                border-collapse: collapse;
+                margin: 20px 0;
+            }
+
+            .podcast-table th, .podcast-table td {
+                border: 1px solid #ddd;
+                padding: 8px;
+                text-align: left;
+            }
+
+            .podcast-table th {
+                background-color: #f2f2f2;
+                font-weight: bold;
+            }
+
+            .podcast-table tr:nth-child(even) {
+                background-color: #f9f9f9;
+            }
+
+            .podcast-table tr:hover {
+                background-color: #f1f1f1;
+            }
+
+            .podcast-table a {
+                color: #1DB954;
+                text-decoration: none;
+            }
+
+            .podcast-table a:hover {
+                text-decoration: underline;
+            }
         </style>
     </head>
     <body>
@@ -227,13 +261,8 @@
                 </div>
                 <section id="podcast-sunday-sermon" class="inner-page-section"
                     style="margin-top:20px;">
-                    <h2>The Sunday Sermon</h2>
-
-<!-- 
-This input field allows users to filter the Sunday Sermon podcasts by scripture. 
-When a user types in this field, it will filter the list of sermons to only show those that match the entered scripture.
--->
-<input type="text" id="filter-scripture" placeholder="Filter by scripture" style="padding: 10px; margin: 10px 0; width: 100%; border: 1px solid #ccc; border-radius: 5px;">
+                    <h3>The Sunday Sermon</h3>
+                    <input type="text" id="filter-scripture" placeholder="Filter by scripture" style="padding: 10px; margin: 10px 0; width: 100%; border: 1px solid #ccc; border-radius: 5px;">
                     <table id="sunday-sermon-table">
                         <thead>
                             <tr>
@@ -250,105 +279,44 @@ When a user types in this field, it will filter the list of sermons to only show
                     </table>
                 </section>
 
-             
-
-                <section id="podcast-beyond" class="inner-page-section">
-                    <h2>Beyond</h2>
-                    <!-- Content for Beyond -->
-                    <iframe style="border-radius:12px"
-                        src="https://open.spotify.com/embed/episode/0bI7PF4LL0725GwbvP3Fq0?utm_source=generator"
-                        width="100%" height="352" frameBorder="0"
-                        allowfullscreen
-                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                        loading="lazy"></iframe>
-                    <br>
-                    <iframe style="border-radius:12px"
-                        src="https://open.spotify.com/embed/episode/1HTxyUoV1PIs9fjCfdT7Hc?utm_source=generator"
-                        width="100%" height="352" frameBorder="0"
-                        allowfullscreen
-                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                        loading="lazy"></iframe>
-                    <br>
-                    <iframe style="border-radius:12px"
-                        src="https://open.spotify.com/embed/episode/00kiP5VJhqXCe27EQ0iRd8?utm_source=generator"
-                        width="100%" height="352" frameBorder="0"
-                        allowfullscreen
-                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                        loading="lazy"></iframe>
-                    <br>
-                    <iframe style="border-radius:12px"
-                        src="https://open.spotify.com/embed/episode/6yBjpPq8wy2DpodduC2fCO?utm_source=generator"
-                        width="100%" height="352" frameBorder="0"
-                        allowfullscreen
-                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                        loading="lazy"></iframe>
-                    <br>
-                    <iframe style="border-radius:12px"
-                        src="https://open.spotify.com/embed/episode/5AlCPKfjUx7qPjCdRv3nYa?utm_source=generator"
-                        width="100%" height="352" frameBorder="0"
-                        allowfullscreen
-                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                        loading="lazy"></iframe>
-                    <br>
-                    <iframe style="border-radius:12px"
-                        src="https://open.spotify.com/embed/episode/4TU0k8lmF3JWsZvVs6by5E?utm_source=generator"
-                        width="100%" height="352" frameBorder="0"
-                        allowfullscreen
-                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                        loading="lazy"></iframe>
-                    <br>
-                    <iframe style="border-radius:12px"
-                        src="https://open.spotify.com/embed/episode/4Vu3BzlVeHWZomA1dUTkmz?utm_source=generator"
-                        width="100%" height="352" frameBorder="0"
-                        allowfullscreen
-                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                        loading="lazy"></iframe>
-                    <br>
-                    <iframe style="border-radius:12px"
-                        src="https://open.spotify.com/embed/episode/6VjK8hT8rv4YmdZvNpDtz6?utm_source=generator"
-                        width="100%" height="352" frameBorder="0"
-                        allowfullscreen
-                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                        loading="lazy"></iframe>
-                    <br>
-                    <iframe style="border-radius:12px"
-                        src="https://open.spotify.com/embed/episode/1GuvtpLTTZRjsmGQqQghnF?utm_source=generator"
-                        width="100%" height="352" frameBorder="0"
-                        allowfullscreen
-                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                        loading="lazy"></iframe>
-                    <br>
-                    <iframe style="border-radius:12px"
-                        src="https://open.spotify.com/embed/episode/0JgjQq3VeTQQCFvjxbnXSF?utm_source=generator"
-                        width="100%" height="352" frameBorder="0"
-                        allowfullscreen
-                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                        loading="lazy"></iframe>
-                    <br>
-                    <iframe style="border-radius:12px"
-                        src="https://open.spotify.com/embed/episode/4jxBlMNYnk8nznuuZ3uTnK?utm_source=generator"
-                        width="100%" height="352" frameBorder="0"
-                        allowfullscreen
-                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                        loading="lazy"></iframe>
-                    <br>
-                    <iframe style="border-radius:12px"
-                        src="https://open.spotify.com/embed/episode/2LEsA2a9c5NG11FEOKGo6O?utm_source=generator"
-                        width="100%" height="352" frameBorder="0"
-                        allowfullscreen
-                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                        loading="lazy"></iframe>
-
+                <section id="podcast-beyond" class="inner-page-section" style="margin-top:20px;">
+                    <h3>Beyond</h3>
+                    <input type="text" id="filter-beyond-title" placeholder="Filter by title" style="padding: 10px; margin: 10px 0; width: 100%; border: 1px solid #ccc; border-radius: 5px;">
+                    <input type="text" id="filter-beyond-guest" placeholder="Filter by guest" style="padding: 10px; margin: 10px 0; width: 100%; border: 1px solid #ccc; border-radius: 5px;">
+                    <table id="beyond-sermon-table">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Title</th>
+                                <th>Guest</th>
+                                <th>Listen</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Table content will be dynamically populated here -->
+                        </tbody>
+                    </table>
                 </section>
 
-                <section id="podcast-adult-study" class="inner-page-section">
-                    <h2 id="wwbclass-title"></h2>
-                    <div class="wwb-content">
-                        <ul id="wwbclass-episode-list" class="list-table">
-                            <!-- Episodes will be populated here by JavaScript -->
-                        </ul>
-                    </div>
+                <section id="podcast-wwb" class="inner-page-section" style="margin-top:20px;">
+                    <h1>Adult Sunday Studies</h1>
+                    <h3>What We Believe</h3>
+                    <input type="text" id="filter-wwb-title" placeholder="Filter by title" style="padding: 10px; margin: 10px 0; width: 100%; border: 1px solid #ccc; border-radius: 5px;">
+                    <table id="wwb-sermon-table">
+                        <thead>
+                            <tr>
+                                <th>Number</th>
+                                <th>Title</th>
+                                <th>Listen</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Table content will be dynamically populated here -->
+                        </tbody>
+                    </table>
                 </section>
+
+           
 
             </div>
         </div>
