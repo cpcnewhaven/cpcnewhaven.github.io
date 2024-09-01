@@ -10,6 +10,7 @@
           document.getElementById('sermonBulletin').href = activeSermon.bulletin_url || '#';
           document.querySelector('.ag-worship-image').src = activeSermon['podcast-thumbnail_url'] || 'default-image.jpg';
           document.querySelector('.ag-worship-image').alt = activeSermon.title || 'Sermon Image';
+          document.getElementById('pastorName').textContent = activeSermon.author || 'Unknown Pastor';
         }
       })
       .catch(error => console.error('Error fetching sermon data:', error));
