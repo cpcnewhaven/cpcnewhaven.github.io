@@ -1,43 +1,3 @@
-// events.js
-let events = [
-    {
-        date: "10 September",
-        event: "Sunday Funday",
-        time: "After Worship",
-        location: "CPC Lawn",
-        desc: "Come to the Sunday Worship!"
-    },
-    {
-        date: "17 September",
-        event: "Ministry Year Kick-Off!",
-        time: "",
-        location: "",
-        desc: "Come to the Sunday Worship!"
-    },
-    {
-        date: "23 September",
-        event: "Men & Kids Can Cook Tailgate (Cornell @ Yale Football)",
-        time: "10am",
-        location: "Cornell @ Yale Football",
-        desc: "Come to the Sunday Worship!"
-    },
-    {
-        date: "01 October",
-        event: "Installation Service of Senior Pastor",
-        time: "4:30pm",
-        location: "",
-        desc: "Come to the worship service for the installation of the senior pastor "
-    },
-    {
-        date: "17 September",
-        event: "Ministry Year Kick-Off!",
-        time: "",
-        location: "",
-        desc: ""
-    },
-
-    // ... add more events here
-];
 
 
   
@@ -64,3 +24,29 @@ let events = [
   
     tableBody.appendChild(row);
   });
+
+// Fetch ongoing events from JSON and populate the table
+fetch('./data/announcements/ongoingEvents.json')
+    .then(response => response.json())
+    .then(data => {
+        let ongoingEventsTable = document.querySelector('#ongoingEventsTable tbody');
+        
+        data.ongoingEvents.forEach(event => {
+            let row = document.createElement('tr');
+            
+            let titleCell = document.createElement('td');
+            titleCell.textContent = event.title;
+            row.appendChild(titleCell);
+            
+            let descCell = document.createElement('td');
+            descCell.innerHTML = event.description; // Use innerHTML to render HTML content
+            row.appendChild(descCell);
+            
+            let dateCell = document.createElement('td');
+            dateCell.textContent = event.dateEntered;
+            row.appendChild(dateCell);
+            
+            ongoingEventsTable.appendChild(row);
+        });
+    })
+    .catch(error => console.error('Error loading ongoing events:', error));

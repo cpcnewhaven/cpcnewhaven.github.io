@@ -1,10 +1,13 @@
 document.addEventListener('DOMContentLoaded', function() {
-    fetch('./data/events.json')
-        .then(response => response.json())
-        .then(data => {
-            renderEventsByMonth(data.events);
-        })
-        .catch(error => console.error('Error fetching data:', error));
+    Promise.all([
+        fetch('./data/events.json').then(response => response.json()),
+        fetch('./data/announcements/ongoingEvents.json').then(response => response.json())
+    ])
+    .then(([eventsData, ongoingEventsData]) => {
+        const combinedEvents = eventsData.events.concat(ongoingEventsData.ongoingEvents);
+        renderEventsByMonth(combinedEvents);
+    })
+    .catch(error => console.error('Error fetching data:', error));
 });
 
 function renderEventsByMonth(eventsData) {
