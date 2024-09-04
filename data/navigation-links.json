@@ -13,7 +13,7 @@
   ],
   "mobileNavigation": [
     { "text": "Home", "href": "index.html" },
-    { "text": "Sundays", "href": "worship.html" },
+    { "text": "Sundays", "href": "sundays.html" },
     { "text": "About", "href": "about.html" },
     { "text": "Podcasts", "href": "podcasts.html" },
     { "text": "Events", "href": "events.html" },
