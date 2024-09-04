@@ -98,7 +98,7 @@
     {
       "id": "2024-004",
       "title": "A GLIMPSE INTO THE FALL SCHEDULE",
-      "description": "<ul><li>Full Sunday Schedule resumes - 9/8/24</li><li>Prayer @8:30, Children’s and Adult Sunday Studies @9:30, Weekly Fellowship Lunches after worship</li><li>Life Groups & Discipleship Groups resume regular schedule</li><li>Welcome Sunday (Lunch and Kids Crafts outdoors) - 9/8/24</li><li>Congregational Meeting, discussing Annual Ministry Plan - 9/15/24</li><li>Ministry Fair - 9/22/24</li><li>Women’s Welcome Brunch - 10/5/24</li><li>Young Adults BBQ Hangout - 10/19/24</li></ul>",
+ "description": "<style>table { width: 100%; border-collapse: collapse; background-color: #ffffff; color: #000; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); border-radius: 8px; overflow: hidden; } td, th { border: 1px solid #ddd; padding: 8px; } th { padding-top: 12px; padding-bottom: 12px; text-align: left; background-color: #ccc; text-align:center; color: black; } tr:nth-child(even){background-color: #f2f2f2;} </style><table><tr><th>Date</th><th>Event</th></tr><tr><td>9/8/24</td><td>Full Sunday Schedule resumes</td></tr><tr><td>8:30</td><td>Prayer</td></tr><tr><td>9:30</td><td>Children’s and Adult Sunday Studies</td></tr><tr><td>After Worship</td><td>Weekly Fellowship Lunches</td></tr><tr><td>9/8/24</td><td>Welcome Sunday (Lunch and Kids Crafts outdoors)</td></tr><tr><td>9/15/24</td><td>Congregational Meeting, discussing Annual Ministry Plan</td></tr><tr><td>9/22/24</td><td>Ministry Fair</td></tr><tr><td>10/5/24</td><td>Women’s Welcome Brunch</td></tr><tr><td>10/19/24</td><td>Young Adults BBQ Hangout</td></tr></table>",
       "dateEntered": "2024-08-26",
       "active": "true",
       "type": "ongoing",
