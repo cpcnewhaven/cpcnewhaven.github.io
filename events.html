@@ -60,6 +60,15 @@
             <div class="top-splash-welcome">
                 <h1 class="headline">Upcoming Events</h1>
                 <p class="subheadline">Join us for community and connection</p>
+                <table id="upcomingEventsTable" class="upcoming-event-table">
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Description</th>
+                            <th>Date</th>
+                        </tr>
+                    </thead>
+                </table>
             </div>
             <section class="splash-image" id="home-image"></section>
             <section id="ongoing-events-json" class="inner-page-section">
@@ -167,10 +176,10 @@
 
     </script>
             <script src="./src/fetch-events.js"></script>
-            <script src="./src/js/background-fetch-splash-image.js"></script>
+            <script src="./src/js/populate-ongoing-events.js"></script>
             <script src="./src/js/function_toggle_mobileMenu.js"></script>
             <script src="./src/js/populate-navigation.js"></script>
             <script src="./src/js/load-community-events.js"></script>
-            <script src="./src/js/populate-ongoing-events.js"></script>
+
         </body>
     </html>
