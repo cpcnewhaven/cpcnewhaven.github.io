@@ -36,13 +36,13 @@
       "title": "JOIN THE GREEN TEAM!",
       "description": "If you are interested in serving your church while getting exercise AND having fun-in-the-sun when the weather is not, well, WINTER!, then contact jennifer@cpcnewhaven.org right away! We are in need of anyone who has two legs, at least 20/50 vision, and an hour or so available every 6-8 weeks during the growing season to help keep our beautiful non-native shortgrass meadow under control, and ready for picnics. All those interested in free, impromptu fine gardening and horticulture lessons from a certified professional may also apply.",
       "dateEntered": "2024-06-24", 
-      "active": "true"
+      "active": "false"
     },
     {
       "title": "PASTOR’S BOOK PICK - The Life We’re Looking For",
       "description": "This summer, we’re suggesting that you pick up Andy Crouch’s latest book - The Life We’re Looking For: Reclaiming Relationship in a Technological World. This is a perfect followup to The Soul of Shame, as it gets us to reconsider all the ways we are distracted or prevented from deeper relationships. Crouch is a wonderfully thoughtful and practical Christian thinker, who served as a Campus Minister at Harvard, and now works primarily as a consultant at Praxis for redemptive entrepreneurship. This is a great summer read to help us all prioritize and re-calibrate our lives around Christ! Copies are in the foyer, pay what you can.",
       "dateEntered": "2024-06-24", 
-      "active": "true"
+      "active": "false"
     },
     {
       "title": "SUMMER COLLEGE BIBLE STUDY WEDNESDAYS at 6PM",
@@ -83,8 +83,8 @@
       "description": "There are a number of small fixes and tweaks that are in need of attention around our building and grounds. If you’re interested in helping out - even if your handy skill level is low - please volunteer. Email fred.walker@yale.edu to help out.",
       "dateEntered": "2024-08-25",
       "active": "false",
-      "type": "ongoing",
-      "category": "ongoing"
+      "type": "highlight",
+      "category": "highlight"
     },
     {
       "id": "2024-003",
