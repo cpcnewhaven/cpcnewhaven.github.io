@@ -4,6 +4,10 @@ document.addEventListener('DOMContentLoaded', function() {
         .then(data => {
             const eventsTable = document.getElementById('ongoingEventsTable');
             const tbody = eventsTable.getElementsByTagName('tbody')[0];
+
+            // Sort events by date (assuming event.date is in a valid date format)
+            data.ongoingEvents.sort((a, b) => new Date(a.date) - new Date(b.date));
+
             data.ongoingEvents.forEach(event => {
                 const row = tbody.insertRow();
                 const titleCell = row.insertCell(0);

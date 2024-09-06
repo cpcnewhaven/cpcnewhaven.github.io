@@ -58,46 +58,49 @@
         </div>
         <div id="page-events" class="page">
             <div class="top-splash-welcome">
-                <h1>Upcoming and Ongoing Events</h1>
+                <h1>Upcoming Events</h1>
             </div>
 
-            <table id="upcomingEventsTable" class="upcoming-event-table">
-                <thead>
-                    <tr>
-                        <th>Title</th>
-                        <th>Description</th>
-                        <th>Dated</th>
-                    </tr>
-                </thead>
-            </table>
-        </div>
-
-        <section class="splash-image" id="home-image"></section>
-        <section id="ongoing-events-json" class="inner-page-section">
-            <div class="center-content">
-                <h2>Ongoing Events</h2>
-                <table id="ongoingEventsTable" class="ongoing-event-table">
+            <section id="upcoming-events-json" class="inner-page-section">
+                <table id="upcomingEventsTable"
+                    class="upcoming-event-table table-style">
                     <thead>
                         <tr>
-                            <th>Title</th>
-                            <th>Description</th>
-
+                            <th style="width: 50%;">Title</th>
+                            <th style="width: 50%;">Date</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <!-- Rows will be populated by events.js -->
+                    <tbody> <!-- Added tbody element -->
+                        <!-- Rows will be populated by populate-upcoming-events.js -->
                     </tbody>
                 </table>
+            </section>
+
+            <section id="ongoing-events-json" class="inner-page-section">
+                <div class="center-content">
+                    <h2>Ongoing Events</h2>
+                    <table id="ongoingEventsTable"
+                        class="ongoing-event-table table-style">
+                        <thead>
+                            <tr>
+                                <th style="width: 50%;">Title</th>
+                                <th style="width: 50%;">Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Rows will be populated by events.js -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <div class="image-container">
+                <img
+                    src="https://storage.googleapis.com/cpc-public-website/54.jpg"
+                    alt="Youth" class="compact-centered-image">
             </div>
-        </section>
 
-        <div class="image-container">
-            <img
-                src="https://storage.googleapis.com/cpc-public-website/54.jpg"
-                alt="Youth" class="compact-centered-image">
-        </div>
-
-        <section class="inner-page-section" id="connect-board">
+            <!-- <section class="inner-page-section" id="connect-board">
             <h2 class="heading-2">Connect Board</h2>
             <div class="center-content">
                 <div id="communityEventsTableContainer"></div>
@@ -106,35 +109,36 @@
                     <button>Have an Idea for the Connect Board?</button>
                 </a>
             </div>
-        </section>
+        </section> -->
 
-        <section id="footer-cta-a" class="styled-section-a">
-            <div class="form-container">
-                <h2>Subscribe to our Newsletter</h2>
-                <p class="body-text ">Our weekly newsletter goes out on
-                    Friday mornings with
-                    Sunday Service information, highlights, upcoming
-                    events, and useful links.</p>
-                <form action="https://formspree.io/f/meojowwg"
-                    method="POST"
-                    class="neumorphic-form">
-                    <input type="text" name="name"
-                        placeholder="Your name" required>
-                    <!-- Added name input -->
-                    <input type="email" name="email"
-                        placeholder="Your email" required>
-                    <button type="submit">Subscribe to CPC New
-                        Haven</button>
-                </form>
-            </div>
-        </section>
+            <section id="footer-cta-a" class="styled-section-a">
+                <div class="form-container ">
+                    <h2>Subscribe to our Newsletter</h2>
+                    <p class="body-text center-text">Our weekly newsletter goes
+                        out on
+                        Friday mornings with
+                        Sunday Service information, highlights, upcoming
+                        events, and useful links.</p>
+                    <form action="https://formspree.io/f/meojowwg"
+                        method="POST"
+                        class="neumorphic-form">
+                        <input type="text" name="name"
+                            placeholder="Your name" required>
+                        <!-- Added name input -->
+                        <input type="email" name="email"
+                            placeholder="Your email" required>
+                        <button type="submit">Subscribe to CPC New
+                            Haven</button>
+                    </form>
+                </div>
+            </section>
 
-        <footer>
-            <a id="fixedlink" target="_blank" rel="nofollow noopener"
-                href="#">135 Whitney Ave - New Haven, CT | Sunday Worship
-                10:30am </a>
-        </footer>
-        <script>
+            <footer>
+                <a id="fixedlink" target="_blank" rel="nofollow noopener"
+                    href="#">135 Whitney Ave - New Haven, CT | Sunday Worship
+                    10:30am </a>
+            </footer>
+            <script>
         document.addEventListener('DOMContentLoaded', function() {
     var header = document.getElementById('myHeader');
 	  var page = document.getElementById('page');
@@ -177,11 +181,10 @@
 });
 
     </script>
-        <script src="./src/fetch-events.js"></script>
-        <script src="./src/js/populate-ongoing-events.js"></script>
-        <script src="./src/js/function_toggle_mobileMenu.js"></script>
-        <script src="./src/js/populate-navigation.js"></script>
-        <script src="./src/js/load-community-events.js"></script>
+            <script src="./src/js/populate-ongoing-events.js"></script>
+            <script src="./src/js/populate-upcoming-events.js"></script>
+            <script src="./src/js/function_toggle_mobileMenu.js"></script>
+            <script src="./src/js/populate-navigation.js"></script>
 
-    </body>
-</html>
+        </body>
+    </html>

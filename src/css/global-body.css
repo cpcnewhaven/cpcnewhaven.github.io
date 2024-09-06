@@ -45,10 +45,7 @@ span {
     font-weight: 900;
 }
 
-table {
-    border-collapse: separate;
-    border-spacing: 12px;
-}
+
 
 button {
     width: 100%;
@@ -1244,40 +1241,6 @@ p {
 }
 
 
-.upcoming-event-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: auto;
-}
-
-.upcoming-event-table th {
-    text-align: center;
-    font-size: 20px;
-    /* Reduced font size */
-    font-weight: 400;
-    /* Slightly bolder */
-    background-color: #f9f9f9;
-    /* Subtle background */
-}
-
-.upcoming-event-table th,
-.upcoming-event-table td {
-    padding: 8px;
-    /* Reduced padding */
-    border: 1px solid #ccc;
-    /* Softer border */
-}
-
-.upcoming-event-table td.date {
-    font-family: 'Arial', sans-serif;
-    font-weight: normal;
-    /* Normal weight for dates */
-}
-
-.upcoming-event-table td.event {
-    font-family: 'Barlow', sans-serif;
-}
-
 /*Block utlity*/
 
 .--block-center-content {
@@ -1714,4 +1677,43 @@ p {
 
 .podcast-table a:hover {
     color: #007bff;
+}
+
+.table-style {
+    width: 100%;
+    border-collapse: collapse;
+    margin: auto;
+}
+
+.table-style th,
+.table-style td {
+    padding: 8px;
+    /* Reduced padding */
+    border: 1px solid #ccc;
+    /* Softer border */
+    text-align: center;
+    /* Center text in both th and td */
+    overflow: hidden;
+    /* Hide overflow */
+    text-overflow: ellipsis;
+    /* Add ellipsis for overflow text */
+    white-space: nowrap;
+    /* Prevent line breaks */
+}
+
+.table-style th {
+    font-size: 20px;
+    /* Reduced font size */
+    font-weight: 400;
+    /* Slightly bolder */
+    background-color: rgba(249, 249, 250, 0.73);
+    /* Subtle background, 73% transparent */
+}
+
+/* Add this to allow line breaks in cells */
+.table-style td {
+    white-space: normal;
+    /* Allow line breaks */
+    max-width: 200px;
+    /* Set a max width for the cells */
 }
