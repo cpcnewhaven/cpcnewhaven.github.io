@@ -17,6 +17,15 @@
       "active": "true",
       "type": "ongoing",
       "category": "ongoing"
+    },
+    {
+      "id": "2024-005",
+      "title": "Pastor Drop-in Office Hours",
+      "description": "<ul><li>Craig: Fridays 7:30-10:30am</li><li>Jerry: Wednesdays 3:30-6:00pm</li></ul>",
+      "dateEntered": "2024-09-01",
+      "active": "true",
+      "type": "ongoing",
+      "category": "ongoing"
     }
   ]
 }
