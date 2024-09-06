@@ -73,7 +73,7 @@
       "title": "NEW BULLETIN THIS SUNDAY!",
       "description": "The staff have been hard at work updating the bulletin, and we are unveiling the new one this Sunday. There are 2 main changes. First, we have removed the reasoning and biblical quotes that remain the same each week and created a separate insert that will live in the pews. This “Worship Guide” explains our movements of worship. Second, we removed the song lyrics, which will be a change for many people who have grown dependent on the text in hand. If you struggle with reading the slides for worship, we’re still providing a Large Print bulletin. With the lyrics removed, however, we hope it will encourage all of our eyes to be lifted up and singing in more communal ways. We know change can be difficult but hopefully it feels more like who we are and allows for more dynamic worship.",
       "dateEntered": "2024-08-25",
-      "active": "true",
+      "active": "false",
       "type": "highlight",
       "category": "highlight or ongoing"
     },
@@ -82,7 +82,7 @@
       "title": "FACILITIES TEAM NEEDS YOU!",
       "description": "There are a number of small fixes and tweaks that are in need of attention around our building and grounds. If you’re interested in helping out - even if your handy skill level is low - please volunteer. Email fred.walker@yale.edu to help out.",
       "dateEntered": "2024-08-25",
-      "active": "true",
+      "active": "false",
       "type": "ongoing",
       "category": "ongoing"
     },
@@ -100,9 +100,46 @@
       "title": "A GLIMPSE INTO THE FALL SCHEDULE",
  "description": "<style>table { width: 100%; border-collapse: collapse; background-color: #ffffff; color: #000; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); border-radius: 8px; overflow: hidden; } td, th { border: 1px solid #ddd; padding: 8px; } th { padding-top: 12px; padding-bottom: 12px; text-align: left; background-color: #ccc; text-align:center; color: black; } tr:nth-child(even){background-color: #f2f2f2;} </style><table><tr><th>Date</th><th>Event</th></tr><tr><td>9/8/24</td><td>Full Sunday Schedule resumes</td></tr><tr><td>8:30</td><td>Prayer</td></tr><tr><td>9:30</td><td>Children’s and Adult Sunday Studies</td></tr><tr><td>After Worship</td><td>Weekly Fellowship Lunches</td></tr><tr><td>9/8/24</td><td>Welcome Sunday (Lunch and Kids Crafts outdoors)</td></tr><tr><td>9/15/24</td><td>Congregational Meeting, discussing Annual Ministry Plan</td></tr><tr><td>9/22/24</td><td>Ministry Fair</td></tr><tr><td>10/5/24</td><td>Women’s Welcome Brunch</td></tr><tr><td>10/19/24</td><td>Young Adults BBQ Hangout</td></tr></table>",
       "dateEntered": "2024-08-26",
+      "active": "false",
+      "type": "ongoing",
+      "category": "ongoing"
+    },
+    {
+      "id": "2024-005",
+      "title": "SUNDAY SCHOOL RESUMES THIS SUNDAY @9:30AM",
+      "description": "If your child is between 2 ½ years old and 12th grade, please check the foyer for information on where they should go for Sunday school. If you're new, there's a signup sheet available to register your child. Contact Pastor Jerry for any questions (<a href=\"mailto:jerry.ornelas@cpcnewhaven.org\">jerry.ornelas@cpcnewhaven.org</a>).",
+      "dateEntered": "2024-08-25",
+      "active": "true",
+      "type": "upcoming",
+      "category": "upcoming"
+    },
+    {
+      "id": "2024-006",
+      "title": "Adult Sunday Studies - Walking with Jesus Thru Sinai",
+      "description": "We need moral clarity in this age of chaos! What is the good life? How should I treat my neighbor? What does the Bible say about social justice, adultery, covetousness, or slander? Does the Sabbath matter anymore? To answer these questions and more, this year we're \"Walking with Jesus Thru Sinai.\" More than a badge to prove our self-righteousness or a burden to leave us in guilt, the 10 Commandments are summaries of what a flourishing life before God is meant to look like. It shows us how we are made and how we ought to live. This class will be an opportunity to discuss all sorts of crucial issues, from idolatry and worship to moral virtues and political beliefs. Grounded in the grace of Christ, the law becomes a beautiful vision for all our lives. All are welcome! We meet in the Fellowship Hall.",
+      "dateEntered": "2024-09-01",
       "active": "true",
       "type": "ongoing",
       "category": "ongoing"
+    },
+    {
+      "id": "2024-007",
+      "title": "Women's Discipleship - New Year Beginning September 16",
+      "description": "Join us for Women's Discipleship starting September 16 at 7:30 PM. We'll be meeting via Zoom on the 1st and 3rd Mondays of each month. Our study will focus on the book 'Now and Not Yet' by Ruth Chou Simons. We'll alternate between exploring the book and discussing practical applications of what we learn about God, the sufficiency of Christ, and the Holy Spirit. This will involve sharing and praying together. For more information, please contact Lisa Graham (lisahgraham44@gmail.com) or Diane Miller (auntie.diane@comcast.net).",
+      "dateEntered": "2024-09-01",
+      "active": "true",
+      "type": "upcoming",
+      "category": "upcoming"
+    },
+    {
+      "id": "2024-008",
+      "title": "Mom's Discipleship - Fall Meetings Begin September 17",
+      "description": "Mom's Discipleship group will have its first fall meeting on September 17 at 7 PM at CPC. The group will meet twice a month on Tuesday evenings, with a virtual option available at the same time. We'll continue reading 'Intimate Allies' by Dan Allender, but newcomers are welcome to join without catching up on the book. This is a great opportunity for mutual encouragement in your season of motherhood. For more information or to express interest, please contact Meg Bogue at mhbogue@me.com.",
+      "dateEntered": "2024-09-01",
+      "active": "true",
+      "type": "upcoming",
+      "category": "upcoming"
     }
+
   ]
 }
