@@ -13,6 +13,7 @@
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     </head>
     <body>
+
         <header id="stickyHeader" class="sticky">
             <nav class="main-navigation">
                 <a href="index.html">Home</a>
@@ -25,6 +26,7 @@
                 <a href="live.html">Live</a>
                 <a href="resources.html">Resources</a>
                 <a href="give.html">Give</a>
+
             </nav>
         </header>
 
@@ -50,11 +52,19 @@
             <a class="mobile-menu-link" href="resources.html">Resources</a>
             <a class="mobile-menu-link" href="give.html">Give</a>
         </div>
-        <header>
-        </header>
+
+        <div class="top-splash-welcome">
+            <h1>Live</h1>
+        </div>
+
         <section id="youtube-feed">
             <div class="center-content" style="margin-top: 100px;">
-                <iframe width="560" height="315" src="https://www.youtube.com/@CPCNewHaven/live" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe width="560" height="315"
+                    src="https://www.youtube.com/@CPCNewHaven/live"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen></iframe>
             </div>
         </section>
 
@@ -69,7 +79,7 @@
                 })
                 .catch(error => console.error('Error fetching sermon data:', error));
         </script>
-<style>
+        <style>
 .live-sermon-sub-header-container {
     width: 100%;
     display: flex;
@@ -77,23 +87,24 @@
     align-items: center;
 }
 </style>
-<div class="live-sermon-sub-header-container">
-    <h1 id="sermon-title">Sermon Title</h1>
-    <p>Passage Text: <span id="sermon-scripture">John
-            3:16</span></p>
-    <p>Preacher: <span id="sermon-author">Jesus Christ</span></p>
-    <p>Date: <span id="sermon-date">April 10, 2023</span></p>
-    <!-- <p><a id="bulletin-link" href="#" target="_blank">Download
+        <div class="live-sermon-sub-header-container">
+            <h1 id="sermon-title">Sermon Title</h1>
+            <p>Passage Text: <span id="sermon-scripture">John
+                    3:16</span></p>
+            <p>Preacher: <span id="sermon-author">Jesus Christ</span></p>
+            <p>Date: <span id="sermon-date">April 10, 2023</span></p>
+            <!-- <p><a id="bulletin-link" href="#" target="_blank">Download
             Bulletin</a></p> -->
             <br>
-            <button id="download-bulletin" class="download-button">Download  Bulletin</button>
+            <button id="download-bulletin" class="download-button">Download
+                Bulletin</button>
 
-    </div>
+        </div>
 
-    <br>
+        <br>
         <section>
             <div class="worship-widget-ab">
-               
+
             </div>
             <div class="center-content" style="margin-top: 20px;">
             </div>
@@ -112,14 +123,17 @@
                         .catch(error => console.error('Error fetching bulletin data:', error));
                 });
             </script>
-            <p class="body-text center"><span>Note:</span> This page updates and shows the live feed every Sunday at 10:30am </p>
+            <p class="body-text center"><span>Note:</span> This page updates and
+                shows the live feed every Sunday at 10:30am </p>
 
             <section class="sharing-instructions">
                 <h2>Spread the Word</h2>
                 <p>Share our live stream link on your social media platforms.
                     Let your friends and family know how they can join us online
-                    for our services at <a href="https://www.youtube.com/@CPCNewHaven/live" target="_blank">https://www.youtube.com/@CPCNewHaven/live</a>.
-                    </p>
+                    for our services at <a
+                        href="https://www.youtube.com/@CPCNewHaven/live"
+                        target="_blank">https://www.youtube.com/@CPCNewHaven/live</a>.
+                </p>
             </section>
             <h2>Follow and Share</h2>
             <section class="social-links-horizontal">

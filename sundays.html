@@ -75,32 +75,54 @@
 
         <header id="stickyHeader" class="sticky">
             <nav class="main-navigation">
-                <!-- Links will be populated by JavaScript -->
-            </nav>
-            <nav class="mobile-navigation">
-                <!-- Links will be populated by JavaScript -->
+                <a href="index.html">Home</a>
+                <a href="sundays.html">Sundays</a>
+                <a href="about.html">About</a>
+                <a href="podcasts.html">Podcasts</a>
+                <a href="events.html">Events</a>
+                <a href="announcements.html">Announcements</a>
+                <a href="community.html">Community</a>
+                <a href="live.html">Live</a>
+                <a href="resources.html">Resources</a>
+                <a href="give.html">Give</a>
+
             </nav>
         </header>
-        <div class="image-container">
-            <img
-                src="https://storage.googleapis.com/cpc-public-website/65.jpg"
-                alt="Worship" class="compact-centered-image">
+        <!-- MOBILE HAMBURGER-->
+        <div class="hamburger-menu-button-container" id="hamburgerMenu">
+            <i id="closeMobileMenuButton" class="fas fa-bars"></i>
         </div>
+
+        <!-- Mobile Navigation -->
+        <div class="mobile-navigation" id="mobileNavigation">
+            <i id="closeMenuButton" class="fas fa-bars"></i>
+            <!-- Exit button -->
+            <img src="./assets/CPC_LOGO_24.png" id="mobile-menu-logo">
+            <a class="mobile-menu-link" href="index.html">Home</a>
+            <a class="mobile-menu-link" href="worship.html">Worship</a>
+            <a class="mobile-menu-link" href="about.html">About</a>
+            <a class="mobile-menu-link" href="podcasts.html">Podcasts</a>
+            <a class="mobile-menu-link 
+                href="events.html"><p class="main-nav-active">Events</p></a>
+            <a class="mobile-menu-link"
+                href="announcements.html">Announcements</a>
+            <a class="mobile-menu-link" href="community.html">Community</a>
+            <a class="mobile-menu-link" href="live.html">Live</a>
+            <a class="mobile-menu-link" href="resources.html">Resources</a>
+            <a class="mobile-menu-link" href="give.html">Give</a>
+        </div>
+        <div class="top-splash-welcome">
+            <h1>Sunday Worship Service</h1>
+        </div>
+       
         <div id="page-sundays">
-            <div class="top-splash-welcome">
-                <br>
-                <h1 class="headline">Sunday Worship Service</h1>
-                <br>
-            </div>
+     
 
             <section id="sundays-section" class="inner-page-section"
                 style="padding-bottom: 100px;">
-                <h2>Directions and Time</h2>
-                <p class="body-text">Worship Services are held every Sunday at
-                    10:30am</p>
-                <p class="body-text"><span>Christ Presbyterian New Haven
-                    </span><br>
-                    135 Whitney Avenue, New Haven, CT 06510
+               
+                <h2>Christ Presbyterian New Haven</h2>
+                <p>135 Whitney Avenue, New Haven, CT 06510</p>
                 </p>
                 <div class="map-container"
                     style="width: 100%; height: 0; padding-bottom: 56.25%; position: relative; margin: 20px 0;">
@@ -109,6 +131,9 @@
                         style="border:0; width: 100%; height: 100%; position: absolute; top: 0; left: 0;"
                         allowfullscreen loading="lazy"></iframe>
                 </div>
+                <h2>Directions and Time</h2>
+                <p class="body-text">Worship Services are held every Sunday at
+                    10:30am</p>
                 <p class="body-text">
                     We are located next to the Yale School of Management, at the
                     corner of Whitney Ave. and Bradley St.
@@ -135,11 +160,18 @@
                     is free to visitors and an enjoyable way to get to know some
                     people while eating a catered meal.
                 </p>
+
+
+                <div class="image-container">
+                    <img
+                        src="https://storage.googleapis.com/cpc-public-website/65.jpg"
+                        alt="Worship" class="compact-centered-image">
+                </div>
                 <section id="footer-cta-a" class="styled-section-a">
                     <div class="form-container">
                         <h2>Subscribe to our Newsletter</h2>
                         <div class="center-content">
-                        <p class="body-text center-text">Our weekly newsletter
+                        <p class="body-text" style="text-align: center!important;">Our weekly newsletter
                             goes out on Friday mornings with
                             Sunday Service information, highlights, upcoming
                             events, and useful links.</p>
