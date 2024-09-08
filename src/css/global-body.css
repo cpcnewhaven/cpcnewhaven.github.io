@@ -431,6 +431,7 @@ p {
     border-bottom: 1px solid #ddd;
     position: sticky;
     top: 45px;
+    z-index: 100;
 }
 
 .submenu-menu {
@@ -438,6 +439,7 @@ p {
     justify-content: space-around;
     max-width: 1200px;
     margin: 0 auto;
+    flex-wrap: wrap;
 }
 
 .submenu-menu a {
@@ -451,11 +453,32 @@ p {
     line-height: 95%;
     transition: background-color 0.3s, color 0.3s;
     border-radius: 5px;
+    margin: 5px;
 }
 
 .submenu-menu a:hover {
     background-color: #1c95ff35;
     color: #fff;
+}
+
+@media (max-width: 768px) {
+    .submenu-container {
+        top: 0;
+        padding: 5px 0;
+    }
+
+    .submenu-menu {
+        flex-direction: column;
+    }
+
+    .submenu-menu a {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .hide-on-mobile {
+        display: none;
+    }
 }
 
 /* @media (max-width: 767px) {
