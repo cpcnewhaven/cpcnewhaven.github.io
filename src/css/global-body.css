@@ -476,29 +476,94 @@ p {
         display: block;
     }
 } */
+/* ... existing styles ... */
+/* ... existing styles ... */
 
 .mobile-navigation {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    max-width: 300px;
+    height: 100vh;
+    background-color: #fff;
+    z-index: 1000;
+    transition: right 0.3s ease-in-out;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
     overflow-y: auto;
-    /* Enable vertical scrolling */
-    max-height: 80vh;
-    padding: 20px;
-    background-color: transparent;
+}
+
+.mobile-navigation.active {
+    right: 0;
+}
+
+.mobile-nav-header {
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+}
+
+#mobile-menu-logo {
+    width: 80px;
+    height: auto;
+}
+
+#closeMenuButton {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.mobile-nav-links {
+    list-style-type: none;
+    padding: 0;
     margin: 0;
 }
 
-@media screen and (max-width: 767px) {
-    .submenu-container.hide-on-mobile {
-        display: none !important;
+.mobile-menu-link {
+    display: block;
+    padding: 15px;
+    font-size: 18px;
+    color: #333;
+    text-decoration: none;
+    border-bottom: 1px solid #eee;
+}
+
+.mobile-menu-link:hover {
+    background-color: #f5f5f5;
+}
+
+.hamburger-menu-button-container {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 1001;
+    background-color: #fff;
+    border-radius: 50%;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#closeMobileMenuButton {
+    font-size: 24px;
+    color: #333;
+}
+
+@media screen and (min-width: 768px) {
+    .hamburger-menu-button-container,
+    .mobile-navigation {
+        display: none;
     }
 }
 
-@media screen and (max-width: 767px) {
-    .hide-on-mobile {
-        display: none !important;
-    }
-}
-
-
+/* ... rest of the existing styles ... */
+/* ... rest of the existing styles ... */
 
 
 
@@ -1032,38 +1097,9 @@ p {
 }
 
 
-.mobile-navigation #closeMenuButton {
-    position: fixed;
-    background-color: rgba(0, 0, 0, 0.714) !important;
-    top: 10px;
-    right: 10px;
-    height: 50px;
-    width: 48px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    margin: 10px;
-    border-radius: 5px;
-
-}
-
 /* @media (max-width: 700px) {
     .main-navigation {
         display: none;
-    }
-
-    .mobile-navigation {
-        display: none;
-        flex-direction: column;
-        align-items: center;
-        background-color: #ffffffea;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 1000;
     }
 } */
 
@@ -1080,36 +1116,7 @@ p {
     } */
 
 
-#mobile-menu-logo {
-    width: 100px;
-    height: auto;
-}
 
-.mobile-menu-link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 98%;
-    text-align: center;
-    height: 52px;
-
-    padding: 15px;
-    max-width: 500px;
-    font-size: 18px;
-    color: #333;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    margin-left: 42px !important;
-}
-
-.mobile-menu-link:hover {
-    background-color: #1c89ff;
-    /* Hover background color */
-    color: #fff;
-    /* Hover text color */
-    transform: scale(1.05);
-    /* Slightly enlarge on hover */
-}
 
 
 .form-container {

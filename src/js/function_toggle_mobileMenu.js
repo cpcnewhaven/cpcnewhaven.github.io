@@ -25,3 +25,16 @@
           mobileNav.style.transform = 'translateX(100%)'; // Slide out
         }
       });
+
+      document.addEventListener('DOMContentLoaded', function() {
+        const hamburgerMenu = document.getElementById('hamburgerMenu');
+        const mobileNavigation = document.getElementById('mobileNavigation');
+        const closeMenuButton = document.getElementById('closeMenuButton');
+
+        function toggleMobileMenu() {
+            mobileNavigation.style.display = mobileNavigation.style.display === 'block' ? 'none' : 'block';
+        }
+
+        hamburgerMenu.addEventListener('click', toggleMobileMenu);
+        closeMenuButton.addEventListener('click', toggleMobileMenu);
+      });
