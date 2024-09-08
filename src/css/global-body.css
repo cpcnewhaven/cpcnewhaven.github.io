@@ -22,6 +22,11 @@ h4 {
     margin-bottom: 15px;
 }
 
+em {
+    font-weight: 600;
+    font-style: normal;
+}
+
 @media (min-width: 768px) {
     h4 {
         font-size: 22px;
@@ -86,7 +91,6 @@ button {
 section {
     display: flex;
     flex-direction: column;
-    margin-bottom: 20px;
     border-radius: 5px;
     text-align: left;
     line-height: 90%;
@@ -1729,4 +1733,8 @@ p {
     /* Allow line breaks */
     max-width: 200px;
     /* Set a max width for the cells */
+}
+
+.global-warning {
+    background-color: rgb(255, 251, 0); width: 100%; padding: 10px; text-align: center;
 }
