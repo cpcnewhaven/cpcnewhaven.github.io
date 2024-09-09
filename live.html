@@ -110,6 +110,7 @@
 }
 </style>
         <div class="live-sermon-sub-header-container">
+            <hr>
             <h1 id="sermon-title">Sermon Title</h1>
             <p>Passage Text: <span id="sermon-scripture">John
                     3:16</span></p>
@@ -162,9 +163,30 @@
                 <h2>Spread the Word</h2>
                 <p>Share our live stream link on your social media platforms.
                     Let your friends and family know how they can join us online
-                    for our services at <a
-                        href="https://www.youtube.com/@CPCNewHaven/live"
-                        target="_blank">https://www.youtube.com/@CPCNewHaven/live</a>.
+                    for our services
+                    <hr>
+                    <a href="https://www.youtube.com/@CPCNewHaven/live"
+                        target="_blank"
+                        style="color: #0066cc; text-decoration: underline; font-weight: bold;"
+                        onclick="shareLink(event, 'https://www.youtube.com/@CPCNewHaven/live')">
+                        Share Live Link on YouTube
+                    </a>
+                    <script>
+                    function shareLink(event, url) {
+                        event.preventDefault();
+                        if (navigator.share) {
+                            navigator.share({
+                                title: 'CPC New Haven Live Stream',
+                                url: url
+                            }).then(() => {
+                                console.log('Thanks for sharing!');
+                            }).catch(console.error);
+                        } else {
+                            // Fallback for browsers that don't support Web Share API
+                            window.open(url, '_blank');
+                        }
+                    }
+                    </script>
                 </p>
             </section>
             <h2>Follow and Share</h2>
