@@ -37,39 +37,53 @@
 
   </head>
   <body>
-
-
     <header id="stickyHeader" class="sticky">
       <nav class="main-navigation">
-        <!-- Links will be populated by JavaScript -->
+          <a href="index.html">Home</a>
+          <a href="sundays.html">Sundays</a>
+          <a href="about.html">About</a>
+          <a href="podcasts.html">Podcasts</a>
+          <a href="events.html">Events</a>
+          <a href="announcements.html">Announcements</a>
+          <a href="community.html">Community</a>
+          <a href="live.html">Live</a>
+          <a href="resources.html">Resources</a>
+          <a href="give.html">Give</a>
+
       </nav>
-    </header>
+  </header>
 
-<!-- MOBILE HAMBURGER-->
-<div class="hamburger-menu-button-container" id="hamburgerMenu">
-  <i id="closeMobileMenuButton" class="fas fa-bars"></i>
-</div>
-
-<!-- Mobile Navigation -->
-<nav class="mobile-navigation" id="mobileNavigation">
-  <div class="mobile-nav-header">
-    <button id="closeMenuButton" aria-label="Close menu">
-      <i class="fas fa-times"></i>
-    </button>
+  <!-- MOBILE HAMBURGER-->
+  <div class="hamburger-menu-button-container" id="hamburgerMenu">
+      <i id="closeMobileMenuButton" class="fas fa-bars"></i>
   </div>
-  <ul class="mobile-nav-links">
-    <li><a class="mobile-menu-link" href="index.html">Home</a></li>
-    <li><a class="mobile-menu-link" href="sundays.html">Sundays</a></li>
-    <li><a class="mobile-menu-link" href="about.html">About</a></li>
-    <li><a class="mobile-menu-link" href="podcasts.html">Podcasts</a></li>
-    <li><a class="mobile-menu-link" href="events.html">Events</a></li>
-    <li><a class="mobile-menu-link" href="announcements.html">Announcements</a></li>
-    <li><a class="mobile-menu-link" href="community.html">Community</a></li>
-    <li><a class="mobile-menu-link" href="live.html">Live</a></li>
-    <li><a class="mobile-menu-link" href="resources.html">Resources</a></li>
-    <li><a class="mobile-menu-link" href="give.html">Give</a></li>
-  </ul>
-</nav>
+
+  <!-- Mobile Navigation -->
+  <nav class="mobile-navigation" id="mobileNavigation">
+      <div class="mobile-nav-header">
+          <button id="closeMenuButton" aria-label="Close menu">
+              <i class="fas fa-times"></i>
+          </button>
+      </div>
+      <ul class="mobile-nav-links">
+          <li><a class="mobile-menu-link" href="index.html">Home</a></li>
+          <li><a class="mobile-menu-link"
+                  href="sundays.html">Sundays</a></li>
+          <li><a class="mobile-menu-link" href="about.html">About</a></li>
+          <li><a class="mobile-menu-link"
+                  href="podcasts.html">Podcasts</a></li>
+          <li><a class="mobile-menu-link"
+                  href="events.html">Events</a></li>
+          <li><a class="mobile-menu-link"
+                  href="announcements.html">Announcements</a></li>
+          <li><a class="mobile-menu-link"
+                  href="community.html">Community</a></li>
+          <li><a class="mobile-menu-link" href="live.html">Live</a></li>
+          <li><a class="mobile-menu-link"
+                  href="resources.html">Resources</a></li>
+          <li><a class="mobile-menu-link" href="give.html">Give</a></li>
+      </ul>
+  </nav>
 
 
     <div id="page">
@@ -237,8 +251,6 @@
     <script src="./src/js/updateContent.js"></script>
     <!-- Working SCRIPTS-->
     <script src="./src/js/fetch-events-preview.js"></script>
-    <script src="./src/nav-code.js"></script>
-    <script src="./src/announcements.js"></script>
     <!-- Fetch Latest 3 Podcasts and Display on Homepage -->
     <script src="./src/js/fetch-highlights-display-homepage.js"></script>
     <!-- CLOSE AND TOGGLE NAVIGATION -->
@@ -252,7 +264,7 @@
       }
     </script>
     <script src="./photos/fetch-jubilee-images.js"></script>
-    <script src="./src/js/populate-navigation.js"></script>
+ 
 
     <script src="./src/js/dynamic-banner.js"></script>
     <script src="./src/homepage-display-sermon.js"></script>

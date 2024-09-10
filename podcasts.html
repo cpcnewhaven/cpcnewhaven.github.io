@@ -35,165 +35,10 @@
         <link rel="stylesheet" href="./src/css/global-footer-cta.css">
         <link rel="stylesheet" href="./src/css/footer.css">
         <link rel="stylesheet" href="./css/podcasts.css">
-        <link rel="stylesheet" href="./src/css/global-nav-bar.css">
+      
         <link rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-        <style>
-            .wwb-content {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                margin-top: 20px;
-            }
-
-            .wwbclass-list-number {
-                margin-right: 10px;
-            }
-
-            .wwbclass-play-button {
-                background-color: #1DB954;
-                color: white;
-                border: none;
-                padding: 5px 10px;
-                margin-left: 10px;
-                cursor: pointer;
-            }
-
-            .wwbclass-play-button:hover {
-                background-color: #1ED760;
-            }
-
-            @media (max-width: 767px) {
-                .submenu-container {
-                    display: none;
-                }
-            }
-
-            .search-container {
-                margin: 20px auto;
-                max-width: 600px;
-            }
-
-            #podcastSearchInput {
-                width: 100%;
-                padding: 10px;
-                font-size: 16px;
-            }
-
-            #searchResults {
-                margin-top: 10px;
-            }
-
-            .search-result {
-                padding: 10px;
-                border-bottom: 1px solid #eee;
-                cursor: pointer;
-            }
-
-            .search-result:hover {
-                background-color: #f5f5f5;
-            }
-
-            /* Sidebar styles */
-            .dashboard-container {
-                display: flex;
-            }
-
-            .sidebar {
-                width: 220px;
-                background-color: #f4f4f4;
-                padding: 20px;
-                box-shadow: 2px 0 5px rgba(0,0,0,0.1);
-                position: fixed;
-                height: 100vh;
-            }
-
-            .sidebar h1 {
-                font-size: 2rem!important;
-            }
-
-            .sidebar-logo {
-                width: 100px; /* Adjust the size as needed */
-                display: block;
-                margin: 0 auto 20px auto; /* Center the logo and add bottom margin */
-            }
-
-            .sidebar h1, .sidebar h2 {
-                text-align: center; /* Center align the headings */
-            }
-
-            .sidebar ul {
-                list-style-type: none;
-                padding: 0;
-            }
-
-            .sidebar ul li {
-                margin: 10px 0;
-            }
-
-            .sidebar ul li a {
-                text-decoration: none;
-                color: #333;
-                font-size: 1.1em;
-            }
-
-            .main-content {
-                flex-grow: 1;
-                padding: 20px;
-                margin-left: 250px;
-            }
-
-            @media (max-width: 768px) {
-                .sidebar {
-                    width: 100%;
-                    height: auto;
-                    position: relative;
-                    box-shadow: none;
-                }
-
-                .main-content {
-                    margin-left: 0;
-                }
-
-                .dashboard-container {
-                    flex-direction: column;
-                }
-            }
-
-            .podcast-table {
-                width: 100%;
-                border-collapse: collapse;
-                margin: 20px 0;
-            }
-
-            .podcast-table th, .podcast-table td {
-                border: 1px solid #ddd;
-                padding: 8px;
-                text-align: left;
-            }
-
-            .podcast-table th {
-                background-color: #f2f2f2;
-                font-weight: bold;
-            }
-
-            .podcast-table tr:nth-child(even) {
-                background-color: #f9f9f9;
-            }
-
-            .podcast-table tr:hover {
-                background-color: #f1f1f1;
-            }
-
-            .podcast-table a {
-                color: #1DB954;
-                text-decoration: none;
-            }
-
-            .podcast-table a:hover {
-                text-decoration: underline;
-            }
-        </style>
+       
     </head>
     <body>
 
@@ -209,36 +54,42 @@
                 <a href="live.html">Live</a>
                 <a href="resources.html">Resources</a>
                 <a href="give.html">Give</a>
+
             </nav>
         </header>
 
-      <!-- MOBILE HAMBURGER-->
-<div class="hamburger-menu-button-container" id="hamburgerMenu">
-    <i id="closeMobileMenuButton" class="fas fa-bars"></i>
-  </div>
-  
-  <!-- Mobile Navigation -->
-  <nav class="mobile-navigation" id="mobileNavigation">
-    <div class="mobile-nav-header">
-      <img src="./assets/CPC_LOGO_24.png" id="mobile-menu-logo" alt="CPC Logo">
-      <button id="closeMenuButton" aria-label="Close menu">
-        <i class="fas fa-times"></i>
-      </button>
-    </div>
-    <ul class="mobile-nav-links">
-      <li><a class="mobile-menu-link" href="index.html">Home</a></li>
-      <li><a class="mobile-menu-link" href="sundays.html">Sundays</a></li>
-      <li><a class="mobile-menu-link" href="about.html">About</a></li>
-      <li><a class="mobile-menu-link" href="podcasts.html">Podcasts</a></li>
-      <li><a class="mobile-menu-link" href="events.html">Events</a></li>
-      <li><a class="mobile-menu-link" href="announcements.html">Announcements</a></li>
-      <li><a class="mobile-menu-link" href="community.html">Community</a></li>
-      <li><a class="mobile-menu-link" href="live.html">Live</a></li>
-      <li><a class="mobile-menu-link" href="resources.html">Resources</a></li>
-      <li><a class="mobile-menu-link" href="give.html">Give</a></li>
-    </ul>
-  </nav>
-  
+        <!-- MOBILE HAMBURGER-->
+        <div class="hamburger-menu-button-container" id="hamburgerMenu">
+            <i id="closeMobileMenuButton" class="fas fa-bars"></i>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <nav class="mobile-navigation" id="mobileNavigation">
+            <div class="mobile-nav-header">
+                <button id="closeMenuButton" aria-label="Close menu">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <ul class="mobile-nav-links">
+                <li><a class="mobile-menu-link" href="index.html">Home</a></li>
+                <li><a class="mobile-menu-link"
+                        href="sundays.html">Sundays</a></li>
+                <li><a class="mobile-menu-link" href="about.html">About</a></li>
+                <li><a class="mobile-menu-link"
+                        href="podcasts.html">Podcasts</a></li>
+                <li><a class="mobile-menu-link"
+                        href="events.html">Events</a></li>
+                <li><a class="mobile-menu-link"
+                        href="announcements.html">Announcements</a></li>
+                <li><a class="mobile-menu-link"
+                        href="community.html">Community</a></li>
+                <li><a class="mobile-menu-link" href="live.html">Live</a></li>
+                <li><a class="mobile-menu-link"
+                        href="resources.html">Resources</a></li>
+                <li><a class="mobile-menu-link" href="give.html">Give</a></li>
+            </ul>
+        </nav>
+
         <div class="top-splash-welcome">
             <h1>Podcasts</h1>
         </div>

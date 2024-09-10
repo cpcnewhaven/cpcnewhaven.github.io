@@ -675,7 +675,7 @@ p {
     position: fixed;
     top: 15px;
     right: 15px;
-    z-index: 1050;
+    z-index: 4050;
     background-color: #fff;
     border-radius: 50%;
     padding: 10px;
@@ -1479,6 +1479,7 @@ p {
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
     position: fixed;
     height: 100vh;
+    z-index: 3;
 }
 
 .sidebar h1 {
@@ -1866,4 +1867,36 @@ p {
     width: 100%;
     padding: 10px;
     text-align: center;
+}
+
+
+.staff-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.staff-member {
+    text-align: center;
+}
+
+.staff-member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.staff-member h3 {
+    margin-bottom: 5px;
+}
+
+.staff-member h4 {
+    margin-top: 0;
+    font-weight: normal;
+}
+
+.read-more-button {
+    margin-top: 10px;
 }
