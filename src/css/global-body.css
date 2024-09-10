@@ -1427,6 +1427,14 @@ p {
     font-size: 1.1em;
 }
 
+/* Media query for tablets and desktops */
+@media (min-width: 768px) {
+    .sidebar {
+        display: block;
+        max-width: 200px;
+    }
+}
+
 .main-content {
     flex-grow: 1;
     padding: 20px;
