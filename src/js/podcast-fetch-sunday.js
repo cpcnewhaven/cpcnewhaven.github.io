@@ -21,6 +21,10 @@
                             sundaySermons.sort((a, b) => new Date(b.date) - new Date(a.date));
                             beyondSermons.sort((a, b) => new Date(b.date_added) - new Date(a.date_added));
 
+                            // Fetch the new series episodes
+                            const sinaiEpisodes = data.WalkingWithJesusThruSinai.episodes;
+                            const sinaiTableBody = document.querySelector('#walking-podcast-table tbody');
+
                             // Render the table rows
                             function renderTable(sermons, tableBody, isBeyond = false, isWWB = false) {
                                 tableBody.innerHTML = '';
@@ -44,6 +48,7 @@
                             renderTable(sundaySermons, sundayTableBody);
                             renderTable(beyondSermons, beyondTableBody, true);
                             renderTable(wwbEpisodes, wwbTableBody, false, true);
+                            renderTable(sinaiEpisodes, sinaiTableBody, false, true);
                         })
                         .catch(error => console.error('Error fetching podcast data:', error));
                 });

@@ -287,5 +287,16 @@
                 "season": "fall 2024"
             }
         ]
+    },
+    "WalkingWithJesusThruSinai": {
+        "title": "Walking with Jesus Thru Sinai",
+        "episodes": [
+            {
+                "number": 1,
+                "title": "Intro: Christ and the Law",
+                "link": "https://open.spotify.com/episode/newlink1",
+                "handoutPDF": "https://storage.googleapis.com/cpc-public-website/wwjts/wwjts1.pdf"
+            }
+        ]
     }
 }
