@@ -22,106 +22,31 @@
                             beyondSermons.sort((a, b) => new Date(b.date_added) - new Date(a.date_added));
 
                             // Render the table rows
-                            function renderTable(sermons, tableBody, isBeyond = false, isWWB = false, page = 1, rowsPerPage = 10) {
+                            function renderTable(sermons, tableBody, isBeyond = false, isWWB = false) {
                                 tableBody.innerHTML = '';
-                                const start = (page - 1) * rowsPerPage;
-                                const end = start + rowsPerPage;
-                                const paginatedSermons = sermons.slice(start, end);
-
-                                paginatedSermons.forEach(sermon => {
+                                sermons.forEach(sermon => {
                                     const row = document.createElement('tr');
                                     row.innerHTML = `
                                         <td>${isWWB ? sermon.number : formatDate(isBeyond ? sermon.date_added : sermon.date)}</td>
                                         <td>${sermon.title}</td>
                                         ${isBeyond ? `<td>${sermon.guest}</td>` : isWWB ? '' : `<td>${sermon.author}</td>`}
                                         ${isBeyond || isWWB ? '' : `<td>${sermon.scripture}</td>`}
-                                        <td><a href="${sermon.link}" target="_blank">Listen on Spotify</a></td>
+                                        <td>
+                                            <a href="${sermon.link}" target="_blank"><i class="fa fa-spotify" style="color: black;"></i></a>
+                                            <a href="${sermon.apple_link}" target="_blank"><i class="fa fa-apple" style="color: black;"></i></a>
+                                        </td>
                                     `;
                                     tableBody.appendChild(row);
                                 });
-
-                                // Add pagination controls
-                                const totalPages = Math.ceil(sermons.length / rowsPerPage);
-                                const paginationControls = document.createElement('div');
-                                paginationControls.classList.add('pagination-controls');
-
-                                // Previous button
-                                const prevButton = document.createElement('button');
-                                prevButton.textContent = '←';
-                                prevButton.disabled = page === 1;
-                                prevButton.addEventListener('click', () => renderTable(sermons, tableBody, isBeyond, isWWB, page - 1, rowsPerPage));
-                                paginationControls.appendChild(prevButton);
-
-                                // Page numbers
-                                for (let i = 1; i <= totalPages; i++) {
-                                    const button = document.createElement('button');
-                                    button.textContent = i;
-                                    button.disabled = i === page;
-                                    button.addEventListener('click', () => renderTable(sermons, tableBody, isBeyond, isWWB, i, rowsPerPage));
-                                    paginationControls.appendChild(button);
-                                }
-
-                                // Next button
-                                const nextButton = document.createElement('button');
-                                nextButton.textContent = '→';
-                                nextButton.disabled = page === totalPages;
-                                nextButton.addEventListener('click', () => renderTable(sermons, tableBody, isBeyond, isWWB, page + 1, rowsPerPage));
-                                paginationControls.appendChild(nextButton);
-
-                                // Total pages info
-                                const pageInfo = document.createElement('span');
-                                pageInfo.textContent = `Page ${page} of ${totalPages}`;
-                                paginationControls.appendChild(pageInfo);
-
-                                tableBody.parentElement.appendChild(paginationControls);
                             }
 
                             // Initial render
                             renderTable(sundaySermons, sundayTableBody);
                             renderTable(beyondSermons, beyondTableBody, true);
                             renderTable(wwbEpisodes, wwbTableBody, false, true);
-
-                            // Filter functionality for Sunday Sermons
-                            document.querySelector('#filter-title').addEventListener('input', function() {
-                                const filterValue = this.value.toLowerCase();
-                                const filteredSermons = sundaySermons.filter(sermon => sermon.title.toLowerCase().includes(filterValue));
-                                renderTable(filteredSermons, sundayTableBody);
-                            });
-
-                            document.querySelector('#filter-author').addEventListener('input', function() {
-                                const filterValue = this.value.toLowerCase();
-                                const filteredSermons = sundaySermons.filter(sermon => sermon.author.toLowerCase().includes(filterValue));
-                                renderTable(filteredSermons, sundayTableBody);
-                            });
-
-                            document.querySelector('#filter-scripture').addEventListener('input', function() {
-                                const filterValue = this.value.toLowerCase();
-                                const filteredSermons = sundaySermons.filter(sermon => sermon.scripture.toLowerCase().includes(filterValue));
-                                renderTable(filteredSermons, sundayTableBody);
-                            });
-
-                            // Filter functionality for Beyond Sermons
-                            document.querySelector('#filter-beyond-title').addEventListener('input', function() {
-                                const filterValue = this.value.toLowerCase();
-                                const filteredSermons = beyondSermons.filter(sermon => sermon.title.toLowerCase().includes(filterValue));
-                                renderTable(filteredSermons, beyondTableBody, true);
-                            });
-
-                            document.querySelector('#filter-beyond-guest').addEventListener('input', function() {
-                                const filterValue = this.value.toLowerCase();
-                                const filteredSermons = beyondSermons.filter(sermon => sermon.guest.toLowerCase().includes(filterValue));
-                                renderTable(filteredSermons, beyondTableBody, true);
-                            });
-
-                            // Filter functionality for WWB Episodes
-                            document.querySelector('#filter-wwb-title').addEventListener('input', function() {
-                                const filterValue = this.value.toLowerCase();
-                                const filteredEpisodes = wwbEpisodes.filter(episode => episode.title.toLowerCase().includes(filterValue));
-                                renderTable(filteredEpisodes, wwbTableBody, false, true);
-                            });
                         })
                         .catch(error => console.error('Error fetching podcast data:', error));
-                });a
+                });
 
                 function formatDate(dateString) {
                     const options = { year: 'numeric', month: 'long', day: 'numeric' };
