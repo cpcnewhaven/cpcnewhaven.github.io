@@ -35,45 +35,12 @@
                                         <td>${sermon.title}</td>
                                         ${isBeyond ? `<td>${sermon.guest}</td>` : isWWB ? '' : `<td>${sermon.author}</td>`}
                                         ${isBeyond || isWWB ? '' : `<td>${sermon.scripture}</td>`}
-                                        <td><a href="${sermon.link}" target="_blank">Listen on Spotify</a></td>
+                                        <td><a href="${sermon.link}" target="_blank">Listen</a></td>  
                                     `;
                                     tableBody.appendChild(row);
                                 });
 
-                                // Add pagination controls
-                                const totalPages = Math.ceil(sermons.length / rowsPerPage);
-                                const paginationControls = document.createElement('div');
-                                paginationControls.classList.add('pagination-controls');
-
-                                // Previous button
-                                const prevButton = document.createElement('button');
-                                prevButton.textContent = '←';
-                                prevButton.disabled = page === 1;
-                                prevButton.addEventListener('click', () => renderTable(sermons, tableBody, isBeyond, isWWB, page - 1, rowsPerPage));
-                                paginationControls.appendChild(prevButton);
-
-                                // Page numbers
-                                for (let i = 1; i <= totalPages; i++) {
-                                    const button = document.createElement('button');
-                                    button.textContent = i;
-                                    button.disabled = i === page;
-                                    button.addEventListener('click', () => renderTable(sermons, tableBody, isBeyond, isWWB, i, rowsPerPage));
-                                    paginationControls.appendChild(button);
-                                }
-
-                                // Next button
-                                const nextButton = document.createElement('button');
-                                nextButton.textContent = '→';
-                                nextButton.disabled = page === totalPages;
-                                nextButton.addEventListener('click', () => renderTable(sermons, tableBody, isBeyond, isWWB, page + 1, rowsPerPage));
-                                paginationControls.appendChild(nextButton);
-
-                                // Total pages info
-                                const pageInfo = document.createElement('span');
-                                pageInfo.textContent = `Page ${page} of ${totalPages}`;
-                                paginationControls.appendChild(pageInfo);
-
-                                tableBody.parentElement.appendChild(paginationControls);
+                                // Removed pagination controls
                             }
 
                             // Initial render

@@ -277,89 +277,25 @@
     "beyond": {
         "title": "Beyond",
         "episodes": [
+        
+            {
+                "number": 13,
+                "title": "Why We Praise",
+                "link": "https://open.spotify.com/episode/789JSDdGUWU4xU9f3lHOL5?si=1ada1052e21e4b00",
+                "guest": "Seth Bollinger",
+                "date_added": "2024-09-10",
+                "season": "fall 2024"
+            }
+        ]
+    },
+    "WalkingWithJesusThruSinai": {
+        "title": "Walking with Jesus Thru Sinai",
+        "episodes": [
             {
                 "number": 1,
-                "title": "Episode 1",
-                "link": "https://open.spotify.com/embed/episode/0bI7PF4LL0725GwbvP3Fq0?utm_source=generator",
-                "guest": "Guest Name 1",
-                "date_added": "2024-01-01"
-            },
-            {
-                "number": 2,
-                "title": "Episode 2",
-                "link": "https://open.spotify.com/embed/episode/1HTxyUoV1PIs9fjCfdT7Hc?utm_source=generator",
-                "guest": "Guest Name 2",
-                "date_added": "2024-01-08"
-            },
-            {
-                "number": 3,
-                "title": "Episode 3",
-                "link": "https://open.spotify.com/embed/episode/00kiP5VJhqXCe27EQ0iRd8?utm_source=generator",
-                "guest": "Guest Name 3",
-                "date_added": "2024-01-15"
-            },
-            {
-                "number": 4,
-                "title": "Episode 4",
-                "link": "https://open.spotify.com/embed/episode/6yBjpPq8wy2DpodduC2fCO?utm_source=generator",
-                "guest": "Guest Name 4",
-                "date_added": "2024-01-22"
-            },
-            {
-                "number": 5,
-                "title": "Episode 5",
-                "link": "https://open.spotify.com/embed/episode/5AlCPKfjUx7qPjCdRv3nYa?utm_source=generator",
-                "guest": "Guest Name 5",
-                "date_added": "2024-01-29"
-            },
-            {
-                "number": 6,
-                "title": "Episode 6",
-                "link": "https://open.spotify.com/embed/episode/4TU0k8lmF3JWsZvVs6by5E?utm_source=generator",
-                "guest": "Guest Name 6",
-                "date_added": "2024-02-05"
-            },
-            {
-                "number": 7,
-                "title": "Episode 7",
-                "link": "https://open.spotify.com/embed/episode/4Vu3BzlVeHWZomA1dUTkmz?utm_source=generator",
-                "guest": "Guest Name 7",
-                "date_added": "2024-02-12"
-            },
-            {
-                "number": 8,
-                "title": "Episode 8",
-                "link": "https://open.spotify.com/embed/episode/6VjK8hT8rv4YmdZvNpDtz6?utm_source=generator",
-                "guest": "Guest Name 8",
-                "date_added": "2024-02-19"
-            },
-            {
-                "number": 9,
-                "title": "Episode 9",
-                "link": "https://open.spotify.com/embed/episode/1GuvtpLTTZRjsmGQqQghnF?utm_source=generator",
-                "guest": "Guest Name 9",
-                "date_added": "2024-02-26"
-            },
-            {
-                "number": 10,
-                "title": "Episode 10",
-                "link": "https://open.spotify.com/embed/episode/0JgjQq3VeTQQCFvjxbnXSF?utm_source=generator",
-                "guest": "Guest Name 10",
-                "date_added": "2024-03-04"
-            },
-            {
-                "number": 11,
-                "title": "Episode 11",
-                "link": "https://open.spotify.com/embed/episode/4jxBlMNYnk8nznuuZ3uTnK?utm_source=generator",
-                "guest": "Guest Name 11",
-                "date_added": "2024-03-11"
-            },
-            {
-                "number": 12,
-                "title": "Episode 12",
-                "link": "https://open.spotify.com/embed/episode/2LEsA2a9c5NG11FEOKGo6O?utm_source=generator",
-                "guest": "Guest Name 12",
-                "date_added": "2024-03-18"
+                "title": "Intro: Christ and the Law",
+                "link": "https://open.spotify.com/episode/newlink1",
+                "handoutPDF": "https://storage.googleapis.com/cpc-public-website/wwjts/wwjts1.pdf"
             }
         ]
     }
