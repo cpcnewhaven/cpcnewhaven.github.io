@@ -11,15 +11,21 @@
                             const sundayTable = document.querySelector('#sunday-sermon-table');
                             const beyondTable = document.querySelector('#beyond-sermon-table');
                             const wwbTable = document.querySelector('#wwb-sermon-table');
+                            const wwjtsTable = document.querySelector('#walking-podcast-table'); // Ensure this table also gets the same class
 
                             // Apply the new class to the tables
                             sundayTable.classList.add('podcast-table');
                             beyondTable.classList.add('podcast-table');
                             wwbTable.classList.add('podcast-table');
+                            wwjtsTable.classList.add('podcast-table'); // Ensure this table also gets the same class
 
                             // Sort the sermons by date in descending order (latest first)
                             sundaySermons.sort((a, b) => new Date(b.date) - new Date(a.date));
                             beyondSermons.sort((a, b) => new Date(b.date_added) - new Date(a.date_added));
+
+                            // Fetch and store the WalkingWithJesusThruSinai episodes
+                            const wwjtsEpisodes = data.WalkingWithJesusThruSinai.episodes;
+                            const wwjtsTableBody = document.querySelector('#walking-podcast-table tbody');
 
                             // Render the table rows
                             function renderTable(sermons, tableBody, isBeyond = false, isWWB = false, page = 1, rowsPerPage = 10) {
@@ -47,6 +53,7 @@
                             renderTable(sundaySermons, sundayTableBody);
                             renderTable(beyondSermons, beyondTableBody, true);
                             renderTable(wwbEpisodes, wwbTableBody, false, true);
+                            renderTable(wwjtsEpisodes, wwjtsTableBody, false, true);
 
                             // Filter functionality for Sunday Sermons
                             document.querySelector('#filter-title').addEventListener('input', function() {
