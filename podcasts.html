@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
         <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-TL0WH5R1EK"></script>
 <script>
@@ -111,7 +113,9 @@
                     <li><a href="#podcast-sunday-sermon">The Sunday
                             Sermon</a></li>
                     <li><a href="#podcast-beyond">Beyond</a></li>
-                    <li><a href="#podcast-wwb">What We Believe</a></li>
+                    <li><a href="#podcast-adult-study">Adult Sunday
+                            Studies</a></li>
+                    <li><a href="#podcast-wwjts">Walking with Jesus Thru Sinai</a></li>
                 </ul>
                 <hr>
                 <!-- <div class="search-container"
@@ -134,8 +138,8 @@
       
                 <section id="podcast-sunday-sermon" class="inner-page-section"
                     style="margin-top:20px;">
-                    <h3>The Sunday Sermon</h3>
-                    <input type="text" id="filter-scripture" placeholder="Filter by scripture" style="padding: 10px; margin: 10px 0; width: 100%; border: 1px solid #ccc; border-radius: 5px;">
+                    <h1>The Sunday Sermon</h1>
+                  
                     <table id="sunday-sermon-table">
                         <thead>
                             <tr>
@@ -153,9 +157,8 @@
                 </section>
 
                 <section id="podcast-beyond" class="inner-page-section" style="margin-top:20px;">
-                    <h3>Beyond</h3>
-                    <input type="text" id="filter-beyond-title" placeholder="Filter by title" style="padding: 10px; margin: 10px 0; width: 100%; border: 1px solid #ccc; border-radius: 5px;">
-                    <input type="text" id="filter-beyond-guest" placeholder="Filter by guest" style="padding: 10px; margin: 10px 0; width: 100%; border: 1px solid #ccc; border-radius: 5px;">
+                    <h1>Beyond</h1>
+                 
                     <table id="beyond-sermon-table">
                         <thead>
                             <tr>
@@ -173,8 +176,22 @@
 
                 <section id="podcast-wwb" class="inner-page-section" style="margin-top:20px;">
                     <h1>Adult Sunday Studies</h1>
-                    <h3><a href="what-we-believe">What We Believe</a></h3>
-                    <input type="text" id="filter-wwb-title" placeholder="Filter by title" style="padding: 10px; margin: 10px 0; width: 100%; border: 1px solid #ccc; border-radius: 5px;">
+                    <h3>Walking with Jesus Thru Sinai</h3>
+                    <p class="center-text">Starting September 8th, 2024. Join live recording on Sundays at 9:30am. New Episodes Dropped Every Friday.</p>
+                 
+           <table id="walking-podcast-table">
+            <thead>
+                <tr>
+                    <th>Number</th>
+                    <th>Title</th>
+                    <th>Listen</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Table content will be dynamically populated here -->
+            </tbody>
+           </table>
+           <h3>What We Believe</h3>
                     <table id="wwb-sermon-table">
                         <thead>
                             <tr>
@@ -187,8 +204,10 @@
                             <!-- Table content will be dynamically populated here -->
                         </tbody>
                     </table>
+                    
                 </section>
 
+           
            
 
             </div>
@@ -231,7 +250,7 @@
                 href="#">135 Whitney Ave - New Haven, CT | Sunday Worship
                 10:30am </a>
         </footer>
-        <script>
+        <!-- <script>
 document.addEventListener('DOMContentLoaded', function() {
     const searchInput = document.getElementById('podcastSearchInput');
     const searchResults = document.getElementById('searchResults');
@@ -311,9 +330,9 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
-</script>
+</script> -->
 
-        <script>
+        <!-- <script>
 document.addEventListener("DOMContentLoaded", function() {
     const splashImageSection = document.getElementById('home-image');
     const midImageSection = document.getElementById('mid-image');
@@ -357,10 +376,10 @@ document.addEventListener("DOMContentLoaded", function() {
             console.error('Error fetching the image:', error);
         });
 });
-</script>
-        <script src="./src/js/function_toggle_mobileMenu.js"></script>
+</script> -->
 
-        <script>
+        <!-- script>
+/*
 document.addEventListener('DOMContentLoaded', function() {
     const searchInput = document.getElementById('podcastSearchInput');
     const searchResults = document.getElementById('searchResults');
@@ -401,8 +420,10 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 });
-</script>
-        <script src="./src/js/fetch-podcast-adult.js"></script>
+*/
+</script -->
+        <script src="./src/js/function_toggle_mobileMenu.js"></script>
+        <!-- <script src="./src/js/fetch-podcast-adult.js"></script> -->
         <script src="./src/js/podcast-fetch-sunday.js"></script>
     </body>
 </html>
