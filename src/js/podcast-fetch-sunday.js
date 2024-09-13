@@ -36,8 +36,7 @@
                                         ${isBeyond ? `<td>${sermon.guest}</td>` : isWWB ? '' : `<td>${sermon.author}</td>`}
                                         ${isBeyond || isWWB ? '' : `<td>${sermon.scripture}</td>`}
                                         <td>
-                                            <a href="${sermon.link}" target="_blank"><i class="fa fa-spotify" style="color: black;"></i></a>
-                                            <a href="${sermon.apple_link}" target="_blank"><i class="fa fa-apple" style="color: black;"></i></a>
+                                            <a href="${sermon.link}" target="_blank">Listen</a>
                                         </td>
                                     `;
                                     tableBody.appendChild(row);
