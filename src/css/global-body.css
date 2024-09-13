@@ -1823,6 +1823,28 @@ p {
     color: #007bff;
 }
 
+/* Responsive adjustments for mobile devices */
+@media (max-width: 600px) {
+
+    .podcast-table th,
+    .podcast-table td {
+        padding: 8px 5px;
+        /* Smaller padding for space efficiency */
+        font-size: 14px;
+        /* Smaller font size for better fit */
+    }
+
+    .podcast-table th {
+        font-size: 15px;
+        /* Slightly larger font size for headers */
+    }
+
+    .podcast-table {
+        font-size: 14px;
+        /* Adjust base font size for the entire table */
+    }
+}
+
 .table-style {
     width: 100%;
     border-collapse: collapse;

@@ -117,32 +117,7 @@ th {
   }
 }
 
-#podcasts {
-  display: flex;
-  flex-direction: column;
-}
 
-#podcast-table table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-#podcast-table th,
-#podcast-table td {
-  text-align: left;
-  padding: 12px;
-  border-bottom: 1px solid #ccc;
-}
-
-#podcast-table th {
-  background-color: #878787a9;
-}
-
-#podcast-table td img {
-  width: 100px;
-  height: auto;
-  border-radius: 8px;
-}
 
 .podcast-title {
   font-weight: bold;
@@ -162,6 +137,25 @@ th {
 
 .podcast-link:hover {
   text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+
+  .podcast-table {
+    max-width: 90%;
+    padding: 8px;
+  }
+
+  .podcast-title {
+    font-size: 1em;
+    /* Adjust font size for mobile */
+  }
+
+  .podcast-info,
+  .podcast-link {
+    font-size: 0.8em;
+    /* Smaller font size for text elements */
+  }
 }
 
 /* Unique styles for the pre-April podcast table */
