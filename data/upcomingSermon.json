@@ -132,12 +132,26 @@
     "author": "Rev. Craig Luekens",
     "scripture": "Psalm 96",
     "date": "2024-09-09",
-    "active": true,
+    "active": false,
     "youtube_url": "https://youtu.be/d9I_pStcVxI",
     "spotify_url": "https://open.spotify.com/episode/0AcgGm5v3r5zEmSxV9xC3C?si=5f2ac3f1996f4d2f",
     "apple_podcasts_url": "https://podcasts.apple.com/us/podcast/cpc-new-haven-podcasts/id1553483670?i=1000668208959",
     "bulletin_url": "http://files.cpcnewhaven.org/bulletin...",
     "podcast-thumbnail_url": "https://storage.googleapis.com/cpc-public-website/podcast-thumbnails/9.08.24%20-%20CPC.jpg",
+    "status": "present"
+  },
+  {
+    "id": "13",
+    "title": "Why Do We Confess?",
+    "author": "Rev. Craig Luekens",
+    "scripture": "Isaiah 6:1-7",
+    "date": "2024-09-15",
+    "active": true,
+    "youtube_url": "https://youtu.be/oOEL4_E7mhM",
+    "spotify_url": "",
+    "apple_podcasts_url": "",
+    "bulletin_url": "http://files.cpcnewhaven.org/bulletins/Master_Bulletin_2024_09_15.pdf",
+    "podcast-thumbnail_url": "",
     "status": "present"
   }
 ]
