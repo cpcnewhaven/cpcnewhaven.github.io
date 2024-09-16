@@ -11,11 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <div class="image-container">
                         <img src="${image.url}" alt="${image.name}" onclick="openLightbox(${index})">
                     </div>
-                    <div class="gallery-item-info">
-                        <div class="tags">${image.tags.map(tag => `<span class="tag">#${tag}</span>`).join(' ')}</div>
-                        <div class="date">${new Date(image.created).toLocaleDateString()}</div>
-                    </div>
-                `;
+                `; // Removed gallery-item-info div to eliminate captions
                 galleryContainer.appendChild(galleryItem);
             });
         })

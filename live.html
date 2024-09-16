@@ -109,13 +109,16 @@
                 .catch(error => console.error('Error fetching sermon data:', error));
         </script>
         <style>
-.live-sermon-sub-header-container {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-</style>
+            body {
+                padding: 20px; /* Adds padding to the entire body */
+            }
+            .live-sermon-sub-header-container {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        </style>
         <div class="live-sermon-sub-header-container">
             <hr>
             <h1 id="sermon-title">Sermon Title</h1>

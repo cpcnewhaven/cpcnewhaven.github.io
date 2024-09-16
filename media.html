@@ -12,82 +12,7 @@
         <link rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
         <style>
-            #gallery-container {
-                display: grid;
-                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-                gap: 20px;
-                padding: 20px;
-            }
-            .gallery-item {
-                border: 1px solid #dbdbdb;
-                border-radius: 3px;
-                overflow: hidden;
-            }
-            .image-container {
-                aspect-ratio: 1 / 1;
-                overflow: hidden;
-                cursor: pointer;
-            }
-            .image-container img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                transition: transform 0.3s ease;
-            }
-            .image-container img:hover {
-                transform: scale(1.05);
-            }
-            .gallery-item-info {
-                padding: 12px;
-            }
-            .tags {
-                margin-bottom: 8px;
-            }
-            .tag {
-                color: #003569;
-                font-weight: bold;
-                margin-right: 5px;
-            }
-            .date {
-                color: #8e8e8e;
-                font-size: 0.9em;
-            }
-            #lightbox {
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background-color: rgba(0, 0, 0, 0.9);
-                display: none;
-                justify-content: center;
-                align-items: center;
-                z-index: 1000;
-            }
-            #lightbox-img {
-                max-width: 90%;
-                max-height: 90%;
-                object-fit: contain;
-                transition: transform 0.1s ease-out;
-            }
-            .close-btn {
-                position: absolute;
-                top: 20px;
-                right: 30px;
-                color: #fff;
-                font-size: 30px;
-                cursor: pointer;
-            }
-            .image-counter {
-                position: absolute;
-                top: 20px;
-                right: 20px;
-                color: white;
-                font-size: 16px;
-                background-color: rgba(0, 0, 0, 0.5);
-                padding: 5px 10px;
-                border-radius: 15px;
-            }
+    
         </style>
     </head>
     <body>
@@ -131,6 +56,14 @@
 
         <section>
             <h2>Media Gallery</h2>
+            <!-- Subheader added below -->
+            <p>Welcome to our community Media Gallery! This gallery showcases
+                moments from our church family. Feel free to browse through the
+                memories and get a glimpse of our community life.</p>
+            <p>If you have your own photos that you'd like to share, please
+                submit them to be included in our gallery. It's a great way to
+                keep our community connected and share the joy!</p>
+
             <div id="gallery-container"></div>
         </section>
 
