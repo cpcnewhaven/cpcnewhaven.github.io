@@ -188,89 +188,26 @@
     "sundaySermons": {
         "title": "Sunday Sermons",
         "episodes": [
+     
             {
-                "id": "2024-00",
-                "title": "That You May Know: Unconditional Grace and the Hardening of Pharaoh's Heart",
+                "id": "24-09-08",
+                "title": "Why Do We Praise?",
                 "author": "Rev. Craig Luekens",
-                "scripture": "Exodus 7:1-13",
-                "date": "2024-07-07",
-                "spotify_url": "https://open.spotify.com/episode/placeholder0"
+                "scripture": "Psalm 96",
+                "date": "2024-09-09",
+                "apple_podcasts_url": "https://podcasts.apple.com/us/podcast/cpc-new-haven-podcasts/id1553483670?i=1000668208959",
+                "spotify_url": "https://open.spotify.com/episode/0AcgGm5v3r5zEmSxV9xC3C?si=5f2ac3f1996f4d2f",
+                "podcast-thumbnail_url": "https://storage.googleapis.com/cpc-public-website/podcast-thumbnails/9.08.24%20-%20CPC.jpg"
             },
             {
-                "id": "2024-01",
-                "title": "There Will Be Blood: God's Judgment and Our Only Hope",
+                "id": "24-09-15",
+                "title": "Why Do We Confess?",
                 "author": "Rev. Craig Luekens",
-                "scripture": "Exodus 7:14-25",
-                "date": "2024-07-14",
-                "spotify_url": "https://open.spotify.com/episode/placeholder1"
-            },
-            {
-                "id": "2024-02",
-                "title": "The Hardening of Pharaoh's Heart & God's Zeal To Deliver His People",
-                "author": "Rev. Jerry Ornelas",
-                "scripture": "Exodus 9:16-17, 27-28; 10:1-2, 27",
-                "date": "2024-07-21",
-                "spotify_url": "https://open.spotify.com/episode/placeholder2"
-            },
-            {
-                "id": "2024-03",
-                "title": "Paradise Found! Learning to Live the Epic, Not the Lyrics",
-                "author": "Rev. Preston Graham",
-                "scripture": "Revelation 22:1-15",
-                "date": "2024-07-28",
-                "spotify_url": "https://open.spotify.com/episode/placeholder3"
-            },
-            {
-                "id": "2024-04",
-                "title": "You've Been Warned: Darkness and the Grace of God",
-                "author": "Rev. Craig Luekens",
-                "scripture": "Exodus 10: 21-11.10",
-                "date": "2024-08-04",
-                "spotify_url": "https://open.spotify.com/episode/placeholder4"
-            },
-            {
-                "id": "2024-05",
-                "title": "You are What You Eat: Redemption and the Feast of Feasts",
-                "author": "Rev. Craig Luekens",
-                "scripture": "Exodus 12:1-28",
-                "date": "2024-08-11",
-                "spotify_url": "https://open.spotify.com/episode/placeholder5"
-            },
-            {
-                "id": "2024-06",
-                "title": "By Grace Alone: Terrifying Judgement and Our Only Hope for Salvation",
-                "author": "Rev. Craig Luekens",
-                "scripture": "Exodus 12:29-51",
-                "date": "2024-08-18",
-                "spotify_url": "https://open.spotify.com/episode/7lEBdM5V6qckwU6YgFAHvq?si=f4db6a58851a414b",
-                "podcast-thumbnail_url": "#"
-            },
-            {
-                "id": "2024-07",
-                "title": "A Meal, Bones, Cloud & Fire: A Freedom Too Deep for Mere Words",
-                "author": "Rev. Jerry Ornelas",
-                "scripture": "Exodus 13:1-22",
-                "date": "2024-08-25",
-                "spotify_url": "https://open.spotify.com/episode/4ln9alKIO8xUviidke4YH5?si=6ada3c2f3d8949b0",
-                "podcast-thumbnail_url": "#"
-            },
-            {
-                "id": "2024-08",
-                "title": "Be Silent and Watch! The Unstoppable and Salvific Grace of God",
-                "author": "Rev. Craig Luekens",
-                "scripture": "Exodus 14:1-31",
-                "date": "2024-09-01",
-                "spotify_url": "https://open.spotify.com/episode/7tQMwlLbtk19nP5wUIvWON?si=56d7fa76c9fe4c9b",
-                "podcast-thumbnail_url": "#"
-            },
-            {
-                "id": "2024-09",
-                "title": "Sing and Rejoice! Responding to the Grace of God",
-                "author": "Rev. Craig Luekens",
-                "scripture": "Exodus 15:1-21",
-                "date": "2024-08-25",
-                "spotify_url": "https://open.spotify.com/episode/4tEdmoInFsPqmR97rqI8EA?si=a7485960cc6140e4",
-                "podcast-thumbnail_url": "https://files.cpcnewhaven.org/podcast-thumbnails/8.25.24%20-%20CPC.jpg"
+                "scripture": "Isaiah 6: 1-7",
+                "date": "2024-09-16",
+                "apple_podcasts_url": "https://podcasts.apple.com/us/podcast/cpc-new-haven-podcasts/id1553483670?i=1000668208959",
+                "spotify_url": "https://open.spotify.com/episode/7ay2UXASJNp2lrWmZ8y6t3?si=60ddcda1670f4e08",
+                "podcast-thumbnail_url": "https://storage.googleapis.com/cpc-public-website/podcast-thumbnails/9.15.24%20-%20CPC.jpg"
             }
         ]
     },
