@@ -1979,3 +1979,55 @@ p {
     transform: translateY(-2px);
     /* Slight raise effect on hover/focus */
 }
+
+// Add these styles to enhance the inner-page-sections to match the submenu-container-enhanced style
+
+.inner-page-section {
+    background-color: #f8f8f8;
+    /* Light background for the section */
+    padding: 20px;
+    /* Uniform padding */
+    border-radius: 8px;
+    /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for depth */
+    margin: 20px auto;
+    /* Centering and spacing around the section */
+    max-width: 960px;
+    /* Max width for better control on larger screens */
+}
+
+.inner-page-section h2 {
+    color: #3f51b5;
+    /* Deeper indigo for headings */
+    margin-bottom: 15px;
+    /* More space below the headline */
+    font-size: 22px;
+    /* Slightly smaller font size than the submenu headline for hierarchy */
+}
+
+.inner-page-section p.body-text {
+    color: #333;
+    /* Dark grey text for readability */
+    line-height: 1.6;
+    /* Improved line spacing for readability */
+    text-align: justify;
+    /* Justified text for a cleaner look */
+}
+
+// Ensure links within the inner-page-sections are styled consistently with those in the submenu
+.inner-page-section a {
+    color: #3f51b5;
+    /* Matching the headline color for consistency */
+    text-decoration: none;
+    /* No underline */
+    transition: color 0.3s ease-in-out;
+    /* Smooth transition for hover effects */
+}
+
+.inner-page-section a:hover {
+    color: #1c95ff;
+    /* Lighter blue for hover state */
+    text-decoration: underline;
+    /* Underline on hover for emphasis */
+}
