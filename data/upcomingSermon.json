@@ -146,12 +146,27 @@
     "author": "Rev. Craig Luekens",
     "scripture": "Isaiah 6:1-7",
     "date": "2024-09-16",
-    "active": true,
+    "active": false,
     "youtube_url": "https://www.youtube.com/live/0whJD3mowM0?si=1-Px14RiE_RpVME5",
     "spotify_url": "",
     "apple_podcasts_url": "",
     "bulletin_url": "https://mcusercontent.com/40f2b7e112b1a9cbae989317c/files/799f3b78-8134-32fe-c822-821087a32f32/Master_New_Bulletin_2024_09_15.pdf",
     "podcast-thumbnail_url": "https://storage.googleapis.com/cpc-public-website/podcast-thumbnails/9.15.24%20-%20CPC.jpg",
+    "status": "past"
+  },
+  {
+    "id": "14",
+    "title": "Why Do We Preach?",
+    "author": "Rev. Craig Luekens",
+    "scripture": "2 Timothy 3:10-4:8",
+    "date": "2024-09-22",
+    "active": true,
+    "sermon-preview_url": "https://www.youtube.com/watch?v=sQd6-GGgaqg",
+    "youtube_url": "https://www.youtube.com/watch?v=Gnr2qAwhIhg",
+    "spotify_url": "",
+    "apple_podcasts_url": "",
+    "bulletin_url": "",
+    "podcast-thumbnail_url": "",
     "status": "present"
   }
 ]
