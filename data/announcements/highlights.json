@@ -109,7 +109,7 @@
       "title": "SUNDAY SCHOOL RESUMES THIS SUNDAY @9:30AM",
       "description": "If your child is between 2 ½ years old and 12th grade, please check the foyer for information on where they should go for Sunday school. If you're new, there's a signup sheet available to register your child. Contact Pastor Jerry for any questions (<a href=\"mailto:jerry.ornelas@cpcnewhaven.org\">jerry.ornelas@cpcnewhaven.org</a>).",
       "dateEntered": "2024-08-25",
-      "active": "true",
+      "active": "false",
       "type": "upcoming",
       "category": "upcoming"
     },
@@ -157,7 +157,24 @@
       "active": "true",
       "type": "ongoing",
       "category": "ongoing"
+    },
+    {
+      "id": "2024-011",
+      "title": "BOH Young Adults Conference | Hosted by Church on the Rock! Sept. 28",
+      "description": "This special event has been planned specifically for the Bridges of Hope churches to bring young adults together to pray, worship and discuss topics pertinent to being an 18-25 year old Christian such as finances, relationships and more!",
+      "dateEntered": "2024-09-08",
+      "active": "true",
+      "type": "upcoming",
+      "category": "upcoming"
+    },
+    {
+      "id": "2024-012",
+      "title": "Women's Brunch | October 5 | 9:30-11:30am",
+      "description": "<strong>WHO:</strong> All Women of CPC<br><strong>WHAT:</strong> Brunch + a guided flower-piece craft by our own horticultural expert, Jennifer Cheng, who will walk us through the steps of making a small, low maintenance, festive Fall arrangement.<br><strong>WHEN:</strong> Saturday 10/5  9:30-11:30am<br><strong>WHERE:</strong> Fellowship Hall 135 Whitney Avenue<br><strong>WHY:</strong> For joy in the body!<br><br>A head count is needed for supplies so please sign up at the coffee bar -or- RSVP for yourself and guests at tanillabrown@yahoo.com. A $5 dollar donation towards the materials is appreciated but not required to participate.",
+      "dateEntered": "2024-09-15",
+      "active": "true",
+      "type": "upcoming",
+      "category": "upcoming"
     }
-
   ]
 }
