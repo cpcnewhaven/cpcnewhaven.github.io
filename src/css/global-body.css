@@ -129,6 +129,15 @@ section p {
     line-height: 1.8;
 }
 
+
+/*CHAPTER 3 - THE TABLES */
+
+table {
+    table-layout: auto;
+    width: 100%;
+}
+
+
 .link-button {
     width: 100%;
     max-width: 220px;
@@ -1752,12 +1761,13 @@ p {
 }
 
 .lifegroup-table {
-    width: 100%;
+    width: calc(100% - 40px);
     max-width: 800px;
     margin: 0 auto;
-    border: 1px solid #e0e0e0;
     border-radius: 8px;
     overflow: hidden;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .lifegroup-row {
@@ -1765,8 +1775,13 @@ p {
     border-bottom: 1px solid #e0e0e0;
 }
 
+.lifegroup-name {
+    text-align: right;
+}
+
 .lifegroup-row:last-child {
     border-bottom: none;
+    
 }
 
 .lifegroup-name,
@@ -2020,7 +2035,7 @@ p {
     /* Deeper indigo for headings */
     margin-bottom: 15px;
     /* More space below the headline */
-    font-size: 22px;
+    font-size: 72px;
     /* Slightly smaller font size than the submenu headline for hierarchy */
 }
 
