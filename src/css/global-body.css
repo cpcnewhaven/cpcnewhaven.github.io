@@ -1074,12 +1074,11 @@ p {
     padding: 20px;
     border-radius: 10px;
     background: #ffffff;
-    box-shadow: 9px 9px 16px rgba(163, 177, 198, 0.6), -9px -9px 16px rgba(255, 255, 255, 0.5);
 }
 
 .neumorphic-form input,
 .neumorphic-form button {
-    width: 100%;
+    width: 90%;
     padding: 12px;
     margin: 10px 0;
     border: none;
@@ -1287,55 +1286,6 @@ p {
     padding: 20px;
 }
 
-.neumorphic-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    max-width: 400px;
-    padding: 20px;
-    border-radius: 10px;
-    background: #ffffff;
-    box-shadow: 9px 9px 16px rgba(163, 177, 198, 0.6), -9px -9px 16px rgba(255, 255, 255, 0.5);
-}
-
-.neumorphic-form input,
-.neumorphic-form button {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: none;
-    border-radius: 5px;
-    outline: none;
-}
-
-.neumorphic-form input {
-    background: #ffffff;
-    box-shadow: inset 3px 3px 6px rgba(163, 177, 198, 0.6), inset -3px -3px 6px rgba(255, 255, 255, 0.5);
-}
-
-.neumorphic-form button {
-    background: #ffffff;
-    box-shadow: 3px 3px 6px rgba(163, 177, 198, 0.6), -3px -3px 6px rgba(255, 255, 255, 0.5);
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.neumorphic-form button:hover {
-    color: black;
-    box-shadow: inset 3px 3px 6px rgba(163, 177, 198, 0.6), inset -3px -3px 6px rgba(255, 255, 255, 0.5);
-}
-
-@media (max-width: 600px) {
-    .neumorphic-form {
-        padding: 15px;
-    }
-
-    .neumorphic-form input,
-    .neumorphic-form button {
-        padding: 8px;
-    }
-}
 
 #calendar-container {
     position: relative;
@@ -1781,7 +1731,7 @@ p {
 
 .lifegroup-row:last-child {
     border-bottom: none;
-    
+
 }
 
 .lifegroup-name,
