@@ -175,6 +175,15 @@
       "active": "true",
       "type": "upcoming",
       "category": "upcoming"
+    },
+    {
+      "id": "2024-013",
+      "title": "Men's Fall Fellowship Social | October 7 | 6:00-8:30pm",
+      "description": "Please drop in and join the men of CPC for fellowship at the East Rock Brewing Company. It's open-mic night at the brewery; MNF Week 5; and various food, drink, and game options are available at the brewery and next door at East Rock Market.<br><br><img src=\"https://storage.googleapis.com/cpc-public-website/events/mensgroup/mensFallEvent_2024.jpg\" alt=\"Men's Fall Fellowship Social Event Image\" style=\"max-width: 100%; height: auto;\">",
+      "dateEntered": "2024-09-15",
+      "active": "true",
+      "type": "upcoming",
+      "category": "upcoming"
     }
   ]
 }
