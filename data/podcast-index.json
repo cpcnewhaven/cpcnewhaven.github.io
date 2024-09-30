@@ -218,6 +218,16 @@
                 "apple_podcasts_url": "",
                 "spotify_url": "https://open.spotify.com/episode/77UI0SLLqlovK0h3iHnG4L?si=1b55f82efe524261",
                 "podcast-thumbnail_url": "https://storage.googleapis.com/cpc-public-website/podcast-thumbnails/9.22.24%20-%20CPC.jpg"
+            },
+            {
+                "id": "24-09-29",
+                "title": "Why Do We Eat?",
+                "author": "Rev. Jerry Ornelas",
+                "scripture": "1 Corinthians 15:17-34",
+                "date": "2024-09-29",
+                "apple_podcasts_url": "",
+                "spotify_url": "",
+                "podcast-thumbnail_url": "https://storage.googleapis.com/cpc-public-website/podcast-thumbnails/sundaySermons/9.29.24%20-%20CPC.jpg"
             }
         ]
     },
