@@ -230,6 +230,26 @@
       "type": "upcoming",
       "category": "upcoming",
       "tag": "men"
+    },
+    {
+      "id": "2024-014",
+      "title": "Children’s Fall Party Harvest | October 13 | 12:00-1:30pm | CPC Front Lawn",
+      "description": "Fall is in the air which means fall games, fall foods and fall fun for the children of CPC. During the lunch hour on the CPC front lawn there will be plenty of activities for the children to enjoy!",
+      "dateEntered": "2024-09-15",
+      "active": "true",
+      "type": "upcoming",
+      "category": "upcoming",
+      "tag": "children"
+    },
+    {
+      "id": "2024-015",
+      "title": "Summer Mission Trip | Aug. 2-9, 2025 | New City Fellowship, Atlantic City",
+      "description": "Info meeting Oct. 27 after worship",
+      "dateEntered": "2024-09-15",
+      "active": "true",
+      "type": "upcoming",
+      "category": "upcoming",
+      "tag": "mission"
     }
   ]
 }
