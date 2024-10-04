@@ -293,6 +293,13 @@
                 "link": "https://open.spotify.com/episode/4ejCoVwKApiidgQo31P7iI?si=31944017bf55442f",
                 "handoutPDF": "https://storage.googleapis.com/cpc-public-website/handouts/walking-handouts/10%20Comm_3_Intro_on%20the%2010.pdf",
                 "podcast-thumbnail_url": "https://storage.googleapis.com/cpc-public-website/podcast-thumbnails/walking/WALKING-EP3.png"
+            },
+            {
+                "number": 4,
+                "title": "The First Commandment",
+                "link": "https://open.spotify.com/episode/5aBcD4eF6G7h8iJ9kL0mN1?si=1234567890abcdef",
+                "handoutPDF": "https://storage.googleapis.com/cpc-public-website/handouts/walking-handouts/10%20Comm_4_First%20Commandment%201.pdf",
+                "podcast-thumbnail_url": "https://storage.googleapis.com/cpc-public-website/podcast-thumbnails/walking/WALKING-EP4.jpg"
             }
         ]
     }
