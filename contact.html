@@ -34,6 +34,7 @@
         <link rel="stylesheet" href="./src/css/global-footer-cta.css">
         <link rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <link rel="stylesheet" href="contact.css">
         <link rel="icon"
             href="https://storage.googleapis.com/cpc-public-website/web-assets/CPC%20-%20FAVICON%20-%20FALL%202024.png"
             type="image/png">
@@ -90,121 +91,64 @@
         <div class="top-splash-welcome">
             <h1>Contact Us</h1>
         </div>
+        <!-- Call to Action -->
+        <section class="call-to-action">
+           
+            <h2>Christ Presbyterian Church</h2>
+            <p>135 Whitney Ave, New Haven, CT, United States, Connecticut</p>
+            <p>Phone: <a href="tel:+12037776960">(203) 777-6960</a></p>
+            <p>Email: <a
+                    href="mailto:admin@cpcnewhaven.org">admin@cpcnewhaven.org</a></p>
+         
+        </section>
 
-        <div id="page-contact" style="text-align: center;">
 
-            <!-- New Contact Information Section -->
-            <section class="contact-info">
-                <h2>Contact Information</h2>
-                <p>Address: 135 Whitney Ave, New Haven, CT</p>
-                <p>Phone: <a href="tel:+12037776960"><i
-                            class="fas fa-phone"></i> Call us at (203)
-                        777-6960</a></p>
-                <!-- Replace with actual phone number -->
-            </section>
-
-            <!-- New Key Leaders Section -->
-            <section class="key-leaders">
-                <h2>Key Leaders</h2>
-                <table style="margin: 0 auto;">
-                    <thead>
-                        <tr>
-                            <th>Name</th>
-                            <th>Role</th>
-                            <th>Contact</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <!-- Staff -->
-                        <tr>
-                            <td>Craig Luekens</td>
-                            <td>Senior Pastor</td>
-                            <td>
-                                <i class="fas fa-envelope"></i>
-                                <!-- Email Icon -->
-                                <i class="fas fa-phone"></i> <!-- Phone Icon -->
-                                <!-- Replace with actual phone number -->
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Jerry Ornelas</td>
-                            <td>Assistant Pastor</td>
-                            <td>
-                                <i class="fas fa-envelope"></i>
-                                <i class="fas fa-phone"></i>
-                                <!-- Replace with actual phone number -->
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Alexis Peterson</td>
-                            <td>Administrative Coordinator</td>
-                            <td>
-                                <i class="fas fa-envelope"></i>
-                                <i class="fas fa-phone"></i>
-                                <!-- Replace with actual phone number -->
-                            </td>
-                        </tr>
-                        <!-- Add more leaders as needed -->
-                        <!-- Session -->
-                        <tr>
-                            <td>Rob Hawkes</td>
-                            <td>(Sabbatical 24-25)</td>
-                            <td>
-                                <i class="fas fa-envelope"></i>
-                                <i class="fas fa-phone"></i>
-                                <!-- Replace with actual phone number -->
-                            </td>
-                        </tr>
-                        <!-- Women's Leadership Board (WLB) -->
-                        <tr>
-                            <td>Lisa Hawkes</td>
-                            <td>(Sabbatical 24-25)</td>
-                            <td>
-                                <i class="fas fa-envelope"></i>
-                                <i class="fas fa-phone"></i>
-                                <!-- Replace with actual phone number -->
-                            </td>
-                        </tr>
-                        <!-- Servant Leadership Board (SLB) -->
-                        <tr>
-                            <td>Gary Wininger</td>
-                            <td>(Security)</td>
-                            <td>
-                                <i class="fas fa-envelope"></i>
-                                <i class="fas fa-phone"></i>
-                                <!-- Replace with actual phone number -->
-                            </td>
-                        </tr>
-                        <!-- Continue adding rows for each leader -->
-                    </tbody>
-                </table>
-            </section>
-
-            <section class="inner-page-section"
-                style="max-width: 600px; margin: 0 auto; background-color: #fff; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); padding: 30px;">
-                <h2 style="font-family: 'Arial', sans-serif; color: #333;">Get
-                    in Touch</h2>
-                <p class="body-text"
-                    style="font-family: 'Arial', sans-serif; color: #666; margin-bottom: 20px;">We
-                    would love to hear from you! Please fill out the form below
-                    to reach out to us with any questions, comments, or
-                    concerns.</p>
-                <form action="https://formspree.io/f/meojowwg" method="POST"
-                    style="display: flex; flex-direction: column; gap: 15px;">
+            <section>
+                <h2>Get in Touch</h2>
+                <p class="body-text">We would love to hear from you! Please fill
+                    out the form below to reach out to us with any questions,
+                    comments, or concerns.</p>
+                <form action="https://formspree.io/f/meojowwg" method="POST">
                     <input type="text" name="name" placeholder="Your name"
-                        required
-                        style="padding: 10px; border: 1px solid #ddd; border-radius: 5px; font-family: 'Arial', sans-serif;">
+                        required class="form-input">
                     <input type="email" name="_replyto" placeholder="Your email"
-                        required
-                        style="padding: 10px; border: 1px solid #ddd; border-radius: 5px; font-family: 'Arial', sans-serif;">
-                    <textarea name="message" placeholder="Your message" required
-                        style="padding: 10px; border: 1px solid #ddd; border-radius: 5px; font-family: 'Arial', sans-serif; min-height: 100px;"></textarea>
-                    <button type="submit"
-                        style="padding: 10px 20px; background-color: #007BFF; color: #fff; border: none; border-radius: 5px; cursor: pointer; font-family: 'Arial', sans-serif;">Send
-                        Message</button>
+                        required class="form-input">
+                    <textarea name="message" placeholder="Your message"
+                        required class="form-input"></textarea>
+                    <button type="submit">Send Message</button>
                 </form>
             </section>
 
+            <!-- Key Leader Contacts -->
+            <section class="key-leader-contacts">
+                <h3>Key Leader Contacts</h3>
+                <ul>
+                    <li>
+                        <strong>Craig Luekens</strong><br>
+                        Role: Senior Pastor
+                    </li>
+                    <li>
+                        <strong>Jerry Ornelas</strong><br>
+                        Role: Assistant Pastor
+                    </li>
+                    <li>
+                        <strong>Alexis Peterson</strong><br>
+                        Role: Administrative Coordinator
+                    </li>
+                    <li>
+                        <strong>Rob Hawkes</strong><br>
+                        Role: (Sabbatical 24-25)
+                    </li>
+                    <li>
+                        <strong>Lisa Hawkes</strong><br>
+                        Role: (Sabbatical 24-25)
+                    </li>
+                    <li>
+                        <strong>Gary Wininger</strong><br>
+                        Role: (Security)
+                    </li>
+                </ul>
+            </section>
         </div>
 
         <footer>

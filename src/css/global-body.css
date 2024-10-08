@@ -198,25 +198,38 @@ button:hover {
 }
 
 input {
-    background-color: rgba(255, 255, 255, 0.5);
-    border: 2px solid rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.8);
+    /* Uniform background color */
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    /* Consistent border */
     border-radius: 8px;
+    /* Uniform border radius */
     padding: 12px 15px;
+    /* Consistent padding */
     font-size: 16px;
+    /* Uniform font size */
     color: #000;
+    /* Consistent text color */
     font-family: "Barlow", sans-serif;
+    /* Consistent font family */
     outline: none;
+    /* Remove outline */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Consistent shadow */
     transition: background-color 0.3s, box-shadow 0.3s;
+    /* Smooth transitions */
 }
 
 input:focus {
-    background-color: rgba(255, 255, 255, 0.75);
+    background-color: rgba(255, 255, 255, 0.9);
+    /* Slightly different on focus */
     box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
+    /* Consistent focus shadow */
 }
 
 input::placeholder {
     color: rgba(0, 0, 0, 0.5);
+    /* Consistent placeholder color */
 }
 
 .headline {

@@ -96,8 +96,9 @@
                 <h1>About</h1>
             </div>
 
-            <div class="submenu-container hide-on-mobile">
-                <div class="submenu-menu">
+            <div class="submenu-container">
+                <button class="dropdown-btn">Menu</button>
+                <div class="submenu-menu dropdown-content">
                     <a href="#total-christ-spirit">Our Total Christ
                         Spirituality</a>
                     <a href="#commitments">Our Commitments</a>
@@ -108,27 +109,42 @@
                 </div>
             </div>
 
-            <!-- New Tab Navigation -->
-            <div class="tab-navigation">
-                <button class="tab-link"
-                    onclick="openTab(event, 'total-christ-spirit')">Our Total
-                    Christ Spirituality</button>
-                <button class="tab-link"
-                    onclick="openTab(event, 'commitments')">Our
-                    Commitments</button>
-                <button class="tab-link"
-                    onclick="openTab(event, 'staff')">Staff</button>
-                <button class="tab-link"
-                    onclick="openTab(event, 'session')">Session</button>
-                <button class="tab-link"
-                    onclick="openTab(event, 'wlb')">WLB</button>
-                <button class="tab-link"
-                    onclick="openTab(event, 'slb')">SLB</button>
-            </div>
+            <style>
+                .dropdown-btn {
+                    background-color: #4CAF50;
+                    color: white;
+                    padding: 16px;
+                    font-size: 16px;
+                    border: none;
+                    cursor: pointer;
+                }
 
+                .dropdown-content {
+                    display: none;
+                    position: absolute;
+                    background-color: #f9f9f9;
+                    min-width: 160px;
+                    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                    z-index: 1;
+                }
+
+                .dropdown-content a {
+                    color: black;
+                    padding: 12px 16px;
+                    text-decoration: none;
+                    display: block;
+                }
+
+                .dropdown-content a:hover {
+                    background-color: #f1f1f1;
+                }
+
+                .submenu-container:hover .dropdown-content {
+                    display: block;
+                }
+            </style>
             <section class="splash-image" id="home-image"></section>
-            <section id="total-christ-spirit"
-                class="inner-page-section tab-content">
+            <section id="about-us-quote" class="inner-page-section">
                 <p class="body-text"> <i>Everyone is truly welcomed into God's
                         presence because there is no limit to God's grace as
                         accomplished for us by Christ. No matter who you are or
@@ -149,8 +165,7 @@
                     src="https://storage.googleapis.com/cpc-public-website/68.jpg"
                     alt="Youth" class="compact-centered-image">
             </div>
-            <section id="total-christ-spirit"
-                class="inner-page-section tab-content">
+            <section id="total-christ-spirit" class="inner-page-section">
                 <div class="mid-splash-welcome sticky"
                     style="margin-top: 110px!important; padding-top:20px;">
                     <h1>Our Total Christ Spirituality</h1></div>
@@ -238,7 +253,7 @@
                 </p>
 
             </section>
-            <section id="commitments" class="inner-page-section tab-content">
+            <section id="commitments" class="inner-page-section">
                 <div class="mid-splash-welcome sticky"
                     style="margin-top: 110px!important; padding-top:20px;">
                     <h1>Our Commitments</h1></div>
@@ -397,8 +412,7 @@
                     alt="Youth" class="compact-centered-image">
             </div>
 
-            <section id="about-mission-anabaion"
-                class="inner-page-section tab-content">
+            <section id="about-mission-anabaion" class="inner-page-section">
                 <div class="mid-splash-welcome sticky"
                     style="margin-top: 110px!important; padding-top:20px;">
                     <h1>Mission Anabaino</h1></div>
@@ -426,7 +440,7 @@
 
                 </p>
             </section>
-            <section id="staff" class="inner-page-section tab-content">
+            <section id="staff" class="inner-page-section">
                 <div class="mid-splash-welcome sticky"
                     style="margin-top: 110px!important; padding-top:20px;">
                     <h1>Staff</h1></div>
@@ -492,7 +506,7 @@
             </section>
             <div class="splash-custom" id="jubilee"></div>
 
-            <section id="session" class="inner-page-section tab-content">
+            <section id="session" class="inner-page-section">
                 <div class="mid-splash-welcome sticky"
                     style="margin-top: 110px!important; padding-top:20px;">
                     <h1>Session</h1></div>
@@ -531,7 +545,7 @@
                 </div>
             </section>
 
-            <section id="wlb" class="inner-page-section tab-content">
+            <section id="wlb" class="inner-page-section">
                 <div class="mid-splash-welcome sticky"
                     style="margin-top: 110px!important; padding-top:20px;">
                     <h1>Women's Leadership Board</h1></div>
@@ -569,7 +583,7 @@
                     </div>
                 </section>
 
-                <section id="slb" class="inner-page-section tab-content">
+                <section id="slb" class="inner-page-section">
                     <div class="mid-splash-welcome sticky"
                         style="margin-top: 110px!important; padding-top:20px;">
                         <h1>Servant Leadership Board</h1>
@@ -647,22 +661,5 @@
                 <script
                     src="./src/js/background-fetch-splash-image.js"></script>
                 <script src="./src/js/function_toggle_mobileMenu.js"></script>
-                <script>
-                    function openTab(evt, tabName) {
-                        var i, tabcontent, tablinks;
-                        tabcontent = document.getElementsByClassName("tab-content");
-                        for (i = 0; i < tabcontent.length; i++) {
-                            tabcontent[i].style.display = "none";
-                        }
-                        tablinks = document.getElementsByClassName("tab-link");
-                        for (i = 0; i < tablinks.length; i++) {
-                            tablinks[i].className = tablinks[i].className.replace(" active", "");
-                        }
-                        document.getElementById(tabName).style.display = "block";
-                        evt.currentTarget.className += " active";
-                    }
-                    // Set default tab to open
-                    document.getElementsByClassName("tab-link")[0].click();
-                </script>
             </body>
         </html>
