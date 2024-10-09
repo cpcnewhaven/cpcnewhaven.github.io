@@ -10,7 +10,7 @@ footer {
   text-decoration: none;
   color: #000;
   /* Black text for visibility */
-  font-size: 16px;
+  font-size: 13px;
   font-weight: 700;
   letter-spacing: 1px;
   background: #fff;
@@ -30,33 +30,17 @@ footer section#subscribeAndFollow div {
   margin-top: 10px;
 }
 
-footer p {
-  margin: 0;
-}
-
-footer ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-footer ul li {
-  display: inline-block;
-  margin: 0 10px;
-}
-
-footer ul li a {
-  text-decoration: none;
-  color: #333;
-}
-
-footer ul li a:hover {
-  color: #666;
-}
 
 footer a {
   color: #000;
   /* Ensuring the link color is black for visibility */
   text-decoration: none;
   /* No underline for the links */
+}
+
+footer a:hover {
+  color: #89cff9;
+  /* Ensuring the link color is baby blue for visibility */
+  text-decoration: underline;
+  /* Underline on hover for better visibility */
 }

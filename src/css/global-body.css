@@ -7,13 +7,17 @@ body {
     font-family: "Barlow", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    padding-bottom: 60px;
-    padding-right: 15px;
-    padding-left: 15px;
+
 }
 
 h1 {
     font-size: 36px !important;
+}
+
+@media (min-width: 768px) {
+    h1 {
+        font-size: 22px !important;
+    }
 }
 
 h4 {
@@ -92,7 +96,6 @@ section {
     display: flex;
     flex-direction: column;
     border-radius: 5px;
-    text-align: left;
     line-height: 90%;
 }
 
@@ -100,15 +103,7 @@ section p {
     line-height: 95%;
 }
 
-section h1,
-section h2 {
-    font-size: 48px;
-    font-family: "Barlow", sans-serif;
-    margin: 0 auto;
-    text-align: center;
-    max-width: 680px;
-    padding: 20px;
-}
+
 
 section h3 {
     font-size: 36px;
@@ -472,42 +467,85 @@ p {
     font-size: 24px;
 }
 
+/*******************************************************
+ *                                                     *
+ *                   Submenu Styles                    *
+ *                                                     *
+ *******************************************************/
+
 .submenu-container {
-    background-color: #f8f8f8;
     padding: 10px 0;
-    border-bottom: 1px solid #ddd;
-    position: sticky;
-    top: 45px;
-    z-index: 100;
-}
-
-.submenu-menu {
+    background-color: white;
+    border-top: 1px solid #ddd;
+    position: fixed;
+    bottom: 10%;
+    height: 50px;
+    width: 100%;
+    z-index: 5100;
     display: flex;
-    justify-content: space-around;
-    max-width: 1200px;
-    margin: 0 auto;
-    flex-wrap: wrap;
-}
-
-.submenu-menu a {
-    color: #000000;
-    text-decoration: none;
-    padding: 10px 20px;
-    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+
+
+.dropdown-btn {
+    background-color: rgba(0, 0, 255, 0.97);
+    color: white;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
     text-align: center;
-    line-height: 95%;
-    transition: background-color 0.3s, color 0.3s;
-    border-radius: 5px;
-    margin: 5px;
+    transition: background-color 0.3s ease;
 }
 
-.submenu-menu a:hover {
-    background-color: #1c95ff35;
-    color: #fff;
+.dropdown-btn:hover {
+    background-color: rgba(0, 0, 200, 0.97);
 }
 
+.dropdown-content {
+    display: none;
+    background-color: #333;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #444;
+}
+
+
+
+
+
+
+/*******************************************************
+ *                                                     *
+ *               Submenu Media Queries                 *
+ *                                                     *
+ *******************************************************/
+/*
 @media (max-width: 768px) {
     .submenu-container {
         top: 0;
@@ -527,27 +565,16 @@ p {
         display: none;
     }
 }
+*/
 
-/* @media (max-width: 767px) {
-    .submenu-container {
-        display: block;
-    }
 
-    .submenu-menu {
-        display: block;
-        flex-direction: column;
-    }
 
-    .submenu-menu a {
-        padding: 15px 20px;
-    }
 
-    .mobile-navigation .submenu {
-        display: block;
-    }
-} */
-/* ... existing styles ... */
-/* ... existing styles ... */
+
+
+.submenu-container:hover .dropdown-content {
+    display: flex;
+}
 
 .sticky {
     position: -webkit-sticky;
@@ -717,21 +744,8 @@ p {
     }
 }
 
-/* ... rest of the existing styles ... */
-/* ... rest of the existing styles ... */
 
 
-
-.inner-page-section {
-    width: 100%;
-    padding-top: 20px;
-    margin: 0;
-    display: flex;
-}
-
-.inner-page-section h2 {
-    margin-top: 10px;
-}
 
 .gallery-container {
     display: grid;
@@ -800,6 +814,12 @@ p {
     transform: translate(-50%, -50%);
     /* Center the image */
 }
+
+
+
+
+
+
 
 .close-btn {
     color: white;
@@ -1896,6 +1916,9 @@ p {
 
 .staff-member {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .staff-member img {
@@ -1976,16 +1999,12 @@ p {
     /* Slight raise effect on hover/focus */
 }
 
-// Add these styles to enhance the inner-page-sections to match the submenu-container-enhanced style
-
 .inner-page-section {
-    background-color: #f8f8f8;
     /* Light background for the section */
-    padding: 20px;
+    padding: 10px;
     /* Uniform padding */
     border-radius: 8px;
     /* Rounded corners */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     /* Subtle shadow for depth */
     margin: 20px auto;
     /* Centering and spacing around the section */
@@ -1993,14 +2012,7 @@ p {
     /* Max width for better control on larger screens */
 }
 
-.inner-page-section h2 {
-    color: #3f51b5;
-    /* Deeper indigo for headings */
-    margin-bottom: 15px;
-    /* More space below the headline */
-    font-size: 72px;
-    /* Slightly smaller font size than the submenu headline for hierarchy */
-}
+
 
 .inner-page-section p.body-text {
     color: #333;
@@ -2011,39 +2023,6 @@ p {
     /* Justified text for a cleaner look */
 }
 
-// Ensure links within the inner-page-sections are styled consistently with those in the submenu
-.inner-page-section a {
-    color: #3f51b5;
-    /* Matching the headline color for consistency */
-    text-decoration: none;
-    /* No underline */
-    transition: color 0.3s ease-in-out;
-    /* Smooth transition for hover effects */
-}
-
-.inner-page-section a:hover {
-    color: #1c95ff;
-    /* Lighter blue for hover state */
-    text-decoration: underline;
-    /* Underline on hover for emphasis */
-}
-
-// Ensure links within the inner-page-sections are styled consistently with those in the submenu
-.inner-page-section a {
-    color: #3f51b5;
-    /* Matching the headline color for consistency */
-    text-decoration: none;
-    /* No underline */
-    transition: color 0.3s ease-in-out;
-    /* Smooth transition for hover effects */
-}
-
-.inner-page-section a:hover {
-    color: #1c95ff;
-    /* Lighter blue for hover state */
-    text-decoration: underline;
-    /* Underline on hover for emphasis */
-}
 
 
 #gallery-container {
