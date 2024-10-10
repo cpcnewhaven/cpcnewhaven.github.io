@@ -10,17 +10,7 @@
             gtag('js', new Date());
             gtag('config', 'G-TL0WH5R1EK');
         </script>
-        <!-- Hotjar Tracking Code for https://cpcnewhaven.github.io/ -->
-        <script>
-            (function(h,o,t,j,a,r){
-                h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-                h._hjSettings={hjid:5126213,hjsv:6};
-                a=o.getElementsByTagName('head')[0];
-                r=o.createElement('script');r.async=1;
-                r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-                a.appendChild(r);
-            })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-        </script>
+
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description"
@@ -93,8 +83,10 @@
 
         <section id="youtube-feed">
             <a href="https://youtube.com/c/cpcnewhaven">
-                <img src="./assets/CPC_YOUTUBE_DEFAULT.jpg" alt="Live Banner">
+                <img src="./assets/CPC_YOUTUBE_DEFAULT.jpg" alt="Live Banner"
+                    style="width: 100%; height: auto;">
             </a>
+            <!--
             <div class="center-content" style="margin-top: 20px;">
                 <iframe id="sermon-video" width="560" height="315" src
                     title="YouTube video player" frameborder="0"
@@ -102,6 +94,7 @@
                     referrerpolicy="strict-origin-when-cross-origin"
                     allowfullscreen></iframe>
             </div>
+            -->
         </section>
 
         <style>
@@ -121,7 +114,7 @@
         </style>
         <div class="live-sermon-sub-header-container">
             <hr>
-            <h1 id="sermon-title">Sermon Title</h1>
+            <h1 style="text-align: center;" id="sermon-title">Sermon Title</h1>
             <p>Passage Text: <span id="sermon-scripture">John
                     3:16</span></p>
             <p>Preacher: <span id="sermon-author">Jesus Christ</span></p>
@@ -163,9 +156,7 @@
         </section>
 
         <section>
-            <div class="worship-widget-ab">
 
-            </div>
             <div class="center-content" style="margin-top: 20px;">
             </div>
 
@@ -186,80 +177,94 @@
             <p class="body-text center"><span>Note:</span> This page updates and
                 shows the live feed every Sunday at 10:30am </p>
 
-            <section class="sharing-instructions">
-                <h2>Spread the Word</h2>
-                <p>Share our live stream link on your social media platforms.
-                    Let your friends and family know how they can join us online
-                    for our services
-                    <hr>
-                    <a href="https://www.youtube.com/@CPCNewHaven/live"
-                        target="_blank"
-                        style="color: #0066cc; text-decoration: underline; font-weight: bold;"
-                        onclick="shareLink(event, 'https://www.youtube.com/@CPCNewHaven/live')">
-                        Share Live Link on YouTube
-                    </a>
-                    <script>
-                    function shareLink(event, url) {
-                        event.preventDefault();
-                        if (navigator.share) {
-                            navigator.share({
-                                title: 'CPC New Haven Live Stream',
-                                url: url
-                            }).then(() => {
-                                console.log('Thanks for sharing!');
-                            }).catch(console.error);
-                        } else {
-                            // Fallback for browsers that don't support Web Share API
-                            window.open(url, '_blank');
-                        }
+            <section class="sharing-instructions"
+                style="background-color: #f0f0f0; padding: 20px; border-radius: 10px; text-align: center;">
+                <h2
+                    style="color: #333; font-size: 24px; font-weight: bold;">Spread
+                    the Word</h2>
+                <p style="color: #555; font-size: 18px;">Share our live stream
+                    link on your social media platforms. Let your friends and
+                    family know how they can join us online for our
+                    services.</p>
+                <hr style="border: 1px solid #ccc; margin: 20px 0;">
+                <a href="https://www.youtube.com/@CPCNewHaven/live"
+                    target="_blank"
+                    style="color: #ffffff; background-color: #0066cc; padding: 10px 20px; text-decoration: none; font-weight: bold; border-radius: 5px;"
+                    onclick="shareLink(event, 'https://www.youtube.com/@CPCNewHaven/live')">
+                    Share Live Link on YouTube
+                </a>
+                <script>
+                function shareLink(event, url) {
+                    event.preventDefault();
+                    if (navigator.share) {
+                        navigator.share({
+                            title: 'CPC New Haven Live Stream',
+                            url: url
+                        }).then(() => {
+                            console.log('Thanks for sharing!');
+                        }).catch(console.error);
+                    } else {
+                        // Fallback for browsers that don't support Web Share API
+                                               window.open(url, '_blank');
                     }
-                    </script>
-                </p>
+                }
+                </script>
             </section>
-            <h2>Follow and Share</h2>
-            <section class="social-links-horizontal">
-                <a href="https://www.instagram.com/cpcnewhaven/"
-                    target="_blank"><i class="fab fa-instagram"></i>
-                    Instagram</a>
-                <a href="https://www.facebook.com" target="_blank"><i
-                        class="fab fa-facebook-f"></i> Facebook</a>
-                <a href="https://www.youtube.com/@CPCNewHaven"
-                    target="_blank"><i class="fab fa-youtube"></i> YouTube</a>
-                <a
-                    href="https://open.spotify.com/show/22kjUJyC0VH3cMfCSe9kEk?si=03179c2d72e44829"
-                    target="_blank"><i class="fab fa-spotify"></i> Spotify</a>
-                <a
-                    href="https://podcasts.apple.com/us/podcast/cpc-new-haven-podcasts/id1553483670"
-                    target="_blank"><i class="fab fa-apple"></i>Apple
-                    Podcasts</a>
-            </section>
-        </div>
-        <section id="footer-cta-a" class="styled-section-a">
-            <div class="form-container">
-                <h2>Subscribe to our Newsletter</h2>
-                <p class="body-text ">Our weekly newsletter goes out on Friday
-                    mornings with
-                    Sunday Service information, highlights, upcoming events, and
-                    useful links.</p>
-                <form action="https://formspree.io/f/meojowwg" method="POST"
-                    class="neumorphic-form">
-                    <input type="text" name="name" placeholder="Your name"
-                        required>
-                    <!-- Added name input -->
-                    <input type="email" name="email" placeholder="Your email"
-                        required>
-                    <button type="submit">Subscribe to CPC New Haven</button>
-                </form>
-            </div>
-        </section>
-        <footer>
-            <a id="fixedlink"
-                href="index.html">135 Whitney Ave - New Haven, CT | Sunday
-                Worship
-                10:30am </a>
-        </footer>
+            <hr>
+            <section>
+                <h2
+                    style="color: #333; font-size: 24px; font-weight: bold;">Follow
+                    Us on Social Media</h2>
+                <p style="color: #555; font-size: 18px;">Stay connected and
+                    up-to-date with our latest news and events.</p>
+                <div class="social-links-horizontal">
+                    <a href="https://www.instagram.com/cpcnewhaven/"
+                        target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com" target="_blank"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.youtube.com/@CPCNewHaven"
+                        target="_blank"><i class="fab fa-youtube"></i></a>
+                    <a
+                        href="https://open.spotify.com/show/22kjUJyC0VH3cMfCSe9kEk?si=03179c2d72e44829"
+                        target="_blank"><i class="fab fa-spotify"></i></a>
+                    <a
+                        href="https://podcasts.apple.com/us/podcast/cpc-new-haven-podcasts/id1553483670"
+                        target="_blank"><i class="fab fa-apple"></i></a>
+                </section>
+                <hr>
+                <section id="footer-cta-a" class="styled-section-a">
+                    <div class="form-container">
+                        <h2>Subscribe to our Newsletter</h2>
+                        <p class="body-text ">Our weekly newsletter goes out on
+                            Friday
+                            mornings with
+                            Sunday Service information, highlights, upcoming
+                            events, and
+                            useful links.</p>
+                        <form action="https://formspree.io/f/meojowwg"
+                            method="POST"
+                            class="neumorphic-form">
+                            <input type="text" name="name"
+                                placeholder="Your name"
+                                required>
+                            <!-- Added name input -->
+                            <input type="email" name="email"
+                                placeholder="Your email"
+                                required>
+                            <button type="submit">Subscribe to CPC New
+                                Haven</button>
+                        </form>
+                    </div>
+                </section>
+                <footer>
+                    <a id="fixedlink"
+                        href="index.html">135 Whitney Ave - New Haven, CT |
+                        Sunday
+                        Worship
+                        10:30am </a>
+                </footer>
 
-        <script src="./src/js/function_toggle_mobileMenu.js"></script>
-        <script src="./src/js/live-logic.js"></script>
-    </body>
-</html>
+                <script src="./src/js/function_toggle_mobileMenu.js"></script>
+                <script src="./src/js/live-logic.js"></script>
+            </body>
+        </html>
