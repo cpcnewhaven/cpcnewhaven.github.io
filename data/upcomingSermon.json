@@ -138,7 +138,7 @@
     "apple_podcasts_url": "https://podcasts.apple.com/us/podcast/cpc-new-haven-podcasts/id1553483670?i=1000668208959",
     "bulletin_url": "http://files.cpcnewhaven.org/bulletin...",
     "podcast-thumbnail_url": "https://storage.googleapis.com/cpc-public-website/podcast-thumbnails/9.08.24%20-%20CPC.jpg",
-    "status": "present"
+    "status": "past"
   },
   {
     "id": "13",
@@ -192,7 +192,7 @@
     "date": "2024-10-06",
     "active": true,
     "sermon-preview_url": "https://www.youtube.com/watch?v=spG1QgSlAqg&t=0s",
-    "youtube_url": "https://www.youtube.com/watch?v=x3RK0mE110E",
+    "youtube_url": "https://www.youtube.com/watch?v=x3RK0mE110E&t=1s",
     "spotify_url": "https://open.spotify.com/episode/0CBes9ND0WvnxIlkEO7CHv?si=e20797b941264fe7",
     "apple_podcasts_url": "",
     "bulletin_url": "",
