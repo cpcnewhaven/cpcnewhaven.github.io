@@ -231,47 +231,57 @@
       "category": "upcoming",
       "tag": "men"
     },
-    {
+     {
       "id": "2024-014",
-      "title": "Children’s Fall Party Harvest | October 13 | 12:00-1:30pm | CPC Front Lawn",
+      "title": "Children's Fall Party Harvest",
       "description": "Fall is in the air which means fall games, fall foods and fall fun for the children of CPC. During the lunch hour on the CPC front lawn there will be plenty of activities for the children to enjoy!",
       "dateEntered": "2024-09-15",
       "active": "true",
       "type": "upcoming",
       "category": "upcoming",
-      "tag": "children"
+      "tag": "children",
+      "date": "October 13, 2024",
+      "time": "12:00-1:30pm",
+      "location": "CPC Front Lawn"
     },
     {
       "id": "2024-015",
-      "title": "Summer Mission Trip | Aug. 2-9, 2025 | New City Fellowship, Atlantic City",
-      "description": "Info meeting Oct. 27 after worship",
+      "title": "Summer Mission Trip Info Meeting",
+      "description": "Info meeting for the Summer Mission Trip to New City Fellowship, Atlantic City (Aug. 2-9, 2025)",
       "dateEntered": "2024-09-15",
       "active": "true",
       "type": "upcoming",
       "category": "upcoming",
-      "tag": "mission"
+      "tag": "mission",
+      "date": "October 27, 2024",
+      "time": "After worship",
+      "location": "CPC"
     },
     {
       "id": "2024-016",
-      "title": "Children’s Fall Party Harvest | October 13 | 12:00-1:30pm | CPC Front Lawn",
-      "event-date": "October 13",
+      "title": "Children's Fall Party Harvest",
       "description": "Fall is in the air which means fall games, fall foods and fall fun for the children of CPC. During the lunch hour on the CPC front lawn there will be plenty of activities for the children to enjoy!",
       "dateEntered": "2024-09-15",
       "active": "true",
       "type": "upcoming",
       "category": "upcoming",
-      "tag": "children"
+      "tag": "children",
+      "date": "October 13, 2024",
+      "time": "12:00-1:30pm",
+      "location": "CPC Front Lawn"
     },
     {
       "id": "2024-017",
-      "title": "Young Adults Park BBQ/Hang | October 19 | 1:00pm | Wharton Brook State Park",
-      "event-date": "October 19",
-      "description": "Hey Young Adults! We are having our first event of the year, a BBQ hangout on Saturday, October 19 at Wharton Brook State Park (675 Washington Ave. North Haven, CT 06473) on the upper part where the picnic tables are, beginning at 1:00 p.m. If you need a ride or would like to carpool, meet at CPC at 12:30 p.m. We will be grilling burgers and hotdogs, some sides, and will have some games. Feel free to bring a side or dessert to share. Hope to see you there! Contact Josh S. with any questions at joshuatsanders@yahoo.com or 951-813-6521.",
+      "title": "Young Adults Park BBQ/Hang",
+      "description": "Hey Young Adults! We are having our first event of the year, a BBQ hangout. We will be grilling burgers and hotdogs, some sides, and will have some games. Feel free to bring a side or dessert to share. If you need a ride or would like to carpool, meet at CPC at 12:30 p.m. Hope to see you there! Contact Josh S. with any questions at joshuatsanders@yahoo.com or 951-813-6521.",
       "dateEntered": "2024-09-15",
       "active": "true",
       "type": "upcoming",
       "category": "upcoming",
-      "tag": "young adults"
+      "tag": "young adults",
+      "date": "October 19, 2024",
+      "time": "1:00pm",
+      "location": "Wharton Brook State Park, 675 Washington Ave. North Haven, CT 06473"
     }
   ]
 }
