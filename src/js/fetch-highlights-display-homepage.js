@@ -32,7 +32,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 const titleElement = document.createElement('h2');
                 titleElement.textContent = announcement.title;
+                titleElement.classList.add('announcement-title'); // Add unique class for announcement titles
                 highlightElement.appendChild(titleElement);
+
+                // Add date and time as subheader
+                if (announcement.date || announcement.time) {
+                    const subheaderElement = document.createElement('h3');
+                    subheaderElement.textContent = `${announcement.date || ''} ${announcement.time || ''}`.trim();
+                    subheaderElement.classList.add('announcement-subheader');
+                    highlightElement.appendChild(subheaderElement);
+                }
 
                 const descriptionElement = document.createElement('p');
                 descriptionElement.innerHTML = announcement.description; // Use innerHTML to render HTML content

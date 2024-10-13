@@ -93,33 +93,19 @@
 
 
      
-      <section id="active-upcoming-sermon" style="display:none;">
-        <h1>Upcoming Sermon</h1>
-        <p id="active-upcoming-title">Upcoming Sermon Title</p>
-        <p id="active-upcoming-scripture">Upcoming Sermon Scriptures</p>
-        </section>
-      <div id="upcomingSermonContainer" style="display: none;">
-        <h3 class="ag-worship-heading">Upcoming Sermon</h3>
-        <div class="ag-worship-widget">
-          <div class="ag-worship-info">
-            <p id="upcomingSermonTitle" class="ag-worship-title"></p>
-            <p id="upcomingSermonScripture" class="ag-worship-scripture"></p>
-            <p id="upcomingSermonPastor" class="ag-worship-pastor"></p>
-            <p id="upcomingSermonDate" class="ag-worship-date"></p>
-          </div>
-        </div>
-      </div></section>
+     
       <!-- HOMEPAGE DYNAMIC SPLASH -->
       <section id="ag-worship-ab" class="ag-worship-section">
         <!-- Add this new div for the upcoming sermon -->
 
         <h3 class="ag-worship-heading">This Week's Sermon</h3>
         <div class="ag-worship-widget">
+          <img src="default-image.jpg" alt="Sermon Image" class="ag-worship-image" width="300"
+          height="300px">
           <a id="sermonSpotify"
             href="https://open.spotify.com/episode/7tQMwlLbtk19nP5wUIvWON?si=56d7fa76c9fe4c9b"
             target="_blank">
-            <img src="default-image.jpg" alt="Sermon Image" class="ag-worship-image" width="300"
-              height="300">
+          
           </a>
           <div class="ag-worship-info">
             <p id="sermonTitle" class="ag-worship-title"></p>
@@ -153,7 +139,7 @@
           <h1 class="headline">All are Welcome</h1>
         </div>
         <div class="body-text">
-          <p class="body-text">Everyone is truly welcomed into God's presence
+          <p>Everyone is truly welcomed into God's presence
             because there is no limit to God's grace as accomplished for us by
             Christ. No matter who you are or where you've been, CPC hopes to
             be
@@ -166,7 +152,7 @@
             Holy Spirit in and for New Haven.
 
           </p>
-          <p class="body-text">
+          <p> 
             For more about who we are as a church, please visit the About page.
             For the most current events, please scroll down for Highlights. The
             best way to plug in is to worship with us on a Sunday and visit a
@@ -240,26 +226,20 @@
         href="#"> <img src="./assets/CPC_LOGO_24.png" alt="CPC New Haven Church"
         class="top-splash-logo"></a>
     </footer>
-    <!-- UPDATE AND FETCH HOMEPAGE BASED ON SOURCE OF TRUTH-->
-    <script src="./src/js/updateContent.js"></script>
-    <!-- Working SCRIPTS-->
-    <script src="./src/js/fetch-events-preview.js"></script>
-    <!-- Fetch Latest 3 Podcasts and Display on Homepage -->
+    <!-- Fetch and display highlights on homepage -->
     <script src="./src/js/fetch-highlights-display-homepage.js"></script>
-    <!-- CLOSE AND TOGGLE NAVIGATION -->
+    <!-- Toggle mobile menu -->
     <script src="./src/js/function_toggle_mobileMenu.js"></script>
-    <script src="./src/js/updateSermonContent.js"></script>
+    <!-- Fetch and set background splash image -->
     <script src="./src/js/background-fetch-splash-image.js"></script>
-
+    <!-- Handle dynamic banner -->
+    <script src="./src/js/dynamic-banner.js"></script>
+    <!-- Display sermon on homepage -->
+    <script src="./src/homepage-display-sermon.js"></script>
     <script>
       function openSpotify() {
         window.open('https://open.spotify.com/episode/2uBoLVqGYnN4p2vUHvOwzN?si=84b2d9515af340a7', '_blank');
       }
     </script>
-    <script src="./photos/fetch-jubilee-images.js"></script>
- 
-
-    <script src="./src/js/dynamic-banner.js"></script>
-    <script src="./src/homepage-display-sermon.js"></script>
   </body>
 </html>
