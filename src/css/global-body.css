@@ -2111,8 +2111,8 @@ p {
 .hero {
     background-image: url('../../assets/web-assets/cpc-splash-front.png');
     background-size: cover;
-    background-position: center;
-    height: 50vh;
+    background-position: top;
+    height: 70vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -2120,6 +2120,8 @@ p {
     text-align: center;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+    padding-top: 30px;
 }
 
 @media (max-width: 768px) {
@@ -2134,4 +2136,26 @@ p {
         height: 30vh;
         padding: 10px;
     }
+}
+
+
+#highlights {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 100%;
+}
+
+#highlights h2 {
+    text-align: center;
+    max-width: 500px;
+}
+
+.highlights-content {
+    margin-top: 30px;
+    min-width: 100%;
+    max-width: 800px;
+    padding: 20px;
+    text-align: center;
 }
