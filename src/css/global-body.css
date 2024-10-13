@@ -351,6 +351,10 @@ p {
     color: rgb(0, 0, 0);
     border-style: none;
     box-shadow: none;
+    padding-top: 10px;
+    padding: bottom 20px;   
+    
+    
 
 }
 
