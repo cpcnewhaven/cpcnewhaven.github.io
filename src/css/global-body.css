@@ -2157,5 +2157,7 @@ p {
     min-width: 100%;
     max-width: 800px;
     padding: 20px;
+    font-family: "Barlow", sans-serif;
+    font-size: 14px !important;
     text-align: center;
 }
