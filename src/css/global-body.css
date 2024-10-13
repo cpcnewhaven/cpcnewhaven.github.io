@@ -2186,6 +2186,8 @@ p {
     border-left: 4px solid #1890ff;
 }
 
+
+
 .announcement.ongoing {
     background-color: #f6ffed;
     border-left: 4px solid #52c41a;
@@ -2222,4 +2224,9 @@ p {
     .announcement p {
         font-size: 14px;
     }
+}
+
+.announcement.upcoming {
+    background-color: #e6f3ff21;
+    border-left: 4px solid #1e90ff;
 }

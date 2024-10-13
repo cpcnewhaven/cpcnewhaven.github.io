@@ -21,6 +21,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     highlightElement.classList.add('highlight');
                 } else if (announcement.type === "ongoing") {
                     highlightElement.classList.add('ongoing');
+                } else if (announcement.type === "upcoming") {
+                    highlightElement.classList.add('upcoming');
                 }
 
                 // Set background image if available
