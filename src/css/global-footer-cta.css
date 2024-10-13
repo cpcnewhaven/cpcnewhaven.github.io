@@ -1,45 +1,96 @@
-/* Styling for the form */
-form {
-    margin-top: 20px;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+#footer-cta-a {
+    background-color: #f0f4f8;
+    padding: 60px 20px;
+    text-align: center;
 }
 
-input[type="email"] {
-    width: calc(100% - 22px);
-    /* Full width minus padding */
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    /* Light grey border */
-    border-radius: 4px;
-    /* Rounded corners for the input field */
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
+#footer-cta-a h2 {
+    font-family: 'Inter', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1a202c;
+    margin-bottom: 1rem;
+}
 
-#footer-cta {
+#footer-cta-a .body-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    color: #4a5568;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.neumorphic-form {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 300px;
-
+    flex-direction: column;
+    gap: 1rem;
 }
 
-#footer-cta button {
-    background-color: rgb(0, 94, 255);
-    color: white;
-    padding: 10px 20px;
+.neumorphic-form input {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    padding: 0.8rem 1rem;
     border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 18px;
-    font-weight: 600;
-    font-family: "Barlow", sans-serif;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    width: 100%;
 }
 
-#footer-cta input[type="email"] {
-    height: 50px;
-    font-size: 18px;
+.neumorphic-form input:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
+}
+
+.neumorphic-form button {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
     font-weight: 600;
-    font-family: "Barlow", sans-serif;
-    margin-bottom: 10px;
+    color: #ffffff;
+    background-color: #4299e1;
+    border: none;
+    border-radius: 8px;
+    padding: 0.8rem 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(66, 153, 225, 0.3);
+    width: 100%;
+}
+
+.neumorphic-form button:hover {
+    background-color: #3182ce;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(66, 153, 225, 0.4);
+}
+
+@media (min-width: 640px) {
+    #footer-cta-a h2 {
+        font-size: 3rem;
+    }
+
+    #footer-cta-a .body-text {
+        font-size: 1.1rem;
+    }
+
+    .neumorphic-form {
+        flex-direction: row;
+    }
+
+    .neumorphic-form input {
+        flex: 1;
+    }
+
+    .neumorphic-form button {
+        flex: 0 0 auto;
+        width: auto;
+    }
 }

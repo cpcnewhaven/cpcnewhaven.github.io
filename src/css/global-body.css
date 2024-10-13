@@ -196,40 +196,7 @@ button:hover {
     color: rgb(255, 255, 255);
 }
 
-input {
-    background-color: rgba(255, 255, 255, 0.8);
-    /* Uniform background color */
-    border: 2px solid rgba(0, 0, 0, 0.2);
-    /* Consistent border */
-    border-radius: 8px;
-    /* Uniform border radius */
-    padding: 12px 15px;
-    /* Consistent padding */
-    font-size: 16px;
-    /* Uniform font size */
-    color: #000;
-    /* Consistent text color */
-    font-family: "Barlow", sans-serif;
-    /* Consistent font family */
-    outline: none;
-    /* Remove outline */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    /* Consistent shadow */
-    transition: background-color 0.3s, box-shadow 0.3s;
-    /* Smooth transitions */
-}
 
-input:focus {
-    background-color: rgba(255, 255, 255, 0.9);
-    /* Slightly different on focus */
-    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
-    /* Consistent focus shadow */
-}
-
-input::placeholder {
-    color: rgba(0, 0, 0, 0.5);
-    /* Consistent placeholder color */
-}
 
 .headline {
     font-size: 1.5rem;
@@ -1095,47 +1062,7 @@ p {
     padding: 20px;
 }
 
-.form-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
-}
 
-.neumorphic-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    max-width: 400px;
-    padding: 20px;
-    border-radius: 10px;
-    background: #ffffff;
-}
-
-.neumorphic-form input,
-.neumorphic-form button {
-    width: 90%;
-    padding: 12px;
-    margin: 10px 0;
-    border: none;
-    border-radius: 5px;
-    outline: none;
-    font-size: 16px;
-}
-
-.neumorphic-form input {
-    background: #ffffff;
-    box-shadow: inset 3px 3px 6px rgba(163, 177, 198, 0.6), inset -3px -3px 6px rgba(255, 255, 255, 0.5);
-}
-
-.neumorphic-form button {
-    background: #ffffff;
-    box-shadow: 3px 3px 6px rgba(163, 177, 198, 0.6), -3px -3px 6px rgba(255, 255, 255, 0.5);
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
 
 @media (min-width: 768px) {
     body {
@@ -1226,42 +1153,7 @@ p {
     overflow: hidden;
 }
 
-.neumorphic-form {
-    padding: 15px;
-}
 
-.neumorphic-form input,
-.neumorphic-form button {
-    width: 100%;
-    margin-bottom: 10px;
-}
-
-@media (min-width: 768px) {
-    .neumorphic-form {
-        padding: 30px;
-    }
-
-    .neumorphic-form input,
-    .neumorphic-form button {
-        width: auto;
-    }
-}
-
-.neumorphic-form button:hover {
-    color: black !important;
-    box-shadow: inset 3px 3px 6px rgba(163, 177, 198, 0.6), inset -3px -3px 6px rgba(255, 255, 255, 0.5);
-}
-
-@media (max-width: 600px) {
-    .neumorphic-form {
-        padding: 15px;
-    }
-
-    .neumorphic-form input,
-    .neumorphic-form button {
-        padding: 8px;
-    }
-}
 
 /*Hamburger menu Logic */
 
