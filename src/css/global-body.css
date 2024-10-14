@@ -392,7 +392,22 @@ p {
     border-style: none;
     box-shadow: none;
     padding-top: 10px;
-    padding: bottom 20px;
+    padding-bottom: 30px;
+    position: relative;
+}
+
+.mid-splash-welcome::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    /* Adjust the height for the thickness of the border */
+    background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.5), transparent);
+    /* Adjust the color and transparency */
+    pointer-events: none;
+    /* Ensures the pseudo-element doesn't interfere with interactions */
 }
 
 .mid-splash-welcome.sticky {
@@ -821,9 +836,14 @@ p {
     /* Pointer cursor on hover */
 }
 
-.dynamic-update {
-    width: 100%;
+
+
+.dynamic-widget-container {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
 }
 
 .homepage-weekly-update-container {
@@ -832,9 +852,40 @@ p {
 }
 
 .homepage-update-widget {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.homepage-update-widget img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.homepage-update-widget p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+    font-family: "Barlow", sans-serif;
+}
+
+.homepage-update-widget h1 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.homepage-update-widget:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .ag-worship-section {
@@ -955,6 +1006,14 @@ p {
         -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
     }
+}
+
+#sermonTitle {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-align: center;
+    line-height: 1.125;
 }
 
 .sermon-info {
