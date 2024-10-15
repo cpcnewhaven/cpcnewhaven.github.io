@@ -1457,6 +1457,10 @@ p {
     position: fixed;
     height: 100vh;
     z-index: 3;
+    overflow-y: auto;
+
+    /* Enable vertical scrolling */
+    padding-bottom: 100px;
 }
 
 .sidebar h1 {
