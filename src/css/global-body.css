@@ -2243,3 +2243,13 @@ p {
     background-color: #e6f3ff21;
     border-left: 4px solid #1e90ff;
 }
+
+.footer-content-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-content-logo img {
+    width: 100px;
+}
