@@ -231,19 +231,7 @@
       "category": "upcoming",
       "tag": "men"
     },
-     {
-      "id": "2024-014",
-      "title": "Children's Fall Party Harvest",
-      "description": "Fall is in the air which means fall games, fall foods and fall fun for the children of CPC. During the lunch hour on the CPC front lawn there will be plenty of activities for the children to enjoy!",
-      "dateEntered": "2024-09-15",
-      "active": "true",
-      "type": "upcoming",
-      "category": "upcoming",
-      "tag": "children",
-      "date": "October 13, 2024",
-      "time": "12:00-1:30pm",
-      "location": "CPC Front Lawn"
-    },
+   
     {
       "id": "2024-015",
       "title": "Summer Mission Trip Info Meeting",
@@ -262,7 +250,7 @@
       "title": "Children's Fall Party Harvest",
       "description": "Fall is in the air which means fall games, fall foods and fall fun for the children of CPC. During the lunch hour on the CPC front lawn there will be plenty of activities for the children to enjoy!",
       "dateEntered": "2024-09-15",
-      "active": "true",
+      "active": "false",
       "type": "upcoming",
       "category": "upcoming",
       "tag": "children",
