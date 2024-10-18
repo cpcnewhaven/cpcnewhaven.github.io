@@ -270,6 +270,35 @@
       "date": "October 19, 2024",
       "time": "1:00pm",
       "location": "Wharton Brook State Park, 675 Washington Ave. North Haven, CT 06473"
+    },
+    {
+      "id": "2024-018",
+      "title": "Thanksgiving Fellowship Meals",
+      "description": "Staying local for Thanksgiving? Come celebrate with your brothers and sisters in Christ! As we’ve done in the past, we’re coordinating Hosts & Guests to have a Thanksgiving meal together on Nov. 28. If you’re interested, please email admin@cpcnewhaven.org, fill out the form or fill out the bulletin insert Sunday.",
+      "dateEntered": "2024-09-15",
+      "active": "true",
+      "type": "upcoming",
+      "category": "upcoming",
+      "tag": "thanksgiving",
+      "date": "November 28, 2024",
+      "location": "Various Locations"
+    },
+    {
+      "id": "2024-019",
+      "title": "Summer Mission Trip",
+      "description": "Join us for a one-week mission trip to urban poor neighborhoods in Atlantic City, NJ with New City Fellowship. The trip will take place from Aug. 2-9, 2025. Our goal is to share the gospel, serve the poor, and grow in our love for Jesus and vision for missional living.",
+      "dateEntered": "2024-09-15",
+      "active": "true",
+      "type": "ongoing",
+      "category": "ongoing",
+      "tag": "mission",
+      "date": "August 2-9, 2025",
+      "location": "New City Fellowship, Atlantic City",
+      "infoMeeting": {
+        "date": "October 27, 2024",
+        "time": "After worship",
+        "location": "CPC"
+      }
     }
   ]
 }
