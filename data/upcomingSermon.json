@@ -212,6 +212,21 @@
     "apple_podcasts_url": "",
     "bulletin_url": "",
     "podcast-thumbnail_url": "",
+    "status": "past"
+  },
+  {
+    "id": "18",
+    "title": "From Grumbling to Depending: How We Become the People of God",
+    "author": "Rev. Craig Luekens",
+    "scripture": "Exodus 16:1-36",
+    "date": "2024-10-20",
+    "active": true,
+    "sermon-preview_url": "https://www.youtube.com/watch?v=2zCt2oWAXMI&t=0s",
+    "youtube_url": "https://www.youtube.com/watch?v=G-fGX6lrbyA",
+    "spotify_url": "",
+    "apple_podcasts_url": "",
+    "bulletin_url": "",
+    "podcast-thumbnail_url": "",
     "status": "present"
   }
 ]
