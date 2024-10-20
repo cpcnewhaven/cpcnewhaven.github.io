@@ -2204,6 +2204,8 @@ p {
 .announcement.ongoing {
     background-color: #f6ffed;
     border-left: 4px solid #52c41a;
+    width: 100%;
+    max-width: 800px;
 }
 
 .announcement[style*="background-image"] {
@@ -2240,9 +2242,14 @@ p {
 }
 
 .announcement.upcoming {
-    background-color: #e6f3ff21;
+    background-color: #c8e5ff5a;
     border-left: 4px solid #1e90ff;
+    width: 100%;
+    max-width: 800px;
 }
+
+
+
 
 .footer-content-logo {
     display: flex;
@@ -2252,4 +2259,23 @@ p {
 
 .footer-content-logo img {
     width: 100px;
+}
+
+
+.highlights-legend p {
+    font-size: 12px;
+    /* Make the text tiny */
+    text-align: center;
+    margin: 0;
+    padding-bottom: 10px;
+}
+
+.upcoming-color {
+    color: #1e90ff;
+    /* Use the color for upcoming events */
+}
+
+.ongoing-color {
+    color: #52c41a;
+    /* Use the color for ongoing events */
 }
