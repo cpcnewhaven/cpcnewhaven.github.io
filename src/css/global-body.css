@@ -60,7 +60,10 @@ h4 {
     margin: 0px;
 }
 
-
+section h1,
+section h2 {
+    text-align: center;
+}
 
 
 .body-text {
@@ -784,6 +787,8 @@ p {
     position: relative;
     /* Position relative for overlay info */
     overflow: hidden;
+    width: 400px;
+    height: 300px;
     /* Hide overflow */
 }
 
@@ -1982,25 +1987,15 @@ p {
     /* Max width for better control on larger screens */
 }
 
-#gallery-container {
+#gallery-container, #wfb-gallery-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
     padding: 20px;
+    width: 100%;
 }
 
-.gallery-item {
-    width: 400px;
-    height: 200px;
-    object-fit: cover;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
-
-.gallery-item:hover {
-    transform: scale(1.05);
-}
 
 #lightbox {
     display: none;

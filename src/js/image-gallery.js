@@ -2,8 +2,11 @@ document.addEventListener('DOMContentLoaded', () => {
     fetch('./data/image-gallery.json')
         .then(response => response.json())
         .then(data => {
-            const galleryContainer = document.getElementById('gallery-container');
+            const mainGalleryContainer = document.getElementById('gallery-container');
+            const wfbGalleryContainer = document.getElementById('wfb-gallery-container');
+            
             localStorage.setItem('galleryImages', JSON.stringify(data.images));
+            
             data.images.forEach((image, index) => {
                 const galleryItem = document.createElement('div');
                 galleryItem.className = 'gallery-item';
@@ -11,8 +14,13 @@ document.addEventListener('DOMContentLoaded', () => {
                     <div class="image-container">
                         <img src="${image.url}" alt="${image.name}" onclick="openLightbox(${index})">
                     </div>
-                `; // Removed gallery-item-info div to eliminate captions
-                galleryContainer.appendChild(galleryItem);
+                `;
+                
+                if (image.tags.includes('womens fall brunch')) {
+                    wfbGalleryContainer.appendChild(galleryItem);
+                } else {
+                    mainGalleryContainer.appendChild(galleryItem);
+                }
             });
         })
         .catch(error => console.error('Error loading gallery:', error));

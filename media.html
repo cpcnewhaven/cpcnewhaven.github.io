@@ -37,34 +37,35 @@
         </div>
 
         <!-- Mobile Navigation -->
-        <div class="mobile-navigation" id="mobileNavigation">
-            <i id="closeMenuButton" class="fas fa-bars"></i>
-            <!-- Exit button -->
-            <img src="./assets/CPC_LOGO_24.png" id="mobile-menu-logo">
-            <a class="mobile-menu-link" href="index.html">Home</a>
-            <a class="mobile-menu-link" href="sundays.html">Sundays</a>
-            <a class="mobile-menu-link" href="about.html">About</a>
-            <a class="mobile-menu-link" href="podcasts.html">Podcasts</a>
-            <a class="mobile-menu-link" href="events.html">Events</a>
-            <a class="mobile-menu-link"
-                href="announcements.html">Announcements</a>
-            <a class="mobile-menu-link" href="community.html">Community</a>
-            <a class="mobile-menu-link" href="live.html">Live</a>
-            <a class="mobile-menu-link" href="resources.html">Resources</a>
-            <a class="mobile-menu-link" href="give.html">Give</a>
-        </div>
+        <nav class="mobile-navigation" id="mobileNavigation">
+            <div class="mobile-nav-header">
+                <button id="closeMenuButton" aria-label="Close menu">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <ul class="mobile-nav-links">
+                <li><a class="mobile-menu-link" href="index.html">Home</a></li>
+                <li><a class="mobile-menu-link" href="sundays.html">Sundays</a></li>
+                <li><a class="mobile-menu-link" href="about.html">About</a></li>
+                <li><a class="mobile-menu-link" href="podcasts.html">Podcasts</a></li>
+                <li><a class="mobile-menu-link" href="announcements.html">Announcements</a></li>
+                <li><a class="mobile-menu-link" href="community.html">Community</a></li>
+                <li><a class="mobile-menu-link" href="live.html">Live</a></li>
+                <li><a class="mobile-menu-link" href="resources.html">Resources</a></li>
+                <li><a class="mobile-menu-link" href="give.html">Give</a></li>
+            </ul>
+        </nav>
 
         <section>
             <h2>Media Gallery</h2>
-            <!-- Subheader added below -->
-            <p>Welcome to our community Media Gallery! This gallery showcases
-                moments from our church family. Feel free to browse through the
-                memories and get a glimpse of our community life.</p>
-            <p>If you have your own photos that you'd like to share, please
-                submit them to be included in our gallery. It's a great way to
-                keep our community connected and share the joy!</p>
+            <p style="padding:20px">Welcome to our community Media Gallery! This gallery showcases moments from our church family. Feel free to browse through the memories and get a glimpse of our community life.</p>
 
             <div id="gallery-container"></div>
+        </section>
+
+        <section>
+            <h2>Women's Fall Brunch 2024</h2>
+            <div id="wfb-gallery-container"></div>
         </section>
 
         <!-- Lightbox -->
@@ -72,6 +73,7 @@
             <span class="close-btn" onclick="closeLightbox()">&times;</span>
             <img id="lightbox-img" src alt="Lightbox Image">
         </div>
+            <p>If you have your own photos that you'd like to share, please submit them to be included in our gallery. It's a great way to keep our community connected and share the joy!</p>
 
         <section id="footer-cta-a" class="styled-section-a">
             <div class="form-container">
@@ -92,10 +94,20 @@
             </div>
         </section>
         <footer>
-            <a id="fixedlink" target="_blank" rel="nofollow noopener"
-                href="#">135 Whitney Ave - New Haven, CT | Sunday Worship
-                10:30am </a>
-        </footer>
+            <div class="footer-content-logo">
+              <a href="index.html">
+                <img src="./assets/CPC_LOGO_24.png" alt="CPC New Haven Church"
+                  class="top-splash-logo">
+              </a></div>
+            <p>Join us for worship and fellowship. <a href="sundays.html">Learn
+                more</a></p>
+      
+            <p>203.777.6960 | <a
+                href="mailto:admin@cpcnewhaven.org">admin@cpcnewhaven.org</a>
+              | 135 Whitney Ave. New Haven CT 06510</p>
+            <p>© 2024 Christ Presbyterian Church.</p>
+      
+          </footer>
 
         <script src="./src/js/function_toggle_mobileMenu.js"></script>
         <script src="./src/js/live-logic.js"></script>
