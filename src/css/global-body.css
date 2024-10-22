@@ -1975,16 +1975,10 @@ p {
 }
 
 .inner-page-section {
-    /* Light background for the section */
     padding: 10px;
-    /* Uniform padding */
     border-radius: 8px;
-    /* Rounded corners */
-    /* Subtle shadow for depth */
     margin: 20px auto;
-    /* Centering and spacing around the section */
     max-width: 960px;
-    /* Max width for better control on larger screens */
 }
 
 #gallery-container, #wfb-gallery-container {
