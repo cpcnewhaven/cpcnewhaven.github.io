@@ -27,7 +27,7 @@
         <title>Live - CPC New Haven Church</title>
         <link rel="stylesheet" href="./src/css/global-body.css">
         <link rel="stylesheet" href="./src/css/global-footer-cta.css">
-        <link rel="stylesheet" href="./src/css/footer.css">
+
         <link rel="icon"
             href="https://storage.googleapis.com/cpc-public-website/web-assets/CPC%20-%20FAVICON%20-%20FALL%202024.png"
             type="image/png">
@@ -123,8 +123,6 @@
             <!-- Main Content -->
             <div class="main-content">
 
-                <img src="./assets/websiteBG-podcasts/1.jpg"
-                    style="width: 100%; height: auto;">
 
                 <section id="podcast-sunday-sermon" class="inner-page-section"
                     style="margin-top:20px;">
@@ -171,8 +169,6 @@
                     style="margin-top:20px;">
                     <h1>Adult Sunday Studies</h1>
                     <h3>Walking with Jesus Thru Sinai</h3>
-                    <p>Join live recording on Sundays at 9:30am. New Episodes
-                        Dropped Every Friday.<p>
                             <br>
                             <table id="walking-podcast-table">
                                 <thead>
@@ -187,8 +183,8 @@
                                 </tbody>
                             </table>
                             <hr><br>
+                            <h1>Adult Sunday Studies</h1>
                             <h3>What We Believe</h3>
-                            <p>Previous Class From 2023</p>
                             <table id="wwb-sermon-table">
                                 <thead>
                                     <tr>
@@ -262,180 +258,9 @@
                 <p>© 2024 Christ Presbyterian Church.</p>
 
             </footer>
-            <!-- <script>
-document.addEventListener('DOMContentLoaded', function() {
-    const searchInput = document.getElementById('podcastSearchInput');
-    const searchResults = document.getElementById('searchResults');
-    const sundaySermonSection = document.getElementById('podcast-sunday-sermon');
-    let allPodcasts = [];
-
-    // Fetch all podcast data
-    Promise.all([
-        fetch('data/podcast/total-podcast.json').then(response => response.json()),
-        fetch('data/podcast/preAprilPodcast.csv').then(response => response.text()),
-        fetch('data/podcast/podcast-sunday-sermon.json').then(response => response.json()) // Fetch Sunday Sermon JSON
-    ])
-    .then(([totalPodcastData, preAprilPodcastCSV, sundaySermonData]) => {
-        allPodcasts = totalPodcastData;
-        
-        // Parse CSV data
-        Papa.parse(preAprilPodcastCSV, {
-            header: true,
-            complete: function(results) {
-                allPodcasts = allPodcasts.concat(results.data.map(episode => ({
-                    title: episode.Name,
-                    dateReleased: episode['Date Released'],
-                    bibleReference: episode['Bible Reference'],
-                    episodeLink: episode['Episode Link'],
-                    artwork: episode.Cover
-                })));
-                
-                // Set up search functionality
-                searchInput.addEventListener('input', performSearch);
-            }
-        });
-
-        // Display Sunday Sermon episodes
-        displaySundaySermonEpisodes(sundaySermonData);
-    })
-    .catch(error => console.error('Error loading podcast data:', error));
-
-    function performSearch() {
-        const query = searchInput.value.toLowerCase();
-        const results = allPodcasts.filter(podcast => 
-            podcast.title.toLowerCase().includes(query) ||
-            podcast.bibleReference.toLowerCase().includes(query)
-        );
-
-        displayResults(results);
-    }
-
-    function displayResults(results) {
-        searchResults.innerHTML = '';
-        results.slice(0, 5).forEach(podcast => {
-            const resultElement = document.createElement('div');
-            resultElement.classList.add('search-result');
-            resultElement.innerHTML = `
-                <strong>${podcast.title}</strong><br>
-                ${podcast.dateReleased} - ${podcast.bibleReference}
-            `;
-            resultElement.addEventListener('click', () => {
-                window.open(podcast.episodeLink, '_blank');
-            });
-            searchResults.appendChild(resultElement);
-        });
-    }
-
-    function displaySundaySermonEpisodes(episodes) {
-        episodes.forEach(episode => {
-            const iframe = document.createElement('iframe');
-            iframe.style.borderRadius = '12px';
-            iframe.src = episode.link;
-            iframe.width = '100%';
-            iframe.height = '352';
-            iframe.frameBorder = '0';
-            iframe.allowFullscreen = true;
-            iframe.allow = 'autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture';
-            iframe.loading = 'lazy';
-            sundaySermonSection.appendChild(iframe);
-            sundaySermonSection.appendChild(document.createElement('br'));
-        });
-    }
-});
-</script> -->
-
-            <!-- <script>
-document.addEventListener("DOMContentLoaded", function() {
-    const splashImageSection = document.getElementById('home-image');
-    const midImageSection = document.getElementById('mid-image');
-    const totalImages = 14; // Total number of images in the folder
-    
-    // Generate two unique random indices
-    let randomIndices = [];
-    while (randomIndices.length < 2) {
-        let randomIndex = Math.floor(Math.random() * totalImages) + 1;
-        if (!randomIndices.includes(randomIndex)) {
-            randomIndices.push(randomIndex);
-        }
-    }
-
-    const homeImageUrl = `./assets/websiteBG-podcasts/${randomIndices[0]}.png`;
-    const midImageUrl = `./assets/websiteBG-podcasts/${randomIndices[1]}.png`;
-
-    // Fetch and set the background image for home-image
-    fetch(homeImageUrl)
-        .then(response => {
-            if (response.ok) {
-                splashImageSection.style.backgroundImage = `url(${homeImageUrl})`;
-            } else {
-                console.error('Image not found:', homeImageUrl);
-            }
-        })
-        .catch(error => {
-            console.error('Error fetching the image:', error);
-        });
-
-    // Fetch and set the background image for mid-image
-    fetch(midImageUrl)
-        .then(response => {
-            if (response.ok) {
-                midImageSection.style.backgroundImage = `url(${midImageUrl})`;
-            } else {
-                console.error('Image not found:', midImageUrl);
-            }
-        })
-        .catch(error => {
-            console.error('Error fetching the image:', error);
-        });
-});
-</script> -->
-
-            <!-- script>
-/*
-document.addEventListener('DOMContentLoaded', function() {
-    const searchInput = document.getElementById('podcastSearchInput');
-    const searchResults = document.getElementById('searchResults');
-
-    searchInput.addEventListener('input', function() {
-        const searchTerm = searchInput.value.toLowerCase();
-        const podcastSections = document.querySelectorAll('.inner-page-section');
-        let results = [];
-
-        podcastSections.forEach(section => {
-            const sectionTitle = section.querySelector('h2').textContent.toLowerCase();
-            const episodes = section.querySelectorAll('iframe');
-
-            episodes.forEach(episode => {
-                const episodeTitle = episode.getAttribute('src').split('/').pop().split('?')[0];
-                if (episodeTitle.includes(searchTerm)) {
-                    results.push({ title: episodeTitle, link: episode.getAttribute('src') });
-                }
-            });
-        });
-
-        displaySearchResults(results);
-    });
-
-    function displaySearchResults(results) {
-        searchResults.innerHTML = '';
-
-        if (results.length > 0) {
-            searchResults.style.display = 'block';
-            results.forEach(result => {
-                const resultItem = document.createElement('div');
-                resultItem.classList.add('search-result-item');
-                resultItem.innerHTML = `<a href="${result.link}" target="_blank">${result.title}</a>`;
-                searchResults.appendChild(resultItem);
-            });
-        } else {
-            searchResults.style.display = 'none';
-        }
-    }
-});
-*/
 </script -->
             <script src="./src/js/function_toggle_mobileMenu.js"></script>
-            <!-- <script src="./src/js/fetch-podcast-adult.js"></script> -->
+      
             <script src="./src/js/podcast-fetch-sunday.js"></script>
         </body>
     </html>
