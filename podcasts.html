@@ -34,8 +34,55 @@
         <link rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
         <style>
+            /* Add responsive styles */
+            body {
+                margin: 0;
+                font-family: Arial, sans-serif;
+            }
 
-       </style>
+            .main-navigation, .mobile-navigation {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .main-navigation a, .mobile-nav-links a {
+                padding: 10px;
+                text-decoration: none;
+                color: #333;
+            }
+
+            .hamburger-menu-button-container {
+                display: none;
+            }
+
+            @media (max-width: 768px) {
+                .main-navigation {
+                    display: none;
+                }
+
+                .hamburger-menu-button-container {
+                    display: block;
+                    position: absolute;
+                    top: 10px;
+                    right: 10px;
+                }
+
+                .mobile-navigation {
+                    display: none;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    background-color: #fff;
+                    z-index: 1000;
+                }
+
+                .mobile-navigation.active {
+                    display: flex;
+                }
+            }
+        </style>
     </head>
     <body>
 
@@ -86,28 +133,8 @@
             </ul>
         </nav>
 
-        <div class="top-splash-welcome">
-            <h1>Podcasts</h1><div class="subscribe-icons-a">
-                <a
-                    href="https://open.spotify.com/show/22kjUJyC0VH3cMfCSe9kEk?si=843112804a664618"
-                    target="_blank"><i
-                        class="fab fa-spotify"></i></a>
-                <a href="your_apple_podcasts_link"
-                    target="_blank"><i
-                        class="fab fa-apple"></i></a>
-                <a href="https://www.youtube.com/@CPCNewHaven"
-                    target="_blank"><i
-                        class="fab fa-youtube"></i></a>
-            </div>
-        </div>
-        <div
-            style="background-color: rgb(255, 251, 0); width: 100%; padding: 10px; text-align: center;">
-            <p><span style="font-weight: bold;">Warning:</span> This feature is
-                in beta mode and may not work as expected -
-                to view the old podcast website please visit <a
-                    href="https://podcasts.cpcnewhaven.org"
-                    style="text-decoration: underline;">here</a></p>
-        </div>
+     
+        
         <div class="dashboard-container">
             <!-- Sidebar -->
             <div class="sidebar fixed-sidebar">
@@ -122,7 +149,19 @@
 
                 </ul>
                 <hr>
-             
+                <div class="subscribe-icons-a">
+                    <a
+                        href="https://open.spotify.com/show/22kjUJyC0VH3cMfCSe9kEk?si=843112804a664618"
+                        target="_blank"><i
+                            class="fab fa-spotify"></i></a>
+                    <a href="your_apple_podcasts_link"
+                        target="_blank"><i
+                            class="fab fa-apple"></i></a>
+                    <a href="https://www.youtube.com/@CPCNewHaven"
+                        target="_blank"><i
+                            class="fab fa-youtube"></i></a>
+                </div>
+            </div>
             </div>
 
             <!-- Main Content -->
@@ -208,28 +247,7 @@
                     </div>
                 </div>
            
-                <div id="footer-cta-a" class="styled-section-a">
-                    <div class="form-container">
-                        <h2>Subscribe to our Newsletter</h2>
-                        <p class="body-text">Stay Connected with the Latest and
-                            Greatest
-                            from
-                            CPC New Haven</p>
-                        <form action="https://formspree.io/f/meojowwg"
-                            method="POST"
-                            class="neumorphic-form">
-                            <input type="text" name="name"
-                                placeholder="Your name"
-                                required>
-                            <!-- Added name input -->
-                            <input type="email" name="email"
-                                placeholder="Your email"
-                                required>
-                            <button type="submit">Subscribe to CPC New
-                                Haven</button>
-                        </form>
-                    </div>
-                </div>
+            
             </div>
             <footer>
                 <div class="footer-content-logo">

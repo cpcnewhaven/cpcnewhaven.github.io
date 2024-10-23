@@ -801,7 +801,6 @@ p {
     width: 100%;
     /* Full width */
     height: 100%;
-    /* Full height */
     object-fit: cover;
     /* Cover the area without losing aspect ratio */
 }
@@ -1981,7 +1980,8 @@ p {
     max-width: 960px;
 }
 
-#gallery-container, #wfb-gallery-container {
+#gallery-container,
+#wfb-gallery-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -2268,4 +2268,51 @@ p {
 .ongoing-color {
     color: #52c41a;
     /* Use the color for ongoing events */
+}
+
+/* Add responsive styles for inner-page-section and sunday-sermon-table */
+@media (max-width: 600px) {
+    .inner-page-section {
+        padding: 10px;
+        margin: 10px auto;
+    }
+
+    #sunday-sermon-table {
+        font-size: 14px;
+        width: 100%;
+        border-collapse: collapse;
+        border: 2px solid #ccc;
+        /* Add a border around the entire table */
+    }
+
+    #sunday-sermon-table th,
+    #sunday-sermon-table td {
+        padding: 8px 5px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+        /* Add a border below each row */
+    }
+
+    #sunday-sermon-table th {
+        font-size: 15px;
+        border-bottom: 2px solid #bbb;
+        /* Thicker border for header */
+    }
+
+    #sunday-sermon-table td {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    #sunday-sermon-table tr {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    #sunday-sermon-table tr:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
 }
