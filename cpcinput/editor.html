@@ -5,22 +5,56 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>JSON Editor</title>
         <style>
-        body { font-family: Arial, sans-serif; margin: 20px; }
-        textarea { width: 100%; height: 400px; }
-        button { margin-top: 10px; }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: lightblue;
+            color: #ffffff;
+        }
+        input, button {
+            display: block;
+            margin-top: 10px;
+            padding: 10px;
+            width: 100%;
+            max-width: 400px;
+            border: none;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            color: #ffffff;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            transition: background 0.3s ease;
+        }
+        input:focus, button:hover {
+            background: rgba(255, 255, 255, 0.2);
+            outline: none;
+        }
+        button {
+            cursor: pointer;
+        }
     </style>
         <!-- Include FileSaver.js from CDN -->
         <script
             src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
     </head>
     <body>
-        <h1>JSON Editor</h1>
-        <textarea id="jsonData"></textarea><br>
+        <header style="text-align: center;">
+            <a href="../index.html"><img src="../assets/cpcLOGO.png" alt="Logo"
+                    style="max-height:100px; padding: 10px;"></a>
+        </header>
+        <h1>Dynamic Content Editor</h1>
+        <p>Announcements</p>
+        <input type="text" id="title" placeholder="Title">
+        <input type="text" id="description" placeholder="Description">
+        <input type="date" id="dateEntered" placeholder="Date Entered">
+        <input type="text" id="active" placeholder="Active">
+        <input type="text" id="type" placeholder="Type">
+        <input type="text" id="category" placeholder="Category">
+        <input type="text" id="tag" placeholder="Tag">
         <button onclick="loadJson()">Load JSON</button>
         <button onclick="saveJson()">Save JSON</button>
 
         <script>
-        // Sample JSON data (replace this with a fetch call if needed)
         const sampleJson = {
             "announcements": [
                 {
@@ -31,30 +65,43 @@
                     "type": "upcoming",
                     "category": "upcoming",
                     "tag": "ordination"
-                },
-                // ... other announcements ...
+                }
             ]
         };
 
         function loadJson() {
-            // Load the sample JSON data into the textarea
-            document.getElementById('jsonData').value = JSON.stringify(sampleJson, null, 2);
+            const announcement = sampleJson.announcements[0];
+            document.getElementById('title').value = announcement.title;
+            document.getElementById('description').value = announcement.description;
+            document.getElementById('dateEntered').value = announcement.dateEntered;
+            document.getElementById('active').value = announcement.active;
+            document.getElementById('type').value = announcement.type;
+            document.getElementById('category').value = announcement.category;
+            document.getElementById('tag').value = announcement.tag;
         }
 
         function saveJson() {
             try {
-                // Parse the JSON to ensure it's valid
-                const jsonData = JSON.parse(document.getElementById('jsonData').value);
+                const jsonData = {
+                    "announcements": [
+                        {
+                            "title": document.getElementById('title').value,
+                            "description": document.getElementById('description').value,
+                            "dateEntered": document.getElementById('dateEntered').value,
+                            "active": document.getElementById('active').value,
+                            "type": document.getElementById('type').value,
+                            "category": document.getElementById('category').value,
+                            "tag": document.getElementById('tag').value
+                        }
+                    ]
+                };
 
-                // Convert JSON to a Blob
                 const blob = new Blob([JSON.stringify(jsonData, null, 2)], { type: 'application/json' });
-
-                // Use FileSaver.js to save the file
                 saveAs(blob, 'highlights.json');
             } catch (e) {
-                alert('Invalid JSON format. Please correct it before saving.');
+                alert('Error saving JSON.');
             }
         }
-    </script>
+        </script>
     </body>
 </html>
