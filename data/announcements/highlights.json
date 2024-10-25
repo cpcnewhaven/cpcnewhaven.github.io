@@ -299,6 +299,26 @@
         "time": "After worship",
         "location": "CPC"
       }
+    },
+    {
+      "id": "2024-020",
+      "title": "Save the Dates",
+      "description": "<div style=\"text-align: center;\"><ul style=\"list-style-type: none; padding: 0;\"><li><strong>Fall Work Day & Christmas Decor:</strong> Sat. Dec. 7</li><li><strong>Christmas Lessons & Carols Service:</strong> Fri. Dec. 13</li></ul></div>",
+      "dateEntered": "2024-09-15",
+      "active": "true",
+      "type": "upcoming",
+      "category": "upcoming",
+      "tag": "events",
+      "dates": [
+        {
+          "event": "Fall Work Day & Christmas Decor",
+          "date": "December 7, 2024"
+        },
+        {
+          "event": "Christmas Lessons & Carols Service",
+          "date": "December 13, 2024"
+        }
+      ]
     }
   ]
 }
