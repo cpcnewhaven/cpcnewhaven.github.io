@@ -9,6 +9,28 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+.new-page-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 40px;
+}
+
+.big-image-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.big-image {
+    width: 100%;
+    max-width: 720px;
+    border-radius: 10px;
+    margin: 20px auto;
+}
+
 h1 {
     font-size: 36px !important;
 }
@@ -1375,19 +1397,15 @@ p {
 .full-width-container {
     width: 100vw;
     position: relative;
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
     max-width: 100%;
 }
 
 .full-width-image {
     width: 100%;
     height: auto;
-    max-width: 100%;
-    display: block;
-    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .splash-custom {
