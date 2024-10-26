@@ -1,29 +1,10 @@
-body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-}
-
-header {
-    background: #333;
-    color: #fff;
-    padding: 1rem 0;
-    text-align: center;
-}
-
 header a {
     color: #fff;
     text-decoration: none;
     margin: 0 1rem;
 }
 
-.hamburger-menu-button-container {
-    display: none;
-    /* Hide hamburger menu for brochure style */
-}
+
 
 section img {
     width: 100%;
@@ -40,10 +21,13 @@ section img {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.wwb-content h1,
+.wwb-content h1 {
+    text-align: center;
+}
+
 .wwb-content h2 {
     color: #333;
-    text-align: center;
+    text-align: left;
 }
 
 .wwb-content p,
@@ -60,48 +44,157 @@ section img {
     margin-bottom: 0.5rem;
 }
 
-footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1rem 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-
-#footer-cta-a {
-    background: #e2e2e2;
+#mission-trip-details {
+    background: #f9f9f9;
+    /* Light background for contrast */
     padding: 2rem;
-    text-align: center;
-    margin-top: 2rem;
+    border-radius: 8px;
+    /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for depth */
 }
 
-#footer-cta-a h2 {
+#mission-trip-details h2 {
+    color: #0056b3;
+    /* A more vibrant color for headings */
+    font-family: 'Georgia', serif;
+    /* Serif font for a classic look */
     margin-bottom: 1rem;
 }
 
-#footer-cta-a form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+#mission-trip-details p {
+    line-height: 1.6;
+    /* Improved readability */
+    color: #555;
+    /* Softer text color */
 }
 
-#footer-cta-a input,
-#footer-cta-a button {
-    margin: 0.5rem 0;
+#mission-trip-details ul {
+    list-style-type: none;
+    /* Remove default list styling */
+    padding-left: 0;
+}
+
+#mission-trip-details ul li {
+    background: #e0e0e0;
+    /* Background for list items */
+    margin-bottom: 0.5rem;
     padding: 0.5rem;
-    width: 80%;
-    max-width: 400px;
+    border-radius: 4px;
+    /* Rounded corners for list items */
 }
 
-#footer-cta-a button {
-    background: #333;
+#mission-trip-details .video-placeholder {
+    margin: 1rem 0;
+    text-align: center;
+    /* Center the video */
+}
+
+#mission-trip-details .big-button {
+    display: inline-block;
+    background: #0056b3;
+    /* Button color */
     color: #fff;
-    border: none;
-    cursor: pointer;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background 0.3s ease;
 }
 
-#footer-cta-a button:hover {
-    background: #555;
+#mission-trip-details .big-button:hover {
+    background: #004494;
+    /* Darker shade on hover */
+}
+
+#mission-next-steps {
+    background: #f9f9f9;
+    padding: 2rem;
+    border-radius: 8px;
+    /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for depth */
+    margin: 2rem auto;
+    max-width: 800px;
+}
+
+#mission-next-steps h2 {
+    color: #0056b3;
+    /* A more vibrant color for headings */
+    font-family: 'Georgia', serif;
+    /* Serif font for a classic look */
+    margin-bottom: 1rem;
+}
+
+#mission-next-steps ul {
+    list-style-type: none;
+    /* Remove default list styling */
+    padding-left: 0;
+}
+
+#mission-next-steps ul li {
+    background: #e0e0e0;
+    /* Background for list items */
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 4px;
+    /* Rounded corners for list items */
+    position: relative;
+    /* Position relative for absolute positioning of numbers */
+}
+
+#mission-next-steps ul li .step-number {
+    font-weight: bold;
+    color: #0056b3;
+    /* Color for step numbers */
+    margin-right: 0.5rem;
+}
+
+#mission-next-steps .video-placeholder {
+    margin: 1rem 0;
+    text-align: center;
+    /* Center the video */
+}
+
+#mission-next-steps .big-button {
+    display: inline-block;
+    background: #0056b3;
+    /* Button color */
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+#mission-next-steps .big-button:hover {
+    background: #004494;
+    /* Darker shade on hover */
+}
+
+.pastor-letter {
+    font-family: 'Georgia', serif;
+    /* Serif font for a classic look */
+    background: #f9f9f9;
+    /* Light background for contrast */
+    padding: 2rem;
+    border-radius: 8px;
+    /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for depth */
+    margin: 2rem auto;
+    max-width: 800px;
+    line-height: 1.6;
+    /* Improved readability */
+    color: #555;
+    /* Softer text color */
+}
+
+.pastor-letter p {
+    margin-bottom: 1rem;
+}
+
+.pastor-letter h2 {
+    color: #0056b3;
+    /* A more vibrant color for headings */
+    margin-bottom: 1rem;
 }
