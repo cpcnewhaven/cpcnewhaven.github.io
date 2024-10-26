@@ -9,6 +9,28 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+:root {
+    --primary-color: #0056b3;
+    /* Vibrant blue */
+    --secondary-color: #004494;
+    /* Darker shade of blue */
+    --background-color: #f9f9f9;
+    /* Light background for contrast */
+    --text-color: #555;
+    /* Softer text color */
+    --heading-color: #333;
+    /* Darker text color for headings */
+    --button-color: #0056b3;
+    /* Button color */
+    --button-hover-color: #004494;
+    /* Darker shade on hover */
+    --box-shadow-color: rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for depth */
+    --border-radius: 8px;
+    /* Rounded corners */
+}
+
+
 .new-page-header {
     width: 100%;
     display: flex;

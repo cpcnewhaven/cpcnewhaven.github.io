@@ -57,9 +57,9 @@ section img {
 #mission-trip-details h2 {
     color: #0056b3;
     /* A more vibrant color for headings */
-    font-family: 'Georgia', serif;
     /* Serif font for a classic look */
     margin-bottom: 1rem;
+    text-align: center;
 }
 
 #mission-trip-details p {
@@ -76,8 +76,6 @@ section img {
 }
 
 #mission-trip-details ul li {
-    background: #e0e0e0;
-    /* Background for list items */
     margin-bottom: 0.5rem;
     padding: 0.5rem;
     border-radius: 4px;
@@ -119,9 +117,6 @@ section img {
 
 #mission-next-steps h2 {
     color: #0056b3;
-    /* A more vibrant color for headings */
-    font-family: 'Georgia', serif;
-    /* Serif font for a classic look */
     margin-bottom: 1rem;
 }
 
@@ -132,7 +127,6 @@ section img {
 }
 
 #mission-next-steps ul li {
-    background: #e0e0e0;
     /* Background for list items */
     margin-bottom: 0.5rem;
     padding: 0.5rem;
