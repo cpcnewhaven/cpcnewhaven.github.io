@@ -235,7 +235,7 @@
     {
       "id": "2024-015",
       "title": "Summer Mission Trip Info Meeting",
-      "description": "Info meeting for the Summer Mission Trip to New City Fellowship, Atlantic City (Aug. 2-9, 2025)",
+      "description": "Info meeting for the Summer Mission Trip to New City Fellowship, Atlantic City (Aug. 2-9, 2025).<br><div style=\"text-align: center;\"><a href=\"2025-missions-trip.html\" class=\"big-button\">Learn More About the Mission Trip</a></div>",
       "dateEntered": "2024-09-15",
       "active": "true",
       "type": "upcoming",
@@ -286,7 +286,7 @@
     {
       "id": "2024-019",
       "title": "Summer Mission Trip",
-      "description": "Join us for a one-week mission trip to urban poor neighborhoods in Atlantic City, NJ with New City Fellowship. The trip will take place from Aug. 2-9, 2025. Our goal is to share the gospel, serve the poor, and grow in our love for Jesus and vision for missional living.",
+      "description": "Join us for a one-week mission trip to urban poor neighborhoods in Atlantic City, NJ with New City Fellowship. The trip will take place from Aug. 2-9, 2025. Our goal is to share the gospel, serve the poor, and grow in our love for Jesus and vision for missional living.<br><div style=\"text-align: center;\"><a href=\"2025-missions-trip.html\" class=\"big-button\">Learn More About the Mission Trip</a></div>",
       "dateEntered": "2024-09-15",
       "active": "true",
       "type": "ongoing",
@@ -298,7 +298,8 @@
         "date": "October 27, 2024",
         "time": "After worship",
         "location": "CPC"
-      }
+      },
+      "url": "2025-missions-trip.html"
     },
     {
       "id": "2024-020",
