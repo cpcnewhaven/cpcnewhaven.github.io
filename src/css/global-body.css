@@ -11,23 +11,14 @@ body {
 
 :root {
     --primary-color: #0056b3;
-    /* Vibrant blue */
     --secondary-color: #004494;
-    /* Darker shade of blue */
     --background-color: #f9f9f9;
-    /* Light background for contrast */
     --text-color: #555;
-    /* Softer text color */
     --heading-color: #333;
-    /* Darker text color for headings */
     --button-color: #0056b3;
-    /* Button color */
     --button-hover-color: #004494;
-    /* Darker shade on hover */
     --box-shadow-color: rgba(0, 0, 0, 0.1);
-    /* Subtle shadow for depth */
     --border-radius: 8px;
-    /* Rounded corners */
 }
 
 
@@ -404,6 +395,27 @@ a {
     /* Centered text */
     margin: 0;
     /* Remove default margin */
+}
+
+
+.welcome-header {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: var(--primary-color);
+    /* Use primary color */
+    border-radius: 5px;
+    border-style: none;
+    box-shadow: none;
+    width: 100%;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    /* Change text color to white for contrast */
+    margin: 0px;
+    padding: 0px;
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .top-splash-welcome h2 {

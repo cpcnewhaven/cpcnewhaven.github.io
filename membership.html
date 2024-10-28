@@ -27,38 +27,71 @@
         <link rel="icon"
             href="https://storage.googleapis.com/cpc-public-website/web-assets/CPC%20-%20FAVICON%20-%20FALL%202024.png"
             type="image/png">
-    </head>
-    <body>
-        <div id="give">
-            <a href="#">Give</a>
-        </div>
-        <header id="myHeader" class>
-            <a href="index.html">
-                <img id="logo" src="../assets/cpcLOGO.png" alt="CPC Logo"></a>
+    <style>
+        #membership-body {
+            background-color: rgba(0, 60, 109, 0.002);
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 800px;
+            border-radius: 5px;
+            border-style: none;
+            box-shadow: none;
+            line-height: 1.6;
+        }   
+    </style>
+        </head>
 
-            <nav>
-                <a href="lifegroup.html">Life Group</a>
-                <a href="about.html">about</a>
-                <a href="podcasts.html">Podcasts</a>
-                <a href="events.html">events</a>
-                <a href="announcements.html">announcements</a>
-                <a href="#connect">connect</a>
-                <a href="live.html">Live</a>
-                <button id="openmenu">
-                    <span></span>
-                    <span></span>
-                </button>
-            </nav>
+    <body id="membership-body">
+       
+        <nav class="main-navigation">
+            <a href="index.html">Home</a>
+            <a href="sundays.html">Sundays</a>
+            <a href="about.html">About</a>
+            <a href="podcasts.html">Podcasts</a>
+            <a href="announcements.html">Announcements</a>
+            <a href="community.html">Community</a>
+            <a href="live.html">Live</a>
+            <a href="resources.html">Resources</a>
+            <a href="give.html">Give</a>
+          </nav>
         </header>
-        <div id="page" class>
-            <section id="worship">
-                <h1>Membership</h1>
+    
+        <!-- MOBILE HAMBURGER-->
+        <div class="hamburger-menu-button-container" id="hamburgerMenu">
+          <i id="closeMobileMenuButton" class="fas fa-bars"></i>
+        </div>
+    
+        <!-- Mobile Navigation -->
+        <nav class="mobile-navigation" id="mobileNavigation">
+          <div class="mobile-nav-header">
+            <button id="closeMenuButton" aria-label="Close menu">
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+          <ul class="mobile-nav-links">
+            <li><a class="mobile-menu-link" href="index.html">Home</a></li>
+            <li><a class="mobile-menu-link" href="sundays.html">Sundays</a></li>
+            <li><a class="mobile-menu-link" href="about.html">About</a></li>
+            <li><a class="mobile-menu-link" href="podcasts.html">Podcasts</a></li>
+    
+            <li>
+              <a class="mobile-menu-link"
+                href="announcements.html">Announcements</a>
+            </li>
+            <li><a class="mobile-menu-link" href="community.html">Community</a></li>
+            <li><a class="mobile-menu-link" href="live.html">Live</a></li>
+            <li><a class="mobile-menu-link" href="resources.html">Resources</a></li>
+            <li><a class="mobile-menu-link" href="give.html">Give</a></li>
+          </ul>
+        </nav>
+    
 
+            <section class="welcome-header"id="membership-header">
+                <h1>Church Membership</h1>
             </section>
            
-
             <section id="church-membership">
-                <h2>Church Membership</h2>
+       
                 <p>Throughout history, special relationships have been set apart
                     by the taking of vows. What exactly is a vow? A vow is a
                     “confession” regarding the meaning of ones participation in
@@ -110,95 +143,11 @@
                 <p>Contact us for more information on becoming a member at
                     CPC.</p>
                 <p>For more read Good News of Church Membership</p>
-                <!-- Add the rest of the content here -->
-            </section>
+                    <!-- Add the rest of the content here -->
+                </section>
 
-            <!--
-            <style>
-                 #about-section p {
-        color: rgb(255, 255, 255);
-        font-size: clamp(1.2rem, 2.5vw, 1.8rem);
-        line-height: 1.6;
-        font-family: Arial, sans-serif;
-    }
-
-    #about-section p::first-line {
-        font-size: 2em;
-        float: left;
-        padding-right: 0.1em;
-        font-weight: bold;
-    }
-
-    #about-driving-directions img {
-        width:100px;
-        height:auto;
-    }
-            </style>
-            -->
-
-            <section id="about-driving-directions">
-                <div id="about-driving-directions">
-                    <img src="./assets/cpcLOGO.png">
-                    <h2>Directions and Time</h2>
-                    <p>(Map)</p>
-                    <p>135 Whitney Avenue</p>
-                    <p>New Haven, CT 06510</p>
-                    <p>We are located next to the Yale School of Management, at
-                        the corner of Whitney Ave. and Bradley St.</p>
-                    <p>Sunday Morning Worship: We hold one service with
-                        communion at 10:30am. If you are unable to attend
-                        in-person, join us live online <a
-                            href="live.html">here</a>.</p>
-                </div>
-            </section>
-
-        </div>
-
-        <a id="fixedlink" target="_blank" rel="nofollow noopener" href="#">135
-            Whitney Ave - New Haven, CT | Sunday Worship 10:30am </a>
-        <script>
-        document.addEventListener('DOMContentLoaded', function() {
-    var header = document.getElementById('myHeader');
-	  var page = document.getElementById('page');
-    var openMenuButton = document.getElementById('openmenu');
-
-    window.addEventListener('scroll', function() {
-				page.classList.remove('menuopen');
-        if (window.scrollY >= 100) {
-            header.classList.add('sticky');
-        } else {
-            header.classList.remove('sticky');
-        }
-    });
-
-    // Event listener to remove the sticky class when the button is clicked
-    openMenuButton.addEventListener('click', function() {
-        header.classList.remove('sticky');
-				page.classList.add('menuopen');
-    });
-	
-	var links = document.querySelectorAll('a[href^="#"]');
-
-    links.forEach(function(link) {
-        link.addEventListener('click', function(event) {
-            // Prevent the default action
-            event.preventDefault();
-
-            // Get the target element
-            var targetId = this.getAttribute('href');
-            var targetElement = document.querySelector(targetId);
-
-            // Smooth scroll to target
-            if (targetElement) {
-                targetElement.scrollIntoView({
-                    behavior: 'smooth'
-                });
-            }
-        });
-    });
-});
-
-    </script>
-
+            
+                <script src="./src/js/populate-navigation.js"></script>
+                <script src="./src/js/function_toggle_mobileMenu.js"></script>
     </body>
 </html>
