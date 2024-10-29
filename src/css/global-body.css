@@ -1325,22 +1325,6 @@ p {
     color: rgb(0, 0, 0);
 }
 
-/* @media (max-width: 700px) {
-    .main-navigation {
-        display: none;
-    }
-} */
-
-/* .mobile-navigation a:hover {
-        background-color: black !important;
-        color: white;
-    }
-
-
-
-    .mobile-navigation button:hover {
-        background-color: black;
-    } */
 
 .form-container {
     display: flex;
@@ -1866,25 +1850,20 @@ p {
     color: #007bff;
 }
 
-/* Responsive adjustments for mobile devices */
 @media (max-width: 600px) {
 
     .podcast-table th,
     .podcast-table td {
         padding: 8px 5px;
-        /* Smaller padding for space efficiency */
         font-size: 14px;
-        /* Smaller font size for better fit */
     }
 
     .podcast-table th {
         font-size: 15px;
-        /* Slightly larger font size for headers */
     }
 
     .podcast-table {
         font-size: 14px;
-        /* Adjust base font size for the entire table */
     }
 }
 
@@ -2322,52 +2301,6 @@ p {
     /* Use the color for ongoing events */
 }
 
-/* Add responsive styles for inner-page-section and sunday-sermon-table */
-@media (max-width: 600px) {
-    .inner-page-section {
-        padding: 10px;
-        margin: 10px auto;
-    }
-
-    #sunday-sermon-table {
-        font-size: 14px;
-        width: 100%;
-        border-collapse: collapse;
-        border: 2px solid #ccc;
-        /* Add a border around the entire table */
-    }
-
-    #sunday-sermon-table th,
-    #sunday-sermon-table td {
-        padding: 8px 5px;
-        text-align: left;
-        border-bottom: 1px solid #ddd;
-        /* Add a border below each row */
-    }
-
-    #sunday-sermon-table th {
-        font-size: 15px;
-        border-bottom: 2px solid #bbb;
-        /* Thicker border for header */
-    }
-
-    #sunday-sermon-table td {
-        display: block;
-        width: 100%;
-        box-sizing: border-box;
-    }
-
-    #sunday-sermon-table tr {
-        display: block;
-        margin-bottom: 10px;
-    }
-
-    #sunday-sermon-table tr:after {
-        content: "";
-        display: table;
-        clear: both;
-    }
-}
 
 
 .map-container {
