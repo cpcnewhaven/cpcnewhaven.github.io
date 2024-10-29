@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <link rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
         <!-- Google tag (gtag.js) -->
         <script async
@@ -33,107 +31,52 @@
             type="image/png">
         <link rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-        <style>
-            /* Add responsive styles */
-            body {
-                margin: 0;
-                font-family: Arial, sans-serif;
-            }
-
-            .main-navigation, .mobile-navigation {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .main-navigation a, .mobile-nav-links a {
-                padding: 10px;
-                text-decoration: none;
-                color: #333;
-            }
-
-            .hamburger-menu-button-container {
-                display: none;
-            }
-
-            @media (max-width: 768px) {
-                .main-navigation {
-                    display: none;
-                }
-
-                .hamburger-menu-button-container {
-                    display: block;
-                    position: absolute;
-                    top: 10px;
-                    right: 10px;
-                }
-
-                .mobile-navigation {
-                    display: none;
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    background-color: #fff;
-                    z-index: 1000;
-                }
-
-                .mobile-navigation.active {
-                    display: flex;
-                }
-            }
-        </style>
-    </head>
+       
     <body>
 
         <header id="stickyHeader" class="sticky">
             <nav class="main-navigation">
-                <a href="index.html">Home</a>
-                <a href="sundays.html">Sundays</a>
-                <a href="about.html">About</a>
-                <a href="podcasts.html">Podcasts</a>
-                <a href="announcements.html">Announcements</a>
-                <a href="community.html">Community</a>
-                <a href="live.html">Live</a>
-                <a href="resources.html">Resources</a>
-                <a href="give.html">Give</a>
+              <a href="index.html">Home</a>
+              <a href="sundays.html">Sundays</a>
+              <a href="about.html">About</a>
+              <a href="podcasts.html">Podcasts</a>
+              <a href="announcements.html">Announcements</a>
+              <a href="community.html">Community</a>
+              <a href="live.html">Live</a>
+              <a href="resources.html">Resources</a>
+              <a href="give.html">Give</a>
             </nav>
-        </header>
-
-        <!-- MOBILE HAMBURGER-->
-        <div class="hamburger-menu-button-container" id="hamburgerMenu">
+          </header>
+      
+          <!-- MOBILE HAMBURGER-->
+          <div class="hamburger-menu-button-container" id="hamburgerMenu">
             <i id="closeMobileMenuButton" class="fas fa-bars"></i>
-        </div>
-
-        <!-- Mobile Navigation -->
-        <nav class="mobile-navigation" id="mobileNavigation">
+          </div>
+      
+          <!-- Mobile Navigation -->
+          <nav class="mobile-navigation" id="mobileNavigation">
             <div class="mobile-nav-header">
-                <button id="closeMenuButton" aria-label="Close menu">
-                    <i class="fas fa-times"></i>
-                </button>
+              <button id="closeMenuButton" aria-label="Close menu">
+                <i class="fas fa-times"></i>
+              </button>
             </div>
             <ul class="mobile-nav-links">
-                <li><a class="mobile-menu-link" href="index.html">Home</a></li>
-                <li><a class="mobile-menu-link"
-                        href="sundays.html">Sundays</a></li>
-                <li><a class="mobile-menu-link" href="about.html">About</a></li>
-                <li><a class="mobile-menu-link"
-                        href="podcasts.html">Podcasts</a></li>
-
-                <li>
-                    <a class="mobile-menu-link"
-                        href="announcements.html">Announcements</a>
-                </li>
-                <li><a class="mobile-menu-link"
-                        href="community.html">Community</a></li>
-                <li><a class="mobile-menu-link" href="live.html">Live</a></li>
-                <li><a class="mobile-menu-link"
-                        href="resources.html">Resources</a></li>
-                <li><a class="mobile-menu-link" href="give.html">Give</a></li>
+              <li><a class="mobile-menu-link" href="index.html">Home</a></li>
+              <li><a class="mobile-menu-link" href="sundays.html">Sundays</a></li>
+              <li><a class="mobile-menu-link" href="about.html">About</a></li>
+              <li><a class="mobile-menu-link" href="podcasts.html">Podcasts</a></li>
+      
+              <li>
+                <a class="mobile-menu-link"
+                  href="announcements.html">Announcements</a>
+              </li>
+              <li><a class="mobile-menu-link" href="community.html">Community</a></li>
+              <li><a class="mobile-menu-link" href="live.html">Live</a></li>
+              <li><a class="mobile-menu-link" href="resources.html">Resources</a></li>
+              <li><a class="mobile-menu-link" href="give.html">Give</a></li>
             </ul>
-        </nav>
-
-     
+          </nav>
+      
         
         <div class="dashboard-container">
             <!-- Sidebar -->
@@ -166,8 +109,7 @@
 
             <!-- Main Content -->
             <div class="main-content">
-          
-
+        
                 <section id="podcast-sunday-sermon" class="inner-page-section"
                     style="margin-top:20px;">
                     <h1>The Sunday Sermon</h1>
