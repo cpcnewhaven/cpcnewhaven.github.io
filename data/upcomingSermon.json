@@ -227,6 +227,21 @@
     "apple_podcasts_url": "",
     "bulletin_url": "",
     "podcast-thumbnail_url": "https://storage.googleapis.com/cpc-public-website/podcast-thumbnails/10.20.24%20-%20CPC.jpg",
+    "status": "past"
+  },
+  {
+    "id": "19",
+    "title": "The Awful & Benevolent Grace of God",
+    "author": "Rev. Jerry Ornelas",
+    "scripture": "Exodus 17:1-16",
+    "date": "2024-10-27",
+    "active": true,
+    "sermon-preview_url": "",
+    "youtube_url": "",
+    "spotify_url": "https://open.spotify.com/episode/0qlFD5VsIIKVLBPGtgFER6?si=878b0725fb8649e5",
+    "apple_podcasts_url": "",
+    "bulletin_url": "",
+    "podcast-thumbnail_url": "https://storage.googleapis.com/cpc-public-website/podcast-thumbnails/10.27.24%20-%20CPC.jpg",
     "status": "present"
-  }
+}
 ]
