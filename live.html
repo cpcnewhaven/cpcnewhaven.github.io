@@ -81,7 +81,7 @@
         <section id="youtube-feed">
             <a href="https://youtube.com/c/cpcnewhaven">
                 <img src="./assets/CPC_YOUTUBE_DEFAULT.jpg" alt="Live Banner"
-                    style="width: 100%; height: auto;">
+                style="width: 80%; height: auto; display: block; margin: 0 auto;">
             </a>
             <!--
             <div class="center-content" style="margin-top: 20px;">
@@ -124,82 +124,19 @@
 
         </div>
 
-        <br>
-        <!--
-        <section>
-            <h2
-                style="text-align: center; padding-top: 20px; padding-bottom: 20px;">Sermon
-                Preview</h2>
-            <div class="center-content" style="margin-top: 20px;">
-                <iframe width="560" height="315"
-                    src="https://www.youtube.com/embed/2zCt2oWAXMI?si=yrpQJLHfdbIQu-UA"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin"
-                    allowfullscreen></iframe>
-            </div>
-        </section>
-        <br>
-        <section class="center-content" style="margin-top: 20px;">
-            <h2>Congregational Meeting - 9.15.24</h2>
-            <br>
-            <iframe width="560" height="315"
-                src="https://www.youtube.com/embed/42PJcumqR7A?si=Gi0UOjdgHQRRyPF6"
-                title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen></iframe>
-            <br>
-            <button
-                onclick="window.open('https://storage.googleapis.com/cpc-public-website/handouts/09_2024%20Congregational%20Meeting%20Slides.pptx%20(1).pdf', '_blank')">Download
-                Slides</button>
-        </section>
-        -->
-
+      
         <section>
 
             <div class="center-content" style="margin-top: 20px;">
             </div>
 
-            <script>
-                document.getElementById('download-bulletin').addEventListener('click', function() {
-                    fetch('data/latestBulletin.json')
-                        .then(response => response.json())
-                        .then(data => {
-                            if (data && data.bulletin_url) {
-                                window.location.href = data.bulletin_url;
-                            } else {
-                                alert('Bulletin not available at the moment.');
-                            }
-                        })
-                        .catch(error => console.error('Error fetching bulletin data:', error));
-                });
-            </script>
+          
             <p class="body-text center"><span>Note:</span> This page updates and
                 shows the live feed every Sunday at 10:30am </p>
 
       
             <hr>
-            <!-- <section>
-                <h2
-                    style="text-align: center; padding-top: 20px; padding-bottom: 20px;">Follow
-                    Us on Social Media</h2>
-                <p style="color: #555; font-size: 18px;">Stay connected and
-                    up-to-date with our latest news and events.</p>
-                <div class="social-links-horizontal">
-                    <a href="https://www.instagram.com/cpcnewhaven/"
-                        target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.facebook.com" target="_blank"><i
-                            class="fab fa-facebook-f"></i></a>
-                    <a href="https://www.youtube.com/@CPCNewHaven"
-                        target="_blank"><i class="fab fa-youtube"></i></a>
-                    <a
-                        href="https://open.spotify.com/show/22kjUJyC0VH3cMfCSe9kEk?si=03179c2d72e44829"
-                        target="_blank"><i class="fab fa-spotify"></i></a>
-                    <a
-                        href="https://podcasts.apple.com/us/podcast/cpc-new-haven-podcasts/id1553483670"
-                        target="_blank"><i class="fab fa-apple"></i></a>
-                </section> -->
+       
                 <hr>
                 <section id="footer-cta-a" class="styled-section-a">
                     <div class="form-container">

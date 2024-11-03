@@ -25,11 +25,22 @@ document.addEventListener('DOMContentLoaded', function() {
                     highlightElement.classList.add('upcoming');
                 }
 
+                // Handle featured image if available
+                if (announcement.featuredIMG) {
+                    const featuredImage = document.createElement('img');
+                    featuredImage.src = announcement.featuredIMG;
+                    featuredImage.classList.add('featured-image');
+                    featuredImage.style.width = '100%';
+                    featuredImage.style.height = '350px';
+                    featuredImage.style.objectFit = 'cover';
+                    featuredImage.style.marginBottom = '1rem';
+                    highlightElement.insertBefore(featuredImage, highlightElement.firstChild);
+                }
                 // Set background image if available
-                if (announcement.backgroundIMG) {
-                    highlightElement.style.backgroundImage = `url(${announcement.backgroundIMG})`;
+                else if (announcement.backgroundIMG) {
+                    highlightElement.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${announcement.backgroundIMG})`;
                     highlightElement.style.backgroundSize = 'cover';
-                    highlightElement.style.color = '#fff'; // Change text color for better visibility on image
+                    highlightElement.style.color = '#fff';
                 }
 
                 const titleElement = document.createElement('h2');
