@@ -153,13 +153,15 @@
     },
     {
       "id": "2024-006",
+      "featuredIMG": "https://storage.googleapis.com/cpc-public-website/podcast-thumbnails/walking/WALKING%20GRAPHIC%20_%20HOMEPAGE.jpg",
       "title": "Adult Sunday Studies - Walking with Jesus Thru Sinai",
       "description": "We need moral clarity in this age of chaos! What is the good life? How should I treat my neighbor? What does the Bible say about social justice, adultery, covetousness, or slander? Does the Sabbath matter anymore? To answer these questions and more, this year we're \"Walking with Jesus Thru Sinai.\" More than a badge to prove our self-righteousness or a burden to leave us in guilt, the 10 Commandments are summaries of what a flourishing life before God is meant to look like. It shows us how we are made and how we ought to live. This class will be an opportunity to discuss all sorts of crucial issues, from idolatry and worship to moral virtues and political beliefs. Grounded in the grace of Christ, the law becomes a beautiful vision for all our lives. All are welcome! We meet in the Fellowship Hall.",
       "dateEntered": "2024-09-01",
       "active": "true",
       "type": "ongoing",
       "category": "ongoing",
-      "tag": "adultsundayschool"
+      "tag": "adultsundayschool",
+      "url-link": "https://cpcnewhaven.org/adult-sunday-school.html"
     },
     {
       "id": "2024-007",

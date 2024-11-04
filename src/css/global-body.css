@@ -2339,3 +2339,19 @@ p {
 .big-button:hover {
     background-color: #0056b3;
 }
+
+
+.mission-statement {
+    font-family: 'Times New Roman', Times, serif; /* Classic serif font for a scholarly look */
+    font-size: 1.3em; /* Slightly larger font size for emphasis */
+    line-height: 1.8; /* More space between lines for readability */
+    color: #2c2c2c; /* Slightly darker text color for contrast */
+    background-color: #f5f5f5; /* Softer background color */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    padding-bottom: 20px;
+}
+
+.mission-statement p {
+    padding: 12px; /* Increase padding for a more spacious look */
+    font-style: italic; /* Italicize text for a more formal appearance */
+}
