@@ -271,6 +271,17 @@
                 "spotify_url": "https://open.spotify.com/episode/0qlFD5VsIIKVLBPGtgFER6?si=878b0725fb8649e5",
                 "podcast-thumbnail_url": "https://storage.googleapis.com/cpc-public-website/podcast-thumbnails/10.27.24%20-%20CPC.jpg",
                 "youtube_url": "" 
+            },
+            {
+                "id": "24-11-04",
+                "title": "The Grace of Systems: How God Institutes Justice and Love Among His People",
+                "author": "Rev. Craig Luekens",
+                "scripture": "Exodus 18:1-27",
+                "date": "2024-11-04",
+                "apple_podcasts_url": "",
+                "spotify_url": "https://open.spotify.com/episode/0vkXcaX1weeaNzrTs9uQ7A?si=d225ff668b3d478f",
+                "podcast-thumbnail_url": "",
+                "youtube_url": ""
             }
         ]
     },
@@ -335,6 +346,14 @@
                 "date_added": "2024-10-22",
                 "season": "fall 2024",
                 "podcast-thumbnail_url": "https://storage.googleapis.com/cpc-public-website/podcast-thumbnails/beyond/Beyond%20-%2010-22-24.jpg"
+            },
+            {
+                "number": 20,
+                "title": "Beyond the Sunday Sermon - The Awful & Benevolent Grace of God",
+                "link": "https://open.spotify.com/episode/1ZMbwD93JcHmpMMby1nJeU?si=058314a953dd4b7b",
+                "guest": "Seth Bollinger",
+                "date_added": "2024-10-30",
+                "season": "fall 2024"
             }
         ]
     },
