@@ -44,64 +44,50 @@
         </header>
         <h1>Dynamic Content Editor</h1>
         <p>Announcements</p>
-        <input type="text" id="title" placeholder="Title">
-        <input type="text" id="description" placeholder="Description">
-        <input type="date" id="dateEntered" placeholder="Date Entered">
-        <input type="text" id="active" placeholder="Active">
-        <input type="text" id="type" placeholder="Type">
-        <input type="text" id="category" placeholder="Category">
-        <input type="text" id="tag" placeholder="Tag">
+        <select id="jsonSource">
+            <option value="highlights">Highlights</option>
+            <option value="banner">Banner Content</option>
+            <option value="imageGallery">Image Gallery</option>
+            <option value="podcastIndex">Podcast Index</option>
+        </select>
         <button onclick="loadJson()">Load JSON</button>
+        <div id="jsonPreview"
+            style="white-space: pre-wrap; background: #f0f0f0; padding: 10px; margin-top: 10px;"></div>
         <button onclick="saveJson()">Save JSON</button>
 
         <script>
-        const sampleJson = {
-            "announcements": [
-                {
-                    "title": "NEXT SUNDAY-ELDER ORDINATION",
-                    "description": "We are grateful for God’s provision...",
-                    "dateEntered": "2024-04-14",
-                    "active": "false",
-                    "type": "upcoming",
-                    "category": "upcoming",
-                    "tag": "ordination"
-                }
-            ]
+        const urls = {
+            highlights: "https://storage.googleapis.com/cpc-public-website/dynamic-json/highlights.json",
+            banner: "https://storage.googleapis.com/cpc-public-website/dynamic-json/banner-content.json",
+            imageGallery: "https://storage.googleapis.com/cpc-public-website/dynamic-json/image-gallery.json",
+            podcastIndex: "https://storage.googleapis.com/cpc-public-website/dynamic-json/podcast-index.json"
         };
 
         function loadJson() {
-            const announcement = sampleJson.announcements[0];
-            document.getElementById('title').value = announcement.title;
-            document.getElementById('description').value = announcement.description;
-            document.getElementById('dateEntered').value = announcement.dateEntered;
-            document.getElementById('active').value = announcement.active;
-            document.getElementById('type').value = announcement.type;
-            document.getElementById('category').value = announcement.category;
-            document.getElementById('tag').value = announcement.tag;
+            const selectedSource = document.getElementById('jsonSource').value;
+            fetch(urls[selectedSource])
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('jsonPreview').textContent = JSON.stringify(data, null, 2);
+                    // Populate fields based on JSON structure
+                    // Example: document.getElementById('title').value = data.announcements[0].title;
+                })
+                .catch(error => alert('Error loading JSON: ' + error));
         }
 
         function saveJson() {
             try {
-                const jsonData = {
-                    "announcements": [
-                        {
-                            "title": document.getElementById('title').value,
-                            "description": document.getElementById('description').value,
-                            "dateEntered": document.getElementById('dateEntered').value,
-                            "active": document.getElementById('active').value,
-                            "type": document.getElementById('type').value,
-                            "category": document.getElementById('category').value,
-                            "tag": document.getElementById('tag').value
-                        }
-                    ]
-                };
-
+                const jsonData = JSON.parse(document.getElementById('jsonPreview').textContent);
                 const blob = new Blob([JSON.stringify(jsonData, null, 2)], { type: 'application/json' });
-                saveAs(blob, 'highlights.json');
+                saveAs(blob, 'updated.json');
             } catch (e) {
                 alert('Error saving JSON.');
             }
         }
         </script>
+        <p>Instructions: Select a JSON source from the dropdown and click
+            "Load JSON" to view its content. You can edit the JSON directly in
+            the preview area. Click "Save JSON" to download the updated
+            file.</p>
     </body>
 </html>
