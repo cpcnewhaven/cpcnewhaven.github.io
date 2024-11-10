@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         <td>${sermon.title}</td>
                         ${isBeyond ? `<td>${sermon.guest}</td>` : isWWB ? '' : `<td>${sermon.author}</td>`}
                         ${isBeyond || isWWB ? '' : `<td>${sermon.scripture}</td>`}
-                        <td><a href="${sermon.link}" target="_blank">Listen</a></td>  
+                        <td><a href="${sermon.audio_url || sermon.link}" target="_blank">Listen</a></td>  
                     `;
                     tableBody.appendChild(row);
                 });
