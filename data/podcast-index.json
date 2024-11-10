@@ -197,6 +197,7 @@
                 "date": "2024-09-09",
                 "apple_podcasts_url": "https://podcasts.apple.com/us/podcast/cpc-new-haven-podcasts/id1553483670?i=1000668208959",
                 "spotify_url": "https://open.spotify.com/episode/0AcgGm5v3r5zEmSxV9xC3C?si=5f2ac3f1996f4d2f",
+                "link": "https://open.spotify.com/episode/0AcgGm5v3r5zEmSxV9xC3C?si=5f2ac3f1996f4d2f",
                 "podcast-thumbnail_url": "https://storage.googleapis.com/cpc-public-website/podcast-thumbnails/9.08.24%20-%20CPC.jpg"
             },
             {
@@ -207,6 +208,7 @@
                 "date": "2024-09-16",
                 "apple_podcasts_url": "https://podcasts.apple.com/us/podcast/cpc-new-haven-podcasts/id1553483670?i=1000668208959",
                 "spotify_url": "https://open.spotify.com/episode/7ay2UXASJNp2lrWmZ8y6t3?si=60ddcda1670f4e08",
+                "link": "https://open.spotify.com/episode/7ay2UXASJNp2lrWmZ8y6t3?si=60ddcda1670f4e08",
                 "podcast-thumbnail_url": "https://storage.googleapis.com/cpc-public-website/podcast-thumbnails/9.15.24%20-%20CPC.jpg"
             },
             {
@@ -217,6 +219,7 @@
                 "date": "2024-09-23",
                 "apple_podcasts_url": "",
                 "spotify_url": "https://open.spotify.com/episode/77UI0SLLqlovK0h3iHnG4L?si=1b55f82efe524261",
+                "link": "https://open.spotify.com/episode/77UI0SLLqlovK0h3iHnG4L?si=1b55f82efe524261",
                 "podcast-thumbnail_url": "https://storage.googleapis.com/cpc-public-website/podcast-thumbnails/9.22.24%20-%20CPC.jpg"
             },
             {
@@ -227,6 +230,7 @@
                 "date": "2024-09-29",
                 "apple_podcasts_url": "",
                 "spotify_url": "",
+                "link": "",
                 "podcast-thumbnail_url": "https://storage.googleapis.com/cpc-public-website/podcast-thumbnails/sundaySermons/9.29.24%20-%20CPC.jpg"
             },
             {
@@ -237,6 +241,7 @@
                 "date": "2024-10-06",
                 "apple_podcasts_url": "",
                 "spotify_url": "https://open.spotify.com/episode/0lsR0eKSFJp4h4siejFxNi?si=012ef44f81c94724",
+                "link": "https://open.spotify.com/episode/0lsR0eKSFJp4h4siejFxNi?si=012ef44f81c94724",
                 "podcast-thumbnail_url": "https://storage.googleapis.com/cpc-public-website/podcast-thumbnails/sundaySermons/10.06.24%20-%20CPC.jpg"
             },
             {
@@ -247,6 +252,7 @@
                 "date": "2024-10-13",
                 "apple_podcasts_url": "",
                 "spotify_url": "https://www.youtube.com/watch?v=ePL1UnX5DTE",
+                "link": "https://www.youtube.com/watch?v=ePL1UnX5DTE",
                 "podcast-thumbnail_url": "https://storage.googleapis.com/cpc-public-website/podcast-thumbnails/10.14.24%20-%20CPC.jpg",
                 "youtube_url": "https://www.youtube.com/watch?v=ePL1UnX5DTE"
             },
@@ -258,6 +264,7 @@
                 "date": "2024-10-21",
                 "apple_podcasts_url": "",
                 "spotify_url": "https://open.spotify.com/episode/0z6LV0QuWAUKXPKmQXr1AD?si=479f91b762244aaf",
+                "link": "https://open.spotify.com/episode/0z6LV0QuWAUKXPKmQXr1AD?si=479f91b762244aaf",
                 "podcast-thumbnail_url": "https://storage.googleapis.com/cpc-public-website/podcast-thumbnails/10.20.24%20-%20CPC.jpg",
                 "youtube_url": "https://www.youtube.com/watch?v=G-fGX6lrbyA"
             },
@@ -269,6 +276,7 @@
                 "date": "2024-10-27",
                 "apple_podcasts_url": "",
                 "spotify_url": "https://open.spotify.com/episode/0qlFD5VsIIKVLBPGtgFER6?si=878b0725fb8649e5",
+                "link": "https://open.spotify.com/episode/0qlFD5VsIIKVLBPGtgFER6?si=878b0725fb8649e5",
                 "podcast-thumbnail_url": "https://storage.googleapis.com/cpc-public-website/podcast-thumbnails/10.27.24%20-%20CPC.jpg",
                 "youtube_url": "" 
             },
@@ -280,6 +288,7 @@
                 "date": "2024-11-04",
                 "apple_podcasts_url": "",
                 "spotify_url": "https://open.spotify.com/episode/0vkXcaX1weeaNzrTs9uQ7A?si=d225ff668b3d478f",
+                "link": "https://open.spotify.com/episode/0vkXcaX1weeaNzrTs9uQ7A?si=d225ff668b3d478f",
                 "podcast-thumbnail_url": "",
                 "youtube_url": ""
             }
