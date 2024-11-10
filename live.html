@@ -20,13 +20,14 @@
         <meta name="author" content="CPC New Haven Church">
         <title>Live Worship Services and Events - CPC New Haven Church</title>
         <link rel="stylesheet" href="./src/css/global-body.css">
-        <link rel="stylesheet" href="./src/css/global-footer-cta.css"
+        <link rel="stylesheet" href="./src/css/global-footer-cta.css">
             <link rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
         <!-- Add favicon -->
         <link rel="icon"
             href="https://storage.googleapis.com/cpc-public-website/web-assets/CPC%20-%20FAVICON%20-%20FALL%202024.png"
             type="image/png">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     </head>
     <body>
         <header id="stickyHeader" class="sticky">
@@ -137,6 +138,64 @@
       
             <hr>
        
+                <section class="sharing-instructions"
+                style="
+                    background-color: #f0f0f0;
+                    padding: 30px;
+                    border-radius: 10px;
+                    text-align: center;
+                    max-width: 800px;
+                    margin: 40px auto;
+                    box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                
+                    <h2 style="
+                        color: #333;
+                        font-size: 28px;
+                        font-weight: bold;
+                        margin-bottom: 20px;">
+                        Share Our Live Stream
+                    </h2>
+                
+                    <p style="
+                        color: #555;
+                        font-size: 18px;
+                        line-height: 1.6;
+                        margin-bottom: 25px;
+                        max-width: 600px;
+                        margin-left: auto;
+                        margin-right: auto;">
+                        Help us spread the word! Share our live stream with your friends and family so they can join us online for our services.
+                    </p>
+                
+                    <hr style="
+                        border: none;
+                        height: 1px;
+                        background-color: #ddd;
+                        margin: 25px auto;
+                        width: 80%;">
+                
+                    <a href="https://www.youtube.com/@CPCNewHaven/live"
+                        target="_blank"
+                        style="
+                            display: inline-block;
+                            color: #ffffff;
+                            background-color: #FF0000;
+                            padding: 15px 30px;
+                            text-decoration: none;
+                            font-weight: bold;
+                            border-radius: 5px;
+                            transition: all 0.3s ease;
+                            font-size: 18px;
+                            margin-top: 10px;"
+                        onmouseover="this.style.backgroundColor='#CC0000'"
+                        onmouseout="this.style.backgroundColor='#FF0000'"
+                        onclick="shareLink(event, 'https://www.youtube.com/@CPCNewHaven/live')">
+                        <i class="fab fa-youtube" style="margin-right: 8px;"></i>
+                        Share Live Stream
+                    </a>
+                </section>
+                <hr>
+                
                 <hr>
                 <section id="footer-cta-a" class="styled-section-a">
                     <div class="form-container">
@@ -162,39 +221,6 @@
                         </form>
                     </div>
                 </section>
-                <section class="sharing-instructions"
-                style="background-color: #f0f0f0; padding: 20px; border-radius: 10px; text-align: center;">
-                <h2
-                    style="color: #333; font-size: 24px; font-weight: bold;">Spread
-                    the Word</h2>
-                <p style="color: #555; font-size: 18px;">Share our live stream
-                    link on your social media platforms. Let your friends and
-                    family know how they can join us online for our
-                    services.</p>
-                <hr style="border: 1px solid #ccc; margin: 20px 0;">
-                <a href="https://www.youtube.com/@CPCNewHaven/live"
-                    target="_blank"
-                    style="color: #ffffff; background-color: #0066cc; padding: 10px 20px; text-decoration: none; font-weight: bold; border-radius: 5px;"
-                    onclick="shareLink(event, 'https://www.youtube.com/@CPCNewHaven/live')">
-                    Share Live Link on YouTube
-                </a>
-                <script>
-                function shareLink(event, url) {
-                    event.preventDefault();
-                    if (navigator.share) {
-                        navigator.share({
-                            title: 'CPC New Haven Live Stream',
-                            url: url
-                        }).then(() => {
-                            console.log('Thanks for sharing!');
-                        }).catch(console.error);
-                    } else {
-                        // Fallback for browsers that don't support Web Share API
-                                               window.open(url, '_blank');
-                    }
-                }
-                </script>
-            </section>
                 <footer>
                     <div class="footer-content-logo">
                         <a href="index.html">
