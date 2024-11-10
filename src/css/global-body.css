@@ -1808,64 +1808,101 @@ p {
     margin: 0;
     text-align: center;
 }
+/* ... existing code ... */
 
-/* Add these styles for the podcast table */
+/* Updated podcast table styles */
 .podcast-table {
     width: 100%;
     border-collapse: collapse;
-    margin: 20px 0;
+    margin: 10px 0;
     font-family: "Barlow", sans-serif;
-    background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(10px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 12px;
-    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
 }
 
 .podcast-table th,
 .podcast-table td {
-    padding: 12px 15px;
+    padding: 8px;
     text-align: left;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid #eee;
 }
 
 .podcast-table th {
-    background: rgba(0, 0, 0, 0.5);
-    color: #fff;
-    text-transform: uppercase;
-    font-weight: 700;
+    background: #f5f5f5;
+    font-weight: 600;
+    font-size: 14px;
 }
 
+/* Mobile optimizations */
+@media (max-width: 600px) {
+    .podcast-table {
+        /* Remove any horizontal margins on mobile */
+        margin-left: -20px;
+        margin-right: -20px;
+        width: calc(100% + 40px);
+    }
+    
+    .podcast-table th,
+    .podcast-table td {
+        padding: 6px 4px;
+        font-size: 12px;
+    }
+    
+    /* Hide scripture and speaker/guest columns on mobile */
+    .podcast-table th:nth-child(3),
+    .podcast-table td:nth-child(3),
+    .podcast-table th:nth-child(4),
+    .podcast-table td:nth-child(4) {
+        display: none;
+    }
+    
+    /* Make the title column slightly larger */
+    .podcast-table td:nth-child(2) {
+        max-width: 140px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    
+    /* Compact the date column */
+    .podcast-table td:first-child {
+        white-space: nowrap;
+        width: 70px;
+    }
+    
+    /* Ensure listen column is always visible */
+    .podcast-table th:last-child,
+    .podcast-table td:last-child {
+        display: table-cell;
+        width: 60px;
+        text-align: center;
+    }
+}
+
+/* Add hover effect */
 .podcast-table tr:hover {
-    background: rgba(255, 255, 255, 0.3);
+    background-color: #f8f8f8;
 }
 
+/* Style for links in the table */
 .podcast-table a {
-    color: #1c95ff;
+    color: #007bff;
     text-decoration: none;
-    transition: color 0.3s ease;
 }
 
 .podcast-table a:hover {
-    color: #007bff;
+    text-decoration: underline;
 }
 
-@media (max-width: 600px) {
 
-    .podcast-table th,
-    .podcast-table td {
-        padding: 8px 5px;
-        font-size: 14px;
-    }
 
-    .podcast-table th {
-        font-size: 15px;
-    }
 
-    .podcast-table {
-        font-size: 14px;
-    }
-}
+
+
+
+
+
 
 .table-style {
     width: 100%;
