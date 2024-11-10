@@ -257,6 +257,22 @@
   "apple_podcasts_url": "",
     "bulletin_url": "",
     "podcast-thumbnail_url": "https://storage.googleapis.com/cpc-public-website/podcast-thumbnails/11.03.24%20-%20CPC.jpg",
+    "status": "past"
+  },
+  {
+    "id": "21",
+    "title": "Delivered for a Purpose",
+    "author": "Rev. Craig Luekens",
+    "scripture": "Exodus 19:1-20:3",
+    "date": "2024-11-10",
+    "active": true,
+    "sermon-preview_url": "",
+    "youtube_url": "",
+    "spotify_url": "",
+    "apple_podcasts_url": "",
+    "bulletin_url": "",
+    "podcast-thumbnail_url": "",
     "status": "present"
   }
+
 ]
