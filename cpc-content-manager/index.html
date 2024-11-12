@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CPC Content Editor</title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+
+    </head>
+    <body>
+        <a href="https://cpcnewhaven.org"><img
+                src="../../assets/CPC LOGO.png" alt="CPC Logo"
+                id="cpcLogo"></a>
+        <h1>CPC Content Editor</h1>
+        <div id="content">
+            <select id="jsonSelector">
+                <option value="bannerContent">Banner Content</option>
+                <option value="podcastIndex">Podcast Index</option>
+                <option value="highlights">Highlights</option>
+            </select>
+            <button onclick="loadData()">Load Data</button>
+            <div id="jsonDisplay"></div>
+
+            <div id="reviewChanges">
+                <h2>Review Changes</h2>
+                <div id="changeLog"></div>
+                <button onclick="previewChanges()">Preview Changes</button>
+                <div id="previewDisplay"></div>
+            </div>
+        </div>
+        <div id="fixedButtons">
+            <button onclick="publishChanges()">Publish and Download
+                Changes</button>
+        </div>
+        <div id="publishDownloadSection"></div>
+        <script src="app.js"></script>
+        <footer>
+
+        </footer>
+    </body>
+</html>
