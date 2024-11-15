@@ -9,6 +9,7 @@ let currentUrl = '';
 let changes = [];
 let newEntries = [];
 let currentCollection = '';
+let quill;
 
 function loadData() {
     console.log('Load Data button clicked');
@@ -184,28 +185,32 @@ function deleteNestedItem(parentIndex) {
 }
 
 function saveItem(index) {
-    console.log('Saving item at index:', index);
-    const inputs = document.querySelectorAll(`input[data-index="${index}"]`);
-    let itemChanged = false;
-    let changeDetails = [];
-    inputs.forEach(input => {
-        const key = input.getAttribute('data-key');
-        const newValue = input.value;
-        if (currentData[index][key] !== newValue) {
-            changeDetails.push(`${key}: "${currentData[index][key]}" -> "${newValue}"`);
-            currentData[index][key] = newValue;
-            itemChanged = true;
+    if (newEntries.includes(index)) {
+        saveNewEntry(index);
+    } else {
+        console.log('Saving item at index:', index);
+        const inputs = document.querySelectorAll(`input[data-index="${index}"]`);
+        let itemChanged = false;
+        let changeDetails = [];
+        inputs.forEach(input => {
+            const key = input.getAttribute('data-key');
+            const newValue = input.value;
+            if (currentData[index][key] !== newValue) {
+                changeDetails.push(`${key}: "${currentData[index][key]}" -> "${newValue}"`);
+                currentData[index][key] = newValue;
+                itemChanged = true;
+            }
+        });
+        if (itemChanged) {
+            changes.push({ index, details: changeDetails });
+            const itemDiv = document.querySelector(`.json-item:nth-child(${index + 1})`);
+            itemDiv.classList.add('changed');
+            showNotification('Changes saved successfully! Click here to review.');
+            listChanges();
+            console.log('Changes:', changes);
+            // Scroll to publish and download section
+            document.getElementById('publishDownloadSection').scrollIntoView({ behavior: 'smooth' });
         }
-    });
-    if (itemChanged) {
-        changes.push({ index, details: changeDetails });
-        const itemDiv = document.querySelector(`.json-item:nth-child(${index + 1})`);
-        itemDiv.classList.add('changed');
-        showNotification('Changes saved successfully! Click here to review.');
-        listChanges();
-        console.log('Changes:', changes);
-        // Scroll to publish and download section
-        document.getElementById('publishDownloadSection').scrollIntoView({ behavior: 'smooth' });
     }
 }
 
@@ -282,4 +287,83 @@ function listChanges() {
         changeLog.innerHTML += `<li>Added new item at index ${index}</li>`;
     });
     changeLog.innerHTML += '</ul>';
+}
+
+function initializeEditor() {
+    quill = new Quill('#editor-container', {
+        theme: 'snow',
+        modules: {
+            toolbar: [
+                [{ 'header': [1, 2, false] }],
+                ['bold', 'italic', 'underline'],
+                ['image', 'code-block']
+            ]
+        }
+    });
+}
+
+function createNewEntry() {
+    console.log('Creating new entry');
+    const newEntry = { content: '' }; // Initialize a new entry object with content
+    const jsonDisplay = document.getElementById('jsonDisplay');
+    const entryIndex = currentData.length;
+
+    // Create a container for the new entry
+    const entryContainer = document.createElement('div');
+    entryContainer.className = 'entry-container';
+
+    // Create an editor container
+    const editorContainer = document.createElement('div');
+    editorContainer.id = `editor-container-${entryIndex}`;
+    editorContainer.className = 'editor-container';
+
+    // Create a preview container
+    const previewContainer = document.createElement('div');
+    previewContainer.id = `preview-container-${entryIndex}`;
+    previewContainer.className = 'preview-container';
+
+    // Append editor and preview to the entry container
+    entryContainer.appendChild(editorContainer);
+    entryContainer.appendChild(previewContainer);
+
+    // Append the entry container to the display
+    jsonDisplay.appendChild(entryContainer);
+
+    // Initialize Quill editor for this entry
+    const quill = new Quill(`#editor-container-${entryIndex}`, {
+        theme: 'snow',
+        modules: {
+            toolbar: [
+                [{ 'header': [1, 2, false] }],
+                ['bold', 'italic', 'underline'],
+                ['image', 'code-block']
+            ]
+        }
+    });
+
+    // Update preview on content change
+    quill.on('text-change', () => {
+        const content = quill.root.innerHTML;
+        previewContainer.innerHTML = content; // Update the preview with the editor content
+    });
+
+    newEntries.push(entryIndex);
+    currentData.push(newEntry);
+    showNotification('New entry created! Fill in the details and save.');
+}
+
+function saveNewEntry(index) {
+    console.log('Saving new entry at index:', index);
+    const quill = Quill.find(`#editor-container-${index}`);
+    const content = quill.root.innerHTML; // Get the HTML content from the editor
+    currentData[index].content = content; // Save the content to the current data
+    let entryChanged = true;
+    let changeDetails = [`content: "${content}"`];
+    if (entryChanged) {
+        changes.push({ index, details: changeDetails });
+        showNotification('New entry saved successfully! Click here to review.');
+        listChanges();
+        console.log('New Entry Changes:', changes);
+        document.getElementById('publishDownloadSection').scrollIntoView({ behavior: 'smooth' });
+    }
 }
