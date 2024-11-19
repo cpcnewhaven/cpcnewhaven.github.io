@@ -2372,3 +2372,24 @@ p {
     font-style: italic;
     /* Italicize text for a more formal appearance */
 }
+
+/* Add responsive styles for podcast thumbnails */
+.podcast-thumbnail {
+    width: 100%;
+    max-width: 600px;
+    /* Adjust max-width as needed */
+    height: auto;
+    border-radius: 10px;
+    margin: 0 auto 20px auto;
+    /* Center the image and add bottom margin */
+    display: block;
+}
+
+/* Ensure the image scales properly on smaller screens */
+@media (max-width: 768px) {
+    .podcast-thumbnail {
+        max-width: 100%;
+        margin: 0 auto 10px auto;
+        /* Adjust margin for smaller screens */
+    }
+}
