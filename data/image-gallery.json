@@ -1,86 +1,6 @@
 {
   "images": [
-    {
-      "id": "60",
-      "name": "60.jpg",
-      "url": "https://storage.googleapis.com/cpc-public-website/60.jpg",
-      "size": "150.2 KB",
-      "type": "image/jpeg",
-      "created": "Jul 29, 2024, 4:59:26 PM",
-      "tags": ["event", "indoor"]
-    },
-    {
-      "id": "61",
-      "name": "61.jpg",
-      "url": "https://storage.googleapis.com/cpc-public-website/61.jpg",
-      "size": "185.6 KB",
-      "type": "image/jpeg",
-      "created": "Jul 29, 2024, 4:59:26 PM",
-      "tags": ["group", "people"]
-    },
-    {
-      "id": "62",
-      "name": "62.jpg",
-      "url": "https://storage.googleapis.com/cpc-public-website/62.jpg",
-      "size": "120.8 KB",
-      "type": "image/jpeg",
-      "created": "Jul 29, 2024, 4:59:26 PM",
-      "tags": ["music", "worship"]
-    },
-    {
-      "id": "63",
-      "name": "63.jpg",
-      "url": "https://storage.googleapis.com/cpc-public-website/63.jpg",
-      "size": "198.3 KB",
-      "type": "image/jpeg",
-      "created": "Jul 29, 2024, 4:59:26 PM",
-      "tags": ["outdoor", "community"]
-    },
-    {
-      "id": "64",
-      "name": "64.jpg",
-      "url": "https://storage.googleapis.com/cpc-public-website/64.jpg",
-      "size": "167.5 KB",
-      "type": "image/jpeg",
-      "created": "Jul 29, 2024, 4:59:26 PM",
-      "tags": ["children", "activity"]
-    },
-    {
-      "id": "65",
-      "name": "65.jpg",
-      "url": "https://storage.googleapis.com/cpc-public-website/65.jpg",
-      "size": "142.1 KB",
-      "type": "image/jpeg",
-      "created": "Jul 29, 2024, 4:59:26 PM",
-      "tags": ["sermon", "preaching"]
-    },
-    {
-      "id": "66",
-      "name": "66.jpg",
-      "url": "https://storage.googleapis.com/cpc-public-website/66.jpg",
-      "size": "176.9 KB",
-      "type": "image/jpeg",
-      "created": "Jul 29, 2024, 4:59:26 PM",
-      "tags": ["fellowship", "meal"]
-    },
-    {
-      "id": "67",
-      "name": "67.jpg",
-      "url": "https://storage.googleapis.com/cpc-public-website/67.jpg",
-      "size": "131.4 KB",
-      "type": "image/jpeg",
-      "created": "Jul 29, 2024, 4:59:26 PM",
-      "tags": ["baptism", "ceremony"]
-    },
-    {
-      "id": "68",
-      "name": "68.jpg",
-      "url": "https://storage.googleapis.com/cpc-public-website/68.jpg",
-      "size": "159.7 KB",
-      "type": "image/jpeg",
-      "created": "Jul 29, 2024, 4:59:26 PM",
-      "tags": ["volunteer", "service"]
-    },
+
     {
       "id": "wfb1",
       "name": "605c1ade-b21e-4713-ad4e-d9bb2d6709ad.JPG",
@@ -88,7 +8,8 @@
       "size": "Unknown",
       "type": "image/jpeg",
       "created": "Unknown",
-      "tags": ["event", "womens fall brunch"]
+      "tags": ["event", "womens fall brunch"],
+      "event": true
     },
     {
       "id": "wfb2",
@@ -97,7 +18,8 @@
       "size": "Unknown",
       "type": "image/jpeg",
       "created": "Unknown",
-      "tags": ["event", "womens fall brunch"]
+      "tags": ["event", "womens fall brunch"],
+      "event": true
     },
     {
       "id": "wfb3",
@@ -106,7 +28,8 @@
       "size": "Unknown",
       "type": "image/jpeg",
       "created": "Unknown",
-      "tags": ["event", "womens fall brunch"]
+      "tags": ["event", "womens fall brunch"],
+      "event": true
     },
     {
       "id": "wfb4",
@@ -115,7 +38,8 @@
       "size": "Unknown",
       "type": "image/jpeg",
       "created": "Unknown",
-      "tags": ["event", "womens fall brunch"]
+      "tags": ["event", "womens fall brunch"],
+      "event": true
     },
     {
       "id": "wfb5",
@@ -124,7 +48,8 @@
       "size": "Unknown",
       "type": "image/jpeg",
       "created": "Unknown",
-      "tags": ["event", "womens fall brunch"]
+      "tags": ["event", "womens fall brunch"],
+      "event": true
     },
     {
       "id": "wfb6",
@@ -133,7 +58,78 @@
       "size": "Unknown",
       "type": "image/jpeg",
       "created": "Unknown",
-      "tags": ["event", "womens fall brunch"]
+      "tags": ["event", "womens fall brunch"],
+      "event": true
+    },
+    {
+      "id": "hcs1",
+      "name": "IMG_0244.JPG",
+      "url": "https://storage.googleapis.com/cpc-public-website/events/Hill%20Christmas%20Store%202023/IMG_0244.JPG",
+      "size": "Unknown",
+      "type": "image/jpeg",
+      "created": "Unknown",
+      "tags": ["hill christmas store 2023"],
+      "event": true
+    },
+    {
+      "id": "hcs2",
+      "name": "IMG_0244 (1).JPG",
+      "url": "https://storage.googleapis.com/cpc-public-website/events/Hill%20Christmas%20Store%202023/IMG_0244%20(1).JPG",
+      "size": "Unknown",
+      "type": "image/jpeg",
+      "created": "Unknown",
+      "tags": ["event", "hill christmas store 2023"],
+      "event": true
+    },
+    {
+      "id": "hcs3",
+      "name": "IMG_0251.JPG",
+      "url": "https://storage.googleapis.com/cpc-public-website/events/Hill%20Christmas%20Store%202023/IMG_0251.JPG",
+      "size": "Unknown",
+      "type": "image/jpeg",
+      "created": "Unknown",
+      "tags": ["event", "hill christmas store 2023"],
+      "event": true
+    },
+    {
+      "id": "hcs4",
+      "name": "IMG_0254.JPG",
+      "url": "https://storage.googleapis.com/cpc-public-website/events/Hill%20Christmas%20Store%202023/IMG_0254.JPG",
+      "size": "Unknown",
+      "type": "image/jpeg",
+      "created": "Unknown",
+      "tags": ["event", "hill christmas store 2023"],
+      "event": true
+    },
+    {
+      "id": "hcs5",
+      "name": "IMG_0261.jpg",
+      "url": "https://storage.googleapis.com/cpc-public-website/events/Hill%20Christmas%20Store%202023/IMG_0261.jpg",
+      "size": "Unknown",
+      "type": "image/jpeg",
+      "created": "Unknown",
+      "tags": ["event", "hill christmas store 2023"],
+      "event": true
+    },
+    {
+      "id": "hcs6",
+      "name": "IMG_0267.JPG",
+      "url": "https://storage.googleapis.com/cpc-public-website/events/Hill%20Christmas%20Store%202023/IMG_0267.JPG",
+      "size": "Unknown",
+      "type": "image/jpeg",
+      "created": "Unknown",
+      "tags": ["event", "hill christmas store 2023"],
+      "event": true
+    },
+    {
+      "id": "misc1",
+      "name": "misc_image.jpg",
+      "url": "https://storage.googleapis.com/cpc-public-website/misc/misc_image.jpg",
+      "size": "Unknown",
+      "type": "image/jpeg",
+      "created": "Unknown",
+      "tags": [],
+      "event": false
     }
   ]
 }

@@ -6,8 +6,6 @@
         <title>Live - CPC New Haven Church</title>
         <!--<link rel="stylesheet" href="/src/css/live.css">-->
         <link rel="stylesheet" href="./src/css/global-body.css">
-        <link rel="stylesheet" href="./src/css/global-nav-bar.css">
-        <link rel="stylesheet" href="./src/css/footer.css">
         <link rel="stylesheet" href="./src/css/global-footer-cta.css">
 
         <link rel="stylesheet"
@@ -15,6 +13,13 @@
         <link rel="icon"
             href="https://storage.googleapis.com/cpc-public-website/web-assets/CPC%20-%20FAVICON%20-%20FALL%202024.png"
             type="image/png">
+        <style>
+            .sub-page-header {
+                text-align: center;
+                background-color: transparent;
+                padding: 20px;
+            }
+        </style>
     </head>
     <body>
         <header id="stickyHeader" class="sticky">
@@ -45,35 +50,55 @@
             </div>
             <ul class="mobile-nav-links">
                 <li><a class="mobile-menu-link" href="index.html">Home</a></li>
-                <li><a class="mobile-menu-link" href="sundays.html">Sundays</a></li>
+                <li><a class="mobile-menu-link"
+                        href="sundays.html">Sundays</a></li>
                 <li><a class="mobile-menu-link" href="about.html">About</a></li>
-                <li><a class="mobile-menu-link" href="podcasts.html">Podcasts</a></li>
-                <li><a class="mobile-menu-link" href="announcements.html">Announcements</a></li>
-                <li><a class="mobile-menu-link" href="community.html">Community</a></li>
+                <li><a class="mobile-menu-link"
+                        href="podcasts.html">Podcasts</a></li>
+                <li><a class="mobile-menu-link"
+                        href="announcements.html">Announcements</a></li>
+                <li><a class="mobile-menu-link"
+                        href="community.html">Community</a></li>
                 <li><a class="mobile-menu-link" href="live.html">Live</a></li>
-                <li><a class="mobile-menu-link" href="resources.html">Resources</a></li>
+                <li><a class="mobile-menu-link"
+                        href="resources.html">Resources</a></li>
                 <li><a class="mobile-menu-link" href="give.html">Give</a></li>
             </ul>
         </nav>
+        <header class="sub-page-header">
+            <h1>Media Gallery</h1>
+            <p style="padding:20px">Welcome to our community Media Gallery! This
+                gallery showcases moments from our church family. Feel free to
+                browse through the memories and get a glimpse of our community
+                life.</p>
+        </header>
 
-        <section><br>
-           <br> <h2>Media Gallery</h2>
-            <p style="padding:20px">Welcome to our community Media Gallery! This gallery showcases moments from our church family. Feel free to browse through the memories and get a glimpse of our community life.</p>
-
-            <div id="gallery-container"></div>
+        <section>
+            <hr>
+            <h2>Women's Fall Brunch 2024</h2>
+            <div id="wfb-gallery-container" class="image-container"></div>
         </section>
 
         <section>
-            <h2>Women's Fall Brunch 2024</h2>
-            <div id="wfb-gallery-container"></div>
+            <h2>Hill Christmas Store 2023</h2>
+            <div id="hcs-gallery-container" class="image-container"></div>
         </section>
 
         <!-- Lightbox -->
-        <div id="lightbox" onclick="closeLightbox()">
-            <span class="close-btn" onclick="closeLightbox()">&times;</span>
+        <div id="lightbox">
+            <span class="close-btn">&times;</span>
             <img id="lightbox-img" src alt="Lightbox Image">
         </div>
-            <p>If you have your own photos that you'd like to share, please submit them to be included in our gallery. It's a great way to keep our community connected and share the joy!</p>
+        <section class="footer-cta-section">
+            <p>If you have your own photos that you'd like to share, please
+                submit
+                them to be included in our gallery. It's a great way to keep our
+                community connected and share the joy!</p>
+            <p>Send Photos to <a
+                    href="mailto:admin@cpcnewhaven.org">admin@cpcnewhaven.org</a></p>
+            <hr>
+
+        </section>
 
         <section id="footer-cta-a" class="styled-section-a">
             <div class="form-container">
@@ -95,19 +120,20 @@
         </section>
         <footer>
             <div class="footer-content-logo">
-              <a href="index.html">
-                <img src="./assets/CPC_LOGO_24.png" alt="CPC New Haven Church"
-                  class="top-splash-logo">
-              </a></div>
+                <a href="index.html">
+                    <img src="./assets/CPC_LOGO_24.png"
+                        alt="CPC New Haven Church"
+                        class="top-splash-logo">
+                </a></div>
             <p>Join us for worship and fellowship. <a href="sundays.html">Learn
-                more</a></p>
-      
+                    more</a></p>
+
             <p>203.777.6960 | <a
-                href="mailto:admin@cpcnewhaven.org">admin@cpcnewhaven.org</a>
-              | 135 Whitney Ave. New Haven CT 06510</p>
+                    href="mailto:admin@cpcnewhaven.org">admin@cpcnewhaven.org</a>
+                | 135 Whitney Ave. New Haven CT 06510</p>
             <p>© 2024 Christ Presbyterian Church.</p>
-      
-          </footer>
+
+        </footer>
 
         <script src="./src/js/function_toggle_mobileMenu.js"></script>
         <script src="./src/js/live-logic.js"></script>

@@ -169,6 +169,17 @@ table {
     width: 100%;
 }
 
+header {
+    background-color: #ADD8E6;
+    /* Light blue color */
+    transition: background-color 0.3s ease;
+}
+
+header:hover {
+    background-color: #87CEEB;
+    /* Slightly darker blue on hover */
+}
+
 .link-button {
     width: 100%;
     max-width: 220px;
@@ -817,53 +828,10 @@ p {
     }
 }
 
-.gallery-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    /* Responsive grid layout */
-    gap: 20px;
-    /* Space between items */
-    padding: 20px;
-    /* Padding around the container */
-    justify-content: center;
-    /* Center items horizontally */
-}
 
-.gallery-item {
-    width: 100%;
-    /* Full width of the column */
-    height: auto;
-    /* Maintain aspect ratio */
-    object-fit: cover;
-    /* Cover the area without losing aspect ratio */
-    cursor: pointer;
-    /* Pointer cursor on hover */
-    transition: transform 0.3s ease;
-    /* Smooth scaling transition */
-    position: relative;
-    /* Position relative for overlay info */
-    overflow: hidden;
-    width: 400px;
-    height: 300px;
-    /* Hide overflow */
-}
-
-.gallery-item:hover {
-    transform: scale(1.05);
-    /* Scale up on hover */
-}
-
-.gallery-item img {
-    width: 100%;
-    /* Full width */
-    height: 100%;
-    object-fit: cover;
-    /* Cover the area without losing aspect ratio */
-}
 
 #lightbox {
     display: none;
-    /* Hidden by default */
     position: fixed;
     z-index: 1000;
     top: 0;
@@ -871,7 +839,8 @@ p {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.8);
-    /* Semi-transparent background */
+    justify-content: center;
+    align-items: center;
 }
 
 #lightbox-img {
@@ -879,11 +848,7 @@ p {
     max-height: 90%;
     margin: auto;
     display: block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    /* Center the image */
+    border-radius: 5px;
 }
 
 .close-btn {
@@ -893,10 +858,7 @@ p {
     top: 20px;
     right: 30px;
     cursor: pointer;
-    /* Pointer cursor on hover */
 }
-
-
 
 .dynamic-widget-container {
     display: flex;
@@ -1808,6 +1770,7 @@ p {
     margin: 0;
     text-align: center;
 }
+
 /* ... existing code ... */
 
 /* Updated podcast table styles */
@@ -1842,13 +1805,13 @@ p {
         margin-right: -20px;
         width: calc(100% + 40px);
     }
-    
+
     .podcast-table th,
     .podcast-table td {
         padding: 6px 4px;
         font-size: 12px;
     }
-    
+
     /* Hide scripture and speaker/guest columns on mobile */
     .podcast-table th:nth-child(3),
     .podcast-table td:nth-child(3),
@@ -1856,7 +1819,7 @@ p {
     .podcast-table td:nth-child(4) {
         display: none;
     }
-    
+
     /* Make the title column slightly larger */
     .podcast-table td:nth-child(2) {
         max-width: 140px;
@@ -1864,13 +1827,13 @@ p {
         overflow: hidden;
         text-overflow: ellipsis;
     }
-    
+
     /* Compact the date column */
     .podcast-table td:first-child {
         white-space: nowrap;
         width: 70px;
     }
-    
+
     /* Ensure listen column is always visible */
     .podcast-table th:last-child,
     .podcast-table td:last-child {
@@ -1894,7 +1857,6 @@ p {
 .podcast-table a:hover {
     text-decoration: underline;
 }
-
 
 
 
@@ -2048,37 +2010,37 @@ p {
     max-width: 960px;
 }
 
-#gallery-container,
-#wfb-gallery-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
+.instagram-style-image {
     width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin: 5px;
+    border-radius: 8px;
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+    /* Change cursor to pointer */
 }
 
+.instagram-style-image:hover {
+    transform: scale(1.05);
+}
 
 #lightbox {
     display: none;
     position: fixed;
-    z-index: 1000;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
 }
 
 #lightbox-img {
     max-width: 90%;
     max-height: 90%;
-    margin: auto;
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    border-radius: 8px;
 }
 
 .close-btn {
@@ -2202,7 +2164,6 @@ p {
 .hero>p {
     color: rgb(255, 255, 255);
 }
-
 
 .hero-logo-img {
     width: 300px;
@@ -2390,16 +2351,24 @@ p {
 
 
 .mission-statement {
-    font-family: 'Times New Roman', Times, serif; /* Classic serif font for a scholarly look */
-    font-size: 1.3em; /* Slightly larger font size for emphasis */
-    line-height: 1.8; /* More space between lines for readability */
-    color: #2c2c2c; /* Slightly darker text color for contrast */
-    background-color: #f5f5f5; /* Softer background color */
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    font-family: 'Times New Roman', Times, serif;
+    /* Classic serif font for a scholarly look */
+    font-size: 1.3em;
+    /* Slightly larger font size for emphasis */
+    line-height: 1.8;
+    /* More space between lines for readability */
+    color: #2c2c2c;
+    /* Slightly darker text color for contrast */
+    background-color: #f5f5f5;
+    /* Softer background color */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for depth */
     padding-bottom: 20px;
 }
 
 .mission-statement p {
-    padding: 12px; /* Increase padding for a more spacious look */
-    font-style: italic; /* Italicize text for a more formal appearance */
+    padding: 12px;
+    /* Increase padding for a more spacious look */
+    font-style: italic;
+    /* Italicize text for a more formal appearance */
 }
