@@ -349,6 +349,27 @@
       "tag": "fooddrive",
       "featuredIMG": "https://storage.googleapis.com/cpc-public-website/events/BOH%20Christmas%202024/BOH_2024.png",
       "url-link": "http://www.bridgesnewhaven.org"
+    },
+    {
+      "id": "2024-023",
+      "title": "BOH Mentoring Program | Wayne Hammond",
+      "description": "Are you looking for a way to love our city? Invest in the life of a New Haven child and their family! Bridges of Hope Mentoring Program is accepting applications. Our vision is to provide a safe place for students from low-income families to receive academic help and grow emotionally and spiritually alongside a caring adult. Volunteers should be over 18 and willing to commit one night a week to spending time with a 2nd-8th grader. Duties will include homework help, short devotions, and small group recreation. Volunteers will also be responsible to communicate regularly with their mentee's parents and teachers. For more information and to complete the initial application, visit bridgesnewhaven.org/mentoring. We have a goal of sending at least 5 volunteers from CPC!<br><br><div style=\"text-align: center;\"><a href=\"https://bridgesnewhaven.org/mentoring\" class=\"big-button\">Apply Now</a></div>",
+      "dateEntered": "2024-09-15",
+      "active": "true",
+      "type": "highlight",
+      "category": "highlight",
+      "tag": "mentoring",
+      "url-link": "https://bridgesnewhaven.org/mentoring"
+    },
+    {
+      "id": "2024-024",
+      "title": "BOH Christian Educators' Event",
+      "description": "When: November 30, 10:00am-12:30pm<br>Where: Church on the Rock, 95 Hamilton St., New Haven<br>Sign up here! $5 Registration, refreshments will be served.<br><br><div style=\"text-align: center;\"><a href=\"https://cpcnewhaven.us3.list-manage.com/track/click?u=40f2b7e112b1a9cbae989317c&id=25f3de7ced&e=9da175cc40\" class=\"big-button\">Sign Up</a></div>",
+      "dateEntered": "2024-11-01",
+      "active": "true",
+      "type": "highlight",
+      "category": "highlight",
+      "tag": "educators"
     }
   ]
 }
