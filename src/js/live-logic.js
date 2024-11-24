@@ -6,7 +6,9 @@ document.addEventListener('DOMContentLoaded', function() {
             if (activeSermon) {
                 document.getElementById('sermon-title').textContent = activeSermon.title;
                 document.getElementById('sermon-scripture').textContent = activeSermon.scripture;
-                document.getElementById('sermon-date').textContent = new Date(activeSermon.date).toLocaleDateString();
+                const sermonDate = new Date(activeSermon.date);
+                sermonDate.setDate(sermonDate.getDate() + 1);
+                document.getElementById('sermon-date').textContent = sermonDate.toLocaleDateString();
                 document.getElementById('sermon-author').textContent = activeSermon.author;
                 document.getElementById('sermon-video').src = activeSermon.youtube_url || 'https://youtube.com/c/CPCNewHaven/live';
                 document.getElementById('bulletin-link').href = activeSermon.bulletin_url || '#';
