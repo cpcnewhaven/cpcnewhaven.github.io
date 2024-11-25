@@ -309,7 +309,7 @@
       "id": "2024-020",
       "title": "Save the Dates",
       "description": "<div style=\"text-align: center;\"><ul style=\"list-style-type: none; padding: 0;\"><li><strong>Fall Work Day & Christmas Decor:</strong> Sat. Dec. 7</li><li><strong>Christmas Lessons & Carols Service:</strong> Fri. Dec. 13</li></ul></div>",
-      "dateEntered": "2024-09-15",
+      "dateEntered": "2024-11-08",
       "active": "true",
       "type": "upcoming",
       "category": "upcoming",
@@ -342,7 +342,7 @@
       "title": "BOH Thanksgiving Food Drive",
       "date": "Donate by Nov 22",
      "description": "Please join us in sharing Christmas joy with some wonderful families from New Haven’s Hill community. Purchase and leave an unwrapped gift valued at $20 or more for a child in the designated category (e.g., “Girl, 9-14”). In the spirit of empowerment, your gift will in turn be bought at a very reduced price by families in the Hill at the store.<br><br><div style=\"text-align: center;\"><a href=\"http://www.bridgesofhope.org\" class=\"big-button\">Visit BOH Website</a></div>",
-      "dateEntered": "2024-09-15",
+      "dateEntered": "2024-11-24",
       "active": "false",
       "type": "highlight",
       "category": "highlight",
@@ -354,7 +354,7 @@
       "id": "2024-023",
       "title": "BOH Mentoring Program | Wayne Hammond",
       "description": "Are you looking for a way to love our city? Invest in the life of a New Haven child and their family! Bridges of Hope Mentoring Program is accepting applications. Our vision is to provide a safe place for students from low-income families to receive academic help and grow emotionally and spiritually alongside a caring adult. Volunteers should be over 18 and willing to commit one night a week to spending time with a 2nd-8th grader. Duties will include homework help, short devotions, and small group recreation. Volunteers will also be responsible to communicate regularly with their mentee's parents and teachers. For more information and to complete the initial application, visit bridgesnewhaven.org/mentoring. We have a goal of sending at least 5 volunteers from CPC!<br><br><div style=\"text-align: center;\"><a href=\"https://bridgesnewhaven.org/mentoring\" class=\"big-button\">Apply Now</a></div>",
-      "dateEntered": "2024-09-15",
+      "dateEntered": "2024-011-22",
       "active": "true",
       "type": "highlight",
       "category": "highlight",
@@ -365,7 +365,7 @@
       "id": "2024-024",
       "title": "BOH Christian Educators' Event",
       "description": "When: November 30, 10:00am-12:30pm<br>Where: Church on the Rock, 95 Hamilton St., New Haven<br>Sign up here! $5 Registration, refreshments will be served.<br><br><div style=\"text-align: center;\"><a href=\"https://cpcnewhaven.us3.list-manage.com/track/click?u=40f2b7e112b1a9cbae989317c&id=25f3de7ced&e=9da175cc40\" class=\"big-button\">Sign Up</a></div>",
-      "dateEntered": "2024-11-01",
+      "dateEntered": "2024-11-22",
       "active": "true",
       "type": "highlight",
       "category": "highlight",
@@ -375,12 +375,36 @@
       "id": "2024-025",
       "title": "Lessons & Carols Potluck",
       "description": "This is the Sign-Up-Genius for the potluck following the Lessons & Carols Service on December 13. It is not in the bulletin this week but will be in the email. Please put it on the website. The plan is for the general congregation to have access to this so they can sign up to bring food/drinks. There are also slots for people to sign up to help setup and cleanup within the Sign-Up-Genius. That would be helpful to mention along with the mention of food/drinks.<br><br><div style=\"text-align: center;\"><a href=\"[Sign-Up-Genius-URL]\" class=\"big-button\">Sign Up Here</a></div>",
-      "dateEntered": "2024-11-01",
+      "dateEntered": "2024-11-22",
       "active": "true",
       "type": "upcoming",
       "category": "upcoming",
       "tag": "potluck",
       "featuredIMG": "https://cpmfiles1.com/cpcnewhaven.org/20221209_185632-1.jpg"
+    },
+    {
+      "id": "2024-026",
+      "title": "No Sunday School or Fellowship Lunch",
+      "description": "Please note that there will be no Sunday School or Fellowship Lunch on December 1, 22, and 29.",
+      "dateEntered": "2024-11-25",
+      "active": "true",
+      "type": "ongoing",
+      "category": "ongoing",
+      "tag": "schedule",
+      "dates": [
+        {
+          "event": "No Sunday School or Fellowship Lunch",
+          "date": "December 1, 2024"
+        },
+        {
+          "event": "No Sunday School or Fellowship Lunch",
+          "date": "December 22, 2024"
+        },
+        {
+          "event": "No Sunday School or Fellowship Lunch",
+          "date": "December 29, 2024"
+        }
+      ]
     }
   ]
 }
