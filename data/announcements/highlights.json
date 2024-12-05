@@ -405,6 +405,19 @@
           "date": "December 29, 2024"
         }
       ]
+    },
+    {
+      "id": "2024-027",
+      "title": "Church Work Day",
+      "description": "Join us for a church work day this Saturday from 9 AM to noon. We'll be setting up Christmas decorations and working on various building projects. There's something for everyone, and all skill levels and ages are welcome. Your help is greatly appreciated!",
+      "dateEntered": "2024-12-05",
+      "active": "true",
+      "type": "upcoming",
+      "category": "upcoming",
+      "tag": "workday",
+      "date": "December 7, 2024",
+      "time": "9:00 AM - 12:00 PM",
+      "location": "Church Grounds"
     }
   ]
 }
