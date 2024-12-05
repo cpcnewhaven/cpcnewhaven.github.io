@@ -1960,48 +1960,7 @@ p {
     /* Max width for better control on larger screens */
 }
 
-.headline-enhanced {
-    text-align: center;
-    color: #3f51b5;
-    /* Deeper indigo for headline */
-    margin-bottom: 15px;
-    /* More space below the headline */
-    font-size: 24px;
-    /* Larger font size for prominence */
-}
 
-.submenu-links {
-    display: flex;
-    justify-content: space-around;
-    /* Evenly space around for better distribution */
-    flex-wrap: wrap;
-    gap: 15px;
-    /* Increased gap for better separation */
-}
-
-.submenu-links a {
-    background-color: #ffffff;
-    /* White background for links */
-    color: #3f51b5;
-    /* Matching the headline color for consistency */
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: 500;
-    /* Medium font weight for better readability */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);
-    transition: all 0.3s ease-in-out;
-}
-
-.submenu-links a:hover,
-.submenu-links a:focus {
-    background-color: #3f51b5;
-    /* Indigo background on hover/focus */
-    color: #ffffff;
-    /* White text on hover/focus */
-    transform: translateY(-2px);
-    /* Slight raise effect on hover/focus */
-}
 
 .inner-page-section {
     padding: 10px;
