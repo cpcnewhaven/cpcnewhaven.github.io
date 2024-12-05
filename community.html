@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="src/css/global-body.css">
     <link rel="stylesheet" href="src/css/global-footer-cta.css">
     <link rel="stylesheet" href="src/css/global-nav-bar.css">
+    <link rel="stylesheet" href="src/css/tab-block.css">
     <title>Community | CPC New Haven Church</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
@@ -89,7 +90,25 @@
     <div class="top-splash-welcome">
         <h1>Community</h1>
     </div>
-
+    <div class="submenu-container-enhanced" id="small-groups-submenu">
+        <h1 class="headline-enhanced">Small Groups</h1>
+        <div class="tab-block-tabs">
+            <button class="tab-block-tab" onclick="openTab(event, 'LifeGroups')">Life Groups</button>
+            <button class="tab-block-tab" onclick="openTab(event, 'DiscipleshipGroups')">Discipleship Groups</button>
+        </div>
+        <div class="tab-block-content" id="LifeGroups">
+            <h2>Life Groups</h2>
+            <p class="body-text">
+                Life Groups are small communities of 8-12 people who meet regularly in homes throughout the Greater New Haven area. These groups provide a place for deeper relationships, prayer, Bible discussion, and mutual care and support. Life Groups typically meet 2-4 times per month and are organized geographically to make it easier for members to gather together. Whether you're new to the church or have been here for years, Life Groups are one of the primary ways we build community and grow together in faith. Contact the church office to learn more about joining a Life Group near you.
+            </p>
+        </div>
+        <div class="tab-block-content" id="DiscipleshipGroups" style="display:none;">
+            <h2>Discipleship Groups</h2>
+            <p class="body-text">
+                Discipleship Groups (D-Groups) are gender-specific groups of 3-4 people who meet weekly for intentional spiritual growth and accountability. These groups focus on Bible reading, prayer, and helping each other follow Jesus more closely in daily life. The smaller size allows for deeper sharing and more focused discipleship relationships. D-Groups typically meet for 12-18 months, working through Scripture and spiritual disciplines together. These groups provide a great opportunity for more mature believers to invest in younger believers, though anyone can benefit from participating. Contact the church office if you're interested in joining or starting a D-Group.
+            </p>
+        </div>
+    </div>
     <div id="page">
         <section class="splash-image" id="home-image"></section>
         <div id="community-small-groups">
@@ -628,6 +647,7 @@
     <script src="./src/js/background-fetch-splash-image.js"></script>
     <script src="./src/js/load-community-events.js"></script>
     <script src="./src/js/function_toggle_mobileMenu.js"></script>
+    <script src="./src/js/tab-block.js"></script>
 </body>
 
 </html>

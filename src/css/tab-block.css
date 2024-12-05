@@ -1,0 +1,29 @@
+.tab-block-tabs {
+    display: flex;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+.tab-block-tab {
+    background-color: #f1f1f1;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    transition: background-color 0.3s;
+}
+
+.tab-block-tab:hover {
+    background-color: #ddd;
+}
+
+.tab-block-tab.active {
+    background-color: #ccc;
+}
+
+.tab-block-content {
+    display: none;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
