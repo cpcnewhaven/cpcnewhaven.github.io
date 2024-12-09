@@ -22,59 +22,55 @@
     line-height: 1.5;
 }
 
-.tab-block-tabs {
+.tab-widget, .submenu-container-enhanced {
     display: flex;
-    justify-content: center; /* Center the tabs */
-    border-bottom: 1px solid #ccc;
-    margin-bottom: 20px; /* Increase space below the tabs */
-    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    align-items: flex-start;
+}
+
+.tab-block-tabs {
+    flex: 0 0 200px; /* Fixed width for tabs */
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px; /* Space between tabs and content */
 }
 
 .tab-block-tab {
-    background-color: #f1f1f1;
-    border: none;
-    outline: none;
+    padding: 10px;
     cursor: pointer;
-    padding: 12px 24px; /* Increase padding for better touch targets */
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    margin-bottom: 5px;
     transition: background-color 0.3s;
-    margin: 5px; /* Add margin for spacing */
-    border-radius: 5px; /* Add rounded corners */
 }
 
 .tab-block-tab:hover {
-    background-color: blue ;
-}
-
-.tab-block-tab.active {
-    background-color: blue;
-    color: #fff;
+    background-color: #e0e0e0;
 }
 
 .tab-block-content {
-    display: none;
-    padding: 25px; /* Increase padding for better readability */
+    flex: 1;
+    padding: 20px;
+    background-color: #fff;
     border: 1px solid #ccc;
-    border-top: none;
-    text-align: center;
-    margin: 0 auto 40px; /* Center and add space below */
-    max-width: 800px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
-    background-color: #fff; /* Ensure a white background */
-}
-
-@media (max-width: 768px) {
-    .tab-block-tab {
-        width: 100%; /* Full width on smaller screens */
-        text-align: center;
-    }
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
 }
 
 .tab-block-content h2 {
-    margin-bottom: 20px; /* Add space below headings */
+    grid-column: span 2; /* Make the heading span across columns */
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #444;
 }
 
 .tab-block-content p {
-    line-height: 1.8; /* Improve line spacing for readability */
+    margin-bottom: 15px;
 }
 
 .image-container {
@@ -89,9 +85,21 @@
 
 
 .default-big-section {
+    display: flex; /* Use flexbox for layout */
+    position: relative; /* Position relative for absolute children */
     padding: 10px;
     border-radius: 8px;
     margin: 20px auto;
-    max-width: 960px;
-    min-height:50vh;
+    min-height: 50vh;
+    flex: 1; /* Allow the section to take the remaining space */
+}
+
+.two-column-layout {
+    display: flex;
+    flex-direction: row;
+}
+
+.tab-block-description-container>h1 {
+    font-size: 3em;
+    text-align:left;
 }
