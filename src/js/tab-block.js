@@ -18,14 +18,13 @@ function openTab(evt, tabName) {
     evt.currentTarget.className += " active";
 }
 
-// Open a random tab by default for each section
+// Open the first tab by default for each widget
 document.addEventListener("DOMContentLoaded", function() {
-    var tabGroups = document.querySelectorAll(".submenu-container-enhanced");
-    tabGroups.forEach(function(group) {
-        var tabs = group.querySelectorAll(".tab-block-tab");
-        if (tabs.length > 0) {
-            var randomIndex = Math.floor(Math.random() * tabs.length);
-            tabs[randomIndex].click();
+    var tabWidgets = document.querySelectorAll(".tab-widget");
+    tabWidgets.forEach(function(widget) {
+        var firstTab = widget.querySelector(".tab-block-tab");
+        if (firstTab) {
+            firstTab.click();
         }
     });
 });

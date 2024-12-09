@@ -33,9 +33,6 @@ nav a {
     transition: color 0.3s;
 }
 
-nav a:hover {
-    color: var(--link-hover-color);
-}
 
 .hamburger-menu-button-container, .mobile-navigation {
     background: var(--background-opacity);
@@ -115,4 +112,21 @@ button[type="submit"]:hover {
 
 h1 {
     color: black;
+}
+
+.default-big-section {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 20px;
+    background: var(--background-opacity);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px var(--box-shadow-color);
+    border-radius: 10px;
+}
+
+@media (max-width: 600px) {
+    .default-big-section {
+        padding: 10px;
+        max-width: 90%;
+    }
 }
