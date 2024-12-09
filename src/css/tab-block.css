@@ -78,10 +78,6 @@
     margin: 30px 0; /* Add vertical spacing around images */
 }
 
-.compact-centered-image {
-    max-width: 100%; /* Ensure images are responsive */
-    height: auto; /* Maintain aspect ratio */
-}
 
 
 .default-big-section {

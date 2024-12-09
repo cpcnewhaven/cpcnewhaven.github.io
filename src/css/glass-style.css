@@ -1,0 +1,118 @@
+:root {
+    --root-color: #124E78;
+    --text-color: #333;
+    --background-gradient-start: #f0f0f0;
+
+    --hover-color: #0056b3;
+    --link-hover-color: #007BFF;
+    --box-shadow-color: rgba(0, 0, 0, 0.1);
+    --background-opacity: rgba(255, 255, 255, 0.8);
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, var(--background-gradient-start), var(--background-gradient-end));
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+header, footer {
+    background: var(--background-opacity);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px var(--box-shadow-color);
+    padding: 20px;
+    text-align: center;
+}
+
+nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--link-hover-color);
+}
+
+.hamburger-menu-button-container, .mobile-navigation {
+    background: var(--background-opacity);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px var(--box-shadow-color);
+}
+
+.section-title, h1, h2 {
+    color: var(--root-color);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.tab-widget {
+    background: var(--background-opacity);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px var(--box-shadow-color);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.tab-block-tab {
+    background: transparent;
+    border: none;
+    color: var(--text-color);
+    font-size: 16px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+}
+
+.tab-block-tab:hover, .tab-block-tab:focus {
+    background: var(--root-color);
+    color: #fff;
+}
+
+.tab-block-content {
+    display: none;
+    padding: 20px;
+    border-top: 1px solid #ccc;
+}
+
+.tab-block-content.active {
+    display: block;
+}
+
+.form-container {
+    background: var(--background-opacity);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px var(--box-shadow-color);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+input[type="text"], input[type="email"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: var(--background-opacity);
+    backdrop-filter: blur(5px);
+}
+
+button[type="submit"] {
+    background: var(--link-hover-color);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button[type="submit"]:hover {
+    background: var(--hover-color);
+}
+
+h1 {
+    color: black;
+}
