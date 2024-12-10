@@ -17,7 +17,8 @@ body {
     padding: 0;
 }
 
-header, footer {
+header,
+footer {
     background: var(--background-opacity);
     backdrop-filter: blur(10px);
     box-shadow: 0 4px 6px var(--box-shadow-color);
@@ -34,15 +35,17 @@ nav a {
 }
 
 
-.hamburger-menu-button-container, .mobile-navigation {
+.hamburger-menu-button-container,
+.mobile-navigation {
     background: var(--background-opacity);
     backdrop-filter: blur(10px);
     box-shadow: 0 4px 6px var(--box-shadow-color);
 }
 
-.section-title, h1, h2 {
+.section-title,
+h1,
+h2 {
     color: var(--root-color);
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .tab-widget {
@@ -63,7 +66,8 @@ nav a {
     transition: background 0.3s, color 0.3s;
 }
 
-.tab-block-tab:hover, .tab-block-tab:focus {
+.tab-block-tab:hover,
+.tab-block-tab:focus {
     background: var(--root-color);
     color: #fff;
 }
@@ -86,7 +90,8 @@ nav a {
     border-radius: 10px;
 }
 
-input[type="text"], input[type="email"] {
+input[type="text"],
+input[type="email"] {
     width: calc(100% - 22px);
     padding: 10px;
     margin: 10px 0;

@@ -1,0 +1,77 @@
+{
+    "subTabs": [
+        {
+            "name": "Life Groups",
+            "image": {
+                "src": "@https://storage.googleapis.com/cpc-public-website/web-assets/heros/[HERO][LIFE_GROUPS].jpg",
+                "alt": "Life Groups Image",
+                "description": "Image for Life Groups section"
+            }
+        },
+        {
+            "name": "Discipleship Groups",
+            "image": {
+                "src": "@https://storage.googleapis.com/cpc-public-website/web-assets/heros/[HERO][DISCIPLESHIP_GROUPS].jpg",
+                "alt": "Discipleship Groups Image",
+                "description": "Image for Discipleship Groups section"
+            }
+        },
+        {
+            "name": "Children",
+            "image": {
+                "src": "@https://storage.googleapis.com/cpc-public-website/web-assets/heros/[HERO][CHILDREN].jpg",
+                "alt": "Children's Christian Education Image",
+                "description": "Image for Children's Christian Education section"
+            }
+        },
+        {
+            "name": "Youth",
+            "image": {
+                "src": "@https://storage.googleapis.com/cpc-public-website/web-assets/heros/[HERO][YOUTH].jpg",
+                "alt": "Youth Image",
+                "description": "Image for Youth section"
+            }
+        },
+        {
+            "name": "Undergraduate",
+            "image": {
+                "src": "@https://storage.googleapis.com/cpc-public-website/web-assets/heros/[HERO][UNDERGRADUATE].jpg",
+                "alt": "Undergraduate Image",
+                "description": "Image for Undergraduate section"
+            }
+        },
+        {
+            "name": "Graduate",
+            "image": {
+                "src": "@https://storage.googleapis.com/cpc-public-website/web-assets/heros/[HERO][GRADUATE].jpg",
+                "alt": "Graduate Image",
+                "description": "Image for Graduate section"
+            }
+        },
+        {
+            "name": "Mercy",
+            "image": {
+                "src": "@https://storage.googleapis.com/cpc-public-website/web-assets/heros/[HERO][MERCY].jpg",
+                "alt": "Mercy Image",
+                "description": "Image for Mercy section"
+            }
+        },
+        {
+            "name": "Men",
+            "image": {
+                "src": "@https://storage.googleapis.com/cpc-public-website/web-assets/heros/[HERO][MEN].jpg",
+                "alt": "Men's Ministry Image",
+                "description": "Image for Men's Ministry section"
+            }
+        },
+        {
+            "name": "Women",
+            "image": {
+                "src": "@https://storage.googleapis.com/cpc-public-website/web-assets/heros/[HERO][WOMEN].jpg",
+                "alt": "Women's Ministry Image",
+                "description": "Image for Women's Ministry section"
+            }
+        }
+    ]
+
+}
