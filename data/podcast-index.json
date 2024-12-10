@@ -327,6 +327,30 @@
                 "link": "https://open.spotify.com/episode/5nd7nR86Y8A7IHQP94yjSq?si=8dc7fb2428e848f2",
                 "podcast-thumbnail_url": "https://storage.googleapis.com/cpc-public-website/podcast-thumbnails/11.24.24%20-%20CPC.jpg",
                 "youtube_link": "https://www.youtube.com/watch?v=kH-iz9zah3g"
+            },
+            {
+                "id": "24-12-03",
+                "title": "The Refreshing Good News of Justice",
+                "author": "Rev. Jerry Ornelas",
+                "scripture": "Exodus 21:1-16",
+                "date": "2024-12-03",
+                "apple_podcasts_url": "",
+                "spotify_url": "https://open.spotify.com/episode/5nd7nR86Y8A7IHQP94yjSq?si=8dc7fb2428e848f2",
+                "link": "https://open.spotify.com/episode/3baRPv9HHKexQ9GstNpnKc?si=8091bc1017dd4803",
+                "podcast-thumbnail_url": "https://storage.googleapis.com/cpc-public-website/podcast-thumbnails/11.24.24%20-%20CPC.jpg",
+                "youtube_link": "https://www.youtube.com/watch?v=kH-iz9zah3g"
+            },
+            {
+                "id": "24-12-08",
+                "title": "When God Comes: Holiness",
+                "author": "Rev. Craig Luekens",
+                "scripture": "Exodus 23:20-33",
+                "date": "2024-12-08",
+                "apple_podcasts_url": "",
+                "spotify_url": "https://open.spotify.com/episode/5nd7nR86Y8A7IHQP94yjSq?si=8dc7fb2428e848f2",
+                "link": "https://open.spotify.com/episode/5nd7nR86Y8A7IHQP94yjSq?si=8dc7fb2428e848f2",
+                "podcast-thumbnail_url": "https://storage.googleapis.com/cpc-public-website/podcast-thumbnails/sundaySermons/12.08.24%20-%20CPC.jpg",
+                "youtube_link": "https://www.youtube.com/watch?v=kH-iz9zah3g"
             }
         ]
     },
@@ -394,7 +418,7 @@
             },
             {
                 "number": 20,
-                "title": "Beyond the Sunday Sermon - The Awful & Benevolent Grace of God",
+                "title": "The Awful & Benevolent Grace of God",
                 "link": "https://open.spotify.com/episode/1ZMbwD93JcHmpMMby1nJeU?si=058314a953dd4b7b",
                 "guest": "Seth Bollinger",
                 "date_added": "2024-10-30",
@@ -402,7 +426,7 @@
             },
             {
                 "number": 21,
-                "title": "Beyond the Sunday Sermon - Exodus 18 ",
+                "title": "Exodus 18 ",
                 "link": "https://open.spotify.com/episode/5AB1ofMCLYphbocFIaeCVm?si=b79d2fd3fd944b70",
                 "guest": "Layne Boyles",
                 "date_added": "2024-11-07",
@@ -411,10 +435,28 @@
             },
             {
                 "number": 22,
-                "title": "Beyond the Sunday Sermon - Exodus 19",
+                "title": "Exodus 19",
                 "link": "https://open.spotify.com/episode/5AB1ofMCLYphbocFIaeCVm?si=b79d2fd3fd944b70",
                 "guest": "Julie Walker",
                 "date_added": "2024-11-15",
+                "season": "fall 2024",
+                "podcast-thumbnail_url": "https://storage.googleapis.com/cpc-public-website/podcast-thumbnails/beyond/Beyond%20-%2011-15-24.jpg"
+            },
+            {
+                "number": 23,
+                "title": "The Ten Commandments",
+                "link": "https://open.spotify.com/episode/7mRdSLMhMbdhiQX02zE7Z4?si=6140fbf6dcae4f22",
+                "guest": "Rev. Jerry Ornelas",
+                "date_added": "2024-12-03",
+                "season": "fall 2024",
+                "podcast-thumbnail_url": "https://storage.googleapis.com/cpc-public-website/podcast-thumbnails/beyond/Beyond%20-%2011-15-24.jpg"
+            },
+            {
+                "number": 24,
+                "title": "The Ten Commandments Part 2",
+                "link": "https://open.spotify.com/episode/03czc7Z0bnniWrneEfIsfL?si=3badbf45790e4ab9",
+                "guest": "Rev. Jerry Ornelas",
+                "date_added": "2024-12-10",
                 "season": "fall 2024",
                 "podcast-thumbnail_url": "https://storage.googleapis.com/cpc-public-website/podcast-thumbnails/beyond/Beyond%20-%2011-15-24.jpg"
             }
