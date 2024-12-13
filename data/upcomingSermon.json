@@ -294,14 +294,29 @@
     "title": "The Law & Loving God by Loving Your Neighbor",
     "author": "Rev. Craig Luekens",
     "scripture": "Exodus 20:1-21",
-    "date": "2024-11-24",
+    "date": "2024-12-1",
     "active": true,
     "sermon-preview_url": "",
-    "youtube_url": "",
-    "spotify_url": "",
+    "youtube_url": "https://www.youtube.com/watch?v=kH-iz9zah3g",
+    "spotify_url": "https://open.spotify.com/episode/5nd7nR86Y8A7IHQP94yjSq?si=8dc7fb2428e848f2",
     "apple_podcasts_url": "",
     "bulletin_url": "",
-    "podcast-thumbnail_url": "",
+    "podcast-thumbnail_url": "https://storage.googleapis.com/cpc-public-website/podcast-thumbnails/11.24.24%20-%20CPC.jpg",
+    "status": "past"
+  },
+  {
+    "id": "24",
+    "title": "When God Comes: Holinesss",
+    "author": "Rev. Craig Luekens",
+    "scripture": "Exodus 23:20-33",
+    "date": "2024-12-08",
+    "active": true,
+    "sermon-preview_url": "",
+    "youtube_url": "https://www.youtube.com/watch?v=kH-iz9zah3g",
+    "spotify_url": "https://open.spotify.com/episode/5nd7nR86Y8A7IHQP94yjSq?si=8dc7fb2428e848f2",
+    "apple_podcasts_url": "",
+    "bulletin_url": "",
+    "podcast-thumbnail_url": "https://storage.googleapis.com/cpc-public-website/podcast-thumbnails/sundaySermons/12.08.24%20-%20CPC.jpg",
     "status": "present"
   }
 

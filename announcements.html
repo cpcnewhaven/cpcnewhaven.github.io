@@ -71,8 +71,43 @@
             <li><a class="mobile-menu-link" href="give.html">Give</a></li>
           </ul>
         </nav>
-    
-
+    <hr>
+        <section id="community-calendar">
+            <h1>CPC Community Calendar</h1>
+            <hr>
+            <iframe src="https://calendar.google.com/calendar/embed?src=baf2h147ghi7nu8ifijjrt994k%40group.calendar.google.com&ctz=America%2FNew_York" style="border: 0" width="100%" height="360px" frameborder="0" scrolling="no"></iframe>
+        </section>
+        
+        <style>
+            #community-calendar {
+                
+                margin: 20px auto;
+                max-width: 1440px;
+                height:480px;
+                padding: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                border-radius: 8px;
+                background-color: #f9f9f9;
+            }
+        
+            #community-calendar h1 {
+                text-align: center;
+                font-size: 1.5em;
+                margin-bottom: 20px;
+            }
+        
+            @media (max-width: 768px) {
+                #community-calendar iframe {
+                    height: 400px;
+                }
+            }
+        
+            @media (max-width: 480px) {
+                #community-calendar iframe {
+                    height: 300px;
+                }
+            }
+        </style>
         <div id="page-announcements">
             <div class="top-splash-welcome">
                 <h1>Announcements and Highlights</h1>
@@ -98,16 +133,17 @@
                 src="https://m.media-amazon.com/images/I/71vZWmthy8L._AC_UF1000,1000_QL80_.jpg"
                 alt="Glittering Vices Book Cover"
                 style="width:100%; max-width:300px; display:block; margin:0 auto;">
-            <p>
+            <p class="body-text">
                 <span>New Book: Pastor’s Book Pick - Glittering Vices: A New Look at</span>
                 the 7 Deadly Sins and their Remedies, by Rebecca DeYoung
             </p>
-            <p>
+            <p class="body-text">
                 This book is a great introduction to moral formation and spiritual disciplines, especially learning from the ancient and medieval church on how to fight sin and become more like Jesus. Rather than a guilt-trip or invitation to despair, this book gives practical wisdom and advice on how to be set free from sin, that we would live more fully according to the law of love. Pick up a copy in the foyer (if you need large print, unfortunately you’ll have to read it on a tablet), and pay what you can.
             </p>
         </section>
         <hr>
 
+<!--
 <section id="full-year-calendar">
     <h2>2024-2025 Calendar</h2>
     <div class="calendar-container">
@@ -295,6 +331,8 @@
 
     
 </style>
+-->
+
 
         <section id="footer-cta-a" class="styled-section-a">
             <div class="form-container">

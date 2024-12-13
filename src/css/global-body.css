@@ -2227,12 +2227,12 @@ p {
 }
 
 .announcement.highlight {
-    background-color: #e6f7ff;
+    background-color: transparent;
     border-left: 4px solid #1890ff;
 }
 
 .announcement.ongoing {
-    background-color: #f6ffed;
+    background-color: transparent;
     border-left: 4px solid #52c41a;
     width: 100%;
     max-width: 800px;
