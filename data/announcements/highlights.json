@@ -418,6 +418,61 @@
       "date": "December 7, 2024",
       "time": "9:00 AM - 12:00 PM",
       "location": "Church Grounds"
+    },
+    {
+      "id": "2024-028",
+      "title": "Mission Anabaino Church Planting Presentation",
+      "description": "Join us for the last fellowship lunch of 2024 as we get to hear from Pastor Graham on the latest news and updates about the church planting ministry and collaborative, Mission Anabaino.",
+      "dateEntered": "2024-12-13",
+      "active": "true",
+      "type": "upcoming",
+      "category": "upcoming",
+      "tag": "churchplanting",
+      "date": "December 15th, 2024",
+      "time": "After worship",
+      "location": "CPC Fellowship Hall",
+      "featuredIMG": "https://storage.googleapis.com/cpc-public-website/63.jpg"
+    },
+    {
+      "id": "2024-029",
+      "title": "Engaging with Aging",
+      "description": "We’re having a seminar and discussion on issues related to aging well, end-of-life, and death. These will include a biblical and theological survey from Pastor Craig, a presentation and Q&A with a Geriatric physician, as well as legal and financial suggestions that everyone should be aware of. All ages are welcome since this will impact everyone at some point! Light breakfast and refreshments provided, and it will be livestreamed.",
+      "dateEntered": "2024-12-13",
+      "active": "true",
+      "type": "upcoming",
+      "category": "upcoming",
+      "tag": "aging",
+      "date": "January 25, 2025",
+      "time": "9:00 AM - 12:30 PM",
+      "location": "CPC Fellowship Hall"
+    },
+    {
+      "id": "2024-030",
+      "title": "Lessons and Carols Live Tonight",
+      "description": "Join us for the Lessons and Carols service live tonight! Experience the joy and warmth of the season with beautiful music and readings. <br><br><strong>Watch Live:</strong> Click <a href=\"https://www.youtube.com/@CPCNewHaven\" target=\"_blank\">here</a> to view the service live on our YouTube channel.",
+      "dateEntered": "2024-12-13",
+      "active": "true",
+      "type": "upcoming",
+      "category": "upcoming",
+      "tag": "superFeatured",
+      "featuredIMG": "https://cpmfiles1.com/cpcnewhaven.org/20221209_185632-1.jpg",
+      "date": "December 13, 2024",
+      "time": "6:00 PM",
+      "location": "Online"
+    },
+    {
+      "id": "2024-031",
+      "title": "🎶🎄 Caroling at the Hill Christmas Store THIS Saturday!",
+      "description": "Join us for a festive time of caroling at the Hill Christmas Store! <br><br><strong>When:</strong> Saturday, December 14th at 10:45am<br><strong>Where:</strong> 158 Davenport Ave, New Haven, CT<br>Park at John C. Daniels Elementary school parking lot and walk over.<br>Easy going, fun, festive time singing and serving together. Hope to see you there! ☺️",
+      "dateEntered": "2024-12-13",
+      "active": "true",
+      "type": "upcoming",
+      "category": "upcoming",
+      "tag": "superFeatured",
+      "date": "December 14, 2024",
+      "time": "10:45 AM",
+      "location": "158 Davenport Ave, New Haven, CT",
+      "featuredIMG": "https://storage.googleapis.com/cpc-public-website/events/Hill%20Christmas%20Store%202023/IMG_0244.JPG"     
     }
   ]
 }

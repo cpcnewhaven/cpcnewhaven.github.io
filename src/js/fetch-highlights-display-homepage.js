@@ -4,15 +4,14 @@ document.addEventListener('DOMContentLoaded', function() {
         .then(data => {
             const highlightsContainer = document.getElementById('highlights');
             
-            // Sort announcements by dateEntered in descending order
-            data.announcements.sort((a, b) => new Date(b.dateEntered) - new Date(a.dateEntered));
+            // Separate superFeatured announcements that are active
+            const superFeaturedAnnouncements = data.announcements.filter(announcement => announcement.tag === "superFeatured" && announcement.active === "true");
             
-            data.announcements.forEach(announcement => {
-                // Check if the announcement is active
-                if (announcement.active === "false") {
-                    return; // Skip this announcement
-                }
+            // Separate other announcements that are active
+            const otherAnnouncements = data.announcements.filter(announcement => announcement.tag !== "superFeatured" && announcement.active === "true");
 
+            // Function to create announcement elements
+            const createAnnouncementElement = (announcement) => {
                 const highlightElement = document.createElement('div');
                 highlightElement.classList.add('announcement');
                 
@@ -23,6 +22,11 @@ document.addEventListener('DOMContentLoaded', function() {
                     highlightElement.classList.add('ongoing');
                 } else if (announcement.type === "upcoming") {
                     highlightElement.classList.add('upcoming');
+                }
+
+                // Add special styling for superFeatured
+                if (announcement.tag === "superFeatured") {
+                    highlightElement.classList.add('super-featured');
                 }
 
                 // Handle featured image if available
@@ -60,7 +64,24 @@ document.addEventListener('DOMContentLoaded', function() {
                 descriptionElement.innerHTML = announcement.description; // Use innerHTML to render HTML content
                 highlightElement.appendChild(descriptionElement);
 
-                highlightsContainer.appendChild(highlightElement);
+                // Remove color styling for upcoming and ongoing events
+                if (announcement.type === "upcoming" || announcement.type === "ongoing") {
+                    highlightElement.style.color = ''; // Reset color
+                }
+
+                return highlightElement;
+            };
+
+            // Display superFeatured announcements first
+            superFeaturedAnnouncements.forEach(announcement => {
+                const element = createAnnouncementElement(announcement);
+                highlightsContainer.appendChild(element);
+            });
+
+            // Display other announcements
+            otherAnnouncements.forEach(announcement => {
+                const element = createAnnouncementElement(announcement);
+                highlightsContainer.appendChild(element);
             });
         })
         .catch(error => console.error('Error loading highlights:', error));
@@ -71,3 +92,15 @@ document.addEventListener('scroll', function() {
     const scrollPosition = window.scrollY;
     splashImage.style.transform = `translateY(${scrollPosition * 0.5}px)`;
 });
+
+// Add CSS for superFeatured styling
+const style = document.createElement('style');
+style.innerHTML = `
+    .super-featured {
+        border: 2px solid gold;
+        padding: 10px;
+        margin-bottom: 20px;
+        background-color: #f9f9f9;
+    }
+`;
+document.head.appendChild(style);

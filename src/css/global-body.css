@@ -2186,7 +2186,6 @@ p {
 }
 
 .announcement {
-    background-color: #f8f8f8;
     border-radius: 8px;
     padding: 20px;
     margin-bottom: 20px;
@@ -2272,8 +2271,7 @@ p {
 }
 
 .announcement.upcoming {
-    background-color: #c8e5ff5a;
-    border-left: 4px solid #1e90ff;
+    border-left: 2px solid #1e90ff;
     width: 100%;
     max-width: 800px;
 }
