@@ -11,6 +11,11 @@
             src="https://cdn.jsdelivr.net/npm/alpinejs@3.12.0/dist/cdn.min.js"
             defer></script>
 
+        <!-- Include Google Fonts -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&display=swap"
+            rel="stylesheet">
+
         <style>
         /* Modern Tab styles */
         .tabs-container {
@@ -18,6 +23,7 @@
             justify-content: center;
             margin-bottom: 20px;
             gap: 10px;
+            font-family: 'Barlow', sans-serif;
         }
 
         .tab-button {
@@ -30,6 +36,7 @@
             color: #555;
             transition: background 0.3s ease, color 0.3s ease;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            font-family: 'Barlow', sans-serif;
         }
 
         .tab-button:hover {
@@ -48,6 +55,7 @@
             border-radius: 10px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             background: #fff;
+            font-family: 'Barlow', sans-serif;
         }
 
         .tab-content > div[x-show="true"] {
@@ -131,41 +139,101 @@
                 <!-- Small Groups -->
                 <div x-show="activeTab === 'small-groups'">
                     <h2>Small Groups</h2>
-                    <p>Life Groups are our way of doing church in the small with
-                        all sorts of people engaged in prayer, teaching,
-                        fellowship, and care.</p>
-                    <section class="inner-page-section">
-                        <p class="body-text">
-                            "God has so composed the body, giving greater honor
-                            to the part that lacked it, that there may
-                            be no division in the body, but that the members may
-                            have the same care for one another. If one member
-                            suffers, all suffer together; if one member is
-                            honored, all rejoice together."
-                            - 1 Corinthians 12:24-26
-                        </p>
-                        <p class="body-text">
-                            God's people are the hands and feet of Christ. We
-                            cannot experience God and grow spiritually in a
-                            truly gospel-centered and biblical way if we are
-                            living in isolation. Neither can we say we are
-                            flourishing if our brother or sister in Christ is
-                            suffering. Bound together with covenant communion,
-                            God brings us into new relationships where sacrifice
-                            is freedom and giving to others is where we find
-                            life.
-                        </p>
-                        <p class="body-text">
-                            Life Groups are the vehicle that we use to help its
-                            participants continue to experience Christ
-                            outside of our worship gatherings and to impart the
-                            pastoral care that Christ provides through the
-                            love of His people. Thus, the worship, teaching,
-                            fellowship, and care for one another supply a more
-                            intimate and hands-on encounter with the living
-                            Christ.
-                        </p>
-                    </section>
+                    <div x-data="{ activeSubTab: 'life-groups' }">
+                        <div class="tabs-container">
+                            <button class="tab-button"
+                                :class="{ 'active': activeSubTab === 'life-groups' }"
+                                @click="activeSubTab = 'life-groups'">Life
+                                Groups</button>
+                            <button class="tab-button"
+                                :class="{ 'active': activeSubTab === 'discipleship-groups' }"
+                                @click="activeSubTab = 'discipleship-groups'">Discipleship
+                                Groups</button>
+                        </div>
+
+                        <!-- Sub Tab Content -->
+                        <div class="tab-content">
+                            <!-- Life Groups -->
+                            <div x-show="activeSubTab === 'life-groups'">
+                                <h2>Life Groups</h2>
+                                <p class="body-text">
+                                    Life Groups are our way of doing church in
+                                    the small with all sorts of people engaged
+                                    in prayer, teaching, fellowship, and care.
+                                </p>
+                                <p class="body-text">
+                                    "God has so composed the body, giving
+                                    greater honor to the part that lacked it,
+                                    that there may
+                                    be no division in the body, but that the
+                                    members may have the same care for one
+                                    another. If one member
+                                    suffers, all suffer together; if one member
+                                    is honored, all rejoice together."
+                                    - 1 Corinthians 12:24-26
+                                </p>
+                                <p class="body-text">
+                                    God's people are the hands and feet of
+                                    Christ. We cannot experience God and grow
+                                    spiritually in a
+                                    truly gospel-centered and biblical way if we
+                                    are living in isolation. Neither can we say
+                                    we are
+                                    flourishing if our brother or sister in
+                                    Christ is suffering. Bound together with
+                                    covenant communion,
+                                    God brings us into new relationships where
+                                    sacrifice is freedom and giving to others is
+                                    where we find life.
+                                </p>
+                                <p class="body-text">
+                                    Life Groups are the vehicle that we use to
+                                    help its participants continue to experience
+                                    Christ
+                                    outside of our worship gatherings and to
+                                    impart the pastoral care that Christ
+                                    provides through the
+                                    love of His people. Thus, the worship,
+                                    teaching, fellowship, and care for one
+                                    another supply a more
+                                    intimate and hands-on encounter with the
+                                    living Christ.
+                                </p>
+                            </div>
+
+                            <!-- Discipleship Groups -->
+                            <div
+                                x-show="activeSubTab === 'discipleship-groups'">
+                                <h2>Discipleship Groups</h2>
+                                <p class="body-text">
+                                    Christian discipleship is the application of
+                                    the gospel to every aspect of life. The very
+                                    gospel that
+                                    sets us free from the fear of divine and
+                                    human condemnation is the same power that
+                                    transforms our relationships, work,
+                                    and worship.
+                                </p>
+                                <p class="body-text">
+                                    Biblical discipleship, including word,
+                                    worship, and fellowship, exists at CPC
+                                    primarily through Sunday
+                                    worship, courses offered through the School
+                                    of Discipleship, and Men’s and Women’s
+                                    Discipleship Groups.
+                                </p>
+                                <p class="body-text">
+                                    We encourage all congregation members to
+                                    participate in both a Life Group and a
+                                    Discipleship Group.
+                                    Although there are components of study in
+                                    each Discipleship Group, their focus is on
+                                    living and sharing truth through
+                                    mutual accountability, study, and prayer.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Ministries -->
