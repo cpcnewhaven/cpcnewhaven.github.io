@@ -18,13 +18,9 @@ document.addEventListener('DOMContentLoaded', function() {
             beyondSermons.sort((a, b) => new Date(b.date_added) - new Date(a.date_added));
 
             // Render the table rows
-            function renderTable(sermons, tableBody, isBeyond = false, isWWB = false, page = 1, rowsPerPage = 10) {
+            function renderTable(sermons, tableBody, isBeyond = false, isWWB = false) {
                 tableBody.innerHTML = '';
-                const start = (page - 1) * rowsPerPage;
-                const end = start + rowsPerPage;
-                const paginatedSermons = sermons.slice(start, end);
-
-                paginatedSermons.forEach(sermon => {
+                sermons.forEach(sermon => {
                     const row = document.createElement('tr');
                     row.innerHTML = `
                         <td>${isWWB ? sermon.number : formatDate(isBeyond ? sermon.date_added : sermon.date)}</td>
@@ -35,8 +31,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     `;
                     tableBody.appendChild(row);
                 });
-
-          
             }
 
             // Initial render
@@ -79,6 +73,9 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function formatDate(dateString) {
+    const date = new Date(dateString);
+    // Adjust for timezone offset
+    date.setMinutes(date.getMinutes() + date.getTimezoneOffset());
     const options = { year: 'numeric', month: 'long', day: 'numeric' };
-    return new Date(dateString).toLocaleDateString('en-US', options);
+    return date.toLocaleDateString('en-US', options);
 }

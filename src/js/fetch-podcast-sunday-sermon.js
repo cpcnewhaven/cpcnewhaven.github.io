@@ -31,12 +31,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function displayResults(results) {
         searchResults.innerHTML = '';
-        results.slice(0, 5).forEach(podcast => {
+        results.forEach(podcast => {
             const resultElement = document.createElement('div');
             resultElement.classList.add('search-result');
             resultElement.innerHTML = `
                 <strong>${podcast.title}</strong><br>
-                ${podcast.date} - ${podcast.scripture}
+                ${new Date(podcast.date).toLocaleDateString()} - ${podcast.scripture}
             `;
             resultElement.addEventListener('click', () => {
                 window.open(podcast.spotify_url || podcast.youtube_url || podcast.apple_podcasts_url, '_blank');

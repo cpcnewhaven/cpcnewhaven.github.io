@@ -15,7 +15,20 @@
         <link
             href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&display=swap"
             rel="stylesheet">
-
+        <style>
+                /* ... existing styles ... */
+            
+                /* Update image styles for full width and mobile responsiveness */
+                img {
+                    width: 100%;
+                    height: auto;
+                    max-width: none; /* Remove any max-width constraints */
+                    margin-bottom: 20px;
+                    cursor: pointer;
+                }
+            
+                /* ... existing styles ... */
+            </style>
         <style>
         /* Modern Tab styles */
         .tabs-container {
@@ -125,6 +138,15 @@
         .lightbox:target {
             display: flex;
         }
+
+        /* New class for images */
+        .responsive-image {
+            min-width: 100%;
+            max-height:300px;
+            object-fit: cover;
+            margin-bottom: 20px;
+            cursor: pointer;
+        }
     </style>
     </head>
 
@@ -182,7 +204,7 @@
                                 <h2>Life Groups</h2>
                                 <img :src="images.smallGroups.lifeGroups"
                                     alt="Life Groups Image"
-                                    style="width:100%; max-width:300px; margin-bottom:20px; cursor:pointer;"
+                                    class="responsive-image"
                                     @click="lightboxImage = images.smallGroups.lifeGroups; showLightbox = true">
                                 <p class="body-text">
                                     Life Groups are our way of doing church in
@@ -236,7 +258,7 @@
                                 <img
                                     :src="images.smallGroups.discipleshipGroups"
                                     alt="Discipleship Groups Image"
-                                    style="width:100%; max-width:300px; margin-bottom:20px; cursor:pointer;"
+                                    class="responsive-image"
                                     @click="lightboxImage = images.smallGroups.discipleshipGroups; showLightbox = true">
                                 <p class="body-text">
                                     Christian discipleship is the application of
@@ -272,7 +294,6 @@
                 <!-- Ministries -->
                 <div x-show="activeTab === 'ministries'">
                     <h2>Ministries</h2>
-                    <p>Information about Ministries at CPC...</p>
                     <!-- Submenu for Ministries -->
                     <div x-data="{ activeSubTab: 'children' }">
                         <div class="tabs-container">
@@ -307,7 +328,7 @@
                                     Education</h2>
                                 <img :src="images.ministries.children"
                                     alt="Children's Education Image"
-                                    style="width:100%; max-width:300px; margin-bottom:20px; cursor:pointer;"
+                                    class="responsive-image"
                                     @click="lightboxImage = images.ministries.children; showLightbox = true">
                                 <p class="body-text">
                                     In an attempt to assist our covenant
@@ -369,7 +390,7 @@
                                 <h2 class="heading-2">Youth</h2>
                                 <img :src="images.ministries.youth"
                                     alt="Youth Image"
-                                    style="width:100%; max-width:300px; margin-bottom:20px; cursor:pointer;"
+                                    class="responsive-image"
                                     @click="lightboxImage = images.ministries.youth; showLightbox = true">
                                 <p class="body-text">
                                     Our youth ministry at CPC is the capstone of
@@ -420,7 +441,7 @@
                                 <h2 class="heading-2">Undergraduate</h2>
                                 <img :src="images.ministries.undergraduate"
                                     alt="Undergraduate Image"
-                                    style="width:100%; max-width:300px; margin-bottom:20px; cursor:pointer;"
+                                    class="responsive-image"
                                     @click="lightboxImage = images.ministries.undergraduate; showLightbox = true">
                                 <p class="body-text">
                                     CPC's college ministry is a collection of
@@ -522,7 +543,7 @@
                                 <h2 class="heading-2">Graduate</h2>
                                 <img :src="images.ministries.graduate"
                                     alt="Graduate Image"
-                                    style="width:100%; max-width:300px; margin-bottom:20px; cursor:pointer;"
+                                    class="responsive-image"
                                     @click="lightboxImage = images.ministries.graduate; showLightbox = true">
                                 <p class="body-text">
                                     The Graduate group exists to minister to men
@@ -578,7 +599,7 @@
                                 <h2 class="heading-2">Mercy</h2>
                                 <img :src="images.ministries.mercy"
                                     alt="Mercy Image"
-                                    style="width:100%; max-width:300px; margin-bottom:20px; cursor:pointer;"
+                                    class="responsive-image"
                                     @click="lightboxImage = images.ministries.mercy; showLightbox = true">
                                 <p class="body-text">
                                     <span>THE QUESTION ANSWERED THEN AND
@@ -699,7 +720,7 @@
                                 <h2 class="heading-2">Men</h2>
                                 <img :src="images.ministries.men"
                                     alt="Men's Ministry Image"
-                                    style="width:100%; max-width:300px; margin-bottom:20px; cursor:pointer;"
+                                    class="responsive-image"
                                     @click="lightboxImage = images.ministries.men; showLightbox = true">
                                 <p class="body-text">
                                     The mission of CPC's Men's Ministry is to
@@ -724,7 +745,7 @@
                                 <h2 class="heading-2">Women</h2>
                                 <img :src="images.ministries.women"
                                     alt="Women's Ministry Image"
-                                    style="width:100%; max-width:300px; margin-bottom:20px; cursor:pointer;"
+                                    class="responsive-image"
                                     @click="lightboxImage = images.ministries.women; showLightbox = true">
                                 <p class="body-text">
                                     Women at CPC are encouraged to live their
@@ -753,7 +774,7 @@
                     <section class="inner-page-section">
                         <img :src="images.membership.default"
                             alt="Membership Image"
-                            style="width:100%; max-width:300px; margin-bottom:20px; cursor:pointer;"
+                            class="responsive-image"
                             @click="lightboxImage = images.membership.default; showLightbox = true">
                         <p class="body-text">
                             Throughout history, special relationships have been
@@ -851,6 +872,17 @@
                     }
                 }
             }
+        </script>
+
+        <script>
+            document.addEventListener('scroll', function() {
+                const parallaxElements = document.querySelectorAll('.parallax-image');
+                parallaxElements.forEach(element => {
+                    const speed = 0.5; // Adjust the speed of the parallax effect
+                    const offset = window.pageYOffset * speed;
+                    element.style.transform = `translateY(${offset}px)`;
+                });
+            });
         </script>
     </body>
 
