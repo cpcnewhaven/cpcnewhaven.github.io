@@ -169,17 +169,6 @@ table {
     width: 100%;
 }
 
-header {
-    background-color: #ADD8E6;
-    /* Light blue color */
-    transition: background-color 0.3s ease;
-}
-
-header:hover {
-    background-color: #87CEEB;
-    /* Slightly darker blue on hover */
-}
-
 .link-button {
     width: 100%;
     max-width: 220px;
