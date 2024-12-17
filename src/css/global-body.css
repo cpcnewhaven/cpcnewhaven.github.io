@@ -662,7 +662,6 @@ p {
     /* Optional: adds a shadow for better visibility */
 }
 
-/* Top Navigation Styles */
 .main-navigation {
     display: flex;
     justify-content: center;
@@ -670,11 +669,15 @@ p {
     position: sticky;
     top: 0;
     z-index: 1000;
-    background: rgba(0, 0, 0, 0.879);
+    background: rgba(0, 0, 50, 0.97);
+    /* Dark navy blue with transparency */
     backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(0, 166, 255, 0.3);
+    /* Blur effect for glassy look */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    /* Subtle border */
     padding: 6.5px 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Soft shadow for depth */
     width: 100%;
 }
 
