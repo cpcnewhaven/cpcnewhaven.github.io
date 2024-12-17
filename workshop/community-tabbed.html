@@ -16,21 +16,16 @@
             href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&display=swap"
             rel="stylesheet">
         <style>
-                /* ... existing styles ... */
-            
-                /* Update image styles for full width and mobile responsiveness */
-                img {
-                    width: 100%;
-                    height: auto;
-                    max-width: none; /* Remove any max-width constraints */
-                    margin-bottom: 20px;
-                    cursor: pointer;
-                }
-            
-                /* ... existing styles ... */
-            </style>
-        <style>
-        /* Modern Tab styles */
+        * {
+            font-family: 'Barlow', sans-serif;
+        }
+
+        h1 {
+            font-family: 'Barlow', sans-serif;
+            text-align: center;
+        }
+     
+        
         .tabs-container {
             display: flex;
             justify-content: center;
@@ -116,37 +111,49 @@
             }
         }
 
-        /* Lightbox styles */
-        .lightbox {
-            display: none;
-            position: fixed;
+  
+        /* Updated class for images */
+        .image-wrapper {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            overflow: hidden;
+            border-radius: 5px;
+        }
+
+        .blurred-background {
+            position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.8);
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
+            background-size: cover;
+            background-position: center;
+            filter: blur(20px);
+            z-index: 0;
+            border-radius: 10px;
         }
 
-        .lightbox img {
-            max-width: 90%;
-            max-height: 80%;
-        }
-
-        .lightbox:target {
-            display: flex;
-        }
-
-        /* New class for images */
         .responsive-image {
-            min-width: 100%;
-            max-height:300px;
+            position: absolute;
+            border-radius: 5px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: auto;
+            height: 350px;
             object-fit: cover;
-            margin-bottom: 20px;
             cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            z-index: 1;
         }
+
+        .responsive-image:hover {
+            cursor: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
     </style>
     </head>
 
@@ -202,10 +209,13 @@
                             <!-- Life Groups -->
                             <div x-show="activeSubTab === 'life-groups'">
                                 <h2>Life Groups</h2>
-                                <img :src="images.smallGroups.lifeGroups"
-                                    alt="Life Groups Image"
-                                    class="responsive-image"
-                                    @click="lightboxImage = images.smallGroups.lifeGroups; showLightbox = true">
+                                <div class="image-wrapper">
+                                    <div class="blurred-background"></div>
+                                    <img :src="images.smallGroups.lifeGroups"
+                                        alt="Life Groups Image"
+                                        class="responsive-image"
+                                        @click="lightboxImage = images.smallGroups.lifeGroups; showLightbox = true">
+                                </div>
                                 <p class="body-text">
                                     Life Groups are our way of doing church in
                                     the small with all sorts of people engaged
@@ -255,11 +265,14 @@
                             <div
                                 x-show="activeSubTab === 'discipleship-groups'">
                                 <h2>Discipleship Groups</h2>
-                                <img
-                                    :src="images.smallGroups.discipleshipGroups"
-                                    alt="Discipleship Groups Image"
-                                    class="responsive-image"
-                                    @click="lightboxImage = images.smallGroups.discipleshipGroups; showLightbox = true">
+                                <div class="image-wrapper">
+                                    <div class="blurred-background"></div>
+                                    <img
+                                        :src="images.smallGroups.discipleshipGroups"
+                                        alt="Discipleship Groups Image"
+                                        class="responsive-image"
+                                        @click="lightboxImage = images.smallGroups.discipleshipGroups; showLightbox = true">
+                                </div>
                                 <p class="body-text">
                                     Christian discipleship is the application of
                                     the gospel to every aspect of life. The very
@@ -326,10 +339,13 @@
                             <div x-show="activeSubTab === 'children'">
                                 <h2 class="heading-2">Children's Christian
                                     Education</h2>
-                                <img :src="images.ministries.children"
-                                    alt="Children's Education Image"
-                                    class="responsive-image"
-                                    @click="lightboxImage = images.ministries.children; showLightbox = true">
+                                <div class="image-wrapper">
+                                    <div class="blurred-background"></div>
+                                    <img :src="images.ministries.children"
+                                        alt="Children's Education Image"
+                                        class="responsive-image"
+                                        @click="lightboxImage = images.ministries.children; showLightbox = true">
+                                </div>
                                 <p class="body-text">
                                     In an attempt to assist our covenant
                                     families in
@@ -388,10 +404,13 @@
                             <!-- Youth -->
                             <div x-show="activeSubTab === 'youth'">
                                 <h2 class="heading-2">Youth</h2>
-                                <img :src="images.ministries.youth"
-                                    alt="Youth Image"
-                                    class="responsive-image"
-                                    @click="lightboxImage = images.ministries.youth; showLightbox = true">
+                                <div class="image-wrapper">
+                                    <div class="blurred-background"></div>
+                                    <img :src="images.ministries.youth"
+                                        alt="Youth Image"
+                                        class="responsive-image"
+                                        @click="lightboxImage = images.ministries.youth; showLightbox = true">
+                                </div>
                                 <p class="body-text">
                                     Our youth ministry at CPC is the capstone of
                                     our
@@ -439,10 +458,13 @@
                             <!-- Undergraduate -->
                             <div x-show="activeSubTab === 'undergraduate'">
                                 <h2 class="heading-2">Undergraduate</h2>
-                                <img :src="images.ministries.undergraduate"
-                                    alt="Undergraduate Image"
-                                    class="responsive-image"
-                                    @click="lightboxImage = images.ministries.undergraduate; showLightbox = true">
+                                <div class="image-wrapper">
+                                    <div class="blurred-background"></div>
+                                    <img :src="images.ministries.undergraduate"
+                                        alt="Undergraduate Image"
+                                        class="responsive-image"
+                                        @click="lightboxImage = images.ministries.undergraduate; showLightbox = true">
+                                </div>
                                 <p class="body-text">
                                     CPC's college ministry is a collection of
                                     students
@@ -541,10 +563,13 @@
                             <!-- Graduate -->
                             <div x-show="activeSubTab === 'graduate'">
                                 <h2 class="heading-2">Graduate</h2>
-                                <img :src="images.ministries.graduate"
-                                    alt="Graduate Image"
-                                    class="responsive-image"
-                                    @click="lightboxImage = images.ministries.graduate; showLightbox = true">
+                                <div class="image-wrapper">
+                                    <div class="blurred-background"></div>
+                                    <img :src="images.ministries.graduate"
+                                        alt="Graduate Image"
+                                        class="responsive-image"
+                                        @click="lightboxImage = images.ministries.graduate; showLightbox = true">
+                                </div>
                                 <p class="body-text">
                                     The Graduate group exists to minister to men
                                     and
@@ -597,10 +622,13 @@
                             <!-- Mercy -->
                             <div x-show="activeSubTab === 'mercy'">
                                 <h2 class="heading-2">Mercy</h2>
-                                <img :src="images.ministries.mercy"
-                                    alt="Mercy Image"
-                                    class="responsive-image"
-                                    @click="lightboxImage = images.ministries.mercy; showLightbox = true">
+                                <div class="image-wrapper">
+                                    <div class="blurred-background"></div>
+                                    <img :src="images.ministries.mercy"
+                                        alt="Mercy Image"
+                                        class="responsive-image"
+                                        @click="lightboxImage = images.ministries.mercy; showLightbox = true">
+                                </div>
                                 <p class="body-text">
                                     <span>THE QUESTION ANSWERED THEN AND
                                         NOW</span>
@@ -718,10 +746,13 @@
                             <!-- Men -->
                             <div x-show="activeSubTab === 'men'">
                                 <h2 class="heading-2">Men</h2>
-                                <img :src="images.ministries.men"
-                                    alt="Men's Ministry Image"
-                                    class="responsive-image"
-                                    @click="lightboxImage = images.ministries.men; showLightbox = true">
+                                <div class="image-wrapper">
+                                    <div class="blurred-background"></div>
+                                    <img :src="images.ministries.men"
+                                        alt="Men's Ministry Image"
+                                        class="responsive-image"
+                                        @click="lightboxImage = images.ministries.men; showLightbox = true">
+                                </div>
                                 <p class="body-text">
                                     The mission of CPC's Men's Ministry is to
                                     provide
@@ -743,10 +774,13 @@
                             <!-- Women -->
                             <div x-show="activeSubTab === 'women'">
                                 <h2 class="heading-2">Women</h2>
-                                <img :src="images.ministries.women"
-                                    alt="Women's Ministry Image"
-                                    class="responsive-image"
-                                    @click="lightboxImage = images.ministries.women; showLightbox = true">
+                                <div class="image-wrapper">
+                                    <div class="blurred-background"></div>
+                                    <img :src="images.ministries.women"
+                                        alt="Women's Ministry Image"
+                                        class="responsive-image"
+                                        @click="lightboxImage = images.ministries.women; showLightbox = true">
+                                </div>
                                 <p class="body-text">
                                     Women at CPC are encouraged to live their
                                     lives in a
@@ -772,10 +806,13 @@
                 <div x-show="activeTab === 'membership'">
                     <h2>Membership</h2>
                     <section class="inner-page-section">
-                        <img :src="images.membership.default"
-                            alt="Membership Image"
-                            class="responsive-image"
-                            @click="lightboxImage = images.membership.default; showLightbox = true">
+                        <div class="image-wrapper">
+                            <div class="blurred-background"></div>
+                            <img :src="images.membership.default"
+                                alt="Membership Image"
+                                class="responsive-image"
+                                @click="lightboxImage = images.membership.default; showLightbox = true">
+                        </div>
                         <p class="body-text">
                             Throughout history, special relationships have been
                             set apart by the taking of vows. What exactly is a
@@ -863,27 +900,35 @@
                 return {
                     images: {},
                     init() {
-                        fetch('community-img.json')
+                        fetch('./community-img.json')
                             .then(response => response.json())
                             .then(data => {
                                 this.images = data;
+                                this.setBlurredBackgrounds();
                             })
                             .catch(error => console.error('Error loading images:', error));
+                    },
+                    setBlurredBackgrounds() {
+                        const imageWrappers = document.querySelectorAll('.image-wrapper');
+                        imageWrappers.forEach(wrapper => {
+                            const imgElement = wrapper.querySelector('.responsive-image');
+                            const blurredBackground = wrapper.querySelector('.blurred-background');
+                            const imageUrl = imgElement.getAttribute('src');
+                            if (imageUrl) {
+                                blurredBackground.style.backgroundImage = `url(${imageUrl})`;
+                            }
+                        });
                     }
                 }
             }
-        </script>
 
-        <script>
-            document.addEventListener('scroll', function() {
-                const parallaxElements = document.querySelectorAll('.parallax-image');
-                parallaxElements.forEach(element => {
-                    const speed = 0.5; // Adjust the speed of the parallax effect
-                    const offset = window.pageYOffset * speed;
-                    element.style.transform = `translateY(${offset}px)`;
-                });
+            document.addEventListener('DOMContentLoaded', () => {
+                const app = imageLoader();
+                app.init();
             });
         </script>
+
+
     </body>
 
 </html>
