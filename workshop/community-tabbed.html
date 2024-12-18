@@ -990,7 +990,7 @@
                 return {
                     images: {},
                     init() {
-                        fetch('./community-img.json')
+                        fetch('https://api.npoint.io/87938ea621cbf9e67164')
                             .then(response => response.json())
                             .then(data => {
                                 this.images = data;

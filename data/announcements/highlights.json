@@ -473,6 +473,17 @@
       "time": "10:45 AM",
       "location": "158 Davenport Ave, New Haven, CT",
       "featuredIMG": "https://storage.googleapis.com/cpc-public-website/events/Hill%20Christmas%20Store%202023/IMG_0244.JPG"     
+    },
+    {
+      "id": "2024-032",
+      "title": "Homeless Drive through January 2025",
+      "description": "We will be collecting items for those experiencing homelessness in the greater New Haven area through January 2025. Items needed: blankets, sleeping bags, hats, gloves, coats, socks, boots, tents, backpacks/duffle bags, toiletries, underwear, hand warmers. Please wash any used items and leave them in the \"Homeless Drive\" bin in the foyer. All items will be delivered to the CSHHC Homeless team and distributed to those in need. Contact Joshua Bird: jdbird77@msn.com",
+      "dateEntered": "2024-12-13",
+      "active": "true",
+      "type": "ongoing",
+      "category": "ongoing",
+      "tag": "superFeatured",
+      "featuredIMG": "https://storage.googleapis.com/cpc-public-website/events/Homeless%20Drive%202024/IMG_0244.JPG"
     }
   ]
 }
