@@ -50,7 +50,7 @@ h1 {
 
 @media (min-width: 768px) {
     h1 {
-        font-size: 22px !important;
+        font-size: 48px !important;
     }
 }
 
@@ -112,7 +112,7 @@ span {
 button {
     width: 100%;
     max-width: 220px;
-    min-height: 44px;
+    min-height: 56px;
     height: 100%;
     background-color: #ffffff;
     color: rgb(0, 0, 0);
@@ -129,7 +129,8 @@ button {
     border-color: black;
     font-size: 16px;
     transition: background-color 0.23s;
-    padding: 12px 20px;
+    padding: 15px 25px;
+    margin: 10px 0;
 }
 
 section {
@@ -675,7 +676,7 @@ p {
     /* Blur effect for glassy look */
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
     /* Subtle border */
-    padding: 6.5px 0;
+    padding: 10px 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     /* Soft shadow for depth */
     width: 100%;
@@ -1245,10 +1246,10 @@ p {
 .hamburger-menu-button-container {
     position: fixed;
     background: #ffffff; /* White background */
-    top: 10px;
-    right: 15px;
-    width: 48px;
-    height: 48px;
+    top: 20px;
+    right: 20px;
+    width: 56px;
+    height: 56px;
     border-radius: 12px;
     z-index: 1000;
     display: flex;
@@ -2068,7 +2069,7 @@ p {
     position: relative;
     overflow: hidden;
     /* Ensure the pseudo-element doesn't overflow */
-    height: 50vh;
+    height: 100vh;
     /* Max height of 90vh */
     width: 100vw;
     /* Full screen width */
@@ -2081,6 +2082,7 @@ p {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin: 0;
     /* Remove margin to ensure full screen */
+    margin-top: 60px;
 }
 
 .hero::before {
@@ -2125,11 +2127,10 @@ p {
 
 @media (max-width: 768px) {
     .hero {
-        height: 90vh;
-        width: 100vw;
-        padding: 15px;
+        height: 40vh;
+        background-attachment: scroll;
     }
-
+    
     .hero::before {
         animation: none;
         /* Disable animations on smaller screens */
@@ -2138,7 +2139,7 @@ p {
 
 @media (max-width: 576px) {
     .hero {
-        height: 90vh;
+        height: 40vh;
         width: 100vw;
         padding: 10px;
     }
@@ -2156,8 +2157,14 @@ p {
 }
 
 .hero-logo-img {
-    width: 300px;
+    width: 200px;
     height: auto;
+}
+
+@media (min-width: 768px) {
+    .hero-logo-img {
+        width: 300px;
+    }
 }
 
 #highlights {
@@ -2391,7 +2398,7 @@ p {
 .splash-hero--about {
     position: relative;
     overflow: hidden;
-    height: 60vh;
+    height: 40vh;
     width: 100%;
     display: flex;
     align-items: center;
@@ -2399,7 +2406,7 @@ p {
     color: white;
     text-align: center;
     margin: 0;
-    background-attachment: fixed;
+    background-attachment: scroll;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -2425,14 +2432,14 @@ p {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.35);
 }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) {
     .splash-hero--about {
-        height: 40vh;
-        background-attachment: scroll;
+        height: 60vh;
+        background-attachment: fixed;
     }
     
     .splash-hero--about h1 {
-        font-size: 3rem !important;
+        font-size: 4rem !important;
     }
 }
 
@@ -2441,7 +2448,7 @@ p {
 .splash-hero--sunday {
     position: relative;
     overflow: hidden;
-    height: 60vh;
+    height: 40vh;
     width: 100%;
     display: flex;
     align-items: center;
@@ -2449,7 +2456,7 @@ p {
     color: white;
     text-align: center;
     margin: 0;
-    background-attachment: fixed;
+    background-attachment: scroll;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -2473,14 +2480,14 @@ p {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) {
     .splash-hero--sunday {
-        height: 40vh;
-        background-attachment: scroll;
+        height: 60vh;
+        background-attachment: fixed;
     }
     
     .splash-hero--sunday h1 {
-        font-size: 3rem !important;
+        font-size: 4rem !important;
     }
 }
 
@@ -2490,7 +2497,7 @@ p {
 .splash-hero--announcements {
     position: relative;
     overflow: hidden;
-    height: 60vh;
+    height: 40vh;
     width: 100%;
     display: flex;
     align-items: center;
@@ -2498,7 +2505,7 @@ p {
     color: white;
     text-align: center;
     margin: 0;
-    background-attachment: fixed;
+    background-attachment: scroll;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -2524,14 +2531,14 @@ p {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) {
     .splash-hero--announcements {
-        height: 40vh;
-        background-attachment: scroll;
+        height: 60vh;
+        background-attachment: fixed;
     }
     
     .splash-hero--announcements h1 {
-        font-size: 3rem !important;
+        font-size: 4rem !important;
     }
 }
 
@@ -2541,7 +2548,7 @@ p {
 .splash-hero--community {
     position: relative;
     overflow: hidden;
-    height: 60vh;
+    height: 40vh;
     width: 100%;
     display: flex;
     align-items: center;
@@ -2549,7 +2556,7 @@ p {
     color: white;
     text-align: center;
     margin: 0;
-    background-attachment: fixed;
+    background-attachment: scroll;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -2575,14 +2582,14 @@ p {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) {
     .splash-hero--community {
-        height: 40vh;
-        background-attachment: scroll;
+        height: 60vh;
+        background-attachment: fixed;
     }
     
     .splash-hero--community h1 {
-        font-size: 3rem !important;
+        font-size: 4rem !important;
     }
 }
 
@@ -2592,7 +2599,7 @@ p {
 .splash-hero--live {
     position: relative;
     overflow: hidden;
-    height: 60vh;
+    height: 40vh;
     width: 100%;
     display: flex;
     align-items: center;
@@ -2600,7 +2607,7 @@ p {
     color: white;
     text-align: center;
     margin: 0;
-    background-attachment: fixed;
+    background-attachment: scroll;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -2626,13 +2633,97 @@ p {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.35);
 }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) {
     .splash-hero--live {
-        height: 40vh;
-        background-attachment: scroll;
+        height: 60vh;
+        background-attachment: fixed;
     }
     
     .splash-hero--live h1 {
-        font-size: 3rem !important;
+        font-size: 4rem !important;
+    }
+}
+
+/* HOME HERO */
+.splash-hero--home {
+    position: relative;
+    overflow: hidden;
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    margin: 0;
+    background-attachment: scroll;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("https://storage.googleapis.com/cpc-public-website/featuredIMGs/%5BFEATURED%20IMAGE%5D%5BABOUT%20PAGE%5D%5BDrone%20Shot%5D-1.jpg");
+}
+
+.splash-hero--home::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 50, 0.35);
+    z-index: 1;
+}
+
+.splash-hero--home .hero-logo-img {
+    position: relative;
+    z-index: 2;
+    width: 200px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.splash-hero--home h1,
+.splash-hero--home h2,
+.splash-hero--home p {
+    position: relative;
+    z-index: 2;
+    color: white !important;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin: 5px 0;
+}
+
+.splash-hero--home h1 {
+    font-size: 3rem !important;
+}
+
+.splash-hero--home h2 {
+    font-size: 2rem;
+}
+
+.splash-hero--home p {
+    font-size: 1.2rem;
+}
+
+@media (min-width: 768px) {
+    .splash-hero--home {
+        height: 60vh;
+        background-attachment: fixed;
+    }
+    
+    .splash-hero--home .hero-logo-img {
+        width: 300px;
+    }
+    
+    .splash-hero--home h1 {
+        font-size: 4rem !important;
+    }
+    
+    .splash-hero--home h2 {
+        font-size: 2.5rem;
+    }
+    
+    .splash-hero--home p {
+        font-size: 1.5rem;
     }
 }
