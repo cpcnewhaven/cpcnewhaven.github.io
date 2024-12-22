@@ -682,7 +682,7 @@ p {
 }
 
 /* Hide main navigation on screens smaller than 750px */
-@media (max-width: 7680px) {
+@media (max-width: 868px) {
     .main-navigation {
         display: none;
     }
