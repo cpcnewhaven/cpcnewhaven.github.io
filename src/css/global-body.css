@@ -796,23 +796,13 @@ p {
     background-color: #f5f5f5;
 }
 
-.hamburger-menu-button-container {
-    position: fixed;
-    top: 15px;
-    right: 15px;
-    z-index: 4050;
-    background-color: #fff;
-    border-radius: 50%;
-    padding: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
 
 #closeMobileMenuButton {
     font-size: 24px;
     color: #333;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 868px) {
 
     .hamburger-menu-button-container,
     .mobile-navigation {
@@ -1254,9 +1244,9 @@ p {
 
 .hamburger-menu-button-container {
     position: fixed;
-    background: linear-gradient(145deg, #e6e6e6, #ffffff);
+    background: #ffffff; /* White background */
     top: 10px;
-    right: 10px;
+    right: 15px;
     width: 48px;
     height: 48px;
     border-radius: 12px;
@@ -1264,19 +1254,27 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1),
-        -4px -4px 8px rgba(255, 255, 255, 0.25);
+    box-shadow: 0 2px 8px rgba(0, 0, 80, 0.1);
     transition: all 0.3s ease;
+    border: 2px solid #003366; /* Dark blue outline */
 }
 
 .hamburger-menu-button-container:hover {
     cursor: pointer;
-    box-shadow: inset 9px 9px 16px rgba(0, 0, 0, 0.2),
-        inset -9px -9px 16px rgba(255, 255, 255, 0.5);
+    background: #f8f9fa; /* Slightly off-white on hover */
+    box-shadow: 0 4px 12px rgba(0, 0, 80, 0.15);
+    transform: translateY(-2px);
 }
 
 .hamburger-menu-button-container i {
-    color: rgb(0, 0, 0);
+    color: #003366; /* Dark blue icon */
+    font-size: 20px; /* Slightly smaller, sleeker icon */
+    transition: all 0.3s ease;
+}
+
+.hamburger-menu-button-container:hover i {
+    color: #002244; /* Slightly darker blue on hover */
+    transform: scale(1.1); /* Subtle icon scale effect on hover */
 }
 
 
