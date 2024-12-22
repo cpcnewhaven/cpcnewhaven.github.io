@@ -2383,3 +2383,54 @@ p {
         /* Adjust margin for smaller screens */
     }
 }
+
+
+
+/*new splash heroes*/
+
+.splash-hero--about {
+    position: relative;
+    overflow: hidden;
+    height: 60vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    margin: 0;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("https://storage.googleapis.com/cpc-public-website/featuredIMGs/%5BFEATURED%20IMAGE%5D%5BABOUT%20PAGE%5D%5BDrone%20Shot%5D-1.jpg");
+}
+
+.splash-hero--about::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 50, 0.5);
+    z-index: 1;
+}
+
+.splash-hero--about h1 {
+    position: relative;
+    z-index: 2;
+    font-size: 4rem !important;
+    color: white !important;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 768px) {
+    .splash-hero--about {
+        height: 40vh;
+        background-attachment: scroll;
+    }
+    
+    .splash-hero--about h1 {
+        font-size: 3rem !important;
+    }
