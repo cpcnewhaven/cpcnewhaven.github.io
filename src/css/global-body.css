@@ -2070,7 +2070,7 @@ p {
     position: relative;
     overflow: hidden;
     /* Ensure the pseudo-element doesn't overflow */
-    height: 90vh;
+    height: 50vh;
     /* Max height of 90vh */
     width: 100vw;
     /* Full screen width */
