@@ -21,8 +21,7 @@
         <meta name="author" content="CPC New Haven">
         <title>Resources - CPC New Haven Church</title>
         <link rel="stylesheet" href="./src/css/global-body.css">
-        <link rel="stylesheet" href="./src/css/global-nav-bar.css">
-        <link rel="stylesheet" href="./src/css/global-footer-cta.css">
+
         <link rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
         <link rel="icon"
@@ -78,220 +77,74 @@
             </ul>
         </nav>
 
-        <div class="dashboard-container">
-            <!-- Sidebar -->
-            <div class="sidebar fixed-sidebar">
-                <img src="./assets/CPC_LOGO_24.png" class="sidebar-logo">
-                <h1>Resources</h1>
-                <ul>
-                </ul>
-                <hr>
-                <ul>
-                    <li><a href="adult-sunday-school.html">Adult Sunday
-                            Studies</a></li>
-                    <li><a href="2025-missions-trip.html">2025 Missions
-                            Trip</a></li>
-                    <li><a href="media.html">Media Gallery</a></li>
-                    <hr>
-                    <li><a
-                            href="https://ccb.cpcnewhaven.org">Church
-                            Community Builder</a></li>
-                    <li><a href="forms.html">Forms</a></li>
-                    <li> <a href="contact.html">Contact Us</a>
-                    </li>
-                    <hr>
-                    <li><a href="lifegroup.html">Life Groups</a></li>
-                    <li><a href="discipleship.html">Discipleship Groups</a></li>
-                    <li><a href="membership.html">Church Membership</a></li>
-                    <li><a href="a-c-c.html"
-                            style="font-weight: 300; color: #1e050043; font-family: monospace;"
-                            onmouseover="this.style.color='#000000';"
-                            onmouseout="this.style.color='#1e050043';">Admin
-                            Control Center</a></li>
-                </ul>
-            </div>
-
-            <!-- Main Content -->
-            <style>
-                h1, h2, h3 {
-                    text-align: center;
-                }
-             </style>
-            <div class="main-content">
-                <div class="top-splash-welcome">
-                </div>
-
-                <style>
-section.resource-overview {
-    background-color: #f4f4f9; /* Light grey background for the section */
-    padding: 20px 40px; /* Padding around the content */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow for depth */
-    margin: 10px 0; /* Margin for spacing between sections */
-}
-
-section.resource-overview h2 {
-    color: #333; /* Dark grey color for the header */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern, readable font */
-    font-size: 24px; /* Larger font size for the header */
-    margin-bottom: 10px; /* Space below the header */
-}
-
-section.resource-overview p {
-    color: #656; /* Medium grey color for the paragraph */
-    font-family: 'Arial', sans-serif; /* Readable font for the paragraph */
-    font-size: 16px; /* Comfortable reading size */
-    line-height: 1.6; /* Spacing between lines */
-}
-</style>
-                <section class="resource-overview">
-                    <h2>Resource Overview</h2>
-                    <p>Welcome to the Resources page of CPC New Haven Church!
-                        This page serves as a hub for all church-related
-                        materials, including study guides, mission trip
-                        information, media galleries, and more. Whether you're
-                        looking for specific forms, interested in joining a
-                        group, or seeking spiritual enrichment through our
-                        various classes, you'll find all the necessary links and
-                        information right here. Explore the sections below to
-                        discover and engage with the resources that can aid your
-                        journey of faith and community involvement.</p>
-                </section>
-                <section id="what-we-believe" class="inner-page-section">
-                    <h1>Adult Sunday Studies</h1>
-                    <p class="body-text">Adult Sunday Studies at CPC New Haven
-                        is a weekly opportunity for adults to deepen their
-                        understanding of Christian theology and biblical
-                        principles. These classes cover a wide range of topics,
-                        from foundational doctrines to practical applications of
-                        faith, and are designed to foster spiritual growth,
-                        encourage thoughtful discussion, and equip participants
-                        with knowledge to strengthen their walk with God.</p>
-                    <div class="cta-section">
-                        <h2>Join Us Every Sunday!</h2>
-                        <p>Deepen your faith and connect with others at our
-                            Adult Sunday Studies.</p>
-                        <p><strong>Time:</strong> 9:30 AM</p>
-                        <p><strong>Location:</strong> Fellowship Hall</p>
-                        <p class="body-text">New Class Begins 9.8.24</p>
+        <div class="res-directory-container" x-data="{ 
+            searchQuery: '',
+            resources: [
+                { title: 'Adult Sunday Studies', url: 'adult-sunday-school.html', category: 'Education' },
+                { title: '2025 Missions Trip', url: '2025-missions-trip.html', category: 'Missions' },
+                { title: 'Media Gallery', url: 'media.html', category: 'Media' },
+                { title: 'Church Community Builder', url: 'https://ccb.cpcnewhaven.org', category: 'Community' },
+                { title: 'Forms', url: 'forms.html', category: 'Administrative' },
+                { title: 'Contact Us', url: 'contact.html', category: 'Administrative' },
+                { title: 'Life Groups', url: 'lifegroup.html', category: 'Community' },
+                { title: 'Discipleship Groups', url: 'discipleship.html', category: 'Community' },
+                { title: 'Church Membership', url: 'membership.html', category: 'Community' },
+                { title: 'Website Updates', url: 'updates.html', category: 'Administrative' },
+                { title: 'Admin Control Center', url: 'a-c-c.html', category: 'Administrative' }
+            ]
+        }">
+            <div class="res-directory-content">
+                <section class="res-directory-overview">
+                    <h2 class="res-directory-title">Resource Directory</h2>
+                    <div class="res-directory-search">
+                        <input 
+                            type="text" 
+                            x-model="searchQuery"
+                            placeholder="Search resources..."
+                            class="res-directory-search-input"
+                        >
                     </div>
-                </section>
-                <section id="new-class-info" class="inner-page-section">
-                    <h1>2024-2025</h1><br><br>
-                    <h1><i>Walking with Jesus Thru Sinai</i></h1>
-                    <p class="body-text">We need moral clarity in this age of
-                        chaos! What is the good life? How should I treat my
-                        neighbor? What does the Bible say about social justice,
-                        adultery, covetousness, or slander? Does the Sabbath
-                        matter anymore? To answer these questions and more, this
-                        year we're "Walking with Jesus Thru Sinai." More than a
-                        badge to prove our self-righteousness or a burden to
-                        leave us in guilt, the 10 Commandments are summaries of
-                        what a flourishing life before God is meant to look
-                        like. It shows us how we are made and how we ought to
-                        live. This class will be an opportunity to discuss all
-                        sorts of crucial issues, from idolatry and worship to
-                        moral virtues and political beliefs. Grounded in the
-                        grace of Christ, the law becomes a beautiful vision for
-                        all our lives. All are welcome! We meet in the
-                        Fellowship Hall.</p>
-                    <div class="center-content"><a
-                            href="sunday-studies/walking-through-sinai.html"><button>Learn
-                                More</button></a></div>
-                </section>
-
-                <!-- <section id="bulletin-section"
-                    style="min-height: 50vh; margin-top: 5px; margin-bottom: 100px;"
-                    class="inner-page-section">
-                    <h1>Bulletin Archive</h1>
-                    <p>Warning this is a work in progress and the archive is not
-                        complete.</p>
-                    <div class="center-content">
-                        <table class="bulletin-table">
-                            <tr>
-                                <td><a
-                                        href="./data/bulletins/bulletin_2024-08-11.pdf">Bulletin
-                                        from August 11, 2024</a></td>
-                            </tr>
-                            <tr>
-                                <td><a
-                                        href="./data/bulletins/bulletin_2024-08-04.pdf">Bulletin
-                                        from August 4, 2024</a></td>
-                            </tr>
-                            <tr>
-                                <td><a
-                                        href="./data/bulletins/bulletin_2024-07-28.pdf">Bulletin
-                                        from July 28, 2024</a></td>
-                            </tr>
-                            <tr>
-                                <td><a
-                                        href="./data/bulletins/Bulletin_2024-07-21_.pdf">Bulletin
-                                        from July 21, 2024</a></td>
-                            </tr>
-                            <tr>
-                                <td><a
-                                        href="./data/bulletins/bulletin_2024-07-14.pdf">Bulletin
-                                        from July 14, 2024</a></td>
-                            </tr>
-                            <tr>
-                                <td><a
-                                        href="./data/bulletins/bulletin_2024-06-23.pdf">Bulletin
-                                        from June 23, 2024</a></td>
-                            </tr>
+                    
+                    <div class="res-directory-table-wrapper">
+                        <table class="res-directory-table">
+                            <tbody>
+                                <tr class="res-directory-row">
+                                    <td class="res-directory-cell"><a href="adult-sunday-school.html" class="res-directory-link">Adult Sunday Studies</a></td>
+                                </tr>
+                                <tr class="res-directory-row">
+                                    <td class="res-directory-cell"><a href="2025-missions-trip.html" class="res-directory-link">2025 Missions Trip</a></td>
+                                </tr>
+                                <tr class="res-directory-row">
+                                    <td class="res-directory-cell"><a href="media.html" class="res-directory-link">Media Gallery</a></td>
+                                </tr>
+                                <tr class="res-directory-row">
+                                    <td class="res-directory-cell"><a href="https://ccb.cpcnewhaven.org" class="res-directory-link">Church Community Builder</a></td>
+                                </tr>
+                                <tr class="res-directory-row">
+                                    <td class="res-directory-cell"><a href="forms.html" class="res-directory-link">Forms</a></td>
+                                </tr>
+                                <tr class="res-directory-row">
+                                    <td class="res-directory-cell"><a href="contact.html" class="res-directory-link">Contact Us</a></td>
+                                </tr>
+                                <tr class="res-directory-row">
+                                    <td class="res-directory-cell"><a href="lifegroup.html" class="res-directory-link">Life Groups</a></td>
+                                </tr>
+                                <tr class="res-directory-row">
+                                    <td class="res-directory-cell"><a href="discipleship.html" class="res-directory-link">Discipleship Groups</a></td>
+                                </tr>
+                                <tr class="res-directory-row">
+                                    <td class="res-directory-cell"><a href="membership.html" class="res-directory-link">Church Membership</a></td>
+                                </tr>
+                                <tr class="res-directory-row">
+                                    <td class="res-directory-cell"><a href="updates.html" class="res-directory-link">Website Updates</a></td>
+                                </tr>
+                                <tr class="res-directory-row">
+                                    <td class="res-directory-cell"><a href="a-c-c.html" class="res-directory-link">Admin Control Center</a></td>
+                                </tr>
+                            </tbody>
                         </table>
                     </div>
-                </section> -->
-
-                <section id="social-media" class="inner-page-section">
-
-                    <div class="center-content"
-                        style="display: flex; justify-content: center;">
-                        <section class="social-links-horizontal"
-                            style="text-align: center;">
-                            <a href="https://www.instagram.com/cpcnewhaven/"
-                                target="_blank"><i
-                                    class="fab fa-instagram"></i></a>
-                            <a href="https://www.facebook.com"
-                                target="_blank"><i
-                                    class="fab fa-facebook-f"></i></a>
-                            <a href="https://www.youtube.com/@CPCNewHaven"
-                                target="_blank"><i
-                                    class="fab fa-youtube"></i></a>
-                            <a
-                                href="https://open.spotify.com/show/22kjUJyC0VH3cMfCSe9kEk?si=03179c2d72e44829"
-                                target="_blank"><i
-                                    class="fab fa-spotify"></i></a>
-                            <a
-                                href="https://podcasts.apple.com/us/podcast/cpc-new-haven-podcasts/id1553483670"
-                                target="_blank"><i class="fab fa-apple"></i></a>
-                        </section>
-                    </div>
                 </section>
-                <section id="footer-cta-a" class="styled-section-a">
-                    <div class="form-container">
-                        <h2>Subscribe to our Newsletter</h2>
-                        <p class="body-text center"
-                            style="text-align: center !important">
-                            Our weekly newsletter goes out on Friday mornings
-                            with Sunday Service
-                            information, highlights, upcoming events, and useful
-                            links.
-                        </p>
-                        <form
-                            action="https://formspree.io/f/meojowwg"
-                            method="POST"
-                            class="neumorphic-form">
-                            <input type="text" name="name"
-                                placeholder="Your name" required />
-                            <!-- Added name input -->
-                            <input type="email" name="email"
-                                placeholder="Your email" required />
-                            <button type="submit">Subscribe to CPC New
-                                Haven</button>
-                        </form>
-                    </div>
-                </section>
-
             </div>
         </div>
 
@@ -313,5 +166,103 @@ section.resource-overview p {
         </footer>
         <script src="./src/js/background-fetch-splash-image.js"></script>
         <script src="./src/js/function_toggle_mobileMenu.js"></script>
+        <style>
+            .res-directory-container {
+                padding: 20px;
+                max-width: 1200px;
+                margin: 0 auto;
+            }
+
+            .res-directory-content {
+                background: #ffffff;
+                border-radius: 8px;
+                padding: 20px;
+            }
+
+            .res-directory-title {
+                color: #333;
+                margin-bottom: 20px;
+            }
+
+            .res-directory-search {
+                margin: 20px 0;
+            }
+
+            .res-directory-search-input {
+                width: 100%;
+                padding: 12px 20px;
+                margin: 8px 0;
+                border: 2px solid #ddd;
+                border-radius: 4px;
+                font-size: 16px;
+            }
+
+            .res-directory-table-wrapper {
+                margin-top: 20px;
+                overflow-x: auto;
+                border-radius: 8px;
+                box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            }
+
+            .res-directory-table {
+                width: 100%;
+                border-collapse: collapse;
+                margin: 0;
+                font-size: 0.9em;
+                min-width: 400px;
+            }
+
+            .res-directory-header-row {
+                background-color: #2c5282;
+                color: #ffffff;
+                text-align: left;
+            }
+
+            .res-directory-header {
+                padding: 12px 15px;
+                font-weight: bold;
+            }
+
+            .res-directory-cell {
+                padding: 12px 15px;
+            }
+
+            .res-directory-row {
+                border-bottom: 1px solid #dddddd;
+            }
+
+            .res-directory-row:nth-of-type(even) {
+                background-color: #f8fafc;
+            }
+
+            .res-directory-row:last-of-type {
+                border-bottom: 2px solid #2c5282;
+            }
+
+            .res-directory-link {
+                color: #2c5282;
+                text-decoration: none;
+                transition: color 0.2s;
+            }
+
+            .res-directory-link:hover {
+                color: #1a365d;
+                text-decoration: underline;
+            }
+
+            @media (max-width: 768px) {
+                .res-directory-container {
+                    padding: 10px;
+                }
+                
+                .res-directory-content {
+                    padding: 15px;
+                }
+                
+                .res-directory-cell {
+                    padding: 10px;
+                }
+            }
+        </style>
     </body>
 </html>

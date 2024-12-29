@@ -1,25 +1,76 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Commits</title>
+    <title>Recent Updates</title>
     <style>
         .commit {
+            background: #ffffff;
+            border-radius: var(--border-radius);
+            padding: 20px;
             margin-bottom: 20px;
+            box-shadow: 0 2px 4px var(--box-shadow-color);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .commit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .commit h2 {
+            font-family: "Barlow", sans-serif;
+            font-size: 1.5rem;
+            color: var(--heading-color);
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+
+        .commit p {
+            font-family: "Barlow", sans-serif;
+            color: var(--text-color);
+            margin: 5px 0;
+            font-size: 0.9rem;
+        }
+
+        .commits-container {
+            padding: 20px;
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        .page-title {
+            text-align: center;
+            font-family: "Barlow", sans-serif;
+            color: var(--heading-color);
+            font-size: 2.5rem;
+            margin: 40px 0;
+        }
+
+        @media (max-width: 768px) {
+            .commit {
+                margin: 15px;
+            }
+
+            .commit h2 {
+                font-size: 1.2rem;
+            }
+
+            .page-title {
+                font-size: 2rem;
+                margin: 30px 0;
+            }
         }
     </style>
 </head>
 <body>
-    <div id="commits"></div>
-<style>
-    #give-menu {
-  background: rgba(255, 255, 255, 0.1);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(4px);
-  border-radius: 10px;
-  padding: 20px;
-  color: #fff; /* Adjust text color as needed */
-}
-</style>
+    <h1 class="page-title">Recent Updates</h1>
+    <div class="commits-container">
+        <div id="commits"></div>
+    </div>
+
     <script>
         fetch('https://api.github.com/repos/cpcnewhaven/cpcnewhaven.github.io/commits')
             .then(response => response.json())
@@ -30,8 +81,8 @@
                     commitElement.classList.add('commit');
                     commitElement.innerHTML = `
                         <h2>${commit.commit.message}</h2>
-                        <p>Author: ${commit.commit.author.name}</p>
-                        <p>Date: ${new Date(commit.commit.author.date).toLocaleString()}</p>
+                        <p>By ${commit.commit.author.name}</p>
+                        <p>${new Date(commit.commit.author.date).toLocaleString()}</p>
                     `;
                     commitsElement.appendChild(commitElement);
                 });
