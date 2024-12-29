@@ -78,7 +78,6 @@
         </nav>
 
         <div class="res-directory-container" x-data="{ 
-            searchQuery: '',
             resources: [
                 { title: 'Adult Sunday Studies', url: 'adult-sunday-school.html', category: 'Education' },
                 { title: '2025 Missions Trip', url: '2025-missions-trip.html', category: 'Missions' },
@@ -96,15 +95,6 @@
             <div class="res-directory-content">
                 <section class="res-directory-overview">
                     <h2 class="res-directory-title">Resource Directory</h2>
-                    <div class="res-directory-search">
-                        <input 
-                            type="text" 
-                            x-model="searchQuery"
-                            placeholder="Search resources..."
-                            class="res-directory-search-input"
-                        >
-                    </div>
-                    
                     <div class="res-directory-table-wrapper">
                         <table class="res-directory-table">
                             <tbody>
@@ -168,99 +158,89 @@
         <script src="./src/js/function_toggle_mobileMenu.js"></script>
         <style>
             .res-directory-container {
-                padding: 20px;
-                max-width: 1200px;
+                padding: 40px 20px;
+                max-width: 1000px;
                 margin: 0 auto;
             }
 
             .res-directory-content {
-                background: #ffffff;
-                border-radius: 8px;
-                padding: 20px;
+                background: rgba(255, 255, 255, 0.1);
+                backdrop-filter: blur(10px);
+                border-radius: 16px;
+                padding: 30px;
+                border: 1px solid rgba(255, 255, 255, 0.2);
             }
 
             .res-directory-title {
-                color: #333;
-                margin-bottom: 20px;
-            }
-
-            .res-directory-search {
-                margin: 20px 0;
-            }
-
-            .res-directory-search-input {
-                width: 100%;
-                padding: 12px 20px;
-                margin: 8px 0;
-                border: 2px solid #ddd;
-                border-radius: 4px;
-                font-size: 16px;
+                color: #2c5282;
+                margin-bottom: 30px;
+                font-size: 2em;
+                font-weight: 300;
+                text-align: center;
             }
 
             .res-directory-table-wrapper {
                 margin-top: 20px;
-                overflow-x: auto;
-                border-radius: 8px;
-                box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+                border-radius: 12px;
+                background: rgba(255, 255, 255, 0.7);
+                overflow: hidden;
             }
 
             .res-directory-table {
                 width: 100%;
-                border-collapse: collapse;
+                border-collapse: separate;
+                border-spacing: 0;
                 margin: 0;
-                font-size: 0.9em;
-                min-width: 400px;
-            }
-
-            .res-directory-header-row {
-                background-color: #2c5282;
-                color: #ffffff;
-                text-align: left;
-            }
-
-            .res-directory-header {
-                padding: 12px 15px;
-                font-weight: bold;
+                font-size: 1em;
             }
 
             .res-directory-cell {
-                padding: 12px 15px;
+                padding: 16px 24px;
+                transition: all 0.3s ease;
             }
 
             .res-directory-row {
-                border-bottom: 1px solid #dddddd;
+                border-bottom: 1px solid rgba(44, 82, 130, 0.1);
+                transition: all 0.3s ease;
             }
 
-            .res-directory-row:nth-of-type(even) {
-                background-color: #f8fafc;
+            .res-directory-row:hover {
+                background: rgba(44, 82, 130, 0.05);
+                transform: translateX(5px);
             }
 
             .res-directory-row:last-of-type {
-                border-bottom: 2px solid #2c5282;
+                border-bottom: none;
             }
 
             .res-directory-link {
                 color: #2c5282;
                 text-decoration: none;
-                transition: color 0.2s;
+                transition: all 0.3s ease;
+                display: block;
+                font-weight: 400;
             }
 
             .res-directory-link:hover {
                 color: #1a365d;
-                text-decoration: underline;
+                transform: translateX(5px);
             }
 
             @media (max-width: 768px) {
                 .res-directory-container {
-                    padding: 10px;
+                    padding: 20px 10px;
                 }
                 
                 .res-directory-content {
-                    padding: 15px;
+                    padding: 20px;
                 }
                 
                 .res-directory-cell {
-                    padding: 10px;
+                    padding: 14px 16px;
+                }
+                
+                .res-directory-title {
+                    font-size: 1.5em;
                 }
             }
         </style>
