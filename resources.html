@@ -95,6 +95,11 @@
             <div class="res-directory-content">
                 <section class="res-directory-overview">
                     <h2 class="res-directory-title">Resource Directory</h2>
+                    <p class="res-directory-description">Access important church resources, forms, and community information all in one place.</p>
+                    
+         
+
+                    <!-- Original table layout -->
                     <div class="res-directory-table-wrapper">
                         <table class="res-directory-table">
                             <tbody>
@@ -249,6 +254,23 @@
                     font-size: 1.5em;
                 }
             }
+
+            .res-directory-description {
+    text-align: center;
+    color: #4a5568;
+    margin-bottom: 25px;
+    font-size: 1.1em;
+    font-weight: 300;
+}
+
+/* In the media query section, add: */
+@media (max-width: 768px) {
+    // ... existing mobile styles ...
+    .res-directory-description {
+        font-size: 1em;
+        margin-bottom: 20px;
+    }
+}
         </style>
     </body>
 </html>
