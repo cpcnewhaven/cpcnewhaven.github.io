@@ -1,0 +1,59 @@
+{
+  "resources": [
+    {
+      "title": "Adult Sunday Studies",
+      "url": "adult-sunday-school.html",
+      "category": "Education"
+    },
+    {
+      "title": "2025 Missions Trip",
+      "url": "2025-missions-trip.html",
+      "category": "Missions"
+    },
+    {
+      "title": "Media Gallery",
+      "url": "media.html",
+      "category": "Media"
+    },
+    {
+      "title": "Church Community Builder",
+      "url": "https://ccb.cpcnewhaven.org",
+      "category": "Community"
+    },
+    {
+      "title": "Forms",
+      "url": "forms.html",
+      "category": "Administrative"
+    },
+    {
+      "title": "Contact Us",
+      "url": "contact.html",
+      "category": "Administrative"
+    },
+    {
+      "title": "Life Groups",
+      "url": "lifegroup.html",
+      "category": "Community"
+    },
+    {
+      "title": "Discipleship Groups",
+      "url": "discipleship.html",
+      "category": "Community"
+    },
+    {
+      "title": "Church Membership",
+      "url": "membership.html",
+      "category": "Community"
+    },
+    {
+      "title": "Website Updates",
+      "url": "updates.html",
+      "category": "Administrative"
+    },
+    {
+      "title": "Admin Control Center",
+      "url": "a-c-c.html",
+      "category": "Administrative"
+    }
+  ]
+} 
