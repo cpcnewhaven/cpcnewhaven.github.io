@@ -2229,17 +2229,6 @@ p {
     color: rgb(31, 31, 31);
 }
 
-.announcement.highlight {
-    background-color: transparent;
-    border-left: 4px solid #1890ff;
-}
-
-.announcement.ongoing {
-    background-color: transparent;
-    border-left: 4px solid #52c41a;
-    width: 100%;
-    max-width: 800px;
-}
 
 .announcement[style*="background-image"] {
     color: #fff;
@@ -2273,13 +2262,6 @@ p {
         font-size: 14px;
     }
 }
-
-.announcement.upcoming {
-    border-left: 2px solid #1e90ff;
-    width: 100%;
-    max-width: 800px;
-}
-
 
 
 
