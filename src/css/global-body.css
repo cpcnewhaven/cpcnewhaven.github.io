@@ -670,8 +670,7 @@ p {
     position: sticky;
     top: 0;
     z-index: 1000;
-    background: rgba(0, 0, 50, 0.948);
-    /* Dark navy blue with transparency */
+    background: rgba(0, 15, 50, 0.948);
     backdrop-filter: blur(10px);
     /* Blur effect for glassy look */
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
