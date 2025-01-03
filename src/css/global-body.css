@@ -1245,7 +1245,8 @@ p {
 
 .hamburger-menu-button-container {
     position: fixed;
-    background: #ffffff; /* White background */
+    background: #ffffff;
+    /* White background */
     top: 20px;
     right: 20px;
     width: 56px;
@@ -1257,25 +1258,31 @@ p {
     justify-content: center;
     box-shadow: 0 2px 8px rgba(0, 0, 80, 0.1);
     transition: all 0.3s ease;
-    border: 2px solid #003366; /* Dark blue outline */
+    border: 2px solid #003366;
+    /* Dark blue outline */
 }
 
 .hamburger-menu-button-container:hover {
     cursor: pointer;
-    background: #f8f9fa; /* Slightly off-white on hover */
+    background: #f8f9fa;
+    /* Slightly off-white on hover */
     box-shadow: 0 4px 12px rgba(0, 0, 80, 0.15);
     transform: translateY(-2px);
 }
 
 .hamburger-menu-button-container i {
-    color: #003366; /* Dark blue icon */
-    font-size: 20px; /* Slightly smaller, sleeker icon */
+    color: #003366;
+    /* Dark blue icon */
+    font-size: 20px;
+    /* Slightly smaller, sleeker icon */
     transition: all 0.3s ease;
 }
 
 .hamburger-menu-button-container:hover i {
-    color: #002244; /* Slightly darker blue on hover */
-    transform: scale(1.1); /* Subtle icon scale effect on hover */
+    color: #002244;
+    /* Slightly darker blue on hover */
+    transform: scale(1.1);
+    /* Subtle icon scale effect on hover */
 }
 
 
@@ -2130,7 +2137,7 @@ p {
         height: 40vh;
         background-attachment: scroll;
     }
-    
+
     .hero::before {
         animation: none;
         /* Disable animations on smaller screens */
@@ -2437,7 +2444,7 @@ p {
         height: 60vh;
         background-attachment: fixed;
     }
-    
+
     .splash-hero--about h1 {
         font-size: 4rem !important;
     }
@@ -2485,7 +2492,7 @@ p {
         height: 60vh;
         background-attachment: fixed;
     }
-    
+
     .splash-hero--sunday h1 {
         font-size: 4rem !important;
     }
@@ -2536,7 +2543,7 @@ p {
         height: 60vh;
         background-attachment: fixed;
     }
-    
+
     .splash-hero--announcements h1 {
         font-size: 4rem !important;
     }
@@ -2587,7 +2594,7 @@ p {
         height: 60vh;
         background-attachment: fixed;
     }
-    
+
     .splash-hero--community h1 {
         font-size: 4rem !important;
     }
@@ -2638,7 +2645,7 @@ p {
         height: 60vh;
         background-attachment: fixed;
     }
-    
+
     .splash-hero--live h1 {
         font-size: 4rem !important;
     }
@@ -2710,19 +2717,19 @@ p {
         height: 60vh;
         background-attachment: fixed;
     }
-    
+
     .splash-hero--home .hero-logo-img {
         width: 300px;
     }
-    
+
     .splash-hero--home h1 {
         font-size: 4rem !important;
     }
-    
+
     .splash-hero--home h2 {
         font-size: 2.5rem;
     }
-    
+
     .splash-hero--home p {
         font-size: 1.5rem;
     }
@@ -2733,56 +2740,56 @@ p {
     max-width: 800px;
     margin: 0 auto;
     padding: 2rem 1rem;
-  }
-  
-  .cpc-section-header {
+}
+
+.cpc-section-header {
     text-align: center;
     margin-bottom: 2rem;
-  }
-  
-  .cpc-section-header h2 {
+}
+
+.cpc-section-header h2 {
     font-size: 2rem;
     margin: 0;
     font-family: "Barlow", sans-serif;
     color: var(--heading-color);
-  }
-  
-  .cpc-podcast-content {
+}
+
+.cpc-podcast-content {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-  }
-  
-  .cpc-podcast-content> p {
+}
+
+.cpc-podcast-content>p {
     font-size: 1rem;
     line-height: 1.6;
     color: var(--text-color);
-     text-align: center;
-  }
-  
-  .cpc-latest-episode {
+    text-align: center;
+}
+
+.cpc-latest-episode {
     width: 100%;
-  }
-  
-  .cpc-latest-episode h3 {
+}
+
+.cpc-latest-episode h3 {
     margin-bottom: 1rem;
     text-align: center;
     font-size: 1.5rem;
     color: var(--heading-color);
     font-family: "Barlow", sans-serif;
-  }
-  
-  .cpc-latest-episode iframe {
+}
+
+.cpc-latest-episode iframe {
     border-radius: var(--border-radius);
     box-shadow: 0 2px 4px var(--box-shadow-color);
-  }
-  
-  .cpc-podcast-cta {
+}
+
+.cpc-podcast-cta {
     text-align: center;
     margin-top: 2rem;
-  }
-  
-  .cpc-button {
+}
+
+.cpc-button {
     display: inline-block;
     padding: 0.8rem 1.5rem;
     background-color: var(--button-color);
@@ -2794,32 +2801,32 @@ p {
     font-size: 1rem;
     border: none;
     cursor: pointer;
-  }
-  
-  .cpc-button:hover {
+}
+
+.cpc-button:hover {
     background-color: var(--button-hover-color);
-  }
-  
-  @media (max-width: 768px) {
+}
+
+@media (max-width: 768px) {
     .cpc-container {
-      padding: 1.5rem 1rem;
+        padding: 1.5rem 1rem;
     }
-  
+
     .cpc-section-header h2 {
-      font-size: 1.75rem;
+        font-size: 1.75rem;
     }
-  
+
     .cpc-podcast-content p {
-      font-size: 0.9rem;
+        font-size: 0.9rem;
     }
-  
+
     .cpc-latest-episode h3 {
-      font-size: 1.25rem;
+        font-size: 1.25rem;
     }
-  }
+}
 
 
-  /* Add to your existing CSS */
+/* Add to your existing CSS */
 .mobile-resources-toggle {
     position: fixed;
     top: 70px;
@@ -2832,7 +2839,7 @@ p {
     background: #fff;
     padding: 10px 15px;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     display: flex;
     align-items: center;
     gap: 8px;
@@ -2849,7 +2856,7 @@ p {
     z-index: 1000;
     background: white;
     overflow-y: auto;
-    box-shadow: 2px 0 8px rgba(0,0,0,0.1);
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
     padding-top: 60px;
 }
 
@@ -2893,4 +2900,68 @@ p {
 
 .-translate-x-full {
     transform: translateX(-100%);
+}
+
+/* ... existing code ... */
+
+.mobile-friendly-dashboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+.mobile-friendly-sidebar {
+    width: 100%;
+    max-width: 300px;
+    background-color: #f4f4f4;
+    padding: 10px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+    height: auto;
+    overflow-y: auto;
+}
+
+.mobile-friendly-logo {
+    width: 80px;
+    margin: 0 auto 10px auto;
+}
+
+.mobile-friendly-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.mobile-friendly-list li {
+    margin: 5px 0;
+}
+
+.mobile-friendly-icons a {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    margin: 5px;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .mobile-friendly-sidebar {
+        width: 100%;
+        padding: 5px;
+    }
+
+    .mobile-friendly-logo {
+        width: 60px;
+    }
+
+    .mobile-friendly-list li {
+        margin: 3px 0;
+    }
+
+    .mobile-friendly-icons a {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+    }
 }

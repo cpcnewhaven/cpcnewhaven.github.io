@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="./src/css/global-footer-cta.css">
 
     <link rel="icon"
-        href="https://storage.googleapis.com/cpc-public-website/web-assets/CPC%20-%20FAVICON%20-%20FALL%202024.png"
+        href="https://storage.googleapis.com/cpc-public-website/web-assets/CPC%20-%20FAVICON%20-%20FALL%2024.png"
         type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
@@ -72,39 +72,113 @@
         .podcast-sidebar {
             padding-bottom: 10px;
         }
+
+        .filter-options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #f4f4f4;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .filter-options label {
+            margin-right: 5px;
+        }
+
+        .filter-options select, .filter-options input {
+            padding: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .clear-filters {
+            background-color: transparent;
+            border: 1px solid #ccc;
+            color: #555;
+            padding: 8px 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .clear-filters:hover {
+            background-color: #eee;
+            color: #333;
+        }
     </style>
-
-    <div class="dashboard-container">
-        <!-- Sidebar -->
-        <div class="sidebar fixed-sidebar podcast-sidebar">
-            <img src="./assets/CPC_LOGO_24.png" class="sidebar-logo">
-
-            <ul>
-                <li><a href="#podcast-sunday-sermon">The Sunday
-                        Sermon</a></li>
+    <!--
+    <div class="dashboard-container mobile-friendly-dashboard">
+        <div class="sidebar fixed-sidebar podcast-sidebar mobile-friendly-sidebar">
+            <img src="./assets/CPC_LOGO_24.png" class="sidebar-logo mobile-friendly-logo">
+            <ul class="mobile-friendly-list">
+                <li><a href="#podcast-sunday-sermon">The Sunday Sermon</a></li>
                 <li><a href="#podcast-beyond">Beyond</a></li>
-                <li><a href="adult-sunday-school.html">Adult Sunday
-                        Studies</a></li>
-
+                <li><a href="adult-sunday-school.html">Adult Sunday Studies</a></li>
             </ul>
             <hr>
-            <div class="subscribe-icons-a">
-                <a href="https://open.spotify.com/show/22kjUJyC0VH3cMfCSe9kEk?si=843112804a664618" target="_blank"><i
-                        class="fab fa-spotify"></i></a>
+            <div class="subscribe-icons-a mobile-friendly-icons">
+                <a href="https://open.spotify.com/show/22kjUJyC0VH3cMfCSe9kEk?si=843112804a664618" target="_blank"><i class="fab fa-spotify"></i></a>
                 <a href="your_apple_podcasts_link" target="_blank"><i class="fab fa-apple"></i></a>
                 <a href="https://www.youtube.com/@CPCNewHaven" target="_blank"><i class="fab fa-youtube"></i></a>
             </div>
         </div>
     </div>
+    -->
+    <div class="splash-hero--sunday">
+        <h1>Podcasts</h1>
+    </div>
+
+    <!-- Search and Filter Section -->
+    <!--
+    <div class="search-filter-container">
+        <input type="text" id="searchInput" placeholder="Search podcasts..." style="
+            width: 95%; 
+            padding: 10px; 
+            border: 1px solid #ccc; 
+            border-radius: 5px; 
+            background-color: rgba(255, 255, 255, 0.8); 
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.051); 
+            backdrop-filter: blur(10px); 
+            transition: all 0.3s ease;
+            margin-top: 20px;
+            max-width: 100%;">
+        </div>
+        <div class="filter-options">
+            <label for="filterYear">Year:</label>
+            <select id="filterYear">
+                <option value="">All</option>
+            </select>
+            
+            <label for="filterSpeaker">Speaker:</label>
+            <select id="filterSpeaker">
+                <option value="">All</option>
+            </select>
+            
+            <label for="filterGuest">Guest:</label>
+            <select id="filterGuest">
+                <option value="">All</option>
+            </select>
+
+            <button class="clear-filters" onclick="clearFilters()">Clear Filters</button>
+        </div>
+    </div>
+    -->
 
     <!-- Main Content -->
-    <div class="main-content">
+    <div class="main-content-a">
 
         <section id="podcast-sunday-sermon" class="inner-page-section" style="margin-top:20px;">
+            <!--
             <a id="latestSermonLink" href="#">
                 <img src="https://storage.googleapis.com/cpc-public-website/podcast-thumbnails/sundaySermons/12.29.24%20-%20CPC.jpg"
                     class="podcast-thumbnail" style="margin-bottom: 20px; border-radius: 10px;">
             </a>
+            -->
             <h1>The Sunday Sermon</h1>
             <p>New Episodes Dropped Every Monday</p>
 
@@ -125,11 +199,13 @@
         </section>
 
         <section id="podcast-beyond" class="inner-page-section" style="margin-top:20px;">
+            <!--
             <a href="https://open.spotify.com/episode/03czc7Z0bnniWrneEfIsfL?si=537d3fa4f97c4172" target="_blank">
                 <img src="https://storage.googleapis.com/cpc-public-website/podcast-thumbnails/beyond/BSS_12_10_24.jpg"
                     class="podcast-thumbnail"
                     style="margin-bottom: 20px; border-radius: 10px;">
             </a>
+            -->
             <h1>Beyond The Sunday Sermon</h1>
             <p>Final Episode of the Year out Now</p>
 
@@ -179,6 +255,115 @@
 
     <script src="./src/js/function_toggle_mobileMenu.js"></script>
     <script src="./src/js/podcast-fetch-sunday.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            fetch('./data/podcast-index.json')
+                .then(response => response.json())
+                .then(data => {
+                    populateDropdowns(data);
+                    populateTables(data);
+                })
+                .catch(error => console.error('Error fetching JSON:', error));
+
+            // Add event listeners for filter changes
+            document.getElementById('filterYear').addEventListener('change', filterPodcasts);
+            document.getElementById('filterSpeaker').addEventListener('change', filterPodcasts);
+            document.getElementById('filterGuest').addEventListener('change', filterPodcasts);
+            document.getElementById('searchInput').addEventListener('input', filterPodcasts);
+        });
+
+        function populateDropdowns(data) {
+            const speakers = new Set();
+            const guests = new Set();
+            const years = new Set();
+
+            // Extract unique speakers, guests, and years
+            data.sundaySermons.episodes.forEach(episode => {
+                if (episode.author) speakers.add(episode.author);
+                if (episode.date) {
+                    const year = new Date(episode.date).getFullYear();
+                    years.add(year);
+                }
+            });
+
+            data.beyond.episodes.forEach(episode => {
+                if (episode.guest) guests.add(episode.guest);
+            });
+
+            // Populate dropdowns
+            populateSelect('filterSpeaker', speakers);
+            populateSelect('filterGuest', guests);
+            populateSelect('filterYear', years);
+        }
+
+        function populateSelect(selectId, items) {
+            const selectElement = document.getElementById(selectId);
+            items.forEach(item => {
+                const option = document.createElement('option');
+                option.value = item.toLowerCase();
+                option.textContent = item;
+                selectElement.appendChild(option);
+            });
+        }
+
+        function clearFilters() {
+            document.getElementById('searchInput').value = '';
+            document.getElementById('filterYear').value = '';
+            document.getElementById('filterSpeaker').value = '';
+            document.getElementById('filterGuest').value = '';
+            filterPodcasts(); // Reapply filters to show all rows
+        }
+
+        function filterPodcasts() {
+            const query = document.getElementById('searchInput').value.toLowerCase();
+            const selectedYear = document.getElementById('filterYear').value;
+            const selectedSpeaker = document.getElementById('filterSpeaker').value.toLowerCase();
+            const selectedGuest = document.getElementById('filterGuest').value.toLowerCase();
+
+            const tables = ['sunday-sermon-table', 'beyond-sermon-table', 'walking-podcast-table', 'wwb-sermon-table'];
+            
+            tables.forEach(tableId => {
+                const table = document.getElementById(tableId);
+                const rows = table.getElementsByTagName('tbody')[0].getElementsByTagName('tr');
+
+                for (let row of rows) {
+                    const cells = row.getElementsByTagName('td');
+                    const date = cells[0].textContent || cells[0].innerText;
+                    const title = cells[1].textContent.toLowerCase() || cells[1].innerText.toLowerCase();
+                    const speaker = cells[2] ? (cells[2].textContent.toLowerCase() || cells[2].innerText.toLowerCase()) : '';
+                    const guest = cells[3] ? (cells[3].textContent.toLowerCase() || cells[3].innerText.toLowerCase()) : '';
+
+                    const year = new Date(date).getFullYear().toString();
+
+                    const matchesQuery = title.includes(query);
+                    const matchesYear = !selectedYear || year === selectedYear;
+                    const matchesSpeaker = !selectedSpeaker || speaker.includes(selectedSpeaker);
+                    const matchesGuest = !selectedGuest || guest.includes(selectedGuest);
+
+                    if (matchesQuery && matchesYear && matchesSpeaker && matchesGuest) {
+                        row.style.display = '';
+                    } else {
+                        row.style.display = 'none';
+                    }
+                }
+            });
+        }
+    </script>
+
+    <!-- Footer with Podcast Links -->
+    <footer style="background-color: #f4f4f4; padding: 20px; text-align: center; border-top: 1px solid #ccc;">
+        <h2>Subscribe to Our Podcasts</h2>
+        <p>Stay updated with our latest episodes. Subscribe now on your favorite platform:</p>
+        <div class="subscribe-links" style="margin-top: 10px;">
+            <a href="https://podcasts.apple.com/us/podcast/cpc-new-haven-podcasts/id1553483670" target="_blank" style="margin: 0 15px; color: #555; text-decoration: none;">
+                Apple Podcasts
+            </a>
+            <a href="https://open.spotify.com/show/22kjUJyC0VH3cMfCSe9kEk?si=84da3e652bc24af2" target="_blank" style="margin: 0 15px; color: #555; text-decoration: none;">
+                Spotify
+            </a>
+        </div>
+    </footer>
+
 </body>
 
 </html>
