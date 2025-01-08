@@ -37,35 +37,28 @@ document.addEventListener('DOMContentLoaded', function() {
             renderTable(sundaySermons, sundayTableBody);
             renderTable(beyondSermons, beyondTableBody, true);
 
-            // Filter functionality for Sunday Sermons
-            document.querySelector('#filter-title').addEventListener('input', function() {
-                const filterValue = this.value.toLowerCase();
-                const filteredSermons = sundaySermons.filter(sermon => sermon.title.toLowerCase().includes(filterValue));
+            // Search and filter functionality
+            document.getElementById('searchInput').addEventListener('input', function() {
+                const query = this.value.toLowerCase();
+                const filteredSermons = sundaySermons.filter(sermon => sermon.title.toLowerCase().includes(query));
                 renderTable(filteredSermons, sundayTableBody);
             });
 
-            document.querySelector('#filter-author').addEventListener('input', function() {
-                const filterValue = this.value.toLowerCase();
-                const filteredSermons = sundaySermons.filter(sermon => sermon.author.toLowerCase().includes(filterValue));
+            document.getElementById('filterDate').addEventListener('change', function() {
+                const selectedDate = this.value;
+                const filteredSermons = sundaySermons.filter(sermon => sermon.date === selectedDate);
                 renderTable(filteredSermons, sundayTableBody);
             });
 
-            document.querySelector('#filter-scripture').addEventListener('input', function() {
-                const filterValue = this.value.toLowerCase();
-                const filteredSermons = sundaySermons.filter(sermon => sermon.scripture.toLowerCase().includes(filterValue));
+            document.getElementById('filterSpeaker').addEventListener('change', function() {
+                const selectedSpeaker = this.value.toLowerCase();
+                const filteredSermons = sundaySermons.filter(sermon => sermon.author.toLowerCase().includes(selectedSpeaker));
                 renderTable(filteredSermons, sundayTableBody);
             });
 
-            // Filter functionality for Beyond Sermons
-            document.querySelector('#filter-beyond-title').addEventListener('input', function() {
-                const filterValue = this.value.toLowerCase();
-                const filteredSermons = beyondSermons.filter(sermon => sermon.title.toLowerCase().includes(filterValue));
-                renderTable(filteredSermons, beyondTableBody, true);
-            });
-
-            document.querySelector('#filter-beyond-guest').addEventListener('input', function() {
-                const filterValue = this.value.toLowerCase();
-                const filteredSermons = beyondSermons.filter(sermon => sermon.guest.toLowerCase().includes(filterValue));
+            document.getElementById('filterGuest').addEventListener('change', function() {
+                const selectedGuest = this.value.toLowerCase();
+                const filteredSermons = beyondSermons.filter(sermon => sermon.guest.toLowerCase().includes(selectedGuest));
                 renderTable(filteredSermons, beyondTableBody, true);
             });
         })

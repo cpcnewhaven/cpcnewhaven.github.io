@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    fetch('data/announcements/highlights.json')
+    fetch('https://api.npoint.io/0d72bc1a0e68b7bf376c')
         .then(response => response.json())
         .then(data => {
             const highlightsContainer = document.getElementById('highlights');

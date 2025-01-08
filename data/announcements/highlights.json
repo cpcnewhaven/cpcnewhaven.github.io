@@ -310,7 +310,7 @@
       "title": "Save the Dates",
       "description": "<div style=\"text-align: center;\"><ul style=\"list-style-type: none; padding: 0;\"><li><strong>Fall Work Day & Christmas Decor:</strong> Sat. Dec. 7</li><li><strong>Christmas Lessons & Carols Service:</strong> Fri. Dec. 13</li></ul></div>",
       "dateEntered": "2024-11-08",
-      "active": "true",
+      "active": "false",
       "type": "upcoming",
       "category": "upcoming",
       "tag": "events",
@@ -441,7 +441,7 @@
       "active": "true",
       "type": "upcoming",
       "category": "upcoming",
-      "tag": "aging",
+      "tag": "superFeatured",
       "date": "January 25, 2025",
       "time": "9:00 AM - 12:30 PM",
       "location": "CPC Fellowship Hall"
@@ -473,6 +473,49 @@
       "time": "10:45 AM",
       "location": "158 Davenport Ave, New Haven, CT",
       "featuredIMG": "https://storage.googleapis.com/cpc-public-website/events/Hill%20Christmas%20Store%202023/IMG_0244.JPG"     
+    },
+    {
+      "id": "2024-032",
+      "title": "Homeless Drive through January 2025",
+      "description": "We will be collecting items for those experiencing homelessness in the greater New Haven area through January 2025. Items needed: blankets, sleeping bags, hats, gloves, coats, socks, boots, tents, backpacks/duffle bags, toiletries, underwear, hand warmers. Please wash any used items and leave them in the \"Homeless Drive\" bin in the foyer. All items will be delivered to the CSHHC Homeless team and distributed to those in need. Contact Joshua Bird: jdbird77@msn.com",
+      "dateEntered": "2024-12-18",
+      "active": "true",
+      "type": "ongoing",
+      "category": "ongoing",
+      "tag": "superFeatured"
+    },
+    {
+      "id": "2025-001",
+      "title": "Sunday School and Fellowship Lunch Resume This Week!",
+      "description": "We are excited to announce that Sunday School and Fellowship Lunch will resume this week. Join us for a time of learning and community. Sunday School starts at 9:30 AM, followed by the Fellowship Lunch after the worship service. All are welcome!",
+      "dateEntered": "2025-01-03",
+      "active": "true",
+      "type": "upcoming",
+      "category": "upcoming",
+      "tag": "superFeatured"
+    },
+    {
+      "id": "2025-002",
+      "title": "Decor Take Down | Tomorrow, Saturday January 4 | 9am",
+      "description": "Join us for a decor take down event. We will be meeting at 9am to remove the holiday decorations. All are welcome to help out!",
+      "dateEntered": "2025-01-03",
+      "active": "true",
+      "type": "upcoming",
+      "category": "upcoming",
+      "tag": "superFeatured"
+    },
+    {
+      "id": "2025-003",
+      "title": "BOH MLK Prayer Breakfast",
+      "description": "Join us for the BOH MLK Prayer Breakfast on Monday, Jan. 20, from 8:30-10:30am at the Christian Tabernacle Baptist Church. This event is a wonderful opportunity to come together in prayer and reflection.",
+      "dateEntered": "2025-01-03",
+      "active": "true",
+      "type": "upcoming",
+      "category": "upcoming",
+      "tag": "event",
+      "date": "January 20, 2025",
+      "time": "8:30 AM - 10:30 AM",
+      "location": "Christian Tabernacle Baptist Church"
     }
   ]
 }

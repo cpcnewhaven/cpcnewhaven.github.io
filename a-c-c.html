@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Content-Security-Policy"
+            content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline'; img-src 'self' data:;">
+        <link rel="icon" href="../assets/web-assets/favicon.ico"
+            type="image/x-icon">
+        <title>CPC New Haven - Admin Control Center</title>
+        <script
+            src="https://cdn.jsdelivr.net/npm/alpinejs@3.10.5/dist/cdn.min.js"
+            defer></script>
+        <style>
+            body {
+                background-color: #1a1a2e;
+                color: #e0e0e0;
+                font-family: 'Courier New', Courier, monospace;
+                overflow-x: hidden;
+                margin: 0;
+                padding: 0;
+            }
+
+            .dashboard-container {
+                display: flex;
+                justify-content: center;
+                align-items: flex-start;
+                height: 100vh;
+                background: rgba(26, 26, 46, 0.8);
+                padding-top: 20px;
+                box-sizing: border-box;
+            }
+
+            .main-content {
+                background: rgba(255, 255, 255, 0.1);
+                border: 1px solid rgba(255, 255, 255, 0.2);
+                border-radius: 10px;
+                box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+                backdrop-filter: blur(5px);
+                -webkit-backdrop-filter: blur(5px);
+                padding: 20px;
+                max-width: 600px;
+                width: 100%;
+                box-sizing: border-box;
+            }
+
+            h1, h2 {
+                color: #86a9fd;
+                text-shadow: 0 0 5px #86a9fd;
+                margin: 0 0 10px;
+            }
+
+            h2 {
+                font-size: .92em;
+                font-weight: 300;
+            }
+
+            label {
+                color: #e0e0e0;
+            }
+
+            input[type="checkbox"] {
+                accent-color: #86a9fd;
+            }
+
+            p {
+                font-size: 1.2em;
+                color: #86a9fd;
+            }
+
+            header {
+                text-align: center;
+                padding: 20px 0;
+            }
+
+            header img {
+                width: 100px;
+                height: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <img src="../assets/web-assets/cpcLOGO.png"
+                alt="CPC New Haven Logo">
+        </header>
+        <main class="dashboard-container">
+            <div class="main-content">
+                <section id="admin-control-panel" class="inner-page-section"
+                    x-data="{ useNpoint: false }">
+                    <h1>CPC New Haven</h1>
+                    <h2>Admin Control Center</h2>
+                    <h2>Development Conditions</h2>
+                    <b>Non Destructive Site Settings</b>
+                    <ul>
+                        <li>Use npoint data: <input type="checkbox"
+                                id="toggleDataSource" x-model="useNpoint"></li>
+                    </ul>
+                    <p
+                        x-text="useNpoint ? 'Currently using npoint data.' : 'Currently using local data.'"></p>
+                </section>
+            </div>
+        </main>
+    </body>
+</html>

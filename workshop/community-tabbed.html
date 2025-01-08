@@ -15,839 +15,944 @@
         <link
             href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&display=swap"
             rel="stylesheet">
-        <style>
-                /* ... existing styles ... */
-            
-                /* Update image styles for full width and mobile responsiveness */
-                img {
-                    width: 100%;
-                    height: auto;
-                    max-width: none; /* Remove any max-width constraints */
-                    margin-bottom: 20px;
-                    cursor: pointer;
-                }
-            
-                /* ... existing styles ... */
-            </style>
-        <style>
-        /* Modern Tab styles */
-        .tabs-container {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 20px;
-            gap: 10px;
-            font-family: 'Barlow', sans-serif;
-        }
 
-        .tab-button {
-            padding: 12px 24px;
-            border: none;
-            background: #f0f0f0;
-            cursor: pointer;
-            border-radius: 25px;
-            font-weight: bold;
-            color: #555;
-            transition: background 0.3s ease, color 0.3s ease;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            font-family: 'Barlow', sans-serif;
-        }
+        <!-- Link to external CSS file -->
+        <link rel="stylesheet" href="community-update.css">
 
-        .tab-button:hover {
-            background: #e0e0e0;
-        }
-
-        .tab-button.active {
-            background: #007bff;
-            color: #fff;
-            box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
-        }
-
-        .tab-content > div {
-            display: block;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            background: #fff;
-            font-family: 'Barlow', sans-serif;
-        }
-
-        .tab-content > div[x-show="true"] {
-            display: block;
-        }
-
-        /* Add responsive styles for the submenu */
-        .tabs-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            margin-bottom: 20px;
-            gap: 10px;
-        }
-
-        .tab-button {
-            padding: 10px 20px;
-            border: none;
-            background: #f0f0f0;
-            cursor: pointer;
-            border-radius: 25px;
-            font-weight: bold;
-            color: #555;
-            transition: background 0.3s ease, color 0.3s ease;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            flex: 1 1 auto;
-            max-width: 150px;
-        }
-
-        .tab-button:hover {
-            background: #e0e0e0;
-        }
-
-        .tab-button.active {
-            background: #007bff;
-            color: #fff;
-            box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
-        }
-
-        @media (max-width: 767px) {
-            .tab-button {
-                font-size: 14px;
-                padding: 8px 16px;
-                max-width: 100%;
-            }
-        }
-
-        /* Lightbox styles */
-        .lightbox {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.8);
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
-        }
-
-        .lightbox img {
-            max-width: 90%;
-            max-height: 80%;
-        }
-
-        .lightbox:target {
-            display: flex;
-        }
-
-        /* New class for images */
-        .responsive-image {
-            min-width: 100%;
-            max-height:300px;
-            object-fit: cover;
-            margin-bottom: 20px;
-            cursor: pointer;
-        }
-    </style>
+        <link rel="stylesheet" href="../src/css/global-body.css" />
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+        <link rel="icon"
+            href="https://storage.googleapis.com/cpc-public-website/web-assets/CPC%20-%20FAVICON%20-%20FALL%202024.png"
+            type="image/png" />
     </head>
 
     <body x-data="imageLoader()">
-        <header>
-            <h1>Community Page</h1>
+        <!-- Header and Navigation -->
+        <header id="stickyHeader" class="sticky">
+            <nav class="main-navigation">
+                <a href="../index.html">Home</a>
+                <a href="../sundays.html">Sundays</a>
+                <a href="../about.html">About</a>
+                <a href="../podcasts.html">Podcasts</a>
+                <a href="../announcements.html">Announcements</a>
+                <a href="../community.html">Community</a>
+                <a href="../live.html">Live</a>
+                <a href="../resources.html">Resources</a>
+                <a href="../give.html">Give</a>
+            </nav>
         </header>
 
-        <!-- Alpine.js Tabs -->
-        <div
-            x-data="{ activeTab: 'small-groups', lightboxImage: '', showLightbox: false }"
-            x-init="$watch('activeTab', value => { if (!value) activeTab = 'small-groups'; })">
-            <div class="tabs-container">
-                <button
-                    class="tab-button"
-                    :class="{ 'active': activeTab === 'small-groups' }"
-                    @click="activeTab = 'small-groups'">
-                    Small Groups
-                </button>
-                <button
-                    class="tab-button"
-                    :class="{ 'active': activeTab === 'ministries' }"
-                    @click="activeTab = 'ministries'">
-                    Ministries
-                </button>
-                <button
-                    class="tab-button"
-                    :class="{ 'active': activeTab === 'membership' }"
-                    @click="activeTab = 'membership'">
-                    Membership
+        <!-- MOBILE HAMBURGER-->
+        <div class="hamburger-menu-button-container" id="hamburgerMenu">
+            <i id="closeMobileMenuButton" class="fas fa-bars"></i>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <nav class="mobile-navigation" id="mobileNavigation">
+            <div class="mobile-nav-header">
+                <button id="closeMenuButton" aria-label="Close menu">
+                    <i class="fas fa-times"></i>
                 </button>
             </div>
+            <ul class="mobile-nav-links">
+                <li><a class="mobile-menu-link" href="index.html">Home</a></li>
+                <li><a class="mobile-menu-link"
+                        href="sundays.html">Sundays</a></li>
+                <li><a class="mobile-menu-link" href="about.html">About</a></li>
+                <li><a class="mobile-menu-link"
+                        href="podcasts.html">Podcasts</a></li>
+                <li><a class="mobile-menu-link"
+                        href="announcements.html">Announcements</a></li>
+                <li><a class="mobile-menu-link"
+                        href="community.html">Community</a></li>
+                <li><a class="mobile-menu-link" href="live.html">Live</a></li>
+                <li><a class="mobile-menu-link"
+                        href="resources.html">Resources</a></li>
+                <li><a class="mobile-menu-link" href="give.html">Give</a></li>
+            </ul>
+        </nav>
 
-            <!-- Tab Content -->
-            <div class="tab-content">
-                <!-- Small Groups -->
-                <div x-show="activeTab === 'small-groups'">
-                    <h2>Small Groups</h2>
-                    <div x-data="{ activeSubTab: 'life-groups' }">
-                        <div class="tabs-container">
-                            <button class="tab-button"
-                                :class="{ 'active': activeSubTab === 'life-groups' }"
-                                @click="activeSubTab = 'life-groups'">Life
-                                Groups</button>
-                            <button class="tab-button"
-                                :class="{ 'active': activeSubTab === 'discipleship-groups' }"
-                                @click="activeSubTab = 'discipleship-groups'">Discipleship
-                                Groups</button>
-                        </div>
+        <!-- Main Content -->
+        <div id="page">
+            <div class="header-title">
+                <h1>Community Page</h1>
+            </div>
 
-                        <!-- Sub Tab Content -->
-                        <div class="tab-content">
-                            <!-- Life Groups -->
-                            <div x-show="activeSubTab === 'life-groups'">
-                                <h2>Life Groups</h2>
-                                <img :src="images.smallGroups.lifeGroups"
-                                    alt="Life Groups Image"
-                                    class="responsive-image"
-                                    @click="lightboxImage = images.smallGroups.lifeGroups; showLightbox = true">
-                                <p class="body-text">
-                                    Life Groups are our way of doing church in
-                                    the small with all sorts of people engaged
-                                    in prayer, teaching, fellowship, and care.
-                                </p>
-                                <p class="body-text">
-                                    "God has so composed the body, giving
-                                    greater honor to the part that lacked it,
-                                    that there may
-                                    be no division in the body, but that the
-                                    members may have the same care for one
-                                    another. If one member
-                                    suffers, all suffer together; if one member
-                                    is honored, all rejoice together."
-                                    - 1 Corinthians 12:24-26
-                                </p>
-                                <p class="body-text">
-                                    God's people are the hands and feet of
-                                    Christ. We cannot experience God and grow
-                                    spiritually in a
-                                    truly gospel-centered and biblical way if we
-                                    are living in isolation. Neither can we say
-                                    we are
-                                    flourishing if our brother or sister in
-                                    Christ is suffering. Bound together with
-                                    covenant communion,
-                                    God brings us into new relationships where
-                                    sacrifice is freedom and giving to others is
-                                    where we find life.
-                                </p>
-                                <p class="body-text">
-                                    Life Groups are the vehicle that we use to
-                                    help its participants continue to experience
-                                    Christ
-                                    outside of our worship gatherings and to
-                                    impart the pastoral care that Christ
-                                    provides through the
-                                    love of His people. Thus, the worship,
-                                    teaching, fellowship, and care for one
-                                    another supply a more
-                                    intimate and hands-on encounter with the
-                                    living Christ.
-                                </p>
+            <!-- Alpine.js Tabs -->
+            <div
+                x-data="{ activeTab: 'small-groups', lightboxImage: '', showLightbox: false }"
+                x-init="$watch('activeTab', value => { if (!value) activeTab = 'small-groups'; })">
+                <div class="tabs-container">
+                    <button
+                        class="tab-button"
+                        :class="{ 'active': activeTab === 'small-groups' }"
+                        @click="activeTab = 'small-groups'">
+                        Small Groups
+                    </button>
+                    <button
+                        class="tab-button"
+                        :class="{ 'active': activeTab === 'ministries' }"
+                        @click="activeTab = 'ministries'">
+                        Ministries
+                    </button>
+                    <button
+                        class="tab-button"
+                        :class="{ 'active': activeTab === 'membership' }"
+                        @click="activeTab = 'membership'">
+                        Membership
+                    </button>
+                </div>
+
+                <!-- Tab Content -->
+                <div class="tab-content">
+                    <!-- Small Groups -->
+                    <div x-show="activeTab === 'small-groups'">
+                        <h2>Small Groups</h2>
+                        <div x-data="{ activeSubTab: 'life-groups' }">
+                            <div class="tabs-container">
+                                <button class="tab-button"
+                                    :class="{ 'active': activeSubTab === 'life-groups' }"
+                                    @click="activeSubTab = 'life-groups'">Life
+                                    Groups</button>
+                                <button class="tab-button"
+                                    :class="{ 'active': activeSubTab === 'discipleship-groups' }"
+                                    @click="activeSubTab = 'discipleship-groups'">Discipleship
+                                    Groups</button>
                             </div>
 
-                            <!-- Discipleship Groups -->
-                            <div
-                                x-show="activeSubTab === 'discipleship-groups'">
-                                <h2>Discipleship Groups</h2>
-                                <img
-                                    :src="images.smallGroups.discipleshipGroups"
-                                    alt="Discipleship Groups Image"
-                                    class="responsive-image"
-                                    @click="lightboxImage = images.smallGroups.discipleshipGroups; showLightbox = true">
-                                <p class="body-text">
-                                    Christian discipleship is the application of
-                                    the gospel to every aspect of life. The very
-                                    gospel that
-                                    sets us free from the fear of divine and
-                                    human condemnation is the same power that
-                                    transforms our relationships, work,
-                                    and worship.
-                                </p>
-                                <p class="body-text">
-                                    Biblical discipleship, including word,
-                                    worship, and fellowship, exists at CPC
-                                    primarily through Sunday
-                                    worship, courses offered through the School
-                                    of Discipleship, and Men’s and Women’s
-                                    Discipleship Groups.
-                                </p>
-                                <p class="body-text">
-                                    We encourage all congregation members to
-                                    participate in both a Life Group and a
-                                    Discipleship Group.
-                                    Although there are components of study in
-                                    each Discipleship Group, their focus is on
-                                    living and sharing truth through
-                                    mutual accountability, study, and prayer.
-                                </p>
+                            <!-- Sub Tab Content -->
+                            <div class="tab-content">
+                                <!-- Life Groups -->
+                                <div x-show="activeSubTab === 'life-groups'">
+                                    <h2>Life Groups</h2>
+                                    <div class="image-wrapper">
+                                        <div class="blurred-background"></div>
+                                        <img
+                                            :src="images.smallGroups.lifeGroups"
+                                            alt="Life Groups Image"
+                                            class="responsive-image"
+                                            @click="lightboxImage = images.smallGroups.lifeGroups; showLightbox = true">
+                                    </div>
+                                    <p class="body-text">
+                                        Life Groups are our way of doing church
+                                        in
+                                        the small with all sorts of people
+                                        engaged
+                                        in prayer, teaching, fellowship, and
+                                        care.
+                                    </p>
+                                    <p class="body-text">
+                                        "God has so composed the body, giving
+                                        greater honor to the part that lacked
+                                        it,
+                                        that there may
+                                        be no division in the body, but that the
+                                        members may have the same care for one
+                                        another. If one member
+                                        suffers, all suffer together; if one
+                                        member
+                                        is honored, all rejoice together."
+                                        - 1 Corinthians 12:24-26
+                                    </p>
+                                    <p class="body-text">
+                                        God's people are the hands and feet of
+                                        Christ. We cannot experience God and
+                                        grow
+                                        spiritually in a
+                                        truly gospel-centered and biblical way
+                                        if we
+                                        are living in isolation. Neither can we
+                                        say
+                                        we are
+                                        flourishing if our brother or sister in
+                                        Christ is suffering. Bound together with
+                                        covenant communion,
+                                        God brings us into new relationships
+                                        where
+                                        sacrifice is freedom and giving to
+                                        others is
+                                        where we find life.
+                                    </p>
+                                    <p class="body-text">
+                                        Life Groups are the vehicle that we use
+                                        to
+                                        help its participants continue to
+                                        experience
+                                        Christ
+                                        outside of our worship gatherings and to
+                                        impart the pastoral care that Christ
+                                        provides through the
+                                        love of His people. Thus, the worship,
+                                        teaching, fellowship, and care for one
+                                        another supply a more
+                                        intimate and hands-on encounter with the
+                                        living Christ.
+                                    </p>
+                                </div>
+
+                                <!-- Discipleship Groups -->
+                                <div
+                                    x-show="activeSubTab === 'discipleship-groups'">
+                                    <h2>Discipleship Groups</h2>
+                                    <div class="image-wrapper">
+                                        <div class="blurred-background"></div>
+                                        <img
+                                            :src="images.smallGroups.discipleshipGroups"
+                                            alt="Discipleship Groups Image"
+                                            class="responsive-image"
+                                            @click="lightboxImage = images.smallGroups.discipleshipGroups; showLightbox = true">
+                                    </div>
+                                    <p class="body-text">
+                                        Christian discipleship is the
+                                        application of
+                                        the gospel to every aspect of life. The
+                                        very
+                                        gospel that
+                                        sets us free from the fear of divine and
+                                        human condemnation is the same power
+                                        that
+                                        transforms our relationships, work,
+                                        and worship.
+                                    </p>
+                                    <p class="body-text">
+                                        Biblical discipleship, including word,
+                                        worship, and fellowship, exists at CPC
+                                        primarily through Sunday
+                                        worship, courses offered through the
+                                        School
+                                        of Discipleship, and Men’s and Women’s
+                                        Discipleship Groups.
+                                    </p>
+                                    <p class="body-text">
+                                        We encourage all congregation members to
+                                        participate in both a Life Group and a
+                                        Discipleship Group.
+                                        Although there are components of study
+                                        in
+                                        each Discipleship Group, their focus is
+                                        on
+                                        living and sharing truth through
+                                        mutual accountability, study, and
+                                        prayer.
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Ministries -->
-                <div x-show="activeTab === 'ministries'">
-                    <h2>Ministries</h2>
-                    <!-- Submenu for Ministries -->
-                    <div x-data="{ activeSubTab: 'children' }">
-                        <div class="tabs-container">
-                            <button class="tab-button"
-                                :class="{ 'active': activeSubTab === 'children' }"
-                                @click="activeSubTab = 'children'">Children</button>
-                            <button class="tab-button"
-                                :class="{ 'active': activeSubTab === 'youth' }"
-                                @click="activeSubTab = 'youth'">Youth</button>
-                            <button class="tab-button"
-                                :class="{ 'active': activeSubTab === 'undergraduate' }"
-                                @click="activeSubTab = 'undergraduate'">Undergraduate</button>
-                            <button class="tab-button"
-                                :class="{ 'active': activeSubTab === 'graduate' }"
-                                @click="activeSubTab = 'graduate'">Graduate</button>
-                            <button class="tab-button"
-                                :class="{ 'active': activeSubTab === 'mercy' }"
-                                @click="activeSubTab = 'mercy'">Mercy</button>
-                            <button class="tab-button"
-                                :class="{ 'active': activeSubTab === 'men' }"
-                                @click="activeSubTab = 'men'">Men</button>
-                            <button class="tab-button"
-                                :class="{ 'active': activeSubTab === 'women' }"
-                                @click="activeSubTab = 'women'">Women</button>
-                        </div>
-
-                        <!-- Sub Tab Content -->
-                        <div class="tab-content">
-                            <!-- Children -->
-                            <div x-show="activeSubTab === 'children'">
-                                <h2 class="heading-2">Children's Christian
-                                    Education</h2>
-                                <img :src="images.ministries.children"
-                                    alt="Children's Education Image"
-                                    class="responsive-image"
-                                    @click="lightboxImage = images.ministries.children; showLightbox = true">
-                                <p class="body-text">
-                                    In an attempt to assist our covenant
-                                    families in
-                                    raising their children in the grace of the
-                                    gospel,
-                                    we have developed a thoughtful and
-                                    comprehensive
-                                    approach towards providing your children
-                                    with deep
-                                    and enduring roots in the Christian faith.
-                                    Our
-                                    philosophy emphasizes close parent/church
-                                    cooperation. As a result, our strategy for
-                                    "making disciples" seeks to be primarily
-                                    relational
-                                    rather than programmatic.
-                                </p>
-                                <p class="body-text">
-                                    Our curriculum represents both a deductive
-                                    and
-                                    inductive approach to education that is
-                                    intended to
-                                    give our children a lasting and full
-                                    knowledge of
-                                    the Christian faith. Our goal, then, is to
-                                    help our
-                                    children become faithful disciples of
-                                    Christ, well
-                                    prepared to live and defend the Gospel into
-                                    the 21st
-                                    century.
-                                </p>
-                                <ul class="body-text">
-                                    <li>A comprehensive study of the Bible in
-                                        all its various periods</li>
-                                    <li>A systematic study and review of the
-                                        essential teachings of the
-                                        classic/evangelical Christian faith</li>
-                                    <li>A precious collection of classic hymns
-                                        to assist in private and public
-                                        worship</li>
-                                    <li>A practical and personal knowledge of
-                                        Christ as experienced within the loving
-                                        community of a Christ-centered
-                                        church</li>
-                                    <li>Deductive Bible Study: Children review
-                                        the Westminster Shorter Catechisms and
-                                        learn hymns often used in worship</li>
-                                    <li>Inductive Bible Study: Each Sunday
-                                        School class studies the Scripture using
-                                        lessons and curricula most suited to
-                                        each age</li>
-                                </ul>
+                    <!-- Ministries -->
+                    <div x-show="activeTab === 'ministries'">
+                        <h2>Ministries</h2>
+                        <!-- Submenu for Ministries -->
+                        <div x-data="{ activeSubTab: 'children' }">
+                            <div class="tabs-container">
+                                <button class="tab-button"
+                                    :class="{ 'active': activeSubTab === 'children' }"
+                                    @click="activeSubTab = 'children'">Children</button>
+                                <button class="tab-button"
+                                    :class="{ 'active': activeSubTab === 'youth' }"
+                                    @click="activeSubTab = 'youth'">Youth</button>
+                                <button class="tab-button"
+                                    :class="{ 'active': activeSubTab === 'undergraduate' }"
+                                    @click="activeSubTab = 'undergraduate'">Undergraduate</button>
+                                <button class="tab-button"
+                                    :class="{ 'active': activeSubTab === 'graduate' }"
+                                    @click="activeSubTab = 'graduate'">Graduate</button>
+                                <button class="tab-button"
+                                    :class="{ 'active': activeSubTab === 'mercy' }"
+                                    @click="activeSubTab = 'mercy'">Mercy</button>
+                                <button class="tab-button"
+                                    :class="{ 'active': activeSubTab === 'men' }"
+                                    @click="activeSubTab = 'men'">Men</button>
+                                <button class="tab-button"
+                                    :class="{ 'active': activeSubTab === 'women' }"
+                                    @click="activeSubTab = 'women'">Women</button>
                             </div>
 
-                            <!-- Youth -->
-                            <div x-show="activeSubTab === 'youth'">
-                                <h2 class="heading-2">Youth</h2>
-                                <img :src="images.ministries.youth"
-                                    alt="Youth Image"
-                                    class="responsive-image"
-                                    @click="lightboxImage = images.ministries.youth; showLightbox = true">
-                                <p class="body-text">
-                                    Our youth ministry at CPC is the capstone of
-                                    our
-                                    broader children's ministry, and targets
-                                    both junior
-                                    and senior high. We have many various
-                                    goings-on
-                                    throughout the year, but here are some of
-                                    the
-                                    offerings we have for our youth:
-                                </p>
-                                <p class="body-text">
-                                    <strong>Sunday School:</strong> CPC's Sunday
-                                    School program goes from preschool through
-                                    graduation. Our goal is to partner with
-                                    parents
-                                    in the Christian discipleship of their kids,
-                                    in
-                                    order that our kids ultimately embrace the
-                                    gospel of grace for themselves.
-                                </p>
-                                <p class="body-text">
-                                    <strong>One-On-One Discipleship:</strong>
-                                    Beyond
-                                    our calendar events, we seek to schedule
-                                    one-on-one time with students for
-                                    discipleship.
-                                    This takes the form of going out for lunch,
-                                    monthly
-                                    fellowship gatherings, ice
-                                    cream, or anything that gives us an
-                                    opportunity
-                                    to deepen relationships and minister to the
-                                    students' needs.
-                                </p>
-                                <p class="body-text">
-                                    For any inquiries regarding our youth
-                                    ministry,
-                                    contact <a
-                                        href="mailto:jerry@cpcnewhaven.org"><span>Jerry
-                                            Ornelas</span></a>
-                                </p>
-                            </div>
+                            <!-- Sub Tab Content -->
+                            <div class="tab-content">
+                                <!-- Children -->
+                                <div x-show="activeSubTab === 'children'">
+                                    <h2 class="heading-2">Children's Christian
+                                        Education</h2>
+                                    <div class="image-wrapper">
+                                        <div class="blurred-background"></div>
+                                        <img :src="images.ministries.children"
+                                            alt="Children's Education Image"
+                                            class="responsive-image"
+                                            @click="lightboxImage = images.ministries.children; showLightbox = true">
+                                    </div>
+                                    <p class="body-text">
+                                        In an attempt to assist our covenant
+                                        families in
+                                        raising their children in the grace of
+                                        the
+                                        gospel,
+                                        we have developed a thoughtful and
+                                        comprehensive
+                                        approach towards providing your children
+                                        with deep
+                                        and enduring roots in the Christian
+                                        faith.
+                                        Our
+                                        philosophy emphasizes close
+                                        parent/church
+                                        cooperation. As a result, our strategy
+                                        for
+                                        "making disciples" seeks to be primarily
+                                        relational
+                                        rather than programmatic.
+                                    </p>
+                                    <p class="body-text">
+                                        Our curriculum represents both a
+                                        deductive
+                                        and
+                                        inductive approach to education that is
+                                        intended to
+                                        give our children a lasting and full
+                                        knowledge of
+                                        the Christian faith. Our goal, then, is
+                                        to
+                                        help our
+                                        children become faithful disciples of
+                                        Christ, well
+                                        prepared to live and defend the Gospel
+                                        into
+                                        the 21st
+                                        century.
+                                    </p>
+                                    <ul class="body-text">
+                                        <li>A comprehensive study of the Bible
+                                            in
+                                            all its various periods</li>
+                                        <li>A systematic study and review of the
+                                            essential teachings of the
+                                            classic/evangelical Christian
+                                            faith</li>
+                                        <li>A precious collection of classic
+                                            hymns
+                                            to assist in private and public
+                                            worship</li>
+                                        <li>A practical and personal knowledge
+                                            of
+                                            Christ as experienced within the
+                                            loving
+                                            community of a Christ-centered
+                                            church</li>
+                                        <li>Deductive Bible Study: Children
+                                            review
+                                            the Westminster Shorter Catechisms
+                                            and
+                                            learn hymns often used in
+                                            worship</li>
+                                        <li>Inductive Bible Study: Each Sunday
+                                            School class studies the Scripture
+                                            using
+                                            lessons and curricula most suited to
+                                            each age</li>
+                                    </ul>
+                                </div>
 
-                            <!-- Undergraduate -->
-                            <div x-show="activeSubTab === 'undergraduate'">
-                                <h2 class="heading-2">Undergraduate</h2>
-                                <img :src="images.ministries.undergraduate"
-                                    alt="Undergraduate Image"
-                                    class="responsive-image"
-                                    @click="lightboxImage = images.ministries.undergraduate; showLightbox = true">
-                                <p class="body-text">
-                                    CPC's college ministry is a collection of
-                                    students
-                                    from wide-ranging backgrounds gathered under
-                                    the
-                                    banner of Jesus Christ. Mostly made up of
-                                    Yale,
-                                    Southern (SCSU) and Gateway students, the
-                                    college
-                                    ministry also includes students from other
-                                    area
-                                    universities.
-                                    CPC seeks to help students love Christ, love
-                                    the
-                                    church, and love the campus life to which
-                                    they are
-                                    called. Because we love the campus, we send
-                                    campus
-                                    ministers to the campus, but above all, we
-                                    invite
-                                    students to take part in the fullness of
-                                    Christ through
-                                    CPC's rich, communal Sunday morning worship.
-                                    Students,
-                                    please honor us with your presence and
-                                    unique gifts!
-                                </p>
-                                <p class="body-text">
-                                    <strong>One-on-One and Small Group
-                                        Discipleship</strong><br>
-                                    Depending on the needs of the students or
-                                    campus, we
-                                    are also deeply committed to individual and
-                                    small
-                                    group discipleship on campus. This has been
-                                    happening at Yale and Southern, and we look
-                                    to serve
-                                    students of all local campuses (Quinnipiac,
-                                    Gateway,
-                                    and Albertus Magnus) in the future. For any
-                                    inquiries
-                                    regarding our Undergraduate ministry,
-                                    contact Jerry
-                                    Ornelas
-                                </p>
-                                <p class="body-text">
-                                    <strong>Bridging the Church-Campus
-                                        Gap</strong><br>
-                                    This is our internship program for college
-                                    students
-                                    interested in learning more, investing more,
-                                    being
-                                    more knit in to the family of God. It is a
-                                    great
-                                    opportunity to serve, receive valuable
-                                    theological
-                                    training, and have practical experiences and
-                                    opportunities within the church. Go here for
-                                    more
-                                    information on the internship.
-                                </p>
-                                <p class="body-text">
-                                    <strong>Athletes in Action</strong><br>
-                                    CPC supports several on-campus ministries at
-                                    Yale
-                                    including Athletes in Action: One World To
-                                    Reach,
-                                    One Language of Sport, One Message of
-                                    Victory.
-                                    Athletes in Action is a student-led sports
-                                    ministry
-                                    dedicated to building a community of
-                                    fellowship
-                                    founded in the loving character of Jesus
-                                    Christ. We
-                                    seek to reach out to students through large
-                                    group
-                                    meetings, fun activities, and individual
-                                    connections. We welcome people of all
-                                    backgrounds to
-                                    explore the Christian faith. We meet weekly
-                                    during
-                                    the academic year and have Bible studies
-                                    throughout
-                                    the week, fellowship activities, and
-                                    retreats
-                                    throughout the year.
-                                </p>
-                                <p class="body-text">
-                                    For all things college-related, contact
-                                    Jerry
-                                    Ornelas.
-                                </p>
-                            </div>
+                                <!-- Youth -->
+                                <div x-show="activeSubTab === 'youth'">
+                                    <h2 class="heading-2">Youth</h2>
+                                    <div class="image-wrapper">
+                                        <div class="blurred-background"></div>
+                                        <img :src="images.ministries.youth"
+                                            alt="Youth Image"
+                                            class="responsive-image"
+                                            @click="lightboxImage = images.ministries.youth; showLightbox = true">
+                                    </div>
+                                    <p class="body-text">
+                                        Our youth ministry at CPC is the
+                                        capstone of
+                                        our
+                                        broader children's ministry, and targets
+                                        both junior
+                                        and senior high. We have many various
+                                        goings-on
+                                        throughout the year, but here are some
+                                        of
+                                        the
+                                        offerings we have for our youth:
+                                    </p>
+                                    <p class="body-text">
+                                        <strong>Sunday School:</strong> CPC's
+                                        Sunday
+                                        School program goes from preschool
+                                        through
+                                        graduation. Our goal is to partner with
+                                        parents
+                                        in the Christian discipleship of their
+                                        kids,
+                                        in
+                                        order that our kids ultimately embrace
+                                        the
+                                        gospel of grace for themselves.
+                                    </p>
+                                    <p class="body-text">
+                                        <strong>One-On-One
+                                            Discipleship:</strong>
+                                        Beyond
+                                        our calendar events, we seek to schedule
+                                        one-on-one time with students for
+                                        discipleship.
+                                        This takes the form of going out for
+                                        lunch,
+                                        monthly
+                                        fellowship gatherings, ice
+                                        cream, or anything that gives us an
+                                        opportunity
+                                        to deepen relationships and minister to
+                                        the
+                                        students' needs.
+                                    </p>
+                                    <p class="body-text">
+                                        For any inquiries regarding our youth
+                                        ministry,
+                                        contact <a
+                                            href="mailto:jerry@cpcnewhaven.org"><span>Jerry
+                                                Ornelas</span></a>
+                                    </p>
+                                </div>
 
-                            <!-- Graduate -->
-                            <div x-show="activeSubTab === 'graduate'">
-                                <h2 class="heading-2">Graduate</h2>
-                                <img :src="images.ministries.graduate"
-                                    alt="Graduate Image"
-                                    class="responsive-image"
-                                    @click="lightboxImage = images.ministries.graduate; showLightbox = true">
-                                <p class="body-text">
-                                    The Graduate group exists to minister to men
-                                    and
-                                    women in their post-college years as they
-                                    follow God
-                                    through their academic, vocational, and
-                                    relational
-                                    callings. We seek to develop a deeper love
-                                    for
-                                    Christ and a richer involvement in the life
-                                    of the
-                                    Church.
-                                </p>
-                                <p class="body-text">
-                                    <strong>On Campus Mini-Groups</strong><br>
-                                    In many areas of campus, like the med
-                                    school, law
-                                    school, divinity school, and graduate
-                                    school, we
-                                    will begin small groups with the intent of
-                                    providing
-                                    respite from the busy yet often lonely life
-                                    of a
-                                    grad student. Meeting during the day
-                                    throughout the
-                                    week, these will include Scripture reading
-                                    and
-                                    meditation, prayer, and fellowship. Contact
-                                    Craig to
-                                    get involved in one near you.
-                                </p>
-                                <p class="body-text">
-                                    <strong>Get Involved</strong><br>
-                                    Join the church family for Adult Sunday
-                                    Studies
-                                    classes, Sunday Studies, church-wide events,
-                                    and
-                                    work days! You can also become a leader
-                                    within the
-                                    Graduate Group or through other ministries
-                                    at CPC.
-                                </p>
-                                <p class="body-text">
-                                    For all things related to Graduates, contact
-                                    Craig
-                                    Luekens.
-                                </p>
-                            </div>
+                                <!-- Undergraduate -->
+                                <div x-show="activeSubTab === 'undergraduate'">
+                                    <h2 class="heading-2">Undergraduate</h2>
+                                    <div class="image-wrapper">
+                                        <div class="blurred-background"></div>
+                                        <img
+                                            :src="images.ministries.undergraduate"
+                                            alt="Undergraduate Image"
+                                            class="responsive-image"
+                                            @click="lightboxImage = images.ministries.undergraduate; showLightbox = true">
+                                    </div>
+                                    <p class="body-text">
+                                        CPC's college ministry is a collection
+                                        of
+                                        students
+                                        from wide-ranging backgrounds gathered
+                                        under
+                                        the
+                                        banner of Jesus Christ. Mostly made up
+                                        of
+                                        Yale,
+                                        Southern (SCSU) and Gateway students,
+                                        the
+                                        college
+                                        ministry also includes students from
+                                        other
+                                        area
+                                        universities.
+                                        CPC seeks to help students love Christ,
+                                        love
+                                        the
+                                        church, and love the campus life to
+                                        which
+                                        they are
+                                        called. Because we love the campus, we
+                                        send
+                                        campus
+                                        ministers to the campus, but above all,
+                                        we
+                                        invite
+                                        students to take part in the fullness of
+                                        Christ through
+                                        CPC's rich, communal Sunday morning
+                                        worship.
+                                        Students,
+                                        please honor us with your presence and
+                                        unique gifts!
+                                    </p>
+                                    <p class="body-text">
+                                        <strong>One-on-One and Small Group
+                                            Discipleship</strong><br>
+                                        Depending on the needs of the students
+                                        or
+                                        campus, we
+                                        are also deeply committed to individual
+                                        and
+                                        small
+                                        group discipleship on campus. This has
+                                        been
+                                        happening at Yale and Southern, and we
+                                        look
+                                        to serve
+                                        students of all local campuses
+                                        (Quinnipiac,
+                                        Gateway,
+                                        and Albertus Magnus) in the future. For
+                                        any
+                                        inquiries
+                                        regarding our Undergraduate ministry,
+                                        contact Jerry
+                                        Ornelas
+                                    </p>
+                                    <p class="body-text">
+                                        <strong>Bridging the Church-Campus
+                                            Gap</strong><br>
+                                        This is our internship program for
+                                        college
+                                        students
+                                        interested in learning more, investing
+                                        more,
+                                        being
+                                        more knit in to the family of God. It is
+                                        a
+                                        great
+                                        opportunity to serve, receive valuable
+                                        theological
+                                        training, and have practical experiences
+                                        and
+                                        opportunities within the church. Go here
+                                        for
+                                        more
+                                        information on the internship.
+                                    </p>
+                                    <p class="body-text">
+                                        <strong>Athletes in Action</strong><br>
+                                        CPC supports several on-campus
+                                        ministries at
+                                        Yale
+                                        including Athletes in Action: One World
+                                        To
+                                        Reach,
+                                        One Language of Sport, One Message of
+                                        Victory.
+                                        Athletes in Action is a student-led
+                                        sports
+                                        ministry
+                                        dedicated to building a community of
+                                        fellowship
+                                        founded in the loving character of Jesus
+                                        Christ. We
+                                        seek to reach out to students through
+                                        large
+                                        group
+                                        meetings, fun activities, and individual
+                                        connections. We welcome people of all
+                                        backgrounds to
+                                        explore the Christian faith. We meet
+                                        weekly
+                                        during
+                                        the academic year and have Bible studies
+                                        throughout
+                                        the week, fellowship activities, and
+                                        retreats
+                                        throughout the year.
+                                    </p>
+                                    <p class="body-text">
+                                        For all things college-related, contact
+                                        Jerry
+                                        Ornelas.
+                                    </p>
+                                </div>
 
-                            <!-- Mercy -->
-                            <div x-show="activeSubTab === 'mercy'">
-                                <h2 class="heading-2">Mercy</h2>
-                                <img :src="images.ministries.mercy"
-                                    alt="Mercy Image"
-                                    class="responsive-image"
-                                    @click="lightboxImage = images.ministries.mercy; showLightbox = true">
-                                <p class="body-text">
-                                    <span>THE QUESTION ANSWERED THEN AND
-                                        NOW</span>
-                                    Imprisoned and faced with the ultimate cost
-                                    of
-                                    Christian discipleship, John the Baptist
-                                    sent his
-                                    disciples to inquire of Jesus, "Are you the
-                                    one who
-                                    is to come or shall we look for another?"
-                                    When
-                                    John's disciples found Jesus, his answer was
-                                    as
-                                    relevant then as it is today. Busy healing
-                                    the sick,
-                                    giving sight to the blind and casting out
-                                    evil
-                                    influences to those who were hopeless,
-                                    Christ
-                                    invoked the expectations of the prophets as
-                                    validation of his messianic authenticity.
-                                    Go and tell John what you have seen and
-                                    heard: the
-                                    blind receive their sight, the lame walk,
-                                    lepers are
-                                    cleansed, and the deaf hear, the dead are
-                                    raised up,
-                                    the poor have good news preached to them.
-                                    <cite>(Luke
-                                        7:22, cf. Isaiah 35:5f, 61:1)</cite>
-                                    John's question then is no less a question
-                                    often
-                                    raised today by the faithful and cynic
-                                    alike. Are
-                                    you (the body of Christ) legit? CPC
-                                    envisions the
-                                    embodiment of the same response of doing
-                                    mercy under
-                                    the power of Christ's ascension ministry
-                                    today, both
-                                    in word and deed, as validation to the
-                                    relevancy and
-                                    power of Jesus Christ in our midst.
-                                </p>
-                                <p class="body-text">
-                                    <span>MERCY BEGINS WITH PARTICIPATING IN A
-                                        LIFE
-                                        GROUP</span>
-                                    At CPC, participating in mercy begins with
-                                    actively
-                                    participating in one of our many Life Groups
-                                    within
-                                    and around greater New Haven. Each life
-                                    group is as
-                                    a "church in miniature" where we are each
-                                    "seen"
-                                    and "known" at a more
-                                    intimate level facilitates mercy with and
-                                    for one
-                                    another often before a situation reaches a
-                                    crisis.
-                                    Each Life Group is assigned a trained Life
-                                    Group
-                                    Mercy Coordinator to assist each group's
-                                    care for
-                                    one another as needs arise. This care
-                                    includes
-                                    sharing in prayer, emotional and spiritual
-                                    support,
-                                    and tangible assistance as needed. If you
-                                    are
-                                    interested in doing and/or receiving mercy
-                                    in an
-                                    authentic and holistic way, start by <a
-                                        href="lifegroup.html"
-                                        style="text-decoration: underline;">joining
-                                        a life
-                                        group.</a>
-                                </p>
-                                <p class="body-text">
-                                    <span>MERCY THAT INVOLVES THE VARIETY OF
-                                        GIFTS AND
-                                        ASSETS
-                                        OF THE FULL BODY OF CHRIST </span>
-                                    As needs become greater than can be dealt
-                                    with at
-                                    the Life Group level, or the need for a
-                                    special
-                                    expertise or asset not represented in the
-                                    group is
-                                    needed including financial assistance, the
-                                    greater
-                                    CPC body of Christ is made available. This
-                                    is
-                                    coordinated by the CPC Mercy Coordinator
-                                    with the
-                                    assistance and oversight of the Sr. Pastor.
-                                    The CPC
-                                    Coordinator works with the CPC Mercy Team
-                                    consisting
-                                    of CPC Life Coordinators and other select
-                                    persons
-                                    with skills or training relevant to the
-                                    kinds of
-                                    mercy needs that arise. This team meets
-                                    quarterly or
-                                    as needed to review the needs of the body of
-                                    Christ
-                                    and make recommendations to the Servant
-                                    Leader Board
-                                    and/or CPC Shepherds as needed.
-                                </p>
-                            </div>
+                                <!-- Graduate -->
+                                <div x-show="activeSubTab === 'graduate'">
+                                    <h2 class="heading-2">Graduate</h2>
+                                    <div class="image-wrapper">
+                                        <div class="blurred-background"></div>
+                                        <img :src="images.ministries.graduate"
+                                            alt="Graduate Image"
+                                            class="responsive-image"
+                                            @click="lightboxImage = images.ministries.graduate; showLightbox = true">
+                                    </div>
+                                    <p class="body-text">
+                                        The Graduate group exists to minister to
+                                        men
+                                        and
+                                        women in their post-college years as
+                                        they
+                                        follow God
+                                        through their academic, vocational, and
+                                        relational
+                                        callings. We seek to develop a deeper
+                                        love
+                                        for
+                                        Christ and a richer involvement in the
+                                        life
+                                        of the
+                                        Church.
+                                    </p>
+                                    <p class="body-text">
+                                        <strong>On Campus
+                                            Mini-Groups</strong><br>
+                                        In many areas of campus, like the med
+                                        school, law
+                                        school, divinity school, and graduate
+                                        school, we
+                                        will begin small groups with the intent
+                                        of
+                                        providing
+                                        respite from the busy yet often lonely
+                                        life
+                                        of a
+                                        grad student. Meeting during the day
+                                        throughout the
+                                        week, these will include Scripture
+                                        reading
+                                        and
+                                        meditation, prayer, and fellowship.
+                                        Contact
+                                        Craig to
+                                        get involved in one near you.
+                                    </p>
+                                    <p class="body-text">
+                                        <strong>Get Involved</strong><br>
+                                        Join the church family for Adult Sunday
+                                        Studies
+                                        classes, Sunday Studies, church-wide
+                                        events,
+                                        and
+                                        work days! You can also become a leader
+                                        within the
+                                        Graduate Group or through other
+                                        ministries
+                                        at CPC.
+                                    </p>
+                                    <p class="body-text">
+                                        For all things related to Graduates,
+                                        contact
+                                        Craig
+                                        Luekens.
+                                    </p>
+                                </div>
 
-                            <!-- Men -->
-                            <div x-show="activeSubTab === 'men'">
-                                <h2 class="heading-2">Men</h2>
-                                <img :src="images.ministries.men"
-                                    alt="Men's Ministry Image"
-                                    class="responsive-image"
-                                    @click="lightboxImage = images.ministries.men; showLightbox = true">
-                                <p class="body-text">
-                                    The mission of CPC's Men's Ministry is to
-                                    provide
-                                    all men the opportunity to experience
-                                    genuine
-                                    Christian fellowship, build strong
-                                    friendships, grow
-                                    spiritually, and reach unbelieving friends.
-                                    Through
-                                    these opportunities, men will increasingly
-                                    experience the transformative power of the
-                                    Gospel of
-                                    Jesus Christ in all spheres of their lives
-                                    to the
-                                    glory of God.
-                                </p>
-                            </div>
+                                <!-- Mercy -->
+                                <div x-show="activeSubTab === 'mercy'">
+                                    <h2 class="heading-2">Mercy</h2>
+                                    <div class="image-wrapper">
+                                        <div class="blurred-background"></div>
+                                        <img :src="images.ministries.mercy"
+                                            alt="Mercy Image"
+                                            class="responsive-image"
+                                            @click="lightboxImage = images.ministries.mercy; showLightbox = true">
+                                    </div>
+                                    <p class="body-text">
+                                        <span>THE QUESTION ANSWERED THEN AND
+                                            NOW</span>
+                                        Imprisoned and faced with the ultimate
+                                        cost
+                                        of
+                                        Christian discipleship, John the Baptist
+                                        sent his
+                                        disciples to inquire of Jesus, "Are you
+                                        the
+                                        one who
+                                        is to come or shall we look for
+                                        another?"
+                                        When
+                                        John's disciples found Jesus, his answer
+                                        was
+                                        as
+                                        relevant then as it is today. Busy
+                                        healing
+                                        the sick,
+                                        giving sight to the blind and casting
+                                        out
+                                        evil
+                                        influences to those who were hopeless,
+                                        Christ
+                                        invoked the expectations of the prophets
+                                        as
+                                        validation of his messianic
+                                        authenticity.
+                                        Go and tell John what you have seen and
+                                        heard: the
+                                        blind receive their sight, the lame
+                                        walk,
+                                        lepers are
+                                        cleansed, and the deaf hear, the dead
+                                        are
+                                        raised up,
+                                        the poor have good news preached to
+                                        them.
+                                        <cite>(Luke
+                                            7:22, cf. Isaiah 35:5f, 61:1)</cite>
+                                        John's question then is no less a
+                                        question
+                                        often
+                                        raised today by the faithful and cynic
+                                        alike. Are
+                                        you (the body of Christ) legit? CPC
+                                        envisions the
+                                        embodiment of the same response of doing
+                                        mercy under
+                                        the power of Christ's ascension ministry
+                                        today, both
+                                        in word and deed, as validation to the
+                                        relevancy and
+                                        power of Jesus Christ in our midst.
+                                    </p>
+                                    <p class="body-text">
+                                        <span>MERCY BEGINS WITH PARTICIPATING IN
+                                            A
+                                            LIFE
+                                            GROUP</span>
+                                        At CPC, participating in mercy begins
+                                        with
+                                        actively
+                                        participating in one of our many Life
+                                        Groups
+                                        within
+                                        and around greater New Haven. Each life
+                                        group is as
+                                        a "church in miniature" where we are
+                                        each
+                                        "seen"
+                                        and "known" at a more
+                                        intimate level facilitates mercy with
+                                        and
+                                        for one
+                                        another often before a situation reaches
+                                        a
+                                        crisis.
+                                        Each Life Group is assigned a trained
+                                        Life
+                                        Group
+                                        Mercy Coordinator to assist each group's
+                                        care for
+                                        one another as needs arise. This care
+                                        includes
+                                        sharing in prayer, emotional and
+                                        spiritual
+                                        support,
+                                        and tangible assistance as needed. If
+                                        you
+                                        are
+                                        interested in doing and/or receiving
+                                        mercy
+                                        in an
+                                        authentic and holistic way, start by <a
+                                            href="lifegroup.html"
+                                            style="text-decoration: underline;">joining
+                                            a life
+                                            group.</a>
+                                    </p>
+                                    <p class="body-text">
+                                        <span>MERCY THAT INVOLVES THE VARIETY OF
+                                            GIFTS AND
+                                            ASSETS
+                                            OF THE FULL BODY OF CHRIST </span>
+                                        As needs become greater than can be
+                                        dealt
+                                        with at
+                                        the Life Group level, or the need for a
+                                        special
+                                        expertise or asset not represented in
+                                        the
+                                        group is
+                                        needed including financial assistance,
+                                        the
+                                        greater
+                                        CPC body of Christ is made available.
+                                        This
+                                        is
+                                        coordinated by the CPC Mercy Coordinator
+                                        with the
+                                        assistance and oversight of the Sr.
+                                        Pastor.
+                                        The CPC
+                                        Coordinator works with the CPC Mercy
+                                        Team
+                                        consisting
+                                        of CPC Life Coordinators and other
+                                        select
+                                        persons
+                                        with skills or training relevant to the
+                                        kinds of
+                                        mercy needs that arise. This team meets
+                                        quarterly or
+                                        as needed to review the needs of the
+                                        body of
+                                        Christ
+                                        and make recommendations to the Servant
+                                        Leader Board
+                                        and/or CPC Shepherds as needed.
+                                    </p>
+                                </div>
 
-                            <!-- Women -->
-                            <div x-show="activeSubTab === 'women'">
-                                <h2 class="heading-2">Women</h2>
-                                <img :src="images.ministries.women"
-                                    alt="Women's Ministry Image"
-                                    class="responsive-image"
-                                    @click="lightboxImage = images.ministries.women; showLightbox = true">
-                                <p class="body-text">
-                                    Women at CPC are encouraged to live their
-                                    lives in a
-                                    gospel-centered (missional, sacramental,
-                                    confessional, and communal) manner. We hope
-                                    to see
-                                    the fullness of the image of God expressed
-                                    in both
-                                    men and women, as they work in partnership
-                                    with one
-                                    another for the glory of God. Women's events
-                                    seek to
-                                    minister to women in their various phases
-                                    and
-                                    spheres of life.
-                                </p>
+                                <!-- Men -->
+                                <div x-show="activeSubTab === 'men'">
+                                    <h2 class="heading-2">Men</h2>
+                                    <div class="image-wrapper">
+                                        <div class="blurred-background"></div>
+                                        <img :src="images.ministries.men"
+                                            alt="Men's Ministry Image"
+                                            class="responsive-image"
+                                            @click="lightboxImage = images.ministries.men; showLightbox = true">
+                                    </div>
+                                    <p class="body-text">
+                                        The mission of CPC's Men's Ministry is
+                                        to
+                                        provide
+                                        all men the opportunity to experience
+                                        genuine
+                                        Christian fellowship, build strong
+                                        friendships, grow
+                                        spiritually, and reach unbelieving
+                                        friends.
+                                        Through
+                                        these opportunities, men will
+                                        increasingly
+                                        experience the transformative power of
+                                        the
+                                        Gospel of
+                                        Jesus Christ in all spheres of their
+                                        lives
+                                        to the
+                                        glory of God.
+                                    </p>
+                                </div>
+
+                                <!-- Women -->
+                                <div x-show="activeSubTab === 'women'">
+                                    <h2 class="heading-2">Women</h2>
+                                    <div class="image-wrapper">
+                                        <div class="blurred-background"></div>
+                                        <img :src="images.ministries.women"
+                                            alt="Women's Ministry Image"
+                                            class="responsive-image"
+                                            @click="lightboxImage = images.ministries.women; showLightbox = true">
+                                    </div>
+                                    <p class="body-text">
+                                        Women at CPC are encouraged to live
+                                        their
+                                        lives in a
+                                        gospel-centered (missional, sacramental,
+                                        confessional, and communal) manner. We
+                                        hope
+                                        to see
+                                        the fullness of the image of God
+                                        expressed
+                                        in both
+                                        men and women, as they work in
+                                        partnership
+                                        with one
+                                        another for the glory of God. Women's
+                                        events
+                                        seek to
+                                        minister to women in their various
+                                        phases
+                                        and
+                                        spheres of life.
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Membership -->
-                <div x-show="activeTab === 'membership'">
-                    <h2>Membership</h2>
-                    <section class="inner-page-section">
-                        <img :src="images.membership.default"
-                            alt="Membership Image"
-                            class="responsive-image"
-                            @click="lightboxImage = images.membership.default; showLightbox = true">
-                        <p class="body-text">
-                            Throughout history, special relationships have been
-                            set apart by the taking of vows. What exactly is a
-                            vow? A vow is a
-                            "confession" regarding the meaning of one's
-                            participation in a given institution. Therefore,
-                            vows are ordinarily limited
-                            to initiation ceremonies. And according to the
-                            Bible, there are three such institutions that enjoy
-                            divine
-                            sanction--the church, the state, and the family.
-                            Vows are used to initiate a church relationship, or
-                            perhaps one's
-                            service in an office of the church.
-                        </p>
-                        <p class="body-text">
-                            According to the apostle Paul, one becomes a
-                            Christian when "you confess with your lips that
-                            Jesus is Lord, and believe
-                            in your heart that God raised him from the dead"
-                            (Romans 10:9). Who are we "confessing" to with our
-                            lips and in what
-                            context? Related to this, what else could it mean
-                            for the elders to "watch over the flock of God" if
-                            not a flock that
-                            can be defined by some "initiation" ceremony in
-                            relation to the exchange of vows? Or, in the words
-                            of Hebrews, what
-                            else could it mean to "obey your leaders and submit
-                            to them, for they are keeping watch over your souls
-                            and will give
-                            an account," apart from some willing and voluntary
-                            way to form an association that is predicated upon
-                            the taking of
-                            vows one to another? (see 1 Peter 5, Hebrews 13:17).
-                            And when the church is exhorted to
-                            "remove such a one" from "the
-                            assembly" as the ultimate, albeit tragic, expression
-                            of church discipline, what else could it mean except
-                            that the
-                            person was joined to the assembly by some confession
-                            that is later deemed broken? (1 Corinthians 5:3-5).
-                            Or, when we
-                            are exhorted to support one another even through our
-                            financial means, how could such benefits be
-                            distributed except
-                            that it means something to bind one's self to
-                            another through the authenticating protections of an
-                            initiation
-                            ceremony? (2 Corinthians 8).
-                        </p>
-                        <p class="body-text">
-                            And so, for these abbreviated reasons, we believe
-                            that church membership is a good thing given by God.
-                            When one becomes
-                            a Christian, they gain a heavenly Father and new
-                            brothers and sisters! It sets people apart into a
-                            special relationship
-                            with each other, where the terms are clear and where
-                            loyalties for the mutual benefit of all are
-                            expressed and
-                            preserved. Membership is simply a way to say: "I
-                            confess my faith in solidarity with you so as to
-                            enjoy the mutual
-                            support of one another until, for whatever reason,
-                            someone is led elsewhere."
-                        </p>
-                        <p class="body-text">
-                            For more information on becoming a member at CPC,
-                            please contact us.
-                        </p>
-                    </section>
+                    <!-- Membership -->
+                    <div x-show="activeTab === 'membership'">
+                        <h2>Membership</h2>
+                        <section class="inner-page-section">
+                            <div class="image-wrapper">
+                                <div class="blurred-background"></div>
+                                <img :src="images.membership.default"
+                                    alt="Membership Image"
+                                    class="responsive-image"
+                                    @click="lightboxImage = images.membership.default; showLightbox = true">
+                            </div>
+                            <p class="body-text">
+                                Throughout history, special relationships have
+                                been
+                                set apart by the taking of vows. What exactly is
+                                a
+                                vow? A vow is a
+                                "confession" regarding the meaning of one's
+                                participation in a given institution. Therefore,
+                                vows are ordinarily limited
+                                to initiation ceremonies. And according to the
+                                Bible, there are three such institutions that
+                                enjoy
+                                divine
+                                sanction--the church, the state, and the family.
+                                Vows are used to initiate a church relationship,
+                                or
+                                perhaps one's
+                                service in an office of the church.
+                            </p>
+                            <p class="body-text">
+                                According to the apostle Paul, one becomes a
+                                Christian when "you confess with your lips that
+                                Jesus is Lord, and believe
+                                in your heart that God raised him from the dead"
+                                (Romans 10:9). Who are we "confessing" to with
+                                our
+                                lips and in what
+                                context? Related to this, what else could it
+                                mean
+                                for the elders to "watch over the flock of God"
+                                if
+                                not a flock that
+                                can be defined by some "initiation" ceremony in
+                                relation to the exchange of vows? Or, in the
+                                words
+                                of Hebrews, what
+                                else could it mean to "obey your leaders and
+                                submit
+                                to them, for they are keeping watch over your
+                                souls
+                                and will give
+                                an account," apart from some willing and
+                                voluntary
+                                way to form an association that is predicated
+                                upon
+                                the taking of
+                                vows one to another? (see 1 Peter 5, Hebrews
+                                13:17).
+                                And when the church is exhorted to
+                                "remove such a one" from "the
+                                assembly" as the ultimate, albeit tragic,
+                                expression
+                                of church discipline, what else could it mean
+                                except
+                                that the
+                                person was joined to the assembly by some
+                                confession
+                                that is later deemed broken? (1 Corinthians
+                                5:3-5).
+                                Or, when we
+                                are exhorted to support one another even through
+                                our
+                                financial means, how could such benefits be
+                                distributed except
+                                that it means something to bind one's self to
+                                another through the authenticating protections
+                                of an
+                                initiation
+                                ceremony? (2 Corinthians 8).
+                            </p>
+                            <p class="body-text">
+                                And so, for these abbreviated reasons, we
+                                believe
+                                that church membership is a good thing given by
+                                God.
+                                When one becomes
+                                a Christian, they gain a heavenly Father and new
+                                brothers and sisters! It sets people apart into
+                                a
+                                special relationship
+                                with each other, where the terms are clear and
+                                where
+                                loyalties for the mutual benefit of all are
+                                expressed and
+                                preserved. Membership is simply a way to say: "I
+                                confess my faith in solidarity with you so as to
+                                enjoy the mutual
+                                support of one another until, for whatever
+                                reason,
+                                someone is led elsewhere."
+                            </p>
+                            <p class="body-text">
+                                For more information on becoming a member at
+                                CPC,
+                                please contact us.
+                            </p>
+                        </section>
+                    </div>
                 </div>
             </div>
         </div>
@@ -858,30 +963,58 @@
             <img :src="lightboxImage" alt="Lightbox Image">
         </div>
 
+        <!-- Footer -->
+        <footer>
+            <div class="footer-content-logo">
+                <a href="index.html">
+                    <img src="../assets/CPC_LOGO_24.png"
+                        alt="CPC New Haven Church" class="top-splash-logo">
+                </a>
+            </div>
+            <p>Join us for worship and fellowship. <a href="sundays.html">Learn
+                    more</a></p>
+            <p>203.777.6960 | <a
+                    href="mailto:admin@cpcnewhaven.org">admin@cpcnewhaven.org</a>
+                | 135 Whitney Ave. New Haven CT 06510</p>
+            <p>© 2024 Christ Presbyterian Church.</p>
+        </footer>
+
+        <!-- Scripts -->
+        <script src="./src/js/fetch-highlights-display-homepage.js"></script>
+        <script src="../src/js/function_toggle_mobileMenu.js"></script>
+        <script src="./src/js/background-fetch-splash-image.js"></script>
+        <script src="./src/js/dynamic-banner.js"></script>
+        <script src="./src/homepage-display-sermon.js"></script>
         <script>
             function imageLoader() {
                 return {
                     images: {},
                     init() {
-                        fetch('community-img.json')
+                        fetch('https://api.npoint.io/87938ea621cbf9e67164')
                             .then(response => response.json())
                             .then(data => {
                                 this.images = data;
+                                this.setBlurredBackgrounds();
                             })
                             .catch(error => console.error('Error loading images:', error));
+                    },
+                    setBlurredBackgrounds() {
+                        const imageWrappers = document.querySelectorAll('.image-wrapper');
+                        imageWrappers.forEach(wrapper => {
+                            const imgElement = wrapper.querySelector('.responsive-image');
+                            const blurredBackground = wrapper.querySelector('.blurred-background');
+                            const imageUrl = imgElement.getAttribute('src');
+                            if (imageUrl) {
+                                blurredBackground.style.backgroundImage = `url(${imageUrl})`;
+                            }
+                        });
                     }
                 }
             }
-        </script>
 
-        <script>
-            document.addEventListener('scroll', function() {
-                const parallaxElements = document.querySelectorAll('.parallax-image');
-                parallaxElements.forEach(element => {
-                    const speed = 0.5; // Adjust the speed of the parallax effect
-                    const offset = window.pageYOffset * speed;
-                    element.style.transform = `translateY(${offset}px)`;
-                });
+            document.addEventListener('DOMContentLoaded', () => {
+                const app = imageLoader();
+                app.init();
             });
         </script>
     </body>
