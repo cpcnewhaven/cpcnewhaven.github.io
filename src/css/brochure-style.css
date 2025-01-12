@@ -247,10 +247,10 @@ section img {
 
 .center-button {
     width: 100%;
-    display:flex;
+    display: flex;
     -ms-flex-align: center;
     justify-content: center;
-    align-items:center;
+    align-items: center;
     text-align: center;
     margin-top: 20px;
 }
