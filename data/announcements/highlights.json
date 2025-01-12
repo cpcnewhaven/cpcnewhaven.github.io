@@ -387,7 +387,7 @@
       "title": "No Sunday School or Fellowship Lunch",
       "description": "Please note that there will be no Sunday School or Fellowship Lunch on December 1, 22, and 29.",
       "dateEntered": "2024-11-25",
-      "active": "true",
+      "active": "false",
       "type": "ongoing",
       "category": "ongoing",
       "tag": "schedule",
@@ -489,7 +489,7 @@
       "title": "Sunday School and Fellowship Lunch Resume This Week!",
       "description": "We are excited to announce that Sunday School and Fellowship Lunch will resume this week. Join us for a time of learning and community. Sunday School starts at 9:30 AM, followed by the Fellowship Lunch after the worship service. All are welcome!",
       "dateEntered": "2025-01-03",
-      "active": "true",
+      "active": "false",
       "type": "upcoming",
       "category": "upcoming",
       "tag": "superFeatured"
@@ -499,7 +499,7 @@
       "title": "Decor Take Down | Tomorrow, Saturday January 4 | 9am",
       "description": "Join us for a decor take down event. We will be meeting at 9am to remove the holiday decorations. All are welcome to help out!",
       "dateEntered": "2025-01-03",
-      "active": "true",
+      "active": "false",
       "type": "upcoming",
       "category": "upcoming",
       "tag": "superFeatured"
@@ -516,6 +516,16 @@
       "date": "January 20, 2025",
       "time": "8:30 AM - 10:30 AM",
       "location": "Christian Tabernacle Baptist Church"
-    }
+    },
+    {
+  "id": "2025-003",
+  "title": "Women’s Service Project | Sat. Feb. 8, 9:00am | CPC Fellowship Hall",
+  "description": "Come join the women of CPC for our morning of service and breakfast on Saturday, February 8 in the CPC Fellowship Hall. We will prepare dinner for the Varick Warming Center and package cookies for our covenant children away at college or serving in the military. Please bring cookies if you can; extras will be dessert for the center. Breakfast will be provided, so join us at 9:00 am for fellowship and service!",
+  "dateEntered": "2025-01-12",
+  "active": "true",
+  "type": "upcoming",
+  "category": "upcoming",
+  "tag": "superFeatured"
+}
   ]
 }
