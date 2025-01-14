@@ -2435,6 +2435,56 @@ p {
     }
 }
 
+/*PODCASTS HERO*/
+
+.splash-hero--podcasts {
+    position: relative;
+    overflow: hidden;
+    height: 40vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    margin: 0;
+    background-attachment: scroll;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("https://storage.googleapis.com/cpc-public-website/web-assets/heros/%5BHERO%5D%5BPOD%5D%5B1%5D.png");
+}
+
+.splash-hero--podcasts::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background-color: rgb(0 79 111 / 35%);
+    z-index: 1;
+}
+
+.splash-hero--podcasts h1 {
+    position: relative;
+    z-index: 2;
+    font-size: 4rem !important;
+    color: white !important;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+@media (min-width: 768px) {
+    .splash-hero--podcasts {
+        height: 60vh;
+        background-attachment: fixed;
+    }
+
+    .splash-hero--podcasts h1 {
+        font-size: 4rem !important;
+    }
+}
+
+
+
 /*SUNDAY HERO*/
 
 .splash-hero--sunday {
