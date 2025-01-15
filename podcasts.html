@@ -27,6 +27,7 @@
         href="https://storage.googleapis.com/cpc-public-website/web-assets/CPC%20-%20FAVICON%20-%20FALL%2024.png"
         type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
 
 <body>
 
@@ -172,7 +173,7 @@
     <!-- Main Content -->
     <div class="main-content-a">
 
-        <section id="podcast-sunday-sermon" class="inner-page-section" style="margin-top:20px;">
+        <section id="podcast-sunday-sermon" class="inner-page-section" style="margin-top:20px;" x-data="{ sortKey: '', sortAsc: true }">
             <!--
             <a id="latestSermonLink" href="#">
                 <img src="https://storage.googleapis.com/cpc-public-website/podcast-thumbnails/sundaySermons/12.29.24%20-%20CPC.jpg"
@@ -184,20 +185,28 @@
             <table id="sunday-sermon-table">
                 <thead>
                     <tr>
-                        <th>Date</th>
-                        <th>Title</th>
-                        <th>Speaker</th>
+                        <th @click="sortKey = 'date'; sortAsc = !sortAsc">Date</th>
+                        <th @click="sortKey = 'title'; sortAsc = !sortAsc">Title</th>
+                        <th @click="sortKey = 'speaker'; sortAsc = !sortAsc">Speaker</th>
                         <th>Scripture</th>
                         <th>Listen</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <!-- Table content will be dynamically populated here -->
+                    <template x-for="episode in sortedEpisodes('sundaySermons')" :key="episode.id">
+                        <tr>
+                            <td x-text="episode.date"></td>
+                            <td x-text="episode.title"></td>
+                            <td x-text="episode.speaker"></td>
+                            <td x-text="episode.scripture"></td>
+                            <td><a :href="episode.listenLink">Listen</a></td>
+                        </tr>
+                    </template>
                 </tbody>
             </table>
         </section>
 
-        <section id="podcast-beyond" class="inner-page-section" style="margin-top:20px;">
+        <section id="podcast-beyond" class="inner-page-section" style="margin-top:20px;" x-data="{ sortKey: '', sortAsc: true }">
             <!--
             <a href="https://open.spotify.com/episode/03czc7Z0bnniWrneEfIsfL?si=537d3fa4f97c4172" target="_blank">
                 <img src="https://storage.googleapis.com/cpc-public-website/podcast-thumbnails/beyond/BSS_12_10_24.jpg"
@@ -210,14 +219,21 @@
             <table id="beyond-sermon-table">
                 <thead>
                     <tr>
-                        <th>Date</th>
-                        <th>Title</th>
-                        <th>Guest</th>
+                        <th @click="sortKey = 'date'; sortAsc = !sortAsc">Date</th>
+                        <th @click="sortKey = 'title'; sortAsc = !sortAsc">Title</th>
+                        <th @click="sortKey = 'guest'; sortAsc = !sortAsc">Guest</th>
                         <th>Listen</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <!-- Table content will be dynamically populated here -->
+                    <template x-for="episode in sortedEpisodes('beyond')" :key="episode.id">
+                        <tr>
+                            <td x-text="episode.date"></td>
+                            <td x-text="episode.title"></td>
+                            <td x-text="episode.guest"></td>
+                            <td><a :href="episode.listenLink">Listen</a></td>
+                        </tr>
+                    </template>
                 </tbody>
             </table>
         </section>
@@ -346,6 +362,30 @@
                 }
             });
         }
+
+        document.addEventListener('alpine:init', () => {
+            Alpine.data('sortedEpisodes', (type) => ({
+                sortKey: '',
+                sortAsc: true,
+                episodes: [],
+                init() {
+                    fetch('./data/podcast-index.json')
+                        .then(response => response.json())
+                        .then(data => {
+                            this.episodes = data[type].episodes;
+                        });
+                },
+                sortedEpisodes() {
+                    return this.episodes.sort((a, b) => {
+                        let result = 0;
+                        if (this.sortKey) {
+                            result = a[this.sortKey] > b[this.sortKey] ? 1 : -1;
+                        }
+                        return this.sortAsc ? result : -result;
+                    });
+                }
+            }));
+        });
     </script>
 
     <!-- Footer with Podcast Links -->
