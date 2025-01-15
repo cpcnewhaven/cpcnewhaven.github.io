@@ -3038,8 +3038,11 @@ p {
 /* Media query for smaller screens */
 @media (max-width: 768px) {
     .mobile-friendly-sidebar {
-        width: 100%;
+        width: 90%;
+        /* Adjust width to leave space on sides */
         padding: 5px;
+        margin: 0 auto;
+        /* Center the sidebar */
     }
 
     .mobile-friendly-logo {
@@ -3054,5 +3057,37 @@ p {
         width: 30px;
         height: 30px;
         line-height: 30px;
+    }
+}
+
+.mobile-friendly-dashboard {
+    width: 90%;
+    /* Adjust width to leave space on sides */
+    padding: 10px;
+    margin: 0 auto;
+    /* Center the dashboard */
+}
+
+@media (max-width: 768px) {
+    .main-content-a {
+        padding: 0 10px;
+        /* Add padding to the main content area */
+    }
+
+    table {
+        width: 100%;
+        /* Ensure tables take full width */
+        margin: 0 auto;
+        /* Center tables */
+        border-collapse: collapse;
+        /* Ensure borders are collapsed */
+    }
+
+    th,
+    td {
+        padding: 8px;
+        /* Add padding to table cells */
+        text-align: left;
+        /* Align text to the left */
     }
 }
