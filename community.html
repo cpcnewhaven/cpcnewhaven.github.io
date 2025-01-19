@@ -12,7 +12,7 @@
         gtag('config', 'G-TL0WH5R1EK');
     </script>
     <link rel="icon"
-        href="https://storage.googleapis.com/cpc-public-website/web-assets/CPC%20-%20FAVICON%20-%20FALL%202024.png"
+        href="https://storage.googleapis.com/cpc-public-website/web-assets/CPC%20-%20FAVICON%20-%20FALL%2024.png"
         type="image/png">
 
     <meta charset="UTF-8">
@@ -28,6 +28,7 @@
     <title>Community | CPC New Haven Church</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
 
 </head>
@@ -74,7 +75,18 @@
             <li><a class="mobile-menu-link" href="give.html">Give</a></li>
         </ul>
     </nav>
-    <div class="splash-hero--community">
+    <div x-data="{ 
+        images: [
+            'https://storage.googleapis.com/cpc-public-website/web-assets/heros/%5BHERO%5D%5BComm%7D6.jpg',
+            'https://storage.googleapis.com/cpc-public-website/web-assets/heros/%5BHERO%5D%5BComm%7D5.jpg',
+
+            'https://storage.googleapis.com/cpc-public-website/web-assets/heros/%5BHERO%5D%5BCOMMUNITY%5D.-1.jpg'
+        ],
+        currentIndex: 0
+    }" 
+    x-init="setInterval(() => { currentIndex = (currentIndex + 1) % images.length }, 5000)"
+    class="splash-hero--community"
+    :style="`background-image: url('${images[currentIndex]}')`">
         <h1>Community</h1>
     </div>
 
