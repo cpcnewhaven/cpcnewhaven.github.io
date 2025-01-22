@@ -13,7 +13,7 @@
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
         <link
             rel="icon"
-            href="https://storage.googleapis.com/cpc-public-website/web-assets/CPC%20-%20FAVICON%20-%20FALL%202024.png"
+            href="https://storage.googleapis.com/cpc-public-website/web-assets/CPC%20-%20FAVICON%20-%20FALL%2024.png"
             type="image/png" />
         <link rel="stylesheet" href="./src/css/brochure-style.css" />
     </head>
@@ -42,7 +42,7 @@
             <section class="event-details">
 
                 <p>
-                    We’re having a seminar and discussion on issues related to
+                    We're having a seminar and discussion on issues related to
                     aging well, end-of-life, and death. These will include a
                     biblical and theological survey from Pastor Craig, a
                     presentation and Q&A with a Geriatric physician, as well as
@@ -82,6 +82,41 @@
                         }
                     </style>
             </section>
+
+            <section class="event-resources">
+                <h1 class="event-resources-title">Event Resources</h1>
+                <div class="resource-buttons">
+                    <a
+                        href="https://storage.googleapis.com/cpc-public-website/handouts/event-engaging-with-aging/End%20of%20Life%20Planning%20_Lisa.pages"
+                        class="resource-button" target="_blank">Download End of
+                        Life Planning</a>
+                    <a
+                        href="https://storage.googleapis.com/cpc-public-website/handouts/event-engaging-with-aging/Engaging%20with%20Aging%20-%20Financial%20Considerations.pages"
+                        class="resource-button" target="_blank">Download
+                        Financial Considerations</a>
+                    <a
+                        href="https://storage.googleapis.com/cpc-public-website/handouts/event-engaging-with-aging/Engaging%20with%20Aging%20misc.%20v2-1.pdf"
+                        class="resource-button" target="_blank">Download
+                        Miscellaneous PDF</a>
+                </div>
+            </section>
+
+            <!-- New Live Stream Section -->
+            <section class="live-stream">
+                <h1 class="live-stream-title">Join Our Live Stream</h1>
+                <p>The live stream will be available on January 25, 2025, from
+                    9:00 AM to 12:30 PM. You can interact with us by leaving a
+                    comment to ask questions to our speaker. Our team will be
+                    there to assist you.</p>
+                <div class="live-stream-video">
+                    <iframe width="560" height="315"
+                        src="https://www.youtube.com/embed/y-dYQg08ON8?si=87K2WjUw2lThEAZR"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        allowfullscreen></iframe>
+                </div>
+            </section>
         </main>
 
         <footer>
@@ -102,3 +137,38 @@
         <script src="./src/js/function_toggle_mobileMenu.js"></script>
     </body>
 </html>
+
+<style>
+    .event-resources {
+        margin-top: 40px;
+        padding: 20px;
+        background-color: #f1f1f1;
+        border-radius: 8px;
+    }
+
+    .event-resources-title {
+        font-size: 1.5em;
+        margin-bottom: 20px;
+    }
+
+    .resource-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .resource-button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+    }
+
+    .resource-button:hover {
+        background-color: #0056b3;
+    }
+</style>
