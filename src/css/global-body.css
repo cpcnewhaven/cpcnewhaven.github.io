@@ -2680,7 +2680,7 @@ p {
         height: 40vh;
         min-height: 300px;
     }
-    
+
     .splash-hero--community h1 {
         font-size: 3rem;
     }
@@ -3085,4 +3085,43 @@ p {
         text-align: left;
         /* Align text to the left */
     }
+}
+
+.longInfo-tab-menu button {
+    margin: 0 10px;
+    padding: 12px 24px;
+    border: none;
+    background-color: darkblue;
+    color: #fff;
+    border-radius: var(--border-radius);
+    /* Use global border radius */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    /* Smooth transition */
+}
+
+.longInfo-tab-menu button.active {
+    background-color: var(--button-hover-color);
+    /* Use hover color for active state */
+}
+
+.longInfo-submenu button {
+    margin: 0 5px;
+    padding: 10px 20px;
+    /* Increased padding for better spacing */
+    border: none;
+    background-color: var(--button-color);
+    /* Use primary button color */
+    color: #fff;
+    /* White text for contrast */
+    border-radius: var(--border-radius);
+    /* Use global border radius */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    /* Smooth transition */
+}
+
+.longInfo-submenu button.active {
+    background-color: var(--button-hover-color);
+    /* Use hover color for active state */
 }
