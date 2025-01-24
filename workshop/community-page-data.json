@@ -45,6 +45,27 @@
         "Deductive Bible Study: Children review the Westminster Shorter Catechisms and learn hymns often used in worship",
         "Inductive Bible Study: Each Sunday School class studies the Scripture using lessons and curricula most suited to each age"
       ]
+    },
+    "youth": {
+      "title": "Youth",
+      "image": {
+        "src": "images.ministries.youth",
+        "alt": "Youth Image"
+      },
+      "description": [
+        "Our youth ministry at CPC is the capstone of our broader children's ministry, and targets both junior and senior high. We have many various goings-on throughout the year, but here are some of the offerings we have for our youth:"
+      ],
+      "offerings": [
+        {
+          "title": "Sunday School",
+          "description": "CPC's Sunday School program goes from preschool through graduation. Our goal is to partner with parents in the Christian discipleship of their kids, in order that our kids ultimately embrace the gospel of grace for themselves."
+        },
+        {
+          "title": "One-On-One Discipleship",
+          "description": "Beyond our calendar events, we seek to schedule one-on-one time with students for discipleship. This takes the form of going out for lunch, monthly fellowship gatherings, ice cream, or anything that gives us an opportunity to deepen relationships and minister to the students' needs."
+        }
+      ],
+      "contact": "For any inquiries regarding our youth ministry, contact Jerry Ornelas at jerry@cpcnewhaven.org"
     }
   }
 }
