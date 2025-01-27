@@ -38,6 +38,68 @@
             box-shadow: none;
             line-height: 1.6;
         }   
+
+        .res-directory-table-wrapper {
+            margin-top: 30px;
+            border-radius: 16px;
+            background: rgba(255, 255, 255, 0.8);
+            overflow: hidden;
+            box-shadow: 0 4px 16px rgba(44, 82, 130, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+
+        .res-directory-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            margin: 0;
+            font-size: 1em;
+        }
+
+        .res-directory-cell {
+            padding: 16px 24px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .res-directory-row {
+            border-bottom: 1px solid rgba(44, 82, 130, 0.08);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .res-directory-row:hover {
+            background: rgba(44, 82, 130, 0.03);
+            transform: translateX(5px);
+            box-shadow: 0 2px 8px rgba(44, 82, 130, 0.05);
+        }
+
+        .res-directory-row:last-of-type {
+            border-bottom: none;
+        }
+
+        .res-directory-link {
+            color: #2c5282;
+            text-decoration: none;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            display: block;
+            font-weight: 400;
+            padding: 4px 0;
+        }
+
+        .res-directory-link:hover {
+            color: #1a365d;
+            transform: translateX(5px);
+            text-shadow: 0 0 1px rgba(26, 54, 93, 0.1);
+        }
+
+        .membership-content img {
+            width: 100%;
+            height: auto;
+            max-width: 100%;
+            border-radius: 8px;
+            margin: 20px 0;
+            display: block;
+            box-shadow: 0 4px 16px rgba(44, 82, 130, 0.1);
+        }
     </style>
         </head>
 
@@ -86,65 +148,54 @@
         </nav>
     
 
-            <section class="welcome-header"id="membership-header">
-                <h1>Church Membership</h1>
-            </section>
-           
-            <section id="church-membership">
-       
-                <p>Throughout history, special relationships have been set apart
-                    by the taking of vows. What exactly is a vow? A vow is a
-                    “confession” regarding the meaning of ones participation in
-                    a given institution. Therefore, vows are ordinarily limited
-                    to initiation ceremonies. And according to the Bible, there
-                    are three such institutions that enjoy a divine
-                    sanction--the church, the state and the family. For
-                    instance, vows are used to initiate a judicial proceeding or
-                    even citizenship in the civil sphere. Vows are used to
-                    initiate a family relationship between a husband and wife in
-                    the family sphere. And, for those who believe that the
-                    church is a third institution set apart by God, vows are
-                    used to initiate a church relationship, or perhaps one’s
-                    service in an office of the church. And would it surprise
-                    you that every one of the above examples can be located in
-                    the Bible? We will review briefly the biblical rationale
-                    that relates to the taking of vows in the church sphere.</p>
-                <p>According to the apostle Paul, one becomes a Christian when
-                    “you confess with your lips that Jesus is Lord, and believe
-                    in your heart that God raised him from the dead” (Romans
-                    10:9). Who are we “confessing” to with our lips and in what
-                    context? Related to this, what else could it mean for the
-                    elders to “watch over the flock of God” if not a flock that
-                    can be defined by some “initiation” ceremony in relation to
-                    the exchange of vows? Or, in the words of Hebrews, what else
-                    could it mean to “obey your leaders and submit to them, for
-                    they are keeping watch over your souls and will give an
-                    account,” apart from some willing and voluntary way to form
-                    an association that is predicated upon the taking of vows
-                    one to another? (see 1 Peter 5, Hebrews 13:17). And when the
-                    church is exhorted to “remove such a one” from “the
-                    assembly” as the ultimate, albeit tragic, expression of
-                    church discipline, what else could it mean except that the
-                    person was joined to the assembly by some confession that is
-                    later deemed broken? (1 Corinthians 5:3-5). Or, when we are
-                    exhorted to support one another even through our financial
-                    means, how could such benefits be distributed except that it
-                    means something to bind one’s self to another through the
-                    authenticating protections of an initiation ceremony? (2
-                    Corinthians 8).</p>
-                <p>And so, for these abbreviated reasons, we believe that church
-                    membership as a good thing. It sets people apart into a
-                    special relationship with each other, where the terms are
-                    clear and where loyalties for the mutual benefit of all are
-                    expressed and preserved. Membership is simply a way to say:
-                    “I confess my faith in solidarity with you so as to enjoy
-                    the mutual support of one another until, for whatever
-                    reason, someone is led elsewhere.”</p>
-                <p>Contact us for more information on becoming a member at
-                    CPC.</p>
-                <p>For more read Good News of Church Membership</p>
-                    <!-- Add the rest of the content here -->
-                </section>
+            <div class="res-directory-container">
+                <div class="res-directory-content">
+                    <section class="res-directory-overview">
+                        <h2 class="res-directory-title">Church Membership</h2>
+                        <p class="res-directory-description">Join our church community through membership, where we support and grow together in faith.</p>
+                        
+                        <div class="membership-content">
+                            <p>Throughout history, special relationships have been set apart by the taking of vows. A vow is a "confession" regarding one's participation in a given institution, typically used in three divinely sanctioned institutions: the church, the state, and the family.</p>
+                            <img src="https://storage.googleapis.com/cpc-public-website/web-assets/heros/live/1.jpg">
+                            <p>According to Romans 10:9, one becomes a Christian when "you confess with your lips that Jesus is Lord, and believe in your heart that God raised him from the dead." This confession, along with the elders' responsibility to "watch over the flock of God," forms the foundation of church membership.</p>
+                            
+                            <p>Church membership is a good thing - it sets people apart into a special relationship with each other, where terms are clear and loyalties for mutual benefit are expressed and preserved. It's simply saying: "I confess my faith in solidarity with you so as to enjoy the mutual support of one another."</p>
+                        </div>
+
+                        <div class="res-directory-table-wrapper">
+                            <table class="res-directory-table">
+                                <tbody>
+                                    <tr class="res-directory-row">
+                                        <td class="res-directory-cell">
+                                            <a href="contact.html" class="res-directory-link">Contact Us About Membership</a>
+                                        </td>
+                                    </tr>
+                                    <tr class="res-directory-row">
+                                        <td class="res-directory-cell">
+                                            <a href="#" class="res-directory-link">Read More: Good News of Church Membership</a>
+                                        </td>
+                                    </tr>
+                                    <tr class="res-directory-row">
+                                        <td class="res-directory-cell">
+                                            <a href="discipleship.html" class="res-directory-link">Join a Discipleship Group</a>
+                                        </td>
+                                    </tr>
+                                    <tr class="res-directory-row">
+                                        <td class="res-directory-cell">
+                                            <a href="lifegroup.html" class="res-directory-link">Join a Life Group</a>
+                                        </td>
+                                    </tr>
+                                    <tr class="res-directory-row">
+                                        <td class="res-directory-cell">
+                                            <a href="https://ccb.cpcnewhaven.org" class="res-directory-link">Access Church Community Builder</a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                </div>
+            </div>
 
             
                 <script src="./src/js/populate-navigation.js"></script>
