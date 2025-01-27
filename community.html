@@ -96,7 +96,7 @@
             flex-direction: column;
             padding-top: 20px;
             justify-content: center;   
-            background-color: #002244;
+            background-color: #002a5327;
             color: white;
         }
     </style>
@@ -106,13 +106,14 @@
         <div class="longInfo-tab-menu" style="text-align: center;">
             <button @click="activeTab = 'smallGroups'; activeSubTab = ''" :class="{ 'active': activeTab === 'smallGroups' }">Small Groups</button>
             <button @click="activeTab = 'ministries'; activeSubTab = ''" :class="{ 'active': activeTab === 'ministries' }">Ministries</button>
-            <button @click="activeTab = 'membership'; activeSubTab = ''" :class="{ 'active': activeTab === 'membership' }">Membership</button>
+            <button onclick="window.location.href='membership.html'" :class="{ 'active': activeTab === 'membership' }">Membership</button>
         </div>
         <span class="tooltip-text">Explore our community offerings by selecting a tab.</span>
     </div>
     <div class="longInfo-tab-content">
         <div x-show="activeTab === 'smallGroups'">
             <h2>Small Groups</h2>
+            <br>
             <div class="longInfo-submenu" style="text-align: center;">
                 <button @click="activeSubTab = 'lifegroups'" :class="{ 'active': activeSubTab === 'lifegroups' }">Life Groups</button>
                 <button @click="activeSubTab = 'discipleship'" :class="{ 'active': activeSubTab === 'discipleship' }">Discipleship Groups</button>
@@ -157,6 +158,7 @@
         </div>
         <div x-show="activeTab === 'ministries'">
             <h2>Ministries</h2>
+            <br>
             <div class="longInfo-submenu" style="text-align: center;">
                 <button @click="activeSubTab = 'children'" :class="{ 'active': activeSubTab === 'children' }">Children</button>
                 <button @click="activeSubTab = 'youth'" :class="{ 'active': activeSubTab === 'youth' }">Youth</button>
@@ -551,7 +553,7 @@
         }
 
         .longInfo-tab-menu button.active {
-            background-color: #002244;
+            background-color: #006cd8;
         }
 
         .longInfo-tab-content {
@@ -577,7 +579,7 @@
         }
 
         .longInfo-submenu button.active {
-            background-color: #002244;
+            background-color: #006cd8;
         }
 
         .tooltip-container {
