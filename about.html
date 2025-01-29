@@ -78,6 +78,7 @@
     </div>
 
     <div x-data="{ activeTab: 'mission' }">
+        <div class="tab-menu-container">
         <div class="tab-menu" style="text-align: center;">
             <button @click="activeTab = 'mission'" :class="{ 'active': activeTab === 'mission' }">Mission</button>
             <button @click="activeTab = 'totalChrist'" :class="{ 'active': activeTab === 'totalChrist' }">Total Christ</button>
@@ -88,14 +89,15 @@
             <button @click="activeTab = 'wlb'" :class="{ 'active': activeTab === 'wlb' }">Women's Leadership Board</button>
             <button @click="activeTab = 'slb'" :class="{ 'active': activeTab === 'slb' }">Servant Leadership Board</button>
         </div>
+        </div>
 
         <div class="tab-content">
             <div x-show="activeTab === 'mission'">
                 <section id="welcome-mission" class="inner-page-section">
-                    <div class="mid-splash-welcome sticky">
+                   
                         <h1>The Mission of Christ Presbyterian Church
                         </h1>
-                    </div>
+                   
                     <p class="body-text">
                         We are a church that is ambitious for the glory of God by
                         <strong>GROWING</strong> in the truth and grace of Jesus Christ,
@@ -109,9 +111,9 @@
 
             <div x-show="activeTab === 'totalChrist'">
                 <section id="total-christ-spirit" class="inner-page-section">
-                    <div class="mid-splash-welcome sticky">
+                   
                         <h1>Our Total Christ Spirituality</h1>
-                    </div>
+              
                     <p class="body-text">We want this to be all about Christ—his
                         work, not ours, as the basis of our relationship to God and
                         one another, and his glory, not ours or any popular leader,
@@ -201,9 +203,9 @@
 
             <div x-show="activeTab === 'commitments'">
                 <section id="commitments" class="inner-page-section">
-                    <div class="mid-splash-welcome sticky">
+                 
                         <h1>Our Commitments</h1>
-                    </div>
+              
                     <p class="body-text">
                         We seek to be radically grounded in the good news that
                         though we are more sinful than we may ever dare to believe,
@@ -362,10 +364,9 @@
 
             <div x-show="activeTab === 'staff'">
                 <section id="staff" class="inner-page-section">
-                    <div class="mid-splash-welcome sticky">
+                  
                         <h1>Staff</h1>
-                    </div>
-
+             
                     <div class="staff-grid">
                         <div class="staff-member">
 
@@ -415,10 +416,9 @@
 
             <div x-show="activeTab === 'missionAnabaino'">
                 <section id="about-mission-anabaion" class="inner-page-section">
-                    <div class="mid-splash-welcome sticky">
+           
                         <h1>Mission Anabaino</h1>
-                    </div>
-
+               
                     <div class="image-container">
                         <img
                             src="https://storage.googleapis.com/cpc-public-website/63.jpg"
@@ -450,9 +450,9 @@
 
             <div x-show="activeTab === 'session'">
                 <section id="session" class="inner-page-section">
-                    <div class="mid-splash-welcome sticky">
+              
                         <h1>Session</h1>
-                    </div>
+             
                     <div class="staff-grid" id="session-members">
                         <div class="staff-member">
                             <h3>Craig Luekens</h3>
@@ -491,9 +491,9 @@
 
             <div x-show="activeTab === 'wlb'">
                 <section id="wlb" class="inner-page-section">
-                    <div class="mid-splash-welcome sticky">
+               
                         <h1>Women's Leadership Board</h1>
-                    </div>
+           
                     <div class="staff-grid">
                         <!-- Added WLB members -->
                         <div class="staff-member">
@@ -532,9 +532,9 @@
 
             <div x-show="activeTab === 'slb'">
                 <section id="slb" class="inner-page-section">
-                    <div class="mid-splash-welcome sticky">
+    
                         <h1>Servant Leadership Board</h1>
-                    </div>
+ 
                     <div class="staff-grid">
                         <div class="staff-member">
                             <h3>Craig
@@ -607,18 +607,23 @@
     <style>
         .tab-menu {
             display: flex;
-            justify-content: center;
+            justify-content: flex-start;
+            overflow-x: auto;
+            scroll-behavior: smooth;
             margin-bottom: 20px;
+            padding: 10px;
         }
 
         .tab-menu button {
-            margin: 0 10px;
-            padding: 12px 24px;
+            flex: 0 0 100px;
+            margin: 0 5px;
+            padding: 12px 0;
             border: none;
             background-color: #003366;
             color: white;
             border-radius: 5px;
             cursor: pointer;
+            text-align: center;
         }
 
         .tab-menu button.active {
