@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css");
 
-:root {
-    --cpc-font-family: "Barlow", sans-serif;
-}
+
 
 :root {
     --submenu-background-color: #e0ebff;
@@ -2359,6 +2359,7 @@ p {
 .hero>h2,
 .hero>p {
     color: rgb(255, 255, 255);
+    font-weight:400;
 }
 
 .hero-logo-img {
@@ -2669,7 +2670,7 @@ p {
 
 @media (min-width: 768px) {
     .splash-hero--podcasts {
-        height: 60vh;
+        height: 40vh;
         background-attachment: fixed;
     }
 
@@ -3364,7 +3365,7 @@ p {
     justify-content: center;
     align-items: center;
     padding-top: 20px;
-    z-index: -1;
+    z-index: 1;
 }
 
 .tab-menu {
