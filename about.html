@@ -86,8 +86,8 @@
             <button @click="activeTab = 'staff'" :class="{ 'active': activeTab === 'staff' }">Staff</button>
             <button @click="activeTab = 'missionAnabaino'" :class="{ 'active': activeTab === 'missionAnabaino' }">Mission Anabaino</button>
             <button @click="activeTab = 'session'" :class="{ 'active': activeTab === 'session' }">Session</button>
-            <button @click="activeTab = 'wlb'" :class="{ 'active': activeTab === 'wlb' }">Women's Leadership Board</button>
-            <button @click="activeTab = 'slb'" :class="{ 'active': activeTab === 'slb' }">Servant Leadership Board</button>
+            <button @click="activeTab = 'wlb'" :class="{ 'active': activeTab === 'wlb' }">Women's Leadership</button>
+            <button @click="activeTab = 'slb'" :class="{ 'active': activeTab === 'slb' }">Servant Leadership</button>
         </div>
         </div>
 
@@ -605,36 +605,7 @@
     </div>
 
     <style>
-        .tab-menu {
-            display: flex;
-            justify-content: flex-start;
-            overflow-x: auto;
-            scroll-behavior: smooth;
-            margin-bottom: 20px;
-            padding: 10px;
-        }
 
-        .tab-menu button {
-            flex: 0 0 100px;
-            margin: 0 5px;
-            padding: 12px 0;
-            border: none;
-            background-color: #003366;
-            color: white;
-            border-radius: 5px;
-            cursor: pointer;
-            text-align: center;
-        }
-
-        .tab-menu button.active {
-            background-color: #006cd8;
-        }
-
-        .tab-content {
-            padding: 20px;
-            background-color: #f9f9f9;
-            border-radius: 5px;
-        }
     </style>
 
     <section id="footer-cta-a" class="styled-section-a">
