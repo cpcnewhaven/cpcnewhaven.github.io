@@ -417,8 +417,8 @@
                 "scripture": "Micah 6:1-8",
                 "date": "2025-01-19",
                 "apple_podcasts_url": "",
-                "spotify_url": "https://open.spotify.com/episode/0GmvMYw3yPpKAHsaAi0N3X?si=1742be414c404551",
-                "link": "https://open.spotify.com/episode/0GmvMYw3yPpKAHsaAi0N3X?si=1742be414c404551",
+                "spotify_url": "https://open.spotify.com/episode/2UTPspn6xytphDhhW5l4Wv?si=vLg1aeuoTXusQksEPPNvKg",
+                "link": "https://open.spotify.com/episode/2UTPspn6xytphDhhW5l4Wv?si=vLg1aeuoTXusQksEPPNvKg",
                 "podcast-thumbnail_url": ""
             },   {
                 "id": "25-01-26",
@@ -427,8 +427,8 @@
                 "scripture": "Exodus 32: 1-35",
                 "date": "2025-01-26",
                 "apple_podcasts_url": "",
-                "spotify_url": "https://open.spotify.com/episode/0GmvMYw3yPpKAHsaAi0N3X?si=1742be414c404551",
-                "link": "https://open.spotify.com/episode/0GmvMYw3yPpKAHsaAi0N3X?si=1742be414c404551",
+                "spotify_url": "https://open.spotify.com/episode/3e7doJzcslm0gjhsxBjNOY?si=0VGC1ozySNKO1fI1A8jbzw",
+                "link": "https://open.spotify.com/episode/3e7doJzcslm0gjhsxBjNOY?si=0VGC1ozySNKO1fI1A8jbzw",
                 "podcast-thumbnail_url": ""
             }
         ]
@@ -547,6 +547,24 @@
                 "date_added": "2025-01-15",
                 "season": "winter 2025",
                 "podcast-thumbnail_url": "https://storage.googleapis.com/cpc-public-website/podcast-thumbnails/beyond/Beyond%20-%2012-11-24.jpg"
+            },
+            {
+                "number": 26,
+                "title": "He Has Shown Thee...",
+                "link": "https://open.spotify.com/episode/50JGWGeoJ5t1c6KUZaH9RS?si=f54a3d59895d4719",
+                "guest": "Jerry Ornelas",
+                "date_added": "2025-01-21",
+                "season": "winter 2025",
+                "podcast-thumbnail_url": "https://open.spotify.com/episode/1Q9O7mCszR4cOUWN0PZejY?si=HYkhJ5k6SzipgQwSpFqEaw"
+            },
+            {
+                "number": 27,
+                "title": "For God's Sake: Dealing with the Unthinkable Offense",
+                "link": "https://open.spotify.com/episode/50JGWGeoJ5t1c6KUZaH9RS?si=f54a3d59895d4719",
+                "guest": "Julie Walker",
+                "date_added": "2025-01-29",
+                "season": "winter 2025",
+                "podcast-thumbnail_url": "https://open.spotify.com/episode/2ejBWTE4Pz5Sk06mSvbxij?si=wLcXg2VnTmOgoHfkb8YR7A"
             }
         ]
     },
