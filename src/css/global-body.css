@@ -2645,7 +2645,7 @@ p {
     text-align: center;
     margin: 0;
     background-attachment: scroll;
-    background-position: center;
+    background-position: top -150px center;
     background-repeat: no-repeat;
     background-size: cover;
     background-image: url("https://storage.googleapis.com/cpc-public-website/web-assets/heros/%5BHERO%5D%5BPOD%5D%5B1%5D.png");
@@ -2668,10 +2668,11 @@ p {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
     .splash-hero--podcasts {
         height: 40vh;
         background-attachment: fixed;
+        background-position: top center;
     }
 
     .splash-hero--podcasts h1 {
