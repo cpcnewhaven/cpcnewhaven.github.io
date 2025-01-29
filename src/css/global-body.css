@@ -154,6 +154,13 @@ body {
 }
 
 
+h3 {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--heading-color);
+}
+
+
 .new-page-header {
     width: 100%;
     display: flex;
@@ -2578,7 +2585,7 @@ p {
 .splash-hero--about {
     position: relative;
     overflow: hidden;
-    height: 40vh;
+    height: 40vh !important;
     width: 100%;
     display: flex;
     align-items: center;
@@ -2614,7 +2621,7 @@ p {
 
 @media (min-width: 768px) {
     .splash-hero--about {
-        height: 60vh;
+        height: 40vh;
         background-attachment: fixed;
     }
 
@@ -2678,7 +2685,7 @@ p {
 .splash-hero--sunday {
     position: relative;
     overflow: hidden;
-    height: 40vh;
+    height: 40vh !important;
     width: 100%;
     display: flex;
     align-items: center;
@@ -2873,7 +2880,7 @@ p {
 .splash-hero--home {
     position: relative;
     overflow: hidden;
-    height: 50vh;
+    height: 40vh;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -3264,7 +3271,7 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f9f9f9;
+    background-color: var(--submenu-background-color);
     z-index: 1000;
     position: sticky;
     top: 0;
@@ -3307,7 +3314,7 @@ p {
     margin: 0 5px;
     padding: 10px 20px;
     border: none;
-    background-color: #003366;
+    background-color: var(--submenu-button-color);
     color: white;
     border-radius: 5px;
     cursor: pointer;
@@ -3357,6 +3364,7 @@ p {
     justify-content: center;
     align-items: center;
     padding-top: 20px;
+    z-index: -1;
 }
 
 .tab-menu {
