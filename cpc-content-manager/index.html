@@ -11,46 +11,86 @@
         <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css"
             rel="stylesheet">
     </head>
-    <body x-data="{ menuOpen: false, selectedMenu: '' }">
-        <a href="https://cpcnewhaven.org"><img
-                src="../../assets/CPC LOGO.png" alt="CPC Logo"
-                id="cpcLogo"></a>
-        <h1>CPC Content Editor</h1>
-        <section>
-            <div class="edit-card">
-                <h2>Edit Highlights</h2>
-                <div class="edit-card-menu">
-                    <button @click="menuOpen = !menuOpen">Toggle Menu</button>
-                    <div x-show="menuOpen" class="menu">
-                        <button @click="selectedMenu = 'load'">Load Website
-                            Highlights</button>
-                        <button @click="selectedMenu = 'update'">Update Website
-                            Highlights</button>
+    <body x-data="{ menuOpen: false, selectedMenu: 'update' }">
+        <div id="passwordPrompt">
+            <h2>Enter Password</h2>
+            <input type="password" id="passwordInput" placeholder="Password">
+            <button onclick="checkPassword()">Submit</button>
+        </div>
+        <div id="content" style="display:none;">
+            <a href="https://cpcnewhaven.org"><img
+                    src="../../assets/CPC LOGO.png"
+                    alt="CPC Logo" id="cpcLogo"></a>
+            <h1>CPC Content Editor</h1>
+            <p>This is a tool to help you edit the content of the CPC website.
+                Please use it responsibly and with care.</p>
+            <section>
+                <div class="edit-card">
+                    <h2>Edit Highlights</h2>
+                    <div class="edit-card-menu">
+                        <button @click="menuOpen = !menuOpen">Toggle
+                            Menu</button>
+                        <div x-show="menuOpen" class="menu">
+                            <button @click="selectedMenu = 'load'">Load Website
+                                Highlights</button>
+                            <button @click="selectedMenu = 'update'">Update
+                                Website
+                                Highlights</button>
+                        </div>
+                    </div>
+                    <div x-show="selectedMenu === 'load'">
+                        <button onclick="loadData()">Load Data</button>
+                        <select id="jsonSelector">
+                            <option value="highlights">Highlights</option>
+                        </select>
+                    </div>
+                    <div x-show="selectedMenu === 'update'">
+                        <form id="newHighlightForm">
+                            <input type="text" id="highlightTitle"
+                                placeholder="Title" required>
+                            <textarea id="highlightDescription"
+                                placeholder="Description" required></textarea>
+                            <input type="date" id="highlightDateEntered"
+                                required>
+                            <input type="checkbox" id="highlightActive"> Active
+                            <input type="text" id="highlightType"
+                                placeholder="Type"
+                                required>
+                            <input type="text" id="highlightCategory"
+                                placeholder="Category" required>
+                            <input type="text" id="highlightTag"
+                                placeholder="Tag"
+                                required>
+                            <button type="button"
+                                onclick="createNewHighlight()">Create
+                                Highlight</button>
+                        </form>
                     </div>
                 </div>
-                <div x-show="selectedMenu === 'load'">
-                    <!-- Content for loading highlights -->
-                </div>
-                <div x-show="selectedMenu === 'update'">
-                    <!-- Content for updating highlights -->
-                </div>
-            </div>
-        </section>
+            </section>
 
-        <div id="fixedButtons">
-            <button onclick="publishChanges()">Publish and Download
-                Changes</button>
+            <div id="jsonDisplay"></div>
+            <div id="publishDownloadSection">
+                <button onclick="publishChanges()">Publish To Website</button>
+            </div>
         </div>
-        <div id="publishDownloadSection"></div>
-        <div id="editor-container"></div>
-        <div id="metadataDisplay"></div>
+
         <script src="https://cdn.quilljs.com/1.3.6/quill.min.js"></script>
         <script
             src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
             defer></script>
         <script src="app.js" defer></script>
-        <footer>
-
-        </footer>
+        <script>
+            function checkPassword() {
+                const password = document.getElementById('passwordInput').value;
+                const correctPassword = 'yourPassword'; // Replace with your password
+                if (password === correctPassword) {
+                    document.getElementById('passwordPrompt').style.display = 'none';
+                    document.getElementById('content').style.display = 'block';
+                } else {
+                    alert('Incorrect password');
+                }
+            }
+        </script>
     </body>
 </html>
