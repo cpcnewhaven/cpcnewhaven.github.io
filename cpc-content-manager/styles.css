@@ -1,7 +1,7 @@
 body {
     font-family: 'Barlow', sans-serif;
     margin: 20px;
-    background: url('https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/c08870137524467.620cd6535739f.gif') no-repeat center center fixed;
+    background: url('https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ2JtMmY0MDhsNWR5cmZuODMzbnlsYnJieG1pdzRtanAzbXZrZ3FxMCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/SBbiZFLnpNRIBc7Yzt/giphy.gif') no-repeat center center fixed;
     background-size: cover;
     position: relative;
     color: #fff;
@@ -14,7 +14,7 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, rgba(142, 68, 173, 0.5), rgba(233, 30, 99, 0.5));
+    background: linear-gradient(135deg, rgba(68, 124, 173, 0.5), rgba(30, 226, 233, 0.5));
     background-size: 200% 200%;
     animation: gradientAnimation 10s ease infinite;
     backdrop-filter: blur(10px);
@@ -205,4 +205,53 @@ li {
 #cpcLogo:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3), 0 12px 24px rgba(0, 0, 0, 0.22);
+}
+
+.edit-card-menu {
+    position: relative;
+    margin-top: 20px;
+}
+
+.menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 10;
+}
+
+.menu button {
+    background: rgba(33, 150, 243, 0.2);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.menu button:hover {
+    background: rgba(33, 150, 243, 0.4);
+}
+
+#metadataDisplay {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    width: 100%;
+    margin-top: 20px;
+    overflow-x: auto;
+    font-family: 'Courier New', Courier, monospace;
+    white-space: pre-wrap;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 95%;
 }

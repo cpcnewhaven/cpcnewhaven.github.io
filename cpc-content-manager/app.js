@@ -33,6 +33,7 @@ function loadData() {
             changes = []; // Reset changes
             newEntries = []; // Reset new entries
             displayData(data);
+            displayMetadata(); // Display metadata after loading data
         })
         .catch(error => console.error('Error loading JSON:', error));
 }
@@ -366,4 +367,19 @@ function saveNewEntry(index) {
         console.log('New Entry Changes:', changes);
         document.getElementById('publishDownloadSection').scrollIntoView({ behavior: 'smooth' });
     }
+}
+
+function updateHighlights() {
+    console.log('Update Highlights button clicked');
+    // Add logic here to handle updating highlights
+    // This function can be called when the 'Update Website Highlights' button is clicked
+}
+
+function displayMetadata() {
+    const metadataDisplay = document.getElementById('metadataDisplay');
+    const timestamp = formatTimestamp(new Date());
+    metadataDisplay.innerHTML = `
+        <p><strong>Data Source URL:</strong> <a href="${currentUrl}" target="_blank">${currentUrl}</a></p>
+        <p><strong>Last Updated:</strong> ${timestamp}</p>
+    `;
 }
