@@ -11,13 +11,21 @@
         <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css"
             rel="stylesheet">
     </head>
-    <body x-data="{ menuOpen: false, selectedMenu: 'update' }">
-        <div id="passwordPrompt">
+    <body
+        x-data="{ menuOpen: false, selectedMenu: 'update', passwordProtected: false }">
+        <div>
+            <label>
+                <input type="checkbox" id="togglePasswordProtection"
+                    @change="passwordProtected = !passwordProtected">
+                Enable Password Protection
+            </label>
+        </div>
+        <div id="passwordPrompt" x-show="passwordProtected">
             <h2>Enter Password</h2>
             <input type="password" id="passwordInput" placeholder="Password">
             <button onclick="checkPassword()">Submit</button>
         </div>
-        <div id="content" style="display:none;">
+        <div id="content" x-show="!passwordProtected" style="display:none;">
             <a href="https://cpcnewhaven.org"><img
                     src="../../assets/CPC LOGO.png"
                     alt="CPC Logo" id="cpcLogo"></a>
@@ -26,25 +34,25 @@
                 Please use it responsibly and with care.</p>
             <section>
                 <div class="edit-card">
-                    <h2>Edit Highlights</h2>
-                    <div class="edit-card-menu">
-                        <button @click="menuOpen = !menuOpen">Toggle
-                            Menu</button>
-                        <div x-show="menuOpen" class="menu">
-                            <button @click="selectedMenu = 'load'">Load Website
-                                Highlights</button>
-                            <button @click="selectedMenu = 'update'">Update
-                                Website
-                                Highlights</button>
-                        </div>
-                    </div>
-                    <div x-show="selectedMenu === 'load'">
+                    <h2>Edit Website Highlights And Announcements</h2>
+                    <button onclick="navigateToStep(0)">Step 1: Load
+                        Data</button>
+                    <button onclick="navigateToStep(1)">Step 2: Edit
+                        Data</button>
+                    <button onclick="navigateToStep(2)">Step 3: Update
+                        Website</button>
+                    <div id="loadSection" style="display:none;">
+                        <h2>Step 1: Load Data</h2>
                         <button onclick="loadData()">Load Data</button>
                         <select id="jsonSelector">
                             <option value="highlights">Highlights</option>
                         </select>
                     </div>
-                    <div x-show="selectedMenu === 'update'">
+                    <div id="editSection" style="display:none;">
+                        <div id="jsonDisplay"></div>
+                    </div>
+                    <div id="createSection" style="display:none;">
+                        <h2>Step 3: Create New Highlight</h2>
                         <form id="newHighlightForm">
                             <input type="text" id="highlightTitle"
                                 placeholder="Title" required>
@@ -54,25 +62,42 @@
                                 required>
                             <input type="checkbox" id="highlightActive"> Active
                             <input type="text" id="highlightType"
-                                placeholder="Type"
-                                required>
+                                placeholder="Type" required>
                             <input type="text" id="highlightCategory"
                                 placeholder="Category" required>
                             <input type="text" id="highlightTag"
-                                placeholder="Tag"
-                                required>
+                                placeholder="Tag" required>
                             <button type="button"
-                                onclick="createNewHighlight()">Create
+                                onclick="createNewHighlight()">Add New
                                 Highlight</button>
                         </form>
+                        <div id="newEntriesDisplay"></div>
                     </div>
                 </div>
             </section>
 
             <div id="jsonDisplay"></div>
-            <div id="publishDownloadSection">
-                <button onclick="publishChanges()">Publish To Website</button>
-            </div>
+            <section>
+                <div class="edit-card">
+                    <h2>or Create a New Announcement</h2>
+                    <input type="text" id="announcementTitle"
+                        placeholder="Title" required>
+                    <textarea id="announcementDescription"
+                        placeholder="Description" required></textarea>
+                    <input type="date" id="announcementDateEntered" required>
+                    <input type="checkbox" id="announcementActive"> Active
+                    <input type="text" id="announcementType" placeholder="Type"
+                        required>
+                    <input type="text" id="announcementCategory"
+                        placeholder="Category" required>
+                    <input type="text" id="announcementTag" placeholder="Tag"
+                        required>
+
+                    <button onclick="publishNewEntries()">Publish New
+                        Announcements</button>
+                </div>
+            </section>
+
         </div>
 
         <script src="https://cdn.quilljs.com/1.3.6/quill.min.js"></script>
@@ -90,6 +115,73 @@
                 } else {
                     alert('Incorrect password');
                 }
+            }
+
+            function navigateToStep(stepNumber) {
+                const steps = ['loadSection', 'editSection', 'createSection'];
+                steps.forEach((step, index) => {
+                    document.getElementById(step).style.display = index === stepNumber ? 'block' : 'none';
+                });
+            }
+
+            function loadData() {
+                const selectedCollection = document.getElementById('jsonSelector').value;
+                const currentUrl = urls[selectedCollection];
+
+                fetch(currentUrl)
+                    .then(response => {
+                        if (!response.ok) throw new Error('Failed to fetch JSON');
+                        return response.json();
+                    })
+                    .then(data => {
+                        currentData = data;
+                        displayData(currentData);
+                        navigateToStep(1); // Move to Step 2: Edit Data
+                    })
+                    .catch(error => console.error('Error loading JSON:', error));
+            }
+
+            function displayData(data) {
+                const jsonDisplay = document.getElementById('jsonDisplay');
+                jsonDisplay.innerHTML = '<h2>Step 2: Edit Data</h2>';
+
+                data.announcements.forEach((item, index) => {
+                    let div = document.createElement('div');
+                    div.className = 'json-item';
+
+                    div.innerHTML = `
+                        <input type="text" value="${item.title}" data-index="${index}" data-key="title">
+                        <textarea data-index="${index}" data-key="description">${item.description}</textarea>
+                        <input type="date" value="${item.dateEntered}" data-index="${index}" data-key="dateEntered">
+                        <input type="checkbox" ${item.active ? "checked" : ""} data-index="${index}" data-key="active">
+                        <input type="text" value="${item.type}" data-index="${index}" data-key="type">
+                        <input type="text" value="${item.category}" data-index="${index}" data-key="category">
+                        <input type="text" value="${item.tag}" data-index="${index}" data-key="tag">
+                        <button onclick="saveItem(${index})">Save</button>
+                        <button onclick="deleteItem(${index})">Delete</button>
+                    `;
+
+                    jsonDisplay.appendChild(div);
+                });
+
+                jsonDisplay.innerHTML += '<button onclick="publishChanges()">Step 3: Update Data</button>';
+            }
+
+            function createNewHighlight() {
+                let newHighlight = {
+                    title: document.getElementById('highlightTitle').value,
+                    description: document.getElementById('highlightDescription').value,
+                    dateEntered: document.getElementById('highlightDateEntered').value,
+                    active: document.getElementById('highlightActive').checked,
+                    type: document.getElementById('highlightType').value,
+                    category: document.getElementById('highlightCategory').value,
+                    tag: document.getElementById('highlightTag').value,
+                    // Add any additional fields here if needed
+                };
+
+                currentData.announcements.push(newHighlight);
+                displayData(currentData);
+                navigateToStep(1); // Move to Step 2: Edit Data
             }
         </script>
     </body>
