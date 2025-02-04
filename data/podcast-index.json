@@ -430,7 +430,19 @@
                 "spotify_url": "https://open.spotify.com/episode/3e7doJzcslm0gjhsxBjNOY?si=0VGC1ozySNKO1fI1A8jbzw",
                 "link": "https://open.spotify.com/episode/3e7doJzcslm0gjhsxBjNOY?si=0VGC1ozySNKO1fI1A8jbzw",
                 "podcast-thumbnail_url": ""
+            },
+            {
+                "id": "25-02-02",
+                "title": "The Gift of God or the Gifts from God?",
+                "author": "Rev. Craig Luekens",
+                "scripture": "Exodus 33: 1-23",
+                "date": "2025-02-02",
+                "apple_podcasts_url": "",
+                "spotify_url": "https://open.spotify.com/episode/0FyJcEpB6GkJeauPMNGwMZ?si=de45f6e3765b4fe3",
+                "link": "https://open.spotify.com/episode/0FyJcEpB6GkJeauPMNGwMZ?si=de45f6e3765b4fe3",
+                "podcast-thumbnail_url": ""
             }
+            
         ]
     },
     "beyond": {
@@ -565,6 +577,15 @@
                 "date_added": "2025-01-29",
                 "season": "winter 2025",
                 "podcast-thumbnail_url": "https://open.spotify.com/episode/2ejBWTE4Pz5Sk06mSvbxij?si=wLcXg2VnTmOgoHfkb8YR7A"
+            },
+            {
+                "number": 28,
+                "title": "The Gift of God or the Gifts from God?",
+                "link": "https://open.spotify.com/episode/4EYmc85S6XZU8cu9611R2m?si=c4c77db73e3541b3",
+                "guest": "Rev. Tyler Rice",
+                "date_added": "2025-02-05",
+                "season": "winter 2025",
+                "podcast-thumbnail_url": "https://open.spotify.com/episode/4EYmc85S6XZU8cu9611R2m?si=c4c77db73e3541b3"
             }
         ]
     },
