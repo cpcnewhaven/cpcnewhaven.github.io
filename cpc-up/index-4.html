@@ -262,7 +262,7 @@
     <script>
       function editorApp() {
         return {
-          // Array of items loaded from the JSON file (now assumed to be a plain array)
+          // Array of items loaded from the JSON file (assumed to be a plain array)
           items: [],
           searchQuery: "",
           connectionStatus: "Loading...", // status indicator text
@@ -288,7 +288,7 @@
               const response = await fetch(url);
               if (!response.ok) throw new Error("Failed to fetch JSON from bucket");
               const data = await response.json();
-              // Instead of expecting an 'announcements' property, assume the JSON is a plain array.
+              // Now assume the JSON is a plain array.
               this.items = data || [];
               this.connectionStatus = "Connected to Google Cloud";
             } catch (error) {
@@ -360,10 +360,10 @@
             );
           },
           publishToWebsite() {
-            // Prepare the JSON data to be published (now publishing the plain array)
+            // Prepare the JSON data to be published (publishing the plain array)
             const jsonData = JSON.stringify(this.items, null, 2);
             // Replace with your valid access token.
-            const ACCESS_TOKEN = "ya29.a0AXeO80S5c9isjjTBj7SsdV3onWbzoN5e4ZvdmNtOmR_BD27t6Gn2klJt3-Rjz73N_YxyuVwKcWdfSeHkON3zAWD5kBFUSFQUqTce7IDZ1bJyuLxmpo9UchtU-mdZTN6Jj-mRLCIf1gvunwe5R8Mmk8W4fJcFpbVuXF2f7nGgaCgYKAXgSARISFQHGX2MigYv7JvtMl7IrFIw8LjhBfw0175";
+            const ACCESS_TOKEN = "ya29.a0AXeO80QL8ZvccK-J915uPTCEbwBlxGBzA7TPkvfQXBkecqifRVYlq5z9Nek3Q-HR8-uEtdYHyvK08isWbCXypW8grtwkA_SuXD_VjO191-LSwiK8XW1bt7LncEAULVr899fr1I6CUk0XEqNQkuIU_dp5QgyDCL13TmSekbctaCgYKAQsSARISFQHGX2MiCjCz0GEggkPC-FzbpNCuEA0175";
             const uploadUrl = "https://www.googleapis.com/upload/storage/v1/b/cpc-public-website/o?uploadType=media&name=dynamic-json/highlights.json";
             fetch(uploadUrl, {
               method: "POST",
