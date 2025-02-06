@@ -9,17 +9,14 @@
       rel="stylesheet"
     />
     <!-- Alpine.js for reactive UI -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
-      defer
-    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
     <style>
       /* Global Styles & Reset */
       body {
         margin: 0;
         padding: 20px;
         font-family: "Barlow", sans-serif;
-        background: #e0f7fa; /* light baby blue background */
+        background: #e0f7fa; /* baby blue background */
         color: #333;
       }
       .app-container {
@@ -33,6 +30,21 @@
       header h1 {
         font-size: 2em;
         color: #0277bd; /* darker blue */
+      }
+      .status-indicator {
+        display: inline-block;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-size: 0.9em;
+        margin-top: 5px;
+      }
+      .connected {
+        background-color: #c8e6c9; /* light green */
+        color: #2e7d32;
+      }
+      .error {
+        background-color: #ffcdd2; /* light red */
+        color: #c62828;
       }
 
       /* Table Container with Glass Effect */
@@ -172,6 +184,11 @@
     <div class="app-container">
       <header>
         <h1>Highlights Editor & Publisher</h1>
+        <!-- Status indicator shows connection state -->
+        <div class="status-indicator" 
+             x-bind:class="{'connected': connectionStatus === 'Connected to Google Cloud', 'error': connectionStatus !== 'Connected to Google Cloud'}" 
+             x-text="connectionStatus">
+        </div>
       </header>
 
       <!-- Table of Entries -->
@@ -203,58 +220,25 @@
             </template>
           </tbody>
         </table>
-        <button class="create-new-btn" @click="clearSelection()">
-          + Create New Item
-        </button>
+        <button class="create-new-btn" @click="clearSelection()">+ Create New Item</button>
       </div>
 
       <!-- Editor Panel -->
       <div class="editor-panel" x-show="showEditor">
         <h2 x-text="selectedItem !== null ? 'Edit Item' : 'Create New Item'"></h2>
-        <form
-          @submit.prevent="selectedItem !== null ? saveChanges() : createNew()"
-        >
-          <input
-            type="text"
-            placeholder="Title"
-            x-model="editedItem.title"
-            required
-          />
-          <textarea
-            placeholder="Description"
-            x-model="editedItem.description"
-            rows="4"
-            required
-          ></textarea>
+        <form @submit.prevent="selectedItem !== null ? saveChanges() : createNew()">
+          <input type="text" placeholder="Title" x-model="editedItem.title" required />
+          <textarea placeholder="Description" x-model="editedItem.description" rows="4" required></textarea>
           <input type="date" x-model="editedItem.date" required />
           <label>
-            <input type="checkbox" x-model="editedItem.active" />
-            Active
+            <input type="checkbox" x-model="editedItem.active" /> Active
           </label>
-          <input
-            type="text"
-            placeholder="Category"
-            x-model="editedItem.category"
-            required
-          />
-          <input
-            type="text"
-            placeholder="Tag"
-            x-model="editedItem.tag"
-            required
-          />
+          <input type="text" placeholder="Category" x-model="editedItem.category" required />
+          <input type="text" placeholder="Tag" x-model="editedItem.tag" required />
           <div class="button-group">
-            <button type="submit">
-              Save Changes
-            </button>
+            <button type="submit">Save Changes</button>
             <template x-if="selectedItem !== null">
-              <button
-                type="button"
-                class="delete"
-                @click="deleteItem(selectedItem)"
-              >
-                Delete Entry
-              </button>
+              <button type="button" class="delete" @click="deleteItem(selectedItem)">Delete Entry</button>
             </template>
             <button type="button" @click="cancelEdit()">Cancel</button>
           </div>
@@ -270,12 +254,13 @@
     <script>
       function editorApp() {
         return {
-          // Array of items loaded from your JSON file
+          // Array of items loaded from the JSON file
           items: [],
           searchQuery: "",
+          connectionStatus: "Loading...", // status indicator
           // Index of the currently selected item (null means no selection)
           selectedItem: null,
-          // Editable item object (used for both editing and creating)
+          // Editable item object (used for editing or creating new)
           editedItem: {
             title: "",
             description: "",
@@ -289,22 +274,22 @@
             this.fetchItems();
           },
           async fetchItems() {
-            const url =
-              "https://storage.googleapis.com/cpc-public-website/dynamic-json/highlights.json";
+            const url = "https://storage.googleapis.com/cpc-public-website/dynamic-json/highlights.json";
             try {
               const response = await fetch(url);
-              if (!response.ok)
-                throw new Error("Failed to fetch JSON from bucket");
+              if (!response.ok) throw new Error("Failed to fetch JSON from bucket");
               const data = await response.json();
-              // Assuming your JSON has an "announcements" array:
-              this.items = data.announcements || [];
+              // Use the 'announcements' property if available; otherwise assume the JSON is an array
+              this.items = data.announcements || data || [];
+              this.connectionStatus = "Connected to Google Cloud";
             } catch (error) {
               console.error("Error loading items:", error);
+              this.connectionStatus = "Error connecting to Google Cloud";
             }
           },
           selectItem(index) {
             this.selectedItem = index;
-            // Deep copy so the form does not immediately affect the list
+            // Deep copy so editing doesn't immediately modify the list
             this.editedItem = JSON.parse(JSON.stringify(this.items[index]));
             this.showEditor = true;
           },
@@ -334,9 +319,7 @@
           },
           saveChanges() {
             if (this.selectedItem !== null) {
-              this.items[this.selectedItem] = JSON.parse(
-                JSON.stringify(this.editedItem)
-              );
+              this.items[this.selectedItem] = JSON.parse(JSON.stringify(this.editedItem));
             }
             this.cancelEdit();
           },
@@ -352,24 +335,16 @@
           },
           get filteredItems() {
             if (!this.searchQuery) return this.items;
-            return this.items.filter((item) =>
-              item.title
-                .toLowerCase()
-                .includes(this.searchQuery.toLowerCase())
+            return this.items.filter(item =>
+              item.title.toLowerCase().includes(this.searchQuery.toLowerCase())
             );
           },
           publishToWebsite() {
             // Prepare the JSON data to be published
-            const jsonData = JSON.stringify(
-              { announcements: this.items },
-              null,
-              2
-            );
-            // Replace with a valid access token with write permission on your bucket
-            const ACCESS_TOKEN = "YOUR_ACCESS_TOKEN";
-            const uploadUrl =
-              "https://www.googleapis.com/upload/storage/v1/b/cpc-public-website/o?uploadType=media&name=dynamic-json/highlights.json";
-
+            const jsonData = JSON.stringify({ announcements: this.items }, null, 2);
+            // Replace with your valid access token (it expires after ~1 hour)
+            const ACCESS_TOKEN = "ya29.a0AXeO80S5c9isjjTBj7SsdV3onWbzoN5e4ZvdmNtOmR_BD27t6Gn2klJt3-Rjz73N_YxyuVwKcWdfSeHkON3zAWD5kBFUSFQUqTce7IDZ1bJyuLxmpo9UchtU-mdZTN6Jj-mRLCIf1gvunwe5R8Mmk8W4fJcFpbVuXF2f7nGgaCgYKAXgSARISFQHGX2MigYv7JvtMl7IrFIw8LjhBfw0175";
+            const uploadUrl = "https://www.googleapis.com/upload/storage/v1/b/cpc-public-website/o?uploadType=media&name=dynamic-json/highlights.json";
             fetch(uploadUrl, {
               method: "POST",
               headers: {
@@ -378,20 +353,18 @@
               },
               body: jsonData,
             })
-              .then((response) => {
+              .then(response => {
                 if (response.ok) {
                   alert("Published successfully!");
                 } else {
-                  response.text().then((text) =>
-                    alert("Error publishing: " + text)
-                  );
+                  response.text().then(text => alert("Error publishing: " + text));
                 }
               })
-              .catch((error) => {
+              .catch(error => {
                 console.error("Error publishing:", error);
                 alert("Error publishing: " + error);
               });
-          },
+          }
         };
       }
     </script>
