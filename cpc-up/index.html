@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Highlights Editor & Publisher</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Alpine.js for reactive UI -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+      defer
+    ></script>
+    <style>
+      /* Global Styles */
+      body {
+        font-family: "Barlow", sans-serif;
+        margin: 0;
+        padding: 0;
+        background: #222;
+        color: #fff;
+      }
+      .app-container {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+      header {
+        text-align: center;
+        padding: 20px;
+      }
+      header h1 {
+        margin: 0;
+      }
+
+      /* Main layout: Sidebar and Editor */
+      .main-content {
+        flex: 1;
+        display: flex;
+        padding: 20px;
+        gap: 20px;
+      }
+      .sidebar {
+        width: 25%;
+        background: rgba(0, 0, 0, 0.5);
+        padding: 20px;
+        border-radius: 10px;
+        overflow-y: auto;
+        max-height: 80vh;
+      }
+      .sidebar input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        border: none;
+      }
+      .sidebar .item {
+        padding: 10px;
+        margin-bottom: 10px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 5px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .sidebar .item:hover {
+        background: rgba(255, 255, 255, 0.2);
+      }
+      .sidebar .item button {
+        margin-left: 5px;
+        background: #2196f3;
+        border: none;
+        padding: 5px 10px;
+        border-radius: 3px;
+        cursor: pointer;
+        font-size: 14px;
+      }
+      .sidebar button.create-new {
+        width: 100%;
+        margin-top: 10px;
+        background: #4caf50;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+
+      /* Editor Panel */
+      .editor-panel {
+        width: 75%;
+        background: rgba(0, 0, 0, 0.5);
+        padding: 20px;
+        border-radius: 10px;
+      }
+      .editor-panel form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      .editor-panel input[type="text"],
+      .editor-panel input[type="date"],
+      .editor-panel textarea {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        background: rgba(255, 255, 255, 0.1);
+        color: #fff;
+      }
+      .editor-panel textarea {
+        resize: vertical;
+      }
+      .editor-panel label {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .editor-panel button {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        background: #4caf50;
+        color: #fff;
+      }
+      .editor-panel button.delete {
+        background: #f44336;
+      }
+      .editor-panel .button-group {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        margin-top: 10px;
+      }
+
+      /* JSON Preview & Publish Section */
+      .json-preview {
+        background: rgba(0, 0, 0, 0.7);
+        padding: 20px;
+        border-radius: 10px;
+        margin: 20px;
+        max-height: 200px;
+        overflow-y: auto;
+        font-family: "Courier New", Courier, monospace;
+        white-space: pre-wrap;
+        font-size: 14px;
+      }
+      .json-preview button {
+        margin-top: 10px;
+        background: #2196f3;
+        border: none;
+        padding: 8px 16px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body x-data="editorApp()" x-init="init()">
+    <div class="app-container">
+      <!-- Header -->
+      <header>
+        <h1>Highlights Editor & Publisher</h1>
+      </header>
+
+      <!-- Main Content: Sidebar and Editor Panel -->
+      <div class="main-content">
+        <!-- Left Sidebar: Search & List -->
+        <div class="sidebar">
+          <input
+            type="text"
+            placeholder="Search items..."
+            x-model="searchQuery"
+          />
+          <template x-for="(item, index) in filteredItems" :key="index">
+            <div class="item">
+              <span x-text="item.title"></span>
+              <div>
+                <button @click="selectItem(index)">Edit</button>
+                <button @click="deleteItem(index)">Delete</button>
+              </div>
+            </div>
+          </template>
+          <button class="create-new" @click="clearSelection()">
+            + Create New Item
+          </button>
+        </div>
+
+        <!-- Right Editor Panel: Edit / Create Form -->
+        <div class="editor-panel">
+          <form
+            @submit.prevent="
+              selectedItem !== null ? saveChanges() : createNew()
+            "
+          >
+            <input
+              type="text"
+              placeholder="Title"
+              x-model="editedItem.title"
+              required
+            />
+            <textarea
+              placeholder="Description"
+              x-model="editedItem.description"
+              rows="4"
+              required
+            ></textarea>
+            <input type="date" x-model="editedItem.date" required />
+            <label>
+              <input type="checkbox" x-model="editedItem.active" />
+              Active
+            </label>
+            <input
+              type="text"
+              placeholder="Category"
+              x-model="editedItem.category"
+              required
+            />
+            <input
+              type="text"
+              placeholder="Tag"
+              x-model="editedItem.tag"
+              required
+            />
+
+            <div class="button-group">
+              <template x-if="selectedItem !== null">
+                <div>
+                  <button type="submit">Save Changes</button>
+                  <button
+                    type="button"
+                    class="delete"
+                    @click="deleteItem(selectedItem)"
+                  >
+                    Delete Entry
+                  </button>
+                </div>
+              </template>
+              <template x-if="selectedItem === null">
+                <button type="submit">Create New Item</button>
+              </template>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Bottom Section: JSON Preview & Publish -->
+      <div class="json-preview">
+        <h2>JSON Preview</h2>
+        <pre x-text="jsonPreview"></pre>
+        <button @click="publishToWebsite()">
+          Publish to Website
+        </button>
+      </div>
+    </div>
+
+    <script>
+      function editorApp() {
+        return {
+          // Array of items (each item represents one “highlight”)
+          items: [],
+          searchQuery: "",
+          // When an item is selected, we store its index
+          selectedItem: null,
+          // Editable item object (used for both editing and creating new)
+          editedItem: {
+            title: "",
+            description: "",
+            date: "",
+            active: false,
+            category: "",
+            tag: ""
+          },
+          jsonPreview: "",
+          init() {
+            this.fetchItems();
+          },
+          async fetchItems() {
+            // Fetch your current JSON from Google Cloud Storage
+            const url =
+              "https://storage.googleapis.com/cpc-public-website/dynamic-json/highlights.json";
+            try {
+              const response = await fetch(url);
+              if (!response.ok)
+                throw new Error("Failed to fetch JSON from bucket");
+              const data = await response.json();
+              // Assuming your JSON has an "announcements" (or "items") array:
+              this.items = data.announcements || [];
+              this.updateJsonPreview();
+            } catch (error) {
+              console.error("Error loading items:", error);
+            }
+          },
+          selectItem(index) {
+            this.selectedItem = index;
+            // Make a deep copy so changes aren’t immediately applied
+            this.editedItem = JSON.parse(JSON.stringify(this.items[index]));
+          },
+          clearSelection() {
+            this.selectedItem = null;
+            this.editedItem = {
+              title: "",
+              description: "",
+              date: "",
+              active: false,
+              category: "",
+              tag: ""
+            };
+          },
+          saveChanges() {
+            if (this.selectedItem !== null) {
+              // Update the selected item
+              this.items[this.selectedItem] = JSON.parse(
+                JSON.stringify(this.editedItem)
+              );
+              this.clearSelection();
+              this.updateJsonPreview();
+            }
+          },
+          deleteItem(index) {
+            if (confirm("Are you sure you want to delete this item?")) {
+              this.items.splice(index, 1);
+              // If the deleted item was being edited, clear the form
+              if (this.selectedItem === index) {
+                this.clearSelection();
+              }
+              this.updateJsonPreview();
+            }
+          },
+          createNew() {
+            // Add the new item
+            this.items.push(JSON.parse(JSON.stringify(this.editedItem)));
+            this.clearSelection();
+            this.updateJsonPreview();
+          },
+          updateJsonPreview() {
+            // Update the JSON preview text (wrapped inside an object with "announcements")
+            this.jsonPreview = JSON.stringify(
+              { announcements: this.items },
+              null,
+              2
+            );
+          },
+          get filteredItems() {
+            if (!this.searchQuery) {
+              return this.items;
+            }
+            return this.items.filter((item) =>
+              item.title.toLowerCase().includes(this.searchQuery.toLowerCase())
+            );
+          },
+          publishToWebsite() {
+            // Prepare the JSON data to be published
+            const jsonData = JSON.stringify(
+              { announcements: this.items },
+              null,
+              2
+            );
+
+            // Replace with a valid access token that has permission to write to your bucket
+            const ACCESS_TOKEN = "YOUR_ACCESS_TOKEN";
+
+            // The upload URL for the Google Cloud Storage JSON API.
+            // The "name" parameter is set to the full path of the file in the bucket.
+            const uploadUrl =
+              "https://www.googleapis.com/upload/storage/v1/b/cpc-public-website/o?uploadType=media&name=dynamic-json/highlights.json";
+
+            fetch(uploadUrl, {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+                Authorization: "Bearer " + ACCESS_TOKEN
+              },
+              body: jsonData
+            })
+              .then((response) => {
+                if (response.ok) {
+                  alert("Published successfully!");
+                } else {
+                  response.text().then((text) => {
+                    alert("Error publishing: " + text);
+                  });
+                }
+              })
+              .catch((error) => {
+                console.error("Error publishing to website:", error);
+                alert("Error publishing: " + error);
+              });
+          }
+        };
+      }
+    </script>
+  </body>
+</html>
