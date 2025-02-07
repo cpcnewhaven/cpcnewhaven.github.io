@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Church Memo CMS</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Alpine.js for reactive UI -->
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+    <style>
+      /* Global Styles with memo- prefix */
+      body {
+        margin: 0;
+        padding: 20px;
+        font-family: "Barlow", sans-serif;
+        background: #e0f7fa;
+        color: #333;
+      }
+      .memo-container {
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+      h1 {
+        text-align: center;
+        color: #0277bd;
+      }
+      .memo-btn {
+        display: inline-block;
+        padding: 10px 20px;
+        background: #4fc3f7;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        margin: 10px auto;
+      }
+      .memo-btn:hover {
+        background: #29b6f6;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+        font-size: 0.9em;
+      }
+      th, td {
+        padding: 8px 12px;
+        border: 1px solid #ccc;
+        text-align: left;
+      }
+      th {
+        background: #b3e5fc;
+      }
+      tr:nth-child(even) {
+        background: #f9f9f9;
+      }
+      input[type="text"], input[type="date"] {
+        width: 100%;
+        padding: 6px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+      .memo-action-btn {
+        padding: 6px 10px;
+        margin: 2px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        background: #4fc3f7;
+        color: #fff;
+        font-size: 0.8em;
+      }
+      .memo-action-btn:hover {
+        background: #29b6f6;
+      }
+      .memo-publish-btn {
+        background: #039be5;
+        padding: 10px 20px;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        display: block;
+        margin: 20px auto;
+      }
+      .memo-publish-btn:hover {
+        background: #0288d1;
+      }
+      /* Wizard Modal Styles */
+      .memo-modal {
+        position: fixed;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+      }
+      .memo-modal-content {
+        background: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        width: 90%;
+        max-width: 600px;
+        position: relative;
+      }
+      .memo-progress-bar {
+        height: 10px;
+        background: #ddd;
+        border-radius: 5px;
+        overflow: hidden;
+        margin-bottom: 20px;
+      }
+      .memo-progress {
+        height: 100%;
+        background: #4fc3f7;
+        width: 0%;
+        transition: width 0.3s;
+      }
+      .memo-wizard-buttons {
+        text-align: right;
+        margin-top: 20px;
+      }
+      .memo-wizard-buttons button {
+        padding: 8px 12px;
+        margin-left: 10px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        background: #4fc3f7;
+        color: #fff;
+      }
+      .memo-wizard-buttons button:hover {
+        background: #29b6f6;
+      }
+    </style>
+  </head>
+  <body x-data="memoCMS()">
+    <div class="memo-container">
+      <h1>Church Memo CMS</h1>
+      
+      <!-- Load Website Button -->
+      <div x-show="!dataLoaded" style="text-align: center;">
+        <button class="memo-btn" @click="loadMemos()">Load Website</button>
+      </div>
+      
+      <!-- CMS Table (visible once data is loaded) -->
+      <div x-show="dataLoaded">
+        <table>
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Date Entered</th>
+              <th>Active</th>
+              <th>Type</th>
+              <th>Category</th>
+              <th>Tag</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <template x-for="(memo, index) in memos" :key="index">
+              <tr>
+                <td x-text="memo.title"></td>
+                <td x-text="memo.dateEntered"></td>
+                <td x-text="memo.active === 'true' ? 'Yes' : 'No'"></td>
+                <td x-text="memo.type"></td>
+                <td x-text="memo.category"></td>
+                <td x-text="memo.tag"></td>
+                <td>
+                  <button class="memo-action-btn" @click="openWizard('edit', index)">Edit</button>
+                  <button class="memo-action-btn" @click="deleteMemo(index)">Delete</button>
+                </td>
+              </tr>
+            </template>
+            <!-- Row for adding a new memo -->
+            <tr>
+              <td colspan="7" style="text-align:center;">
+                <button class="memo-btn" @click="openWizard('new')">Add New Memo</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <button class="memo-publish-btn" @click="publishMemos()">Publish to Website</button>
+      </div>
+      
+      <!-- Wizard Modal -->
+      <div class="memo-modal" x-show="wizardOpen">
+        <div class="memo-modal-content">
+          <div class="memo-progress-bar">
+            <div class="memo-progress" :style="{ width: progressWidth + '%' }"></div>
+          </div>
+          <!-- Wizard Step 1: Basic Info -->
+          <div x-show="wizardStep === 1">
+            <h2>Step 1: Basic Info</h2>
+            <label>
+              Title:
+              <input type="text" x-model="wizardMemo.title" />
+            </label>
+            <br />
+            <label>
+              Date Entered:
+              <input type="date" x-model="wizardMemo.dateEntered" />
+            </label>
+          </div>
+          <!-- Wizard Step 2: Classification -->
+          <div x-show="wizardStep === 2">
+            <h2>Step 2: Classification</h2>
+            <label>
+              Active:
+              <input type="checkbox" x-model="wizardMemo.active" true-value="true" false-value="false" />
+            </label>
+            <br />
+            <label>
+              Type:
+              <input type="text" x-model="wizardMemo.type" />
+            </label>
+            <br />
+            <label>
+              Category:
+              <input type="text" x-model="wizardMemo.category" />
+            </label>
+            <br />
+            <label>
+              Tag:
+              <input type="text" x-model="wizardMemo.tag" />
+            </label>
+          </div>
+          <!-- Wizard Step 3: Description -->
+          <div x-show="wizardStep === 3">
+            <h2>Step 3: Description</h2>
+            <label>
+              Description:
+              <textarea x-model="wizardMemo.description" rows="4" style="width:100%;"></textarea>
+            </label>
+          </div>
+          <div class="memo-wizard-buttons">
+            <template x-if="wizardStep > 1">
+              <button @click="prevStep()">Previous</button>
+            </template>
+            <template x-if="wizardStep < 3">
+              <button @click="nextStep()">Next</button>
+            </template>
+            <template x-if="wizardStep === 3">
+              <button @click="saveWizard()">Save</button>
+            </template>
+            <button @click="closeWizard()">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script>
+      function memoCMS() {
+        return {
+          dataLoaded: false,
+          memos: [],
+          wizardOpen: false,
+          wizardStep: 1,
+          wizardMemo: { title: "", dateEntered: "", active: "false", type: "", category: "", tag: "", description: "" },
+          editingIndex: null, // If editing an existing memo, store its index
+          loadMemos() {
+            fetch("https://storage.googleapis.com/cpc-public-website/dynamic-json/memo.json")
+              .then(res => res.json())
+              .then(data => {
+                this.memos = data || [];
+                this.dataLoaded = true;
+              })
+              .catch(err => console.error("Error loading memos:", err));
+          },
+          openWizard(mode, index) {
+            if (mode === "edit") {
+              this.editingIndex = index;
+              // Deep copy the memo to avoid binding issues
+              this.wizardMemo = JSON.parse(JSON.stringify(this.memos[index]));
+            } else {
+              this.editingIndex = null;
+              this.wizardMemo = { title: "", dateEntered: "", active: "false", type: "", category: "", tag: "", description: "" };
+            }
+            this.wizardStep = 1;
+            this.wizardOpen = true;
+          },
+          nextStep() {
+            if (this.wizardStep < 3) {
+              this.wizardStep++;
+            }
+          },
+          prevStep() {
+            if (this.wizardStep > 1) {
+              this.wizardStep--;
+            }
+          },
+          closeWizard() {
+            this.wizardOpen = false;
+            this.editingIndex = null;
+          },
+          saveWizard() {
+            if (this.editingIndex !== null) {
+              this.memos[this.editingIndex] = JSON.parse(JSON.stringify(this.wizardMemo));
+            } else {
+              this.memos.push(JSON.parse(JSON.stringify(this.wizardMemo)));
+            }
+            this.closeWizard();
+          },
+          deleteMemo(index) {
+            if (confirm("Are you sure you want to delete this memo?")) {
+              this.memos.splice(index, 1);
+            }
+          },
+          publishMemos() {
+            const jsonData = JSON.stringify(this.memos, null, 2);
+            const ACCESS_TOKEN = "YOUR_ACCESS_TOKEN_HERE"; // Replace with a valid access token
+            const uploadUrl = "https://www.googleapis.com/upload/storage/v1/b/cpc-public-website/o?uploadType=media&name=dynamic-json/memo.json";
+            fetch(uploadUrl, {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+                Authorization: "Bearer " + ACCESS_TOKEN,
+              },
+              body: jsonData,
+            })
+              .then(response => {
+                if (response.ok) {
+                  alert("Published successfully!");
+                } else {
+                  response.text().then(text => alert("Error publishing: " + text));
+                }
+              })
+              .catch(error => {
+                console.error("Error publishing:", error);
+                alert("Error publishing: " + error);
+              });
+          },
+          get progressWidth() {
+            // For a 3-step wizard, progress = ((step - 1) / (3 - 1)) * 100
+            return ((this.wizardStep - 1) / 2) * 100;
+          }
+        };
+      }
+    </script>
+  </body>
+</html>

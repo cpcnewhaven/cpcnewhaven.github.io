@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Highlights CMS</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Alpine.js for reactive UI -->
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+    <style>
+      /* Global Styles */
+      body {
+        margin: 0;
+        padding: 20px;
+        font-family: "Barlow", sans-serif;
+        background: #e0f7fa;
+        color: #333;
+      }
+      .app-container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      h1 {
+        text-align: center;
+        color: #0277bd;
+      }
+      .btn {
+        padding: 8px 16px;
+        background: #4fc3f7;
+        border: none;
+        border-radius: 4px;
+        color: white;
+        cursor: pointer;
+        font-size: 1em;
+        margin: 10px auto;
+        display: block;
+      }
+      .btn:hover {
+        background: #29b6f6;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+        font-size: 0.9em;
+      }
+      th, td {
+        padding: 8px 12px;
+        border: 1px solid #ccc;
+        text-align: left;
+      }
+      th {
+        background: #b3e5fc;
+      }
+      tr:nth-child(even) {
+        background: #f9f9f9;
+      }
+      input[type="text"], input[type="date"] {
+        width: 100%;
+        padding: 6px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+      }
+      .action-btn {
+        padding: 4px 8px;
+        margin: 2px;
+        border: none;
+        border-radius: 3px;
+        background: #4fc3f7;
+        color: white;
+        cursor: pointer;
+        font-size: 0.8em;
+      }
+      .action-btn:hover {
+        background: #29b6f6;
+      }
+      .publish-btn {
+        display: block;
+        margin: 20px auto;
+        padding: 8px 16px;
+        font-size: 1em;
+        background: #039be5;
+        border-radius: 4px;
+      }
+      .publish-btn:hover {
+        background: #0288d1;
+      }
+    </style>
+  </head>
+  <body x-data="cmsApp()">
+    <div class="app-container">
+      <h1>Highlights CMS</h1>
+      
+      <!-- Initially show the "Load Website" button -->
+      <div x-show="!dataLoaded" style="text-align: center;">
+        <button class="btn" @click="loadItems()">Load Website</button>
+      </div>
+      
+      <!-- Once loaded, display the table of entries -->
+      <div x-show="dataLoaded">
+        <table>
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Date Entered</th>
+              <th>Active</th>
+              <th>Type</th>
+              <th>Category</th>
+              <th>Tag</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Loop over existing entries -->
+            <template x-for="(item, index) in items" :key="index">
+              <tr>
+                <!-- If this row is being edited, show input fields -->
+                <template x-if="editingIndex === index">
+                  <td><input type="text" x-model="editingItem.title" /></td>
+                  <td><input type="date" x-model="editingItem.dateEntered" /></td>
+                  <td>
+                    <input type="checkbox" x-model="editingItem.active" true-value="true" false-value="false" />
+                  </td>
+                  <td><input type="text" x-model="editingItem.type" /></td>
+                  <td><input type="text" x-model="editingItem.category" /></td>
+                  <td><input type="text" x-model="editingItem.tag" /></td>
+                  <td>
+                    <button class="action-btn" @click="saveEdit(index)">Save</button>
+                    <button class="action-btn" @click="cancelEdit()">Cancel</button>
+                  </td>
+                </template>
+                <!-- Otherwise, display the row normally -->
+                <template x-if="editingIndex !== index">
+                  <td x-text="item.title"></td>
+                  <td x-text="item.dateEntered"></td>
+                  <td x-text="item.active === 'true' ? 'Yes' : 'No'"></td>
+                  <td x-text="item.type"></td>
+                  <td x-text="item.category"></td>
+                  <td x-text="item.tag"></td>
+                  <td>
+                    <button class="action-btn" @click="editRow(index)">Edit</button>
+                    <button class="action-btn" @click="deleteRow(index)">Delete</button>
+                  </td>
+                </template>
+              </tr>
+            </template>
+            <!-- Row for adding a new entry -->
+            <tr>
+              <td><input type="text" placeholder="New Title" x-model="newItem.title" /></td>
+              <td><input type="date" x-model="newItem.dateEntered" /></td>
+              <td>
+                <input type="checkbox" x-model="newItem.active" true-value="true" false-value="false" />
+              </td>
+              <td><input type="text" placeholder="Type" x-model="newItem.type" /></td>
+              <td><input type="text" placeholder="Category" x-model="newItem.category" /></td>
+              <td><input type="text" placeholder="Tag" x-model="newItem.tag" /></td>
+              <td>
+                <button class="action-btn" @click="addNew()">Add New</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <button class="publish-btn" @click="publish()">Publish to Website</button>
+      </div>
+    </div>
+    <script>
+      function cmsApp() {
+        return {
+          dataLoaded: false,
+          items: [],
+          editingIndex: null,
+          editingItem: {},
+          newItem: { title: "", dateEntered: "", active: "false", type: "", category: "", tag: "" },
+          loadItems() {
+            fetch("https://storage.googleapis.com/cpc-public-website/dynamic-json/highlights.json")
+              .then(res => res.json())
+              .then(data => {
+                this.items = data || [];
+                this.dataLoaded = true;
+              })
+              .catch(err => console.error("Error loading items:", err));
+          },
+          editRow(index) {
+            this.editingIndex = index;
+            // Deep copy to avoid direct binding to the table
+            this.editingItem = JSON.parse(JSON.stringify(this.items[index]));
+          },
+          saveEdit(index) {
+            // Save the edited item back into the array
+            this.items[index] = JSON.parse(JSON.stringify(this.editingItem));
+            this.cancelEdit();
+          },
+          cancelEdit() {
+            this.editingIndex = null;
+            this.editingItem = {};
+          },
+          deleteRow(index) {
+            if (confirm("Are you sure you want to delete this item?")) {
+              this.items.splice(index, 1);
+              this.cancelEdit();
+            }
+          },
+          addNew() {
+            let newEntry = JSON.parse(JSON.stringify(this.newItem));
+            // Ensure "active" is a string ("true" or "false")
+            newEntry.active = newEntry.active === "true" ? "true" : "false";
+            this.items.push(newEntry);
+            // Reset newItem fields
+            this.newItem = { title: "", dateEntered: "", active: "false", type: "", category: "", tag: "" };
+          },
+          publish() {
+            const jsonData = JSON.stringify(this.items, null, 2);
+            // Replace the ACCESS_TOKEN below with your valid token
+            const ACCESS_TOKEN = "YOUR_ACCESS_TOKEN_HERE";
+            const uploadUrl = "https://www.googleapis.com/upload/storage/v1/b/cpc-public-website/o?uploadType=media&name=dynamic-json/highlights.json";
+            fetch(uploadUrl, {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+                Authorization: "Bearer " + ACCESS_TOKEN,
+              },
+              body: jsonData,
+            })
+              .then(response => {
+                if (response.ok) {
+                  alert("Published successfully!");
+                } else {
+                  response.text().then(text => alert("Error publishing: " + text));
+                }
+              })
+              .catch(error => {
+                console.error("Error publishing:", error);
+                alert("Error publishing: " + error);
+              });
+          }
+        };
+      }
+    </script>
+  </body>
+</html>
