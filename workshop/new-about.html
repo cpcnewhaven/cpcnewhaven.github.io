@@ -19,7 +19,7 @@
 
     <!-- Include your global CSS and FontAwesome -->
     <link rel="stylesheet" href="../src/css/global-body.css" />
-    <link rel="stylesheet" href="./src/css/global-footer-cta.css" />
+    <link rel="stylesheet" href="../src/css/global-footer-cta.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 
     <!-- Alpine.js -->
@@ -27,7 +27,6 @@
 
     <style>
       /* ===== Sidebar Layout for the Submenu ===== */
-      /* Container for the entire page content that holds the sidebar and main content */
       .main-container {
         display: flex;
         flex-direction: column;
@@ -35,6 +34,7 @@
       @media (min-width: 768px) {
         .main-container {
           flex-direction: row;
+          gap: 0;
         }
       }
 
@@ -61,12 +61,15 @@
       /* On desktop, always show sidebar */
       @media (min-width: 768px) {
         .about-sidebar {
+          position: sticky;
+          top: 0;
+          height: 100vh;
           transform: translateX(0);
-          position: relative;
           box-shadow: none;
           display: flex;
           flex-direction: column;
           gap: 8px;
+          flex-shrink: 0;
         }
       }
 
@@ -131,7 +134,67 @@
       }
       @media (min-width: 768px) {
         .content {
-          margin-left: 240px; /* leaves space for the sidebar */
+          margin-left: 0;
+          padding: 20px 40px;
+        }
+      }
+
+      /* ===== About Page Content Styles ===== */
+      .about-inner-section {
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      .about-heading {
+        text-align: left;
+        margin: 0 0 20px 0;
+        font-size: 28px;
+      }
+
+      .about-body-text {
+        text-align: left;
+        margin: 0 0 16px 0;
+        max-width: 100%;
+        line-height: 1.6;
+      }
+
+      .about-staff-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 20px;
+        margin: 0;
+        padding: 0;
+      }
+
+      .about-staff-member {
+        text-align: left;
+        padding: 15px;
+        background: #f8f9fa;
+        border-radius: 4px;
+      }
+
+      .about-image-container {
+        width: 100%;
+        margin: 20px 0;
+      }
+
+      .about-compact-centered-image {
+        max-width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      /* Content area adjustments */
+      .content {
+        padding: 20px;
+        width: 100%;
+        max-width: 100%;
+      }
+      @media (min-width: 768px) {
+        .content {
+          margin-left: 0;
+          padding: 20px 40px;
         }
       }
     </style>
@@ -200,11 +263,11 @@
 
       <!-- Main Content Area -->
       <div class="content">
-        <!-- Each section is conditionally shown based on activeTab -->
+        <!-- Update each section with new class names -->
         <div x-show="activeTab === 'mission'">
-          <section id="welcome-mission" class="inner-page-section">
-            <h1>The Mission of Christ Presbyterian Church</h1>
-            <p class="body-text">
+          <section id="welcome-mission" class="about-inner-section">
+            <h1 class="about-heading">The Mission of Christ Presbyterian Church</h1>
+            <p class="about-body-text">
               We are a church that is ambitious for the glory of God by
               <strong>GROWING</strong> in the truth and grace of Jesus Christ,
               <strong>ACTING</strong> as a faithful witness in the greater New Haven community and world,
@@ -214,9 +277,9 @@
         </div>
 
         <div x-show="activeTab === 'totalChrist'">
-          <section id="total-christ-spirit" class="inner-page-section">
-            <h1>Our Total Christ Spirituality</h1>
-            <p class="body-text">
+          <section id="total-christ-spirit" class="about-inner-section">
+            <h1 class="about-heading">Our Total Christ Spirituality</h1>
+            <p class="about-body-text">
               We want this to be all about Christ—his work, not ours, as the basis of our relationship to God and one another...
             </p>
             <!-- Additional content omitted for brevity -->
@@ -224,9 +287,9 @@
         </div>
 
         <div x-show="activeTab === 'commitments'">
-          <section id="commitments" class="inner-page-section">
-            <h1>Our Commitments</h1>
-            <p class="body-text">
+          <section id="commitments" class="about-inner-section">
+            <h1 class="about-heading">Our Commitments</h1>
+            <p class="about-body-text">
               We seek to be radically grounded in the good news that...
             </p>
             <!-- Additional content omitted for brevity -->
@@ -234,10 +297,10 @@
         </div>
 
         <div x-show="activeTab === 'staff'">
-          <section id="staff" class="inner-page-section">
-            <h1>Staff</h1>
-            <div class="staff-grid">
-              <div class="staff-member">
+          <section id="staff" class="about-inner-section">
+            <h1 class="about-heading">Staff</h1>
+            <div class="about-staff-grid">
+              <div class="about-staff-member">
                 <h3>Craig Luekens</h3>
                 <h4>Senior Pastor</h4>
                 <button class="read-more-button" onclick="window.location.href='rev-craig-luekens.html'">Pastor Bio</button>
@@ -249,12 +312,12 @@
 
         <!-- Other tabs: missionAnabaino, session, wlb, slb -->
         <div x-show="activeTab === 'missionAnabaino'">
-          <section id="about-mission-anabaion" class="inner-page-section">
-            <h1>Mission Anabaino</h1>
-            <div class="image-container">
-              <img src="https://storage.googleapis.com/cpc-public-website/63.jpg" alt="Mission Anabaino" class="compact-centered-image" />
+          <section id="about-mission-anabaion" class="about-inner-section">
+            <h1 class="about-heading">Mission Anabaino</h1>
+            <div class="about-image-container">
+              <img src="https://storage.googleapis.com/cpc-public-website/63.jpg" alt="Mission Anabaino" class="about-compact-centered-image" />
             </div>
-            <p class="body-text">
+            <p class="about-body-text">
               Mission Anabaino (MA) seeks to fulfill the "greater things" in relation to Christ's great expectations...
               <br /><br />
               <div class="center-content">
@@ -267,11 +330,11 @@
         </div>
 
         <div x-show="activeTab === 'session'">
-          <section id="session" class="inner-page-section">
-            <h1>Session</h1>
-            <div class="staff-grid" id="session-members">
+          <section id="session" class="about-inner-section">
+            <h1 class="about-heading">Session</h1>
+            <div class="about-staff-grid" id="session-members">
               <!-- Session members -->
-              <div class="staff-member">
+              <div class="about-staff-member">
                 <h3>Craig Luekens</h3>
                 <h4>Senior Pastor</h4>
               </div>
@@ -281,11 +344,11 @@
         </div>
 
         <div x-show="activeTab === 'wlb'">
-          <section id="wlb" class="inner-page-section">
-            <h1>Women's Leadership Board</h1>
-            <div class="staff-grid">
+          <section id="wlb" class="about-inner-section">
+            <h1 class="about-heading">Women's Leadership Board</h1>
+            <div class="about-staff-grid">
               <!-- WLB members -->
-              <div class="staff-member">
+              <div class="about-staff-member">
                 <h3>Lisa Hawkes</h3>
                 <h4>(Sabbatical 24-25)</h4>
               </div>
@@ -295,11 +358,11 @@
         </div>
 
         <div x-show="activeTab === 'slb'">
-          <section id="slb" class="inner-page-section">
-            <h1>Servant Leadership Board</h1>
-            <div class="staff-grid">
+          <section id="slb" class="about-inner-section">
+            <h1 class="about-heading">Servant Leadership Board</h1>
+            <div class="about-staff-grid">
               <!-- SLB members -->
-              <div class="staff-member">
+              <div class="about-staff-member">
                 <h3>Craig Luekens</h3>
                 <h4>(Moderator)</h4>
               </div>
