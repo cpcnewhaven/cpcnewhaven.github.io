@@ -108,7 +108,9 @@ style.innerHTML = `
         border: 2px solid gold;
         padding: 10px;
         margin-bottom: 20px;
-        background-color: #f9f9f9;
+        margin-left: 20px;
+        margin-right: 10px;
+      
     }
 
     @media (max-width: 768px) {

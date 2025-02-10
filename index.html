@@ -36,6 +36,7 @@
       href="https://storage.googleapis.com/cpc-public-website/web-assets/CPC%20-%20FAVICON%20-%20FALL%202024.png"
       type="image/png" />
 
+  
   </head>
   <body id="homepage">
    
@@ -176,21 +177,8 @@
         </div>
       </section>
     </div>
-    <section class="mid-splash-welcome sticky">
-      <h1 class="headline">Contact CPC New Haven</h1>
-    </section>
-    <section id="contact-cta" class="styled-section-a">
-      <div class="form-container">
- 
-        <p class="body-text center" style="text-align: center !important">
-          Need to schedule a pastoral visit or have any inquiries? Reach out to
-          us!
-        </p>
-        <a href="contact.html">
-          <button>Contact Us</button>
-        </a>
-      </div>
-    </section>
+
+   
     <section class="mid-splash-welcome sticky">
       <h1 class="headline">Subscribe to our Newsletter</h1>
     </section>
@@ -228,7 +216,63 @@
 
       </div>
     </section>
+ <!-- Refactored Contact Section -->
+ <section id="refactored-contact">
+  <div class="contact-content">
+    <h2>Get in Touch with CPC New Haven</h2>
+    <p>
+      Need to schedule a pastoral visit or have any inquiries? We'd love to hear from you!
+    </p>
+    <a href="contact.html" class="contact-button">Contact Us</a>
+  </div>
+</section>
 
+<!-- Inline unique CSS for the refactored contact section -->
+<style>
+  /* Container styles */
+  #refactored-contact {
+    background: linear-gradient(135deg, #6B73FF 0%, #000DFF 100%);
+    padding: 50px 20px;
+    border-radius: 12px;
+    margin: 40px auto;
+    max-width: 600px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Heading styles */
+  #refactored-contact .contact-content h2 {
+    color: #fff;
+    font-size: 2em;
+    margin-bottom: 15px;
+  }
+
+  /* Paragraph styles */
+  #refactored-contact .contact-content p {
+    color: #f0f0f0;
+    font-size: 1.1em;
+    margin-bottom: 25px;
+    line-height: 1.5;
+  }
+
+  /* Button styles */
+  #refactored-contact .contact-button {
+    background-color: #fff;
+    color: #000DFF;
+    text-decoration: none;
+    padding: 12px 30px;
+    font-size: 1.2em;
+    border-radius: 50px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Button hover effect */
+  #refactored-contact .contact-button:hover {
+    background-color: #000DFF;
+    color: #fff;
+  }
+</style>
     <footer>
       <div class="footer-content-logo">
         <a href="index.html">
