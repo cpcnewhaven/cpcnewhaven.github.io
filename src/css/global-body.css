@@ -2534,19 +2534,17 @@ p {
 
 
 .mission-statement {
-    font-family: 'Times New Roman', Times, serif;
-    /* Classic serif font for a scholarly look */
     font-size: 1.3em;
-    /* Slightly larger font size for emphasis */
     line-height: 1.8;
     /* More space between lines for readability */
     color: #2c2c2c;
     /* Slightly darker text color for contrast */
-    background-color: #f5f5f5;
+    background-color: #f5f5f51b;
     /* Softer background color */
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.01);
     /* Subtle shadow for depth */
-    padding-bottom: 20px;
+    width:800px;
+
 }
 
 .mission-statement p {
@@ -3378,7 +3376,7 @@ p {
     padding: 10px;
 }
 
-.tab-menu button {
+/* .tab-menu button {
     flex: 0 0 100px;
     margin: 0 5px;
     padding: 12px 24px;
@@ -3391,11 +3389,11 @@ p {
     cursor: pointer;
     text-align: center;
     font-size: 14px;
-}
+} */
 
-.tab-menu button.active {
+/* .tab-menu button.active {
     background-color: #006cd8;
-}
+} */
 
 .tab-content {
     padding: 20px;
