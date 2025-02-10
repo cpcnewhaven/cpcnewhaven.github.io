@@ -7,7 +7,7 @@
     <!-- Alpine.js for interactivity -->
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
     <style>
-      /* --- Basic Wikipedia-style layout --- */
+      /* Wikipedia-style layout */
       body {
         margin: 0;
         padding: 20px;
@@ -61,14 +61,28 @@
       a:hover {
         text-decoration: underline;
       }
+      .item-meta {
+        font-size: 0.9rem;
+        color: #555;
+        margin-left: 5px;
+      }
+      .item-description {
+        margin: 5px 0 0 20px;
+        font-style: italic;
+        font-size: 0.9rem;
+      }
     </style>
   </head>
   <body>
-    <div x-data="archiveApp()">
+    <!-- Alpine component. It loads the JSON data on initialization. -->
+    <div x-data="archiveApp()" x-init="init()">
       <!-- Page header -->
       <div class="header">
         <h1>CPC New Haven Archive</h1>
- 
+        <p>
+          Our new website is live! Check it out:
+          <a href="https://cpcnewhaven.org" target="_blank">cpcnewhaven.org</a>
+        </p>
       </div>
 
       <!-- Big Search Bar -->
@@ -80,6 +94,11 @@
           class="search-input"
         />
       </div>
+
+      <!-- Loading message until data is fetched -->
+      <template x-if="categories.length === 0">
+        <p style="text-align: center;">Loading archive data...</p>
+      </template>
 
       <!-- Archive Content -->
       <div>
@@ -93,6 +112,10 @@
               >
                 <li>
                   <a :href="item.url" target="_blank" x-text="item.title"></a>
+                  <span class="item-meta" x-text="'(' + item.yearPublished + ')'"></span>
+                  <template x-if="item.description">
+                    <p class="item-description" x-text="item.description"></p>
+                  </template>
                 </li>
               </template>
             </ul>
@@ -104,102 +127,38 @@
     <script>
       function archiveApp() {
         return {
-          query: '',
-          categories: [
-            {
-              name: 'Theology',
-              items: [
-                { title: 'Confessional Theology', url: 'pdfs/confessional_theology.pdf' },
-                { title: 'Heresies and Errors', url: 'pdfs/heresies_and_errors.pdf' },
-                { title: 'Christian Basics I: The Apostles\' Creed', url: 'pdfs/christian_basics_i.pdf' },
-                { title: 'Christian Basics II: Applying Christian Beliefs to Life', url: 'pdfs/christian_basics_ii.pdf' },
-                { title: 'Great Books of Christian Discipleship I', url: 'pdfs/great_books_christian_discipleship_i.pdf' },
-                { title: 'Great Books of Christian Discipleship II', url: 'pdfs/great_books_christian_discipleship_ii.pdf' },
-                { title: 'Missional Ecclesiology', url: 'pdfs/missional_ecclesiology.pdf' }
-              ]
-            },
-            {
-              name: 'Biblical Studies',
-              items: [
-                { title: 'Bible Interpretation', url: 'pdfs/bible_interpretation.pdf' },
-                { title: 'Biblical Theology', url: 'pdfs/biblical_theology.pdf' },
-                { title: 'Proverbs Bible Study', url: 'pdfs/proverbs_bible_study.pdf' },
-                { title: 'Philippians Bible Study', url: 'pdfs/philippians_bible_study.pdf' }
-              ]
-            },
-            {
-              name: 'Gospel in Life',
-              items: [
-                { title: 'Intro to CPC\'s Spirituality', url: 'pdfs/intro_to_cpc_spirituality.pdf' },
-                { title: 'Gospel Christianity I', url: 'pdfs/gospel_christianity_i.pdf' },
-                { title: 'Gospel Christianity II', url: 'pdfs/gospel_christianity_ii.pdf' },
-                { title: 'Gospel Christianity III', url: 'pdfs/gospel_christianity_iii.pdf' },
-                { title: 'Total Christ Spirituality', url: 'pdfs/total_christ_spirituality.pdf' },
-                { title: 'Christian Spirituality', url: 'pdfs/christian_spirituality.pdf' },
-                { title: 'Gospel in Life (Video Course)', url: 'pdfs/gospel_in_life_video_course.pdf' },
-                { title: 'Prayer Topics', url: 'pdfs/prayer_topics.pdf' },
-                { title: 'Covenantal Parenting', url: 'pdfs/covenantal_parenting.pdf' },
-                { title: 'Sonship', url: 'pdfs/sonship.pdf' },
-                { title: 'Vocation', url: 'pdfs/vocation.pdf' },
-                { title: 'When Life is a Work of Art', url: 'pdfs/when_life_is_a_work_of_art.pdf' },
-                { title: 'Spiritual Gifts in the Life of the Church', url: 'pdfs/spiritual_gifts.pdf' }
-              ]
-            },
-            {
-              name: 'Evangelism/Apologetics',
-              items: [
-                { title: 'Missionary Encounters of Other Faiths', url: 'pdfs/missionary_encounters_other_faiths.pdf' },
-                { title: 'Missionary Encounters with Neighbors', url: 'pdfs/missionary_encounters_neighbors.pdf' },
-                { title: 'Apologetics and Evangelism', url: 'pdfs/apologetics_and_evangelism.pdf' },
-                { title: 'Christianity Explored', url: 'pdfs/christianity_explored.pdf' },
-                { title: 'Evangelism Conference', url: 'pdfs/evangelism_conference.pdf' }
-              ]
-            },
-            {
-              name: 'Church History',
-              items: [
-                { title: 'Church History: Turning Points', url: 'pdfs/church_history_turning_points.pdf' },
-                { title: 'Church History: Early Years', url: 'pdfs/church_history_early_years.pdf' },
-                { title: 'Church History: Reformation', url: 'pdfs/church_history_reformation.pdf' },
-                { title: 'Church History: The American Journey', url: 'pdfs/church_history_american_journey.pdf' },
-                { title: 'The Christ of History: The Early Church and the Kingdom of God', url: 'pdfs/christ_of_history.pdf' }
-              ]
-            },
-            {
-              name: 'Leadership',
-              items: [
-                { title: 'Introduction to Spiritual Leadership', url: 'pdfs/intro_to_spiritual_leadership.pdf' },
-                { title: 'Lay Counseling', url: 'pdfs/lay_counseling.pdf' },
-                { title: 'Shepherd Leader Training I: Total Christ Ecclesiology', url: 'pdfs/shepherd_leader_training_i.pdf' },
-                { title: 'Shepherd Leader Training II: Total Christ Life-on-Life Discipleship', url: 'pdfs/shepherd_leader_training_ii.pdf' },
-                { title: 'Spiritual Gifts in the Life of the Church', url: 'pdfs/spiritual_gifts_leadership.pdf' }
-              ]
-            },
-            {
-              name: 'Other',
-              items: [
-                { title: 'Study of Jonathan Edwards\' Charity and Its Fruits', url: 'pdfs/edwards_charity_and_its_fruits.pdf' },
-                { title: 'Study of D. Martyn Lloyd-Jones Spiritual Depression', url: 'pdfs/llyod_jones_spiritual_depression.pdf' },
-                { title: 'Good News for Anxious Christians', url: 'pdfs/good_news_for_anxious_christians.pdf' },
-                { title: 'You Are What You Love', url: 'pdfs/you_are_what_you_love.pdf' },
-                { title: 'World Upside Down', url: 'pdfs/world_upside_down.pdf' },
-                { title: 'The Gospel Comes with a House Key', url: 'pdfs/gospel_with_house_key.pdf' }
-              ]
-            }
-          ],
+          query: "",
+          categories: [],
+          // Called on initialization to fetch data from the JSON file
+          init() {
+            fetch("archiveData.json")
+              .then((response) => response.json())
+              .then((data) => {
+                this.categories = data.categories;
+              })
+              .catch((error) =>
+                console.error("Error loading data from data.json:", error)
+              );
+          },
+          // Returns the list of items that match the query
           filteredItems(items) {
-            // If no query, show all items.
             if (!this.query.trim()) {
               return items;
             }
             let q = this.query.toLowerCase();
-            return items.filter((item) =>
-              item.title.toLowerCase().includes(q)
-            );
+            return items.filter((item) => {
+              return (
+                item.title.toLowerCase().includes(q) ||
+                (item.description &&
+                  item.description.toLowerCase().includes(q)) ||
+                (item.yearPublished && String(item.yearPublished).includes(q))
+              );
+            });
           },
+          // Returns true if there is at least one matching item in the category
           hasMatches(category) {
             return this.filteredItems(category.items).length > 0;
-          }
+          },
         };
       }
     </script>

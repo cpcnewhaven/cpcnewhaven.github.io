@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TL0WH5R1EK"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){ dataLayer.push(arguments); }
+      gtag('js', new Date());
+      gtag('config', 'G-TL0WH5R1EK');
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="CPC New Haven Church - 135 Whitney Ave New Haven, CT. We are a church committed to serving and reaching the Greater New Haven area. Join us for worship and fellowship."
+    />
+    <meta name="keywords" content="CPC New Haven, Church, New Haven, CT, Worship, Fellowship" />
+    <meta name="author" content="CPC New Haven" />
+    <title>Community | CPC New Haven Church</title>
+    <link
+      rel="icon"
+      href="https://storage.googleapis.com/cpc-public-website/web-assets/CPC%20-%20FAVICON%20-%20FALL%2024.png"
+      type="image/png"
+    />
+    <link rel="stylesheet" href="src/css/global-body.css" />
+    <link rel="stylesheet" href="src/css/global-footer-cta.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <style>
+      /* ===== Sidebar Layout for the Community Submenu ===== */
+      .community-main-container {
+        display: flex;
+        flex-direction: column;
+      }
+      @media (min-width: 768px) {
+        .community-main-container {
+          flex-direction: row;
+          gap: 0;
+        }
+      }
+
+      /* ===== Community Page Sidebar Styles ===== */
+      .community-sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 220px;
+        height: 100vh;
+        background-color: #0068a437;
+        padding: 20px;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+        z-index: 1000;
+      }
+      /* When sidebar is open (on mobile) */
+      .community-sidebar.open {
+        transform: translateX(0);
+      }
+      /* On desktop, always show sidebar */
+      @media (min-width: 768px) {
+        .community-sidebar {
+          position: sticky;
+          top: 0;
+          height: 100vh;
+          transform: translateX(0);
+          box-shadow: none;
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+          flex-shrink: 0;
+        }
+      }
+      /* Community sidebar button styles */
+      .community-sidebar-btn {
+        display: block;
+        width: 100%;
+        background: none;
+        border: none;
+        text-align: left;
+        padding: 10px;
+        font-size: 16px;
+        cursor: pointer;
+        color: #333;
+        min-height: 44px;
+        border-radius: 4px;
+        transition: background-color 0.2s ease;
+      }
+      .community-sidebar-btn:hover {
+        color: #333;
+      }
+      .community-sidebar-btn.active {
+        font-weight: bold;
+        color: #007BFF;
+        background-color: #e9ecef;
+      }
+      /* Nested submenu styles */
+      .community-submenu {
+        padding-left: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+      /* Community hamburger toggle button for mobile */
+      .community-sidebar-toggle {
+        position: fixed;
+        top: 325px;
+        left: 10px;
+        background: #007BFF;
+        color: #fff;
+        border: none;
+        padding: 8px;
+        z-index: 1100;
+        border-radius: 4px;
+        width: 36px;
+        height: 36px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .community-sidebar-toggle i {
+        font-size: 16px;
+      }
+      @media (min-width: 768px) {
+        .community-sidebar-toggle {
+          display: none;
+        }
+      }
+
+      /* Community content area */
+      .community-content {
+        padding: 20px;
+        width: 100%;
+      }
+      @media (min-width: 768px) {
+        /* Leave room for the sidebar */
+        .community-content {
+          margin-left: 240px;
+          padding: 20px 40px;
+        }
+      }
+
+      /* Community inner section (content) styles */
+      .community-inner-section {
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      .community-heading {
+        text-align: left;
+        margin: 0 0 20px 0;
+        font-size: 28px;
+      }
+      .community-body-text {
+        text-align: left;
+        margin: 0 0 16px 0;
+        max-width: 100%;
+        line-height: 1.6;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Main Navigation -->
+    <header id="stickyHeader" class="sticky">
+      <nav class="main-navigation">
+        <a href="index.html">Home</a>
+        <a href="sundays.html">Sundays</a>
+        <a href="about.html">About</a>
+        <a href="podcasts.html">Podcasts</a>
+        <a href="announcements.html">Announcements</a>
+        <a href="community.html">Community</a>
+        <a href="live.html">Live</a>
+        <a href="resources.html">Resources</a>
+        <a href="give.html">Give</a>
+      </nav>
+    </header>
+
+    <!-- MOBILE HAMBURGER -->
+    <div class="hamburger-menu-button-container" id="hamburgerMenu">
+      <i id="closeMobileMenuButton" class="fas fa-bars"></i>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <nav class="mobile-navigation" id="mobileNavigation">
+      <div class="mobile-nav-header">
+        <button id="closeMenuButton" aria-label="Close menu">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <ul class="mobile-nav-links">
+        <li><a class="mobile-menu-link" href="index.html">Home</a></li>
+        <li><a class="mobile-menu-link" href="sundays.html">Sundays</a></li>
+        <li><a class="mobile-menu-link" href="about.html">About</a></li>
+        <li><a class="mobile-menu-link" href="podcasts.html">Podcasts</a></li>
+        <li><a class="mobile-menu-link" href="announcements.html">Announcements</a></li>
+        <li><a class="mobile-menu-link" href="community.html">Community</a></li>
+        <li><a class="mobile-menu-link" href="live.html">Live</a></li>
+        <li><a class="mobile-menu-link" href="resources.html">Resources</a></li>
+        <li><a class="mobile-menu-link" href="give.html">Give</a></li>
+      </ul>
+    </nav>
+
+    <!-- Splash Hero for Community -->
+    <div
+      x-data="{
+        images: [
+          'https://storage.googleapis.com/cpc-public-website/web-assets/heros/%5BHERO%5D%5BComm%7D6.jpg',
+          'https://storage.googleapis.com/cpc-public-website/web-assets/heros/%5BHERO%5D%5BComm%7D5.jpg',
+          'https://storage.googleapis.com/cpc-public-website/web-assets/heros/%5BHERO%5D%5BCOMMUNITY%5D.-1.jpg'
+        ],
+        currentIndex: 0
+      }"
+      x-init="setInterval(() => { currentIndex = (currentIndex + 1) % images.length }, 5000)"
+      class="splash-hero--community"
+      :style="`background-image: url('${images[currentIndex]}')`"
+    >
+      <h1>Community</h1>
+    </div>
+
+    <!-- Community Page with Sidebar Navigation and Ministries Submenu -->
+    <div
+      x-data="{
+        activeTab: 'smallGroups',
+        activeSubTab: 'lifegroups',
+        ministriesOpen: false,
+        sidebarOpen: false
+      }"
+      class="community-main-container"
+    >
+      <!-- Mobile Sidebar Toggle Button -->
+      <button
+        @click="sidebarOpen = !sidebarOpen"
+        class="community-sidebar-toggle"
+        aria-label="Toggle submenu"
+      >
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <!-- Sidebar Navigation -->
+      <nav class="community-sidebar" :class="{ 'open': sidebarOpen }">
+        <button
+          @click="activeTab = 'smallGroups'; sidebarOpen = false"
+          class="community-sidebar-btn"
+          :class="{ 'active': activeTab === 'smallGroups' }"
+        >
+          Small Groups
+        </button>
+
+        <!-- Ministries Button with Nested Submenu -->
+        <div>
+          <button
+            @click="activeTab = 'ministries'; ministriesOpen = !ministriesOpen; if(ministriesOpen === false){ activeSubTab = 'children' }"
+            class="community-sidebar-btn"
+            :class="{ 'active': activeTab === 'ministries' }"
+          >
+            Ministries
+            <i class="fas" :class="ministriesOpen ? 'fa-chevron-up' : 'fa-chevron-down'" style="float:right;"></i>
+          </button>
+          <div x-show="ministriesOpen" class="community-submenu">
+            <button
+              @click="activeSubTab = 'children'; sidebarOpen = false"
+              class="community-sidebar-btn"
+              :class="{ 'active': activeSubTab === 'children' }"
+            >
+              Children
+            </button>
+            <button
+              @click="activeSubTab = 'youth'; sidebarOpen = false"
+              class="community-sidebar-btn"
+              :class="{ 'active': activeSubTab === 'youth' }"
+            >
+              Youth
+            </button>
+            <button
+              @click="activeSubTab = 'undergraduate'; sidebarOpen = false"
+              class="community-sidebar-btn"
+              :class="{ 'active': activeSubTab === 'undergraduate' }"
+            >
+              Undergraduate
+            </button>
+            <button
+              @click="activeSubTab = 'graduate'; sidebarOpen = false"
+              class="community-sidebar-btn"
+              :class="{ 'active': activeSubTab === 'graduate' }"
+            >
+              Graduate
+            </button>
+            <button
+              @click="activeSubTab = 'mercy'; sidebarOpen = false"
+              class="community-sidebar-btn"
+              :class="{ 'active': activeSubTab === 'mercy' }"
+            >
+              Mercy
+            </button>
+            <button
+              @click="activeSubTab = 'men'; sidebarOpen = false"
+              class="community-sidebar-btn"
+              :class="{ 'active': activeSubTab === 'men' }"
+            >
+              Men
+            </button>
+            <button
+              @click="activeSubTab = 'women'; sidebarOpen = false"
+              class="community-sidebar-btn"
+              :class="{ 'active': activeSubTab === 'women' }"
+            >
+              Women
+            </button>
+          </div>
+        </div>
+
+        <button
+          @click="activeTab = 'membership'; sidebarOpen = false"
+          class="community-sidebar-btn"
+          :class="{ 'active': activeTab === 'membership' }"
+        >
+          Membership
+        </button>
+      </nav>
+
+      <!-- Main Content Area -->
+      <div class="community-content">
+        <!-- Small Groups Section -->
+        <div x-show="activeTab === 'smallGroups'">
+          <section id="community-small-groups" class="community-inner-section">
+            <h1 class="community-heading">Small Groups</h1>
+            <!-- (Retain your sub-content for Small Groups here) -->
+            <div x-show="activeSubTab === 'lifegroups'">
+              <h2 class="community-heading">Life Groups</h2>
+              <p class="community-body-text">
+                God's people are the hands and feet of Christ. We cannot experience God and grow spiritually in a truly gospel-centered and biblical way if we are living in isolation. Neither can we say we are flourishing if our brother or sister in Christ is suffering.
+              </p>
+              <p class="community-body-text">
+                Life Groups are our way of doing church in the small—with prayer, teaching, fellowship, and care—helping participants experience Christ outside of our worship gatherings.
+              </p>
+            </div>
+            <div x-show="activeSubTab === 'discipleship'">
+              <h2 class="community-heading">Discipleship Groups</h2>
+              <p class="community-body-text">
+                Christian discipleship applies the gospel to every aspect of life. Our Discipleship Groups focus on living and sharing truth through accountability, study, and prayer.
+              </p>
+            </div>
+          </section>
+        </div>
+
+        <!-- Ministries Section -->
+        <div x-show="activeTab === 'ministries'">
+          <section id="community-ministries" class="community-inner-section">
+            <h1 class="community-heading">Ministries</h1>
+            <!-- The content below will change based on the nested submenu selection -->
+            <template x-if="activeSubTab === 'children'">
+              <div>
+                <h2 class="community-heading">Children</h2>
+                <p class="community-body-text">
+                  We partner with covenant families to raise children rooted in the grace of the gospel. Our comprehensive curriculum builds deep, enduring Christian faith.
+                </p>
+              </div>
+            </template>
+            <template x-if="activeSubTab === 'youth'">
+              <div>
+                <h2 class="community-heading">Youth</h2>
+                <p class="community-body-text">
+                  Our youth ministry is the capstone of our children’s ministry, offering programs that include Sunday School and one-on-one discipleship opportunities.
+                </p>
+              </div>
+            </template>
+            <template x-if="activeSubTab === 'undergraduate'">
+              <div>
+                <h2 class="community-heading">Undergraduate</h2>
+                <p class="community-body-text">
+                  Our college ministry gathers students from local universities to love Christ, love the church, and engage in communal worship.
+                </p>
+              </div>
+            </template>
+            <template x-if="activeSubTab === 'graduate'">
+              <div>
+                <h2 class="community-heading">Graduate</h2>
+                <p class="community-body-text">
+                  Designed for post-college members, our Graduate group fosters deeper spiritual growth and community involvement.
+                </p>
+              </div>
+            </template>
+            <template x-if="activeSubTab === 'mercy'">
+              <div>
+                <h2 class="community-heading">Mercy</h2>
+                <p class="community-body-text">
+                  Mercy begins within our Life Groups and extends to the whole church body, ensuring practical support and compassionate care.
+                </p>
+              </div>
+            </template>
+            <template x-if="activeSubTab === 'men'">
+              <div>
+                <h2 class="community-heading">Men</h2>
+                <p class="community-body-text">
+                  Our Men's Ministry offers opportunities for fellowship, spiritual growth, and outreach to unbelievers.
+                </p>
+              </div>
+            </template>
+            <template x-if="activeSubTab === 'women'">
+              <div>
+                <h2 class="community-heading">Women</h2>
+                <p class="community-body-text">
+                  Encouraging a gospel-centered lifestyle, our Women's Ministry provides a supportive environment for growth and connection.
+                </p>
+              </div>
+            </template>
+          </section>
+        </div>
+
+        <!-- Membership Section -->
+        <div x-show="activeTab === 'membership'">
+          <section id="community-membership" class="community-inner-section">
+            <h1 class="community-heading">Membership</h1>
+            <p class="community-body-text">
+              Membership is more than a label—it defines our mutual commitment and accountability. By confessing our faith, we bind ourselves together as a supportive community.
+            </p>
+            <p class="community-body-text">
+              Contact us for more information on becoming a member at CPC.
+            </p>
+            <p class="community-body-text">
+              For more, read Good News of Church Membership.
+            </p>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer CTA Section -->
+    <section id="footer-cta-a" class="styled-section-a">
+      <div class="form-container">
+        <h2>Subscribe to our Newsletter</h2>
+        <p class="community-body-text">
+          Our weekly newsletter goes out on Friday mornings with Sunday Service information, highlights, upcoming events, and useful links.
+        </p>
+        <form action="https://formspree.io/f/meojowwg" method="POST" class="neumorphic-form">
+          <input type="text" name="name" placeholder="Your name" required />
+          <input type="email" name="email" placeholder="Your email" required />
+          <button type="submit">Subscribe to CPC New Haven</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-content-logo">
+        <a href="index.html">
+          <img src="./assets/CPC_LOGO_24.png" alt="CPC New Haven Church" class="top-splash-logo" />
+        </a>
+      </div>
+      <p>Join us for worship and fellowship. <a href="sundays.html">Learn more</a></p>
+      <p>
+        203.777.6960 | <a href="mailto:admin@cpcnewhaven.org">admin@cpcnewhaven.org</a> | 135 Whitney Ave. New Haven CT 06510
+      </p>
+      <p>© 2024 Christ Presbyterian Church.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="./src/js/background-fetch-splash-image.js"></script>
+    <script src="./src/js/load-community-events.js"></script>
+    <script src="./src/js/function_toggle_mobileMenu.js"></script>
+  </body>
+</html>

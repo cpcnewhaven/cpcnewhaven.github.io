@@ -1,0 +1,267 @@
+{
+  "categories": [
+    {
+      "name": "Theology",
+      "items": [
+        {
+          "title": "Confessional Theology",
+          "url": "pdfs/confessional_theology.pdf",
+          "yearPublished": 2020,
+          "description": "An exploration of confessional theology."
+        },
+        {
+          "title": "Heresies and Errors",
+          "url": "pdfs/heresies_and_errors.pdf",
+          "yearPublished": 2019
+        },
+        {
+          "title": "Christian Basics I: The Apostles' Creed",
+          "url": "pdfs/christian_basics_i.pdf",
+          "yearPublished": 2018,
+          "description": "A study on the Apostles' Creed."
+        },
+        {
+          "title": "Christian Basics II: Applying Christian Beliefs to Life",
+          "url": "pdfs/christian_basics_ii.pdf",
+          "yearPublished": 2018
+        },
+        {
+          "title": "Great Books of Christian Discipleship I",
+          "url": "pdfs/great_books_christian_discipleship_i.pdf",
+          "yearPublished": 2021
+        },
+        {
+          "title": "Great Books of Christian Discipleship II",
+          "url": "pdfs/great_books_christian_discipleship_ii.pdf",
+          "yearPublished": 2021
+        },
+        {
+          "title": "Missional Ecclesiology",
+          "url": "pdfs/missional_ecclesiology.pdf",
+          "yearPublished": 2022,
+          "description": "Understanding the mission of the church."
+        }
+      ]
+    },
+    {
+      "name": "Biblical Studies",
+      "items": [
+        {
+          "title": "Bible Interpretation",
+          "url": "pdfs/bible_interpretation.pdf",
+          "yearPublished": 2017
+        },
+        {
+          "title": "Biblical Theology",
+          "url": "pdfs/biblical_theology.pdf",
+          "yearPublished": 2016
+        },
+        {
+          "title": "Proverbs Bible Study",
+          "url": "pdfs/proverbs_bible_study.pdf",
+          "yearPublished": 2015
+        },
+        {
+          "title": "Philippians Bible Study",
+          "url": "pdfs/philippians_bible_study.pdf",
+          "yearPublished": 2014
+        }
+      ]
+    },
+    {
+      "name": "Gospel in Life",
+      "items": [
+        {
+          "title": "Intro to CPC's Spirituality",
+          "url": "pdfs/intro_to_cpc_spirituality.pdf",
+          "yearPublished": 2020
+        },
+        {
+          "title": "Gospel Christianity I",
+          "url": "pdfs/gospel_christianity_i.pdf",
+          "yearPublished": 2019
+        },
+        {
+          "title": "Gospel Christianity II",
+          "url": "pdfs/gospel_christianity_ii.pdf",
+          "yearPublished": 2019
+        },
+        {
+          "title": "Gospel Christianity III",
+          "url": "pdfs/gospel_christianity_iii.pdf",
+          "yearPublished": 2019
+        },
+        {
+          "title": "Total Christ Spirituality",
+          "url": "pdfs/total_christ_spirituality.pdf",
+          "yearPublished": 2021
+        },
+        {
+          "title": "Christian Spirituality",
+          "url": "pdfs/christian_spirituality.pdf",
+          "yearPublished": 2021
+        },
+        {
+          "title": "Gospel in Life (Video Course)",
+          "url": "pdfs/gospel_in_life_video_course.pdf",
+          "yearPublished": 2022
+        },
+        {
+          "title": "Prayer Topics",
+          "url": "pdfs/prayer_topics.pdf",
+          "yearPublished": 2020
+        },
+        {
+          "title": "Covenantal Parenting",
+          "url": "pdfs/covenantal_parenting.pdf",
+          "yearPublished": 2018
+        },
+        {
+          "title": "Sonship",
+          "url": "pdfs/sonship.pdf",
+          "yearPublished": 2017
+        },
+        {
+          "title": "Vocation",
+          "url": "pdfs/vocation.pdf",
+          "yearPublished": 2016
+        },
+        {
+          "title": "When Life is a Work of Art",
+          "url": "pdfs/when_life_is_a_work_of_art.pdf",
+          "yearPublished": 2015
+        },
+        {
+          "title": "Spiritual Gifts in the Life of the Church",
+          "url": "pdfs/spiritual_gifts.pdf",
+          "yearPublished": 2014
+        }
+      ]
+    },
+    {
+      "name": "Evangelism/Apologetics",
+      "items": [
+        {
+          "title": "Missionary Encounters of Other Faiths",
+          "url": "pdfs/missionary_encounters_other_faiths.pdf",
+          "yearPublished": 2020
+        },
+        {
+          "title": "Missionary Encounters with Neighbors",
+          "url": "pdfs/missionary_encounters_neighbors.pdf",
+          "yearPublished": 2019
+        },
+        {
+          "title": "Apologetics and Evangelism",
+          "url": "pdfs/apologetics_and_evangelism.pdf",
+          "yearPublished": 2018
+        },
+        {
+          "title": "Christianity Explored",
+          "url": "pdfs/christianity_explored.pdf",
+          "yearPublished": 2017
+        },
+        {
+          "title": "Evangelism Conference",
+          "url": "pdfs/evangelism_conference.pdf",
+          "yearPublished": 2016
+        }
+      ]
+    },
+    {
+      "name": "Church History",
+      "items": [
+        {
+          "title": "Church History: Turning Points",
+          "url": "pdfs/church_history_turning_points.pdf",
+          "yearPublished": 2015
+        },
+        {
+          "title": "Church History: Early Years",
+          "url": "pdfs/church_history_early_years.pdf",
+          "yearPublished": 2014
+        },
+        {
+          "title": "Church History: Reformation",
+          "url": "pdfs/church_history_reformation.pdf",
+          "yearPublished": 2013
+        },
+        {
+          "title": "Church History: The American Journey",
+          "url": "pdfs/church_history_american_journey.pdf",
+          "yearPublished": 2012
+        },
+        {
+          "title": "The Christ of History: The Early Church and the Kingdom of God",
+          "url": "pdfs/christ_of_history.pdf",
+          "yearPublished": 2011
+        }
+      ]
+    },
+    {
+      "name": "Leadership",
+      "items": [
+        {
+          "title": "Introduction to Spiritual Leadership",
+          "url": "pdfs/intro_to_spiritual_leadership.pdf",
+          "yearPublished": 2020
+        },
+        {
+          "title": "Lay Counseling",
+          "url": "pdfs/lay_counseling.pdf",
+          "yearPublished": 2019
+        },
+        {
+          "title": "Shepherd Leader Training I: Total Christ Ecclesiology",
+          "url": "pdfs/shepherd_leader_training_i.pdf",
+          "yearPublished": 2018
+        },
+        {
+          "title": "Shepherd Leader Training II: Total Christ Life-on-Life Discipleship",
+          "url": "pdfs/shepherd_leader_training_ii.pdf",
+          "yearPublished": 2017
+        },
+        {
+          "title": "Spiritual Gifts in the Life of the Church",
+          "url": "pdfs/spiritual_gifts_leadership.pdf",
+          "yearPublished": 2016
+        }
+      ]
+    },
+    {
+      "name": "Other",
+      "items": [
+        {
+          "title": "Study of Jonathan Edwards' Charity and Its Fruits",
+          "url": "pdfs/edwards_charity_and_its_fruits.pdf",
+          "yearPublished": 2015
+        },
+        {
+          "title": "Study of D. Martyn Lloyd-Jones Spiritual Depression",
+          "url": "pdfs/llyod_jones_spiritual_depression.pdf",
+          "yearPublished": 2014
+        },
+        {
+          "title": "Good News for Anxious Christians",
+          "url": "pdfs/good_news_for_anxious_christians.pdf",
+          "yearPublished": 2013
+        },
+        {
+          "title": "You Are What You Love",
+          "url": "pdfs/you_are_what_you_love.pdf",
+          "yearPublished": 2012
+        },
+        {
+          "title": "World Upside Down",
+          "url": "pdfs/world_upside_down.pdf",
+          "yearPublished": 2011
+        },
+        {
+          "title": "The Gospel Comes with a House Key",
+          "url": "pdfs/gospel_with_house_key.pdf",
+          "yearPublished": 2010
+        }
+      ]
+    }
+  ]
+}
