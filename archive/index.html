@@ -14,6 +14,14 @@
         font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
         background: #f9f9f9;
         color: #202122;
+        display: flex;
+        justify-content: center;
+      }
+      .container {
+        max-width: 1000px;
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
       }
       .header {
         text-align: center;
@@ -32,7 +40,7 @@
         margin-bottom: 30px;
       }
       .search-input {
-        width: 80%;
+        width: 100%;
         max-width: 600px;
         padding: 12px;
         font-size: 1.2rem;
@@ -75,11 +83,10 @@
   </head>
   <body>
     <!-- Alpine component. It loads the JSON data on initialization. -->
-    <div x-data="archiveApp()" x-init="init()">
+    <div class="container" x-data="archiveApp()" x-init="init()">
       <!-- Page header -->
       <div class="header">
         <h1>CPC New Haven Archive</h1>
-
       </div>
 
       <!-- Big Search Bar -->

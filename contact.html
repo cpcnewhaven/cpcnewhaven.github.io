@@ -1,199 +1,213 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <!-- Google tag (gtag.js) -->
-        <script async
-            src="https://www.googletagmanager.com/gtag/js?id=G-TL0WH5R1EK"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-TL0WH5R1EK');
-        </script>
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TL0WH5R1EK"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag("js", new Date());
+      gtag("config", "G-TL0WH5R1EK");
+    </script>
 
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description"
-            content="Contact CPC New Haven Church. Reach out to us for any inquiries or information.">
-        <meta name="keywords"
-            content="CPC New Haven, Contact, Church, New Haven, CT">
-        <meta name="author" content="CPC New Haven">
-        <link rel="stylesheet" href="./src/css/global-body.css">
-        <link rel="stylesheet" href="./src/css/global-nav-bar.css">
-        <link rel="stylesheet" href="./src/css/global-footer-cta.css">
-        <link rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-        <link rel="stylesheet" href="contact.css">
-        <link rel="icon"
-            href="https://storage.googleapis.com/cpc-public-website/web-assets/CPC%20-%20FAVICON%20-%20FALL%202024.png"
-            type="image/png">
-        <title>Contact Us | CPC New Haven Church</title>
-    </head>
-    <body>
-        <header id="stickyHeader" class="sticky">
-            <nav class="main-navigation">
-                <a href="index.html">Home</a>
-                <a href="sundays.html">Sundays</a>
-                <a href="about.html">About</a>
-                <a href="podcasts.html">Podcasts</a>
-                <a href="announcements.html">Announcements</a>
-                <a href="community.html">Community</a>
-                <a href="live.html">Live</a>
-                <a href="resources.html">Resources</a>
-                <a href="give.html">Give</a>
-            </nav>
-        </header>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact CPC New Haven Church. Reach out to us for any inquiries or information.">
+    <meta name="keywords" content="CPC New Haven, Contact, Church, New Haven, CT">
+    <meta name="author" content="CPC New Haven">
+    <link rel="stylesheet" href="./src/css/global-body.css">
+    <link rel="stylesheet" href="./src/css/global-nav-bar.css">
+    <link rel="stylesheet" href="./src/css/global-footer-cta.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="icon" href="https://storage.googleapis.com/cpc-public-website/web-assets/CPC%20-%20FAVICON%20-%20FALL%202024.png" type="image/png">
+    <title>Contact Us | CPC New Haven Church</title>
 
-        <!-- MOBILE HAMBURGER-->
-        <div class="hamburger-menu-button-container" id="hamburgerMenu">
-            <i id="closeMobileMenuButton" class="fas fa-bars"></i>
-        </div>
+    <!-- Inline CSS for main content styling -->
+    <style>
 
-        <!-- Mobile Navigation -->
-        <nav class="mobile-navigation" id="mobileNavigation">
-            <div class="mobile-nav-header">
-                <button id="closeMenuButton" aria-label="Close menu">
-                    <i class="fas fa-times"></i>
-                </button>
-            </div>
-            <ul class="mobile-nav-links">
-                <li><a class="mobile-menu-link" href="index.html">Home</a></li>
-                <li><a class="mobile-menu-link"
-                        href="sundays.html">Sundays</a></li>
-                <li><a class="mobile-menu-link" href="about.html">About</a></li>
-                <li><a class="mobile-menu-link"
-                        href="podcasts.html">Podcasts</a></li>
-              
-                <li><a class="mobile-menu-link"
-                        href="announcements.html">Announcements</a></li>
-                <li><a class="mobile-menu-link"
-                        href="community.html">Community</a></li>
-                <li><a class="mobile-menu-link" href="live.html">Live</a></li>
-                <li><a class="mobile-menu-link"
-                        href="resources.html">Resources</a></li>
-                <li><a class="mobile-menu-link" href="give.html">Give</a></li>
-            </ul>
-        </nav>
-        <style>
-            .contact-info {
-                display: flex;
-                flex-direction: column;
-                align-items: flex-start; /* Align items to the left */
-                width: 100%;
-                padding: 20px;
-                background-color: #f0f0f0;
-                margin: 20px 0;
-                border: 1px solid #ccc;
-                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-                font-size: 1.1em;
-                line-height: 1.5;
-            }
-            .contact-info img {
-                max-width: 150px;
-                margin-bottom: 10px;
-                align-self: center; /* Center the image */
-            }
-            .contact-info p {
-                text-align:left;
-                margin: 5px 0; /* Add some margin for spacing */
-            }
-            .contact-info a {
-                color: #007BFF;
-                text-decoration: none;
-            }
-            .contact-info a:hover {
-                text-decoration: underline;
-            }
-        </style>
-        <!-- Call to Action -->
-        <div class="contact-info">
-           <img src="./assets/CPC_LOGO_24.png" alt="CPC New Haven Church">
-            <p style="font-weight: 600; margin: 0;">Christ Presbyterian Church</p>
-            <p>135 Whitney Ave, New Haven, CT, United States, Connecticut</p>
-            <p>Phone: <a href="tel:+12037776960">(203) 777-6960</a></p>
-            <p>Email: <a
-                    href="mailto:admin@cpcnewhaven.org">admin@cpcnewhaven.org</a></p>
-         
-            </div>
+      .page-content {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+      }
 
+      /* Contact Info Section with Glassmorphism */
+      .contact-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: rgba(255, 255, 255, 0.7); /* Semi-transparent background */
+        backdrop-filter: blur(10px); /* Blur effect */
+        padding: 30px;
+        margin: 20px 0;
+        border: 1px solid rgba(255, 255, 255, 0.3); /* Light border */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 15px; /* Rounded corners */
+      }
+      .contact-info img {
+        max-width: 120px;
+        margin-bottom: 20px;
+      }
+      .contact-info p {
+        margin: 8px 0;
+        font-size: 1.1em;
+        text-align: center;
+      }
+      .contact-info a {
+        color: #000dff;
+        font-weight: bold;
+      }
+      .contact-info a:hover {
+        text-decoration: underline;
+      }
 
-            <!--
-            <section>
-                <h2>Get in Touch</h2>
-                <p class="body-text">We would love to hear from you! Please fill
-                    out the form below to reach out to us with any questions,
-                    comments, or concerns.</p>
-                <form action="https://formspree.io/f/meojowwg" method="POST">
-                    <input type="text" name="name" placeholder="Your name"
-                        required class="form-input">
-                    <input type="email" name="_replyto" placeholder="Your email"
-                        required class="form-input">
-                    <textarea name="message" placeholder="Your message"
-                        required class="form-input"></textarea>
-                    <button type="submit">Send Message</button>
-                </form>
-            </section>
-            -->
+      /* Key Leader Contacts Section with Glassmorphism */
+      .key-leader-contacts {
+        background: rgba(255, 255, 255, 0.7); /* Semi-transparent background */
+        backdrop-filter: blur(10px); /* Blur effect */
+        padding: 30px;
+        width: 100%;
+        margin: 0 0 20px 0;
+        border: 1px solid rgba(255, 255, 255, 0.3); /* Light border */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 15px; /* Rounded corners */
+      }
+      .key-leader-contacts h3 {
+        font-size: 1.8em;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+      .key-leader-contacts ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      .key-leader-contacts li {
+        background: rgba(255, 255, 255, 0.7); /* Semi-transparent background */
+        backdrop-filter: blur(10px); /* Blur effect */
+        padding: 15px;
+        margin-bottom: 15px;
+        border-radius: 8px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      }
+      .key-leader-contacts li strong {
+        color: #000dff;
+      }
+      .key-leader-contacts li a {
+        color: #007bff;
+      }
+      .key-leader-contacts li a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <header id="stickyHeader" class="sticky">
+      <nav class="main-navigation">
+        <a href="index.html">Home</a>
+        <a href="sundays.html">Sundays</a>
+        <a href="about.html">About</a>
+        <a href="podcasts.html">Podcasts</a>
+        <a href="announcements.html">Announcements</a>
+        <a href="community.html">Community</a>
+        <a href="live.html">Live</a>
+        <a href="resources.html">Resources</a>
+        <a href="give.html">Give</a>
+      </nav>
+    </header>
 
-            <!-- Key Leader Contacts -->
-            <section class="key-leader-contacts">
-                <h3>Key Leader Contacts</h3>
-                <ul>
-                    <li>
-                        <strong>Craig Luekens</strong><br>
-                        Role: Senior Pastor<br>
-                        Email: <a href="mailto:craig.luekens@cpcnewhaven.org">craig.luekens@cpcnewhaven.org</a>
-                    </li>
-                    <li>
-                        <strong>Jerry Ornelas</strong><br>
-                        Role: Assistant Pastor (Children, Youth & College)<br>
-                        Email: <a href="mailto:jerry.ornelas@cpcnewhaven.org">jerry.ornelas@cpcnewhaven.org</a>
-                    </li>
-                    <li>
-                        <strong>Alexis Peterson</strong><br>
-                        Role: Administrative Coordinator<br>
-                        Email: <a href="mailto:admin@cpcnewhaven.org">admin@cpcnewhaven.org</a>
-                    </li>
-                    <li>
-                        <strong>Jennifer Cheng</strong><br>
-                        Role: Music Coordinator<br>
-                        Email: <a href="mailto:jennifer@cpcnewhaven.org">jennifer@cpcnewhaven.org</a>
-                    </li>
-                    <li>
-                        <strong>Stacy Roney</strong><br>
-                        Role: Women’s Leadership Board<br>
-                        Email: <a href="mailto:mrsprofdoc@icloud.com">mrsprofdoc@icloud.com</a>
-                    </li>
-                    <li>
-                        <strong>Julie Walker</strong><br>
-                        Role: Nursery Coordinator<br>
-                        Email: <a href="mailto:walkerfj@comcast.net">walkerfj@comcast.net</a>
-                    </li>
-                    <li>
-                        <strong>Kaitlyn Jessee</strong><br>
-                        Role: Mercy Ministries<br>
-                        Email: <a href="mailto:kaijessee@gmail.com">kaijessee@gmail.com</a>
-                    </li>
-                </ul>
-            </section>
-        </div>
+    <!-- MOBILE HAMBURGER -->
+    <div class="hamburger-menu-button-container" id="hamburgerMenu">
+      <i id="closeMobileMenuButton" class="fas fa-bars"></i>
+    </div>
 
-        <footer>
-            <div class="footer-content-logo">
-              <a href="index.html">
-                <img src="./assets/CPC_LOGO_24.png" alt="CPC New Haven Church"
-                  class="top-splash-logo">
-              </a></div>
-            <p>Join us for worship and fellowship. <a href="sundays.html">Learn
-                more</a></p>
-      
-            <p>203.777.6960 | <a
-                href="mailto:admin@cpcnewhaven.org">admin@cpcnewhaven.org</a>
-              | 135 Whitney Ave. New Haven CT 06510</p>
-            <p>© 2024 Christ Presbyterian Church.</p>
-      
-          </footer>
+    <!-- Mobile Navigation -->
+    <nav class="mobile-navigation" id="mobileNavigation">
+      <div class="mobile-nav-header">
+        <button id="closeMenuButton" aria-label="Close menu">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <ul class="mobile-nav-links">
+        <li><a class="mobile-menu-link" href="index.html">Home</a></li>
+        <li><a class="mobile-menu-link" href="sundays.html">Sundays</a></li>
+        <li><a class="mobile-menu-link" href="about.html">About</a></li>
+        <li><a class="mobile-menu-link" href="podcasts.html">Podcasts</a></li>
+        <li><a class="mobile-menu-link" href="announcements.html">Announcements</a></li>
+        <li><a class="mobile-menu-link" href="community.html">Community</a></li>
+        <li><a class="mobile-menu-link" href="live.html">Live</a></li>
+        <li><a class="mobile-menu-link" href="resources.html">Resources</a></li>
+        <li><a class="mobile-menu-link" href="give.html">Give</a></li>
+      </ul>
+    </nav>
 
-        <script src="./src/js/function_toggle_mobileMenu.js"></script>
-    </body>
+    <!-- Main Content -->
+    <main class="page-content">
+      <!-- Contact Information -->
+      <div class="contact-info">
+        <img src="./assets/CPC_LOGO_24.png" alt="CPC New Haven Church">
+        <p style="font-weight: 600; margin: 0;">Christ Presbyterian Church</p>
+        <p>135 Whitney Ave, New Haven, CT, United States, Connecticut</p>
+        <p>Phone: <a href="tel:+12037776960">(203) 777-6960</a></p>
+        <p>Email: <a href="mailto:admin@cpcnewhaven.org">admin@cpcnewhaven.org</a></p>
+      </div>
+
+      <!-- Key Leader Contacts (flush with the top) -->
+      <section class="key-leader-contacts" style="width: 100%;">
+        <h3>Key Leader Contacts</h3>
+        <ul>
+          <li>
+            <strong>Craig Luekens</strong><br>
+            Role: Senior Pastor<br>
+            Email: <a href="mailto:craig.luekens@cpcnewhaven.org">craig.luekens@cpcnewhaven.org</a>
+          </li>
+          <li>
+            <strong>Jerry Ornelas</strong><br>
+            Role: Assistant Pastor (Children, Youth &amp; College)<br>
+            Email: <a href="mailto:jerry.ornelas@cpcnewhaven.org">jerry.ornelas@cpcnewhaven.org</a>
+          </li>
+          <li>
+            <strong>Alexis Vano</strong><br>
+            Role: Administrative Coordinator<br>
+            Email: <a href="mailto:admin@cpcnewhaven.org">admin@cpcnewhaven.org</a>
+          </li>
+          <li>
+            <strong>Jennifer Cheng</strong><br>
+            Role: Music Coordinator<br>
+            Email: <a href="mailto:jennifer@cpcnewhaven.org">jennifer@cpcnewhaven.org</a>
+          </li>
+          <li>
+            <strong>Stacy Roney</strong><br>
+            Role: Women's Leadership Board<br>
+            Email: <a href="mailto:mrsprofdoc@icloud.com">mrsprofdoc@icloud.com</a>
+          </li>
+          <li>
+            <strong>Julie Walker</strong><br>
+            Role: Nursery Coordinator<br>
+            Email: <a href="mailto:walkerfj@comcast.net">walkerfj@comcast.net</a>
+          </li>
+          <li>
+            <strong>Kaitlyn Jessee</strong><br>
+            Role: Mercy Ministries<br>
+            Email: <a href="mailto:kaijessee@gmail.com">kaijessee@gmail.com</a>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-content-logo">
+        <a href="index.html">
+          <img src="./assets/CPC_LOGO_24.png" alt="CPC New Haven Church" class="top-splash-logo">
+        </a>
+      </div>
+      <p>Join us for worship and fellowship. <a href="sundays.html">Learn more</a></p>
+      <p>
+        203.777.6960 | <a href="mailto:admin@cpcnewhaven.org">admin@cpcnewhaven.org</a> | 135 Whitney Ave. New Haven CT 06510
+      </p>
+      <p>© 2024 Christ Presbyterian Church.</p>
+    </footer>
+
+    <script src="./src/js/function_toggle_mobileMenu.js"></script>
+  </body>
 </html>
