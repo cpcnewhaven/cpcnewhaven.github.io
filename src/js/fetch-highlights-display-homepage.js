@@ -110,5 +110,12 @@ style.innerHTML = `
         margin-bottom: 20px;
         background-color: #f9f9f9;
     }
+
+    @media (max-width: 768px) {
+        .super-featured {
+            padding: 20px;
+            margin: 15px;
+        }
+    }
 `;
 document.head.appendChild(style);
