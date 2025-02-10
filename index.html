@@ -198,24 +198,75 @@
         </form>
       </div>
     </section>
-    <section class="mid-splash-welcome sticky">
-      <h3 class="headline-a">Featured Links</h1>
-    </section>
-    <section id="quick-links" class="styled-section-a">
-      <div class="form-container">
-        <p class="body-text center" style="text-align: center !important">
-          <a href="https://www.signupgenius.com/go/805094BACAC28A0F58-54735186-collegemilitary#/" target="_blank">
-            Women's Service Project Signup
-          </a>
-        </p>
-        <p class="body-text center" style="text-align: center !important">
-          <a href="adult-sunday-school.html" target="_blank">
-            Adult Sunday School 
-          </a>
-        </p>
+<!-- Refactored Featured Links Section -->
+<section id="featured-links">
+  <h2 class="featured-links-header">Featured Links</h2>
+  <div class="featured-links-container">
+    <a href="https://www.signupgenius.com/go/805094BACAC28A0F58-54735186-collegemilitary#/" 
+       target="_blank" 
+       class="featured-link">
+      Women's Service Project Signup
+    </a>
+    <a href="adult-sunday-school.html" 
+       target="_blank" 
+       class="featured-link">
+      Adult Sunday School
+    </a>
+  </div>
+</section>
 
-      </div>
-    </section>
+<!-- Inline unique CSS for the Featured Links Section -->
+<style>
+  /* Container for the featured links section */
+  #featured-links {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 40px 20px;
+    margin: 40px auto;
+    border-radius: 12px;
+    max-width: 800px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+  }
+
+  /* Header styling */
+  #featured-links .featured-links-header {
+ 
+    font-size: 1.32em;
+    margin-bottom: 20px;
+  }
+
+  /* Container for the individual links */
+  #featured-links .featured-links-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  /* Individual link styling as a card */
+  #featured-links .featured-link {
+    display: inline-block;
+    background: #fff;
+    color: black;
+    padding: 15px 25px;
+    border-radius: 8px;
+    font-size: 1em;
+    font-weight: 400;
+    text-decoration: none;
+    width: 100%;
+    max-width: 350px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+  }
+
+  /* Hover effect for links */
+  #featured-links .featured-link:hover {
+    background: var(--primary-color);
+    color: white;
+    transform: translateY(-5px);
+  }
+</style>
+
  <!-- Refactored Contact Section -->
  <section id="refactored-contact">
   <div class="contact-content">
@@ -235,7 +286,7 @@
     padding: 50px 20px;
     border-radius: 12px;
     margin: 40px auto;
-    max-width: 600px;
+    max-width: 800px;
     text-align: center;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   }
