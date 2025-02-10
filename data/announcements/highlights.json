@@ -566,6 +566,38 @@
   "tag": "superFeatured",
   "date": "Summer 2025",
   "location": "Atlantic City, NJ"
+},
+{
+  "id": "2025-007",
+  "title": "Life Groups & Discipleship Groups",
+  "description": "Restarting for the new year, join now! Talk to a welcome team member about all the groups that meet throughout the city.",
+  "dateEntered": "2025-01-20",
+  "active": "true",
+  "type": "upcoming",
+  "category": "upcoming",
+  "tag": "superFeatured"
+},
+
+{
+  "id": "2025-008",
+  "title": "Interested in Joining the Body of Christ at CPC?",
+  "description": "We consider the church an essential element of the gospel, so joining CPC as a member is a way to truly join the body of Christ, in all its blessings and with all its flaws! Before joining, you’ll meet one-on-one with a pastor and then discuss how you’ve come to know Christ with the Shepherd Leaders. Contact Alexis Vano (admin@cpcnewhaven.org) to begin the process. Our next joining will take place on Sunday, March 2.",
+  "dateEntered": "2025-01-20",
+  "active": "true",
+  "type": "upcoming",
+  "category": "upcoming",
+  "tag": "superFeatured"
+},
+
+{
+  "id": "2025-009",
+  "title": "Moms Group",
+  "description": "Join us on 2/18/25, 3/18/25, 4/1/25 and 5/6/25 at the home of Miranda Healy. Contact Miranda Healy, mirandajrdn8@gmail.com or Meg Bogue, mhbogue@yahoo.com for book and more information.",
+  "dateEntered": "2025-01-20",
+  "active": "true",
+  "type": "upcoming",
+  "category": "upcoming",
+  "tag": "superFeatured"
 }
   ]
 }
