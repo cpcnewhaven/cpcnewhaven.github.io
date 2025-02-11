@@ -10,6 +10,11 @@
     --submenu-button-hover-color: #004494;
 }
 
+:root {
+    --cpc-blue: #003c6d;
+    --cpc-font-family: "Barlow", sans-serif;
+}
+
 /* CSS Reset */
 *,
 *::before,
@@ -2377,7 +2382,7 @@ p {
 .hero>h2,
 .hero>p {
     color: rgb(255, 255, 255);
-    font-weight:400;
+    font-weight: 400;
 }
 
 .hero-logo-img {
@@ -2466,7 +2471,7 @@ p {
     .announcement {
         min-width: auto;
         width: 100%;
-        margin:10px;
+        margin: 10px;
     }
 
     .announcement-title {
