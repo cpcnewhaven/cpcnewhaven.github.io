@@ -1,327 +1,368 @@
 <!DOCTYPE html>
 <html lang="en">
-    <!-- Google tag (gtag.js) -->
-    <script async
-        src="https://www.googletagmanager.com/gtag/js?id=G-TL0WH5R1EK"></script>
+  <head>
+    <!-- Google Analytics: Loads and configures Google Analytics asynchronously -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TL0WH5R1EK"></script>
     <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-TL0WH5R1EK');
+    </script>
 
-  gtag('config', 'G-TL0WH5R1EK');
-</script>
-    <head>
+    <!-- Meta Information for SEO and Responsive Behavior -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="CPC New Haven Church - 135 Whitney Ave New Haven, CT. We are a church committed to serving and reaching the Greater New Haven area. Join us for worship and fellowship."
+    />
+    <meta
+      name="keywords"
+      content="CPC New Haven, Church, New Haven, CT, Worship, Fellowship"
+    />
+    <meta name="author" content="CPC New Haven" />
+    <title>Resources - CPC New Haven Church</title>
 
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description"
-            content="CPC New Haven Church - 135 Whitney Ave New Haven, CT. We are a church committed to serving and reaching the Greater New Haven area. Join us for worship and fellowship.">
-        <meta name="keywords"
-            content="CPC New Haven, Church, New Haven, CT, Worship, Fellowship">
-        <meta name="author" content="CPC New Haven">
-        <title>Resources - CPC New Haven Church</title>
-        <link rel="stylesheet" href="./src/css/global-body.css">
+    <!-- External CSS Files -->
+    <link rel="stylesheet" href="./src/css/global-body.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link
+      rel="icon"
+      href="https://storage.googleapis.com/cpc-public-website/web-assets/CPC%20-%20FAVICON%20-%20FALL%202024.png"
+      type="image/png"
+    />
 
-        <link rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-        <link rel="icon"
-            href="https://storage.googleapis.com/cpc-public-website/web-assets/CPC%20-%20FAVICON%20-%20FALL%202024.png"
-            type="image/png">
-    </head>
-
-    <body>
-
-        <header id="stickyHeader" class="sticky">
-            <nav class="main-navigation">
-                <a href="index.html">Home</a>
-                <a href="sundays.html">Sundays</a>
-                <a href="about.html">About</a>
-                <a href="podcasts.html">Podcasts</a>
-                <a href="announcements.html">Announcements</a>
-                <a href="community.html">Community</a>
-                <a href="live.html">Live</a>
-                <a href="resources.html">Resources</a>
-                <a href="give.html">Give</a>
-
-            </nav>
-        </header>
-
-        <!-- MOBILE HAMBURGER-->
-        <div class="hamburger-menu-button-container" id="hamburgerMenu">
-            <i id="closeMobileMenuButton" class="fas fa-bars"></i>
-        </div>
-
-        <!-- Mobile Navigation -->
-        <nav class="mobile-navigation" id="mobileNavigation">
-            <div class="mobile-nav-header">
-                <button id="closeMenuButton" aria-label="Close menu">
-                    <i class="fas fa-times"></i>
-                </button>
-            </div>
-            <ul class="mobile-nav-links">
-                <li><a class="mobile-menu-link" href="index.html">Home</a></li>
-                <li><a class="mobile-menu-link"
-                        href="sundays.html">Sundays</a></li>
-                <li><a class="mobile-menu-link" href="about.html">About</a></li>
-                <li><a class="mobile-menu-link"
-                        href="podcasts.html">Podcasts</a></li>
-                <li><a class="mobile-menu-link"
-                        href="announcements.html">Announcements</a></li>
-                <li><a class="mobile-menu-link"
-                        href="community.html">Community</a></li>
-                <li><a class="mobile-menu-link" href="live.html">Live</a></li>
-                <li><a class="mobile-menu-link"
-                        href="resources.html">Resources</a></li>
-                <li><a class="mobile-menu-link" href="give.html">Give</a></li>
-            </ul>
-        </nav>
-
-        <div class="res-directory-container" x-data="{ 
-            resources: [
-                { title: 'Adult Sunday Studies', url: 'adult-sunday-school.html', category: 'Education' },
-                { title: '2025 Missions Trip', url: '2025-missions-trip.html', category: 'Missions' },
-                { title: 'Media Gallery', url: 'media.html', category: 'Media' },
-                { title: 'Church Community Builder', url: 'https://ccb.cpcnewhaven.org', category: 'Community' },
-                { title: 'Forms', url: 'forms.html', category: 'Administrative' },
-                { title: 'Contact Us', url: 'contact.html', category: 'Administrative' },
-                { title: 'Life Groups', url: 'lifegroup.html', category: 'Community' },
-                { title: 'Discipleship Groups', url: 'discipleship.html', category: 'Community' },
-                { title: 'Church Membership', url: 'membership.html', category: 'Community' },
-                { title: 'Website Updates', url: 'updates.html', category: 'Administrative' },
-                { title: 'Admin Control Center', url: 'a-c-c.html', category: 'Administrative' }
-            ]
-        }">
-            <div class="res-directory-content">
-                <section class="res-directory-overview">
-                    <h2 class="res-directory-title">Resource Directory</h2>
-                    <p class="res-directory-description">Access important church
-                        resources, forms, and community information all in one
-                        place.</p>
-
-                    <p>
-                        <a href="https://www.signupgenius.com/go/805094BACAC28A0F58-54735186-collegemilitary#/"
-                           style="color: #ff6347; font-weight: bold; text-decoration: underline;">
-                           Women's Service Project Signup
-                        </a>
-                    </p>
-
-                    <!-- New Reimbursement Form Section -->
-                    <div class="reimbursement-form-section">
-                        <h3>Reimbursement Form</h3>
-                        <p>In order to be reimbursed for a church expense that you paid for with personal funds, you must fill out a Reimbursement Form, include all necessary receipts, and email it to <a href="mailto:cpc@cfounlimited.com">cpc@cfounlimited.com</a>.</p>
-                        <p><a href="https://storage.googleapis.com/cpc-public-website/forms/expense-reimbursement-form-master-cpc.xlsx" target="_blank" style="color: #2c5282; font-weight: bold; text-decoration: underline;">Download Reimbursement Form</a></p>
-                    </div>
-
-                    <!-- Original table layout -->
-                    <div class="res-directory-table-wrapper">
-                        <table class="res-directory-table">
-                            <tbody>
-                                <tr class="res-directory-row">
-                                    <td class="res-directory-cell"><a
-                                            href="adult-sunday-school.html"
-                                            class="res-directory-link">Adult
-                                            Sunday Studies</a></td>
-                                </tr>
-                                <tr class="res-directory-row">
-                                    <td class="res-directory-cell"><a
-                                            href="2025-missions-trip.html"
-                                            class="res-directory-link">2025
-                                            Missions Trip</a></td>
-                                </tr>
-                                <tr class="res-directory-row"></tr>
-                                    <td class="res-directory-cell"><a
-                                            href="engaging-with-aging.html"
-                                            class="res-directory-link">Engaging
-                                            with Aging</a></td>
-                                </tr>
-                                <tr class="res-directory-row">
-                                    <td class="res-directory-cell"><a
-                                            href="media.html"
-                                            class="res-directory-link">Media
-                                            Gallery</a></td>
-                                </tr>
-                                <tr class="res-directory-row">
-                                    <td class="res-directory-cell"><a
-                                            href="https://ccb.cpcnewhaven.org"
-                                            class="res-directory-link">Church
-                                            Community Builder</a></td>
-                                </tr>
-                                <tr class="res-directory-row">
-                                    <td class="res-directory-cell"><a
-                                            href="forms.html"
-                                            class="res-directory-link">Forms</a></td>
-                                </tr>
-                                <tr class="res-directory-row">
-                                    <td class="res-directory-cell"><a
-                                            href="contact.html"
-                                            class="res-directory-link">Contact
-                                            Us</a></td>
-                                </tr>
-                                <tr class="res-directory-row">
-                                    <td class="res-directory-cell"><a
-                                            href="lifegroup.html"
-                                            class="res-directory-link">Life
-                                            Groups</a></td>
-                                </tr>
-                                <tr class="res-directory-row">
-                                    <td class="res-directory-cell"><a
-                                            href="discipleship.html"
-                                            class="res-directory-link">Discipleship
-                                            Groups</a></td>
-                                </tr>
-                                <tr class="res-directory-row">
-                                    <td class="res-directory-cell"><a
-                                            href="membership.html"
-                                            class="res-directory-link">Church
-                                            Membership</a></td>
-                                </tr>
-                                <tr class="res-directory-row">
-                                    <td class="res-directory-cell"><a
-                                            href="updates.html"
-                                            class="res-directory-link">Website
-                                            Updates</a></td>
-                                </tr>
-                                <tr class="res-directory-row">
-                                    <td class="res-directory-cell"><a
-                                            href="a-c-c.html"
-                                            class="res-directory-link">Admin
-                                            Control Center</a></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </section>
-            </div>
-        </div>
-
-        <footer>
-            <div class="footer-content-logo">
-                <a href="index.html">
-                    <img src="./assets/CPC_LOGO_24.png"
-                        alt="CPC New Haven Church"
-                        class="top-splash-logo">
-                </a></div>
-            <p>Join us for worship and fellowship. <a href="sundays.html">Learn
-                    more</a></p>
-
-            <p>203.777.6960 | <a
-                    href="mailto:admin@cpcnewhaven.org">admin@cpcnewhaven.org</a>
-                | 135 Whitney Ave. New Haven CT 06510</p>
-            <p>© 2024 Christ Presbyterian Church.</p>
-
-        </footer>
-        <script src="./src/js/background-fetch-splash-image.js"></script>
-        <script src="./src/js/function_toggle_mobileMenu.js"></script>
-        <style>
-            .res-directory-container {
-                padding: 40px 20px;
-                max-width: 1000px;
-                margin: 0 auto;
-            }
-
-            .res-directory-content {
-                background: rgba(255, 255, 255, 0.15);
-                backdrop-filter: blur(15px);
-                border-radius: 24px;
-                padding: 35px;
-                border: 1px solid rgba(255, 255, 255, 0.3);
-                box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-            }
-
-            .res-directory-title {
-                color: #2c5282;
-                margin-bottom: 30px;
-                font-size: 2em;
-                font-weight: 300;
-                text-align: center;
-            }
-
-            .res-directory-table-wrapper {
-                margin-top: 20px;
-                border-radius: 16px;
-                background: rgba(255, 255, 255, 0.8);
-                overflow: hidden;
-                box-shadow: 0 4px 16px rgba(44, 82, 130, 0.05);
-                border: 1px solid rgba(255, 255, 255, 0.5);
-            }
-
-            .res-directory-table {
-                width: 100%;
-                border-collapse: separate;
-                border-spacing: 0;
-                margin: 0;
-                font-size: 1em;
-            }
-
-            .res-directory-cell {
-                padding: 16px 24px;
-                transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            }
-
-            .res-directory-row {
-                border-bottom: 1px solid rgba(44, 82, 130, 0.08);
-                transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            }
-
-            .res-directory-row:hover {
-                background: rgba(44, 82, 130, 0.03);
-                transform: translateX(5px);
-                box-shadow: 0 2px 8px rgba(44, 82, 130, 0.05);
-            }
-
-            .res-directory-row:last-of-type {
-                border-bottom: none;
-            }
-
-            .res-directory-link {
-                color: #2c5282;
-                text-decoration: none;
-                transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-                display: block;
-                font-weight: 400;
-                padding: 4px 0;
-            }
-
-            .res-directory-link:hover {
-                color: #1a365d;
-                transform: translateX(5px);
-                text-shadow: 0 0 1px rgba(26, 54, 93, 0.1);
-            }
-
-            @media (max-width: 768px) {
-                .res-directory-container {
-                    padding: 20px 10px;
-                }
-                
-                .res-directory-content {
-                    padding: 20px;
-                }
-                
-                .res-directory-cell {
-                    padding: 14px 16px;
-                }
-                
-                .res-directory-title {
-                    font-size: 1.5em;
-                }
-            }
-
-            .res-directory-description {
-    text-align: center;
-    color: #4a5568;
-    margin-bottom: 25px;
-    font-size: 1.1em;
-    font-weight: 300;
-}
-
-/* In the media query section, add: */
-@media (max-width: 768px) {
-
-    .res-directory-description {
+    <!-- Internal Styles Specific to the Resources Page -->
+    <style>
+      /* Container for the resource directory */
+      .res-directory-container {
+        padding: 40px 20px;
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+      /* Background and box styling for the resource directory content */
+      .res-directory-content {
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(15px);
+        border-radius: 24px;
+        padding: 35px;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+      }
+      /* Title styling for the resource directory */
+      .res-directory-title {
+        color: #2c5282;
+        margin-bottom: 30px;
+        font-size: 2em;
+        font-weight: 300;
+        text-align: center;
+      }
+      /* Description paragraph styling */
+      .res-directory-description {
+        text-align: center;
+        color: #4a5568;
+        margin-bottom: 25px;
+        font-size: 1.1em;
+        font-weight: 300;
+      }
+      /* Wrapper for the table layout */
+      .res-directory-table-wrapper {
+        margin-top: 20px;
+        border-radius: 16px;
+        background: rgba(255, 255, 255, 0.8);
+        overflow: hidden;
+        box-shadow: 0 4px 16px rgba(44, 82, 130, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+      }
+      /* Table styling */
+      .res-directory-table {
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin: 0;
         font-size: 1em;
-        margin-bottom: 20px;
-    }
-}
-        </style>
-    </body>
+      }
+      /* Table cell styling */
+      .res-directory-cell {
+        padding: 16px 24px;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      /* Table row styling */
+      .res-directory-row {
+        border-bottom: 1px solid rgba(44, 82, 130, 0.08);
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      /* Hover effect for table rows */
+      .res-directory-row:hover {
+        background: rgba(44, 82, 130, 0.03);
+        transform: translateX(5px);
+        box-shadow: 0 2px 8px rgba(44, 82, 130, 0.05);
+      }
+      .res-directory-row:last-of-type {
+        border-bottom: none;
+      }
+      /* Link styling within the table */
+      .res-directory-link {
+        color: #2c5282;
+        text-decoration: none;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        display: block;
+        font-weight: 400;
+        padding: 4px 0;
+      }
+      .res-directory-link:hover {
+        color: #1a365d;
+        transform: translateX(5px);
+        text-shadow: 0 0 1px rgba(26, 54, 93, 0.1);
+      }
+      /* Responsive adjustments */
+      @media (max-width: 768px) {
+        .res-directory-container {
+          padding: 20px 10px;
+        }
+        .res-directory-content {
+          padding: 20px;
+        }
+        .res-directory-cell {
+          padding: 14px 16px;
+        }
+        .res-directory-title {
+          font-size: 1.5em;
+        }
+        .res-directory-description {
+          font-size: 1em;
+          margin-bottom: 20px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- HEADER SECTION -->
+    <!-- Contains the desktop navigation menu -->
+    <header id="stickyHeader" class="sticky">
+      <nav class="main-navigation">
+        <a href="index.html">Home</a>
+        <a href="sundays.html">Sundays</a>
+        <a href="about.html">About</a>
+        <a href="podcasts.html">Podcasts</a>
+        <a href="announcements.html">Announcements</a>
+        <a href="community.html">Community</a>
+        <a href="live.html">Live</a>
+        <a href="resources.html">Resources</a>
+        <a href="give.html">Give</a>
+      </nav>
+    </header>
+
+    <!-- MOBILE NAVIGATION -->
+    <!-- Hamburger menu button for mobile view -->
+    <div class="hamburger-menu-button-container" id="hamburgerMenu">
+      <i id="closeMobileMenuButton" class="fas fa-bars"></i>
+    </div>
+    <!-- Mobile navigation menu (appears when hamburger button is clicked) -->
+    <nav class="mobile-navigation" id="mobileNavigation">
+      <div class="mobile-nav-header">
+        <button id="closeMenuButton" aria-label="Close menu">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <ul class="mobile-nav-links">
+        <li><a class="mobile-menu-link" href="index.html">Home</a></li>
+        <li><a class="mobile-menu-link" href="sundays.html">Sundays</a></li>
+        <li><a class="mobile-menu-link" href="about.html">About</a></li>
+        <li><a class="mobile-menu-link" href="podcasts.html">Podcasts</a></li>
+        <li>
+          <a class="mobile-menu-link" href="announcements.html">Announcements</a>
+        </li>
+        <li><a class="mobile-menu-link" href="community.html">Community</a></li>
+        <li><a class="mobile-menu-link" href="live.html">Live</a></li>
+        <li><a class="mobile-menu-link" href="resources.html">Resources</a></li>
+        <li><a class="mobile-menu-link" href="give.html">Give</a></li>
+      </ul>
+    </nav>
+
+    <!-- MAIN CONTENT: RESOURCE DIRECTORY -->
+    <!-- The container below holds the resource directory overview, a table of links, and an archive section.
+         The x-data attribute is present (for Alpine.js) to allow for future dynamic behavior if needed. -->
+    <div
+      class="res-directory-container"
+      x-data="{
+        resources: [
+          { title: 'Adult Sunday Studies', url: 'adult-sunday-school.html', category: 'Education' },
+          { title: '2025 Missions Trip', url: '2025-missions-trip.html', category: 'Missions' },
+          { title: 'Media Gallery', url: 'media.html', category: 'Media' },
+          { title: 'Church Community Builder', url: 'https://ccb.cpcnewhaven.org', category: 'Community' },
+          { title: 'Forms', url: 'forms.html', category: 'Administrative' },
+          { title: 'Contact Us', url: 'contact.html', category: 'Administrative' },
+          { title: 'Life Groups', url: 'lifegroup.html', category: 'Community' },
+          { title: 'Discipleship Groups', url: 'discipleship.html', category: 'Community' },
+          { title: 'Church Membership', url: 'membership.html', category: 'Community' },
+          { title: 'Website Updates', url: 'updates.html', category: 'Administrative' },
+          { title: 'Admin Control Center', url: 'a-c-c.html', category: 'Administrative' }
+        ]
+      }"
+    >
+      <div class="res-directory-content">
+        <!-- Overview Section: Introduction to the Resource Directory -->
+        <section class="res-directory-overview">
+          <h2 class="res-directory-title">Resource Directory</h2>
+          <p class="res-directory-description">
+            Access important church resources, forms, and community information all in one place.
+          </p>
+       
+
+          <!-- Table Layout: List of Resource Links -->
+          <div class="res-directory-table-wrapper">
+            <table class="res-directory-table">
+              <tbody>
+                <tr class="res-directory-row">
+                  <td class="res-directory-cell">
+                    <a href="adult-sunday-school.html" class="res-directory-link">
+                      Adult Sunday Studies
+                    </a>
+                  </td>
+                </tr>
+                <tr class="res-directory-row">
+                  <td class="res-directory-cell">
+                    <a href="2025-missions-trip.html" class="res-directory-link">
+                      2025 Missions Trip
+                    </a>
+                  </td>
+                </tr>
+                <tr class="res-directory-row">
+                  <td class="res-directory-cell">
+                    <a href="engaging-with-aging.html" class="res-directory-link">
+                      Engaging with Aging
+                    </a>
+                  </td>
+                </tr>
+                <tr class="res-directory-row">
+                  <td class="res-directory-cell">
+                    <a href="media.html" class="res-directory-link">
+                      Media Gallery
+                    </a>
+                  </td>
+                </tr>
+                <tr class="res-directory-row">
+                  <td class="res-directory-cell">
+                    <a href="https://ccb.cpcnewhaven.org" class="res-directory-link">
+                      Church Community Builder
+                    </a>
+                  </td>
+                </tr>
+                <tr class="res-directory-row">
+                  <td class="res-directory-cell">
+                    <a href="forms.html" class="res-directory-link">Forms</a>
+                  </td>
+                </tr>
+                <tr class="res-directory-row">
+                  <td class="res-directory-cell">
+                    <a href="contact.html" class="res-directory-link">
+                      Contact Us
+                    </a>
+                  </td>
+                </tr>
+                <tr class="res-directory-row">
+                  <td class="res-directory-cell">
+                    <a href="lifegroup.html" class="res-directory-link">
+                      Life Groups
+                    </a>
+                  </td>
+                </tr>
+                <tr class="res-directory-row">
+                  <td class="res-directory-cell">
+                    <a href="discipleship.html" class="res-directory-link">
+                      Discipleship Groups
+                    </a>
+                  </td>
+                </tr>
+                <tr class="res-directory-row">
+                  <td class="res-directory-cell">
+                    <a href="membership.html" class="res-directory-link">
+                      Church Membership
+                    </a>
+                  </td>
+                </tr>
+                <tr class="res-directory-row">
+                  <td class="res-directory-cell">
+                    <a href="updates.html" class="res-directory-link">
+                      Website Updates
+                    </a>
+                  </td>
+                </tr>
+                <tr class="res-directory-row">
+                  <td class="res-directory-cell">
+                    <a href="a-c-c.html" class="res-directory-link">
+                      Admin Control Center
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+        <hr>
+        <br><br><Br><br><br>
+<section class="cpc-featured-links">
+       <!-- External Signup Link -->
+       <h2 class="res-directory-title">Featured Links</h2>
+    
+<div class="featured-links-menu">
+        <a
+          href="https://www.signupgenius.com/go/805094BACAC28A0F58-54735186-collegemilitary#/"
+          style="color: #4772ff; font-weight: bold; text-decoration: underline;"
+          >Women's Service Project Signup</a
+        >
+        <a href="./archive/index.html"
+        style="color:#4772ff">
+        CPC Archive (Beta)
+    </a>
+    <style>
+        .featured-links-menu {
+            display:flex;
+            width: 100%;
+            align-items: center;
+            gap: 10px;
+            flex-direction: column;
+            padding: 10px;
+            border: #1a365d 1px;
+        }
+
+        .featured-links-menu a {
+            margin-top:10px;
+
+        }
+    </style>
+</div><br><br>
+</section>
+   
+      </div>
+    </div>
+
+    <!-- FOOTER SECTION -->
+    <footer>
+      <div class="footer-content-logo">
+        <a href="index.html">
+          <img
+            src="./assets/CPC_LOGO_24.png"
+            alt="CPC New Haven Church"
+            class="top-splash-logo"
+          />
+        </a>
+      </div>
+    
+    </footer>
+
+
+
+    <!-- External JavaScript Files -->
+    <script src="./src/js/background-fetch-splash-image.js"></script>
+    <script src="./src/js/function_toggle_mobileMenu.js"></script>
+  </body>
 </html>
