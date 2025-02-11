@@ -23,10 +23,19 @@
         padding: 20px;
         box-sizing: border-box;
       }
-      .header {
-        text-align: center;
-        margin-bottom: 30px;
-      }
+      .logo {
+  width: 200px; /* Adjust size as needed */
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 30px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
       .header a {
         color: #0645ad;
         text-decoration: none;
@@ -82,11 +91,14 @@
     </style>
   </head>
   <body>
+    
     <!-- Alpine component. It loads the JSON data on initialization. -->
     <div class="container" x-data="archiveApp()" x-init="init()">
       <!-- Page header -->
       <div class="header">
-        <h1>CPC New Haven Archive</h1>
+        <img src=".././assets/CPC_LOGO_24.svg" alt="CPC Logo" class="logo" />
+
+        <p>CPC New Haven Archive</p>
       </div>
 
       <!-- Big Search Bar -->
