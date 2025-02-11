@@ -33,211 +33,194 @@
             src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
         <style>
-                /* Main container for layout */
-          
-          strong{
-              font-weight: bold;
-          }
-          
-                .main-container {
-                  display: flex;
-                  flex-direction: column;
-                }
-                @media (min-width: 768px) {
-                  .main-container {
-                    flex-direction: row;
-                    gap: 0;
-                  }
-                }
-          
-                /* ===== Sidebar Styles ===== */
-                .about-sidebar {
-                  position: fixed;
-                  top: 0;
-                  left: 0;
-                  width: 200px;
-                  background-color: rgba(255, 255, 255, 0.95); /* Slightly opaque for a modern look */
-                  padding: 20px;
-                  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-                  transform: translateX(-100%);
-                  transition: transform 0.3s ease;
-                  z-index: 100;
-                  overflow-y: auto;
-                  max-height: 100vh;
-                  display: flex;
-                  flex-direction: column;
-                }
-          
-                /* When sidebar is open (on mobile) */
-                .about-sidebar.open {
-                  transform: translateX(0);
-                }
-          
-                @media (min-width: 768px) {
-                  .about-sidebar {
-                    position: sticky;
-                    top: 0;
-                    transform: translateX(0);
-                    box-shadow: none;
-                    gap: 8px;
-                    flex-shrink: 0;
-                  }
-                }
-          
-                /* Sidebar header (sticky within sidebar) */
-                .sidebar-header {
-                  display: flex;
-                  align-items: center;
-                  justify-content: space-between;
-                  padding-bottom: 10px;
-                  margin-bottom: 10px;
-                  border-bottom: 1px solid #ccc;
-                  position: sticky;
-                  top: 0;
-                  background-color: inherit;
-                  z-index: 110;
-                }
-          
-                .sidebar-header h2 {
-                  font-size: 18px;
-                  margin: 0;
-                }
-          
-                /* Close button for sidebar (visible on mobile) */
-                .close-sidebar-button {
-                  background: none;
-                  border: none;
-                  color: #007bff;
-                  font-size: 18px;
-                  cursor: pointer;
-                }
-          
-                .close-sidebar-button:hover {
-                  color: #0056b3;
-                }
-          
-                @media (min-width: 768px) {
-                  .close-sidebar-button {
-                    display: none;
-                  }
-                }
-          
-                /* Sidebar buttons */
-                .about-sidebar-btn {
-                  display: block;
-                  width: 100%;
-                  background: none;
-                  border: none;
-                  text-align: left;
-                  padding: 10px;
-                  height: 40px;
-                  font-size: 16px;
-                  cursor: pointer;
-                  color: #333;
-                  border-radius: 4px;
-                  transition: background-color 0.2s ease;
-                }
-          
-                .about-sidebar-btn:hover {
-                  background-color: var(--cpc-blue);
-                }
-          
-                .about-sidebar-btn.active {
-                  font-weight: bold;
-                  color: var(--cpc-blue);
-                  background-color: #e9ecef;
-                  border-left: 4px solid var(--cpc-blue);
-                }
-          
-             
-          
-                /* About hamburger toggle button for mobile */
-                .about-sidebar-toggle {
-                  position: fixed;
-                  top: 10px;
-                  left: 10px;
-                  background: var(--cpc-blue);
-                  color: #fff;
-                  border: none;
-                  z-index: 1100;
-                  border-radius: 4px;
-                  width: 36px;
-                  height: 36px;
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-                  border: 1px solid white;
-                }
-          
-                .about-sidebar-toggle i {
-                  font-size: 16px;
-                }
-          
-                @media (min-width: 768px) {
-                  .about-sidebar-toggle {
-                    display: none;
-                  }
-                }
-          
-                /* Main content area */
-                .content {
-                  padding: 20px;
-                  width: 100%;
-                  margin-right: 20px;
-                }
-                @media (min-width: 768px) {
-                  .content {
-                    margin-left: 0;
-                    padding: 20px 40px;
-                  }
-                }
-          
-                /* ===== About Page Content Styles ===== */
-                .about-inner-section {
-                  max-width: 100%;
-                  margin: 0;
-                  padding: 0;
-                }
-          
-                .about-heading {
-                  text-align: center;
-                  margin: 0 0 20px 0;
-                  font-size: 28px;
-                }
-          
-                .about-body-text {
-                  text-align: left;
-                  margin: 0 0 16px 0;
-                  max-width: 100%;
-                  line-height: 1.6;
-                }
-          
-                .about-staff-grid {
-                  display: grid;
-                  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-                  gap: 20px;
-                  margin: 0;
-                  padding: 0;
-                }
-          
-                .about-staff-member {
-                  text-align: left;
-                  padding: 15px;
-                  background: #f8f9fa;
-                  border-radius: 4px;
-                }
-          
-                .about-image-container {
-                  width: 100%;
-                  margin: 20px 0;
-                }
-          
-                .about-compact-centered-image {
-                  max-width: 100%;
-                  height: auto;
-                  display: block;
-                }
-              </style>
+      /* Main container for layout */
+      strong {
+        font-weight: bold;
+      }
+
+      .main-container {
+        display: flex;
+        flex-direction: column;
+      }
+      @media (min-width: 768px) {
+        .main-container {
+          flex-direction: row;
+          gap: 0;
+        }
+      }
+
+      /* ===== Updated Sidebar Styles (About Page Vibe) ===== */
+      .about-sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 220px; /* Updated to 220px */
+        background-color: rgba(255, 255, 255, 0.95); /* Slightly opaque */
+        padding: 20px;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+        z-index: 100;
+        overflow-y: auto;
+        max-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      /* When sidebar is open (on mobile) */
+      .about-sidebar.open {
+        transform: translateX(0);
+      }
+      @media (min-width: 768px) {
+        .about-sidebar {
+          position: sticky;
+          top: 0;
+          transform: translateX(0);
+          box-shadow: none;
+          gap: 8px;
+          flex-shrink: 0;
+        }
+      }
+
+      /* Sidebar header (sticky within sidebar) */
+      .sidebar-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+        border-bottom: 1px solid #ccc;
+        position: sticky;
+        top: 0;
+        background-color: inherit;
+        z-index: 110;
+      }
+      .sidebar-header h2 {
+        font-size: 18px;
+        margin: 0;
+      }
+
+      /* Close button for sidebar (visible on mobile) */
+      .close-sidebar-button {
+        background: none;
+        border: none;
+        color: #007bff;
+        font-size: 18px;
+        cursor: pointer;
+      }
+      .close-sidebar-button:hover {
+        color: #0056b3;
+      }
+      @media (min-width: 768px) {
+        .close-sidebar-button {
+          display: none;
+        }
+      }
+
+      /* Sidebar buttons */
+      .about-sidebar-btn {
+        display: block;
+        width: 100%;
+        background: none;
+        border: none;
+        text-align: left;
+        padding: 10px;
+        height: 40px;
+        font-size: 16px;
+        cursor: pointer;
+        color: #333;
+        border-radius: 4px;
+        transition: background-color 0.2s ease;
+      }
+      .about-sidebar-btn:hover {
+        background-color: var(--cpc-blue);
+      }
+      .about-sidebar-btn.active {
+        font-weight: bold;
+        color: var(--cpc-blue);
+        background-color: #e9ecef;
+        border-left: 4px solid var(--cpc-blue);
+      }
+
+      /* Mobile toggle button for sidebar */
+      .about-sidebar-toggle {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        background: var(--cpc-blue);
+        color: #fff;
+        border: none;
+        z-index: 1100;
+        border-radius: 4px;
+        width: 36px;
+        height: 36px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid white;
+      }
+      .about-sidebar-toggle i {
+        font-size: 16px;
+      }
+      @media (min-width: 768px) {
+        .about-sidebar-toggle {
+          display: none;
+        }
+      }
+
+      /* ===== Main Content Area ===== */
+      .content {
+        padding: 20px;
+        width: 100%;
+        margin-right: 20px;
+      }
+      @media (min-width: 768px) {
+        .content {
+          margin-left: 240px; /* Added left margin so content isn’t hidden by sidebar */
+          padding: 20px 40px;
+        }
+      }
+
+      /* ===== Content Section Styles (About Page Vibe) ===== */
+      .about-inner-section {
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      .about-heading {
+        text-align: center;
+        margin: 0 0 20px 0;
+        font-size: 28px;
+      }
+      .about-body-text {
+        text-align: left;
+        margin: 0 0 16px 0;
+        max-width: 100%;
+        line-height: 1.6;
+      }
+      .about-staff-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 20px;
+        margin: 0;
+        padding: 0;
+      }
+      .about-staff-member {
+        text-align: left;
+        padding: 15px;
+        background: #f8f9fa;
+        border-radius: 4px;
+      }
+      .about-image-container {
+        width: 100%;
+        margin: 20px 0;
+      }
+      .about-compact-centered-image {
+        max-width: 100%;
+        height: auto;
+        display: block;
+      }
+        </style>
     </head>
     <body>
         <!-- Main Navigation -->
@@ -300,7 +283,7 @@
             <h1>Community</h1>
         </div>
 
-        <!-- Community Page with Sidebar & Content Updated to use About Page Styles -->
+        <!-- Community Page with Sidebar & Content (Using About Page Styles) -->
         <div x-data="{
           activeTab: 'smallGroups',
           activeSubTab: 'lifegroups',
@@ -422,8 +405,10 @@
                             <p class="about-body-text">
                                 Christian discipleship applies the gospel to
                                 every aspect of life. Our Discipleship Groups
-                                focus on living and sharing truth through
-                                accountability, study, and prayer.
+                                focus on
+                                living and sharing truth through accountability,
+                                study,
+                                and prayer.
                             </p>
                         </div>
                     </section>
@@ -516,9 +501,9 @@
                         <h1 class="about-heading">Membership</h1>
                         <p class="about-body-text">
                             Membership is more than a label—it defines our
-                            mutual commitment and accountability. By confessing
-                            our faith, we bind ourselves together as a
-                            supportive community.
+                            mutual commitment and accountability.
+                            By confessing our faith, we bind ourselves together
+                            as a supportive community.
                         </p>
                         <p class="about-body-text">
                             Contact us for more information on becoming a member
@@ -531,28 +516,6 @@
                 </div>
             </div>
         </div>
-
-        <!-- Footer CTA Section -->
-        <!--
-        <section id="footer-cta-a" class="styled-section-a">
-            <div class="form-container">
-                <h2>Subscribe to our Newsletter</h2>
-                <p class="about-body-text">
-                    Our weekly newsletter goes out on Friday mornings with
-                    Sunday Service information, highlights, upcoming events, and
-                    useful links.
-                </p>
-                <form action="https://formspree.io/f/meojowwg" method="POST"
-                    class="neumorphic-form">
-                    <input type="text" name="name" placeholder="Your name"
-                        required />
-                    <input type="email" name="email" placeholder="Your email"
-                        required />
-                    <button type="submit">Subscribe to CPC New Haven</button>
-                </form>
-            </div>
-        </section>
-        -->
 
         <!-- Footer -->
         <footer>
