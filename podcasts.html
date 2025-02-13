@@ -180,8 +180,12 @@
                     class="podcast-thumbnail" style="margin-bottom: 20px; border-radius: 10px;">
             </a>
             -->
-            <h1>The Sunday Sermon</h1>
-            <hr>
+         
+         
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/7BnZ3ZgqGQNbcr9LVn2Oo9?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            <br>
+            
+            <h4>The Sunday Sermon Archive</h4>
             <table id="sunday-sermon-table">
                 <thead>
                     <tr>
@@ -207,15 +211,11 @@
         </section>
 
         <section id="podcast-beyond" class="inner-page-section" style="margin-top:20px;" x-data="{ sortKey: '', sortAsc: true }">
-            <!--
-            <a href="https://open.spotify.com/episode/03czc7Z0bnniWrneEfIsfL?si=537d3fa4f97c4172" target="_blank">
-                <img src="https://storage.googleapis.com/cpc-public-website/podcast-thumbnails/beyond/BSS_12_10_24.jpg"
-                    class="podcast-thumbnail"
-                    style="margin-bottom: 20px; border-radius: 10px;">
-            </a>
-            -->
-            <h1>Beyond The Sunday Sermon</h1>
-            <hr>
+       
+       
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/0drS1ayw06pi8LvOcoIEEH?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            <br>
+            <h4>Beyond The Sunday Sermon Archive</h4>
             <table id="beyond-sermon-table">
                 <thead>
                     <tr>
@@ -264,6 +264,64 @@
     </div>
     </div>
 
+    <!-- Refactored Old Podcasts Section -->
+    <section id="old-podcasts">
+        <div class="old-podcast-content">
+            <h2>Explore Our Old Podcast Archive</h2>
+            <p>
+                Discover our previous podcast episodes and content on our old podcast page. 
+                Click the button below to visit!
+            </p>
+            <a href="https://podcasts.cpcnewhaven.org" class="old-podcast-button">Visit Old Podcast Archive</a>
+        </div>
+    </section>
+
+    <!-- Inline unique CSS for the old podcasts section -->
+    <style>
+        /* Container styles */
+        #old-podcasts {
+            background: linear-gradient(135deg, #6B73FF 0%, #000DFF 100%);
+            padding: 50px 20px;
+            border-radius: 12px;
+            margin: 40px auto;
+            max-width: 800px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Heading styles */
+        #old-podcasts .old-podcast-content h2 {
+            color: #fff;
+            font-size: 2em;
+            margin-bottom: 15px;
+        }
+
+        /* Paragraph styles */
+        #old-podcasts .old-podcast-content p {
+            color: #f0f0f0;
+            font-size: 1.1em;
+            margin-bottom: 25px;
+            line-height: 1.5;
+        }
+
+        /* Button styles */
+        #old-podcasts .old-podcast-button {
+            background-color: #fff;
+            color: #000DFF;
+            text-decoration: none;
+            padding: 12px 30px;
+            font-size: 1.2em;
+            border-radius: 50px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Button hover effect */
+        #old-podcasts .old-podcast-button:hover {
+            background-color: #000DFF;
+            color: #fff;
+        }
+    </style>
 
     </div>
 
