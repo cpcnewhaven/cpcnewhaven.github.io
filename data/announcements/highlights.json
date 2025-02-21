@@ -355,7 +355,7 @@
       "title": "BOH Mentoring Program | Wayne Hammond",
       "description": "Are you looking for a way to love our city? Invest in the life of a New Haven child and their family! Bridges of Hope Mentoring Program is accepting applications. Our vision is to provide a safe place for students from low-income families to receive academic help and grow emotionally and spiritually alongside a caring adult. Volunteers should be over 18 and willing to commit one night a week to spending time with a 2nd-8th grader. Duties will include homework help, short devotions, and small group recreation. Volunteers will also be responsible to communicate regularly with their mentee's parents and teachers. For more information and to complete the initial application, visit bridgesnewhaven.org/mentoring. We have a goal of sending at least 5 volunteers from CPC!<br><br><div style=\"text-align: center;\"><a href=\"https://bridgesnewhaven.org/mentoring\" class=\"big-button\">Apply Now</a></div>",
       "dateEntered": "2024-011-22",
-      "active": "true",
+      "active": "false",
       "type": "highlight",
       "category": "highlight",
       "tag": "mentoring",
@@ -438,7 +438,7 @@
   "title": "Engaging with Aging",
   "description": "We’re hosting a seminar and discussion on issues related to aging well, end-of-life, and death. Topics will include a biblical and theological survey from Pastor Craig, a presentation and Q&A with a Geriatric physician, as well as legal and financial insights everyone should know. All ages are welcome since this will impact everyone at some point! Light breakfast and refreshments will be provided, and it will also be livestreamed. For more details, visit the event page <a href='engaging-with-aging.html'>here</a>.",
   "dateEntered": "2024-12-13",
-  "active": "false",
+  "active": "true",
   "type": "upcoming",
   "category": "upcoming",
   "tag": "superFeatured",
@@ -566,38 +566,6 @@
   "tag": "superFeatured",
   "date": "Summer 2025",
   "location": "Atlantic City, NJ"
-},
-{
-  "id": "2025-007",
-  "title": "Life Groups & Discipleship Groups",
-  "description": "Restarting for the new year, join now! Talk to a welcome team member about all the groups that meet throughout the city.",
-  "dateEntered": "2025-01-20",
-  "active": "true",
-  "type": "upcoming",
-  "category": "upcoming",
-  "tag": "superFeatured"
-},
-
-{
-  "id": "2025-008",
-  "title": "Interested in Joining the Body of Christ at CPC?",
-  "description": "We consider the church an essential element of the gospel, so joining CPC as a member is a way to truly join the body of Christ, in all its blessings and with all its flaws! Before joining, you’ll meet one-on-one with a pastor and then discuss how you’ve come to know Christ with the Shepherd Leaders. Contact Alexis Vano (admin@cpcnewhaven.org) to begin the process. Our next joining will take place on Sunday, March 2.",
-  "dateEntered": "2025-01-20",
-  "active": "true",
-  "type": "upcoming",
-  "category": "upcoming",
-  "tag": "superFeatured"
-},
-
-{
-  "id": "2025-009",
-  "title": "Moms Group",
-  "description": "Join us on 2/18/25, 3/18/25, 4/1/25 and 5/6/25 at the home of Miranda Healy. Contact Miranda Healy, mirandajrdn8@gmail.com or Meg Bogue, mhbogue@yahoo.com for book and more information.",
-  "dateEntered": "2025-01-20",
-  "active": "true",
-  "type": "upcoming",
-  "category": "upcoming",
-  "tag": "superFeatured"
 }
   ]
 }

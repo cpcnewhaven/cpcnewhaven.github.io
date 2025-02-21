@@ -1,11 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Toggle to switch between remote and local data
-    const useLocalData = true; // Set to true for local, false for remote
-
+    // Set to use local data only
+    const useLocalData = true;
     const localDataUrl = './data/announcements/highlights.json';
-    const remoteDataUrl = 'https://api.npoint.io/0d72bc1a0e68b7bf376c';
-
-    const dataUrl = useLocalData ? localDataUrl : remoteDataUrl;
+    const dataUrl = localDataUrl;
 
     fetch(dataUrl)
         .then(response => response.json())
