@@ -1,571 +1,71 @@
 {
   "announcements": [
     {
-      "title": "NEXT SUNDAY-ELDER ORDINATION",
-      "description": "We are grateful for God’s provision of two new Ruling Elders for the shepherding of our church. Next Sunday in the worship service Tyler Rice and Joshua Kebabian will be ordained to this sacred office. All members will be taking a vow as well. Praise God for His faithful undershepherds!",
-      "dateEntered": "2024-04-14",
+      "id": "2025-007",
+      "title": "New Mercy Days!",
+      "description": "Join us for our Mercy Days on March 29 & August 23. Sign up to volunteer or to request a Mercy project here.",
+      "dateEntered": "2025-01-20",
       "active": "false",
       "type": "upcoming",
       "category": "upcoming",
-      "tag": "ordination"
+      "tag": "mercy",
+      "featuredImage": "/images/announcements/mercy-days.jpg"
     },
     {
-      "title": "I HEART NEW HAVEN DAY JUNE 1ST",
-      "description": "Mark your calendars for June 1st for Bridges of Hope’s annual I Heart New Haven Day! This is an exciting day joining with other churches around the city to love the greater New Haven area with projects such as clean up, gardening, painting, and repair at places like soup kitchens, local schools, animal shelters and many other places. As always, we’ll gather on the green for worship and prayer first, and then disperse out to our projects. Please register now!",
-      "dateEntered": "2024-04-14",
-      "backgroundIMG": "https://static01.nyt.com/images/2022/06/05/realestate/01LIVING-NEWHAVEN-01/01LIVING-NEWHAVEN-videoSixteenByNineJumbo1600.jpg",
+      "id": "2025-008",
+      "title": "Save the Dates - Spring 2025",
+      "description": "<ul><li>CPC'S Spring Break - No SS or Lunch - 3/9, 3/16</li><li>Spring Work Day - 4/12</li><li>Good Friday - 4/18</li><li>Easter Egg Hunt - 4/19</li><li>Easter - 4/20 (with Fellowship meals)</li><li>I Heart NH Day - 6/7</li></ul>",
+      "dateEntered": "2025-01-20",
       "active": "false",
       "type": "upcoming",
       "category": "upcoming",
-      "tag": "iheartnewhaven"
+      "tag": "calendar",
+      "superfeatured": true,
+      "featuredImage": "/images/announcements/calendar-spring.jpg"
     },
     {
-      "title": "ALL ARE WELCOME TO JOIN US FOR LUNCH DOWNSTAIRS",
-      "description": "VISITORS EAT FREE",
-      "dateEntered": "2024-04-14",
-      "active": "false",
-      "type": "upcoming",
-      "category": "upcoming",
-      "tag": "lunch"
-    },
-    {
-      "title": "JOINT ASCENSION SERVICE MAY 19TH 4PM @CPC EAST LYME",
-      "description": "We will be worshiping with the other local Mission Anabaino churches and church plants, this time at the worship service of our newest church plant in East Lyme. Let’s join together in praise with brothers and sisters from the Hill, Fairfield, Norwalk, Wallingford, Milford, and East Lyme! There will be a meal afterwards, which is a great chance to fellowship with other Christians from around Southern CT. Location is Niantic Baptist Church building, 443 Main St., Niantic, CT 06357. Note the change in date from previously published.",
-      "dateEntered": "2024-04-14",
-      "backgroundIMG": "https://ctvisit.com/sites/default/files/styles/square_600x600/public/mccooksunrise.jpg?itok=gUbFV7yD",
-      "active": "false",
-      "type": "upcoming",
-      "category": "upcoming",
-      "tag": "ascension"
-    },
-    {
-      "title": "WOMEN’S HAPPY HOUR MAY 31ST",
-      "description": "Please join the Women of CPC as we gather on the terrace of Il Gabbiano on Friday, May 31st from 4-7:30pm (we will be inside if the weather doesn't cooperate). Appetizers are on us and Happy Hour drink pricing is from 4-5pm. Come kick off the weekend, catch up with each other, and have a little fun with your CPC sisters. Il Gabbiano is located at 50 Long Wharf Drive in New Haven. We hope to see you there!",
-      "dateEntered": "2024-04-14",
-      "active": "false",
-      "type": "upcoming",
-      "category": "upcoming",
-      "tag": "happyhour"
-    },
-    {
-      "title": "JOIN THE GREEN TEAM!",
-      "description": "If you are interested in serving your church while getting exercise AND having fun-in-the-sun when the weather is not, well, WINTER!, then contact jennifer@cpcnewhaven.org right away! We are in need of anyone who has two legs, at least 20/50 vision, and an hour or so available every 6-8 weeks during the growing season to help keep our beautiful non-native shortgrass meadow under control, and ready for picnics. All those interested in free, impromptu fine gardening and horticulture lessons from a certified professional may also apply.",
-      "dateEntered": "2024-06-24", 
-      "active": "false",
-      "type": "upcoming",
-      "category": "upcoming",
-      "tag": "green"
-    },
-    {
-      "title": "PASTOR’S BOOK PICK - The Life We’re Looking For",
-      "description": "This summer, we’re suggesting that you pick up Andy Crouch’s latest book - The Life We’re Looking For: Reclaiming Relationship in a Technological World. This is a perfect followup to The Soul of Shame, as it gets us to reconsider all the ways we are distracted or prevented from deeper relationships. Crouch is a wonderfully thoughtful and practical Christian thinker, who served as a Campus Minister at Harvard, and now works primarily as a consultant at Praxis for redemptive entrepreneurship. This is a great summer read to help us all prioritize and re-calibrate our lives around Christ! Copies are in the foyer, pay what you can.",
-      "dateEntered": "2024-06-24", 
-      "active": "false",
-      "type": "upcoming",
-      "category": "upcoming",
-      "tag": "book"
-    },
-    {
-      "title": "SUMMER COLLEGE BIBLE STUDY WEDNESDAYS at 6PM",
-      "description": "If you are in college, or are preparing to go to college, and are sticking around for the summer, join me for a summer bible study. We will walk through the book of Judges to see the glory of salvation from sin and ultimately point us to Jesus. We will begin our study at CPC 6PM next Wednesday. Contact Pastor Jerry at jerry.ornelas@cpcnewhaven.org for more information. Friends are welcome.",
-      "dateEntered": "2024-06-24",
-      "active": "false",
-      "type": "upcoming",
-      "category": "upcoming",
-      "tag": "college"
-    },
-    {
-      "title": "JOINING WITH CPC IN THE HILL THIS SUMMER",
-      "description": "We’re invited to serve with our brothers and sisters in Christ at our sister church in the Hill this summer. Currently 3-6 volunteers are needed at the Wednesday BBQs beginning on July 3rd through August 21st, from 5pm-7pm.",
-      "dateEntered": "2024-06-24",
-      "active": "false",
-      "type": "upcoming",
-      "category": "upcoming",
-      "tag": "bbq"
-    },
-    {
-      "title": "MINISTRYSAFE VIDEOS - FOR ANYONE VOLUNTEERING WITH OUR CHILDREN",
-      "description": "As we announced at our congregational meeting, we are requiring all children volunteers to watch the Ministry Safe videos before the fall. The video is a Sexual Abuse Awareness training, so some will prefer to watch it in a group, though it can be watched at home at your convenience. We’ll be showing the video after the service in the Fellowship Hall on June 23, July 21, and Aug. 18. You need to only come once. Light snacks will be provided.",
-      "dateEntered": "2024-06-24",
-      "active": "false",
-      "type": "upcoming",
-      "category": "upcoming",
-      "tag": "children"
-    },
-    {
-      "title": "SATURDAY MORNING BAKE ALONG",
-      "description": "Women of CPC — Do you have a sweet tooth or do you enjoy having sweet fellowship with one another? Mark your calendars now for Saturday, August 10th at 10am! We'll be gathering at Katalina's Bakery in New Haven (74 Whitney Ave). Our own resident expert baker, Kathy Reiglemann, will host us in a baking class for all skill levels and none ;-). You can also just come hang out over a cup of tea or coffee. Invite a friend or neighbor - It's Scone'a be a good time!",
-      "dateEntered": "2024-06-24",
-      "active": "false",
-      "type": "upcoming",
-      "category": "upcoming",
-      "tag": "women"
-    },
-    {
-      "id": "2024-001",
-      "title": "NEW BULLETIN THIS SUNDAY!",
-      "description": "The staff have been hard at work updating the bulletin, and we are unveiling the new one this Sunday. There are 2 main changes. First, we have removed the reasoning and biblical quotes that remain the same each week and created a separate insert that will live in the pews. This “Worship Guide” explains our movements of worship. Second, we removed the song lyrics, which will be a change for many people who have grown dependent on the text in hand. If you struggle with reading the slides for worship, we’re still providing a Large Print bulletin. With the lyrics removed, however, we hope it will encourage all of our eyes to be lifted up and singing in more communal ways. We know change can be difficult but hopefully it feels more like who we are and allows for more dynamic worship.",
-      "dateEntered": "2024-08-25",
-      "active": "false",
-      "type": "highlight",
-          "category": "highlight",
-      "tag": "bulletin"
-    },
-    {
-      "id": "2024-002",
-      "title": "FACILITIES TEAM NEEDS YOU!",
-      "description": "There are a number of small fixes and tweaks that are in need of attention around our building and grounds. If you’re interested in helping out - even if your handy skill level is low - please volunteer. Email fred.walker@yale.edu to help out.",
-      "dateEntered": "2024-08-25",
-      "active": "false",
-      "type": "highlight",
-      "category": "highlight",
-      "tag": "facilities"
-    },
-    {
-      "id": "2024-003",
-      "title": "BOH MENTOR TRAINING SESSION",
-      "description": "This is a great opportunity for interested mentors to meet current mentors, see the mentoring program space and get ideas about becoming the best mentor they can be! This training will be Saturday, Aug 31 from 2-4pm. Contact Wayne Hammond (wayne.hammond@bridgesnewhaven.org or 203-993-3970) with any questions.",
-      "dateEntered": "2024-08-25",
-      "active": "false",
-      "type": "highlight",
-      "category": "highlight",
-      "tag": "mentor"
-    },
-    {
-      "id": "2024-004",
-      "title": "A GLIMPSE INTO THE FALL SCHEDULE",
- "description": "<style>table { width: 100%; border-collapse: collapse; background-color: #ffffff; color: #000; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); border-radius: 8px; overflow: hidden; } td, th { border: 1px solid #ddd; padding: 8px; } th { padding-top: 12px; padding-bottom: 12px; text-align: left; background-color: #ccc; text-align:center; color: black; } tr:nth-child(even){background-color: #f2f2f2;} </style><table><tr><th>Date</th><th>Event</th></tr><tr><td>9/8/24</td><td>Full Sunday Schedule resumes</td></tr><tr><td>8:30</td><td>Prayer</td></tr><tr><td>9:30</td><td>Children’s and Adult Sunday Studies</td></tr><tr><td>After Worship</td><td>Weekly Fellowship Lunches</td></tr><tr><td>9/8/24</td><td>Welcome Sunday (Lunch and Kids Crafts outdoors)</td></tr><tr><td>9/15/24</td><td>Congregational Meeting, discussing Annual Ministry Plan</td></tr><tr><td>9/22/24</td><td>Ministry Fair</td></tr><tr><td>10/5/24</td><td>Women’s Welcome Brunch</td></tr><tr><td>10/19/24</td><td>Young Adults BBQ Hangout</td></tr></table>",
-      "dateEntered": "2024-08-26",
-      "active": "false",
-      "type": "ongoing",
-      "category": "ongoing",
-      "tag": "schedule"
-    },
-    {
-      "id": "2024-005",
-      "title": "SUNDAY SCHOOL RESUMES THIS SUNDAY @9:30AM",
-      "description": "If your child is between 2 ½ years old and 12th grade, please check the foyer for information on where they should go for Sunday school. If you're new, there's a signup sheet available to register your child. Contact Pastor Jerry for any questions (<a href=\"mailto:jerry.ornelas@cpcnewhaven.org\">jerry.ornelas@cpcnewhaven.org</a>).",
-      "dateEntered": "2024-08-25",
-      "active": "false",
-      "type": "upcoming",
-      "category": "upcoming",
-      "tag": "sundayschool"
-    },
-    {
-      "id": "2024-006",
-      "featuredIMG": "https://storage.googleapis.com/cpc-public-website/podcast-thumbnails/walking/WALKING%20GRAPHIC%20_%20HOMEPAGE.jpg",
-      "title": "Adult Sunday Studies - Walking with Jesus Thru Sinai",
-      "description": "We need moral clarity in this age of chaos! What is the good life? How should I treat my neighbor? What does the Bible say about social justice, adultery, covetousness, or slander? Does the Sabbath matter anymore? To answer these questions and more, this year we're \"Walking with Jesus Thru Sinai.\" More than a badge to prove our self-righteousness or a burden to leave us in guilt, the 10 Commandments are summaries of what a flourishing life before God is meant to look like. It shows us how we are made and how we ought to live. This class will be an opportunity to discuss all sorts of crucial issues, from idolatry and worship to moral virtues and political beliefs. Grounded in the grace of Christ, the law becomes a beautiful vision for all our lives. All are welcome! We meet in the Fellowship Hall.<br><br><div style=\"text-align: center;\"><a href='adult-sunday-school.html' class='big-button'>Learn More</a></div>",
-      "dateEntered": "2024-09-01",
+      "id": "2025-009",
+      "title": "Life Groups & Discipleship Groups",
+      "description": "Restarting for the new year, join now! Talk to a welcome team member about all the groups that meet throughout the city.",
+      "dateEntered": "2025-01-20",
       "active": "true",
       "type": "ongoing",
       "category": "ongoing",
-      "tag": "adultsundayschool",
-      "url-link": "https://cpcnewhaven.org/adult-sunday-school.html"
+      "tag": "groups",
+      "featuredImage": "/images/announcements/life-groups.jpg"
     },
     {
-      "id": "2024-007",
-      "title": "Women's Discipleship - New Year Beginning September 16",
-      "description": "Join us for Women's Discipleship starting September 16 at 7:30 PM. We'll be meeting via Zoom on the 1st and 3rd Mondays of each month. Our study will focus on the book 'Now and Not Yet' by Ruth Chou Simons. We'll alternate between exploring the book and discussing practical applications of what we learn about God, the sufficiency of Christ, and the Holy Spirit. This will involve sharing and praying together. For more information, please contact Lisa Graham (lisahgraham44@gmail.com) or Diane Miller (auntie.diane@comcast.net).",
-      "dateEntered": "2024-09-01",
-      "active": "false",
-      "type": "upcoming",
-      "category": "upcoming",
-      "tag": "women"
-    },
-    {
-      "id": "2024-008",
-      "title": "Mom's Discipleship - Fall Meetings Begin September 17",
-      "description": "Mom's Discipleship group will have its first fall meeting on September 17 at 7 PM at CPC. The group will meet twice a month on Tuesday evenings, with a virtual option available at the same time. We'll continue reading 'Intimate Allies' by Dan Allender, but newcomers are welcome to join without catching up on the book. This is a great opportunity for mutual encouragement in your season of motherhood. For more information or to express interest, please contact Meg Bogue at mhbogue@me.com.",
-      "dateEntered": "2024-09-01",
-      "active": "false",
-      "type": "upcoming",
-      "category": "upcoming",
-      "tag": "mom"
-    },
-    {
-      "id": "2024-009",
-      "title": "Nursery Orientation | September 29",
-      "description": "We will be having an orientation to the nursery for our new volunteers and for anyone who wishes to be refreshed on our rules and nursery practices. It will be held in the nursery on September 29 directly following the service.",
-      "dateEntered": "2024-09-01",
-      "active": "false",
-      "type": "upcoming",
-      "category": "upcoming",
-      "tag": "nursery"
-    },
-    {
-      "id": "2024-010",
-      "title": "Pastor Drop-in Office Hours",
-      "description": "Drop in for a casual time of discussion, Q&A, prayer, coffee, tea, really whatever you want to make it! Wondering what God is doing in a certain part of your life? Let's wonder together! Have a tricky situation at home or work? Let's discern best steps! Want to just chat about nothing in particular? Come on in! If you have a more private or formal need, you're always welcome to set up a separate time with Pastor Craig (<a href=\"mailto:craig.luekens@cpcnewhaven.org\">craig.luekens@cpcnewhaven.org</a>), or Pastor Jerry (<a href=\"mailto:jerry.ornelas@cpcnewhaven.org\">jerry.ornelas@cpcnewhaven.org</a>) but this is meant to be a space where anyone can drop in.<br><br><span>Pastor Drop-in Office Hours</span> <br> Craig, Fridays 7:30-10:30am <br> Jerry, Wednesdays 3:30-6:00pm",
-      "dateEntered": "2024-09-08",
+      "id": "2025-010",
+      "title": "Listen to CPC Podcasts!",
+      "description": "<ul><li>Missed a sermon? Listen to our weekly sermons</li><li>Dive deeper with \"Beyond the Sunday Sermon\" weekly discussion</li><li>Find Adult Sunday Studies in the \"Resources\" page</li></ul>Visit cpcnewhaven.org/podcasts to start listening!",
+      "dateEntered": "2025-01-20",
       "active": "true",
       "type": "ongoing",
       "category": "ongoing",
-      "tag": "pastor"
+      "tag": "podcast",
+      "featuredImage": "/images/announcements/podcast.jpg"
     },
     {
-      "id": "2024-011",
-      "title": "BOH Young Adults Conference | Hosted by Church on the Rock! Sept. 28",
-      "description": "This special event has been planned specifically for the Bridges of Hope churches to bring young adults together to pray, worship and discuss topics pertinent to being an 18-25 year old Christian such as finances, relationships and more!",
-      "dateEntered": "2024-09-08",
-      "active": "false",
-      "type": "upcoming",
-      "category": "upcoming",
-      "tag": "young adults"
-    },
-    {
-      "id": "2024-012",
-      "title": "Women's Brunch | October 5 | 9:30-11:30am",
-      "description": "<strong>WHO:</strong> All Women of CPC<br><strong>WHAT:</strong> Brunch + a guided flower-piece craft by our own horticultural expert, Jennifer Cheng, who will walk us through the steps of making a small, low maintenance, festive Fall arrangement.<br><strong>WHEN:</strong> Saturday 10/5  9:30-11:30am<br><strong>WHERE:</strong> Fellowship Hall 135 Whitney Avenue<br><strong>WHY:</strong> For joy in the body!<br><br>A head count is needed for supplies so please sign up at the coffee bar -or- RSVP for yourself and guests at tanillabrown@yahoo.com. A $5 dollar donation towards the materials is appreciated but not required to participate.",
-      "dateEntered": "2024-09-15",
-      "active": "false",
-      "type": "upcoming",
-      "category": "upcoming",
-      "tag": "women"
-    },
-    {
-      "id": "2024-013",
-      "title": "Men's Fall Fellowship Social | October 7 | 6:00-8:30pm",
-      "description": "Please drop in and join the men of CPC for fellowship at the East Rock Brewing Company. It's open-mic night at the brewery; MNF Week 5; and various food, drink, and game options are available at the brewery and next door at East Rock Market.<br><br><img src=\"https://storage.googleapis.com/cpc-public-website/events/mensgroup/mensFallEvent_2024.jpg\" alt=\"Men's Fall Fellowship Social Event Image\" style=\"max-width: 100%; height: auto;\">",
-      "dateEntered": "2024-09-15",
-      "active": "false",
-      "type": "upcoming",
-      "category": "upcoming",
-      "tag": "men"
-    },
-   
-    {
-      "id": "2024-015",
-      "title": "Summer Mission Trip Info Meeting",
-      "description": "Info meeting for the Summer Mission Trip to New City Fellowship, Atlantic City (Aug. 2-9, 2025).<br><div style=\"text-align: center;\"><a href=\"2025-missions-trip.html\" class=\"big-button\">Learn More About the Mission Trip</a></div>",
-      "dateEntered": "2024-09-15",
-      "active": "false",
-      "type": "upcoming",
-      "category": "upcoming",
-      "tag": "mission",
-      "date": "October 27, 2024",
-      "time": "After worship",
-      "location": "CPC"
-    },
-    {
-      "id": "2024-016",
-      "title": "Children's Fall Party Harvest",
-      "description": "Fall is in the air which means fall games, fall foods and fall fun for the children of CPC. During the lunch hour on the CPC front lawn there will be plenty of activities for the children to enjoy!",
-      "dateEntered": "2024-09-15",
-      "active": "false",
-      "type": "upcoming",
-      "category": "upcoming",
-      "tag": "children",
-      "date": "October 13, 2024",
-      "time": "12:00-1:30pm",
-      "location": "CPC Front Lawn"
-    },
-    {
-      "id": "2024-017",
-      "title": "Young Adults Park BBQ/Hang",
-      "description": "Hey Young Adults! We are having our first event of the year, a BBQ hangout. We will be grilling burgers and hotdogs, some sides, and will have some games. Feel free to bring a side or dessert to share. If you need a ride or would like to carpool, meet at CPC at 12:30 p.m. Hope to see you there! Contact Josh S. with any questions at joshuatsanders@yahoo.com or 951-813-6521.",
-      "dateEntered": "2024-09-15",
-      "active": "false",
-      "type": "upcoming",
-      "category": "upcoming",
-      "tag": "young adults",
-      "date": "October 19, 2024",
-      "time": "1:00pm",
-      "location": "Wharton Brook State Park, 675 Washington Ave. North Haven, CT 06473"
-    },
-    {
-      "id": "2024-018",
-      "title": "Thanksgiving Fellowship Meals",
-      "description": "Staying local for Thanksgiving? Come celebrate with your brothers and sisters in Christ! As we've done in the past, we're coordinating Hosts & Guests to have a Thanksgiving meal together on Nov. 28. If you're interested, please email admin@cpcnewhaven.org, fill out the form or fill out the bulletin insert Sunday.<br><br><div style=\"text-align: center;\"><a href=\"https://cpcnewhaven.ccbchurch.com/goto/forms/170/responses/new\" class=\"big-button\">Sign Up for Thanksgiving Meals</a></div>",
-      "dateEntered": "2024-09-15",
-      "featuredIMG": "https://storage.googleapis.com/cpc-public-website/events/Thanksgiving%20Meals%202025/CPC%20THANKSGIVING.jpg",
-      "active": "false",
-      "type": "upcoming",
-      "category": "upcoming",
-      "tag": "thanksgiving",
-      "date": "November 28, 2024",
-      "location": "Various Locations"
-    },
-    {
-      "id": "2024-019",
-      "title": "Summer Mission Trip",
-      "description": "Join us for a one-week mission trip to urban poor neighborhoods in Atlantic City, NJ with New City Fellowship. The trip will take place from Aug. 2-9, 2025. Our goal is to share the gospel, serve the poor, and grow in our love for Jesus and vision for missional living.<br><div style=\"text-align: center;\"><a href=\"2025-missions-trip.html\" class=\"big-button\">Learn More About the Mission Trip</a></div>",
-      "dateEntered": "2024-09-15",
-      "featuredIMG": "https://storage.googleapis.com/cpc-public-website/events/Mission%20Trip%202025/CPC%20ATLANTIC%20CITY.jpg",
+      "id": "2025-011",
+      "title": "Pastor's Book Pick | Winter 2025",
+      "description": "<h3>You Are Not Own: Belonging to God in an Inhuman World,</h3><h4> by Alan Noble</h4><p>This book examines many of the ways in which our culture reinforces the lie that we belong to ourselves, and then provides a road map to avoid falling into sinful traps. Written by English professor and PCA church member Alan Noble, it points out the cultural and technological habits we all form, and then encourages us to fight against them, armed with the gospel-centered truth that we actually belong to God.</p><p>Noble is a clear and witty writer, with the ability to see through deeply ingrained sinful habits, giving us hope and liberation for a more godly lifestyle. Copies are in the foyer, please pay $ what you can.</p>",
+      "dateEntered": "2025-01-20",
       "active": "true",
       "type": "ongoing",
       "category": "ongoing",
-      "tag": "mission",
-      "date": "August 2-9, 2025",
-      "location": "New City Fellowship, Atlantic City",
-      "infoMeeting": {
-        "date": "October 27, 2024",
-        "time": "After worship",
-        "location": "CPC"
-      },
-      "url": "2025-missions-trip.html"
+      "tag": "book",
+      "featuredImage": "/images/announcements/book-pick.jpg"
     },
     {
-      "id": "2024-020",
-      "title": "Save the Dates",
-      "description": "<div style=\"text-align: center;\"><ul style=\"list-style-type: none; padding: 0;\"><li><strong>Fall Work Day & Christmas Decor:</strong> Sat. Dec. 7</li><li><strong>Christmas Lessons & Carols Service:</strong> Fri. Dec. 13</li></ul></div>",
-      "dateEntered": "2024-11-08",
-      "active": "false",
-      "type": "upcoming",
-      "category": "upcoming",
-      "tag": "events",
-      "dates": [
-        {
-          "event": "Fall Work Day & Christmas Decor",
-          "date": "December 7, 2024"
-        },
-        {
-          "event": "Christmas Lessons & Carols Service",
-          "date": "December 13, 2024"
-        }
-      ]
-    },
-    {
-      "id": "2024-021",
-      "title": "Hill Christmas Store",
-      "date" : "Donate by 12/8",
-      "description": "Please join us in sharing Christmas joy with some wonderful families from New Haven’s Hill community. Purchase and leave an unwrapped gift valued at $20 or more for a child in the designated category (e.g., “Girl, 9-14”). In the spirit of empowerment, your gift will in turn be bought at a very reduced price by families in the Hill at the store.",
-      "dateEntered": "2024-11-08",
-      "active": "false",
-      "type": "highlight",
-      "category": "highlight",
-      "tag": "christmas",
-      "featuredIMG": "https://storage.googleapis.com/cpc-public-website/events/Hill%20Christmas%20Store%202023/IMG_0244.JPG"
-    },
-    {
-      "id": "2024-022",
-      "title": "BOH Thanksgiving Food Drive",
-      "date": "Donate by Nov 22",
-     "description": "Please join us in sharing Christmas joy with some wonderful families from New Haven’s Hill community. Purchase and leave an unwrapped gift valued at $20 or more for a child in the designated category (e.g., “Girl, 9-14”). In the spirit of empowerment, your gift will in turn be bought at a very reduced price by families in the Hill at the store.<br><br><div style=\"text-align: center;\"><a href=\"http://www.bridgesofhope.org\" class=\"big-button\">Visit BOH Website</a></div>",
-      "dateEntered": "2024-11-24",
-      "active": "false",
-      "type": "highlight",
-      "category": "highlight",
-      "tag": "fooddrive",
-      "featuredIMG": "https://storage.googleapis.com/cpc-public-website/events/BOH%20Christmas%202024/BOH_2024.png",
-      "url-link": "http://www.bridgesnewhaven.org"
-    },
-    {
-      "id": "2024-023",
-      "title": "BOH Mentoring Program | Wayne Hammond",
-      "description": "Are you looking for a way to love our city? Invest in the life of a New Haven child and their family! Bridges of Hope Mentoring Program is accepting applications. Our vision is to provide a safe place for students from low-income families to receive academic help and grow emotionally and spiritually alongside a caring adult. Volunteers should be over 18 and willing to commit one night a week to spending time with a 2nd-8th grader. Duties will include homework help, short devotions, and small group recreation. Volunteers will also be responsible to communicate regularly with their mentee's parents and teachers. For more information and to complete the initial application, visit bridgesnewhaven.org/mentoring. We have a goal of sending at least 5 volunteers from CPC!<br><br><div style=\"text-align: center;\"><a href=\"https://bridgesnewhaven.org/mentoring\" class=\"big-button\">Apply Now</a></div>",
-      "dateEntered": "2024-011-22",
-      "active": "false",
-      "type": "highlight",
-      "category": "highlight",
-      "tag": "mentoring",
-      "url-link": "https://bridgesnewhaven.org/mentoring"
-    },
-    {
-      "id": "2024-024",
-      "title": "BOH Christian Educators' Event",
-      "description": "When: November 30, 10:00am-12:30pm<br>Where: Church on the Rock, 95 Hamilton St., New Haven<br>Sign up here! $5 Registration, refreshments will be served.<br><br><div style=\"text-align: center;\"><a href=\"https://cpcnewhaven.us3.list-manage.com/track/click?u=40f2b7e112b1a9cbae989317c&id=25f3de7ced&e=9da175cc40\" class=\"big-button\">Sign Up</a></div>",
-      "dateEntered": "2024-11-22",
-      "active": "false",
-      "type": "highlight",
-      "category": "highlight",
-      "tag": "educators"
-    },
-    {
-      "id": "2024-025",
-      "title": "Lessons & Carols Potluck",
-      "description": "This is the Sign-Up-Genius for the potluck following the Lessons & Carols Service on December 13. It is not in the bulletin this week but will be in the email. Please put it on the website. The plan is for the general congregation to have access to this so they can sign up to bring food/drinks. There are also slots for people to sign up to help setup and cleanup within the Sign-Up-Genius. That would be helpful to mention along with the mention of food/drinks.<br><br><div style=\"text-align: center;\"><a href=\"[Sign-Up-Genius-URL]\" class=\"big-button\">Sign Up Here</a></div>",
-      "dateEntered": "2024-11-22",
-      "active": "false",
-      "type": "upcoming",
-      "category": "upcoming",
-      "tag": "potluck",
-      "featuredIMG": "https://cpmfiles1.com/cpcnewhaven.org/20221209_185632-1.jpg"
-    },
-    {
-      "id": "2024-026",
-      "title": "No Sunday School or Fellowship Lunch",
-      "description": "Please note that there will be no Sunday School or Fellowship Lunch on December 1, 22, and 29.",
-      "dateEntered": "2024-11-25",
-      "active": "false",
+      "id": "2025-012",
+      "title": "Sunday Schedule",
+      "description": "<table><tr><td>8:30am</td><td>Prayer in the Parlor</td></tr><tr><td>9:30am</td><td>Children's Sunday School & Adult Sunday Studies</td></tr><tr><td>12:00pm</td><td>Fellowship Lunch</td></tr></table>",
+      "dateEntered": "2025-01-20",
+      "active": "true",
       "type": "ongoing",
       "category": "ongoing",
       "tag": "schedule",
-      "dates": [
-        {
-          "event": "No Sunday School or Fellowship Lunch",
-          "date": "December 1, 2024"
-        },
-        {
-          "event": "No Sunday School or Fellowship Lunch",
-          "date": "December 22, 2024"
-        },
-        {
-          "event": "No Sunday School or Fellowship Lunch",
-          "date": "December 29, 2024"
-        }
-      ]
-    },
-    {
-      "id": "2024-027",
-      "title": "Church Work Day",
-      "description": "Join us for a church work day this Saturday from 9 AM to noon. We'll be setting up Christmas decorations and working on various building projects. There's something for everyone, and all skill levels and ages are welcome. Your help is greatly appreciated!",
-      "dateEntered": "2024-12-05",
-      "active": "false",
-      "type": "upcoming",
-      "category": "upcoming",
-      "tag": "workday",
-      "date": "December 7, 2024",
-      "time": "9:00 AM - 12:00 PM",
-      "location": "Church Grounds"
-    },
-    {
-      "id": "2024-028",
-      "title": "Mission Anabaino Church Planting Presentation",
-      "description": "Join us for the last fellowship lunch of 2024 as we get to hear from Pastor Graham on the latest news and updates about the church planting ministry and collaborative, Mission Anabaino.",
-      "dateEntered": "2024-12-13",
-      "active": "false",
-      "type": "upcoming",
-      "category": "upcoming",
-      "tag": "churchplanting",
-      "date": "December 15th, 2024",
-      "time": "After worship",
-      "location": "CPC Fellowship Hall",
-      "featuredIMG": "https://storage.googleapis.com/cpc-public-website/63.jpg"
-    },
-   {
-  "id": "2024-029",
-  "title": "Engaging with Aging",
-  "description": "We’re hosting a seminar and discussion on issues related to aging well, end-of-life, and death. Topics will include a biblical and theological survey from Pastor Craig, a presentation and Q&A with a Geriatric physician, as well as legal and financial insights everyone should know. All ages are welcome since this will impact everyone at some point! Light breakfast and refreshments will be provided, and it will also be livestreamed. For more details, visit the event page <a href='engaging-with-aging.html'>here</a>.",
-  "dateEntered": "2024-12-13",
-  "active": "true",
-  "type": "upcoming",
-  "category": "upcoming",
-  "tag": "superFeatured",
-  "date": "January 25, 2025",
-  "time": "9:00 AM - 12:30 PM",
-  "location": "CPC Fellowship Hall",
-  "pageLink": "engaging-with-aging.html"
-},
-
-    {
-      "id": "2024-030",
-      "title": "Lessons and Carols Live Tonight",
-      "description": "Join us for the Lessons and Carols service live tonight! Experience the joy and warmth of the season with beautiful music and readings. <br><br><strong>Watch Live:</strong> Click <a href=\"https://www.youtube.com/@CPCNewHaven\" target=\"_blank\">here</a> to view the service live on our YouTube channel.",
-      "dateEntered": "2024-12-13",
-      "active": "false",
-      "type": "upcoming",
-      "category": "upcoming",
-      "tag": "superFeatured",
-      "featuredIMG": "https://cpmfiles1.com/cpcnewhaven.org/20221209_185632-1.jpg",
-      "date": "December 13, 2024",
-      "time": "6:00 PM",
-      "location": "Online"
-    },
-    {
-      "id": "2024-031",
-      "title": "🎶🎄 Caroling at the Hill Christmas Store THIS Saturday!",
-      "description": "Join us for a festive time of caroling at the Hill Christmas Store! <br><br><strong>When:</strong> Saturday, December 14th at 10:45am<br><strong>Where:</strong> 158 Davenport Ave, New Haven, CT<br>Park at John C. Daniels Elementary school parking lot and walk over.<br>Easy going, fun, festive time singing and serving together. Hope to see you there! ☺️",
-      "dateEntered": "2024-12-13",
-      "active": "false",
-      "type": "upcoming",
-      "category": "upcoming",
-      "tag": "superFeatured",
-      "date": "December 14, 2024",
-      "time": "10:45 AM",
-      "location": "158 Davenport Ave, New Haven, CT",
-      "featuredIMG": "https://storage.googleapis.com/cpc-public-website/events/Hill%20Christmas%20Store%202023/IMG_0244.JPG"     
-    },
-    {
-      "id": "2024-032",
-      "title": "Homeless Drive through January 2025",
-      "description": "We will be collecting items for those experiencing homelessness in the greater New Haven area through January 2025. Items needed: blankets, sleeping bags, hats, gloves, coats, socks, boots, tents, backpacks/duffle bags, toiletries, underwear, hand warmers. Please wash any used items and leave them in the \"Homeless Drive\" bin in the foyer. All items will be delivered to the CSHHC Homeless team and distributed to those in need. Contact Joshua Bird: jdbird77@msn.com",
-      "dateEntered": "2024-12-18",
-      "active": "false",
-      "type": "ongoing",
-      "category": "ongoing",
-      "tag": "superFeatured"
-    },
-    {
-      "id": "2025-001",
-      "title": "Sunday School and Fellowship Lunch Resume This Week!",
-      "description": "We are excited to announce that Sunday School and Fellowship Lunch will resume this week. Join us for a time of learning and community. Sunday School starts at 9:30 AM, followed by the Fellowship Lunch after the worship service. All are welcome!",
-      "dateEntered": "2025-01-03",
-      "active": "false",
-      "type": "upcoming",
-      "category": "upcoming",
-      "tag": "superFeatured"
-    },
-    {
-      "id": "2025-002",
-      "title": "Decor Take Down | Tomorrow, Saturday January 4 | 9am",
-      "description": "Join us for a decor take down event. We will be meeting at 9am to remove the holiday decorations. All are welcome to help out!",
-      "dateEntered": "2025-01-03",
-      "active": "false",
-      "type": "upcoming",
-      "category": "upcoming",
-      "tag": "superFeatured"
-    },
-      {
-      "id": "2025-003",
-      "title": "BOH MLK Prayer Breakfast - CANCELLED DUE TO SNOW",
-      "description": "The BOH MLK Prayer Breakfast scheduled for Monday, Jan. 20, from 8:30-10:30am at the Christian Tabernacle Baptist Church has been cancelled due to snow.",
-      "dateEntered": "2025-01-03",
-      "active": "false",
-      "type": "upcoming",
-      "category": "upcoming",
-      "tag": "superFeatured",
-      "date": "January 20, 2025",
-      "time": "8:30 AM - 10:30 AM",
-      "location": "Christian Tabernacle Baptist Church"
-    },
-    {
-  "id": "2025-003",
-  "title": "Women’s Service Project | Sat. Feb. 8, 9:00am | CPC Fellowship Hall",
-  "description": "Come join the women of CPC for our morning of service and breakfast on Saturday, February 8 in the CPC Fellowship Hall. We will prepare dinner for the Varick Warming Center and package cookies for our covenant children away at college or serving in the military. Please bring cookies if you can; extras will be dessert for the center. Breakfast will be provided, so join us at 9:00 am for fellowship and service!",
-  "dateEntered": "2025-01-12",
-  "active": "false",
-  "type": "upcoming",
-  "category": "upcoming",
-  "tag": "superFeatured"
-},
-{
-  "id": "2025-004",
-  "title": "Young Adults Brewery Game Night | Fri., Feb. 7, 7pm | Thimble Island Brewing Company",
-  "description": "Come join us for a fun night of games and fellowship at Thimble Island Brewing Company (Branford, CT) on Friday, Feb. 7 beginning at 7 p.m. If you have any questions, contact Josh S. at joshuatsanders@yahoo.com",
-  "dateEntered": "2025-01-17",
-  "active": "false",
-  "type": "upcoming",
-  "category": "upcoming",
-  "tag": "young adults",
-  "date": "February 7, 2025",
-  "time": "7:00 PM",
-  "location": "Thimble Island Brewing Company, Branford, CT"
-},
-{
-  "id": "2025-005",
-  "title": "Newcomers Lunch | Feb. 2 following worship service | All are welcome",
-  "description": "Learn more about CPC, meet some of our leadership teams, and give us a chance to get to know YOU! Join us for lunch after worship.",
-  "dateEntered": "2025-01-17",
-  "active": "false",
-  "type": "upcoming",
-  "category": "upcoming",
-  "tag": "superFeatured",
-  "date": "February 2, 2025",
-  "time": "After worship",
-  "location": "CPC"
-},
-{
-  "id": "2025-006",
-  "title": "Mission Trip Summer 2025, Last Week to Sign Up!",
-  "description": "We are gathering a team to serve among the urban poor in Atlantic City, NJ! Alongside New City Fellowship church, we will serve as one of their “Urban Ministry Teams” to teach the Gospel, address physical needs, and learn from the good work that has been long established in AC. We’d love for you to join us! Please contact Layne Boles (214-697-1591) or Pat Clendenen (617-680-4190).",
-  "dateEntered": "2025-01-17",
-  "active": "false",
-  "type": "upcoming",
-  "category": "upcoming",
-  "tag": "superFeatured",
-  "date": "Summer 2025",
-  "location": "Atlantic City, NJ"
-}
+      "featuredImage": "/images/announcements/sunday-schedule.jpg"
+    }
   ]
 }
