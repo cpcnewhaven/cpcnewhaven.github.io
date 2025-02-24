@@ -45,22 +45,30 @@
             }
             .sample-images {
                 display: flex;
+                flex-wrap: wrap;
                 gap: 10px;
                 margin-top: 20px;
+                justify-content: center;
             }
             .sample-images img {
                 width: 100%;
-                max-width: 300px;
+                max-width: 150px;
                 height: auto;
                 border-radius: 5px;
                 box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            }
+            @media (min-width: 600px) {
+                .sample-images img {
+                    max-width: 200px;
+                }
             }
         </style>
     </head>
     <body>
         <header>
             <!-- Featured Image -->
-            <img src="@4.png" alt="Featured Image" class="featured-image">
+            <img src="https://storage.googleapis.com/cpc-public-website/54.jpg"
+                alt="Featured Image" class="featured-image">
             <nav class="main-navigation">
                 <a href="index.html">Home</a>
                 <a href="sundays.html">Sundays</a>
