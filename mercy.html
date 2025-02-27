@@ -2,55 +2,69 @@
 <html lang="en">
     <head>
         <!-- Google Analytics -->
-        <script async
-            src="https://www.googletagmanager.com/gtag/js?id=G-TL0WH5R1EK"></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-TL0WH5R1EK"></script>
         <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'G-TL0WH5R1EK');
-    </script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+            gtag('config', 'G-TL0WH5R1EK');
+        </script>
 
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description"
-            content="CPC New Haven Church - Mercy Project Registration. Join us in serving our community through various projects.">
-        <meta name="keywords"
-            content="CPC New Haven, Church, Mercy Project, Volunteer, Community Service">
+        <meta
+            name="description"
+            content="CPC New Haven Church - Mercy Project Registration. Join us in serving our community through various projects."
+        >
+        <meta
+            name="keywords"
+            content="CPC New Haven, Church, Mercy Project, Volunteer, Community Service"
+        >
         <meta name="author" content="CPC New Haven">
         <title>Mercy Project - CPC New Haven Church</title>
         <link rel="stylesheet" href="./src/css/global-body.css">
-        <link rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-        <link rel="icon"
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        >
+        <link
+            rel="icon"
             href="https://storage.googleapis.com/cpc-public-website/web-assets/CPC%20-%20FAVICON%20-%20FALL%202024.png"
-            type="image/png">
+            type="image/png"
+        >
 
         <style>
             body {
                 background: #f0f0f0;
-            }
-
-            h4 {
-                font-weight:700;
-                text-align:center;
-                width:100%;
-                padding:10px;
-                text-transform: uppercase;
-
+                margin: 0;
+                padding: 0;
             }
             .featured-image {
                 width: 100%;
                 height: auto;
                 margin-bottom: 20px;
             }
+            /* Center text in the entire section */
             .styled-section-a {
                 padding: 20px;
+                margin: 20px;
                 background: rgba(255, 255, 255, 0.8);
                 backdrop-filter: blur(10px);
                 border-radius: 10px;
                 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-                margin: 20px;
+                text-align: center; /* <<--- ALL TEXT CENTERED */
+            }
+            h2, h4 {
+                text-transform: uppercase;
+                font-weight: 700;
+                margin-top: 0;
+            }
+            .body-text {
+                font-family: Arial, sans-serif;
+                line-height: 1.6;
+                margin-bottom: 1em;
             }
             .sample-images {
                 display: flex;
@@ -71,13 +85,49 @@
                     max-width: 200px;
                 }
             }
+
+            /* Remove bullet points, center list items */
+            .mercy-projects-list {
+                list-style: none;
+                margin: 1em auto;
+                padding-left: 0;
+                max-width: 600px;
+            }
+            .mercy-projects-list li {
+                background: #fff;
+                margin: 0.5em 0;
+                padding: 0.75em 1em;
+                border-radius: 5px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            }
+
+            /* Call-to-action button */
+            .cta-button {
+                display: inline-block;
+                margin: 1em auto;
+                padding: 0.75em 1.5em;
+                background-color: #007bff;
+                color: #fff;
+                text-decoration: none;
+                border-radius: 5px;
+                transition: background-color 0.3s ease;
+                font-weight: bold;
+            }
+            .cta-button:hover {
+                background-color: #0056b3;
+            }
         </style>
     </head>
+
     <body>
+        <!-- HEADER + NAV (unchanged) -->
         <header>
             <!-- Featured Image -->
-            <img src="https://storage.googleapis.com/cpc-public-website/54.jpg"
-                alt="Featured Image" class="featured-image">
+            <img
+                src="https://storage.googleapis.com/cpc-public-website/54.jpg"
+                alt="Featured Image"
+                class="featured-image"
+            >
             <nav class="main-navigation">
                 <a href="index.html">Home</a>
                 <a href="sundays.html">Sundays</a>
@@ -91,12 +141,12 @@
             </nav>
         </header>
 
-        <!-- MOBILE HAMBURGER-->
+        <!-- MOBILE HAMBURGER (unchanged) -->
         <div class="hamburger-menu-button-container" id="hamburgerMenu">
             <i id="closeMobileMenuButton" class="fas fa-bars"></i>
         </div>
 
-        <!-- Mobile Navigation -->
+        <!-- Mobile Navigation (unchanged) -->
         <nav class="mobile-navigation" id="mobileNavigation">
             <div class="mobile-nav-header">
                 <button id="closeMenuButton" aria-label="Close menu">
@@ -105,78 +155,94 @@
             </div>
             <ul class="mobile-nav-links">
                 <li><a class="mobile-menu-link" href="index.html">Home</a></li>
-                <li><a class="mobile-menu-link"
-                        href="sundays.html">Sundays</a></li>
+                <li><a class="mobile-menu-link" href="sundays.html">Sundays</a></li>
                 <li><a class="mobile-menu-link" href="about.html">About</a></li>
-                <li><a class="mobile-menu-link"
-                        href="podcasts.html">Podcasts</a></li>
-                <li><a class="mobile-menu-link"
-                        href="announcements.html">Announcements</a></li>
-                <li><a class="mobile-menu-link"
-                        href="community.html">Community</a></li>
+                <li><a class="mobile-menu-link" href="podcasts.html">Podcasts</a></li>
+                <li><a class="mobile-menu-link" href="announcements.html">Announcements</a></li>
+                <li><a class="mobile-menu-link" href="community.html">Community</a></li>
                 <li><a class="mobile-menu-link" href="live.html">Live</a></li>
-                <li><a class="mobile-menu-link"
-                        href="resources.html">Resources</a></li>
+                <li><a class="mobile-menu-link" href="resources.html">Resources</a></li>
                 <li><a class="mobile-menu-link" href="give.html">Give</a></li>
             </ul>
         </nav>
 
+        <!-- PAGE CONTENT -->
         <div id="page-mercy">
             <section class="styled-section-a">
                 <h2>Mercy Days Registration</h2>
-                <p class="body-text">March 29th and August 23rd</p>
                 <p class="body-text">
-                    To truly love and serve one another, we'll tackle projects
-                    for those who need any help. Each project will have a
-                    dedicated project lead/captain who will give instructions to
-                    volunteers.
+                    March 29th and August 23rd
                 </p>
-                <h4>Previous Projects Include:</h4>
-                <ul class="body-text">
+
+                <p class="body-text">
+                    To truly love and serve one another, we're organizing Mercy Projects
+                    for those who need a helping hand. Each project will have a
+                    dedicated project captain to guide volunteers.
+                </p>
+
+                <h4>Examples of Past Mercy Projects</h4>
+                <ul class="mercy-projects-list">
                     <li>Clean-Out Basement</li>
                     <li>Touch-Up Living Room</li>
                     <li>Move Soil from Cleared Land</li>
                     <li>Sand Paint off Deck</li>
                 </ul>
+
+                <p class="body-text">
+                    This is an opportunity to be vulnerable, walk alongside one another,
+                    and build deeper, more intimate relationships within our community.
+                </p>
+
                 <!-- Sample Images -->
                 <div class="sample-images">
                     <img
                         src="https://storage.googleapis.com/cpc-public-website/54.jpg"
-                        alt="Sample Image 1">
+                        alt="Sample Image 1"
+                    >
                     <img
                         src="https://storage.googleapis.com/cpc-public-website/53.jpg"
-                        alt="Sample Image 2">
+                        alt="Sample Image 2"
+                    >
                 </div>
-                <p class="body-text">
-                    This is an opportunity to be vulnerable and walk with one
-                    another, and even though that might initially be
-                    uncomfortable, it is planting the seeds and laying the
-                    foundation for deeper, more intimate relationships with our
-                    brothers and sisters.
-                </p>
-                <p class="body-text">
-                    To volunteer or request a Mercy Project, please fill out
+
+                <div>
+                    <p class="body-text">
+                        Want to volunteer or request a Mercy Project?
+                    </p>
                     <a
+                        class="cta-button"
                         href="https://docs.google.com/forms/d/e/1FAIpQLSePojMW7eLqoZMS1xRD2zr1DkRinxA0l5MWIVRN8ikUTYu74A/viewform"
-                        target="_blank">this form</a>.
-                    You can reach out to Kaitlyn Jesse directly
-                    (kaijessee@gmail.com) with any questions.
-                </p>
+                        target="_blank"
+                    >
+                        Sign Up Here
+                    </a>
+                    <p class="body-text" style="margin-top: 0.5em;">
+                        Questions? Email <a href="mailto:kaijessee@gmail.com">Kaitlyn Jesse</a> directly.
+                    </p>
+                </div>
             </section>
         </div>
 
+        <!-- FOOTER -->
         <footer>
             <div class="footer-content-logo">
                 <a href="index.html">
-                    <img src="./assets/CPC_LOGO_24.png"
-                        alt="CPC New Haven Church" class="top-splash-logo">
+                    <img
+                        src="./assets/CPC_LOGO_24.png"
+                        alt="CPC New Haven Church"
+                        class="top-splash-logo"
+                    >
                 </a>
             </div>
-            <p>Join us for worship and fellowship. <a href="sundays.html">Learn
-                    more</a></p>
-            <p>203.777.6960 | <a
-                    href="mailto:admin@cpcnewhaven.org">admin@cpcnewhaven.org</a>
-                | 135 Whitney Ave. New Haven CT 06510</p>
+            <p>
+                Join us for worship and fellowship.
+                <a href="sundays.html">Learn more</a>
+            </p>
+            <p>
+                203.777.6960 |
+                <a href="mailto:admin@cpcnewhaven.org">admin@cpcnewhaven.org</a> |
+                135 Whitney Ave. New Haven CT 06510
+            </p>
             <p>© 2024 Christ Presbyterian Church.</p>
         </footer>
 
