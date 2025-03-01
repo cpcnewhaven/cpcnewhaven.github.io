@@ -21,7 +21,7 @@
       "category": "upcoming",
       "tag": "calendar",
       "superfeatured": true,
-      "featuredImage": "/images/announcements/calendar-spring.jpg"
+      "featuredImage": "https://storage.googleapis.com/cpc-public-website/featuredIMGs/highlights/26.jpg"
     },
     {
       "id": "2025-009",
@@ -32,7 +32,7 @@
       "type": "ongoing",
       "category": "ongoing",
       "tag": "groups",
-      "featuredImage": "/images/announcements/life-groups.jpg"
+      "featuredImage": "https://storage.googleapis.com/cpc-public-website/featuredIMGs/highlights/CPC-Lifegroups.jpg"
     },
     {
       "id": "2025-010",
@@ -43,7 +43,7 @@
       "type": "ongoing",
       "category": "ongoing",
       "tag": "podcast",
-      "featuredImage": "/images/announcements/podcast.jpg"
+      "featuredImage": "https://storage.googleapis.com/cpc-public-website/featuredIMGs/highlights/27.jpg"
     },
     {
       "id": "2025-011",
@@ -54,7 +54,7 @@
       "type": "ongoing",
       "category": "ongoing",
       "tag": "book",
-      "featuredImage": "/images/announcements/book-pick.jpg"
+      "featuredImage": "https://storage.googleapis.com/cpc-public-website/featuredIMGs/highlights/25.jpg"
     },
     {
       "id": "2025-012",
@@ -65,7 +65,7 @@
       "type": "ongoing",
       "category": "ongoing",
       "tag": "schedule",
-      "featuredImage": "/images/announcements/sunday-schedule.jpg"
+      "featuredImage": "https://storage.googleapis.com/cpc-public-website/featuredIMGs/highlights/28.jpg"
     }
   ]
 }

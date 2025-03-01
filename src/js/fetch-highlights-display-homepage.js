@@ -35,12 +35,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
 
                 // Handle featured image if available
-                if (announcement.featuredIMG) {
+                if (announcement.featuredImage) {
                     const featuredImage = document.createElement('img');
-                    featuredImage.src = announcement.featuredIMG;
+                    featuredImage.src = announcement.featuredImage;
                     featuredImage.classList.add('featured-image');
                     featuredImage.style.width = '100%';
-                    featuredImage.style.height = '350px';
+                    featuredImage.style.height = 'auto';
                     featuredImage.style.objectFit = 'cover';
                     featuredImage.style.marginBottom = '1rem';
                     highlightElement.insertBefore(featuredImage, highlightElement.firstChild);
