@@ -29,6 +29,55 @@
 
         <link rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <style>
+            .give-menu {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 70vh; /* Full height to center vertically */
+            }
+
+            .give-menu-item {
+                text-align: center; /* Center-align the text and button */
+            }
+
+            .give-menu-item button {
+                width: 200px; /* Fixed width for the button */
+                margin-bottom: 10px; /* Space between button and description */
+            }
+
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+
+            @media (max-width: 768px) {
+                .give-menu-item button {
+                    width: 100%; /* Make button width responsive */
+                }
+
+                .hamburger-menu-button-container {
+                    display: block; /* Ensure the hamburger menu is visible */
+                }
+
+                .main-navigation, .mobile-navigation {
+                    display: none; /* Hide desktop navigation on small screens */
+                }
+
+                .mobile-navigation {
+                    display: block; /* Show mobile navigation */
+                }
+            }
+
+            body, h1, h2, h3, p, .center-content {
+                text-align: center; /* Center-align text for body and selected elements */
+            }
+
+            nav.main-navigation a, nav.mobile-navigation a {
+                display: block; /* Make links block to allow centering */
+                text-align: center; /* Center-align navigation links */
+            }
+        </style>
     </head>
     <body>
         <header id="stickyHeader" class="sticky">
@@ -74,24 +123,6 @@
                 <li><a class="mobile-menu-link" href="give.html">Give</a></li>
             </ul>
         </nav>
-
-        <style>
-            .give-menu {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 70vh; /* Full height to center vertically */
-            }
-
-            .give-menu-item {
-                text-align: center; /* Center-align the text and button */
-            }
-
-            .give-menu-item button {
-                width: 200px; /* Fixed width for the button */
-                margin-bottom: 10px; /* Space between button and description */
-            }
-        </style>
 
         <section>
             <div class="center-content">
