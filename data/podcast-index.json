@@ -474,7 +474,30 @@
                 "spotify_url": "https://open.spotify.com/episode/6dEL2HNqw1ZqS5JaSDIY4b?si=be83c5d5eb304d72",
                 "link": "https://open.spotify.com/episode/6dEL2HNqw1ZqS5JaSDIY4b?si=be83c5d5eb304d72",
                 "podcast-thumbnail_url": ""
+            },
+            {
+                "id": "25-03-02",
+                "title": "Choose Wisdom",
+                "author": "Rev. Craig Luekens",
+                "scripture": "Proverbs 1: 1-19",
+                "date": "2025-03-02",
+                "apple_podcasts_url": "",
+                "spotify_url": "https://open.spotify.com/episode/72GaPTPs7MBMvcrfK46fhp?si=16d4358d3e164983",
+                "link": "https://open.spotify.com/episode/72GaPTPs7MBMvcrfK46fhp?si=16d4358d3e164983",
+                "podcast-thumbnail_url": ""
+            },
+            {
+                "id": "25-03-09",
+                "title": "The Delight, Discipline, and Rewards of Wisdom",
+                "author": "Rev. Craig Luekens",
+                "scripture": "Proverbs 3: 1-26",
+                "date": "2025-03-09",
+                "apple_podcasts_url": "",
+                "spotify_url": "https://open.spotify.com/episode/0WOfOhpyvwGMAv5vR5ZpaX?si=90c2b41bc51d41c3",
+                "link": "https://open.spotify.com/episode/0WOfOhpyvwGMAv5vR5ZpaX?si=90c2b41bc51d41c3",
+                "podcast-thumbnail_url": ""
             }
+
         ]
     },
     "beyond": {
