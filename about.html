@@ -37,9 +37,10 @@ strong{
     font-weight: bold;
 }
 
-h2 {
+.about-sub-title {
     text-align:left;
-    padding: 20px;
+    font-size:36px;
+    padding-bottom:10px;
 }
 
       .main-container {
@@ -212,10 +213,16 @@ h2 {
         max-width: 100%;
         margin: 0;
         padding: 0;
+        width:100%;
+        flex-direction: column;
+        min-height:100vh;
+        display:flex;
+        align-items:center;
+        justify-content: top;
       }
 
       .about-heading {
-        text-align: left;
+        text-align: left!important;
         margin: 0 0 20px 0;
         font-size: 22px;
       }
@@ -251,6 +258,46 @@ h2 {
         max-width: 100%;
         height: auto;
         display: block;
+      }
+
+      .read-more-cont {
+        width:100%;
+        display:flex;
+        align-items:center;
+        justify-content: center;
+        margin-top:10px;
+      }
+
+      /* Footer Styles */
+      #footer-about-page {
+        background-color: #f8f9fa;
+        padding: 20px;
+        text-align: center;
+      }
+
+      #footer-about-page .body-text {
+        color: #333;
+        font-size: 16px;
+        line-height: 1.6;
+        margin: 0 0 10px 0;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      #footer-about-page a {
+        color: var(--cpc-blue);
+        text-decoration: underline;
+      }
+
+      #footer-about-page a:hover {
+        color: #0056b3;
+      }
+
+      .footer-content-logo img {
+        max-width: 400px;
+        min-width:200px;
+        margin-bottom: 10px;
       }
     </style>
     </head>
@@ -383,7 +430,7 @@ h2 {
                             "the Word was made flesh, and dwelled among us; to that flesh is joined the church, and there is made total Christ, both head and body."
                         </p>
 
-                        <h2>The Five Marks</h2>
+                        <h2 class="about-sub-title">The Five Marks</h2>
                         <p class="about-body-text">
                             <strong>1. Gospel-Centered:</strong> Trust in the
                             gospel motivates
@@ -501,7 +548,7 @@ h2 {
                             have the privilege to embody it in the church.
                         </p>
 
-                        <h3>Our Five Basic Commitments</h3>
+                        <h2 class="about-sub-title">Our Five Basic Commitments</h3>
                         <p class="about-body-text">
                             <b>1.</b><strong> Scripture - We are committed to
                                 the Old and New Testament Scriptures as our only
@@ -628,20 +675,7 @@ h2 {
                             ourselves, but made ALL of us, and he deserves it
                             all to be offered as thankful worship.
                         </p>
-                        <p class="body-text">
-                            <br><br>
-                            Christ Presbyterian Church, New Haven, is a member
-                            of the Presbyterian Church in America (PCA). As one
-                            of many communions in the church universal, the PCA
-                            may be distinguished by its affirmation of what has
-                            been described as the "Reformed system of faith" as
-                            reflected in the Westminster Confession of Faith.
-                            The PCA is characterized by its emphasis on both
-                            personal revival and theological reformation. By
-                            promoting reformation and revival, we seek to carry
-                            out the Great Commission with Biblical integrity and
-                            personal authenticity unto the glory of God.
-                        </p>
+                       
 
                     </section>
                 </div>
@@ -653,16 +687,18 @@ h2 {
                             <div class="about-staff-member">
                                 <h3>Craig Luekens</h3>
                                 <h4>Senior Pastor</h4>
+                                <div class="read-more-cont">
                                 <button class="read-more-button"
                                     onclick="window.location.href='https://cpcnewhaven.org/rev-craig-luekens.html'">Pastor
-                                    Bio</button>
+                                    Bio</button></div>
                             </div>
                             <div class="about-staff-member">
                                 <h3>Jerry Ornelas</h3>
                                 <h4>Assistant Pastor</h4>
+                                <div class="read-more-cont">
                                 <button class="read-more-button"
                                     onclick="window.location.href='https://cpcnewhaven.org/rev-jerry-ornelas.html'">Pastor
-                                    Bio</button>
+                                    Bio</button></div>
                             </div>
                             <div class="about-staff-member">
                                 <h3>Alexis Vano</h3>
@@ -866,6 +902,20 @@ h2 {
                         class="top-splash-logo" />
                 </a>
             </div>
+            <p class="body-text">
+   
+                Christ Presbyterian Church, New Haven, is a member
+                of the Presbyterian Church in America (PCA). As one
+                of many communions in the church universal, the PCA
+                may be distinguished by its affirmation of what has
+                been described as the "Reformed system of faith" as
+                reflected in the Westminster Confession of Faith.
+                The PCA is characterized by its emphasis on both
+                personal revival and theological reformation. By
+                promoting reformation and revival, we seek to carry
+                out the Great Commission with Biblical integrity and
+                personal authenticity unto the glory of God.
+            </p>
             <p>Join us for worship and fellowship. <a href="sundays.html">Learn
                     more</a></p>
             <p>203.777.6960 | <a
