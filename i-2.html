@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-TL0WH5R1EK"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-TL0WH5R1EK");
+    </script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="CPC New Haven Church - 135 Whitney Ave New Haven, CT. We are a church committed to serving and reaching the Greater New Haven area. Join us for worship and fellowship."
+    />
+    <meta
+      name="keywords"
+      content="CPC New Haven, Church, New Haven, CT, Worship, Fellowship"
+    />
+    <meta name="author" content="CPC New Haven" />
+    <title>
+      CPC New Haven Church | Come Worship with Us | Sundays - 10:30am | 135
+      Whitney Ave - New Haven,CT
+    </title>
+    <link rel="icon"
+      href="https://storage.googleapis.com/cpc-public-website/web-assets/CPC%20-%20FAVICON%20-%20FALL%202024.png"
+      type="image/png"
+    />
+    <!-- Example minimal reset/structure. You could also integrate a CSS framework if desired. -->
+    <style>
+      /* === Base Resets === */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body, html {
+        font-family: Arial, sans-serif;
+        background-color: #f5f7fa;
+        color: #333;
+        height: 100%;
+        width: 100%;
+      }
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      /* === Layout: Sidebar + Main === */
+      .dashboard-container {
+        display: flex;
+        height: 100vh;
+        overflow: hidden;
+      }
+
+      .sidebar {
+        background-color: #2c3e50;
+        color: #ecf0f1;
+        width: 240px;
+        flex-shrink: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem 1rem;
+      }
+      .sidebar h2 {
+        margin-bottom: 2rem;
+      }
+      .sidebar nav a {
+        display: block;
+        padding: 0.75rem;
+        border-radius: 4px;
+        margin: 0.25rem 0;
+        color: #ecf0f1;
+        transition: background-color 0.2s ease;
+      }
+      .sidebar nav a:hover {
+        background-color: #34495e;
+      }
+
+      /* Mobile nav toggle - hidden for this snippet, but you could integrate a hamburger if needed */
+      @media (max-width: 768px) {
+        .sidebar {
+          position: fixed;
+          top: 0;
+          left: 0;
+          height: 100vh;
+          z-index: 999;
+          transform: translateX(-100%);
+          transition: transform 0.3s ease;
+        }
+        .sidebar.open {
+          transform: translateX(0);
+        }
+      }
+
+      /* === Main Content as a Scrollable Dashboard === */
+      .main-dashboard {
+        flex-grow: 1;
+        overflow-y: auto;
+        padding: 2rem 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+      }
+
+      /* === Widget/Card Styles === */
+      .widget {
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        padding: 1.5rem;
+      }
+      .widget h1,
+      .widget h2,
+      .widget h3 {
+        margin-bottom: 1rem;
+      }
+      .widget p {
+        margin-bottom: 0.5rem;
+      }
+      .widget .btn {
+        display: inline-block;
+        background-color: #3498db;
+        color: #fff;
+        padding: 0.75rem 1.25rem;
+        border-radius: 4px;
+        margin-top: 1rem;
+        transition: background-color 0.2s;
+        text-align: center;
+      }
+      .widget .btn:hover {
+        background-color: #2980b9;
+      }
+
+      /* Example banner style re-used in a widget */
+      .warning-banner {
+        padding: 15px;
+        background: linear-gradient(135deg, #6b73ff 0%, #000dff 100%);
+        color: #fff !important;
+        font-weight: bold;
+        text-align: center;
+        font-size: 16px;
+        border-radius: 5px;
+        margin-bottom: 1.5rem;
+      }
+
+      /* Featured links styled as mini-cards within a widget */
+      .featured-links-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center;
+      }
+      .featured-link {
+        background-color: #ecf0f1;
+        color: #2c3e50;
+        padding: 1rem;
+        border-radius: 6px;
+        min-width: 150px;
+        text-align: center;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
+      .featured-link:hover {
+        transform: translateY(-3px);
+      }
+
+      /* Footer container at the bottom of the main content. */
+      footer {
+        margin-top: auto;
+        text-align: center;
+        padding: 2rem 1rem;
+        background-color: #fff;
+        border-top: 1px solid #ddd;
+      }
+      footer p {
+        margin-bottom: 0.5rem;
+      }
+      footer img {
+        max-height: 50px;
+      }
+
+      /* Basic form styling */
+      form.neumorphic-form {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        max-width: 400px;
+        margin: 0 auto;
+      }
+      form.neumorphic-form input {
+        padding: 0.75rem;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+      form.neumorphic-form button {
+        background-color: #3498db;
+        color: #fff;
+        padding: 0.75rem 1.25rem;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      form.neumorphic-form button:hover {
+        background-color: #2980b9;
+      }
+
+      /* Example styling for the embedded Spotify iframe to keep it consistent */
+      iframe {
+        width: 100%;
+        border-radius: 6px;
+      }
+
+      /* Utility classes */
+      .text-center {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body id="homepage">
+    <div class="dashboard-container">
+      <!-- Sidebar -->
+      <aside class="sidebar" id="sidebarNav">
+        <h2>CPC New Haven</h2>
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="sundays.html">Sundays</a>
+          <a href="about.html">About</a>
+          <a href="podcasts.html">Podcasts</a>
+          <a href="announcements.html">Announcements</a>
+          <a href="community.html">Community</a>
+          <a href="live.html">Live</a>
+          <a href="resources.html">Resources</a>
+          <a href="give.html">Give</a>
+        </nav>
+      </aside>
+
+      <!-- Main Content Area (Dashboard) -->
+      <main class="main-dashboard">
+        <!-- Widget: Hero / Splash -->
+        <section class="widget">
+          <div class="text-center">
+            <img
+              class="hero-logo-img"
+              src="assets/web-assets/cpcLOGO.png"
+              alt="CPC New Haven Logo"
+              style="max-height: 120px; margin-bottom: 1rem;"
+            />
+            <h1>Come Worship with Us</h1>
+            <h2>Sundays - 10:30am</h2>
+            <p>135 Whitney Ave - New Haven,CT</p>
+          </div>
+        </section>
+
+        <!-- Widget: Warning Banner -->
+        <section class="widget">
+          <div class="warning-banner">
+            <p>No Sunday School or Lunch 3/9 &amp; 3/16</p>
+            <p>No Pastor Drop-in Office Hours 3/12 &amp; 3/14</p>
+          </div>
+        </section>
+
+        <!-- Widget: Welcome / About -->
+        <section class="widget">
+          <h2>All Are Welcome</h2>
+          <p>
+            Everyone is truly welcomed into God's presence because there is no
+            limit to God's grace as accomplished for us by Christ. No matter who
+            you are or where you've been, CPC hopes to be a community where you
+            can discover the transforming power of the Gospel. Everything we do
+            - from Sunday worship to small groups, fellowship meals, and loving
+            service - seeks to be grounded in the Good News.
+          </p>
+          <p>
+            Though we may be more sinful than we're even willing to imagine, we
+            are more loved in Christ than we can ever dare to hope. Please join
+            us as we hope to be one example of the presence of the Holy Spirit
+            in and for New Haven.
+          </p>
+          <p>
+            For more about who we are as a church, please visit the About page.
+            For the most current events, please scroll down for Highlights. The
+            best way to plug in is to worship with us on a Sunday and visit a
+            Life Group near you.
+          </p>
+          <div style="text-align: center;">
+            <a href="about.html">
+              <button class="btn">Learn More</button>
+            </a>
+          </div>
+        </section>
+
+        <!-- Widget: Highlights (fetched dynamically) -->
+        <section class="widget">
+          <h2>Highlights</h2>
+          <div class="highlights-content">
+            <!-- Highlights will be populated here by the JavaScript -->
+          </div>
+        </section>
+
+        <!-- Widget: Sermons and Podcasts -->
+        <section class="widget">
+          <h2>Sermons and Podcasts</h2>
+          <p>
+            Listen to our Adult Sunday School Classes, Sunday Sermons, and
+            conversations between our pastors and congregates. New episodes
+            available weekly on Apple Podcasts and Spotify.
+          </p>
+          <div>
+            <h3>Latest Episode</h3>
+            <iframe
+              style="border-radius: 12px;"
+              src="https://open.spotify.com/embed/episode/0WOfOhpyvwGMAv5vR5ZpaX?si=33a557d47f284c20"
+              height="200"
+              frameborder="0"
+              allowfullscreen=""
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"
+            ></iframe>
+          </div>
+          <div style="margin-top: 1rem;">
+            <a href="podcasts.html" class="btn">Visit Podcast Archive</a>
+          </div>
+        </section>
+
+        <!-- Widget: Newsletter Subscription -->
+        <section class="widget text-center">
+          <h2>Subscribe to our Newsletter</h2>
+          <p>
+            Our weekly newsletter goes out on Friday mornings with Sunday
+            Service information, highlights, upcoming events, and useful links.
+          </p>
+          <form
+            action="https://formspree.io/f/meojowwg"
+            method="POST"
+            class="neumorphic-form"
+          >
+            <input type="text" name="name" placeholder="Your name" required />
+            <input type="email" name="email" placeholder="Your email" required />
+            <button type="submit">Subscribe to CPC New Haven</button>
+          </form>
+        </section>
+
+        <!-- Widget: Featured Links -->
+        <section class="widget">
+          <h2>Featured Links</h2>
+          <div class="featured-links-grid">
+            <a href="adult-sunday-school.html" target="_blank" class="featured-link">
+              Adult Sunday School
+            </a>
+            <a href="mercy.html" target="_blank" class="featured-link">
+              Mercy Days Page
+            </a>
+          </div>
+        </section>
+
+        <!-- Widget: Call to Action for Old Website -->
+        <section class="widget text-center"
+          style="background: linear-gradient(135deg, #6B73FF 0%, #000DFF 100%); color: #fff;"
+        >
+          <h2>Looking for Something Else?</h2>
+          <p>
+            Our old website may still hold resources and archived materials not
+            yet moved here. For previous sermons, event information, or historical
+            content, take a look below!
+          </p>
+          <a href="https://www.cpcnewhaven.org/" class="btn" style="background-color: #fff; color: #000DFF;">
+            Visit Our Old Website
+          </a>
+        </section>
+
+        <!-- Widget: Contact / CTA -->
+        <section class="widget text-center"
+          style="background: linear-gradient(135deg, #6B73FF 0%, #000DFF 100%); color: #fff;"
+        >
+          <h2>Get in Touch with CPC New Haven</h2>
+          <p>
+            Need to schedule a pastoral visit or have any inquiries? We'd love to
+            hear from you!
+          </p>
+          <a href="contact.html" class="btn" style="background-color: #fff; color: #000DFF;">
+            Contact Us
+          </a>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+          <div>
+            <a href="index.html">
+              <img
+                src="./assets/CPC_LOGO_24.png"
+                alt="CPC New Haven Church"
+              />
+            </a>
+          </div>
+          <p>
+            Join us for worship and fellowship.
+            <a href="sundays.html">Learn more</a>
+          </p>
+          <p>
+            203.777.6960 |
+            <a href="mailto:admin@cpcnewhaven.org">admin@cpcnewhaven.org</a> |
+            135 Whitney Ave. New Haven CT 06510
+          </p>
+          <p>© 2025 Christ Presbyterian Church.</p>
+        </footer>
+      </main>
+    </div>
+
+    <!-- Scripts -->
+    <!-- Example JS for dynamic content; keep your existing scripts as needed -->
+    <script src="./src/js/fetch-highlights-display-homepage.js"></script>
+    <script src="./src/js/function_toggle_mobileMenu.js"></script>
+    <script src="./src/js/background-fetch-splash-image.js"></script>
+    <script src="./src/js/dynamic-banner.js"></script>
+    <script src="./src/homepage-display-sermon.js"></script>
+  </body>
+</html>
