@@ -75,14 +75,18 @@
             }
             .sample-images img {
                 width: 100%;
-                max-width: 150px;
+                max-width: 300px;
                 height: auto;
                 border-radius: 5px;
                 box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                transition: transform 0.3s ease;
+            }
+            .sample-images img:hover {
+                transform: scale(1.05);
             }
             @media (min-width: 600px) {
                 .sample-images img {
-                    max-width: 200px;
+                    max-width: 400px;
                 }
             }
 
@@ -120,14 +124,7 @@
     </head>
 
     <body>
-        <!-- HEADER + NAV (unchanged) -->
-        <header>
-            <!-- Featured Image -->
-            <img
-                src="https://storage.googleapis.com/cpc-public-website/54.jpg"
-                alt="Featured Image"
-                class="featured-image"
-            >
+        <header id="stickyHeader" class="sticky">
             <nav class="main-navigation">
                 <a href="index.html">Home</a>
                 <a href="sundays.html">Sundays</a>
@@ -195,14 +192,12 @@
 
                 <!-- Sample Images -->
                 <div class="sample-images">
-                    <img
-                        src="https://storage.googleapis.com/cpc-public-website/54.jpg"
-                        alt="Sample Image 1"
-                    >
-                    <img
-                        src="https://storage.googleapis.com/cpc-public-website/53.jpg"
-                        alt="Sample Image 2"
-                    >
+                    <a href="https://storage.googleapis.com/cpc-public-website/54.jpg" target="_blank">
+                        <img src="https://storage.googleapis.com/cpc-public-website/54.jpg" alt="Sample Image 1">
+                    </a>
+                    <a href="https://storage.googleapis.com/cpc-public-website/53.jpg" target="_blank">
+                        <img src="https://storage.googleapis.com/cpc-public-website/53.jpg" alt="Sample Image 2">
+                    </a>
                 </div>
 
                 <div>
@@ -244,9 +239,7 @@
                 135 Whitney Ave. New Haven CT 06510
             </p>
             <p>© 2024 Christ Presbyterian Church.</p>
-            <div class="footer-cta">
-                <a class="cta-button" href="sundays.html">Join Us This Sunday</a>
-            </div>
+   
         </footer>
 
         <script src="./src/js/function_toggle_mobileMenu.js"></script>
