@@ -130,9 +130,64 @@
         </div>
     </div>
     -->
-    <div class="splash-hero--podcasts">
-        <h1>Podcasts</h1>
+    <div x-data="{ 
+        images: [
+            'https://storage.googleapis.com/cpc-public-website/podcast-thumbnails/9.08.24%20-%20CPC.jpg',
+            'https://storage.googleapis.com/cpc-public-website/podcast-thumbnails/9.15.24%20-%20CPC.jpg',
+            'https://storage.googleapis.com/cpc-public-website/podcast-thumbnails/10.06.24%20-%20CPC.jpg',
+            'https://storage.googleapis.com/cpc-public-website/podcast-thumbnails/10.20.24%20-%20CPC.jpg',
+            'https://storage.googleapis.com/cpc-public-website/podcast-thumbnails/11.10.24%20-%20CPC.jpg'
+        ],
+        currentIndex: 0
+    }" 
+    x-init="setInterval(() => { currentIndex = (currentIndex + 1) % images.length }, 10000)"
+    class="splash-hero--podcasts"
+    :style="`background-image: url('${images[currentIndex]}')`">
+        <div class="hero-content">
+            <h1>Podcasts</h1>
+            <!--
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search podcasts..." class="search-bar">
+                <button id="clearSearchButton" class="clear-search-button">Clear</button>
+            </div>
+            -->
+        </div>
     </div>
+
+    <style>
+        .splash-hero--podcasts {
+            height: 100vh;
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            backdrop-filter: blur(5px);
+            transition: background-image 1s ease-in-out;
+            filter: brightness(1.10); /* Darken the images */
+        }
+
+        .hero-content {
+            text-align: center;
+            color: white;
+            backdrop-filter: blur(5px);
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+        }
+
+        .search-bar {
+            margin-top: 20px;
+            padding: 10px;
+            width: 80%;
+            max-width: 400px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+    </style>
 
     <!-- Search and Filter Section -->
     <!--
@@ -182,7 +237,7 @@
             -->
          
          
-            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/0Azt628vb5FyVTMHeK1wnp?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/0WOfOhpyvwGMAv5vR5ZpaX?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
             <br>
             
             <h4>The Sunday Sermon Archive</h4>
@@ -213,7 +268,7 @@
         <section id="podcast-beyond" class="inner-page-section" style="margin-top:20px;" x-data="{ sortKey: '', sortAsc: true }">
        
        
-            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/6y7UXtbPSSTyfv0buZ4fAb?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/5vDoLAVm25eYpTWNXQAZzm?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
             <br>
             <h4>Beyond The Sunday Sermon Archive</h4>
             <table id="beyond-sermon-table">
