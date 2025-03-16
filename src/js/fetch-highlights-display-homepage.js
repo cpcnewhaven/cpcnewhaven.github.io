@@ -41,8 +41,12 @@ document.addEventListener('DOMContentLoaded', function() {
                     featuredImage.classList.add('featured-image');
                     featuredImage.style.width = '100%';
                     featuredImage.style.height = 'auto';
+                    featuredImage.style.maxHeight = '400px';
                     featuredImage.style.objectFit = 'cover';
                     featuredImage.style.marginBottom = '1rem';
+                    if (announcement.featuredImage.length > 400) {
+                        featuredImage.style.backgroundAttachment = 'fixed';
+                    }
                     highlightElement.insertBefore(featuredImage, highlightElement.firstChild);
                 }
                 // Set background image if available
