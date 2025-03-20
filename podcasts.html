@@ -156,7 +156,7 @@
 
     <style>
         .splash-hero--podcasts {
-            height: 100vh;
+            height: 60vh; /* Reduced height */
             margin-top: 10px;
             display: flex;
             justify-content: center;
@@ -164,28 +164,41 @@
             background-size: cover;
             background-position: center;
             position: relative;
-            backdrop-filter: blur(5px);
             transition: background-image 1s ease-in-out;
-            filter: brightness(1.10); /* Darken the images */
+        }
+
+        .splash-hero--podcasts::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.7); /* Darker overlay for better contrast */
         }
 
         .hero-content {
+            position: relative; /* Ensures content appears above the overlay */
             text-align: center;
-            color: white;
-            backdrop-filter: blur(5px);
-            padding: 20px;
-            background-color: rgba(0, 0, 0, 0.5);
-            border-radius: 10px;
+            z-index: 1;
         }
 
-        .search-bar {
-            margin-top: 20px;
-            padding: 10px;
-            width: 80%;
-            max-width: 400px;
-            border: none;
-            border-radius: 5px;
-            font-size: 1em;
+        .hero-content h1 {
+            color: white;
+            font-size: 4rem;
+            font-weight: 700;
+            margin: 0;
+            letter-spacing: 2px;
+        }
+
+        @media (max-width: 768px) {
+            .splash-hero--podcasts {
+                height: 40vh;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
         }
     </style>
 
