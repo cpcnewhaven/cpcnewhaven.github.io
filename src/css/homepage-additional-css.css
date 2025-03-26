@@ -1,0 +1,139 @@
+ #visit-old-site-cta {
+    background: linear-gradient(135deg, #6B73FF 0%, #000DFF 100%);
+    border-radius: 12px;
+    margin: 40px auto;
+    max-width: 800px;
+    text-align: center;
+    padding: 50px 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  #visit-old-site-cta .visit-old-site-content h2 {
+    color: #fff;
+    font-size: 2em;
+    margin-bottom: 15px;
+  }
+
+  #visit-old-site-cta .visit-old-site-content p {
+    color: #f0f0f0;
+    font-size: 1.1em;
+    margin-bottom: 25px;
+    line-height: 1.5;
+  }
+
+  #visit-old-site-cta .visit-old-site-button {
+    background-color: #fff;
+    color: #000DFF;
+    text-decoration: none;
+    padding: 12px 30px;
+    font-size: 1.2em;
+    border-radius: 50px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  #visit-old-site-cta .visit-old-site-button:hover {
+    background-color: #000DFF;
+    color: #fff;
+  }
+
+  #featured-links {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 40px 20px;
+    margin: 40px auto;
+    border-radius: 12px;
+    max-width: 800px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+  }
+
+  /* Header styling */
+  #featured-links .featured-links-header {
+ 
+    font-size: 1.32em;
+    margin-bottom: 20px;
+  }
+
+  /* Container for the individual links */
+  #featured-links .featured-links-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  /* Individual link styling as a card */
+  #featured-links .featured-link {
+    display: inline-block;
+    background: #fff;
+    color: black;
+    padding: 15px 25px;
+    border-radius: 8px;
+    font-size: 1em;
+    font-weight: 400;
+    text-decoration: none;
+    width: 100%;
+    max-width: 350px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+  }
+
+  /* Hover effect for links */
+  #featured-links .featured-link:hover {
+    background: var(--primary-color);
+    color: white;
+    transform: translateY(-5px);
+  }
+
+    /* Container styles */
+    #refactored-contact {
+        background: linear-gradient(135deg, #6B73FF 0%, #000DFF 100%);
+        padding: 50px 20px;
+        border-radius: 12px;
+        margin: 40px auto;
+        max-width: 800px;
+        text-align: center;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      }
+    
+      /* Heading styles */
+      #refactored-contact .contact-content h2 {
+        color: #fff;
+        font-size: 2em;
+        margin-bottom: 15px;
+      }
+    
+      /* Paragraph styles */
+      #refactored-contact .contact-content p {
+        color: #f0f0f0;
+        font-size: 1.1em;
+        margin-bottom: 25px;
+        line-height: 1.5;
+      }
+    
+      /* Button styles */
+      #refactored-contact .contact-button {
+        background-color: #fff;
+        color: #000DFF;
+        text-decoration: none;
+        padding: 12px 30px;
+        font-size: 1.2em;
+        border-radius: 50px;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      }
+    
+      /* Button hover effect */
+      #refactored-contact .contact-button:hover {
+        background-color: #000DFF;
+        color: #fff;
+      }
+
+
+      @media (max-width: 768px) {
+        .splash-hero--home {
+          height: 100vh;
+          margin-top: 0px;
+          padding-top:px;
+        }
+      }
