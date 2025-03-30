@@ -62,7 +62,7 @@
             <li><a class="mobile-menu-link" href="sundays.html">Sundays</a></li>
             <li><a class="mobile-menu-link" href="about.html">About</a></li>
             <li><a class="mobile-menu-link" href="podcasts.html">Podcasts</a></li>
-            <li><a class="mobile-menu-link" href="announcements.html">Announcements</a></li>
+            <li><a class="mobile-menu-link" href="events.html">Events</a></li>
             <li><a class="mobile-menu-link" href="community.html">Community</a></li>
             <li><a class="mobile-menu-link" href="live.html">Live</a></li>
             <li><a class="mobile-menu-link" href="resources.html">Resources</a></li>
@@ -424,7 +424,7 @@
         <h2 class="subscribe-header">Subscribe to Our Podcasts</h2>
         <p class="subscribe-text">Stay updated with our latest episodes. Subscribe now on your favorite platform:</p>
         <div class="subscribe-links">
-            <a href="https://podcasts.apple.com/us/podcast/cpc-new-haven-podcasts/id1553483670" target="_blank" class="subscribe-button">Apple Podcasts</a><hr>
+            <a href="https://podcasts.apple.com/us/podcast/cpc-new-haven-podcasts/id1553483670" target="_blank" class="subscribe-button">Apple Podcasts</a>
             <a href="https://open.spotify.com/show/22kjUJyC0VH3cMfCSe9kEk?si=84da3e652bc24af2" target="_blank" class="subscribe-button">Spotify</a>
         </div>
     </section>
@@ -457,6 +457,14 @@
             line-height: 1.5;
         }
 
+        /* Container for subscribe links */
+        .subscribe-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
         /* Button styles */
         .subscribe-button {
             background-color: #fff;
@@ -465,9 +473,9 @@
             padding: 12px 30px;
             font-size: 1.2em;
             border-radius: 50px;
-            margin: 0 10px;
             transition: background-color 0.3s ease, color 0.3s ease;
             box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            flex: 0 1 auto; /* This allows buttons to maintain their natural width */
         }
 
         /* Button hover effect */
