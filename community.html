@@ -112,49 +112,251 @@
     </div>
     <div class="longInfo-tab-content">
         <div x-show="activeTab === 'smallGroups'">
-            <h2>Small Groups</h2>
-            <br>
-            <div class="longInfo-submenu" style="text-align: center;">
-                <button @click="activeSubTab = 'lifegroups'" :class="{ 'active': activeSubTab === 'lifegroups' }">Life Groups</button>
-                <button @click="activeSubTab = 'discipleship'" :class="{ 'active': activeSubTab === 'discipleship' }">Discipleship Groups</button>
+            <h2>Small Groups at CPC</h2>
+            
+            <div class="groups-hero">
+                <p class="body-text block-quote">"God has so composed the body, giving greater honor to the part that lacked it, that there may be no division in the body, but that the members may have the same care for one another. If one member suffers, all suffer together; if one member is honored, all rejoice together." - 1 Corinthians 12:24-26</p>
             </div>
-            <div x-show="activeSubTab === 'lifegroups'">
-                <h3>Life Groups</h3>
-                <p class="body-text">God's people are the hands and feet of
-                    Christ. We cannot experience God and grow spiritually in a
-                    truly gospel-centered and biblical way if we are living in
-                    isolation. Neither can we say we are flourishing if our
-                    brother or sister in Christ is suffering. Bound together
-                    with covenant communion, God brings us into new
-                    relationships where sacrifice is freedom and giving to
-                    others is where we find life.</p>
-                <p class="body-text">Life Groups are our way of doing church in
-                    the small with all sorts of people engaged in prayer,
-                    teaching, fellowship and care. They are the vehicle that we
-                    use to help its participants continue to experience Christ
-                    outside of our worship gatherings and to impart the pastoral
-                    care that Christ provides through the love of His people.
-                    Thus, the worship, teaching, fellowship, and care for one
-                    another supply a more intimate and hands-on encounter with
-                    the living Christ.</p>
 
+            <div class="groups-content">
+                <!-- Introduction -->
+                <div class="groups-intro">
+                    <p class="body-text">At CPC, we believe in doing life together. Our small groups come in two complementary forms: Life Groups and Discipleship Groups. We encourage all members to participate in both types of groups to experience the full richness of Christian community.</p>
             </div>
-            <div x-show="activeSubTab === 'discipleship'">
-                <h3>Discipleship Groups</h3>
-                <p class="body-text">Christian discipleship is the application
-                    of the gospel to every aspect of life. The very gospel that
-                    sets us free from the fear of divine and human condemnation
-                    is the same power that transforms our relationships, work,
-                    and worship. Biblical discipleship, including word, worship,
-                    and fellowship, exists at CPC primarily through Sunday
-                    worship, courses offered through the School of Discipleship,
-                    and Men's and Women's Discipleship Groups.</p>
-                <p class="body-text">We encourage all congregation members to
-                    participate in both a Life Group and a Discipleship Group.
-                    Although there are components of study in each Discipleship
-                    Group, their focus is on living and sharing truth through
-                    mutual accountability, study, and prayer.</p>
+
+                <!-- Video Section -->
+                <div class="video-section">
+                    <div class="video-responsive">
+                        <iframe width="560" height="315" 
+                            src="https://www.youtube.com/embed/q1yV-kpugTA?si=xuvAEZL_82JngHKR" 
+                            title="YouTube video player" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            allowfullscreen>
+                        </iframe>
             </div>
+        </div>
+
+                <!-- Image Gallery -->
+                <div class="groups-gallery">
+                    <img src="https://storage.googleapis.com/cpc-public-website/lifegroup-pics/cpc-lifegroup-2.jpeg" alt="Life Group Meeting" class="gallery-image">
+                    <img src="https://cpmfiles1.com/cpcnewhaven.org/life-group-header-1200-400-px.jpg" alt="Community Gathering" class="gallery-image">
+            </div>
+
+                <!-- Group Types -->
+                <div class="group-types">
+                    <div class="group-type life-groups">
+                        <h3>Life Groups</h3>
+                        <p class="body-text">Life Groups are our way of doing church in the small, where people engage in prayer, teaching, fellowship and care. These groups help participants experience Christ outside of worship gatherings and receive pastoral care through the love of His people.</p>
+            </div>
+                    
+                    <div class="group-type discipleship-groups">
+                        <h3>Discipleship Groups</h3>
+                        <p class="body-text">Christian discipleship applies the gospel to every aspect of life. Through mutual accountability, study, and prayer, these groups focus on living and sharing truth. The gospel that frees us from fear transforms our relationships, work, and worship.</p>
+    </div>
+</div>
+
+                <!-- Contact Grid -->
+                <div class="groups-grid">
+                    <h3>Find Your Group</h3>
+                    
+                    <!-- Life Groups -->
+                    <div class="grid-section life-groups">
+                        <h4>Life Groups by Area</h4>
+                        <div class="contact-grid">
+                            <div class="contact-card">
+                                <h5>Hamden Cheshire</h5>
+                                <a href="mailto:walkerjulie604@gmail.com">Julie Walker</a>
+                            </div>
+                            <div class="contact-card">
+                                <h5>Downtown New Haven (Wed)</h5>
+                                <a href="mailto:c.mccormack418@gmail.com">Colleen Rice</a>
+    </div>
+                            <div class="contact-card">
+                                <h5>Downtown New Haven (Thu)</h5>
+                                <a href="mailto:akebabian@gmail.com">Alicia Kebabian</a>
+        </div>
+                            <div class="contact-card">
+                                <h5>East Rock</h5>
+                                <a href="mailto:kaijessee@gmail.com">Kaitlyn Jessee</a>
+                            </div>
+                            <div class="contact-card">
+                                <h5>Trumbull</h5>
+                                <a href="mailto:mrsprofdoc@icloud.com">Stacy Roney</a>
+                            </div>
+                            <div class="contact-card">
+                                <h5>Shoreline Saturday</h5>
+                                <a href="mailto:mhbogue@yahoo.com">Cliff Bogue</a>
+                            </div>
+                            <div class="contact-card">
+                                <h5>West Side</h5>
+                                <a href="mailto:mirandajrdn8@gmail.com">Miranda Healy</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Discipleship Groups -->
+                    <div class="grid-section discipleship-groups">
+                        <h4>Discipleship Groups</h4>
+                        <div class="contact-grid">
+                            <div class="contact-card">
+                                <h5>Men's Group</h5>
+                                <a href="mailto:david.taylor@cpcnewhaven.org">David Taylor</a>
+                            </div>
+                            <div class="contact-card">
+                                <h5>Women's Group</h5>
+                                <a href="mailto:diane.miller@cpcnewhaven.org">Diane Miller</a>
+                            </div>
+                            <div class="contact-card">
+                                <h5>Mom's Group</h5>
+                                <a href="mailto:meg.bogue@cpcnewhaven.org">Meg Bogue</a>
+                            </div>
+                            <div class="contact-card">
+                                <h5>Young at Heart (60+)</h5>
+                                <a href="mailto:stacy.roney@cpcnewhaven.org">Stacy Roney</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <style>
+                .groups-hero {
+                    text-align: center;
+                    margin: 2rem 0;
+                    padding: 2rem;
+                    background: rgba(0,0,0,0.05);
+                    border-radius: 8px;
+                }
+
+                .block-quote {
+                    font-style: italic;
+                    max-width: 800px;
+                    margin: 0 auto;
+                    color: #333;
+                    font-size: 1.2rem;
+                    line-height: 1.6;
+                }
+
+                .groups-intro {
+                    text-align: center;
+                    max-width: 800px;
+                    margin: 2rem auto;
+                }
+
+                .video-section {
+                    margin: 3rem 0;
+                }
+
+                .video-responsive {
+                    position: relative;
+                    padding-bottom: 56.25%;
+                    height: 0;
+                    overflow: hidden;
+                }
+
+                .video-responsive iframe {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                }
+
+                .groups-gallery {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                    gap: 1rem;
+                    margin: 2rem 0;
+                }
+
+                .gallery-image {
+                    width: 100%;
+                    height: 200px;
+                    object-fit: cover;
+                    border-radius: 8px;
+                }
+
+                .group-types {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                    gap: 2rem;
+                    margin: 3rem 0;
+                }
+
+                .group-type {
+                    padding: 2rem;
+                    background: rgba(255,255,255,0.1);
+                    border-radius: 12px;
+                }
+
+                .groups-grid {
+                    margin-top: 3rem;
+                }
+
+                .grid-section {
+                    margin: 2rem 0;
+                }
+
+                .contact-grid {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                    gap: 1.5rem;
+                    margin-top: 1rem;
+                }
+
+                .contact-card {
+                    background: white;
+                    padding: 1.5rem;
+                    border-radius: 8px;
+                    text-align: center;
+                    transition: transform 0.3s ease;
+                    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                }
+
+                .contact-card:hover {
+                    transform: translateY(-3px);
+                }
+
+                .contact-card h5 {
+                    margin: 0 0 1rem 0;
+                    color: #333;
+                    font-size: 1.1rem;
+                }
+
+                .contact-card a {
+                    display: inline-block;
+                    padding: 0.5rem 1rem;
+                    background: #333;
+                    color: white;
+                    text-decoration: none;
+                    border-radius: 25px;
+                    font-size: 0.9rem;
+                    transition: background 0.3s ease;
+                }
+
+                .contact-card a:hover {
+                    background: #555;
+                }
+
+                @media (max-width: 768px) {
+                    .contact-grid {
+                        grid-template-columns: 1fr;
+                    }
+
+                    .block-quote {
+                        font-size: 1rem;
+                    }
+
+                    .group-types {
+                        grid-template-columns: 1fr;
+                    }
+
+                    .groups-gallery {
+                        grid-template-columns: 1fr;
+                    }
+                }
+            </style>
         </div>
         <div x-show="activeTab === 'ministries'">
             <h2>Ministries</h2>
