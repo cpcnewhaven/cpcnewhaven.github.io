@@ -518,7 +518,19 @@
                 "spotify_url": "https://open.spotify.com/episode/0Gv9ALz732OhNJjlz3TYVi?si=37c26daff0b94cd9",
                 "link": "https://www.youtube.com/watch?v=yLNdKyrlEUQ",
                 "podcast-thumbnail_url": ""
+            },
+            {
+                "id": "25-03-31",
+                "title": "Words are Echoes that Linger",
+                "author": "Rev. Jerry Ornelas",
+                "scripture": "Proverbs 18",
+                "date": "2025-03-31",
+                "apple_podcasts_url": "",
+                "spotify_url": "https://open.spotify.com/episode/5CWHU0FlO9Hrqg28n43LUC?si=c310b51ee8764ea5",
+                "link": "https://open.spotify.com/episode/5CWHU0FlO9Hrqg28n43LUC?si=c310b51ee8764ea5",
+                "podcast-thumbnail_url": ""
             }
+
             
 
         ]
@@ -707,6 +719,15 @@
                 "date_added": "2025-03-26",
                 "season": "spring 2025",
                 "scripture": "Proverbs 6"
+            },
+            {
+                "number": 34,
+                "title": "Words are Echoes that Linger",
+                "link": "https://open.spotify.com/episode/0KnUGYcMysGPH8fS5vtrEE?si=21a00fd2d0c94bfe",
+                "guest": "Rev. Jerry Ornelas",
+                "date_added": "2025-04-02",
+                "season": "spring 2025",
+                "scripture": "Proverbs 18"
             }
         ]
     },
