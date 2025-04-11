@@ -110,6 +110,29 @@
       "category": "event",
       "tag": "children",
       "featuredImage": "https://storage.googleapis.com/cpc-public-website/featuredIMGs/FEATURED%20IMGS-EASTER-EGG-2025.png"
+    },
+    {
+      "id": "2025-018",
+      "title": "Young Adults Hike",
+      "description": "Come enjoy fellowship in the outdoors with a group hike at \"Bluff Head Preserve\" in Guilford. We will do about a 1-mile loop, but there are options to go farther for those who prefer a longer hike. If you need a ride or want to caravan there, meet at CPC at 11:15 a.m. Otherwise we will meet at the parking lot at 12:00 p.m directly off Durham Road. Contact Josh S. at <a href=\"mailto:joshuatsanders@yahoo.com\">joshuatsanders@yahoo.com</a> with any questions.",
+      "dateEntered": "2025-04-01",
+      "active": "true",
+      "type": "event",
+      "category": "event",
+      "tag": "young-adults",
+      "featuredImage": "https://storage.googleapis.com/cpc-public-website/featuredIMGs/highlights/29.jpg"
+    },
+    {
+      "id": "2025-019",
+      "title": "Good Friday Service",
+      "description": "Join us for our Good Friday Service on April 18 at 6:30pm. This is a special time of reflection and worship as we remember Christ's sacrifice. Bring a friend or family member to experience this meaningful service together.",
+      "dateEntered": "2025-04-01",
+      "active": "true",
+      "type": "event",
+      "category": "event",
+      "tag": "worship",
+      "superfeatured": true,
+      "featuredImage": "https://storage.googleapis.com/cpc-public-website/featuredIMGs/highlights/30.jpg"
     }
   ]
 }
