@@ -529,7 +529,19 @@
                 "spotify_url": "https://open.spotify.com/episode/5CWHU0FlO9Hrqg28n43LUC?si=c310b51ee8764ea5",
                 "link": "https://open.spotify.com/episode/5CWHU0FlO9Hrqg28n43LUC?si=c310b51ee8764ea5",
                 "podcast-thumbnail_url": ""
+            },
+            {
+                "id": "25-04-06",
+                "title": "Life in the Spirit",
+                "author": "Rev. Craig Luekens",
+                "scripture": "Romans 8: 1-13",
+                "date": "2025-04-06",
+                "apple_podcasts_url": "",
+                "spotify_url": "https://open.spotify.com/episode/2lomBc1lAHSbGAnoghx1ad?si=c9bc02bd11cd4012",
+                "link": "https://open.spotify.com/episode/2lomBc1lAHSbGAnoghx1ad?si=c9bc02bd11cd4012",
+                "podcast-thumbnail_url": ""
             }
+
 
             
 
@@ -728,6 +740,15 @@
                 "date_added": "2025-04-02",
                 "season": "spring 2025",
                 "scripture": "Proverbs 18"
+            },
+            {
+                "number": 35,
+                "title": "Life in the Spirit",
+                "link": "https://open.spotify.com/episode/2sqdmZ1KJufOVwMWRLBGij?si=88f40bf642e5435a",
+                "guest": "Rev. Craig Luekens",
+                "date_added": "2025-04-09",
+                "season": "spring 2025",
+                "scripture": "Romans 8"
             }
         ]
     },
