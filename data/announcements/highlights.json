@@ -26,7 +26,7 @@
     {
       "id": "2025-009",
       "title": "Life Groups & Discipleship Groups",
-      "description": "Restarting for the new year, join now! Talk to a welcome team member about all the groups that meet throughout the city.",
+      "description": "Restarting for the new year, join now! Talk to a welcome team member about all the groups that meet throughout the city. <a href='community.html'>Visit our Community page</a> to learn more about our Life Groups.",
       "dateEntered": "2025-01-20",
       "active": "true",
       "type": "ongoing",
@@ -37,7 +37,7 @@
     {
       "id": "2025-010",
       "title": "Listen to CPC Podcasts!",
-      "description": "<ul><li>Missed a sermon? Listen to our weekly sermons</li><li>Dive deeper with \"Beyond the Sunday Sermon\" weekly discussion</li><li>Find Adult Sunday Studies in the \"Resources\" page</li></ul>Visit cpcnewhaven.org/podcasts to start listening!",
+      "description": "<ul><li>Missed a sermon? Listen to our weekly sermons</li><li>Dive deeper with \"Beyond the Sunday Sermon\" weekly discussion</li><li>Find Adult Sunday Studies in the \"Resources\" page</li></ul><a href='podcasts.html'>Visit our Podcasts page</a> to start listening!",
       "dateEntered": "2025-01-20",
       "active": "true",
       "type": "ongoing",
@@ -102,7 +102,7 @@
     },
     {
       "id": "2025-017",
-      "title": "Easter Egg Hunt",
+      "title": "Easter Egg Hunt | April 19th - 10:30a",
       "description": "Join us for an Easter Egg Hunt on April 19 at 10:30am in the Fellowship Hall. All children are welcome to participate!",
       "dateEntered": "2025-04-01",
       "active": "true",
@@ -113,18 +113,18 @@
     },
     {
       "id": "2025-018",
-      "title": "Young Adults Hike",
+      "title": "Young Adults Hike | May 3rd",
       "description": "Come enjoy fellowship in the outdoors with a group hike at \"Bluff Head Preserve\" in Guilford. We will do about a 1-mile loop, but there are options to go farther for those who prefer a longer hike. If you need a ride or want to caravan there, meet at CPC at 11:15 a.m. Otherwise we will meet at the parking lot at 12:00 p.m directly off Durham Road. Contact Josh S. at <a href=\"mailto:joshuatsanders@yahoo.com\">joshuatsanders@yahoo.com</a> with any questions.",
       "dateEntered": "2025-04-01",
       "active": "true",
       "type": "event",
       "category": "event",
       "tag": "young-adults",
-      "featuredImage": "https://storage.googleapis.com/cpc-public-website/featuredIMGs/highlights/29.jpg"
+      "featuredImage": "https://storage.googleapis.com/cpc-public-website/featuredIMGs/highlights/Young%20Adults%20-%205-3-25.jpg"
     },
     {
       "id": "2025-019",
-      "title": "Good Friday Service",
+      "title": "Good Friday Service | April 18th",
       "description": "Join us for our Good Friday Service on April 18 at 6:30pm. This is a special time of reflection and worship as we remember Christ's sacrifice. Bring a friend or family member to experience this meaningful service together.",
       "dateEntered": "2025-04-01",
       "active": "true",
@@ -132,7 +132,7 @@
       "category": "event",
       "tag": "worship",
       "superfeatured": true,
-      "featuredImage": "https://storage.googleapis.com/cpc-public-website/featuredIMGs/highlights/30.jpg"
+      "featuredImage": "https://storage.googleapis.com/cpc-public-website/featuredIMGs/highlights/Good%20Friday%20-%204-18-25-.jpg"
     }
   ]
 }
