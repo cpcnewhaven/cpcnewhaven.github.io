@@ -540,6 +540,28 @@
                 "spotify_url": "https://open.spotify.com/episode/2lomBc1lAHSbGAnoghx1ad?si=c9bc02bd11cd4012",
                 "link": "https://open.spotify.com/episode/2lomBc1lAHSbGAnoghx1ad?si=c9bc02bd11cd4012",
                 "podcast-thumbnail_url": ""
+            },
+            {
+                "id": "25-04-13",
+                "title": "Tasting Glory While Hungering for More",
+                "author": "Rev. Craig Luekens",
+                "scripture": "Romans 8:14",
+                "date": "2025-04-13",
+                "apple_podcasts_url": "",
+                "spotify_url": "https://open.spotify.com/episode/2nDnkuEV7Il77jMsQiFJEO?si=27c357e1100f4fb3",
+                "link": "https://open.spotify.com/episode/5VWdFa7UnWbH7wMPHOHhdP?si=56117cb3d5d34972",
+                "podcast-thumbnail_url": ""
+            },
+            {
+                "id": "25-04-20",
+                "title": "If God Is for Us, Then...",
+                "author": "Rev. Craig Luekens",
+                "scripture": "Romans 8:28",
+                "date": "2025-04-20",
+                "apple_podcasts_url": "",
+                "spotify_url": "https://open.spotify.com/episode/6HQsDUOb5irkkcyojOredX?si=4a6ebda6ee914173",
+                "link": "https://open.spotify.com/episode/6ylA59OYNX32WpAoZXqvCs?si=55f9d5328b0549d0",
+                "podcast-thumbnail_url": ""
             }
 
 
@@ -749,6 +771,24 @@
                 "date_added": "2025-04-09",
                 "season": "spring 2025",
                 "scripture": "Romans 8"
+            },
+            {
+                "number": 36,
+                "title": "Tasting Glory While Hungering for More",
+                "link": "https://open.spotify.com/episode/5VWdFa7UnWbH7wMPHOHhdP?si=56117cb3d5d34972",
+                "guest": "Rev. Jerry Ornelas",
+                "date_added": "2025-04-16",
+                "season": "spring 2025",
+                "scripture": "Romans 8:14"
+            },
+            {
+                "number": 37,
+                "title": "If God Is for Us, Then...",
+                "link": "https://open.spotify.com/episode/6ylA59OYNX32WpAoZXqvCs?si=55f9d5328b0549d0",
+                "guest": "Rev. Jerry Ornelas",
+                "date_added": "2025-04-23",
+                "season": "spring 2025",
+                "scripture": "Romans 8:28"
             }
         ]
     },
