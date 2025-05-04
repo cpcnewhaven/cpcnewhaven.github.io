@@ -116,7 +116,7 @@
       "title": "Young Adults Hike | May 3rd",
       "description": "Come enjoy fellowship in the outdoors with a group hike at \"Bluff Head Preserve\" in Guilford. We will do about a 1-mile loop, but there are options to go farther for those who prefer a longer hike. If you need a ride or want to caravan there, meet at CPC at 11:15 a.m. Otherwise we will meet at the parking lot at 12:00 p.m directly off Durham Road. Contact Josh S. at <a href=\"mailto:joshuatsanders@yahoo.com\">joshuatsanders@yahoo.com</a> with any questions.",
       "dateEntered": "2025-04-01",
-      "active": "true",
+      "active": "false",
       "type": "event",
       "category": "event",
       "tag": "young-adults",
@@ -148,14 +148,14 @@
     },
     {
       "id": "2025-021",
-      "title": "Save the date! I Heart NH Day | June 7",
-      "description": "Join us for I Heart NH Day on June 7th! This is a day of service and celebration as we come together to serve our city and celebrate our community.",
+      "title": "I Heart New Haven Day Registration is Live!",
+      "description": "Mark your calendars for June 7 for Bridges of Hope's annual I Heart New Haven Day! This is an exciting day joining with other churches around the city to love the greater New Haven area with projects such as clean up, gardening, painting, and repair. Register now!",
       "dateEntered": "2025-04-27",
       "active": "true",
       "type": "event",
       "category": "event",
       "tag": "service",
-      "featuredImage": "https://storage.googleapis.com/cpc-public-website/featuredIMGs/highlights/I%20heart%20New%20Haven%20-%20June%207th.jpg"
+      "featuredImage": "https://storage.googleapis.com/cpc-public-website/featuredIMGs/highlights/I%20heart%20%202.jpg"
     }
   ]
 }
