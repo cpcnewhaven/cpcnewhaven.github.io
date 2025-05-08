@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CPC Announcements</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --background-color: #f5f6fa;
+            --card-background: #ffffff;
+            --text-color: #2c3e50;
+            --border-radius: 8px;
+            --box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: var(--background-color);
+            color: var(--text-color);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        .announcements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px 0;
+        }
+
+        .announcement-card {
+            background: var(--card-background);
+            border-radius: var(--border-radius);
+            padding: 20px;
+            box-shadow: var(--box-shadow);
+            transition: transform 0.2s ease;
+        }
+
+        .announcement-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .announcement-card h2 {
+            color: var(--primary-color);
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 1.5em;
+        }
+
+        .announcement-card .date {
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+        }
+
+        .announcement-card .type {
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.8em;
+            margin-bottom: 10px;
+        }
+
+        .type.general {
+            background-color: #e3f2fd;
+            color: #1976d2;
+        }
+
+        .type.urgent {
+            background-color: #ffebee;
+            color: #c62828;
+        }
+
+        .type.event {
+            background-color: #e8f5e9;
+            color: #2e7d32;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 20px;
+            font-size: 1.2em;
+            color: #666;
+        }
+
+        .error {
+            text-align: center;
+            padding: 20px;
+            color: #c62828;
+            background-color: #ffebee;
+            border-radius: var(--border-radius);
+            margin: 20px 0;
+        }
+
+        @media (max-width: 768px) {
+            .announcements-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>CPC Announcements</h1>
+            <p>Stay updated with the latest news and events</p>
+        </div>
+        <div id="announcements-container">
+            <div class="loading">Loading announcements...</div>
+        </div>
+    </div>
+
+    <script>
+        async function fetchAnnouncements() {
+            try {
+                const response = await fetch('https://update-cpc.onrender.com/api/announcements/raw');
+                const data = await response.json();
+                displayAnnouncements(data.items);
+            } catch (error) {
+                console.error('Error fetching announcements:', error);
+                document.getElementById('announcements-container').innerHTML = `
+                    <div class="error">
+                        Failed to load announcements. Please try again later.
+                    </div>
+                `;
+            }
+        }
+
+        function displayAnnouncements(announcements) {
+            const container = document.getElementById('announcements-container');
+            
+            if (!announcements || announcements.length === 0) {
+                container.innerHTML = '<div class="error">No announcements available.</div>';
+                return;
+            }
+
+            const announcementsHTML = announcements
+                .filter(announcement => announcement.active === "true")
+                .map(announcement => `
+                    <div class="announcement-card">
+                        <span class="type ${announcement.type}">${announcement.type}</span>
+                        <h2>${announcement.title}</h2>
+                        <div class="date">${formatDate(announcement.dateEntered)}</div>
+                        ${announcement.description ? `<p>${announcement.description}</p>` : ''}
+                        ${announcement.featuredImage ? `<img src="${announcement.featuredImage}" alt="${announcement.title}" style="max-width: 100%; margin-top: 10px;">` : ''}
+                    </div>
+                `).join('');
+
+            container.innerHTML = `
+                <div class="announcements-grid">
+                    ${announcementsHTML}
+                </div>
+            `;
+        }
+
+        function formatDate(dateString) {
+            const options = { year: 'numeric', month: 'long', day: 'numeric' };
+            return new Date(dateString).toLocaleDateString(undefined, options);
+        }
+
+        // Fetch announcements when the page loads
+        document.addEventListener('DOMContentLoaded', fetchAnnouncements);
+    </script>
+</body>
+</html> 
