@@ -1,6 +1,17 @@
 {
   "announcements": [
     {
+      "id": "2025-022",
+      "title": "Final Sunday School & Fellowship Lunch",
+      "description": "This Sunday is the final day of Sunday School and Fellowship Lunch! Stay tuned for summer BBQs!",
+      "dateEntered": "2025-05-19",
+      "active": "true",
+      "type": "announcement",
+      "category": "announcement",
+      "tag": "schedule",
+      "superfeatured": true
+    },
+    {
       "id": "2025-007",
       "title": "New Mercy Days!",
       "description": "Join us for our Mercy Days on March 29 & August 23. Sign up to volunteer or to request a Mercy project here.",
@@ -139,7 +150,7 @@
       "title": "Congregational Meeting | May 4th",
       "description": "All are welcome to join our annual spring family meeting, as we look back to what God has done in our midst this year, and consider how God is leading us into the future. We will discuss the survey results, among other topics.",
       "dateEntered": "2025-04-27",
-      "active": "true",
+      "active": "false",
       "type": "event",
       "category": "event",
       "tag": "meeting",
@@ -149,7 +160,7 @@
     {
       "id": "2025-021",
       "title": "I Heart New Haven Day Registration is Live!",
-      "description": "Mark your calendars for June 7 for Bridges of Hope's annual I Heart New Haven Day! This is an exciting day joining with other churches around the city to love the greater New Haven area with projects such as clean up, gardening, painting, and repair. Register now!",
+      "description": "Mark your calendars for June 7 for Bridges of Hope's annual I Heart New Haven Day! This is an exciting day joining with other churches around the city to love the greater New Haven area with projects such as clean up, gardening, painting, and repair. <a href='http://www.iheartnewhavenday.com/'>Register now</a>!",
       "dateEntered": "2025-04-27",
       "active": "true",
       "type": "event",
