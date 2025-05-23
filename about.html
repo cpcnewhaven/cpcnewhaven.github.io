@@ -32,233 +32,132 @@
 
         <style>
       /* Main container for layout */
-      .main-container {
-        display: flex;
-        flex-direction: column;
+      .about-main-container {
         max-width: 1200px;
         margin: 0 auto;
-        padding: 20px;
+        padding: 10px;
+        position: relative;
       }
 
-      @media (min-width: 768px) {
-        .main-container {
-          flex-direction: row;
-          gap: 40px;
-        }
-      }
-
-      /* Sidebar Styles */
-      .about-sidebar {
+      /* Floating Navigation */
+      .about-floating-nav {
         position: fixed;
-        top: 0;
-        left: 0;
-        width: 280px;
-        background-color: #ffffff;
-        padding: 20px;
-        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-        transform: translateX(-100%);
-        transition: transform 0.3s ease;
-        z-index: 100;
-        overflow-y: auto;
-        max-height: 100vh;
-        display: flex;
-        flex-direction: column;
-      }
-
-      .about-sidebar.open {
-        transform: translateX(0);
-      }
-
-      @media (min-width: 768px) {
-        .about-sidebar {
-          position: sticky;
-          top: 20px;
-          transform: translateX(0);
-          box-shadow: none;
-          flex-shrink: 0;
-          height: fit-content;
-        }
-      }
-
-      /* Sidebar header */
-      .sidebar-header {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding-bottom: 15px;
-        margin-bottom: 15px;
-        border-bottom: 1px solid #e2e8f0;
-      }
-
-      .sidebar-header h2 {
-        font-size: 24px;
-        margin: 0;
-        color: var(--cpc-blue);
-      }
-
-      /* Sidebar buttons */
-      .about-sidebar-btn {
-        display: block;
-        width: 100%;
-        background: none;
-        border: none;
-        text-align: left;
-        padding: 12px 16px;
-        font-size: 16px;
-        cursor: pointer;
-        color: #4a5568;
+        top: 50%;
+        left: 20px;
+        transform: translateY(-50%);
+        background: white;
+        padding: 10px;
         border-radius: 8px;
-        transition: all 0.2s ease;
-        margin-bottom: 4px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        z-index: 1000;
+        max-height: 80vh;
+        overflow-y: auto;
+        font-size: 13px;
       }
 
-      .about-sidebar-btn:hover {
-        background-color: #f7fafc;
+      .about-floating-nav a {
+        display: block;
+        padding: 6px 10px;
         color: var(--cpc-blue);
+        text-decoration: none;
+        font-size: 13px;
+        transition: all 0.3s ease;
+        border-radius: 4px;
+        white-space: nowrap;
       }
 
-      .about-sidebar-btn.active {
-        background-color: #ebf8ff;
-        color: var(--cpc-blue);
-        font-weight: 600;
+      .about-floating-nav a:hover,
+      .about-floating-nav a.active {
+        background: var(--cpc-blue);
+        color: white;
       }
 
-      /* Main content area */
-      .content {
-        flex: 1;
-        padding: 20px 0;
+      /* Content Sections */
+      .about-content-section {
+        min-height: 60vh;
+        padding: 40px 10px 30px 10px;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.6s ease;
+        margin-left: 180px; /* Add space for the floating nav */
+        font-size: 15px;
+        line-height: 1.5;
       }
 
-      @media (min-width: 768px) {
-        .content {
-          padding: 0;
-        }
-      }
-
-      /* About page content styles */
-      .about-inner-section {
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 0;
+      .about-content-section.visible {
+        opacity: 1;
+        transform: translateY(0);
       }
 
       .about-heading {
-        font-size: 32px;
-        color: var(--cpc-blue);
-        margin-bottom: 24px;
-        line-height: 1.2;
+        font-size: 1.5em;
+        margin-bottom: 0.5em;
       }
-
       .about-sub-title {
-        font-size: 24px;
-        color: #2d3748;
-        margin: 32px 0 16px;
+        font-size: 1.1em;
+        margin-top: 1.2em;
+        margin-bottom: 0.5em;
       }
-
-      .about-body-text {
-        font-size: 16px;
-        line-height: 1.6;
-        color: #4a5568;
-        margin-bottom: 16px;
+      .about-body-text, .about-content-section p, .about-content-section li {
+        font-size: 0.97em;
+        margin-bottom: 0.7em;
       }
-
-      .about-staff-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-        gap: 24px;
-        margin: 32px 0;
+      .about-content-section ul, .about-content-section ol {
+        margin-left: 1.2em;
+        font-size: 0.97em;
       }
-
-      .about-staff-member {
-        background: #ffffff;
-        border-radius: 8px;
-        padding: 20px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-        transition: transform 0.2s ease;
+      .about-content-section blockquote {
+        font-size: 0.95em;
+        margin: 1em 0 1em 1.5em;
+        padding-left: 1em;
+        border-left: 3px solid #eee;
       }
-
-      .about-staff-member:hover {
-        transform: translateY(-2px);
-      }
-
-      .about-staff-member h3 {
-        font-size: 20px;
-        color: var(--cpc-blue);
-        margin-bottom: 4px;
-      }
-
-      .about-staff-member h4 {
-        font-size: 16px;
-        color: #718096;
-        margin-bottom: 16px;
-      }
-
-      .read-more-button {
-        background-color: var(--cpc-blue);
-        color: white;
-        border: none;
-        padding: 8px 16px;
-        border-radius: 6px;
-        cursor: pointer;
-        font-size: 14px;
-        transition: background-color 0.2s ease;
-      }
-
-      .read-more-button:hover {
-        background-color: #2b6cb0;
-      }
-
-      /* Mobile sidebar toggle */
-      .about-sidebar-toggle {
-        position: fixed;
-        top: 20px;
-        left: 20px;
-        background: var(--cpc-blue);
-        color: white;
-        border: none;
-        border-radius: 8px;
-        width: 40px;
-        height: 40px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        z-index: 1100;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      }
-
-      @media (min-width: 768px) {
-        .about-sidebar-toggle {
-          display: none;
-        }
-      }
-
-      /* Close button for mobile sidebar */
-      .close-sidebar-button {
-        background: none;
-        border: none;
-        color: #718096;
-        font-size: 20px;
-        cursor: pointer;
-        padding: 4px;
-      }
-
-      @media (min-width: 768px) {
-        .close-sidebar-button {
-          display: none;
-        }
-      }
-
-      /* Image styles */
-      .about-image-container {
-        margin: 32px 0;
-        border-radius: 8px;
-        overflow: hidden;
-      }
-
-      .about-compact-centered-image {
+      /* Parallax Images */
+      .about-parallax-image {
         width: 100%;
-        height: auto;
-        display: block;
+        height: 300px;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        margin: 30px 0;
+        border-radius: 8px;
+      }
+      /* Remove old sidebar styles */
+      .about-sidebar {
+        display: none;
+      }
+      /* Responsive adjustments */
+      @media (max-width: 768px) {
+        .about-floating-nav {
+          position: fixed;
+          bottom: 20px;
+          top: auto;
+          left: 50%;
+          transform: translateX(-50%);
+          display: flex;
+          gap: 8px;
+          background: rgba(255,255,255,0.9);
+          backdrop-filter: blur(10px);
+          max-height: none;
+          overflow-y: visible;
+          padding: 6px;
+          font-size: 12px;
+        }
+        .about-floating-nav a {
+          padding: 6px;
+          font-size: 12px;
+        }
+        .about-content-section {
+          margin-left: 0;
+          padding: 20px 5px 15px 5px;
+          font-size: 14px;
+        }
+        .about-heading {
+          font-size: 1.1em;
+        }
+        .about-sub-title {
+          font-size: 1em;
+        }
       }
     </style>
     </head>
@@ -289,381 +188,194 @@
             <h1>About</h1>
         </div>
 
-        <!-- ===== Sidebar Submenu Section with Alpine.js ===== -->
-        <div x-data="{ activeTab: 'mission', sidebarOpen: false }"
-            class="main-container">
-            <!-- Hamburger Button for Mobile Sidebar -->
-            <button @click="sidebarOpen = !sidebarOpen"
-                class="about-sidebar-toggle"
-                aria-label="Toggle submenu">
-                <i class="fas fa-bars"></i>
-            </button>
+        <!-- Floating Navigation -->
+        <div class="about-floating-nav">
+            <ul>
+                <li><a href="#mission">Mission</a></li>
+                <li><a href="#totalChrist">Total Christ</a></li>
+                <li><a href="#commitments">Commitments</a></li>
+                <li><a href="#staff">Staff</a></li>
+                <li><a href="#session">Session</a></li>
+                <li><a href="#wlb">Women's Leadership</a></li>
+                <li><a href="#slb">Servant Leadership</a></li>
+                <li><a href="#missionAnabaino">Mission Anabaino</a></li>
+                <li><a href="#ourStory">Our Story</a></li>
+            </ul>
+        </div>
 
-            <!-- Sidebar Navigation for Tabs -->
-            <nav class="about-sidebar" :class="{ 'open': sidebarOpen }">
-                <!-- Sidebar header (sticky within sidebar) -->
-                <div class="sidebar-header">
-                    <h2>About</h2>
-                    <button class="close-sidebar-button"
-                        @click="sidebarOpen = false" aria-label="Close sidebar">
-                        <i class="fas fa-times"></i>
-                    </button>
-                </div>
-
-                <!-- Sidebar buttons -->
-                <button @click="activeTab = 'mission'; sidebarOpen = false"
-                    class="about-sidebar-btn"
-                    :class="{ 'active': activeTab === 'mission' }">Mission</button>
-                <button @click="activeTab = 'totalChrist'; sidebarOpen = false"
-                    class="about-sidebar-btn"
-                    :class="{ 'active': activeTab === 'totalChrist' }">Total
-                    Christ</button>
-                <button @click="activeTab = 'commitments'; sidebarOpen = false"
-                    class="about-sidebar-btn"
-                    :class="{ 'active': activeTab === 'commitments' }">Commitments</button>
-                <button @click="activeTab = 'staff'; sidebarOpen = false"
-                    class="about-sidebar-btn"
-                    :class="{ 'active': activeTab === 'staff' }">Staff</button>
-
-                <button @click="activeTab = 'session'; sidebarOpen = false"
-                    class="about-sidebar-btn"
-                    :class="{ 'active': activeTab === 'session' }">Session</button>
-                <button @click="activeTab = 'wlb'; sidebarOpen = false"
-                    class="about-sidebar-btn"
-                    :class="{ 'active': activeTab === 'wlb' }">Women's
-                    Leadership</button>
-                <button @click="activeTab = 'slb'; sidebarOpen = false"
-                    class="about-sidebar-btn"
-                    :class="{ 'active': activeTab === 'slb' }">Servant
-                    Leadership</button>
-                <button
-                    @click="activeTab = 'missionAnabaino'; sidebarOpen = false"
-                    class="about-sidebar-btn"
-                    :class="{ 'active': activeTab === 'missionAnabaino' }">Mission
-                    Anabaino</button>
-                <button @click="activeTab = 'ourStory'; sidebarOpen = false"
-                    class="about-sidebar-btn"
-                    :class="{ 'active': activeTab === 'ourStory' }">Our Story</button>
-
+        <!-- Main Content -->
+        <div class="about-main-container">
+            <!-- Floating Navigation -->
+            <nav class="about-floating-nav">
+                <ul>
+                    <li><a href="#mission">Mission</a></li>
+                    <li><a href="#totalChrist">Total Christ</a></li>
+                    <li><a href="#commitments">Commitments</a></li>
+                    <li><a href="#staff">Staff</a></li>
+                    <li><a href="#session">Session</a></li>
+                    <li><a href="#wlb">Women's Leadership</a></li>
+                    <li><a href="#slb">Servant Leadership</a></li>
+                    <li><a href="#missionAnabaino">Mission Anabaino</a></li>
+                    <li><a href="#ourStory">Our Story</a></li>
+                </ul>
             </nav>
 
-            <!-- Main Content Area -->
-            <div class="content">
-                <!-- Update each section with new class names -->
-                <div x-show="activeTab === 'mission'">
-                    <section id="welcome-mission" class="about-inner-section">
-                        <h1 class="about-heading">The Mission of Christ
-                            Presbyterian Church</h1>
+            <!-- Content Sections -->
+            <div class="about-content-wrapper">
+                <!-- Mission Section -->
+                <section id="mission" class="about-content-section">
+                    <div class="about-inner-section">
+                        <h1 class="about-heading">The Mission of Christ Presbyterian Church</h1>
                         <p class="about-body-text">
-                            We are a church that is ambitious for the glory of
-                            God by
-                            <strong>GROWING</strong> in the truth and grace of
-                            Jesus Christ,
-                            <strong>ACTING</strong> as a faithful witness in the
-                            greater New
+                            We are a church that is ambitious for the glory of God by
+                            <strong>GROWING</strong> in the truth and grace of Jesus Christ,
+                            <strong>ACTING</strong> as a faithful witness in the greater New
                             Haven community and world,
-                            <strong>TRUSTING</strong> in the grace and power of
-                            the Holy Spirit.
+                            <strong>TRUSTING</strong> in the grace and power of the Holy Spirit.
                         </p>
-                    </section>
-                </div>
+                    </div>
+                </section>
 
-                <div x-show="activeTab === 'totalChrist'">
-                    <section id="total-christ-spirit"
-                        class="about-inner-section">
-                        <h1 class="about-heading">Our Total Christ
-                            Spirituality</h1>
+                <!-- Total Christ Section -->
+                <section id="totalChrist" class="about-content-section">
+                    <div class="about-inner-section">
+                        <h1 class="about-heading">Our Total Christ Spirituality</h1>
                         <p class="about-body-text">
-                            We want this to be all about Christ—his work, not
-                            ours, as the
-                            basis of our relationship to God and one another,
-                            and his glory,
-                            not ours or any popular leader, as the object of our
-                            ultimate
-                            affection and respect. It is our desire to
-                            experience total
+                            We want this to be all about Christ—his work, not ours, as the
+                            basis of our relationship to God and one another, and his glory,
+                            not ours or any popular leader, as the object of our ultimate
+                            affection and respect. It is our desire to experience total
                             Christ, not just one or another brand of Christ.
                         </p>
                         <p class="about-body-text">
-                            The term "Total Christ" originates from the
-                            5th-century
-                            pastor-theologian St. Augustine, who described the
-                            relationship of
-                            Christ's incarnational ministry (past) to his
-                            ongoing ascension
+                            The term "Total Christ" originates from the 5th-century
+                            pastor-theologian St. Augustine, who described the relationship of
+                            Christ's incarnational ministry (past) to his ongoing ascension
                             ministry (present) as
                             "the Word was made flesh, and dwelled among us; to that flesh is joined the church, and there is made total Christ, both head and body."
                         </p>
 
                         <h2 class="about-sub-title">The Five Marks</h2>
                         <p class="about-body-text">
-                            <strong>1. Gospel-Centered:</strong> Trust in the
-                            gospel motivates
-                            us to be humble because we know Christ's work to us
-                            is purely a
-                            gift, but also boldly confident in the face of shame
-                            and sin
-                            because it's based in God's power! This grounds us
-                            in God's
-                            finished work on the cross, where he forgave our
-                            sins and
-                            reconciled us to himself. Everything we do is
-                            motivated from and
+                            <strong>1. Gospel-Centered:</strong> Trust in the gospel motivates
+                            us to be humble because we know Christ's work to us is purely a
+                            gift, but also boldly confident in the face of shame and sin
+                            because it's based in God's power! This grounds us in God's
+                            finished work on the cross, where he forgave our sins and
+                            reconciled us to himself. Everything we do is motivated from and
                             by the gospel.
-                            <strong>Think: Humble, honest, authentic, gracious,
-                                safe, desire
-                                to be truly known and loved by God and
-                                others</strong>
+                            <strong>Think: Humble, honest, authentic, gracious, safe, desire
+                                to be truly known and loved by God and others</strong>
                         </p>
                         <p class="about-body-text">
-                            <strong>2. Missional: </strong> More (though not
-                            less!) than being
-                            evangelistic, we strive to be missional because God
-                            promises to
-                            dwell with His people in all their God-given
-                            cultures, languages,
-                            and demographics through the church. This grounds us
-                            in God's
-                            global presence, where the church is the evangelist
-                            for a whole
-                            new way of life, showing the world who Jesus is and
-                            what it means
+                            <strong>2. Missional: </strong> More (though not less!) than being
+                            evangelistic, we strive to be missional because God promises to
+                            dwell with His people in all their God-given cultures, languages,
+                            and demographics through the church. This grounds us in God's
+                            global presence, where the church is the evangelist for a whole
+                            new way of life, showing the world who Jesus is and what it means
                             to follow Him in all our relationships.
-                            <strong>Think: Culturally self-aware, open &
-                                inviting, purposeful,
+                            <strong>Think: Culturally self-aware, open & inviting, purposeful,
                                 holistic evangelism safe</strong>
                         </p>
                         <p class="about-body-text">
-                            <strong>3. Confessional - Christ as our Prophet:
-                            </strong>We are
-                            not the first ones to consider what church should be
-                            (thank God!).
-                            We humbly submit to God's revelation in the Word as
-                            it has been
-                            historically interpreted, seeking to be united in
-                            belief across
-                            generations and cultures. Officially, we subscribe
-                            to the
-                            documents of Westminster (c.1630) as the summary of
-                            our faith.
-                            This grounds us in Christ as our Prophet who still
-                            speaks.
-                            <strong>Think: doctrine that is alive and an
-                                unwillingness to be
+                            <strong>3. Confessional - Christ as our Prophet: </strong>We are
+                            not the first ones to consider what church should be (thank God!).
+                            We humbly submit to God's revelation in the Word as it has been
+                            historically interpreted, seeking to be united in belief across
+                            generations and cultures. Officially, we subscribe to the
+                            documents of Westminster (c.1630) as the summary of our faith.
+                            This grounds us in Christ as our Prophet who still speaks.
+                            <strong>Think: doctrine that is alive and an unwillingness to be
                                 distracted by cultural fads</strong>
                         </p>
                         <p class="about-body-text">
-                            <strong>4. Sacramental - Christ as our Priest:
-                            </strong> We desire
-                            an emphasis on sacramental spirituality wherein
-                            Christ our Priest
-                            is "fleshed out" in a carefully designed four
-                            movement worship
-                            service that follows the four movements of the
-                            gospel and
-                            culminates every week in a participation in
-                            eucharistic communion
-                            with Christ as "fleshed out" in cultural styles
-                            specific to each
-                            local community (1 Cor. 10:14-17, Heb. 12:22-24,
-                            Rev. 4-5)!
-                            <strong>Think: Friendly, worshipful,
-                                mysterious</strong>
+                            <strong>4. Sacramental - Christ as our Priest: </strong> We desire
+                            an emphasis on sacramental spirituality wherein Christ our Priest
+                            is "fleshed out" in a carefully designed four movement worship
+                            service that follows the four movements of the gospel and
+                            culminates every week in a participation in eucharistic communion
+                            with Christ as "fleshed out" in cultural styles specific to each
+                            local community (1 Cor. 10:14-17, Heb. 12:22-24, Rev. 4-5)!
+                            <strong>Think: Friendly, worshipful, mysterious</strong>
                         </p>
                         <p class="about-body-text">
-                            <strong>5. Communal - Christ as our
-                                King:</strong> Christ did not
-                            leave us as orphans, but joined us with Himself to
-                            the church, so
-                            to be a Christian is to be a part of the redeemed
-                            community. Many
-                            of us experience Christ first through the love of
-                            his body. We
-                            also take church government as an instrument of
-                            mercy seriously.
+                            <strong>5. Communal - Christ as our King:</strong> Christ did not
+                            leave us as orphans, but joined us with Himself to the church, so
+                            to be a Christian is to be a part of the redeemed community. Many
+                            of us experience Christ first through the love of his body. We
+                            also take church government as an instrument of mercy seriously.
                             This grounds us in Christ as our King.
-                            <strong>Think: loving, humble,
-                                one-anotherings</strong>
+                            <strong>Think: loving, humble, one-anotherings</strong>
                         </p>
-                    </section>
-                </div>
+                    </div>
+                </section>
 
-                <div x-show="activeTab === 'commitments'">
-                    <section id="commitments" class="about-inner-section">
+                <!-- Commitments Section -->
+                <section id="commitments" class="about-content-section">
+                    <div class="about-inner-section">
                         <h1 class="about-heading">Our Commitments</h1>
                         <p class="about-body-text">
-                            We seek to be radically grounded in the good news
-                            that though we
-                            are more sinful than we may ever dare to believe, we
-                            are more
-                            loved in Christ than we can ever dare to hope. A
-                            community united
-                            in the love of Jesus changes lives and communities.
-                            We hope that
-                            Sunday worship is the touchstone of our lives and
-                            that it bleeds
-                            into how we treat each other inside and outside of
-                            the church.
-                            Many of us didn't grow up Presbyterian - or even
-                            Christian - so
-                            please feel comfortable coming with lots of
-                            questions. We hope to
-                            be a community that knows we are all in need of
-                            God's mercy and
+                            We seek to be radically grounded in the good news that though we
+                            are more sinful than we may ever dare to believe, we are more
+                            loved in Christ than we can ever dare to hope. A community united
+                            in the love of Jesus changes lives and communities. We hope that
+                            Sunday worship is the touchstone of our lives and that it bleeds
+                            into how we treat each other inside and outside of the church.
+                            Many of us didn't grow up Presbyterian - or even Christian - so
+                            please feel comfortable coming with lots of questions. We hope to
+                            be a community that knows we are all in need of God's mercy and
                             have the privilege to embody it in the church.
                         </p>
 
-                        <h2 class="about-sub-title">Our Five Basic
-                            Commitments</h3>
+                        <h2 class="about-sub-title">Our Five Basic Commitments</h2>
                         <p class="about-body-text">
-                            <b>1.</b><strong> Scripture - We are committed to
-                                the Old and New Testament Scriptures as our only
-                                rule of faith and practice. </strong> While
-                            believing that God powerfully manifests his infinite
-                            glory in a general way through creation, our
-                            Christian faith and practice is grounded in God's
-                            works of redemption in history as explained to us
-                            through the divinely appointed means of inspired
-                            Scripture. We believe that all things necessary for
-                            salvation are sufficiently revealed to us by the
-                            Holy Spirit speaking through the Scriptures of the
-                            Old and New Testaments. It is, therefore, our
-                            ambition to teach the whole counsel of God's word,
-                            not adding to, or subtracting from, anything
-                            contained within it, recognizing no other source for
-                            divine revelation, whether by ecclesiastical
-                            traditions or private revelations.
-                            <br><br><strong>WHY SHOULD I CARE?</strong> To
-                            liberate all of us from oppressive, human-made
-                            opinions and guard the gracious gospel against
-                            manipulation and self-serving abuses. We want the
-                            God of grace and glory to be our only Lord.
+                            <b>1.</b><strong> Scripture - We are committed to the Old and New Testament Scriptures as our only rule of faith and practice. </strong> While
+                            believing that God powerfully manifests his infinite glory in a general way through creation, our Christian faith and practice is grounded in God's
+                            works of redemption in history as explained to us through the divinely appointed means of inspired Scripture. We believe that all things necessary for
+                            salvation are sufficiently revealed to us by the Holy Spirit speaking through the Scriptures of the Old and New Testaments. It is, therefore, our
+                            ambition to teach the whole counsel of God's word, not adding to, or subtracting from, anything contained within it, recognizing no other source for
+                            divine revelation, whether by ecclesiastical traditions or private revelations.
+                            <br><br><strong>WHY SHOULD I CARE?</strong> To liberate all of us from oppressive, human-made opinions and guard the gracious gospel against
+                            manipulation and self-serving abuses. We want the God of grace and glory to be our only Lord.
                         </p>
                         <p class="about-body-text">
-                            <b>2.</b><strong> Teachings of Grace - We are
-                                committed to the teachings of grace as they are
-                                summarized in the historic Westminster
-                                Confession of Faith. </strong> Teachings of
-                            Grace - We are committed to the teachings of grace
-                            as they are summarized in the historic Westminster
-                            Confession of Faith. Whereas the Holy Scriptures is
-                            our only rule of faith and practice, Church unity is
-                            predicated upon a consensus about what the
-                            Scriptures principally teach. Our consensus is
-                            reflected in the 350-year--old Westminster
-                            Confession of Faith. In summary, it affirms that God
-                            is no less sovereign in our salvation than He is
-                            sovereign in our creation, to the praise of God's
-                            glorious grace! This means that we are accepted by
-                            God, from beginning to end, not by our own works or
-                            attempts to perform for God, but by faith alone in
-                            the perfect and all sufficient work of Christ on our
-                            behalf, faith itself being the free gift of God.
-                            <br><br><strong>WHY SHOULD I CARE?</strong> To
-                            affirm the sovereignty of grace, to connect us to
-                            wise men and women who have gone before us, and to
-                            prevent as much as possible our historical and
-                            cultural blind-spots.
+                            <b>2.</b><strong> Teachings of Grace - We are committed to the teachings of grace as they are summarized in the historic Westminster Confession of Faith. </strong> Whereas the Holy Scriptures is our only rule of faith and practice, Church unity is predicated upon a consensus about what the Scriptures principally teach. Our consensus is reflected in the 350-year--old Westminster Confession of Faith. In summary, it affirms that God is no less sovereign in our salvation than He is sovereign in our creation, to the praise of God's glorious grace! This means that we are accepted by God, from beginning to end, not by our own works or attempts to perform for God, but by faith alone in the perfect and all sufficient work of Christ on our behalf, faith itself being the free gift of God.
+                            <br><br><strong>WHY SHOULD I CARE?</strong> To affirm the sovereignty of grace, to connect us to wise men and women who have gone before us, and to prevent as much as possible our historical and cultural blind-spots.
                         </p>
                         <p class="about-body-text">
-                            <b>3.</b><strong> God-Centered Worship - We are
-                                committed to God-centered worship designed after
-                                a covenantal pattern, where Christ promises to
-                                be present through Word and Sacrament. </strong>
-                            In every period of redemptive history, God has
-                            chosen to be with his people through the divine
-                            institutions of word, sacrament and prayers. Today,
-                            through the sacraments of the Lord's Supper and
-                            Christian Baptism, together with the preaching of
-                            God's word and corporate prayers (both sung and
-                            unsung), God has promised to be with us until the
-                            end of the age. Our worship is set to the pattern of
-                            covenant initiation and renewal including the weekly
-                            participation of the Lord's supper. Our music and
-                            style of worship is "blended" to reflect the
-                            vernacular context of those God has brought to our
-                            city. Our desire is for our worship to be as
-                            God-centered as our theology, communicating the
-                            truth and grace of God to the nations. We welcome
-                            all believers together with those who are searching.
-                            <br><br><strong>WHY SHOULD I CARE?</strong> Not only
-                            is it biblical, but it keeps us grounded in the
-                            gospel every week, secured upon Christ's redemption
-                            accomplished. Our worship embodies the gospel as we
-                            experience God's presence.
+                            <b>3.</b><strong> God-Centered Worship - We are committed to God-centered worship designed after a covenantal pattern, where Christ promises to be present through Word and Sacrament. </strong> In every period of redemptive history, God has chosen to be with his people through the divine institutions of word, sacrament and prayers. Today, through the sacraments of the Lord's Supper and Christian Baptism, together with the preaching of God's word and corporate prayers (both sung and unsung), God has promised to be with us until the end of the age. Our worship is set to the pattern of covenant initiation and renewal including the weekly participation of the Lord's supper. Our music and style of worship is "blended" to reflect the vernacular context of those God has brought to our city. Our desire is for our worship to be as God-centered as our theology, communicating the truth and grace of God to the nations. We welcome all believers together with those who are searching.
+                            <br><br><strong>WHY SHOULD I CARE?</strong> Not only is it biblical, but it keeps us grounded in the gospel every week, secured upon Christ's redemption accomplished. Our worship embodies the gospel as we experience God's presence.
                         </p>
                         <p class="about-body-text">
-                            <b>4.</b><strong> Multi-Cultural Church and Church
-                                Planting </strong> We are committed to being a
-                            multi-cultural church and church planting movement.
-                            We believe that the church, the household of God, is
-                            an essential element of the gospel into which people
-                            of every tribe and nation are welcomed. While
-                            affirming that every follower of Christ is called to
-                            be a witness to the truth and grace of God revealed
-                            in Jesus Christ, we also believe that true
-                            evangelism is best accomplished through church
-                            planting. It is therefore our ambition to be not
-                            only a growing church, but also a growing church
-                            planting movement. While holding to a time-honored
-                            understanding of faith, we are strategically
-                            progressive. Our aim is to plant churches that reach
-                            the different cultures in our city, New England and
-                            the world. For more info on church planting, visit
-                            <a style="text-decoration: underline"
-                                href="https://anabaino.org">anabaino.org</a>.
-                            <br><br><strong>WHY SHOULD I CARE?</strong> Because
-                            no one culture is closer to God than another, you
-                            don't have to become American (or Western, or
-                            whatever!) to become Christian, and the communal
-                            witness of the gospel is the best testament to its
-                            power!
+                            <b>4.</b><strong> Multi-Cultural Church and Church Planting </strong> We are committed to being a multi-cultural church and church planting movement. We believe that the church, the household of God, is an essential element of the gospel into which people of every tribe and nation are welcomed. While affirming that every follower of Christ is called to be a witness to the truth and grace of God revealed in Jesus Christ, we also believe that true evangelism is best accomplished through church planting. It is therefore our ambition to be not only a growing church, but also a growing church planting movement. While holding to a time-honored understanding of faith, we are strategically progressive. Our aim is to plant churches that reach the different cultures in our city, New England and the world. For more info on church planting, visit <a style="text-decoration: underline" href="https://anabaino.org">anabaino.org</a>.
+                            <br><br><strong>WHY SHOULD I CARE?</strong> Because no one culture is closer to God than another, you don't have to become American (or Western, or whatever!) to become Christian, and the communal witness of the gospel is the best testament to its power!
                         </p>
                         <p class="about-body-text">
-                            <b>5.</b><strong> High View of Christian Calling -
-                                We are committed to a high view of Christian
-                                calling as reflected in the vocational spheres
-                                of family, church, and public service. </strong>
-                            We believe that God has given us roles that reflect
-                            his own sovereign design to accomplish his work in
-                            the world, which extends into the spheres of family,
-                            church and civil vocations. We desire to help people
-                            find a balance that is unique to their individual
-                            callings and spheres of service. While believing
-                            that the Christian Scriptures does not address all
-                            things pertaining to life in this world, we do
-                            affirm that we should take
-                            "every thought captive to the obedience of Christ"
-                            and that the Christian worldview is applicable and
-                            relevant to all spheres of life.
-                            <br><br><strong>WHY SHOULD I CARE?</strong> Because
-                            God didn't make us just one way or with one part of
-                            ourselves, but made ALL of us, and he deserves it
-                            all to be offered as thankful worship.
+                            <b>5.</b><strong> High View of Christian Calling - We are committed to a high view of Christian calling as reflected in the vocational spheres of family, church, and public service. </strong> We believe that God has given us roles that reflect his own sovereign design to accomplish his work in the world, which extends into the spheres of family, church and civil vocations. We desire to help people find a balance that is unique to their individual callings and spheres of service. While believing that the Christian Scriptures does not address all things pertaining to life in this world, we do affirm that we should take "every thought captive to the obedience of Christ" and that the Christian worldview is applicable and relevant to all spheres of life.
+                            <br><br><strong>WHY SHOULD I CARE?</strong> Because God didn't make us just one way or with one part of ourselves, but made ALL of us, and he deserves it all to be offered as thankful worship.
                         </p>
+                    </div>
+                </section>
 
-                    </section>
-                </div>
-
-                <div x-show="activeTab === 'staff'">
-                    <section id="staff" class="about-inner-section">
+                <!-- Staff Section -->
+                <section id="staff" class="about-content-section">
+                    <div class="about-inner-section">
                         <h1 class="about-heading">Staff</h1>
                         <div class="about-staff-grid">
                             <div class="about-staff-member">
                                 <h3>Craig Luekens</h3>
                                 <h4>Senior Pastor</h4>
                                 <div class="read-more-cont">
-                                    <button class="read-more-button"
-                                        onclick="window.location.href='https://cpcnewhaven.org/rev-craig-luekens.html'">Pastor
-                                        Bio</button></div>
+                                    <button class="read-more-button" onclick="window.location.href='https://cpcnewhaven.org/rev-craig-luekens.html'">Pastor Bio</button>
+                                </div>
                             </div>
                             <div class="about-staff-member">
                                 <h3>Jerry Ornelas</h3>
                                 <h4>Assistant Pastor</h4>
                                 <div class="read-more-cont">
-                                    <button class="read-more-button"
-                                        onclick="window.location.href='https://cpcnewhaven.org/rev-jerry-ornelas.html'">Pastor
-                                        Bio</button></div>
+                                    <button class="read-more-button" onclick="window.location.href='https://cpcnewhaven.org/rev-jerry-ornelas.html'">Pastor Bio</button>
+                                </div>
                             </div>
                             <div class="about-staff-member">
                                 <h3>Alexis Vano</h3>
@@ -686,43 +398,12 @@
                                 <h4>Music Coordinator</h4>
                             </div>
                         </div>
-                    </section>
-                </div>
+                    </div>
+                </section>
 
-                <!-- Other tabs: missionAnabaino, session, wlb, slb -->
-                <div x-show="activeTab === 'missionAnabaino'">
-                    <section id="about-mission-anabaion"
-                        class="about-inner-section">
-                        <h1 class="about-heading">Mission Anabaino</h1>
-                        <div class="about-image-container">
-                            <img
-                                src="https://storage.googleapis.com/cpc-public-website/63.jpg"
-                                alt="Mission Anabaino"
-                                class="about-compact-centered-image" />
-                        </div>
-                        <p class="about-body-text">
-                            Mission Anabaino (MA) seeks to fulfill the
-                            "greater things" in
-                            relation to Christ's great expectations regarding
-                            his ascension
-                            ministry today. It involves participating in the
-                            real and personal
-                            advent of Christ through church planting and the
-                            ecumenically-oriented rediscovery of missional
-                            ecclesiology.
-                            <br /><br />
-                            <div class="center-content">
-                                <a href="https://anabaino.org"
-                                    style="text-decoration: underline">
-                                    <h4>For more info, visit anabaino.org</h4>
-                                </a>
-                            </div>
-                        </p>
-                    </section>
-                </div>
-
-                <div x-show="activeTab === 'session'">
-                    <section id="session" class="about-inner-section">
+                <!-- Session Section -->
+                <section id="session" class="about-content-section">
+                    <div class="about-inner-section">
                         <h1 class="about-heading">Session</h1>
                         <div class="about-staff-grid" id="session-members">
                             <div class="about-staff-member">
@@ -755,11 +436,12 @@
                                 <h4>Emeritus Member</h4>
                             </div>
                         </div>
-                    </section>
-                </div>
+                    </div>
+                </section>
 
-                <div x-show="activeTab === 'wlb'">
-                    <section id="wlb" class="about-inner-section">
+                <!-- Women's Leadership Board Section -->
+                <section id="wlb" class="about-content-section">
+                    <div class="about-inner-section">
                         <h1 class="about-heading">Women's Leadership Board</h1>
                         <div class="about-staff-grid">
                             <div class="about-staff-member">
@@ -793,11 +475,12 @@
                                 <h4>Apprentice</h4>
                             </div>
                         </div>
-                    </section>
-                </div>
+                    </div>
+                </section>
 
-                <div x-show="activeTab === 'slb'">
-                    <section id="slb" class="about-inner-section">
+                <!-- Servant Leadership Board Section -->
+                <section id="slb" class="about-content-section">
+                    <div class="about-inner-section">
                         <h1 class="about-heading">Servant Leadership Board</h1>
                         <div class="about-staff-grid">
                             <div class="about-staff-member">
@@ -853,13 +536,32 @@
                                 <h3>Pat Clendenen</h3>
                             </div>
                         </div>
-                    </section>
-                </div>
+                    </div>
+                </section>
 
-                <div x-show="activeTab === 'ourStory'">
-                    <section id="our-story" class="about-inner-section">
+                <!-- Mission Anabaino Section -->
+                <section id="missionAnabaino" class="about-content-section">
+                    <div class="about-inner-section">
+                        <h1 class="about-heading">Mission Anabaino</h1>
+                        <div class="about-image-container">
+                            <img src="https://storage.googleapis.com/cpc-public-website/63.jpg" alt="Mission Anabaino" class="about-compact-centered-image" />
+                        </div>
+                        <p class="about-body-text">
+                            Mission Anabaino (MA) seeks to fulfill the "greater things" in relation to Christ's great expectations regarding his ascension ministry today. It involves participating in the real and personal advent of Christ through church planting and the ecumenically-oriented rediscovery of missional ecclesiology.
+                            <br /><br />
+                            <div class="center-content">
+                                <a href="https://anabaino.org" style="text-decoration: underline">
+                                    <h4>For more info, visit anabaino.org</h4>
+                                </a>
+                            </div>
+                        </p>
+                    </div>
+                </section>
+
+                <!-- Our Story Section -->
+                <section id="ourStory" class="about-content-section">
+                    <div class="about-inner-section">
                         <h1 class="about-heading">Our Story</h1>
-                        
                         <div class="about-body-text">
                             <p>If you'd like to hear from some of our CPC New Haven Alumni, please watch this video slideshow of what they shared during our 25th Anniversary! Use the controls in the bottom left hand corner and play each video individually.</p>
                             
@@ -884,7 +586,7 @@
 
                             <p>In two years, and after completing a sermon series through the book of Jonah with an emphasis upon God's love for "the city," the congregation agreed to begin transitioning to downtown New Haven. On August 1, 1994 a study center and church office was leased at 383 Orange St. consisting of a library/prayer room, a meeting room, a pastor's study, and an office for then seminarian apprentice George Levesque. On August 28, 1994, Sunday worship was relocated nearby at the Neighborhood Music School located at 100 Audubon Street. November 6, 1994 at 4:00 PM, there was a special service of "organization" whereby church planter-evangelist Preston Graham was installed as the pastor and Cliff Bogue, Robert Hawkes and George Levesque were ordained as ruling elders. Also during this time, family groups were established - one in Orange, one in Westville, and one in Guilford.</p>
 
-                            <p>By God's grace, the 1994-1995 years were characterized by many wonderful evidences of spiritual power and transformation. Between the months of September 1994 and August 1995, there were 7 professions of faith together with many signs of growing spiritual maturity in the members. Of particular importance was a growing commitment to family worship in families. By the end of August 1995, the membership had grown to 77 and the weekly worship attendance was averaging 140. As previously committed to planting a first church prior to purchasing a building, by God's grace in the following year, plans were laid with Yale Divinity Student and CPC intern, Mel Sensenig, toward planting a CPC daughter church in downtown Providence, R.I. This was initiated in 1997.</p>
+                            <p>By God's grace, the 1994-1995 years were characterized by many wonderful evidences of spiritual power and transformation. Between the months of September 1994 and August 1995, there were 7 professions of faith together with many signs of growing spiritual maturity in the members. Of particular importance was a growing commitment to family worship in families. By the end of August 1995, the membership had grown to 77 and the weekly worship attendance was averaging 140. As previously committed to planting a first church prior to purchasing a building, by God's grace in the following year, plans were laid with Yale Divinity Student and CPC intern, Mel Sensenig, toward planting a daughter church in downtown Providence, R.I. This was initiated in 1997.</p>
 
                             <p>As the church grew and its commitment to New Haven increased, on September 5, 1997, Christ Presbyterian Church became the 4th owner of 135 Whitney Avenue with its 1850 Gothic Revival Cottage for the price of $400,000. As designed by Architect Jackson Downing and featured in his The Architecture of Country House (1850) under the title "A Symmetrical Cottage Design # 7," Downing described the cottage as combining "the beautiful with the good" as commissioned by Esra Reid, President of the Bank of New Haven, for his aging parents. (c.f. picture in church parlor). In 1922, the cottage was sold to its second owner, Father Riggs, the first Catholic chaplain at Yale and founder of St. Thomas Moore Chapel (c.f. alcove outside the Sr. Pastor office where the patron saint would have most likely stood. For a short biography of Father Riggs including a delightful description of his use of the "Gate House" cottage, c.f. "Father Riggs of Yale by Stephen Schmalhofer, The New Criterion, March 24, 2021). In 1958, the cottage was sold to Dr. Jack McGrail and converted to a Dentist office and drug store (in the basement), later to be converted into law offices for rent when CPC pursued purchasing it as it's study center and potential property for the building of a modest Sanctuary.</p>
 
@@ -948,10 +650,50 @@
                                 <li>April 2012: The Goatville service began worshiping at 1:35 in the afternoon.</li>
                             </ul>
                         </div>
-                    </section>
-                </div>
+                    </div>
+                </section>
             </div>
         </div>
+
+        <!-- Update scroll animation script -->
+        <script>
+            // Intersection Observer for scroll animations
+            const aboutObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        // Update active nav link
+                        const id = entry.target.getAttribute('id');
+                        document.querySelectorAll('.about-floating-nav a').forEach(link => {
+                            link.classList.remove('active');
+                            if (link.getAttribute('href') === `#${id}`) {
+                                link.classList.add('active');
+                            }
+                        });
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: '-100px 0px'
+            });
+
+            // Observe all content sections
+            document.querySelectorAll('.about-content-section').forEach(section => {
+                aboutObserver.observe(section);
+            });
+
+            // Smooth scroll for navigation
+            document.querySelectorAll('.about-floating-nav a').forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const targetId = link.getAttribute('href');
+                    document.querySelector(targetId).scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                });
+            });
+        </script>
 
         <!-- Footer (unchanged) -->
         <footer id="footer-about-page">
