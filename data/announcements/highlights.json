@@ -62,7 +62,7 @@
       "title": "Sunday Schedule",
       "description": "<table><tr><td>8:30am</td><td>Prayer in the Parlor</td></tr><tr><td>9:30am</td><td>Children's Sunday School & Adult Sunday Studies</td></tr><tr><td>12:00pm</td><td>Fellowship Lunch</td></tr></table>",
       "dateEntered": "2025-01-20",
-      "active": "true",
+      "active": "false",
       "type": "ongoing",
       "category": "ongoing",
       "tag": "schedule",
