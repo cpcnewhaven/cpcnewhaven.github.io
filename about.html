@@ -61,7 +61,7 @@
       .about-floating-nav a {
         color: var(--cpc-blue);
         text-decoration: none;
-        font-size: 13px;
+        font-size: 14px;
         transition: all 0.3s ease;
         padding: 8px 12px;
         border-radius: 4px;
@@ -83,9 +83,9 @@
         transition: all 0.6s ease;
         margin: 0 auto;
         max-width: 800px;
-        font-size: 15px;
+        font-size: 16px;
         line-height: 1.6;
-        margin-left: 180px; /* Add space for the floating nav */
+        margin-left: 180px;
       }
 
       .about-content-section.visible {
@@ -94,24 +94,24 @@
       }
 
       .about-heading {
-        font-size: 1.5em;
+        font-size: 1.8em;
         margin-bottom: 0.5em;
       }
       .about-sub-title {
-        font-size: 1.1em;
+        font-size: 1.3em;
         margin-top: 1.2em;
         margin-bottom: 0.5em;
       }
       .about-body-text, .about-content-section p, .about-content-section li {
-        font-size: 0.97em;
+        font-size: 1.05em;
         margin-bottom: 0.7em;
       }
       .about-content-section ul, .about-content-section ol {
         margin-left: 1.2em;
-        font-size: 0.97em;
+        font-size: 1.05em;
       }
       .about-content-section blockquote {
-        font-size: 0.95em;
+        font-size: 1.05em;
         margin: 1em 0 1em 1.5em;
         padding-left: 1em;
         border-left: 3px solid #eee;
@@ -147,14 +147,14 @@
         }
 
         .about-floating-nav a {
-          font-size: 12px;
+          font-size: 13px;
           padding: 4px 8px;
         }
 
         .about-content-section {
           margin-left: 0;
           padding: 20px 15px;
-          font-size: 14px;
+          font-size: 15px;
         }
 
         .about-staff-grid {
@@ -168,6 +168,19 @@
 
         .about-compact-centered-image {
           max-width: 300px;
+        }
+
+        .about-heading {
+          font-size: 1.5em;
+        }
+
+        .about-sub-title {
+          font-size: 1.2em;
+        }
+
+        .read-more-button {
+          font-size: 0.95em;
+          padding: 8px 15px;
         }
       }
 
@@ -218,6 +231,7 @@
       #footer-about-page .top-splash-logo {
         max-width: 200px;
         height: auto;
+        color:white!important;
       }
 
       #footer-about-page .body-text {
@@ -226,12 +240,14 @@
         text-align: center;
         line-height: 1.6;
         font-size: 0.95em;
+        color:white!important;
       }
 
       #footer-about-page p {
         text-align: center;
         margin: 10px 0;
         font-size: 0.9em;
+        color:white!important;
       }
 
       #footer-about-page a {
@@ -286,13 +302,13 @@
       .about-staff-member h3 {
         color: var(--cpc-blue);
         margin: 0 0 5px 0;
-        font-size: 1.1em;
+        font-size: 1.2em;
       }
 
       .about-staff-member h4 {
         color: #666;
         margin: 0 0 15px 0;
-        font-size: 0.9em;
+        font-size: 1em;
         font-weight: normal;
       }
 
@@ -300,10 +316,10 @@
         background: var(--cpc-blue);
         color: white;
         border: none;
-        padding: 8px 15px;
+        padding: 10px 20px;
         border-radius: 4px;
         cursor: pointer;
-        font-size: 0.9em;
+        font-size: 1em;
         transition: opacity 0.3s ease;
       }
 
@@ -528,15 +544,19 @@
                             <div class="about-staff-member">
                                 <h3>Craig Luekens</h3>
                                 <h4>Senior Pastor</h4>
-                                <div class="read-more-cont">
-                                    <button class="read-more-button" onclick="window.location.href='https://cpcnewhaven.org/rev-craig-luekens.html'">Pastor Bio</button>
+                                <div class="read-more-cont" style="text-align: center; margin-top: 15px;">
+                                    <button class="read-more-button" onclick="window.location.href='https://cpcnewhaven.org/rev-craig-luekens.html'" style="padding: 10px 20px;">
+                                        <i class="fas fa-user-circle" style="margin-right: 8px;"></i>Meet Pastor Craig
+                                    </button>
                                 </div>
                             </div>
                             <div class="about-staff-member">
                                 <h3>Jerry Ornelas</h3>
                                 <h4>Assistant Pastor</h4>
-                                <div class="read-more-cont">
-                                    <button class="read-more-button" onclick="window.location.href='https://cpcnewhaven.org/rev-jerry-ornelas.html'">Pastor Bio</button>
+                                <div class="read-more-cont" style="text-align: center; margin-top: 15px;">
+                                    <button class="read-more-button" onclick="window.location.href='https://cpcnewhaven.org/rev-jerry-ornelas.html'" style="padding: 10px 20px;">
+                                        <i class="fas fa-user-circle" style="margin-right: 8px;"></i>Meet Pastor Jerry
+                                    </button>
                                 </div>
                             </div>
                             <div class="about-staff-member">
@@ -784,31 +804,200 @@
                             <h2 class="about-sub-title">A Timeline</h2>
                             <p class="timeline-quote">"I will build my church..." Matthew 16</p>
 
+                            <style>
+                                .timeline {
+                                    position: relative;
+                                    max-width: 800px;
+                                    margin: 40px auto;
+                                    padding: 0;
+                                    list-style: none;
+                                }
+
+                                .timeline::before {
+                                    content: '';
+                                    position: absolute;
+                                    top: 0;
+                                    left: 50%;
+                                    width: 2px;
+                                    height: 100%;
+                                    background: var(--cpc-blue);
+                                    transform: translateX(-50%);
+                                }
+
+                                .timeline li {
+                                    position: relative;
+                                    width: 50%;
+                                    padding: 20px 40px;
+                                    box-sizing: border-box;
+                                    opacity: 0;
+                                    animation: fadeIn 0.5s ease forwards;
+                                    animation-delay: calc(0.2s * var(--i));
+                                }
+
+                                .timeline li:nth-child(odd) {
+                                    left: 0;
+                                    clear: both;
+                                }
+
+                                .timeline li:nth-child(even) {
+                                    left: 50%;
+                                }
+
+                                .timeline li::before {
+                                    content: '';
+                                    position: absolute;
+                                    width: 15px;
+                                    height: 15px;
+                                    background: white;
+                                    border: 2px solid var(--cpc-blue);
+                                    border-radius: 50%;
+                                    top: 24px;
+                                }
+
+                                .timeline li:nth-child(odd)::before {
+                                    right: -9px;
+                                }
+
+                                .timeline li:nth-child(even)::before {
+                                    left: -9px;
+                                }
+
+                                .timeline li .date {
+                                    color: var(--cpc-blue);
+                                    font-weight: bold;
+                                    margin-bottom: 5px;
+                                    font-size: 1.1em;
+                                }
+
+                                .timeline li .content {
+                                    padding: 15px;
+                                    background: white;
+                                    border-radius: 8px;
+                                    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                                }
+
+                                @keyframes fadeIn {
+                                    from { opacity: 0; transform: translateY(20px); }
+                                    to { opacity: 1; transform: translateY(0); }
+                                }
+
+                                @media screen and (max-width: 768px) {
+                                    .timeline::before {
+                                        left: 20px;
+                                    }
+
+                                    .timeline li {
+                                        width: 100%;
+                                        padding-left: 50px;
+                                        left: 0;
+                                    }
+
+                                    .timeline li::before {
+                                        left: 12px;
+                                    }
+                                }
+                            </style>
+
                             <ul class="timeline">
-                                <li>July 1, 1643-February 22, 1649: Westminster Assembly and the adoption of the Westminster Confession of Faith - see An Anglican Renewal Movement (J.I. Packer)</li>
-                                <li>1705: The first Presbytery was formed reflecting the efforts of first Presbyterian minister, church planter, Francis Mackem</li>
-                                <li>1716: The first synod, the Synod of Philadelphia was formed including the New York Region</li>
-                                <li>1729: The Adoption Act Synod of New York</li>
-                                <li>1786: The First Publishing of Westminster Shorter Catechism in New Haven</li>
-                                <li>Summer of 1991: A "serendipitous" trip across the Long Island Sound.</li>
-                                <li>Fall 1991: The Formation of a "High Gospel-High Church" Vision: A Thursday evening Bible Study in the Westville area of New Haven</li>
-                                <li>1993: Sermon Series in Ephesians, Establishment of Sunday School, Mid-Week Study Center Congregation of 22 adults and 26 children</li>
-                                <li>4:00 PM, November 6, 1994: Special Service of Organization of the Northeast Presbytery at the Neighborhood Music School, 100 Audubon St. New Haven. Evangelist Preston Graham Jr. was installed as Pastor; George Levesque, Cliff Bogue, Rob Hawkes were installed as Ruling Elders.</li>
-                                <li>1994-1995: Characterized by many wonderful evidences of spiritual growth, 7 adult professions of faith and membership up to 77 with weekly worship attendance averaging 140. Plans being made to plant a daughter church in Providence, R.I. with CPC pastoral Intern Melvin Sensenig.</li>
-                                <li>September 5, 1997: Christ Presbyterian Church purchased for a Study Center and future site of worship 135 Whitney Avenue. The aging 1850 Gothic Revival Cottage was purchased at a price of $400,000. (Designed by Architect Jackson Downing and featured in his The Architecture of Country House (1850) under the design title "A Symmetrical Cottage Design # 7." Described as combining "the beautiful with the good", the design was commissioned by Ezra Reid, President of the Bank of New Haven, for his aging parents. In 1922, the cottage was sold to its second owner, Father Riggs, the first Catholic chaplain assigned to Yale University and founder of St. Thomas Moore Chapel.) CPC became the 4th owner and her members initiated a sacrificial effort to restore and renovate the existing cottage in conformity to its original design lasting several years with significant costs measured in both sweat and financial equity.</li>
-                                <li>Fall 1999: the church hired an associate pastor of college ministry, Tom Morrison, to assist in ministry with Yale students especially.</li>
-                                <li>April of 2001: after two years of legal, political, financial and architectural preparations, there was a groundbreaking at 135 Whitney Avenue for a future Sanctuary of Worship. (Architect: Paul Pozzi and Associates, Owner's Representative: Hugh Hedges, Attorney: Steven Mednick)</li>
-                                <li>April 2002: God's power evidenced in human weakness, including a miraculous and unexpected gift of $850,000 at a moment when the project seemed all but lost, the building project was granted a temporary certificate of occupancy right on time for the first worship service on Easter Sunday, albeit with concrete floors and unpainted walls exposed.</li>
-                                <li>August 2005: Commissioned David Hutchinson along with several CPC families to plant a daughter church in Danbury, CT</li>
-                                <li>July 2006: Began first annual Loving New Haven Impact Week with a VBS soccer camp in the Hill neighborhood and construction work on the Whitney property.</li>
-                                <li>Summer 2007: Began Bible study in the Hill community.</li>
-                                <li>Spring 2008: Church Commissions artist Makoto Fujimura for the chancel art, Anabaino, for permanent location on the wall of the Whitney chancel.</li>
-                                <li>Fall 2008: The initiation of a multi-congregational vision for reaching New Haven and the commissioning of Rev. Tolivar Wills to establish a CPC congregation in the Hill community following two summers of mission activity in the Hill previously.</li>
-                                <li>August 2009: Worship Services of CPC in the Hill, a second congregation of CPC, began in the Boys and Girls Club at 230 Columbus Avenue.</li>
-                                <li>October 2010: We began a Bible study with the intention of exploring the possibility of a third site, later to be called Goatville (the nickname of a neighborhood in New Haven).</li>
-                                <li>October 2011: Goatville began worshiping at 135 Whitney Avenue at 4:30.</li>
-                                <li>April 2012: The Goatville service began worshiping at 1:35 in the afternoon.</li>
+                                <li style="--i:1">
+                                    <div class="content">
+                                        <div class="date">July 1, 1643 - February 22, 1649</div>
+                                        Westminster Assembly and the adoption of the Westminster Confession of Faith - see An Anglican Renewal Movement (J.I. Packer)
+                                    </div>
+                                </li>
+                                <li style="--i:2">
+                                    <div class="content">
+                                        <div class="date">1705</div>
+                                        The first Presbytery was formed reflecting the efforts of first Presbyterian minister, church planter, Francis Mackem
+                                    </div>
+                                </li>
+                                <li style="--i:3">
+                                    <div class="content">
+                                        <div class="date">1716</div>
+                                        The first synod, the Synod of Philadelphia was formed including the New York Region
+                                    </div>
+                                </li>
+                                <li style="--i:4">
+                                    <div class="content">
+                                        <div class="date">1729</div>
+                                        The Adoption Act Synod of New York
+                                    </div>
+                                </li>
+                                <li style="--i:5">
+                                    <div class="content">
+                                        <div class="date">1786</div>
+                                        The First Publishing of Westminster Shorter Catechism in New Haven
+                                    </div>
+                                </li>
+                                <li style="--i:6">
+                                    <div class="content">
+                                        <div class="date">Summer of 1991</div>
+                                        A "serendipitous" trip across the Long Island Sound
+                                    </div>
+                                </li>
+                                <li style="--i:7">
+                                    <div class="content">
+                                        <div class="date">Fall 1991</div>
+                                        The Formation of a "High Gospel-High Church" Vision: A Thursday evening Bible Study in the Westville area of New Haven
+                                    </div>
+                                </li>
+                                <li style="--i:8">
+                                    <div class="content">
+                                        <div class="date">1993</div>
+                                        Sermon Series in Ephesians, Establishment of Sunday School, Mid-Week Study Center Congregation of 22 adults and 26 children
+                                    </div>
+                                </li>
+                                <li style="--i:9">
+                                    <div class="content">
+                                        <div class="date">November 6, 1994</div>
+                                        Special Service of Organization at the Neighborhood Music School. Installation of Pastor Preston Graham Jr. and Ruling Elders
+                                    </div>
+                                </li>
+                                <li style="--i:10">
+                                    <div class="content">
+                                        <div class="date">1994-1995</div>
+                                        Period of spiritual growth with 7 adult professions of faith. Membership grows to 77 with 140 average attendance
+                                    </div>
+                                </li>
+                                <li style="--i:11">
+                                    <div class="content">
+                                        <div class="date">September 5, 1997</div>
+                                        Purchase of 135 Whitney Avenue - the historic 1850 Gothic Revival Cottage
+                                    </div>
+                                </li>
+                                <li style="--i:12">
+                                    <div class="content">
+                                        <div class="date">Fall 1999</div>
+                                        Hiring of associate pastor Tom Morrison for college ministry
+                                    </div>
+                                </li>
+                                <li style="--i:13">
+                                    <div class="content">
+                                        <div class="date">April 2001</div>
+                                        Groundbreaking at 135 Whitney Avenue for future Sanctuary
+                                    </div>
+                                </li>
+                                <li style="--i:14">
+                                    <div class="content">
+                                        <div class="date">April 2002</div>
+                                        First worship service in new building on Easter Sunday
+                                    </div>
+                                </li>
+                                <li style="--i:15">
+                                    <div class="content">
+                                        <div class="date">2005-2012</div>
+                                        Period of expansion with new congregations in Danbury, the Hill neighborhood, and Goatville
+                                    </div>
+                                </li>
                             </ul>
+
+                            <p>This is our story and testimony!</p>
+
+                            <blockquote>
+                                The Spirit operates by creating out of the word a body, which St. Paul calls the Body of Christ…. As such this body becomes matched to Christ as His vis-à-vis in history and as the instrument of His saving purpose in the Gospel. It is the sphere where through the presence of the Spirit the salvation-events of the birth, life, death, resurrection, and ascension are operative here and now in history, the sphere where within the old creation the new creation has broken in with power.
+                            </blockquote>
+
+                            <p>This is our story and testimony!</p>
                         </div>
                     </div>
                 </section>
@@ -859,7 +1048,7 @@
         <footer id="footer-about-page">
             <div class="footer-content-logo">
                 <a href="index.html">
-                    <img src="./assets/CPC_LOGO_24.png" alt="CPC New Haven Church" class="top-splash-logo" />
+                    <img src="./assets/CPC_LOGO_24.png" alt="CPC New Haven Church" class="top-splash-logo" style="filter: brightness(0) invert(1); width: 250px;" />
                 </a>
             </div>
             <p class="body-text">
@@ -870,9 +1059,7 @@
                 theological reformation. By promoting reformation and revival, we seek to carry out the Great 
                 Commission with Biblical integrity and personal authenticity unto the glory of God.
             </p>
-            <p>Join us for worship and fellowship. <a href="sundays.html">Learn more</a></p>
-            <p>203.777.6960 | <a href="mailto:admin@cpcnewhaven.org">admin@cpcnewhaven.org</a> | 135 Whitney Ave. New Haven CT 06510</p>
-            <p>© 2025 Christ Presbyterian Church.</p>
+
         </footer>
 
         <!-- Other scripts -->
