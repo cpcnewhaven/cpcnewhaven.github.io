@@ -366,9 +366,16 @@
             <h1>About</h1>
         </div>
 
-        <!-- Floating Navigation -->
-        <div class="about-floating-nav">
-            <ul>
+        <!-- About Floating Nav Hamburger (Left) -->
+        <div class="about-hamburger-menu-button-container" id="aboutHamburgerMenu" style="position:fixed;top:20px;left:20px;z-index:3001;">
+            <i id="aboutHamburgerIcon" class="fas fa-bars"></i>
+        </div>
+        <div class="about-mobile-navigation" id="aboutMobileNav">
+            <div class="about-mobile-nav-header">
+                <img src="./assets/CPC_LOGO_24.png" alt="CPC New Haven Church" id="about-mobile-menu-logo" />
+                <span id="closeAboutMobileMenuButton"><i class="fas fa-times"></i></span>
+            </div>
+            <ul class="about-mobile-nav-links">
                 <li><a href="#mission">Mission</a></li>
                 <li><a href="#totalChrist">Total Christ</a></li>
                 <li><a href="#commitments">Commitments</a></li>
@@ -380,6 +387,7 @@
                 <li><a href="#ourStory">Our Story</a></li>
             </ul>
         </div>
+        <div class="about-mobile-nav-overlay" id="aboutMobileNavOverlay"></div>
 
         <!-- Main Content -->
         <div class="about-main-container">
@@ -1012,7 +1020,7 @@
                         entry.target.classList.add('visible');
                         // Update active nav link
                         const id = entry.target.getAttribute('id');
-                        document.querySelectorAll('.about-floating-nav a').forEach(link => {
+                        document.querySelectorAll('.about-mobile-nav-links a').forEach(link => {
                             link.classList.remove('active');
                             if (link.getAttribute('href') === `#${id}`) {
                                 link.classList.add('active');
@@ -1030,16 +1038,57 @@
                 aboutObserver.observe(section);
             });
 
-            // Smooth scroll for navigation
-            document.querySelectorAll('.about-floating-nav a').forEach(link => {
-                link.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    const targetId = link.getAttribute('href');
-                    document.querySelector(targetId).scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
+            // ABOUT NAV (LEFT) HAMBURGER
+            const aboutHamburgerMenu = document.getElementById('aboutHamburgerMenu');
+            const aboutMobileNav = document.getElementById('aboutMobileNav');
+            const aboutHamburgerIcon = document.getElementById('aboutHamburgerIcon');
+            const closeAboutMobileMenuButton = document.getElementById('closeAboutMobileMenuButton');
+
+            function toggleAboutNav() {
+                aboutMobileNav.classList.toggle('active');
+                if (aboutMobileNav.classList.contains('active')) {
+                    aboutHamburgerIcon.classList.remove('fa-bars');
+                    aboutHamburgerIcon.classList.add('fa-times');
+                } else {
+                    aboutHamburgerIcon.classList.add('fa-bars');
+                    aboutHamburgerIcon.classList.remove('fa-times');
+                }
+            }
+            aboutHamburgerMenu.addEventListener('click', toggleAboutNav);
+            closeAboutMobileMenuButton.addEventListener('click', toggleAboutNav);
+
+            // Close about nav when clicking a link
+            document.querySelectorAll('.about-mobile-nav-links a').forEach(link => {
+                link.addEventListener('click', () => {
+                    aboutMobileNav.classList.remove('active');
+                    aboutHamburgerIcon.classList.add('fa-bars');
+                    aboutHamburgerIcon.classList.remove('fa-times');
                 });
+            });
+
+            // MAIN NAV (RIGHT) HAMBURGER (already exists)
+            const hamburgerMenu = document.getElementById('hamburgerMenu');
+            const mobileNav = document.querySelector('.mobile-navigation');
+            const closeMobileMenuButton = document.getElementById('closeMobileMenuButton');
+
+            function toggleMainNav() {
+                mobileNav.classList.toggle('active');
+                if (mobileNav.classList.contains('active')) {
+                    closeMobileMenuButton.classList.remove('fa-bars');
+                    closeMobileMenuButton.classList.add('fa-times');
+                } else {
+                    closeMobileMenuButton.classList.add('fa-bars');
+                    closeMobileMenuButton.classList.remove('fa-times');
+                }
+            }
+            hamburgerMenu.addEventListener('click', toggleMainNav);
+            closeMobileMenuButton.addEventListener('click', toggleMainNav);
+
+            const aboutMobileNavOverlay = document.getElementById('aboutMobileNavOverlay');
+            aboutMobileNavOverlay.addEventListener('click', () => {
+                aboutMobileNav.classList.remove('active');
+                aboutHamburgerIcon.classList.add('fa-bars');
+                aboutHamburgerIcon.classList.remove('fa-times');
             });
         </script>
 
