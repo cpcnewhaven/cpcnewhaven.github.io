@@ -113,55 +113,25 @@
         }
     </style>
 
-    <div x-data="{ 
-        images: [
-            'https://storage.googleapis.com/cpc-public-website/podcast-thumbnails/9.08.24%20-%20CPC.jpg',
-            'https://storage.googleapis.com/cpc-public-website/podcast-thumbnails/9.15.24%20-%20CPC.jpg',
-            'https://storage.googleapis.com/cpc-public-website/podcast-thumbnails/10.06.24%20-%20CPC.jpg',
-            'https://storage.googleapis.com/cpc-public-website/podcast-thumbnails/10.20.24%20-%20CPC.jpg',
-            'https://storage.googleapis.com/cpc-public-website/podcast-thumbnails/11.10.24%20-%20CPC.jpg'
-        ],
-        currentIndex: 0
-    }" 
-    x-init="setInterval(() => { currentIndex = (currentIndex + 1) % images.length }, 10000)"
-    class="splash-hero--podcasts"
-    :style="`background-image: url('${images[currentIndex]}')`">
+    <div class="splash-hero">
         <div class="hero-content">
             <h1>Podcasts</h1>
-            <!--
-            <div class="search-container">
-                <input type="text" id="searchInput" placeholder="Search podcasts..." class="search-bar">
-                <button id="clearSearchButton" class="clear-search-button">Clear</button>
-            </div>
-            -->
         </div>
     </div>
 
     <style>
-        .splash-hero--podcasts {
-            height: 60vh; /* Reduced height */
+        .splash-hero {
+            height: 40vh;
             margin-top: 10px;
             display: flex;
             justify-content: center;
             align-items: center;
-            background-size: cover;
-            background-position: center;
+            background: linear-gradient(135deg, #6B73FF 0%, #000DFF 100%);
             position: relative;
-            transition: background-image 1s ease-in-out;
-        }
-
-        .splash-hero--podcasts::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: rgba(0, 0, 0, 0.7); /* Darker overlay for better contrast */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         }
 
         .hero-content {
-            position: relative; /* Ensures content appears above the overlay */
             text-align: center;
             z-index: 1;
         }
@@ -172,11 +142,13 @@
             font-weight: 700;
             margin: 0;
             letter-spacing: 2px;
+            font-family: "Barlow", sans-serif;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
         }
 
         @media (max-width: 768px) {
-            .splash-hero--podcasts {
-                height: 40vh;
+            .splash-hero {
+                height: 30vh;
             }
 
             .hero-content h1 {
@@ -185,16 +157,11 @@
         }
     </style>
 
-  
-
     <!-- Main Content -->
     <div class="main-content-a">
 
         <section id="podcast-sunday-sermon" class="inner-page-section" style="margin-top:20px;" x-data="{ sortKey: '', sortAsc: true }">
      
-         
-            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/6HQsDUOb5irkkcyojOredX?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>            <br>
-            
             <h4>The Sunday Sermon Archive</h4>
             <table id="sunday-sermon-table">
                 <thead>
@@ -222,10 +189,10 @@
 
         <section id="podcast-beyond" class="inner-page-section" style="margin-top:20px;" x-data="{ sortKey: '', sortAsc: true }">
        
-            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/6LNWLZ01MAuGFRLO3BRF3O?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
             
             
             <h4>Beyond The Sunday Sermon Archive</h4>
+            <br>
             <table id="beyond-sermon-table">
                 <thead>
                     <tr>
