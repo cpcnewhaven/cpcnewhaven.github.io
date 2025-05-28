@@ -573,219 +573,320 @@
                 }
             }));
         });
+
+        // Add this to your existing script section
+        document.addEventListener('DOMContentLoaded', () => {
+            // Existing code...
+
+            // Enhanced search functionality with date and book support
+            window.filterPodcasts = function(query) {
+                const searchQuery = query.toLowerCase().trim();
+                const tables = ['sunday-sermon-table', 'beyond-sermon-table'];
+                
+                // Helper function to format date for comparison
+                function formatDate(dateStr) {
+                    try {
+                        const date = new Date(dateStr);
+                        return date.toLocaleDateString('en-US', {
+                            year: 'numeric',
+                            month: 'long',
+                            day: 'numeric'
+                        }).toLowerCase();
+                    } catch (e) {
+                        return dateStr.toLowerCase();
+                    }
+                }
+
+                // Helper function to extract book from scripture
+                function extractBook(scripture) {
+                    if (!scripture) return '';
+                    // Match common book patterns (e.g., "Genesis", "1 Corinthians", "1 John")
+                    const bookMatch = scripture.match(/^([1-3]?\s*[A-Za-z]+)/);
+                    return bookMatch ? bookMatch[1].toLowerCase() : scripture.toLowerCase();
+                }
+
+                tables.forEach(tableId => {
+                    const table = document.getElementById(tableId);
+                    if (!table) return;
+                    
+                    const rows = table.getElementsByTagName('tbody')[0].getElementsByTagName('tr');
+                    
+                    for (let row of rows) {
+                        const cells = row.getElementsByTagName('td');
+                        const date = cells[0]?.textContent || '';
+                        const title = cells[1]?.textContent.toLowerCase() || '';
+                        const speaker = cells[2]?.textContent.toLowerCase() || '';
+                        const scripture = cells[3]?.textContent || '';
+                        
+                        // Format date and extract book for searching
+                        const formattedDate = formatDate(date);
+                        const book = extractBook(scripture);
+                        
+                        // Check for matches in all fields
+                        const matches = 
+                            title.includes(searchQuery) || 
+                            speaker.includes(searchQuery) || 
+                            scripture.toLowerCase().includes(searchQuery) ||
+                            formattedDate.includes(searchQuery) ||
+                            book.includes(searchQuery);
+                        
+                        row.style.display = matches ? '' : 'none';
+                    }
+                });
+
+                // Update search placeholder based on input
+                const searchInput = document.querySelector('.podcast-search-bar input');
+                if (searchQuery) {
+                    // Check if query looks like a date
+                    if (searchQuery.match(/^\d{1,2}\/\d{1,2}\/\d{2,4}$/) || 
+                        searchQuery.match(/^\d{4}-\d{1,2}-\d{1,2}$/)) {
+                        searchInput.placeholder = 'Searching by date...';
+                    }
+                    // Check if query looks like a book name
+                    else if (searchQuery.match(/^[1-3]?\s*[a-zA-Z]+$/)) {
+                        searchInput.placeholder = 'Searching by book...';
+                    }
+                    else {
+                        searchInput.placeholder = 'Searching...';
+                    }
+                } else {
+                    searchInput.placeholder = 'Search by title, speaker, date, or book...';
+                }
+            };
+
+            // Add keyboard shortcuts for search
+            document.addEventListener('keydown', (e) => {
+                // Ctrl/Cmd + K to focus search
+                if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+                    e.preventDefault();
+                    const searchInput = document.querySelector('.podcast-search-bar input');
+                    if (searchInput) {
+                        searchInput.focus();
+                    }
+                }
+                // Escape to clear search
+                if (e.key === 'Escape') {
+                    const searchInput = document.querySelector('.podcast-search-bar input');
+                    if (searchInput && document.activeElement === searchInput) {
+                        searchInput.value = '';
+                        filterPodcasts('');
+                    }
+                }
+            });
+        });
     </script>
 
     <style>
-        /* Mobile-specific podcast styles */
+        /* Base search bar styles for both mobile and desktop */
+        .podcast-search-bar {
+            position: fixed;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: 12px;
+            padding: 8px 12px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: transform 0.3s ease, opacity 0.3s ease, top 0.3s ease;
+        }
+
+        .podcast-search-bar.hidden {
+            transform: translate(-50%, -100px);
+            opacity: 0;
+        }
+
+        .podcast-search-bar input {
+            flex: 1;
+            border: none;
+            background: transparent;
+            color: #333;
+            padding: 4px 0;
+        }
+
+        .podcast-search-bar input::placeholder {
+            color: #999;
+            opacity: 0.8;
+        }
+
+        .podcast-search-bar i {
+            color: #666;
+        }
+
+        /* Add a subtle gradient background to the search bar */
+        .podcast-search-bar::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, rgba(255,255,255,0.95), rgba(255,255,255,0.98));
+            border-radius: 12px;
+            z-index: -1;
+        }
+
+        /* Mobile-specific styles */
         @media (max-width: 768px) {
-            /* Hide table headers on mobile */
-            #sunday-sermon-table thead,
-            #beyond-sermon-table thead {
-                display: none;
+            .podcast-search-bar {
+                top: 16px;
+                width: 90%;
+                max-width: 400px;
+                position: fixed;
+                z-index: 1000;
             }
 
-            /* Make tables look like podcast episodes */
-            #sunday-sermon-table tbody tr,
-            #beyond-sermon-table tbody tr {
-                display: block;
-                background: white;
-                margin: 15px 0;
-                padding: 15px;
-                border-radius: 12px;
-                box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-                transition: transform 0.2s ease;
-            }
-
-            #sunday-sermon-table tbody tr:active,
-            #beyond-sermon-table tbody tr:active {
-                transform: scale(0.98);
-            }
-
-            /* Style each cell as a block element */
-            #sunday-sermon-table tbody td,
-            #beyond-sermon-table tbody td {
-                display: block;
-                padding: 4px 0;
-                border: none;
-                text-align: left;
-            }
-
-            /* Date styling */
-            #sunday-sermon-table tbody td:first-child,
-            #beyond-sermon-table tbody td:first-child {
-                color: #666;
-                font-size: 0.9em;
-                margin-bottom: 4px;
-            }
-
-            /* Title styling */
-            #sunday-sermon-table tbody td:nth-child(2),
-            #beyond-sermon-table tbody td:nth-child(2) {
-                font-weight: 600;
-                font-size: 1.1em;
-                color: #000;
-                margin-bottom: 4px;
-            }
-
-            /* Speaker/Guest styling */
-            #sunday-sermon-table tbody td:nth-child(3),
-            #beyond-sermon-table tbody td:nth-child(3) {
-                color: #666;
-                font-size: 0.9em;
-                margin-bottom: 4px;
-            }
-
-            /* Scripture styling */
-            #sunday-sermon-table tbody td:nth-child(4) {
-                color: #666;
-                font-size: 0.9em;
-                margin-bottom: 8px;
-            }
-
-            /* Listen link styling */
-            #sunday-sermon-table tbody td:last-child,
-            #beyond-sermon-table tbody td:last-child {
-                margin-top: 8px;
-            }
-
-            #sunday-sermon-table tbody td:last-child a,
-            #beyond-sermon-table tbody td:last-child a {
-                display: inline-block;
-                background: #007AFF;
-                color: white;
-                padding: 8px 16px;
-                border-radius: 20px;
-                text-decoration: none;
-                font-weight: 500;
-                font-size: 0.9em;
-            }
-
-            /* Section headers */
-            .inner-page-section h4 {
-                font-size: 1.5em;
-                margin: 30px 0 20px;
-                color: #000;
-                font-weight: 600;
-            }
-
-            /* Adjust main content padding */
-            .main-content-a {
-                padding: 0 15px;
-            }
-
-            /* Make the hero section more compact */
-            .splash-hero {
-                height: 25vh;
-                margin-top: 0;
-            }
-
-            /* Adjust section spacing */
-            .inner-page-section {
-                margin: 15px 0;
-            }
-
-            /* Updated Floating Navigation Menu */
             .podcast-floating-nav {
                 position: fixed;
-                bottom: 16px;
+                bottom: 20px;
                 left: 50%;
                 transform: translateX(-50%);
-                background: rgba(255, 255, 255, 0.98);
-                backdrop-filter: blur(20px);
-                -webkit-backdrop-filter: blur(20px);
-                border-radius: 16px;
-                padding: 6px;
-                box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
-                z-index: 1000;
+                background: rgba(255, 255, 255, 0.95);
+                backdrop-filter: blur(10px);
+                padding: 10px 20px;
+                border-radius: 30px;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
                 display: flex;
-                gap: 4px;
-                width: auto;
-                min-width: 280px;
-                max-width: 90%;
-                transition: transform 0.3s ease, opacity 0.3s ease;
+                gap: 15px;
+                z-index: 1000;
             }
 
             .podcast-nav-item {
-                flex: 1;
-                text-align: center;
-                padding: 6px 8px;
-                border-radius: 12px;
-                color: #666;
+                color: #333;
                 text-decoration: none;
-                font-size: 0.85em;
-                font-weight: 500;
-                transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-                white-space: nowrap;
-                position: relative;
-                overflow: hidden;
+                padding: 8px 16px;
+                border-radius: 20px;
+                font-size: 14px;
+                transition: all 0.3s ease;
             }
 
             .podcast-nav-item.active {
-                background: #007AFF;
+                background: #003366;
                 color: white;
-                font-weight: 600;
             }
 
-            .podcast-nav-item:not(.active):active {
-                background: rgba(0, 122, 255, 0.1);
-                transform: scale(0.98);
-            }
-
-            /* Add a subtle indicator for the active section */
-            .podcast-nav-item.active::after {
-                content: '';
-                position: absolute;
-                bottom: 0;
-                left: 50%;
-                transform: translateX(-50%);
-                width: 4px;
-                height: 4px;
-                background: white;
-                border-radius: 50%;
-            }
-
-            /* Hide nav when scrolling down, show when scrolling up */
-            .podcast-floating-nav.hidden {
-                transform: translate(-50%, 100px);
-                opacity: 0;
-            }
-
-            /* Add padding to main content to account for floating nav */
             .main-content-a {
-                padding-bottom: 70px;
+                padding-top: 70px;
+                padding-bottom: 80px;
             }
 
-            /* Smooth scroll behavior */
-            html {
-                scroll-behavior: smooth;
+            /* Mobile table styles */
+            .podcast-table {
+                width: 100%;
+                margin: 0;
+                font-size: 14px;
             }
 
-            /* Add scroll margin to sections for better scroll positioning */
-            .inner-page-section {
-                scroll-margin-top: 16px;
+            .podcast-table th,
+            .podcast-table td {
+                padding: 8px 4px;
             }
 
-            /* Add a subtle gradient background to the nav */
-            .podcast-floating-nav::before {
-                content: '';
+            /* Hide less important columns on mobile */
+            .podcast-table th:nth-child(3),
+            .podcast-table td:nth-child(3),
+            .podcast-table th:nth-child(4),
+            .podcast-table td:nth-child(4) {
+                display: none;
+            }
+
+            /* Make title column more prominent */
+            .podcast-table td:nth-child(2) {
+                max-width: 140px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            /* Compact date column */
+            .podcast-table td:first-child {
+                white-space: nowrap;
+                width: 70px;
+            }
+
+            /* Ensure listen column is always visible */
+            .podcast-table th:last-child,
+            .podcast-table td:last-child {
+                display: table-cell;
+                width: 60px;
+                text-align: center;
+            }
+
+            /* Adjust hero section for mobile */
+            .splash-hero {
+                height: 30vh;
+                margin-top: 0;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+        }
+
+        /* Desktop-specific styles */
+        @media (min-width: 769px) {
+            .podcast-search-bar {
+                top: 20px;
+                width: 500px;
+                max-width: 40%;
+                padding: 10px 16px;
+            }
+
+            .podcast-search-bar input {
+                font-size: 1em;
+            }
+
+            .podcast-search-bar input::placeholder {
+                font-size: 0.9em;
+            }
+
+            .podcast-search-bar i {
+                font-size: 1em;
+            }
+
+            /* Add padding to main content to account for floating search */
+            .main-content-a {
+                padding-top: 80px;
+            }
+
+            /* Add keyboard shortcut hint for desktop */
+            .podcast-search-bar::after {
+                content: '⌘K';
                 position: absolute;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                background: linear-gradient(to bottom, rgba(255,255,255,0.95), rgba(255,255,255,0.98));
-                border-radius: 16px;
-                z-index: -1;
+                right: 16px;
+                color: #999;
+                font-size: 0.8em;
+                opacity: 0.7;
+            }
+
+            /* Hide keyboard shortcut on touch devices */
+            @media (hover: none) {
+                .podcast-search-bar::after {
+                    display: none;
+                }
             }
         }
     </style>
 
-    <!-- Add this right before the closing body tag -->
+    <!-- Replace the existing floating nav with this simplified version -->
     <div class="podcast-floating-nav">
         <a href="#podcast-sunday-sermon" class="podcast-nav-item">Sunday Sermons</a>
         <a href="#podcast-beyond" class="podcast-nav-item">Beyond</a>
-        <a href="#podcast-adult-study" class="podcast-nav-item">Studies</a>
-        <a href="#subscribe-podcasts" class="podcast-nav-item">Subscribe</a>
+    </div>
+
+    <!-- Add the floating search bar -->
+    <div class="podcast-search-bar" x-data="{ query: '' }">
+        <i class="fas fa-search"></i>
+        <input 
+            type="text" 
+            x-model="query" 
+            placeholder="Search by book, year, speaker, or title..." 
+            @input="filterPodcasts($event.target.value)"
+        >
     </div>
 
     <script>
@@ -793,12 +894,14 @@
         document.addEventListener('DOMContentLoaded', () => {
             // Existing code...
 
-            // Handle floating nav active state and visibility
+            // Handle floating nav and search bar visibility
             const navItems = document.querySelectorAll('.podcast-nav-item');
-            const sections = document.querySelectorAll('.inner-page-section, #subscribe-podcasts');
+            const sections = document.querySelectorAll('.inner-page-section');
             const floatingNav = document.querySelector('.podcast-floating-nav');
+            const searchBar = document.querySelector('.podcast-search-bar');
             let lastScrollY = window.scrollY;
             let ticking = false;
+            let scrollTimeout;
 
             function updateActiveNavItem() {
                 const scrollPosition = window.scrollY;
@@ -820,9 +923,11 @@
                 if (currentScrollY > lastScrollY) {
                     // Scrolling down
                     floatingNav.classList.add('hidden');
+                    searchBar.classList.add('hidden');
                 } else {
                     // Scrolling up
                     floatingNav.classList.remove('hidden');
+                    searchBar.classList.remove('hidden');
                 }
                 
                 lastScrollY = currentScrollY;
@@ -843,6 +948,22 @@
             // Initial check
             updateActiveNavItem();
 
+            // Show nav and search when user stops scrolling
+            window.addEventListener('scroll', () => {
+                clearTimeout(scrollTimeout);
+                scrollTimeout = setTimeout(() => {
+                    floatingNav.classList.remove('hidden');
+                    searchBar.classList.remove('hidden');
+                }, 1000);
+            });
+
+            // Show search bar when user hovers near top of screen
+            document.addEventListener('mousemove', (e) => {
+                if (e.clientY < 100) {
+                    searchBar.classList.remove('hidden');
+                }
+            });
+
             // Smooth scroll for nav items with haptic feedback
             navItems.forEach(item => {
                 item.addEventListener('click', (e) => {
@@ -860,15 +981,174 @@
                     }
                 });
             });
+        });
+    </script>
 
-            // Show nav when user stops scrolling
-            let scrollTimeout;
-            window.addEventListener('scroll', () => {
-                clearTimeout(scrollTimeout);
-                scrollTimeout = setTimeout(() => {
-                    floatingNav.classList.remove('hidden');
-                }, 1000);
-            });
+    <style>
+        /* Podcast card styles */
+        .podcast-card {
+            display: none; /* Hidden by default, shown on mobile */
+            background: white;
+            border-radius: 12px;
+            padding: 16px;
+            margin: 12px 0;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .podcast-card-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
+        .podcast-card-date {
+            font-size: 14px;
+            color: #666;
+            white-space: nowrap;
+        }
+
+        .podcast-card-title {
+            font-size: 16px;
+            font-weight: 600;
+            margin: 0;
+            color: #333;
+        }
+
+        .podcast-card-info {
+            font-size: 14px;
+            color: #666;
+            margin: 4px 0;
+        }
+
+        .podcast-card-link {
+            display: inline-block;
+            margin-top: 8px;
+            color: #0066cc;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        /* Mobile-specific styles */
+        @media (max-width: 768px) {
+            /* Hide tables on mobile */
+            .podcast-table {
+                display: none;
+            }
+
+            /* Show cards on mobile */
+            .podcast-card {
+                display: block;
+            }
+
+            .podcast-search-bar {
+                top: 16px;
+                width: 90%;
+                max-width: 400px;
+                position: fixed;
+                z-index: 1000;
+            }
+
+            .podcast-floating-nav {
+                position: fixed;
+                bottom: 20px;
+                left: 50%;
+                transform: translateX(-50%);
+                background: rgba(255, 255, 255, 0.95);
+                backdrop-filter: blur(10px);
+                padding: 10px 20px;
+                border-radius: 30px;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+                display: flex;
+                gap: 15px;
+                z-index: 1000;
+            }
+
+            .podcast-nav-item {
+                color: #333;
+                text-decoration: none;
+                padding: 8px 16px;
+                border-radius: 20px;
+                font-size: 14px;
+                transition: all 0.3s ease;
+            }
+
+            .podcast-nav-item.active {
+                background: #003366;
+                color: white;
+            }
+
+            .main-content-a {
+                padding-top: 70px;
+                padding-bottom: 80px;
+            }
+
+            /* Adjust hero section for mobile */
+            .splash-hero {
+                height: 30vh;
+                margin-top: 0;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+
+    <!-- Add this script to convert table rows to cards on mobile -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            function createPodcastCards() {
+                const tables = ['sunday-sermon-table', 'beyond-sermon-table'];
+                
+                tables.forEach(tableId => {
+                    const table = document.getElementById(tableId);
+                    if (!table) return;
+                    
+                    const tbody = table.getElementsByTagName('tbody')[0];
+                    const rows = tbody.getElementsByTagName('tr');
+                    
+                    // Create container for cards if it doesn't exist
+                    let cardContainer = table.parentElement.querySelector('.podcast-cards');
+                    if (!cardContainer) {
+                        cardContainer = document.createElement('div');
+                        cardContainer.className = 'podcast-cards';
+                        table.parentElement.insertBefore(cardContainer, table);
+                    }
+                    
+                    // Clear existing cards
+                    cardContainer.innerHTML = '';
+                    
+                    // Convert each row to a card
+                    Array.from(rows).forEach(row => {
+                        const cells = row.getElementsByTagName('td');
+                        if (cells.length < 2) return;
+                        
+                        const card = document.createElement('div');
+                        card.className = 'podcast-card';
+                        
+                        const date = cells[0].textContent;
+                        const title = cells[1].textContent;
+                        const info = cells[2]?.textContent || '';
+                        const link = cells[cells.length - 1].querySelector('a')?.href;
+                        
+                        card.innerHTML = `
+                            <div class="podcast-card-header">
+                                <div class="podcast-card-date">${date}</div>
+                            </div>
+                            <h3 class="podcast-card-title">${title}</h3>
+                            <div class="podcast-card-info">${info}</div>
+                            ${link ? `<a href="${link}" class="podcast-card-link">Listen</a>` : ''}
+                        `;
+                        
+                        cardContainer.appendChild(card);
+                    });
+                });
+            }
+
+            // Create cards on load and window resize
+            createPodcastCards();
+            window.addEventListener('resize', createPodcastCards);
         });
     </script>
 
