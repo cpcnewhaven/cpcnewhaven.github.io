@@ -3552,10 +3552,10 @@ p {
     }
     .hamburger-menu-button-container {
         display: flex !important;
-        position: fixed;
-        top: 20px;
-        right: 20px;
-        z-index: 3001;
+        position: fixed !important;
+        top: 20px !important;
+        right: 20px !important;
+        z-index: 3001 !important;
         background: #fff !important;
         width: 44px !important;
         height: 44px !important;
@@ -3614,4 +3614,24 @@ p {
         background: var(--cpc-blue) !important;
         color: white !important;
     }
+}
+
+/* Remove fade-in animation for about-content-section */
+.about-content-section {
+    min-height: 60vh;
+    padding: 40px 10px 30px 10px;
+    margin: 0 auto;
+    max-width: 800px;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-left: 180px;
+    /* Remove animation */
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+}
+
+.about-content-section.visible {
+    opacity: 1 !important;
+    transform: none !important;
 }
