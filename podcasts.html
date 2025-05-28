@@ -586,7 +586,17 @@
                 // Helper function to format date for comparison
                 function formatDate(dateStr) {
                     try {
+                        // Handle multiple date formats
                         const date = new Date(dateStr);
+                        if (isNaN(date.getTime())) {
+                            // Try parsing MM/DD/YYYY format
+                            const [month, day, year] = dateStr.split('/');
+                            return new Date(year, month - 1, day).toLocaleDateString('en-US', {
+                                year: 'numeric',
+                                month: 'long',
+                                day: 'numeric'
+                            }).toLowerCase();
+                        }
                         return date.toLocaleDateString('en-US', {
                             year: 'numeric',
                             month: 'long',
@@ -600,58 +610,65 @@
                 // Helper function to extract book from scripture
                 function extractBook(scripture) {
                     if (!scripture) return '';
-                    // Match common book patterns (e.g., "Genesis", "1 Corinthians", "1 John")
-                    const bookMatch = scripture.match(/^([1-3]?\s*[A-Za-z]+)/);
+                    // Match common book patterns including numbers and spaces
+                    const bookMatch = scripture.match(/^([1-3]?\s*[A-Za-z]+(?:\s+[A-Za-z]+)*)/);
                     return bookMatch ? bookMatch[1].toLowerCase() : scripture.toLowerCase();
                 }
 
-                tables.forEach(tableId => {
-                    const table = document.getElementById(tableId);
-                    if (!table) return;
-                    
-                    const rows = table.getElementsByTagName('tbody')[0].getElementsByTagName('tr');
-                    
-                    for (let row of rows) {
-                        const cells = row.getElementsByTagName('td');
-                        const date = cells[0]?.textContent || '';
-                        const title = cells[1]?.textContent.toLowerCase() || '';
-                        const speaker = cells[2]?.textContent.toLowerCase() || '';
-                        const scripture = cells[3]?.textContent || '';
-                        
-                        // Format date and extract book for searching
-                        const formattedDate = formatDate(date);
-                        const book = extractBook(scripture);
-                        
-                        // Check for matches in all fields
-                        const matches = 
-                            title.includes(searchQuery) || 
-                            speaker.includes(searchQuery) || 
-                            scripture.toLowerCase().includes(searchQuery) ||
-                            formattedDate.includes(searchQuery) ||
-                            book.includes(searchQuery);
-                        
-                        row.style.display = matches ? '' : 'none';
-                    }
-                });
-
-                // Update search placeholder based on input
-                const searchInput = document.querySelector('.podcast-search-bar input');
-                if (searchQuery) {
-                    // Check if query looks like a date
-                    if (searchQuery.match(/^\d{1,2}\/\d{1,2}\/\d{2,4}$/) || 
-                        searchQuery.match(/^\d{4}-\d{1,2}-\d{1,2}$/)) {
-                        searchInput.placeholder = 'Searching by date...';
-                    }
-                    // Check if query looks like a book name
-                    else if (searchQuery.match(/^[1-3]?\s*[a-zA-Z]+$/)) {
-                        searchInput.placeholder = 'Searching by book...';
-                    }
-                    else {
-                        searchInput.placeholder = 'Searching...';
-                    }
-                } else {
-                    searchInput.placeholder = 'Search by title, speaker, date, or book...';
+                // Debounce the search
+                if (window.searchTimeout) {
+                    clearTimeout(window.searchTimeout);
                 }
+                
+                window.searchTimeout = setTimeout(() => {
+                    tables.forEach(tableId => {
+                        const table = document.getElementById(tableId);
+                        if (!table) return;
+                        
+                        const rows = table.getElementsByTagName('tbody')[0].getElementsByTagName('tr');
+                        
+                        for (let row of rows) {
+                            const cells = row.getElementsByTagName('td');
+                            const date = cells[0]?.textContent || '';
+                            const title = cells[1]?.textContent.toLowerCase() || '';
+                            const speaker = cells[2]?.textContent.toLowerCase() || '';
+                            const scripture = cells[3]?.textContent || '';
+                            
+                            // Format date and extract book for searching
+                            const formattedDate = formatDate(date);
+                            const book = extractBook(scripture);
+                            
+                            // Check for matches in all fields
+                            const matches = 
+                                title.includes(searchQuery) || 
+                                speaker.includes(searchQuery) || 
+                                scripture.toLowerCase().includes(searchQuery) ||
+                                formattedDate.includes(searchQuery) ||
+                                book.includes(searchQuery);
+                            
+                            row.style.display = matches ? '' : 'none';
+                        }
+                    });
+
+                    // Update search placeholder based on input
+                    const searchInput = document.querySelector('.podcast-search-bar input');
+                    if (searchQuery) {
+                        // Check if query looks like a date
+                        if (searchQuery.match(/^\d{1,2}\/\d{1,2}\/\d{2,4}$/) || 
+                            searchQuery.match(/^\d{4}-\d{1,2}-\d{1,2}$/)) {
+                            searchInput.placeholder = 'Searching by date...';
+                        }
+                        // Check if query looks like a book name
+                        else if (searchQuery.match(/^[1-3]?\s*[a-zA-Z]+(?:\s+[a-zA-Z]+)*$/)) {
+                            searchInput.placeholder = 'Searching by book...';
+                        }
+                        else {
+                            searchInput.placeholder = 'Searching...';
+                        }
+                    } else {
+                        searchInput.placeholder = 'Search by title, speaker, date, or book...';
+                    }
+                }, 300); // 300ms debounce
             };
 
             // Add keyboard shortcuts for search
