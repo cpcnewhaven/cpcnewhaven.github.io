@@ -337,6 +337,111 @@
         border-radius: 8px;
         box-shadow: 0 2px 4px rgba(0,0,0,0.1);
       }
+
+      /* Mobile Navigation Styles */
+      .hamburger-menu-button-container {
+        display: none;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 3001;
+        background: #fff;
+        width: 44px;
+        height: 44px;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(0,0,80,0.1);
+        border: 2px solid #003366;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        cursor: pointer;
+      }
+
+      .hamburger-menu-button-container i {
+        color: #003366;
+        font-size: 20px;
+      }
+
+      .mobile-navigation {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        max-width: 320px;
+        height: 100vh;
+        background: #fff;
+        z-index: 3000;
+        transition: right 0.3s ease-in-out;
+        box-shadow: -2px 0 12px rgba(0,0,0,0.13);
+        overflow-y: auto;
+      }
+
+      .mobile-navigation.active {
+        right: 0;
+      }
+
+      .mobile-nav-header {
+        padding: 20px 20px 10px 20px;
+        text-align: left;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      #mobile-menu-logo {
+        max-width: 120px;
+        height: auto;
+      }
+
+      .mobile-nav-links {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .mobile-nav-links li {
+        border-bottom: 1px solid #eee;
+      }
+
+      .mobile-nav-links a {
+        display: block;
+        padding: 16px 24px;
+        color: var(--cpc-blue);
+        text-decoration: none;
+        font-size: 1.1em;
+        transition: background 0.2s, color 0.2s;
+      }
+
+      .mobile-nav-links a:hover {
+        background: var(--cpc-blue);
+        color: white;
+      }
+
+      .mobile-nav-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0,0,0,0.25);
+        z-index: 2999;
+      }
+
+      .mobile-navigation.active ~ .mobile-nav-overlay {
+        display: block;
+      }
+
+      @media (max-width: 868px) {
+        .hamburger-menu-button-container {
+          display: flex;
+        }
+        .mobile-navigation {
+          display: block;
+        }
+      }
     </style>
     </head>
 
@@ -354,12 +459,28 @@
             <a href="give.html">Give</a>
         </nav>
 
-        <!-- (Optional) Mobile hamburger for the main navigation -->
+        <!-- Mobile Navigation -->
         <div class="hamburger-menu-button-container" id="hamburgerMenu">
             <i id="closeMobileMenuButton" class="fas fa-bars"></i>
         </div>
-        <!-- Mobile Navigation for main nav, etc., remains unchanged -->
-        <!-- ... -->
+        <div class="mobile-navigation" id="mobileNav">
+            <div class="mobile-nav-header">
+                <img src="./assets/CPC_LOGO_24.png" alt="CPC New Haven Church" id="mobile-menu-logo" />
+                <span id="closeMobileMenuButton"><i class="fas fa-times"></i></span>
+            </div>
+            <ul class="mobile-nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sundays.html">Sundays</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="podcasts.html">Podcasts</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="community.html">Community</a></li>
+                <li><a href="live.html">Live</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="give.html">Give</a></li>
+            </ul>
+        </div>
+        <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
 
         <!-- Splash Hero or page header -->
         <div class="splash-hero--about">
@@ -1066,10 +1187,11 @@
                 });
             });
 
-            // MAIN NAV (RIGHT) HAMBURGER (already exists)
+            // MAIN NAV (RIGHT) HAMBURGER
             const hamburgerMenu = document.getElementById('hamburgerMenu');
-            const mobileNav = document.querySelector('.mobile-navigation');
+            const mobileNav = document.getElementById('mobileNav');
             const closeMobileMenuButton = document.getElementById('closeMobileMenuButton');
+            const mobileNavOverlay = document.getElementById('mobileNavOverlay');
 
             function toggleMainNav() {
                 mobileNav.classList.toggle('active');
@@ -1081,8 +1203,21 @@
                     closeMobileMenuButton.classList.remove('fa-times');
                 }
             }
+
             hamburgerMenu.addEventListener('click', toggleMainNav);
             closeMobileMenuButton.addEventListener('click', toggleMainNav);
+
+            // Close mobile nav when clicking overlay
+            mobileNavOverlay.addEventListener('click', toggleMainNav);
+
+            // Close mobile nav when clicking a link
+            document.querySelectorAll('.mobile-nav-links a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileNav.classList.remove('active');
+                    closeMobileMenuButton.classList.add('fa-bars');
+                    closeMobileMenuButton.classList.remove('fa-times');
+                });
+            });
 
             const aboutMobileNavOverlay = document.getElementById('aboutMobileNavOverlay');
             aboutMobileNavOverlay.addEventListener('click', () => {

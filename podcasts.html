@@ -1169,7 +1169,122 @@
         });
     </script>
 
- 
+    <style>
+        /* Add these styles for the main navigation hamburger */
+        .hamburger-menu-button-container {
+            display: none;
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 3000;
+            cursor: pointer;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .hamburger-menu-button-container i {
+            font-size: 24px;
+            color: var(--cpc-blue);
+        }
+
+        .mobile-navigation {
+            display: none;
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 80%;
+            max-width: 300px;
+            height: 100vh;
+            background: white;
+            z-index: 3001;
+            padding: 20px;
+            box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+            transition: right 0.3s ease;
+        }
+
+        .mobile-navigation.active {
+            right: 0;
+            display: block;
+        }
+
+        .mobile-nav-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .mobile-nav-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .mobile-nav-links li {
+            margin: 10px 0;
+        }
+
+        .mobile-menu-link {
+            color: var(--cpc-blue);
+            text-decoration: none;
+            font-size: 18px;
+            display: block;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .mobile-menu-link:hover {
+            background-color: rgba(0,0,0,0.05);
+        }
+
+        @media (max-width: 768px) {
+            .hamburger-menu-button-container {
+                display: block;
+            }
+
+            .main-navigation {
+                display: none;
+            }
+        }
+    </style>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Main Navigation Hamburger
+            const hamburgerMenu = document.getElementById('hamburgerMenu');
+            const mobileNav = document.getElementById('mobileNavigation');
+            const closeMobileMenuButton = document.getElementById('closeMobileMenuButton');
+
+            function toggleMainNav() {
+                mobileNav.classList.toggle('active');
+                if (mobileNav.classList.contains('active')) {
+                    closeMobileMenuButton.classList.remove('fa-bars');
+                    closeMobileMenuButton.classList.add('fa-times');
+                } else {
+                    closeMobileMenuButton.classList.add('fa-bars');
+                    closeMobileMenuButton.classList.remove('fa-times');
+                }
+            }
+
+            hamburgerMenu.addEventListener('click', toggleMainNav);
+            closeMobileMenuButton.addEventListener('click', toggleMainNav);
+
+            // Close mobile nav when clicking a link
+            document.querySelectorAll('.mobile-nav-links a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileNav.classList.remove('active');
+                    closeMobileMenuButton.classList.add('fa-bars');
+                    closeMobileMenuButton.classList.remove('fa-times');
+                });
+            });
+
+            // Existing code...
+        });
+    </script>
+
 </body>
 
 </html>
