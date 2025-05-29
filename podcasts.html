@@ -767,44 +767,11 @@
 
             /* Mobile table styles */
             .podcast-table {
-                width: 100%;
-                margin: 0;
-                font-size: 14px;
+                display: none; /* Hide tables on mobile */
             }
 
-            .podcast-table th,
-            .podcast-table td {
-                padding: 8px 4px;
-            }
-
-            /* Hide less important columns on mobile */
-            .podcast-table th:nth-child(3),
-            .podcast-table td:nth-child(3),
-            .podcast-table th:nth-child(4),
-            .podcast-table td:nth-child(4) {
-                display: none;
-            }
-
-            /* Make title column more prominent */
-            .podcast-table td:nth-child(2) {
-                max-width: 140px;
-                white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
-            }
-
-            /* Compact date column */
-            .podcast-table td:first-child {
-                white-space: nowrap;
-                width: 70px;
-            }
-
-            /* Ensure listen column is always visible */
-            .podcast-table th:last-child,
-            .podcast-table td:last-child {
-                display: table-cell;
-                width: 60px;
-                text-align: center;
+            .podcast-cards {
+                display: block; /* Show cards on mobile */
             }
 
             /* Adjust hero section for mobile */
@@ -864,6 +831,14 @@
                 .podcast-search-bar::after {
                     display: none;
                 }
+            }
+
+            .podcast-table {
+                display: table; /* Show tables on desktop */
+            }
+
+            .podcast-cards {
+                display: none; /* Hide cards on desktop */
             }
         }
     </style>
