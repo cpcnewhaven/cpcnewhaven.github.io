@@ -5,7 +5,7 @@
       "title": "Final Sunday School & Fellowship Lunch",
       "description": "This Sunday is the final day of Sunday School and Fellowship Lunch! Stay tuned for summer BBQs!",
       "dateEntered": "2025-05-19",
-      "active": "true",
+      "active": "false",
       "type": "announcement",
       "category": "announcement",
       "tag": "schedule",
@@ -162,11 +162,54 @@
       "title": "I Heart New Haven Day Registration is Live!",
       "description": "Mark your calendars for June 7 for Bridges of Hope's annual I Heart New Haven Day! This is an exciting day joining with other churches around the city to love the greater New Haven area with projects such as clean up, gardening, painting, and repair. <a href='http://www.iheartnewhavenday.com/'>Register now</a>!",
       "dateEntered": "2025-04-27",
-      "active": "true",
+      "active": "false",
       "type": "event",
       "category": "event",
       "tag": "service",
       "featuredImage": "https://storage.googleapis.com/cpc-public-website/featuredIMGs/highlights/I%20heart%20%202.jpg"
+    },
+    {
+      "id": "2025-023",
+      "title": "I Heart New Haven Day | NEXT SATURDAY! | Registration closes Monday!",
+      "description": "Mark your calendars for June 7 for Bridges of Hope's annual I Heart New Haven Day! This is an exciting day joining with other churches around the city to love the greater New Haven area with projects such as clean up, gardening, painting, and repair. <a href='http://www.iheartnewhavenday.com/'>Register now</a>!",
+      "dateEntered": "2025-05-19",
+      "active": "true",
+      "type": "event",
+      "category": "event",
+      "tag": "service",
+      "superfeatured": true,
+      "featuredImage": "https://storage.googleapis.com/cpc-public-website/featuredIMGs/highlights/I%20heart%20%202.jpg"
+    },
+    {
+      "id": "2025-024",
+      "title": "Helping Out CPC in the Hill This Summer!",
+      "description": "We're invited to serve with our brothers and sisters in Christ at our Mission Church in the Hill this summer.",
+      "dateEntered": "2025-05-19",
+      "active": "true",
+      "type": "announcement",
+      "category": "announcement",
+      "tag": "service",
+      "superfeatured": true
+    },
+    {
+      "id": "2025-025",
+      "title": "Wednesday night BBQ's in the Park",
+      "description": "July 2-Aug. 20, 5pm-7pm - sign up online to help setup, serve the meal, clean up, and meet participants.",
+      "dateEntered": "2025-05-19",
+      "active": "true",
+      "type": "event",
+      "category": "event",
+      "tag": "service"
+    },
+    {
+      "id": "2025-026",
+      "title": "Saturday morning Kids IMPACT Read Out Loud",
+      "description": "July 19, & 26 - to sign up, email Pastor Chip, <a href=\"mailto:chip.anderson@cpcnewhaven.org\">chip.anderson@cpcnewhaven.org</a>.",
+      "dateEntered": "2025-05-19",
+      "active": "true",
+      "type": "event",
+      "category": "event",
+      "tag": "children"
     }
   ]
 }
