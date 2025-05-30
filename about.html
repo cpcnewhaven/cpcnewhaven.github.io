@@ -442,6 +442,30 @@
           display: block;
         }
       }
+
+      /* Story Progress Bar Styles */
+      .story-progress-container {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 4px;
+          background: rgba(0,0,0,0.1);
+          z-index: 1000;
+      }
+
+      .story-progress-bar {
+          height: 100%;
+          background: var(--cpc-blue);
+          width: 0%;
+          transition: width 0.1s ease;
+      }
+
+      @media (max-width: 768px) {
+          .story-progress-container {
+              height: 3px;
+          }
+      }
     </style>
     </head>
 
@@ -571,7 +595,7 @@
                             finished work on the cross, where he forgave our sins and
                             reconciled us to himself. Everything we do is motivated from and
                             by the gospel.
-                            <strong>Think: Humble, honest, authentic, gracious, safe, desire
+                            <strong style="font-weight: bold;">Think: Humble, honest, authentic, gracious, safe, desire
                                 to be truly known and loved by God and others</strong>
                         </p>
                         <p class="about-body-text">
@@ -582,7 +606,7 @@
                             global presence, where the church is the evangelist for a whole
                             new way of life, showing the world who Jesus is and what it means
                             to follow Him in all our relationships.
-                            <strong>Think: Culturally self-aware, open & inviting, purposeful,
+                            <strong style="font-weight: bold;">Think: Culturally self-aware, open & inviting, purposeful,
                                 holistic evangelism safe</strong>
                         </p>
                         <p class="about-body-text">
@@ -593,7 +617,7 @@
                             generations and cultures. Officially, we subscribe to the
                             documents of Westminster (c.1630) as the summary of our faith.
                             This grounds us in Christ as our Prophet who still speaks.
-                            <strong>Think: doctrine that is alive and an unwillingness to be
+                            <strong style="font-weight: bold;">Think: doctrine that is alive and an unwillingness to be
                                 distracted by cultural fads</strong>
                         </p>
                         <p class="about-body-text">
@@ -604,7 +628,7 @@
                             culminates every week in a participation in eucharistic communion
                             with Christ as "fleshed out" in cultural styles specific to each
                             local community (1 Cor. 10:14-17, Heb. 12:22-24, Rev. 4-5)!
-                            <strong>Think: Friendly, worshipful, mysterious</strong>
+                            <strong style="font-weight: bold;">Think: Friendly, worshipful, mysterious</strong>
                         </p>
                         <p class="about-body-text">
                             <strong>5. Communal - Christ as our King:</strong> Christ did not
@@ -613,7 +637,7 @@
                             of us experience Christ first through the love of his body. We
                             also take church government as an instrument of mercy seriously.
                             This grounds us in Christ as our King.
-                            <strong>Think: loving, humble, one-anotherings</strong>
+                            <strong style="font-weight: bold;">Think: loving, humble, one-anotherings</strong>
                         </p>
                     </div>
                 </section>
@@ -643,24 +667,24 @@
                             salvation are sufficiently revealed to us by the Holy Spirit speaking through the Scriptures of the Old and New Testaments. It is, therefore, our
                             ambition to teach the whole counsel of God's word, not adding to, or subtracting from, anything contained within it, recognizing no other source for
                             divine revelation, whether by ecclesiastical traditions or private revelations.
-                            <br><br><strong>WHY SHOULD I CARE?</strong> To liberate all of us from oppressive, human-made opinions and guard the gracious gospel against
+                            <br><br><strong style="font-weight: bold;">WHY SHOULD I CARE?</strong> To liberate all of us from oppressive, human-made opinions and guard the gracious gospel against
                             manipulation and self-serving abuses. We want the God of grace and glory to be our only Lord.
                         </p>
                         <p class="about-body-text">
                             <b>2.</b><strong> Teachings of Grace - We are committed to the teachings of grace as they are summarized in the historic Westminster Confession of Faith. </strong> Whereas the Holy Scriptures is our only rule of faith and practice, Church unity is predicated upon a consensus about what the Scriptures principally teach. Our consensus is reflected in the 350-year--old Westminster Confession of Faith. In summary, it affirms that God is no less sovereign in our salvation than He is sovereign in our creation, to the praise of God's glorious grace! This means that we are accepted by God, from beginning to end, not by our own works or attempts to perform for God, but by faith alone in the perfect and all sufficient work of Christ on our behalf, faith itself being the free gift of God.
-                            <br><br><strong>WHY SHOULD I CARE?</strong> To affirm the sovereignty of grace, to connect us to wise men and women who have gone before us, and to prevent as much as possible our historical and cultural blind-spots.
+                            <br><br><strong style="font-weight: bold;">WHY SHOULD I CARE?</strong> To affirm the sovereignty of grace, to connect us to wise men and women who have gone before us, and to prevent as much as possible our historical and cultural blind-spots.
                         </p>
                         <p class="about-body-text">
                             <b>3.</b><strong> God-Centered Worship - We are committed to God-centered worship designed after a covenantal pattern, where Christ promises to be present through Word and Sacrament. </strong> In every period of redemptive history, God has chosen to be with his people through the divine institutions of word, sacrament and prayers. Today, through the sacraments of the Lord's Supper and Christian Baptism, together with the preaching of God's word and corporate prayers (both sung and unsung), God has promised to be with us until the end of the age. Our worship is set to the pattern of covenant initiation and renewal including the weekly participation of the Lord's supper. Our music and style of worship is "blended" to reflect the vernacular context of those God has brought to our city. Our desire is for our worship to be as God-centered as our theology, communicating the truth and grace of God to the nations. We welcome all believers together with those who are searching.
-                            <br><br><strong>WHY SHOULD I CARE?</strong> Not only is it biblical, but it keeps us grounded in the gospel every week, secured upon Christ's redemption accomplished. Our worship embodies the gospel as we experience God's presence.
+                            <br><br><strong style="font-weight: bold;">WHY SHOULD I CARE?</strong> Not only is it biblical, but it keeps us grounded in the gospel every week, secured upon Christ's redemption accomplished. Our worship embodies the gospel as we experience God's presence.
                         </p>
                         <p class="about-body-text">
                             <b>4.</b><strong> Multi-Cultural Church and Church Planting </strong> We are committed to being a multi-cultural church and church planting movement. We believe that the church, the household of God, is an essential element of the gospel into which people of every tribe and nation are welcomed. While affirming that every follower of Christ is called to be a witness to the truth and grace of God revealed in Jesus Christ, we also believe that true evangelism is best accomplished through church planting. It is therefore our ambition to be not only a growing church, but also a growing church planting movement. While holding to a time-honored understanding of faith, we are strategically progressive. Our aim is to plant churches that reach the different cultures in our city, New England and the world. For more info on church planting, visit <a style="text-decoration: underline" href="https://anabaino.org">anabaino.org</a>.
-                            <br><br><strong>WHY SHOULD I CARE?</strong> Because no one culture is closer to God than another, you don't have to become American (or Western, or whatever!) to become Christian, and the communal witness of the gospel is the best testament to its power!
+                            <br><br><strong style="font-weight: bold;">WHY SHOULD I CARE?</strong> Because no one culture is closer to God than another, you don't have to become American (or Western, or whatever!) to become Christian, and the communal witness of the gospel is the best testament to its power!
                         </p>
                         <p class="about-body-text">
                             <b>5.</b><strong> High View of Christian Calling - We are committed to a high view of Christian calling as reflected in the vocational spheres of family, church, and public service. </strong> We believe that God has given us roles that reflect his own sovereign design to accomplish his work in the world, which extends into the spheres of family, church and civil vocations. We desire to help people find a balance that is unique to their individual callings and spheres of service. While believing that the Christian Scriptures does not address all things pertaining to life in this world, we do affirm that we should take "every thought captive to the obedience of Christ" and that the Christian worldview is applicable and relevant to all spheres of life.
-                            <br><br><strong>WHY SHOULD I CARE?</strong> Because God didn't make us just one way or with one part of ourselves, but made ALL of us, and he deserves it all to be offered as thankful worship.
+                            <br><br><strong style="font-weight: bold;">WHY SHOULD I CARE?</strong> Because God didn't make us just one way or with one part of ourselves, but made ALL of us, and he deserves it all to be offered as thankful worship.
                         </p>
                     </div>
                 </section>
@@ -673,18 +697,18 @@
                             <div class="about-staff-member">
                                 <h3>Craig Luekens</h3>
                                 <h4>Senior Pastor</h4>
-                                <div class="read-more-cont" style="text-align: center; margin-top: 15px;">
-                                    <button class="read-more-button" onclick="window.location.href='https://cpcnewhaven.org/rev-craig-luekens.html'" style="padding: 10px 20px;">
-                                        <i class="fas fa-user-circle" style="margin-right: 8px;"></i>Meet Pastor Craig
+                                <div class="read-more-cont" style="text-align: center; margin-top: 15px; display:flex; justify-content: center;">
+                                    <button class="read-more-button" onclick="window.location.href='pastor-craig.html'" style="padding: 8px 16px; background: transparent; border: 1px solid var(--cpc-blue); color: var(--cpc-blue); font-size: 0.9em; transition: all 0.3s ease;" onmouseover="this.style.background='var(--cpc-blue)'; this.style.color='white';" onmouseout="this.style.background='transparent'; this.style.color='var(--cpc-blue)';">
+                                        <i class="fas fa-user-circle" style="margin-right: 6px;"></i>Meet Pastor Craig
                                     </button>
                                 </div>
                             </div>
                             <div class="about-staff-member">
                                 <h3>Jerry Ornelas</h3>
                                 <h4>Assistant Pastor</h4>
-                                <div class="read-more-cont" style="text-align: center; margin-top: 15px;">
-                                    <button class="read-more-button" onclick="window.location.href='https://cpcnewhaven.org/rev-jerry-ornelas.html'" style="padding: 10px 20px;">
-                                        <i class="fas fa-user-circle" style="margin-right: 8px;"></i>Meet Pastor Jerry
+                                <div class="read-more-cont" style="text-align: center; margin-top: 15px; display:flex; justify-content: center;">
+                                    <button class="read-more-button" onclick="window.location.href='pastor-jerry.html'" style="padding: 8px 16px; background: transparent; border: 1px solid var(--cpc-blue); color: var(--cpc-blue); font-size: 0.9em; transition: all 0.3s ease;" onmouseover="this.style.background='var(--cpc-blue)'; this.style.color='white';" onmouseout="this.style.background='transparent'; this.style.color='var(--cpc-blue)';">
+                                        <i class="fas fa-user-circle" style="margin-right: 6px;"></i>Meet Pastor Jerry
                                     </button>
                                 </div>
                             </div>
@@ -810,9 +834,7 @@
                                 <h3>Crossan Cooper</h3>
                                 <h4>(Welcome)</h4>
                             </div>
-                            <div class="about-staff-member">
-                                <h3>Anna Graham</h3>
-                            </div>
+                     
                             <div class="about-staff-member">
                                 <h3>Colleen Rice</h3>
                                 <h4>(Sabbatical 24-25)</h4>
@@ -870,10 +892,13 @@
                 <!-- Our Story Section -->
                 <section id="ourStory" class="about-content-section">
                     <div class="about-inner-section">
+                        <div class="story-progress-container">
+                            <div class="story-progress-bar"></div>
+                        </div>
                         <h1 class="about-heading">Our Story</h1>
                         <div class="about-body-text">
                             
-                            <h2 class="about-sub-title">Our CPC Story</h2>
+                          
                             <p>It all began in the summer of 1991 when three young families and a graduate student at Yale scheduled a ferry ride from Bridgeport, CT to Port Jefferson, NY. Their purpose was to meet up with several church planters and pastors from the Presbyterian Church in America (Tim Keller, Skip Ryan and Charlie Drew) to discuss a possible church plant in New Haven.</p>
 
                             <p>Meanwhile, recent Gordon Conwell Seminary graduate Preston Graham was scheduled to visit New Haven in order to locate sufficient housing for his family while a graduate student in American Religious History at Yale. Having been introduced to one of the families prior to coming, Preston was invited to join them in their providential ferry ride to "Port Jeff." After about a three hour conversation on Long Island, and while dreaming and scheming together on the return trip back from Port Jeff, Preston accepted an invitation from the small contingency to lead a Bible Study while at Yale until such time as the group could locate a church planter.</p>
@@ -1223,6 +1248,32 @@
                 aboutMobileNav.classList.remove('active');
                 aboutHamburgerIcon.classList.add('fa-bars');
                 aboutHamburgerIcon.classList.remove('fa-times');
+            });
+
+            // Story Progress Bar
+            const storySection = document.getElementById('ourStory');
+            const progressBar = document.querySelector('.story-progress-bar');
+            
+            window.addEventListener('scroll', () => {
+                if (storySection) {
+                    const sectionTop = storySection.offsetTop;
+                    const sectionHeight = storySection.offsetHeight;
+                    const scrollPosition = window.scrollY;
+                    const windowHeight = window.innerHeight;
+                    
+                    // Calculate how far we've scrolled through the section
+                    const scrolled = scrollPosition - sectionTop;
+                    const progress = (scrolled / (sectionHeight - windowHeight)) * 100;
+                    
+                    // Update progress bar
+                    if (progress >= 0 && progress <= 100) {
+                        progressBar.style.width = `${progress}%`;
+                    } else if (progress < 0) {
+                        progressBar.style.width = '0%';
+                    } else {
+                        progressBar.style.width = '100%';
+                    }
+                }
             });
         </script>
 
