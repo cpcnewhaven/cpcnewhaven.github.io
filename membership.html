@@ -27,180 +27,175 @@
         <link rel="icon"
             href="https://storage.googleapis.com/cpc-public-website/web-assets/CPC%20-%20FAVICON%20-%20FALL%202024.png"
             type="image/png">
-    <style>
-        #membership-body {
-            background-color: rgba(0, 60, 109, 0.002);
-            margin: 20px auto;
-            padding: 20px;
-            max-width: 800px;
-            border-radius: 5px;
-            border-style: none;
-            box-shadow: none;
-            line-height: 1.6;
-        }   
-
-        .res-directory-table-wrapper {
-            margin-top: 30px;
-            border-radius: 16px;
-            background: rgba(255, 255, 255, 0.8);
-            overflow: hidden;
-            box-shadow: 0 4px 16px rgba(44, 82, 130, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.5);
-        }
-
-        .res-directory-table {
-            width: 100%;
-            border-collapse: separate;
-            border-spacing: 0;
-            margin: 0;
-            font-size: 1em;
-        }
-
-        .res-directory-cell {
-            padding: 16px 24px;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .res-directory-row {
-            border-bottom: 1px solid rgba(44, 82, 130, 0.08);
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .res-directory-row:hover {
-            background: rgba(44, 82, 130, 0.03);
-            transform: translateX(5px);
-            box-shadow: 0 2px 8px rgba(44, 82, 130, 0.05);
-        }
-
-        .res-directory-row:last-of-type {
-            border-bottom: none;
-        }
-
-        .res-directory-link {
-            color: #2c5282;
-            text-decoration: none;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            display: block;
-            font-weight: 400;
-            padding: 4px 0;
-        }
-
-        .res-directory-link:hover {
-            color: #1a365d;
-            transform: translateX(5px);
-            text-shadow: 0 0 1px rgba(26, 54, 93, 0.1);
-        }
-
-        .membership-content img {
-            width: 100%;
-            height: auto;
-            max-width: 100%;
-            border-radius: 8px;
-            margin: 20px 0;
-            display: block;
-            box-shadow: 0 4px 16px rgba(44, 82, 130, 0.1);
-        }
-    </style>
-        </head>
+    </head>
 
     <body>
-       
-     
-    <header id="stickyHeader" class="sticky">
-        <nav class="main-navigation">
-            <a href="index.html">Home</a>
-            <a href="sundays.html">Sundays</a>
-            <a href="about.html">About</a>
-            <a href="podcasts.html">Podcasts</a>
-            <a href="events.html">Events</a>
-            <a href="community.html">Community</a>
-            <a href="live.html">Live</a>
-            <a href="resources.html">Resources</a>
-            <a href="give.html">Give</a>
 
-        </nav>
-    </header>
+        <header id="stickyHeader" class="sticky">
+            <nav class="main-navigation">
+                <a href="index.html">Home</a>
+                <a href="sundays.html">Sundays</a>
+                <a href="about.html">About</a>
+                <a href="podcasts.html">Podcasts</a>
+                <a href="events.html">Events</a>
+                <a href="community.html">Community</a>
+                <a href="live.html">Live</a>
+                <a href="resources.html">Resources</a>
+                <a href="give.html">Give</a>
 
-    <!-- MOBILE HAMBURGER-->
-    <div class="hamburger-menu-button-container" id="hamburgerMenu">
-        <i id="closeMobileMenuButton" class="fas fa-bars"></i>
-    </div>
+            </nav>
+        </header>
 
-    <!-- Mobile Navigation -->
-    <nav class="mobile-navigation" id="mobileNavigation">
-        <div class="mobile-nav-header">
-            <button id="closeMenuButton" aria-label="Close menu">
-                <i class="fas fa-times"></i>
-            </button>
+        <!-- MOBILE HAMBURGER-->
+        <div class="hamburger-menu-button-container" id="hamburgerMenu">
+            <i id="closeMobileMenuButton" class="fas fa-bars"></i>
         </div>
-        <ul class="mobile-nav-links">
-            <li><a class="mobile-menu-link" href="index.html">Home</a></li>
-            <li><a class="mobile-menu-link" href="sundays.html">Sundays</a></li>
-            <li><a class="mobile-menu-link" href="about.html">About</a></li>
-            <li><a class="mobile-menu-link" href="podcasts.html">Podcasts</a></li>
 
-            <li><a class="mobile-menu-link" href="announcements.html">Announcements</a></li>
-            <li><a class="mobile-menu-link" href="community.html">Community</a></li>
-            <li><a class="mobile-menu-link" href="live.html">Live</a></li>
-            <li><a class="mobile-menu-link" href="resources.html">Resources</a></li>
-            <li><a class="mobile-menu-link" href="give.html">Give</a></li>
-        </ul>
-    </nav>
-    
-
-            <div class="res-directory-container">
-                <div class="res-directory-content">
-                    <section class="res-directory-overview">
-                        <br><br>
-                        <h2 class="res-directory-title">Church Membership</h2>
-                        <p class="res-directory-description">Join our church community through membership, where we support and grow together in faith.</p>
-                        
-                        <div class="membership-content">
-                            <p>Throughout history, special relationships have been set apart by the taking of vows. A vow is a "confession" regarding one's participation in a given institution, typically used in three divinely sanctioned institutions: the church, the state, and the family.</p>
-                            <img src="https://storage.googleapis.com/cpc-public-website/web-assets/heros/live/1.jpg">
-
-                            <p>According to Romans 10:9, one becomes a Christian when "you confess with your lips that Jesus is Lord, and believe in your heart that God raised him from the dead." This confession, along with the elders' responsibility to "watch over the flock of God," forms the foundation of church membership.</p>
-                            
-                            <p>Church membership is a good thing - it sets people apart into a special relationship with each other, where terms are clear and loyalties for mutual benefit are expressed and preserved. It's simply saying: "I confess my faith in solidarity with you so as to enjoy the mutual support of one another."</p>
-                        </div>
-
-                        <div class="res-directory-table-wrapper">
-                            <table class="res-directory-table">
-                                <tbody>
-                                    <tr class="res-directory-row">
-                                        <td class="res-directory-cell">
-                                            <a href="contact.html" class="res-directory-link">Contact Us About Membership</a>
-                                        </td>
-                                    </tr>
-                                    <tr class="res-directory-row">
-                                        <td class="res-directory-cell">
-                                            <a href="#" class="res-directory-link">Read More: Good News of Church Membership</a>
-                                        </td>
-                                    </tr>
-                                    <tr class="res-directory-row">
-                                        <td class="res-directory-cell">
-                                            <a href="discipleship.html" class="res-directory-link">Join a Discipleship Group</a>
-                                        </td>
-                                    </tr>
-                                    <tr class="res-directory-row">
-                                        <td class="res-directory-cell">
-                                            <a href="lifegroup.html" class="res-directory-link">Join a Life Group</a>
-                                        </td>
-                                    </tr>
-                                    <tr class="res-directory-row">
-                                        <td class="res-directory-cell">
-                                            <a href="https://ccb.cpcnewhaven.org" class="res-directory-link">Access Church Community Builder</a>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </section>
-                </div>
+        <!-- Mobile Navigation -->
+        <nav class="mobile-navigation" id="mobileNavigation">
+            <div class="mobile-nav-header">
+                <button id="closeMenuButton" aria-label="Close menu">
+                    <i class="fas fa-times"></i>
+                </button>
             </div>
+            <ul class="mobile-nav-links">
+                <li><a class="mobile-menu-link" href="index.html">Home</a></li>
+                <li><a class="mobile-menu-link"
+                        href="sundays.html">Sundays</a></li>
+                <li><a class="mobile-menu-link" href="about.html">About</a></li>
+                <li><a class="mobile-menu-link"
+                        href="podcasts.html">Podcasts</a></li>
 
-            
-                <script src="./src/js/populate-navigation.js"></script>
-                <script src="./src/js/function_toggle_mobileMenu.js"></script>
+                <li><a class="mobile-menu-link"
+                        href="announcements.html">Announcements</a></li>
+                <li><a class="mobile-menu-link"
+                        href="community.html">Community</a></li>
+                <li><a class="mobile-menu-link" href="live.html">Live</a></li>
+                <li><a class="mobile-menu-link"
+                        href="resources.html">Resources</a></li>
+                <li><a class="mobile-menu-link" href="give.html">Give</a></li>
+            </ul>
+        </nav>
+
+        <div class="res-directory-container">
+            <div class="res-directory-content">
+                <section class="res-directory-overview">
+                    <h2 class="res-directory-title">Church Membership</h2>
+                    <p class="res-directory-description">Join our church
+                        community through membership, where we support and grow
+                        together in faith.</p>
+
+                    <div class="body-text">
+                        <p>Throughout history, special relationships have been
+                            set apart by the taking of vows. A vow is a
+                            "confession" regarding one's participation in a
+                            given institution, typically used in three divinely
+                            sanctioned institutions: the church, the state, and
+                            the family.</p>
+
+                        <div class="image-container">
+                            <img
+                                src="https://storage.googleapis.com/cpc-public-website/web-assets/heros/live/1.jpg"
+                                alt="Church gathering" class="big-image">
+                        </div>
+
+                        <p>According to Romans 10:9, one becomes a Christian
+                            when
+                            "you confess with your lips that Jesus is Lord, and believe in your heart that God raised him from the dead."
+                            This confession, along with the elders'
+                            responsibility to "watch over the flock of God,"
+                            forms the foundation of church membership.</p>
+
+                        <p>Church membership is a good thing - it sets people
+                            apart into a special relationship with each other,
+                            where terms are clear and loyalties for mutual
+                            benefit are expressed and preserved. It's simply
+                            saying:
+                            "I confess my faith in solidarity with you so as to enjoy the mutual support of one another."</p>
+                    </div>
+
+                    <div class="res-directory-table-wrapper">
+                        <table class="res-directory-table">
+                            <tbody>
+                                <tr class="res-directory-row">
+                                    <td class="res-directory-cell">
+                                        <a href="contact.html"
+                                            class="res-directory-link">
+                                            <strong>Contact Us About
+                                                Membership</strong><br>
+                                            <span
+                                                style="font-size: 0.9em; color: #666;">Ready
+                                                to take the next step? Reach out
+                                                to learn more about becoming a
+                                                member of our church
+                                                family.</span>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr class="res-directory-row">
+                                    <td class="res-directory-cell">
+                                        <a href="#" class="res-directory-link">
+                                            <strong>Read More: Good News of
+                                                Church Membership</strong><br>
+                                            <span
+                                                style="font-size: 0.9em; color: #666;">Discover
+                                                the biblical foundation and
+                                                benefits of church membership in
+                                                this comprehensive guide.</span>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr class="res-directory-row">
+                                    <td class="res-directory-cell">
+                                        <a href="discipleship.html"
+                                            class="res-directory-link">
+                                            <strong>Join a Discipleship
+                                                Group</strong><br>
+                                            <span
+                                                style="font-size: 0.9em; color: #666;">Grow
+                                                deeper in your faith through
+                                                intentional study and fellowship
+                                                with other believers.</span>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr class="res-directory-row">
+                                    <td class="res-directory-cell">
+                                        <a href="lifegroup.html"
+                                            class="res-directory-link">
+                                            <strong>Join a Life
+                                                Group</strong><br>
+                                            <span
+                                                style="font-size: 0.9em; color: #666;">Connect
+                                                with others in your area for
+                                                weekly fellowship, prayer, and
+                                                community building.</span>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr class="res-directory-row">
+                                    <td class="res-directory-cell">
+                                        <a href="https://ccb.cpcnewhaven.org"
+                                            class="res-directory-link">
+                                            <strong>Access Church Community
+                                                Builder</strong><br>
+                                            <span
+                                                style="font-size: 0.9em; color: #666;">Manage
+                                                your church profile, sign up for
+                                                events, and stay connected with
+                                                our online community
+                                                portal.</span>
+                                        </a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <script src="./src/js/populate-navigation.js"></script>
+        <script src="./src/js/function_toggle_mobileMenu.js"></script>
     </body>
 </html>
