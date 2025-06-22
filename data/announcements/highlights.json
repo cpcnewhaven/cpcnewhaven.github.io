@@ -183,33 +183,13 @@
     {
       "id": "2025-024",
       "title": "Helping Out CPC in the Hill This Summer!",
-      "description": "We're invited to serve with our brothers and sisters in Christ at our Mission Church in the Hill this summer.",
+      "description": "We're invited to serve with our brothers and sisters in Christ at our Mission Church in the Hill this summer. <br><h3>Saturday morning Kids IMPACT Read Out Loud</h3> <br> on July 19, & 26 - to sign up, email Pastor Chip, <a href=\"mailto:chip.anderson@cpcnewhaven.org\">chip.anderson@cpcnewhaven.org</a>.<br><br><h3>Wednesday Night BBQ in the Park</h3><br><p>July 2-Aug. 20, 5pm-7pm - sign up online to help setup, serve the meal, clean up, and meet participants.</p>",
       "dateEntered": "2025-05-19",
       "active": "true",
       "type": "announcement",
       "category": "announcement",
       "tag": "service",
       "superfeatured": true
-    },
-    {
-      "id": "2025-025",
-      "title": "Wednesday night BBQ's in the Park",
-      "description": "July 2-Aug. 20, 5pm-7pm - sign up online to help setup, serve the meal, clean up, and meet participants.",
-      "dateEntered": "2025-05-19",
-      "active": "true",
-      "type": "event",
-      "category": "event",
-      "tag": "service"
-    },
-    {
-      "id": "2025-026",
-      "title": "Saturday morning Kids IMPACT Read Out Loud",
-      "description": "July 19, & 26 - to sign up, email Pastor Chip, <a href=\"mailto:chip.anderson@cpcnewhaven.org\">chip.anderson@cpcnewhaven.org</a>.",
-      "dateEntered": "2025-05-19",
-      "active": "true",
-      "type": "event",
-      "category": "event",
-      "tag": "children"
     }
   ]
 }
