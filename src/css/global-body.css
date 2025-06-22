@@ -2460,7 +2460,7 @@ p {
 .announcement h3 {
     font-size: 22px;
     font-weight: 600;
-    color: #003c6d;
+    color: #1e5f8a;
     margin: 25px 0 15px 0;
     padding: 12px 0 8px 0;
     border-bottom: 2px solid #e9ecef;
@@ -2494,26 +2494,30 @@ p {
     }
 
     .announcement-title {
-        font-size: 24px;
+        font-size: 22px;
         padding: 12px 8px;
         margin-bottom: 12px;
+        line-height: 1.3;
     }
 
     .announcement-subheader {
         font-size: 16px;
+        line-height: 1.4;
     }
 
     .announcement p {
-        font-size: 15px;
+        font-size: 16px;
         line-height: 1.6;
         margin-bottom: 14px;
         padding: 0 3px;
     }
 
     .announcement h3 {
-        font-size: 20px;
-        margin: 20px 0 12px 0;
-        padding: 10px 0 6px 0;
+        font-size: 18px;
+        margin: 18px 0 10px 0;
+        padding: 8px 0 5px 0;
+        line-height: 1.3;
+        color: #1e5f8a;
     }
 }
 
@@ -2531,27 +2535,40 @@ p {
     color: black !important;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 480px) {
     .announcement {
         min-width: auto;
         width: 100%;
-        margin: 10px;
+        margin: 8px;
+        padding: 18px 12px;
     }
 
     .announcement-title {
         font-size: 20px;
+        padding: 10px 6px;
+        margin-bottom: 10px;
+        line-height: 1.3;
     }
 
     .announcement-subheader {
-        font-size: 16px;
+        font-size: 15px;
+        line-height: 1.4;
     }
 
     .announcement p {
-        font-size: 14px;
+        font-size: 15px;
+        line-height: 1.6;
+        margin-bottom: 12px;
+        padding: 0 2px;
+    }
+
+    .announcement h3 {
+        font-size: 18px;
+        margin: 18px 0 10px 0;
+        padding: 8px 0 5px 0;
+        line-height: 1.3;
     }
 }
-
-
 
 .footer-content-logo {
     display: flex;

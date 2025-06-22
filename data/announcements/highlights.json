@@ -189,6 +189,18 @@
       "type": "announcement",
       "category": "announcement",
       "tag": "service",
+      "superfeatured": true,
+      "featuredImage": "https://www.newhavenct.gov/home/showpublishedimage/390/637739004313700000"
+    },
+    {
+      "id": "2025-025",
+      "title": "Save the Dates!",
+      "description": "Join us for a series of exciting events this summer and fall. Mark your calendars and don't miss out!<br><br><strong>Thursday Picnics @6PM:</strong> July 10, 17, 24, 31<br><strong>Summer Sunday Lunches:</strong> June 29 & July 27<br><strong>Resume Regular Sunday Lunches:</strong> August 24<br><strong>Church-wide Retreat:</strong> October 10-12, 2025 @ Camp Wightman",
+      "dateEntered": "2025-05-20",
+      "active": "true",
+      "type": "announcement",
+      "category": "announcement",
+      "tag": "events",
       "superfeatured": true
     }
   ]
