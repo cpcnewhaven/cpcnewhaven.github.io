@@ -201,7 +201,8 @@
       "type": "announcement",
       "category": "announcement",
       "tag": "events",
-      "superfeatured": true
+      "superfeatured": true,
+      "featuredImage": "https://cpmfiles1.com/cpcnewhaven.org/featured-events-ministry-fair.png"
     }
   ]
 }
