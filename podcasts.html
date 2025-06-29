@@ -215,6 +215,23 @@
             </table>
         </section>
 
+        <!-- New Classes Section -->
+        <section id="podcast-classes" class="inner-page-section" style="margin-top:20px;">
+            <h4>Classes: Biblical Interpretation</h4>
+            <table id="biblical-interpretation-table" class="podcast-table">
+                <thead>
+                    <tr>
+                        <th>Episode</th>
+                        <th>Title</th>
+                        <th>Listen</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Table content will be dynamically populated here -->
+                </tbody>
+            </table>
+        </section>
+
         <section id="podcast-adult-study" class="inner-page-section" style="margin-top:20px;">
 
             <br>
@@ -843,14 +860,17 @@
         }
     </style>
 
-    <!-- Replace the existing floating nav with this simplified version -->
+    <!-- Replace the existing floating nav with this updated version -->
     <div class="podcast-floating-nav">
         <a href="#podcast-sunday-sermon" class="podcast-nav-item">Sunday Sermons</a>
         <a href="#podcast-beyond" class="podcast-nav-item">Beyond</a>
+        <a href="#podcast-classes" class="podcast-nav-item">Classes</a>
+        <a href="#walking-podcast-table" class="podcast-nav-item">Walking with Jesus Through Sinai</a>
+        <a href="#wwb-sermon-table" class="podcast-nav-item">What We Believe</a>
     </div>
 
-    <!-- Add the floating search bar -->
-    <div class="podcast-search-bar" x-data="{ query: '' }">
+    <!-- Add the floating search bar with compact submenu -->
+    <div class="podcast-search-bar" x-data="{ query: '', submenuOpen: false }">
         <i class="fas fa-search"></i>
         <input 
             type="text" 
@@ -858,6 +878,16 @@
             placeholder="Search by book, year, speaker, or title..." 
             @input="filterPodcasts($event.target.value)"
         >
+        <div class="podcast-submenu-container" style="position:relative;">
+            <button class="submenu-toggle" @click="submenuOpen = !submenuOpen" style="padding:4px 10px;font-size:0.95em;border-radius:6px;background:#222;color:#fff;border:1px solid #222;">Jump to... <i class="fas fa-chevron-down"></i></button>
+            <div class="podcast-submenu" x-show="submenuOpen" style="position:absolute;top:110%;left:0;background:#222;color:#fff;border:1px solid #222;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.18);padding:6px 0;min-width:180px;z-index:1001;">
+                <a href="#podcast-sunday-sermon" style="display:block;padding:6px 16px;font-size:0.97em;color:#fff;">Sunday Sermons</a>
+                <a href="#podcast-beyond" style="display:block;padding:6px 16px;font-size:0.97em;color:#fff;">Beyond</a>
+                <a href="#podcast-classes" style="display:block;padding:6px 16px;font-size:0.97em;color:#fff;">Classes</a>
+                <a href="#walking-podcast-table" style="display:block;padding:6px 16px;font-size:0.97em;color:#fff;">Walking with Jesus Through Sinai</a>
+                <a href="#wwb-sermon-table" style="display:block;padding:6px 16px;font-size:0.97em;color:#fff;">What We Believe</a>
+            </div>
+        </div>
     </div>
 
     <script>
@@ -1257,6 +1287,60 @@
             });
         });
     </script>
+
+    <style>
+        /* Compact table style for podcast tables */
+        .podcast-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 1.5rem;
+            font-size: 0.97em;
+        }
+        .podcast-table th, .podcast-table td {
+            border: 1px solid #e0e0e0;
+            padding: 7px 10px;
+            text-align: left;
+        }
+        .podcast-table th {
+            background: #f4f4f4;
+            font-weight: 600;
+        }
+        .podcast-table tr:nth-child(even) {
+            background: #fafbfc;
+        }
+        .podcast-table tr:hover {
+            background: #f0f6ff;
+        }
+        /* Compact submenu style */
+        .podcast-submenu-container {
+            display: inline-block;
+            margin-left: 10px;
+        }
+        .submenu-toggle {
+            cursor: pointer;
+            background: #222;
+            color: #fff;
+            border: 1px solid #222;
+            border-radius: 6px;
+            font-size: 0.95em;
+            padding: 4px 10px;
+            transition: background 0.2s, color 0.2s;
+        }
+        .submenu-toggle:hover {
+            background: #444;
+            color: #fff;
+        }
+        .podcast-submenu a {
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background 0.2s, color 0.2s;
+        }
+        .podcast-submenu a:hover {
+            background: #444;
+            color: #fff;
+        }
+    </style>
 
 </body>
 

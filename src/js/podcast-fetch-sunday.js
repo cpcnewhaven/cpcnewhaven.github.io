@@ -63,6 +63,24 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         })
         .catch(error => console.error('Error fetching podcast data:', error));
+
+    fetch('./data/podcasts/biblical-interpretation.json')
+        .then(response => response.json())
+        .then(data => {
+            const table = document.getElementById('biblical-interpretation-table');
+            if (!table) return;
+            const tbody = table.querySelector('tbody');
+            tbody.innerHTML = '';
+            data.episodes.forEach(episode => {
+                const tr = document.createElement('tr');
+                tr.innerHTML = `
+                    <td>${episode.number}</td>
+                    <td>${episode.title}</td>
+                    <td><a href="${episode.link}" target="_blank">Listen</a></td>
+                `;
+                tbody.appendChild(tr);
+            });
+        });
 });
 
 function formatDate(dateString) {
