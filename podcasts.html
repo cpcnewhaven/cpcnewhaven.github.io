@@ -247,6 +247,65 @@
             </tbody>
         </table>
 
+        <!-- Compline Homilies Table -->
+        <h4>Classes: Compline Homilies</h4>
+        <table id="compline-homilies-table" class="podcast-table">
+            <thead>
+                <tr>
+                    <th>Episode</th>
+                    <th>Title</th>
+                    <th>Listen</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Table content will be dynamically populated here -->
+            </tbody>
+        </table>
+
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('./data/podcasts/membership-seminar.json')
+                .then(response => response.json())
+                .then(data => {
+                    const table = document.getElementById('membership-seminar-table');
+                    if (!table) return;
+                    const tbody = table.querySelector('tbody');
+                    tbody.innerHTML = '';
+                    data.episodes.forEach(episode => {
+                        const tr = document.createElement('tr');
+                        tr.innerHTML = `
+                            <td>${episode.number}</td>
+                            <td>${episode.title}</td>
+                            <td><a href="${episode.link}" target="_blank">Listen</a></td>
+                        `;
+                        tbody.appendChild(tr);
+                    });
+                });
+        });
+        </script>
+
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('./data/podcasts/compline-homilies.json')
+                .then(response => response.json())
+                .then(data => {
+                    const table = document.getElementById('compline-homilies-table');
+                    if (!table) return;
+                    const tbody = table.querySelector('tbody');
+                    tbody.innerHTML = '';
+                    data.episodes.forEach(episode => {
+                        const tr = document.createElement('tr');
+                        tr.innerHTML = `
+                            <td>${episode.number}</td>
+                            <td>${episode.title}</td>
+                            <td><a href="${episode.link}" target="_blank">Listen</a></td>
+                        `;
+                        tbody.appendChild(tr);
+                    });
+                });
+        });
+        </script>
+
         <section id="podcast-adult-study" class="inner-page-section" style="margin-top:20px;">
 
             <br>
@@ -1356,28 +1415,6 @@
             color: #fff;
         }
     </style>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            fetch('./data/podcasts/membership-seminar.json')
-                .then(response => response.json())
-                .then(data => {
-                    const table = document.getElementById('membership-seminar-table');
-                    if (!table) return;
-                    const tbody = table.querySelector('tbody');
-                    tbody.innerHTML = '';
-                    data.episodes.forEach(episode => {
-                        const tr = document.createElement('tr');
-                        tr.innerHTML = `
-                            <td>${episode.number}</td>
-                            <td>${episode.title}</td>
-                            <td><a href="${episode.link}" target="_blank">Listen</a></td>
-                        `;
-                        tbody.appendChild(tr);
-                    });
-                });
-        });
-    </script>
 
 </body>
 
