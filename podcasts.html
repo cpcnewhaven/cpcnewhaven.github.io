@@ -262,6 +262,22 @@
             </tbody>
         </table>
 
+        <!-- Confessional Theology Table -->
+        <h4>Classes: Confessional Theology</h4>
+        <table id="confessional-theology-table" class="podcast-table">
+            <thead>
+                <tr>
+                    <th>Episode</th>
+                    <th>Title</th>
+                    <th>Listen</th>
+                    <th>Handout</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Table content will be dynamically populated here -->
+            </tbody>
+        </table>
+
         <script>
         document.addEventListener('DOMContentLoaded', function() {
             fetch('./data/podcasts/membership-seminar.json')
@@ -299,6 +315,29 @@
                             <td>${episode.number}</td>
                             <td>${episode.title}</td>
                             <td><a href="${episode.link}" target="_blank">Listen</a></td>
+                        `;
+                        tbody.appendChild(tr);
+                    });
+                });
+        });
+        </script>
+
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('./data/podcasts/confessional-theology.json')
+                .then(response => response.json())
+                .then(data => {
+                    const table = document.getElementById('confessional-theology-table');
+                    if (!table) return;
+                    const tbody = table.querySelector('tbody');
+                    tbody.innerHTML = '';
+                    data.episodes.forEach(episode => {
+                        const tr = document.createElement('tr');
+                        tr.innerHTML = `
+                            <td>${episode.number}</td>
+                            <td>${episode.title}</td>
+                            <td><a href="${episode.listen}" target="_blank">Listen</a></td>
+                            <td><a href="${episode.handout}" target="_blank">Handout</a></td>
                         `;
                         tbody.appendChild(tr);
                     });
