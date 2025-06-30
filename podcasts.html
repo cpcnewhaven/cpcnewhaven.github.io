@@ -22,6 +22,7 @@
     <title>Podcasts - CPC New Haven Church</title>
     <link rel="stylesheet" href="./src/css/global-body.css">
     <link rel="stylesheet" href="./src/css/global-footer-cta.css">
+    <link rel="stylesheet" href="./src/css/podcasts.css">
 
     <link rel="icon"
         href="https://storage.googleapis.com/cpc-public-website/web-assets/CPC%20-%20FAVICON%20-%20FALL%2024.png"
@@ -69,93 +70,12 @@
             <li><a class="mobile-menu-link" href="give.html">Give</a></li>
         </ul>
     </nav>
-    <style>
-        .podcast-sidebar {
-            padding-bottom: 10px;
-        }
-
-        .filter-options {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-bottom: 20px;
-            border: 1px solid #ccc;
-            padding: 10px;
-            border-radius: 5px;
-            background-color: #f4f4f4;
-            margin-top: 20px;
-            margin-bottom: 20px;
-        }
-
-        .filter-options label {
-            margin-right: 5px;
-        }
-
-        .filter-options select, .filter-options input {
-            padding: 5px;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-        }
-
-        .clear-filters {
-            background-color: transparent;
-            border: 1px solid #ccc;
-            color: #555;
-            padding: 8px 16px;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s, color 0.3s;
-        }
-
-        .clear-filters:hover {
-            background-color: #eee;
-            color: #333;
-        }
-    </style>
 
     <div class="splash-hero">
         <div class="hero-content">
             <h1>Podcasts</h1>
         </div>
     </div>
-
-    <style>
-        .splash-hero {
-            height: 40vh;
-            margin-top: 10px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: linear-gradient(135deg, #6B73FF 0%, #000DFF 100%);
-            position: relative;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        .hero-content {
-            text-align: center;
-            z-index: 1;
-        }
-
-        .hero-content h1 {
-            color: white;
-            font-size: 4rem;
-            font-weight: 700;
-            margin: 0;
-            letter-spacing: 2px;
-            font-family: "Barlow", sans-serif;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-        }
-
-        @media (max-width: 768px) {
-            .splash-hero {
-                height: 30vh;
-            }
-
-            .hero-content h1 {
-                font-size: 2.5rem;
-            }
-        }
-    </style>
 
     <!-- Main Content -->
     <div class="main-content-a">
@@ -230,56 +150,108 @@
                     <!-- Table content will be dynamically populated here -->
                 </tbody>
             </table>
+
+            <h4>Classes: Membership Seminar</h4>
+            <table id="membership-seminar-table" class="podcast-table">
+                <thead>
+                    <tr>
+                        <th>Episode</th>
+                        <th>Title</th>
+                        <th>Listen</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Table content will be dynamically populated here -->
+                </tbody>
+            </table>
+
+            <h4>Classes: Compline Homilies</h4>
+            <table id="compline-homilies-table" class="podcast-table">
+                <thead>
+                    <tr>
+                        <th>Episode</th>
+                        <th>Title</th>
+                        <th>Listen</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Table content will be dynamically populated here -->
+                </tbody>
+            </table>
+
+            <h4>Classes: Confessional Theology</h4>
+            <table id="confessional-theology-table" class="podcast-table">
+                <thead>
+                    <tr>
+                        <th>Episode</th>
+                        <th>Title</th>
+                        <th>Listen</th>
+                        <th>Handout</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Table content will be dynamically populated here -->
+                </tbody>
+            </table>
+
+            <h4>Classes: Walking with Jesus Through Sinai</h4>
+            <table id="walking-podcast-table" class="podcast-table">
+                <thead>
+                </thead>
+                <tbody>
+                    <!-- Table content will be dynamically populated here -->
+                </tbody>
+            </table>
         </section>
-
-        <!-- Membership Seminar Table -->
-        <h4>Classes: Membership Seminar</h4>
-        <table id="membership-seminar-table" class="podcast-table">
+        <hr><br>
+        <table id="wwb-sermon-table">
             <thead>
-                <tr>
-                    <th>Episode</th>
-                    <th>Title</th>
-                    <th>Listen</th>
-                </tr>
             </thead>
             <tbody>
                 <!-- Table content will be dynamically populated here -->
             </tbody>
         </table>
 
-        <!-- Compline Homilies Table -->
-        <h4>Classes: Compline Homilies</h4>
-        <table id="compline-homilies-table" class="podcast-table">
-            <thead>
-                <tr>
-                    <th>Episode</th>
-                    <th>Title</th>
-                    <th>Listen</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Table content will be dynamically populated here -->
-            </tbody>
-        </table>
+    </div>
+    </div>
 
-        <!-- Confessional Theology Table -->
-        <h4>Classes: Confessional Theology</h4>
-        <table id="confessional-theology-table" class="podcast-table">
-            <thead>
-                <tr>
-                    <th>Episode</th>
-                    <th>Title</th>
-                    <th>Listen</th>
-                    <th>Handout</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Table content will be dynamically populated here -->
-            </tbody>
-        </table>
+    <!-- Refactored Old Podcasts Section -->
+    <section id="old-podcasts">
+        <div class="old-podcast-content">
+            <h2>Explore Our Old Podcast Archive</h2>
+            <p>
+                Discover our previous podcast episodes and content on our old podcast page. 
+                Click the button below to visit!
+            </p>
+            <a href="https://podcasts.cpcnewhaven.org" class="old-podcast-button">Visit Old Podcast Archive</a>
+        </div>
+    </section>
 
-        <script>
-        document.addEventListener('DOMContentLoaded', function() {
+    <!-- DISCOVER ADULT SUNDAY SCHOOL -->
+    <section id="adult-sunday-school">
+        <div class="adult-sunday-school-content">
+            <h2>Discover Adult Sunday School and Previous Classes</h2>
+            <p>Explore our Adult Sunday School archive and join us for in-depth classes on theology, biblical interpretation, and living a flourishing life before God.</p>
+            <a href="adult-sunday-school.html" class="adult-sunday-school-button">Visit Class Archive</a>
+        </div>
+    </section>
+
+    <!-- Subscribe to Our Podcasts Section -->
+    <section id="subscribe-podcasts" class="styled-section">
+        <h2 class="subscribe-header">Subscribe to Our Podcasts</h2>
+        <p class="subscribe-text">Stay updated with our latest episodes. Subscribe now on your favorite platform:</p>
+        <div class="subscribe-links">
+            <a href="https://podcasts.apple.com/us/podcast/cpc-new-haven-podcasts/id1553483670" target="_blank" class="subscribe-button">Apple Podcasts</a>
+            <a href="https://open.spotify.com/show/22kjUJyC0VH3cMfCSe9kEk?si=84da3e652bc24af2" target="_blank" class="subscribe-button">Spotify</a>
+        </div>
+    </section>
+
+    </div>
+
+    <script src="./src/js/function_toggle_mobileMenu.js"></script>
+    <script src="./src/js/podcast-fetch-sunday.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
             fetch('./data/podcasts/membership-seminar.json')
                 .then(response => response.json())
                 .then(data => {
@@ -345,635 +317,6 @@
         });
         </script>
 
-        <section id="podcast-adult-study" class="inner-page-section" style="margin-top:20px;">
-
-            <br>
-            <table id="walking-podcast-table">
-                <thead>
-                </thead>
-                <tbody>
-                    <!-- Table content will be dynamically populated here -->
-                </tbody>
-            </table>
-            <hr><br>
-
-            <table id="wwb-sermon-table">
-                <thead>
-
-                </thead>
-                <tbody>
-                    <!-- Table content will be dynamically populated here -->
-                </tbody>
-            </table>
-
-        </section>
-
-    </div>
-    </div>
-
-    <!-- Refactored Old Podcasts Section -->
-    <section id="old-podcasts">
-        <div class="old-podcast-content">
-            <h2>Explore Our Old Podcast Archive</h2>
-            <p>
-                Discover our previous podcast episodes and content on our old podcast page. 
-                Click the button below to visit!
-            </p>
-            <a href="https://podcasts.cpcnewhaven.org" class="old-podcast-button">Visit Old Podcast Archive</a>
-        </div>
-    </section>
-
-    <!-- DISCOVER ADULT SUNDAY SCHOOL -->
-    <section id="adult-sunday-school">
-        <div class="adult-sunday-school-content">
-            <h2>Discover Adult Sunday School and Previous Classes</h2>
-            <p>Explore our Adult Sunday School archive and join us for in-depth classes on theology, biblical interpretation, and living a flourishing life before God.</p>
-            <a href="adult-sunday-school.html" class="adult-sunday-school-button">Visit Class Archive</a>
-        </div>
-    </section>
-    <!-- Inline unique CSS for the adult sunday school section -->
-    <style>
-        /* Container styles */
-        #adult-sunday-school {
-            background: linear-gradient(135deg, #D3D3D3 0%, #A9A9A9 100%);
-            padding: 50px 20px;
-            border-radius: 12px;
-            margin: 40px auto;
-            max-width: 800px;
-            text-align: center;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        .adult-sunday-school-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .adult-sunday-school-button {
-            display: inline-block;
-            background-color: #333;
-            color: #fff;
-            text-decoration: none;
-            padding: 12px 30px;
-            font-size: 1.2em;
-            border-radius: 50px;
-            transition: background-color 0.3s ease, color 0.3s ease;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-            width: auto;
-            min-width: 200px;
-            text-align: center;
-        }
-
-        /* Mobile responsive styles */
-        @media screen and (max-width: 768px) {
-            #adult-sunday-school {
-                margin: 20px 15px;
-                padding: 30px 15px;
-            }
-
-            .adult-sunday-school-content h2 {
-                font-size: 1.5em;
-                padding: 0 10px;
-            }
-
-            .adult-sunday-school-button {
-                width: 80%;
-                max-width: 300px;
-                padding: 15px 20px;
-                font-size: 1.1em;
-            }
-
-            .adult-sunday-school-content p {
-                font-size: 1em;
-                padding: 0 10px;
-            }
-
-            .adult-sunday-school-button {
-                width: 80%;
-                max-width: 300px;
-                padding: 15px 20px;
-                font-size: 1.1em;
-            }
-        }
-
-        /* Small mobile devices */
-        @media screen and (max-width: 480px) {
-            .adult-sunday-school-button {
-                width: 50%;
-                font-size: 1em;
-                padding: 12px 15px;
-            }
-        }
-    </style>
-
-    <!-- Inline unique CSS for the old podcasts section -->
-    <style>
-        /* Container styles */
-        #old-podcasts {
-            background: linear-gradient(135deg, #6B73FF 0%, #000DFF 100%);
-            padding: 50px 20px;
-            border-radius: 12px;
-            margin: 40px auto;
-            max-width: 800px;
-            text-align: center;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        /* Heading styles */
-        #old-podcasts .old-podcast-content h2 {
-            color: #fff;
-            font-size: 2em;
-            margin-bottom: 15px;
-        }
-
-        /* Paragraph styles */
-        #old-podcasts .old-podcast-content p {
-            color: #f0f0f0;
-            font-size: 1.1em;
-            margin-bottom: 25px;
-            line-height: 1.5;
-        }
-
-        /* Button styles */
-        #old-podcasts .old-podcast-button {
-            background-color: #fff;
-            color: #000DFF;
-            text-decoration: none;
-            padding: 12px 30px;
-            font-size: 1.2em;
-            border-radius: 50px;
-            transition: background-color 0.3s ease, color 0.3s ease;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Button hover effect */
-        #old-podcasts .old-podcast-button:hover {
-            background-color: #000DFF;
-            color: #fff;
-        }
-
-    </style>
-
-    <!-- Subscribe to Our Podcasts Section -->
-    <section id="subscribe-podcasts" class="styled-section">
-        <h2 class="subscribe-header">Subscribe to Our Podcasts</h2>
-        <p class="subscribe-text">Stay updated with our latest episodes. Subscribe now on your favorite platform:</p>
-        <div class="subscribe-links">
-            <a href="https://podcasts.apple.com/us/podcast/cpc-new-haven-podcasts/id1553483670" target="_blank" class="subscribe-button">Apple Podcasts</a>
-            <a href="https://open.spotify.com/show/22kjUJyC0VH3cMfCSe9kEk?si=84da3e652bc24af2" target="_blank" class="subscribe-button">Spotify</a>
-        </div>
-    </section>
-
-    <!-- Inline unique CSS for the subscribe section -->
-    <style>
-        /* Container styles for the subscribe section */
-        #subscribe-podcasts {
-            background: linear-gradient(135deg, #6B73FF 0%, #000DFF 100%);
-            padding: 40px 20px;
-            border-radius: 12px;
-            margin: 40px auto;
-            max-width: 800px;
-            text-align: center;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        /* Header styling */
-        .subscribe-header {
-            color: #fff;
-            font-size: 2em;
-            margin-bottom: 15px;
-        }
-
-        /* Paragraph styling */
-        .subscribe-text {
-            color: #f0f0f0;
-            font-size: 1.1em;
-            margin-bottom: 25px;
-            line-height: 1.5;
-        }
-
-        /* Container for subscribe links */
-        .subscribe-links {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-
-        /* Button styles */
-        .subscribe-button {
-            background-color: #fff;
-            color: #000DFF;
-            text-decoration: none;
-            padding: 12px 30px;
-            font-size: 1.2em;
-            border-radius: 50px;
-            transition: background-color 0.3s ease, color 0.3s ease;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-            flex: 0 1 auto; /* This allows buttons to maintain their natural width */
-        }
-
-        /* Button hover effect */
-        .subscribe-button:hover {
-            background-color: #000DFF;
-            color: #fff;
-        }
-    </style>
-
-    </div>
-
-    <script src="./src/js/function_toggle_mobileMenu.js"></script>
-    <script src="./src/js/podcast-fetch-sunday.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            fetch('./data/podcast-index.json')
-                .then(response => response.json())
-                .then(data => {
-                    populateDropdowns(data);
-                    populateTables(data);
-                })
-                .catch(error => console.error('Error fetching JSON:', error));
-
-            // Add event listeners for filter changes
-            document.getElementById('filterYear').addEventListener('change', filterPodcasts);
-            document.getElementById('filterSpeaker').addEventListener('change', filterPodcasts);
-            document.getElementById('filterGuest').addEventListener('change', filterPodcasts);
-            document.getElementById('searchInput').addEventListener('input', filterPodcasts);
-        });
-
-        function populateDropdowns(data) {
-            const speakers = new Set();
-            const guests = new Set();
-            const years = new Set();
-
-            // Extract unique speakers, guests, and years
-            data.sundaySermons.episodes.forEach(episode => {
-                if (episode.author) speakers.add(episode.author);
-                if (episode.date) {
-                    const year = new Date(episode.date).getFullYear();
-                    years.add(year);
-                }
-            });
-
-            data.beyond.episodes.forEach(episode => {
-                if (episode.guest) guests.add(episode.guest);
-            });
-
-            // Populate dropdowns
-            populateSelect('filterSpeaker', speakers);
-            populateSelect('filterGuest', guests);
-            populateSelect('filterYear', years);
-        }
-
-        function populateSelect(selectId, items) {
-            const selectElement = document.getElementById(selectId);
-            items.forEach(item => {
-                const option = document.createElement('option');
-                option.value = item.toLowerCase();
-                option.textContent = item;
-                selectElement.appendChild(option);
-            });
-        }
-
-        function clearFilters() {
-            document.getElementById('searchInput').value = '';
-            document.getElementById('filterYear').value = '';
-            document.getElementById('filterSpeaker').value = '';
-            document.getElementById('filterGuest').value = '';
-            filterPodcasts(); // Reapply filters to show all rows
-        }
-
-        function filterPodcasts() {
-            const query = document.getElementById('searchInput').value.toLowerCase();
-            const selectedYear = document.getElementById('filterYear').value;
-            const selectedSpeaker = document.getElementById('filterSpeaker').value.toLowerCase();
-            const selectedGuest = document.getElementById('filterGuest').value.toLowerCase();
-
-            const tables = ['sunday-sermon-table', 'beyond-sermon-table', 'walking-podcast-table', 'wwb-sermon-table'];
-            
-            tables.forEach(tableId => {
-                const table = document.getElementById(tableId);
-                const rows = table.getElementsByTagName('tbody')[0].getElementsByTagName('tr');
-
-                for (let row of rows) {
-                    const cells = row.getElementsByTagName('td');
-                    const date = cells[0].textContent || cells[0].innerText;
-                    const title = cells[1].textContent.toLowerCase() || cells[1].innerText.toLowerCase();
-                    const speaker = cells[2] ? (cells[2].textContent.toLowerCase() || cells[2].innerText.toLowerCase()) : '';
-                    const guest = cells[3] ? (cells[3].textContent.toLowerCase() || cells[3].innerText.toLowerCase()) : '';
-
-                    const year = new Date(date).getFullYear().toString();
-
-                    const matchesQuery = title.includes(query);
-                    const matchesYear = !selectedYear || year === selectedYear;
-                    const matchesSpeaker = !selectedSpeaker || speaker.includes(selectedSpeaker);
-                    const matchesGuest = !selectedGuest || guest.includes(selectedGuest);
-
-                    if (matchesQuery && matchesYear && matchesSpeaker && matchesGuest) {
-                        row.style.display = '';
-                    } else {
-                        row.style.display = 'none';
-                    }
-                }
-            });
-        }
-
-        document.addEventListener('alpine:init', () => {
-            Alpine.data('sortedEpisodes', (type) => ({
-                sortKey: '',
-                sortAsc: true,
-                episodes: [],
-                init() {
-                    fetch('./data/podcast-index.json')
-                        .then(response => response.json())
-                        .then(data => {
-                            this.episodes = data[type].episodes;
-                        });
-                },
-                sortedEpisodes() {
-                    return this.episodes.sort((a, b) => {
-                        let result = 0;
-                        if (this.sortKey) {
-                            result = a[this.sortKey] > b[this.sortKey] ? 1 : -1;
-                        }
-                        return this.sortAsc ? result : -result;
-                    });
-                }
-            }));
-        });
-
-        // Enhanced search functionality
-        window.filterPodcasts = function(query) {
-            const searchQuery = query.toLowerCase().trim();
-            const tables = ['sunday-sermon-table', 'beyond-sermon-table'];
-            
-            // Add visual feedback
-            const searchInput = document.querySelector('.podcast-search-bar input');
-            searchInput.classList.add('searching');
-            setTimeout(() => {
-                searchInput.classList.remove('searching');
-            }, 300);
-
-            tables.forEach(tableId => {
-                const table = document.getElementById(tableId);
-                if (!table) return;
-                
-                const rows = table.getElementsByTagName('tbody')[0].getElementsByTagName('tr');
-                const cardContainer = table.parentElement.querySelector('.podcast-cards');
-                
-                for (let row of rows) {
-                    const cells = row.getElementsByTagName('td');
-                    const date = cells[0]?.textContent || '';
-                    const title = cells[1]?.textContent.toLowerCase() || '';
-                    const speaker = cells[2]?.textContent.toLowerCase() || '';
-                    const scripture = cells[3]?.textContent || '';
-                    
-                    const matches = 
-                        title.includes(searchQuery) || 
-                        speaker.includes(searchQuery) || 
-                        scripture.toLowerCase().includes(searchQuery) ||
-                        date.toLowerCase().includes(searchQuery);
-                    
-                    row.style.display = matches ? '' : 'none';
-                }
-
-                // Update card visibility
-                if (cardContainer) {
-                    const cards = cardContainer.getElementsByClassName('podcast-card');
-                    Array.from(cards).forEach((card, index) => {
-                        const row = table.getElementsByTagName('tbody')[0].getElementsByTagName('tr')[index];
-                        card.style.display = row.style.display;
-                    });
-                }
-            });
-        };
-
-        // Add event listeners for search functionality
-        const searchInput = document.querySelector('.podcast-search-bar input');
-        if (searchInput) {
-            searchInput.addEventListener('input', (e) => {
-                filterPodcasts(e.target.value);
-            });
-
-            searchInput.addEventListener('keyup', (e) => {
-                if (e.key === 'Enter') {
-                    filterPodcasts(e.target.value);
-                }
-            });
-        }
-
-        // Add keyboard shortcut for focusing search
-        document.addEventListener('keydown', (e) => {
-            if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
-                e.preventDefault();
-                const searchInput = document.querySelector('.podcast-search-bar input');
-                if (searchInput) {
-                    searchInput.focus();
-                }
-            }
-        });
-
-        // Add visual feedback styles
-        const style = document.createElement('style');
-        style.textContent = `
-            .searching {
-                animation: searchPulse 0.3s ease;
-            }
-
-            @keyframes searchPulse {
-                0% { transform: scale(1); }
-                50% { transform: scale(0.98); }
-                100% { transform: scale(1); }
-            }
-        `;
-        document.head.appendChild(style);
-
-        // Create cards on load and window resize
-        createPodcastCards();
-        window.addEventListener('resize', createPodcastCards);
-    </script>
-
-    <style>
-        /* Base search bar styles for both mobile and desktop */
-        .podcast-search-bar {
-            position: fixed;
-            left: 50%;
-            transform: translateX(-50%);
-            background: rgba(255, 255, 255, 0.98);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border-radius: 12px;
-            padding: 8px 12px;
-            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
-            z-index: 1000;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            transition: transform 0.3s ease, opacity 0.3s ease, top 0.3s ease;
-        }
-
-        .podcast-search-bar.hidden {
-            transform: translate(-50%, -100px);
-            opacity: 0;
-        }
-
-        .podcast-search-bar input {
-            flex: 1;
-            border: none;
-            background: transparent;
-            color: #333;
-            padding: 4px 0;
-        }
-
-        .podcast-search-bar input::placeholder {
-            color: #999;
-            opacity: 0.8;
-        }
-
-        .podcast-search-bar i {
-            color: #666;
-        }
-
-        /* Add a subtle gradient background to the search bar */
-        .podcast-search-bar::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(to bottom, rgba(255,255,255,0.95), rgba(255,255,255,0.98));
-            border-radius: 12px;
-            z-index: -1;
-        }
-
-        /* Mobile-specific styles */
-        @media (max-width: 768px) {
-            .podcast-search-bar {
-                top: 16px;
-                left: 50%;
-                transform: translateX(-50%);
-                width: calc(100% - 100px); /* Account for hamburger menu */
-                max-width: 400px;
-                margin: 0 auto;
-                z-index: 999; /* Below hamburger menu */
-            }
-
-            .podcast-floating-nav {
-                position: fixed;
-                bottom: 20px;
-                left: 50%;
-                transform: translateX(-50%);
-                background: rgba(255, 255, 255, 0.95);
-                backdrop-filter: blur(10px);
-                padding: 10px 20px;
-                border-radius: 30px;
-                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-                display: flex;
-                gap: 15px;
-                z-index: 1000;
-            }
-
-            .podcast-nav-item {
-                color: #333;
-                text-decoration: none;
-                padding: 8px 16px;
-                border-radius: 20px;
-                font-size: 14px;
-                transition: all 0.3s ease;
-            }
-
-            .podcast-nav-item.active {
-                background: #003366;
-                color: white;
-            }
-
-            .main-content-a {
-                padding-top: 70px;
-                padding-bottom: 80px;
-            }
-
-            /* Mobile table styles */
-            .podcast-table {
-                display: none; /* Hide tables on mobile */
-            }
-
-            .podcast-cards {
-                display: block; /* Show cards on mobile */
-            }
-
-            /* Adjust hero section for mobile */
-            .splash-hero {
-                height: 30vh;
-                margin-top: 0;
-            }
-
-            .hero-content h1 {
-                font-size: 2.5rem;
-            }
-
-            /* Ensure hamburger menu stays on top */
-            .hamburger-menu-button-container {
-                z-index: 1000;
-            }
-        }
-
-        /* Desktop-specific styles */
-        @media (min-width: 769px) {
-            .podcast-search-bar {
-                top: 20px;
-                width: 500px;
-                max-width: 40%;
-                padding: 10px 16px;
-            }
-
-            .podcast-search-bar input {
-                font-size: 1em;
-            }
-
-            .podcast-search-bar input::placeholder {
-                font-size: 0.9em;
-            }
-
-            .podcast-search-bar i {
-                font-size: 1em;
-            }
-
-            /* Add padding to main content to account for floating search */
-            .main-content-a {
-                padding-top: 80px;
-            }
-
-            /* Add keyboard shortcut hint for desktop */
-            .podcast-search-bar::after {
-                content: '⌘K';
-                position: absolute;
-                right: 16px;
-                color: #999;
-                font-size: 0.8em;
-                opacity: 0.7;
-            }
-
-            /* Hide keyboard shortcut on touch devices */
-            @media (hover: none) {
-                .podcast-search-bar::after {
-                    display: none;
-                }
-            }
-
-            .podcast-table {
-                display: table; /* Show tables on desktop */
-            }
-
-            .podcast-cards {
-                display: none; /* Hide cards on desktop */
-            }
-        }
-    </style>
-
-    <!-- Replace the existing floating nav with this updated version -->
     <div class="podcast-floating-nav">
         <a href="#podcast-sunday-sermon" class="podcast-nav-item">Sunday Sermons</a>
         <a href="#podcast-beyond" class="podcast-nav-item">Beyond</a>
@@ -982,7 +325,6 @@
         <a href="#wwb-sermon-table" class="podcast-nav-item">What We Believe</a>
     </div>
 
-    <!-- Add the floating search bar with compact submenu -->
     <div class="podcast-search-bar" x-data="{ query: '', submenuOpen: false }">
         <i class="fas fa-search"></i>
         <input 
@@ -1004,7 +346,6 @@
     </div>
 
     <script>
-        // Add this to your existing script section
         document.addEventListener('DOMContentLoaded', () => {
             // Existing code...
 
@@ -1098,94 +439,6 @@
         });
     </script>
 
-    <style>
-        /* Podcast card styles */
-        .podcast-card {
-            background: white;
-            border-radius: 12px;
-            padding: 1.5rem;
-            margin-bottom: 1.5rem;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            gap: 0.75rem;
-        }
-
-        .podcast-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.12);
-        }
-
-        .podcast-card-date {
-            font-size: 0.875rem;
-            color: #666;
-            margin-bottom: 0.25rem;
-        }
-
-        .podcast-card-title {
-            font-size: 1.125rem;
-            font-weight: 600;
-            color: #333;
-            margin: 0;
-            line-height: 1.4;
-        }
-
-        .podcast-card-speaker {
-            font-size: 0.875rem;
-            color: #666;
-            margin: 0;
-        }
-
-        .podcast-card-scripture {
-            font-size: 0.875rem;
-            color: #666;
-            font-style: italic;
-            margin: 0;
-            line-height: 1.4;
-        }
-
-        .podcast-card-link {
-            display: inline-block;
-            color: var(--cpc-blue);
-            text-decoration: none;
-            font-size: 0.875rem;
-            padding: 0.5rem 1.25rem;
-            border: 1px solid var(--cpc-blue);
-            border-radius: 6px;
-            transition: all 0.2s ease;
-            background: transparent;
-        }
-
-        .podcast-card-link:hover {
-            background: var(--cpc-blue);
-            color: white;
-        }
-
-        @media (max-width: 768px) {
-            .podcast-card {
-                padding: 1.25rem;
-                margin-bottom: 1rem;
-            }
-
-            .podcast-card-title {
-                font-size: 1rem;
-            }
-
-            .podcast-card-date,
-            .podcast-card-speaker,
-            .podcast-card-scripture {
-                font-size: 0.8125rem;
-            }
-
-            .podcast-card-link {
-                padding: 0.375rem 1rem;
-                font-size: 0.8125rem;
-            }
-        }
-    </style>
-
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             function createPodcastCards() {
@@ -1244,124 +497,6 @@
         });
     </script>
 
-    <style>
-        /* Add these styles for the main navigation hamburger */
-        .hamburger-menu-button-container {
-            display: none;
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            z-index: 3000;
-            cursor: pointer;
-            background: rgba(255, 255, 255, 0.9);
-            padding: 10px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-
-        .hamburger-menu-button-container i {
-            font-size: 24px;
-            color: var(--cpc-blue);
-        }
-
-        .mobile-navigation {
-            display: block;
-            position: fixed;
-            top: 0;
-            right: -100%;
-            width: 80%;
-            max-width: 300px;
-            height: 100vh;
-            background: white;
-            z-index: 3001;
-            padding: 20px;
-            box-shadow: -2px 0 5px rgba(0,0,0,0.1);
-            transition: right 0.3s ease-in-out;
-            overflow-y: auto;
-        }
-
-        .mobile-navigation.active {
-            right: 0;
-        }
-
-        .mobile-nav-header {
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-            margin-bottom: 20px;
-            padding: 10px 0;
-        }
-
-        #closeMenuButton {
-            background: none;
-            border: none;
-            font-size: 24px;
-            color: var(--cpc-blue);
-            cursor: pointer;
-            padding: 5px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .mobile-nav-links {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .mobile-nav-links li {
-            margin: 10px 0;
-        }
-
-        .mobile-nav-links a {
-            color: var(--cpc-blue);
-            text-decoration: none;
-            font-size: 18px;
-            display: block;
-            padding: 12px 15px;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-            background: rgba(0,0,0,0.02);
-        }
-
-        .mobile-nav-links a:hover {
-            background: rgba(0,0,0,0.05);
-            transform: translateX(5px);
-        }
-
-        @media (max-width: 768px) {
-            .hamburger-menu-button-container {
-                display: block;
-                position: fixed;
-                top: 20px;
-                right: 20px;
-                z-index: 3000;
-                cursor: pointer;
-                background: rgba(255, 255, 255, 0.95);
-                padding: 12px;
-                border-radius: 8px;
-                box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-                transition: all 0.3s ease;
-            }
-
-            .hamburger-menu-button-container:hover {
-                transform: scale(1.05);
-                box-shadow: 0 4px 15px rgba(0,0,0,0.15);
-            }
-
-            .hamburger-menu-button-container i {
-                font-size: 24px;
-                color: var(--cpc-blue);
-                transition: all 0.3s ease;
-            }
-
-            .main-navigation {
-                display: none;
-            }
-        }
-    </style>
-
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             // Main Navigation Hamburger
@@ -1400,60 +535,6 @@
             });
         });
     </script>
-
-    <style>
-        /* Compact table style for podcast tables */
-        .podcast-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 1.5rem;
-            font-size: 0.97em;
-        }
-        .podcast-table th, .podcast-table td {
-            border: 1px solid #e0e0e0;
-            padding: 7px 10px;
-            text-align: left;
-        }
-        .podcast-table th {
-            background: #f4f4f4;
-            font-weight: 600;
-        }
-        .podcast-table tr:nth-child(even) {
-            background: #fafbfc;
-        }
-        .podcast-table tr:hover {
-            background: #f0f6ff;
-        }
-        /* Compact submenu style */
-        .podcast-submenu-container {
-            display: inline-block;
-            margin-left: 10px;
-        }
-        .submenu-toggle {
-            cursor: pointer;
-            background: #222;
-            color: #fff;
-            border: 1px solid #222;
-            border-radius: 6px;
-            font-size: 0.95em;
-            padding: 4px 10px;
-            transition: background 0.2s, color 0.2s;
-        }
-        .submenu-toggle:hover {
-            background: #444;
-            color: #fff;
-        }
-        .podcast-submenu a {
-            color: #fff;
-            text-decoration: none;
-            border-radius: 4px;
-            transition: background 0.2s, color 0.2s;
-        }
-        .podcast-submenu a:hover {
-            background: #444;
-            color: #fff;
-        }
-    </style>
 
 </body>
 
