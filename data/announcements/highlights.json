@@ -203,6 +203,28 @@
       "tag": "events",
       "superfeatured": true,
       "featuredImage": "https://cpmfiles1.com/cpcnewhaven.org/featured-events-ministry-fair.png"
+    },
+    {
+      "id": "2025-026",
+      "title": "The Mission Trip Team Needs Air Mattresses!",
+      "description": "We leave for Atlantic City Aug. 2, and we need 8 air mattresses to take with us for our trip. As you may know, we’re partnering with a church - New City Fellowship - in an urban poor neighborhood of Atlantic City, NJ, doing mercy projects and Bible clubs with them. Please email <a href=\"mailto:admin@cpcnewhaven.org\" style=\"font-weight:bold; color:#0074D9; text-decoration:underline;\">admin@cpcnewhaven.org</a> if you have an air mattress we can use for the week, or just bring them to church and leave them in the foyer closet.",
+      "dateEntered": "2024-07-10",
+      "active": "true",
+      "type": "announcement",
+      "category": "announcement",
+      "tag": "superFeatured",
+      "superfeatured": true
+    },
+    {
+      "id": "2025-027",
+      "title": "Join us for Thursday Picnics @6PM in July",
+      "description": "This is simply a time to gather together as a church family and enjoy a meal together! No program other than a shared meal. Feel free to bring friends! We’ll gather on the front lawn, or the downstairs Fellowship Hall in case it rains.",
+      "dateEntered": "2024-07-10",
+      "active": "true",
+      "type": "announcement",
+      "category": "announcement",
+      "tag": "superFeatured",
+      "superfeatured": true
     }
   ]
 }
