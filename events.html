@@ -109,7 +109,110 @@
                 }
             }
         </style>
+<section class="save-the-dates-section">
+  <h2 style="text-align:center; font-size:2em; margin-bottom:30px; letter-spacing:1px; color:#0078D4;">Save the Dates & Summer Events</h2>
+  <div class="save-the-dates-calendar">
+    <div class="save-the-dates-card">
+      <div class="date-badge">Thursdays<br><span>July</span></div>
+      <div class="event-details">
+        <h3>Picnics @ 6PM</h3>
+        <p>Gather as a church family for a simple shared meal! Bring friends. On the front lawn or in Fellowship Hall if it rains.</p>
+      </div>
+    </div>
+    <div class="save-the-dates-card">
+      <div class="date-badge">July<br><span>27</span></div>
+      <div class="event-details">
+        <h3>Summer Sunday Fellowship Lunch</h3>
+        <p>Enjoy a special summer lunch after worship. All are welcome!</p>
+      </div>
+    </div>
+    <div class="save-the-dates-card">
+      <div class="date-badge">Aug<br><span>24</span></div>
+      <div class="event-details">
+        <h3>Resume Regular Sunday Lunches</h3>
+        <p>Our regular Sunday lunches return for the fall season.</p>
+      </div>
+    </div>
+    <div class="save-the-dates-card">
+      <div class="date-badge">Oct<br><span>10-12</span></div>
+      <div class="event-details">
+        <h3>Church-wide Retreat</h3>
+        <p>Join us at Camp Wightman for a weekend of fellowship, worship, and fun!</p>
+      </div>
+    </div>
+  </div>
+</section>
 
+<style>
+.save-the-dates-calendar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+  margin: 0 auto 30px auto;
+  max-width: 1100px;
+}
+.save-the-dates-card {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  display: flex;
+  align-items: center;
+  min-width: 260px;
+  max-width: 340px;
+  padding: 20px 18px;
+  transition: box-shadow 0.2s;
+  border-left: 6px solid #0078D4;
+  position: relative;
+}
+.save-the-dates-card:hover {
+  box-shadow: 0 8px 24px rgba(0,120,212,0.15);
+}
+.date-badge {
+  background: #0078D4;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.1em;
+  border-radius: 8px;
+  padding: 12px 16px;
+  margin-right: 18px;
+  min-width: 70px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,120,212,0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.date-badge span {
+  font-size: 1.7em;
+  font-weight: 900;
+  margin-top: 2px;
+  letter-spacing: 1px;
+}
+.event-details h3 {
+  margin: 0 0 6px 0;
+  font-size: 1.15em;
+  color: #005A9E;
+  letter-spacing: 0.5px;
+}
+.event-details p {
+  margin: 0;
+  color: #444;
+  font-size: 1em;
+  line-height: 1.5;
+}
+@media (max-width: 900px) {
+  .save-the-dates-calendar {
+    flex-direction: column;
+    align-items: center;
+  }
+  .save-the-dates-card {
+    width: 90%;
+    max-width: 400px;
+  }
+}
+</style>
         <section class="general-announcements">
             <hr>
             <div class="book-pick-container">
