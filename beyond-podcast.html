@@ -22,6 +22,7 @@
     <link rel="icon" href="https://storage.googleapis.com/cpc-public-website/web-assets/CPC%20-%20FAVICON%20-%20FALL%2024.png" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+    <script src="./src/js/beyond-podcast.js"></script>
 </head>
 
 <body>
@@ -73,7 +74,7 @@
 
     <div class="main-content-a">
         <section class="beyond-archive-section" x-data="{ 
-            sortKey: 'date', 
+            sortKey: 'date_added', 
             sortAsc: false, 
             searchQuery: '',
             episodes: [],
@@ -94,9 +95,10 @@
                 <div class="sort-controls">
                     <label>Sort by:</label>
                     <select x-model="sortKey" @change="sortEpisodes()">
-                        <option value="date">Date</option>
+                        <option value="date_added">Date Added</option>
                         <option value="title">Title</option>
                         <option value="guest">Guest</option>
+                        <option value="number">Episode Number</option>
                     </select>
                     <button @click="sortAsc = !sortAsc; sortEpisodes()" class="sort-direction">
                         <i :class="sortAsc ? 'fas fa-sort-up' : 'fas fa-sort-down'"></i>
@@ -105,12 +107,13 @@
             </div>
 
             <div class="episode-grid" x-show="filteredEpisodes.length > 0">
-                <template x-for="episode in filteredEpisodes" :key="episode.id">
+                <template x-for="episode in filteredEpisodes" :key="episode.number">
                     <div class="episode-card">
-                        <div class="episode-date" x-text="episode.date"></div>
+                        <div class="episode-number">Episode <span x-text="episode.number"></span></div>
+                        <div class="episode-date" x-text="episode.date_added"></div>
                         <h3 class="episode-title" x-text="episode.title"></h3>
                         <div class="episode-guest" x-text="episode.guest"></div>
-                        <a :href="episode.listenLink" class="episode-listen-btn" target="_blank">
+                        <a :href="episode.link" class="episode-listen-btn" target="_blank">
                             <i class="fas fa-play"></i> Listen
                         </a>
                     </div>
@@ -130,7 +133,6 @@
     </div>
 
     <script src="./src/js/function_toggle_mobileMenu.js"></script>
-    <script src="./src/js/beyond-podcast.js"></script>
 
     <style>
         .beyond-archive-section {
@@ -212,6 +214,13 @@
 
         .episode-card:hover {
             transform: translateY(-4px);
+        }
+
+        .episode-number {
+            font-size: 0.8em;
+            color: #0078D4;
+            font-weight: 600;
+            margin-bottom: 4px;
         }
 
         .episode-date {

@@ -1,11 +1,19 @@
 // Alpine.js functions for Sunday Sermons page
+console.log('Sunday Sermons JS loaded');
+
 window.loadSermons = function() {
-    fetch('./data/podcast-index.json')
-        .then(response => response.json())
+    console.log('loadSermons called');
+    fetch('./data/sunday-sermons.json')
+        .then(response => {
+            console.log('Response received:', response);
+            return response.json();
+        })
         .then(data => {
-            this.sermons = data.sundaySermons || [];
+            console.log('Data loaded:', data);
+            this.sermons = data.episodes || [];
             this.filteredSermons = [...this.sermons];
             this.sortSermons();
+            console.log('Sermons loaded:', this.sermons.length);
         })
         .catch(error => {
             console.error('Error loading sermons:', error);
@@ -15,13 +23,14 @@ window.loadSermons = function() {
 };
 
 window.filterSermons = function() {
+    console.log('filterSermons called');
     if (!this.searchQuery.trim()) {
         this.filteredSermons = [...this.sermons];
     } else {
         const query = this.searchQuery.toLowerCase();
         this.filteredSermons = this.sermons.filter(sermon => 
             sermon.title?.toLowerCase().includes(query) ||
-            sermon.speaker?.toLowerCase().includes(query) ||
+            sermon.author?.toLowerCase().includes(query) ||
             sermon.scripture?.toLowerCase().includes(query) ||
             sermon.date?.toLowerCase().includes(query)
         );
@@ -30,6 +39,7 @@ window.filterSermons = function() {
 };
 
 window.sortSermons = function() {
+    console.log('sortSermons called');
     this.filteredSermons.sort((a, b) => {
         let aValue = a[this.sortKey] || '';
         let bValue = b[this.sortKey] || '';

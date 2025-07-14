@@ -1,307 +1,242 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TL0WH5R1EK"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'G-TL0WH5R1EK');
-    </script>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="CPC New Haven Church - Classes Archive">
-    <meta name="keywords" content="CPC New Haven, Church, New Haven, CT, Classes">
-    <meta name="author" content="CPC New Haven">
-    <title>Classes - CPC New Haven Church</title>
-    <link rel="stylesheet" href="./src/css/global-body.css">
-    <link rel="stylesheet" href="./src/css/global-footer-cta.css">
+    <title>Classes - CPC New Haven</title>
     <link rel="stylesheet" href="./src/css/podcasts.css">
-    <link rel="icon" href="https://storage.googleapis.com/cpc-public-website/web-assets/CPC%20-%20FAVICON%20-%20FALL%2024.png" type="image/png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
-</head>
-
-<body>
-    <header id="stickyHeader" class="sticky">
-        <nav class="main-navigation">
-            <a href="index.html">Home</a>
-            <a href="sundays.html">Sundays</a>
-            <a href="about.html">About</a>
-            <a href="podcasts.html">Podcasts</a>
-            <a href="events.html">Events</a>
-            <a href="community.html">Community</a>
-            <a href="live.html">Live</a>
-            <a href="resources.html">Resources</a>
-            <a href="give.html">Give</a>
-        </nav>
-    </header>
-
-    <!-- MOBILE HAMBURGER-->
-    <div class="hamburger-menu-button-container" id="hamburgerMenu">
-        <i id="closeMobileMenuButton" class="fas fa-bars"></i>
-    </div>
-
-    <!-- Mobile Navigation -->
-    <nav class="mobile-navigation" id="mobileNavigation">
-        <div class="mobile-nav-header">
-            <button id="closeMenuButton" aria-label="Close menu">
-                <i class="fas fa-times"></i>
-            </button>
-        </div>
-        <ul class="mobile-nav-links">
-            <li><a class="mobile-menu-link" href="index.html">Home</a></li>
-            <li><a class="mobile-menu-link" href="sundays.html">Sundays</a></li>
-            <li><a class="mobile-menu-link" href="about.html">About</a></li>
-            <li><a class="mobile-menu-link" href="podcasts.html">Podcasts</a></li>
-            <li><a class="mobile-menu-link" href="events.html">Events</a></li>
-            <li><a class="mobile-menu-link" href="community.html">Community</a></li>
-            <li><a class="mobile-menu-link" href="live.html">Live</a></li>
-            <li><a class="mobile-menu-link" href="resources.html">Resources</a></li>
-            <li><a class="mobile-menu-link" href="give.html">Give</a></li>
-        </ul>
-    </nav>
-
-    <div class="splash-hero">
-        <div class="hero-content">
-            <h1>Classes</h1>
-            <p>Educational content from our various classes and studies</p>
-        </div>
-    </div>
-
-    <div class="main-content-a">
-        <section class="classes-archive-section" x-data="{ 
-            selectedClass: 'all',
-            searchQuery: '',
-            classes: {
-                biblical: [],
-                membership: [],
-                compline: [],
-                confessional: []
-            },
-            filteredEpisodes: []
-        }" x-init="loadClasses()">
-            
-            <div class="class-controls">
-                <div class="class-filter">
-                    <label>Filter by class:</label>
-                    <select x-model="selectedClass" @change="filterEpisodes()">
-                        <option value="all">All Classes</option>
-                        <option value="biblical">Biblical Interpretation</option>
-                        <option value="membership">Membership Seminar</option>
-                        <option value="compline">Compline Homilies</option>
-                        <option value="confessional">Confessional Theology</option>
-                    </select>
-                </div>
-                
-                <div class="search-container">
-                    <i class="fas fa-search"></i>
-                    <input 
-                        type="text" 
-                        x-model="searchQuery" 
-                        placeholder="Search episodes by title..."
-                        @input="filterEpisodes()"
-                    >
-                </div>
-            </div>
-
-            <div class="class-grid" x-show="filteredEpisodes.length > 0">
-                <template x-for="episode in filteredEpisodes" :key="episode.id">
-                    <div class="class-card">
-                        <div class="class-type" x-text="episode.classType"></div>
-                        <div class="episode-number" x-text="'Episode ' + episode.number"></div>
-                        <h3 class="episode-title" x-text="episode.title"></h3>
-                        <div class="episode-actions">
-                            <a :href="episode.link" class="episode-listen-btn" target="_blank">
-                                <i class="fas fa-play"></i> Listen
-                            </a>
-                            <a :href="episode.handout" class="episode-handout-btn" target="_blank" x-show="episode.handout">
-                                <i class="fas fa-file-alt"></i> Handout
-                            </a>
-                        </div>
-                    </div>
-                </template>
-            </div>
-
-            <div class="no-results" x-show="filteredEpisodes.length === 0 && (classes.biblical.length > 0 || classes.membership.length > 0 || classes.compline.length > 0 || classes.confessional.length > 0)">
-                <i class="fas fa-search"></i>
-                <p>No episodes found matching your search.</p>
-            </div>
-
-            <div class="loading" x-show="classes.biblical.length === 0 && classes.membership.length === 0 && classes.compline.length === 0 && classes.confessional.length === 0">
-                <i class="fas fa-spinner fa-spin"></i>
-                <p>Loading classes...</p>
-            </div>
-        </section>
-    </div>
-
-    <script src="./src/js/function_toggle_mobileMenu.js"></script>
+    <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
     <script src="./src/js/classes.js"></script>
+</head>
+<body>
+    <div x-data="{
+        classes: [],
+        filteredClasses: [],
+        searchQuery: '',
+        init() {
+            this.loadClasses();
+        }
+    }" class="podcast-container">
+        
+        <!-- Header -->
+        <div class="podcast-header">
+            <h1>Classes</h1>
+            <p>Dive deeper into theological education with our comprehensive class series</p>
+        </div>
+
+        <!-- Search and Filter -->
+        <div class="search-filter-container">
+            <div class="search-box">
+                <input 
+                    type="text" 
+                    x-model="searchQuery" 
+                    @input="filterClasses()"
+                    placeholder="Search classes or episodes..."
+                    class="search-input"
+                >
+                <svg class="search-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                </svg>
+            </div>
+        </div>
+
+        <!-- Loading State -->
+        <div x-show="classes.length === 0" class="loading-container">
+            <div class="loading-spinner"></div>
+            <p>Loading classes...</p>
+        </div>
+
+        <!-- Classes Grid -->
+        <div x-show="classes.length > 0" class="classes-grid">
+            <template x-for="classData in filteredClasses" :key="classData.className">
+                <div class="class-card">
+                    <div class="class-header">
+                        <h3 x-text="classData.title"></h3>
+                        <span class="episode-count" x-text="`${classData.episodeCount} episodes`"></span>
+                    </div>
+                    
+                    <div class="episodes-list">
+                        <template x-for="episode in classData.episodes" :key="episode.number">
+                            <div class="episode-item">
+                                <div class="episode-info">
+                                    <span class="episode-number" x-text="`Episode ${episode.number}`"></span>
+                                    <h4 x-text="episode.title"></h4>
+                                </div>
+                                
+                                <div class="episode-actions">
+                                    <template x-if="episode.link">
+                                        <a :href="episode.link" target="_blank" class="listen-btn">
+                                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1m4 0h1m-6 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                            </svg>
+                                            Listen
+                                        </a>
+                                    </template>
+                                    
+                                    <template x-if="episode.listen">
+                                        <a :href="episode.listen" target="_blank" class="listen-btn">
+                                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1m4 0h1m-6 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                            </svg>
+                                            Listen
+                                        </a>
+                                    </template>
+                                    
+                                    <template x-if="episode.handout">
+                                        <a :href="episode.handout" target="_blank" class="handout-btn">
+                                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                                            </svg>
+                                            Handout
+                                        </a>
+                                    </template>
+                                </div>
+                            </div>
+                        </template>
+                    </div>
+                </div>
+            </template>
+        </div>
+
+        <!-- No Results -->
+        <div x-show="filteredClasses.length === 0 && classes.length > 0" class="no-results">
+            <p>No classes found matching your search.</p>
+        </div>
+    </div>
 
     <style>
-        .classes-archive-section {
-            padding: 40px 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .class-controls {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 30px;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-
-        .class-filter {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .class-filter label {
-            font-weight: 600;
-            color: #333;
-        }
-
-        .class-filter select {
-            padding: 8px 12px;
-            border: 1px solid #ddd;
-            border-radius: 6px;
-            background: white;
-        }
-
-        .search-container {
-            position: relative;
-            flex: 1;
-            max-width: 400px;
-        }
-
-        .search-container i {
-            position: absolute;
-            left: 12px;
-            top: 50%;
-            transform: translateY(-50%);
-            color: #666;
-        }
-
-        .search-container input {
-            width: 100%;
-            padding: 12px 12px 12px 40px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            font-size: 1em;
-        }
-
-        .class-grid {
+        .classes-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
         }
 
         .class-card {
             background: white;
             border-radius: 12px;
-            padding: 20px;
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-            transition: transform 0.2s ease;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e5e7eb;
         }
 
-        .class-card:hover {
-            transform: translateY(-4px);
+        .class-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid #f3f4f6;
         }
 
-        .class-type {
-            font-size: 0.8em;
-            color: #0078D4;
+        .class-header h3 {
+            margin: 0;
+            color: #1f2937;
+            font-size: 1.25rem;
             font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-bottom: 4px;
+        }
+
+        .episode-count {
+            background: #0078d4;
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+
+        .episodes-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .episode-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            background: #f9fafb;
+            border-radius: 8px;
+            border: 1px solid #e5e7eb;
+        }
+
+        .episode-info {
+            flex: 1;
         }
 
         .episode-number {
-            font-size: 0.9em;
-            color: #666;
-            margin-bottom: 8px;
+            display: block;
+            font-size: 0.875rem;
+            color: #6b7280;
+            font-weight: 500;
+            margin-bottom: 0.25rem;
         }
 
-        .episode-title {
-            font-size: 1.2em;
-            margin-bottom: 15px;
-            color: #333;
+        .episode-info h4 {
+            margin: 0;
+            color: #374151;
+            font-size: 1rem;
+            font-weight: 500;
+            line-height: 1.4;
         }
 
         .episode-actions {
             display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
+            gap: 0.5rem;
+            flex-shrink: 0;
         }
 
-        .episode-listen-btn, .episode-handout-btn {
-            display: inline-flex;
+        .listen-btn, .handout-btn {
+            display: flex;
             align-items: center;
-            gap: 6px;
-            padding: 8px 16px;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
             border-radius: 6px;
             text-decoration: none;
-            font-weight: 600;
-            font-size: 0.9em;
-            transition: all 0.2s ease;
+            font-size: 0.875rem;
+            font-weight: 500;
+            transition: all 0.2s;
         }
 
-        .episode-listen-btn {
-            background: #0078D4;
+        .listen-btn {
+            background: #0078d4;
             color: white;
         }
 
-        .episode-listen-btn:hover {
-            background: #005A9E;
-            color: white;
+        .listen-btn:hover {
+            background: #106ebe;
         }
 
-        .episode-handout-btn {
-            background: #f8f9fa;
-            color: #333;
-            border: 1px solid #ddd;
+        .handout-btn {
+            background: #f3f4f6;
+            color: #374151;
+            border: 1px solid #d1d5db;
         }
 
-        .episode-handout-btn:hover {
-            background: #e9ecef;
-            color: #333;
+        .handout-btn:hover {
+            background: #e5e7eb;
         }
 
-        .no-results, .loading {
-            text-align: center;
-            padding: 40px;
-            color: #666;
-        }
-
-        .no-results i, .loading i {
-            font-size: 2em;
-            margin-bottom: 10px;
-            color: #999;
+        .listen-btn svg, .handout-btn svg {
+            width: 16px;
+            height: 16px;
         }
 
         @media (max-width: 768px) {
-            .class-controls {
-                flex-direction: column;
-                align-items: stretch;
-            }
-
-            .search-container {
-                max-width: none;
-            }
-
-            .class-grid {
+            .classes-grid {
                 grid-template-columns: 1fr;
             }
-
-            .episode-actions {
+            
+            .episode-item {
                 flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem;
+            }
+            
+            .episode-actions {
+                width: 100%;
+                justify-content: flex-start;
             }
         }
     </style>

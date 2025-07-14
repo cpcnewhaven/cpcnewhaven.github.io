@@ -22,6 +22,7 @@
     <link rel="icon" href="https://storage.googleapis.com/cpc-public-website/web-assets/CPC%20-%20FAVICON%20-%20FALL%2024.png" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+    <script src="./src/js/sunday-sermons.js"></script>
 </head>
 
 <body>
@@ -96,7 +97,7 @@
                     <select x-model="sortKey" @change="sortSermons()">
                         <option value="date">Date</option>
                         <option value="title">Title</option>
-                        <option value="speaker">Speaker</option>
+                        <option value="author">Speaker</option>
                         <option value="scripture">Scripture</option>
                     </select>
                     <button @click="sortAsc = !sortAsc; sortSermons()" class="sort-direction">
@@ -110,9 +111,9 @@
                     <div class="sermon-card">
                         <div class="sermon-date" x-text="sermon.date"></div>
                         <h3 class="sermon-title" x-text="sermon.title"></h3>
-                        <div class="sermon-speaker" x-text="sermon.speaker"></div>
+                        <div class="sermon-speaker" x-text="sermon.author"></div>
                         <div class="sermon-scripture" x-text="sermon.scripture"></div>
-                        <a :href="sermon.listenLink" class="sermon-listen-btn" target="_blank">
+                        <a :href="sermon.link" class="sermon-listen-btn" target="_blank">
                             <i class="fas fa-play"></i> Listen
                         </a>
                     </div>
@@ -132,7 +133,6 @@
     </div>
 
     <script src="./src/js/function_toggle_mobileMenu.js"></script>
-    <script src="./src/js/sunday-sermons.js"></script>
 
     <style>
         .sermon-archive-section {

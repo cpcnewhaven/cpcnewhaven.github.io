@@ -1,0 +1,232 @@
+{
+  "title": "Beyond the Sunday Sermon",
+  "description": "Dive deeper with discussions that go beyond the Sunday message",
+  "episodes": [
+    {
+      "number": 13,
+      "title": "Why We Praise",
+      "link": "https://open.spotify.com/episode/789JSDdGUWU4xU9f3lHOL5?si=1ada1052e21e4b00",
+      "guest": "Seth Bollinger",
+      "date_added": "2024-09-10",
+      "season": "fall 2024"
+    },
+    {
+      "number": 14,
+      "title": "Why Do We Confess",
+      "link": "https://open.spotify.com/episode/2jtlPEHyOrYDc3lslkKyt9?si=893c72ad058d4722",
+      "guest": "Ellen Martin",
+      "date_added": "2024-09-18",
+      "season": "fall 2024"
+    },
+    {
+      "number": 15,
+      "title": "Why Do We Preach?",
+      "link": "https://open.spotify.com/episode/30ywfi7U7TjnmV2gR4ypMn?si=855f1e0dcbd0494a",
+      "guest": "Pat Clendenen",
+      "date_added": "2024-09-25",
+      "season": "fall 2024"
+    },
+    {
+      "number": 16,
+      "title": "Why Do We Eat?",
+      "link": "https://open.spotify.com/episode/7n38oro8p6p1PHldavudrh?si=c6dc99c0973145f6",
+      "guest": "Alex Gonzalez",
+      "date_added": "2024-10-02",
+      "season": "fall 2024"
+    },
+    {
+      "number": 17,
+      "title": "Why Do We Exalt Christ as King?",
+      "link": "https://open.spotify.com/episode/1a2b3c4d5e6f7g8h9i0jkl?si=abcdef123456",
+      "guest": "Layne Boles",
+      "date_added": "2024-10-09",
+      "season": "fall 2024"
+    },
+    {
+      "number": 18,
+      "title": "One Christ, Many Members: The Gift and Struggle for Unity in Diversity",
+      "link": "https://open.spotify.com/episode/7wYFyLRUcHCzXJqpyQOUeu?si=2dcec99aa6cf4997",
+      "guest": "Crossan Cooper",
+      "date_added": "2024-10-16",
+      "season": "fall 2024",
+      "podcast-thumbnail_url": "https://storage.googleapis.com/cpc-public-website/podcast-thumbnails/beyond/Beyond%20-%2010-15-24.png"
+    },
+    {
+      "number": 19,
+      "title": "From Grumbling to Depending: How We Become the People of God",
+      "link": "https://open.spotify.com/episode/1E1yZZoUuUbL8lLfGnFeYs?si=dc32e47143ed4dd7",
+      "guest": "Jerry Ornelas",
+      "date_added": "2024-10-22",
+      "season": "fall 2024",
+      "podcast-thumbnail_url": "https://storage.googleapis.com/cpc-public-website/podcast-thumbnails/beyond/Beyond%20-%2010-22-24.jpg"
+    },
+    {
+      "number": 20,
+      "title": "The Awful & Benevolent Grace of God",
+      "link": "https://open.spotify.com/episode/1ZMbwD93JcHmpMMby1nJeU?si=058314a953dd4b7b",
+      "guest": "Seth Bollinger",
+      "date_added": "2024-10-30",
+      "season": "fall 2024"
+    },
+    {
+      "number": 21,
+      "title": "Exodus 18",
+      "link": "https://open.spotify.com/episode/5AB1ofMCLYphbocFIaeCVm?si=b79d2fd3fd944b70",
+      "guest": "Layne Boyles",
+      "date_added": "2024-11-07",
+      "season": "fall 2024",
+      "podcast-thumbnail_url": "https://storage.googleapis.com/cpc-public-website/podcast-thumbnails/beyond/Beyond%20-%2011-07-24%20_%20.jpg"
+    },
+    {
+      "number": 22,
+      "title": "Exodus 19",
+      "link": "https://open.spotify.com/episode/5AB1ofMCLYphbocFIaeCVm?si=b79d2fd3fd944b70",
+      "guest": "Julie Walker",
+      "date_added": "2024-11-15",
+      "season": "fall 2024",
+      "podcast-thumbnail_url": "https://storage.googleapis.com/cpc-public-website/podcast-thumbnails/beyond/Beyond%20-%2011-15-24.jpg"
+    },
+    {
+      "number": 23,
+      "title": "The Ten Commandments",
+      "link": "https://open.spotify.com/episode/7mRdSLMhMbdhiQX02zE7Z4?si=6140fbf6dcae4f22",
+      "guest": "Rev. Jerry Ornelas",
+      "date_added": "2024-12-03",
+      "season": "fall 2024",
+      "podcast-thumbnail_url": "https://storage.googleapis.com/cpc-public-website/podcast-thumbnails/beyond/Beyond%20-%2011-15-24.jpg"
+    },
+    {
+      "number": 24,
+      "title": "The Ten Commandments Part 2",
+      "link": "https://open.spotify.com/episode/03czc7Z0bnniWrneEfIsfL?si=3badbf45790e4ab9",
+      "guest": "Rev. Jerry Ornelas",
+      "date_added": "2024-12-10",
+      "season": "fall 2024",
+      "podcast-thumbnail_url": "https://storage.googleapis.com/cpc-public-website/podcast-thumbnails/beyond/Beyond%20-%2011-15-24.jpg"
+    },
+    {
+      "number": 25,
+      "title": "To Whom Do You Sacrifice",
+      "link": "https://open.spotify.com/episode/50JGWGeoJ5t1c6KUZaH9RS?si=f54a3d59895d4719",
+      "guest": "Seth Bollinger",
+      "date_added": "2025-01-15",
+      "season": "winter 2025",
+      "podcast-thumbnail_url": "https://storage.googleapis.com/cpc-public-website/podcast-thumbnails/beyond/Beyond%20-%2012-11-24.jpg"
+    },
+    {
+      "number": 26,
+      "title": "He Has Shown Thee...",
+      "link": "https://open.spotify.com/episode/50JGWGeoJ5t1c6KUZaH9RS?si=f54a3d59895d4719",
+      "guest": "Jerry Ornelas",
+      "date_added": "2025-01-21",
+      "season": "winter 2025",
+      "podcast-thumbnail_url": "https://open.spotify.com/episode/1Q9O7mCszR4cOUWN0PZejY?si=HYkhJ5k6SzipgQwSpFqEaw"
+    },
+    {
+      "number": 27,
+      "title": "For God's Sake: Dealing with the Unthinkable Offense",
+      "link": "https://open.spotify.com/episode/50JGWGeoJ5t1c6KUZaH9RS?si=f54a3d59895d4719",
+      "guest": "Julie Walker",
+      "date_added": "2025-01-29",
+      "season": "winter 2025",
+      "podcast-thumbnail_url": "https://open.spotify.com/episode/2ejBWTE4Pz5Sk06mSvbxij?si=wLcXg2VnTmOgoHfkb8YR7A"
+    },
+    {
+      "number": 28,
+      "title": "The Gift of God or the Gifts from God?",
+      "link": "https://open.spotify.com/episode/4EYmc85S6XZU8cu9611R2m?si=c4c77db73e3541b3",
+      "guest": "Rev. Tyler Rice",
+      "date_added": "2025-02-05",
+      "season": "winter 2025",
+      "podcast-thumbnail_url": "https://open.spotify.com/episode/4EYmc85S6XZU8cu9611R2m?si=c4c77db73e3541b3"
+    },
+    {
+      "number": 29,
+      "title": "Who Should Mercy Embrace?",
+      "link": "https://open.spotify.com/episode/0drS1ayw06pi8LvOcoIEEH",
+      "guest": "Patrick Clendenen",
+      "date_added": "2025-02-13",
+      "season": "winter 2025"
+    },
+    {
+      "number": 30,
+      "title": "The Jealous Demands of a Forgiving God",
+      "link": "https://open.spotify.com/episode/6y7UXtbPSSTyfv0buZ4fAb?si=241cadeac4b044d9",
+      "guest": "Karen Peck",
+      "date_added": "2025-02-20",
+      "season": "winter 2025"
+    },
+    {
+      "number": 31,
+      "title": "Beyond Exodus: Reflecting the Surpassing Glory of God",
+      "link": "https://open.spotify.com/episode/5bHj8qCgGhSyRdsgiyMPN5?si=8e0337a00a114530",
+      "guest": "Crossan Cooper",
+      "date_added": "2025-02-20",
+      "season": "winter 2025",
+      "scripture": "Exodus 34"
+    },
+    {
+      "number": 32,
+      "title": "Choose Wisdom",
+      "link": "https://open.spotify.com/episode/5vDoLAVm25eYpTWNXQAZzm?si=247035f6c7c542d8",
+      "guest": "Rev. Jerry Ornelas",
+      "date_added": "2025-03-05",
+      "season": "winter 2025",
+      "scripture": "Proverbs 1"
+    },
+    {
+      "number": 33,
+      "title": "Go to the Ant, O Sluggard! Or, the Great Dignity of a New Life in Christ",
+      "link": "https://open.spotify.com/episode/6Wvd8zi193rBZBQoUaw2lJ?si=87aa0581192d4961",
+      "guest": "Rev. Jerry Ornelas",
+      "date_added": "2025-03-26",
+      "season": "spring 2025",
+      "scripture": "Proverbs 6"
+    },
+    {
+      "number": 34,
+      "title": "Words are Echoes that Linger",
+      "link": "https://open.spotify.com/episode/0KnUGYcMysGPH8fS5vtrEE?si=21a00fd2d0c94bfe",
+      "guest": "Rev. Jerry Ornelas",
+      "date_added": "2025-04-02",
+      "season": "spring 2025",
+      "scripture": "Proverbs 18"
+    },
+    {
+      "number": 35,
+      "title": "Life in the Spirit",
+      "link": "https://open.spotify.com/episode/2sqdmZ1KJufOVwMWRLBGij?si=88f40bf642e5435a",
+      "guest": "Rev. Craig Luekens",
+      "date_added": "2025-04-09",
+      "season": "spring 2025",
+      "scripture": "Romans 8"
+    },
+    {
+      "number": 36,
+      "title": "Tasting Glory While Hungering for More",
+      "link": "https://open.spotify.com/episode/5VWdFa7UnWbH7wMPHOHhdP?si=56117cb3d5d34972",
+      "guest": "Rev. Jerry Ornelas",
+      "date_added": "2025-04-16",
+      "season": "spring 2025",
+      "scripture": "Romans 8:14"
+    },
+    {
+      "number": 37,
+      "title": "If God Is for Us, Then...",
+      "link": "https://open.spotify.com/episode/6ylA59OYNX32WpAoZXqvCs?si=55f9d5328b0549d0",
+      "guest": "Rev. Jerry Ornelas",
+      "date_added": "2025-04-23",
+      "season": "spring 2025",
+      "scripture": "Romans 8:28"
+    },
+    {
+      "number": 38,
+      "title": "Grace, Certainty, and the Magnitude of What Jesus Accomplished",
+      "link": "https://open.spotify.com/episode/6LNWLZ01MAuGFRLO3BRF3O?si=66ca9e6f849e41fc",
+      "guest": "Seth Bollinger",
+      "date_added": "2025-05-06",
+      "season": "spring 2025",
+      "scripture": "Luke 1:1-4"
+    }
+  ]
+} 

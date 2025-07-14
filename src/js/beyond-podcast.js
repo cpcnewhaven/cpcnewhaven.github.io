@@ -1,11 +1,19 @@
 // Alpine.js functions for Beyond Podcast page
+console.log('Beyond Podcast JS loaded');
+
 window.loadEpisodes = function() {
-    fetch('./data/podcast-index.json')
-        .then(response => response.json())
+    console.log('loadEpisodes called');
+    fetch('./data/beyond-podcast.json')
+        .then(response => {
+            console.log('Response received:', response);
+            return response.json();
+        })
         .then(data => {
-            this.episodes = data.beyond || [];
+            console.log('Data loaded:', data);
+            this.episodes = data.episodes || [];
             this.filteredEpisodes = [...this.episodes];
             this.sortEpisodes();
+            console.log('Episodes loaded:', this.episodes.length);
         })
         .catch(error => {
             console.error('Error loading episodes:', error);
@@ -15,6 +23,7 @@ window.loadEpisodes = function() {
 };
 
 window.filterEpisodes = function() {
+    console.log('filterEpisodes called');
     if (!this.searchQuery.trim()) {
         this.filteredEpisodes = [...this.episodes];
     } else {
@@ -22,13 +31,14 @@ window.filterEpisodes = function() {
         this.filteredEpisodes = this.episodes.filter(episode => 
             episode.title?.toLowerCase().includes(query) ||
             episode.guest?.toLowerCase().includes(query) ||
-            episode.date?.toLowerCase().includes(query)
+            episode.date_added?.toLowerCase().includes(query)
         );
     }
     this.sortEpisodes();
 };
 
 window.sortEpisodes = function() {
+    console.log('sortEpisodes called');
     this.filteredEpisodes.sort((a, b) => {
         let aValue = a[this.sortKey] || '';
         let bValue = b[this.sortKey] || '';
