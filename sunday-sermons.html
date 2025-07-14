@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TL0WH5R1EK"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-TL0WH5R1EK');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CPC New Haven Church - Sunday Sermon Archive">
+    <meta name="keywords" content="CPC New Haven, Church, New Haven, CT, Sermons">
+    <meta name="author" content="CPC New Haven">
+    <title>Sunday Sermons - CPC New Haven Church</title>
+    <link rel="stylesheet" href="./src/css/global-body.css">
+    <link rel="stylesheet" href="./src/css/global-footer-cta.css">
+    <link rel="stylesheet" href="./src/css/podcasts.css">
+    <link rel="icon" href="https://storage.googleapis.com/cpc-public-website/web-assets/CPC%20-%20FAVICON%20-%20FALL%2024.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+</head>
+
+<body>
+    <header id="stickyHeader" class="sticky">
+        <nav class="main-navigation">
+            <a href="index.html">Home</a>
+            <a href="sundays.html">Sundays</a>
+            <a href="about.html">About</a>
+            <a href="podcasts.html">Podcasts</a>
+            <a href="events.html">Events</a>
+            <a href="community.html">Community</a>
+            <a href="live.html">Live</a>
+            <a href="resources.html">Resources</a>
+            <a href="give.html">Give</a>
+        </nav>
+    </header>
+
+    <!-- MOBILE HAMBURGER-->
+    <div class="hamburger-menu-button-container" id="hamburgerMenu">
+        <i id="closeMobileMenuButton" class="fas fa-bars"></i>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <nav class="mobile-navigation" id="mobileNavigation">
+        <div class="mobile-nav-header">
+            <button id="closeMenuButton" aria-label="Close menu">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <ul class="mobile-nav-links">
+            <li><a class="mobile-menu-link" href="index.html">Home</a></li>
+            <li><a class="mobile-menu-link" href="sundays.html">Sundays</a></li>
+            <li><a class="mobile-menu-link" href="about.html">About</a></li>
+            <li><a class="mobile-menu-link" href="podcasts.html">Podcasts</a></li>
+            <li><a class="mobile-menu-link" href="events.html">Events</a></li>
+            <li><a class="mobile-menu-link" href="community.html">Community</a></li>
+            <li><a class="mobile-menu-link" href="live.html">Live</a></li>
+            <li><a class="mobile-menu-link" href="resources.html">Resources</a></li>
+            <li><a class="mobile-menu-link" href="give.html">Give</a></li>
+        </ul>
+    </nav>
+
+    <div class="splash-hero">
+        <div class="hero-content">
+            <h1>Sunday Sermons</h1>
+            <p>Weekly sermons from our Sunday worship services</p>
+        </div>
+    </div>
+
+    <div class="main-content-a">
+        <section class="sermon-archive-section" x-data="{ 
+            sortKey: 'date', 
+            sortAsc: false, 
+            searchQuery: '',
+            sermons: [],
+            filteredSermons: []
+        }" x-init="loadSermons()">
+            
+            <div class="sermon-controls">
+                <div class="search-container">
+                    <i class="fas fa-search"></i>
+                    <input 
+                        type="text" 
+                        x-model="searchQuery" 
+                        placeholder="Search sermons by title, speaker, or scripture..."
+                        @input="filterSermons()"
+                    >
+                </div>
+                
+                <div class="sort-controls">
+                    <label>Sort by:</label>
+                    <select x-model="sortKey" @change="sortSermons()">
+                        <option value="date">Date</option>
+                        <option value="title">Title</option>
+                        <option value="speaker">Speaker</option>
+                        <option value="scripture">Scripture</option>
+                    </select>
+                    <button @click="sortAsc = !sortAsc; sortSermons()" class="sort-direction">
+                        <i :class="sortAsc ? 'fas fa-sort-up' : 'fas fa-sort-down'"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="sermon-grid" x-show="filteredSermons.length > 0">
+                <template x-for="sermon in filteredSermons" :key="sermon.id">
+                    <div class="sermon-card">
+                        <div class="sermon-date" x-text="sermon.date"></div>
+                        <h3 class="sermon-title" x-text="sermon.title"></h3>
+                        <div class="sermon-speaker" x-text="sermon.speaker"></div>
+                        <div class="sermon-scripture" x-text="sermon.scripture"></div>
+                        <a :href="sermon.listenLink" class="sermon-listen-btn" target="_blank">
+                            <i class="fas fa-play"></i> Listen
+                        </a>
+                    </div>
+                </template>
+            </div>
+
+            <div class="no-results" x-show="filteredSermons.length === 0 && sermons.length > 0">
+                <i class="fas fa-search"></i>
+                <p>No sermons found matching your search.</p>
+            </div>
+
+            <div class="loading" x-show="sermons.length === 0">
+                <i class="fas fa-spinner fa-spin"></i>
+                <p>Loading sermons...</p>
+            </div>
+        </section>
+    </div>
+
+    <script src="./src/js/function_toggle_mobileMenu.js"></script>
+    <script src="./src/js/sunday-sermons.js"></script>
+
+    <style>
+        .sermon-archive-section {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .sermon-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .search-container {
+            position: relative;
+            flex: 1;
+            max-width: 400px;
+        }
+
+        .search-container i {
+            position: absolute;
+            left: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #666;
+        }
+
+        .search-container input {
+            width: 100%;
+            padding: 12px 12px 12px 40px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 1em;
+        }
+
+        .sort-controls {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .sort-controls label {
+            font-weight: 600;
+            color: #333;
+        }
+
+        .sort-controls select {
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            background: white;
+        }
+
+        .sort-direction {
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            background: white;
+            cursor: pointer;
+        }
+
+        .sermon-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 20px;
+        }
+
+        .sermon-card {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease;
+        }
+
+        .sermon-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .sermon-date {
+            font-size: 0.9em;
+            color: #666;
+            margin-bottom: 8px;
+        }
+
+        .sermon-title {
+            font-size: 1.2em;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        .sermon-speaker {
+            font-weight: 600;
+            color: #0078D4;
+            margin-bottom: 8px;
+        }
+
+        .sermon-scripture {
+            font-style: italic;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .sermon-listen-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #0078D4;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.2s ease;
+        }
+
+        .sermon-listen-btn:hover {
+            background: #005A9E;
+            color: white;
+        }
+
+        .no-results, .loading {
+            text-align: center;
+            padding: 40px;
+            color: #666;
+        }
+
+        .no-results i, .loading i {
+            font-size: 2em;
+            margin-bottom: 10px;
+            color: #999;
+        }
+
+        @media (max-width: 768px) {
+            .sermon-controls {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .search-container {
+                max-width: none;
+            }
+
+            .sermon-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</body>
+</html> 

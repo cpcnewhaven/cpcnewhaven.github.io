@@ -9,6 +9,32 @@ document.addEventListener('DOMContentLoaded', function() {
         .then(data => {
             const highlightsContainer = document.getElementById('highlights');
             
+            // --- New Section: Save the Dates & Summer Events ---
+            const saveTheDatesSection = document.createElement('section');
+            saveTheDatesSection.classList.add('save-the-dates-section');
+            const saveTheDatesHeader = document.createElement('h2');
+            saveTheDatesHeader.textContent = 'Save the Dates & Summer Events';
+            saveTheDatesSection.appendChild(saveTheDatesHeader);
+
+            // Filter for events with tag 'events' or 'Save the Dates' in title/description, and active
+            const saveTheDatesAnnouncements = data.announcements.filter(a =>
+                a.active === "true" && (
+                    (a.tag && a.tag.toLowerCase() === 'events') ||
+                    (a.title && a.title.toLowerCase().includes('save the dates')) ||
+                    (a.description && a.description.toLowerCase().includes('save the dates'))
+                )
+            );
+
+            if (saveTheDatesAnnouncements.length > 0) {
+                saveTheDatesAnnouncements.forEach(announcement => {
+                    const element = createAnnouncementElement(announcement);
+                    saveTheDatesSection.appendChild(element);
+                });
+                // Insert above the main highlights
+                highlightsContainer.parentNode.insertBefore(saveTheDatesSection, highlightsContainer);
+            }
+            // --- End New Section ---
+
             // Separate superFeatured announcements that are active
             const superFeaturedAnnouncements = data.announcements
                 .filter(announcement => announcement.tag === "superFeatured" && announcement.active === "true")

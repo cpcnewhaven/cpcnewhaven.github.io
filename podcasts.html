@@ -2,14 +2,12 @@
 <html lang="en">
 
 <head>
-
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-TL0WH5R1EK"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
-
         gtag('config', 'G-TL0WH5R1EK');
     </script>
 
@@ -31,7 +29,6 @@
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
 
 <body>
-
     <header id="stickyHeader" class="sticky">
         <nav class="main-navigation">
             <a href="index.html">Home</a>
@@ -79,423 +76,157 @@
 
     <!-- Main Content -->
     <div class="main-content-a">
-
-        <section id="podcast-sunday-sermon" class="inner-page-section" style="margin-top:20px;" x-data="{ sortKey: '', sortAsc: true }">
-     
-            <h4>The Sunday Sermon Archive</h4>
-            <table id="sunday-sermon-table">
-                <thead>
-                    <tr>
-                        <th @click="sortKey = 'date'; sortAsc = !sortAsc">Date</th>
-                        <th @click="sortKey = 'title'; sortAsc = !sortAsc">Title</th>
-                        <th @click="sortKey = 'speaker'; sortAsc = !sortAsc">Speaker</th>
-                        <th>Scripture</th>
-                        <th>Listen</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <template x-for="episode in sortedEpisodes('sundaySermons')" :key="episode.id">
-                        <tr>
-                            <td x-text="episode.date"></td>
-                            <td x-text="episode.title"></td>
-                            <td x-text="episode.speaker"></td>
-                            <td x-text="episode.scripture"></td>
-                            <td><a :href="episode.listenLink">Listen</a></td>
-                        </tr>
-                    </template>
-                </tbody>
-            </table>
-        </section>
-
-        <section id="podcast-beyond" class="inner-page-section" style="margin-top:20px;" x-data="{ sortKey: '', sortAsc: true }">
-       
+        <section class="podcast-grid-section">
+            <h2>Explore Our Podcasts</h2>
+            <p class="podcast-intro">Discover our collection of sermons, discussions, and classes to help you grow in your faith.</p>
             
-            
-            <h4>Beyond The Sunday Sermon Archive</h4>
-            <br>
-            <table id="beyond-sermon-table">
-                <thead>
-                    <tr>
-                        <th @click="sortKey = 'date'; sortAsc = !sortAsc">Date</th>
-                        <th @click="sortKey = 'title'; sortAsc = !sortAsc">Title</th>
-                        <th @click="sortKey = 'guest'; sortAsc = !sortAsc">Guest</th>
-                        <th>Listen</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <template x-for="episode in sortedEpisodes('beyond')" :key="episode.id">
-                        <tr>
-                            <td x-text="episode.date"></td>
-                            <td x-text="episode.title"></td>
-                            <td x-text="episode.guest"></td>
-                            <td><a :href="episode.listenLink">Listen</a></td>
-                        </tr>
-                    </template>
-                </tbody>
-            </table>
+            <div class="podcast-grid">
+                <div class="podcast-card" id="sunday-sermons-card">
+                    <div class="podcast-card-icon">
+                        <i class="fas fa-church"></i>
+                    </div>
+                    <h3>Sunday Sermons</h3>
+                    <p>Weekly sermons from our Sunday worship services. Explore our archive of biblical teaching and preaching.</p>
+                    <a href="sunday-sermons.html" class="podcast-card-button">Browse Sermons</a>
+                </div>
+
+                <div class="podcast-card" id="beyond-card">
+                    <div class="podcast-card-icon">
+                        <i class="fas fa-microphone-alt"></i>
+                    </div>
+                    <h3>Beyond the Sunday Sermon</h3>
+                    <p>Dive deeper with discussions that go beyond the Sunday message. Join us for extended conversations about faith and life.</p>
+                    <a href="beyond-podcast.html" class="podcast-card-button">Browse Episodes</a>
+                </div>
+
+                <div class="podcast-card" id="classes-card">
+                    <div class="podcast-card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Classes</h3>
+                    <p>Educational content from our various classes including Biblical Interpretation, Theology, and more.</p>
+                    <a href="classes.html" class="podcast-card-button">Browse Classes</a>
+                </div>
+            </div>
         </section>
 
-        <!-- New Classes Section -->
-        <section id="podcast-classes" class="inner-page-section" style="margin-top:20px;">
-            <h4>Classes: Biblical Interpretation</h4>
-            <table id="biblical-interpretation-table" class="podcast-table">
-                <thead>
-                    <tr>
-                        <th>Episode</th>
-                        <th>Title</th>
-                        <th>Listen</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- Table content will be dynamically populated here -->
-                </tbody>
-            </table>
-
-            <h4>Classes: Membership Seminar</h4>
-            <table id="membership-seminar-table" class="podcast-table">
-                <thead>
-                    <tr>
-                        <th>Episode</th>
-                        <th>Title</th>
-                        <th>Listen</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- Table content will be dynamically populated here -->
-                </tbody>
-            </table>
-
-            <h4>Classes: Compline Homilies</h4>
-            <table id="compline-homilies-table" class="podcast-table">
-                <thead>
-                    <tr>
-                        <th>Episode</th>
-                        <th>Title</th>
-                        <th>Listen</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- Table content will be dynamically populated here -->
-                </tbody>
-            </table>
-
-            <h4>Classes: Confessional Theology</h4>
-            <table id="confessional-theology-table" class="podcast-table">
-                <thead>
-                    <tr>
-                        <th>Episode</th>
-                        <th>Title</th>
-                        <th>Listen</th>
-                        <th>Handout</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- Table content will be dynamically populated here -->
-                </tbody>
-            </table>
-
-            <h4>Classes: Walking with Jesus Through Sinai</h4>
-            <table id="walking-podcast-table" class="podcast-table">
-                <thead>
-                </thead>
-                <tbody>
-                    <!-- Table content will be dynamically populated here -->
-                </tbody>
-            </table>
+        <!-- Subscribe to Our Podcasts Section -->
+        <section id="subscribe-podcasts" class="styled-section">
+            <h2 class="subscribe-header">Subscribe to Our Podcasts</h2>
+            <p class="subscribe-text">Stay updated with our latest episodes. Subscribe now on your favorite platform:</p>
+            <div class="subscribe-links">
+                <a href="https://podcasts.apple.com/us/podcast/cpc-new-haven-podcasts/id1553483670" target="_blank" class="subscribe-button">Apple Podcasts</a>
+                <a href="https://open.spotify.com/show/22kjUJyC0VH3cMfCSe9kEk?si=84da3e652bc24af2" target="_blank" class="subscribe-button">Spotify</a>
+            </div>
         </section>
-        <hr><br>
-        <table id="wwb-sermon-table">
-            <thead>
-            </thead>
-            <tbody>
-                <!-- Table content will be dynamically populated here -->
-            </tbody>
-        </table>
-
-    </div>
-    </div>
-
-    <!-- Refactored Old Podcasts Section -->
-    <section id="old-podcasts">
-        <div class="old-podcast-content">
-            <h2>Explore Our Old Podcast Archive</h2>
-            <p>
-                Discover our previous podcast episodes and content on our old podcast page. 
-                Click the button below to visit!
-            </p>
-            <a href="https://podcasts.cpcnewhaven.org" class="old-podcast-button">Visit Old Podcast Archive</a>
-        </div>
-    </section>
-
-    <!-- DISCOVER ADULT SUNDAY SCHOOL -->
-    <section id="adult-sunday-school">
-        <div class="adult-sunday-school-content">
-            <h2>Discover Adult Sunday School and Previous Classes</h2>
-            <p>Explore our Adult Sunday School archive and join us for in-depth classes on theology, biblical interpretation, and living a flourishing life before God.</p>
-            <a href="adult-sunday-school.html" class="adult-sunday-school-button">Visit Class Archive</a>
-        </div>
-    </section>
-
-    <!-- Subscribe to Our Podcasts Section -->
-    <section id="subscribe-podcasts" class="styled-section">
-        <h2 class="subscribe-header">Subscribe to Our Podcasts</h2>
-        <p class="subscribe-text">Stay updated with our latest episodes. Subscribe now on your favorite platform:</p>
-        <div class="subscribe-links">
-            <a href="https://podcasts.apple.com/us/podcast/cpc-new-haven-podcasts/id1553483670" target="_blank" class="subscribe-button">Apple Podcasts</a>
-            <a href="https://open.spotify.com/show/22kjUJyC0VH3cMfCSe9kEk?si=84da3e652bc24af2" target="_blank" class="subscribe-button">Spotify</a>
-        </div>
-    </section>
-
     </div>
 
     <script src="./src/js/function_toggle_mobileMenu.js"></script>
-    <script src="./src/js/podcast-fetch-sunday.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            fetch('./data/podcasts/membership-seminar.json')
-                .then(response => response.json())
-                .then(data => {
-                    const table = document.getElementById('membership-seminar-table');
-                    if (!table) return;
-                    const tbody = table.querySelector('tbody');
-                    tbody.innerHTML = '';
-                    data.episodes.forEach(episode => {
-                        const tr = document.createElement('tr');
-                        tr.innerHTML = `
-                            <td>${episode.number}</td>
-                            <td>${episode.title}</td>
-                            <td><a href="${episode.link}" target="_blank">Listen</a></td>
-                        `;
-                        tbody.appendChild(tr);
-                    });
-                });
-        });
-        </script>
 
-        <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            fetch('./data/podcasts/compline-homilies.json')
-                .then(response => response.json())
-                .then(data => {
-                    const table = document.getElementById('compline-homilies-table');
-                    if (!table) return;
-                    const tbody = table.querySelector('tbody');
-                    tbody.innerHTML = '';
-                    data.episodes.forEach(episode => {
-                        const tr = document.createElement('tr');
-                        tr.innerHTML = `
-                            <td>${episode.number}</td>
-                            <td>${episode.title}</td>
-                            <td><a href="${episode.link}" target="_blank">Listen</a></td>
-                        `;
-                        tbody.appendChild(tr);
-                    });
-                });
-        });
-        </script>
+    <style>
+        .podcast-grid-section {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
 
-        <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            fetch('./data/podcasts/confessional-theology.json')
-                .then(response => response.json())
-                .then(data => {
-                    const table = document.getElementById('confessional-theology-table');
-                    if (!table) return;
-                    const tbody = table.querySelector('tbody');
-                    tbody.innerHTML = '';
-                    data.episodes.forEach(episode => {
-                        const tr = document.createElement('tr');
-                        tr.innerHTML = `
-                            <td>${episode.number}</td>
-                            <td>${episode.title}</td>
-                            <td><a href="${episode.listen}" target="_blank">Listen</a></td>
-                            <td><a href="${episode.handout}" target="_blank">Handout</a></td>
-                        `;
-                        tbody.appendChild(tr);
-                    });
-                });
-        });
-        </script>
+        .podcast-grid-section h2 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            color: #333;
+        }
 
-    <div class="podcast-floating-nav">
-        <a href="#podcast-sunday-sermon" class="podcast-nav-item">Sunday Sermons</a>
-        <a href="#podcast-beyond" class="podcast-nav-item">Beyond</a>
-        <a href="#podcast-classes" class="podcast-nav-item">Classes</a>
-        <a href="#walking-podcast-table" class="podcast-nav-item">Walking with Jesus Through Sinai</a>
-        <a href="#wwb-sermon-table" class="podcast-nav-item">What We Believe</a>
-    </div>
+        .podcast-intro {
+            text-align: center;
+            font-size: 1.2em;
+            color: #666;
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
 
-    <div class="podcast-search-bar" x-data="{ query: '', submenuOpen: false }">
-        <i class="fas fa-search"></i>
-        <input 
-            type="text" 
-            x-model="query" 
-            placeholder="Search by book, year, speaker, or title..." 
-            @input="filterPodcasts($event.target.value)"
-        >
-        <div class="podcast-submenu-container" style="position:relative;">
-            <button class="submenu-toggle" @click="submenuOpen = !submenuOpen" style="padding:4px 10px;font-size:0.95em;border-radius:6px;background:#222;color:#fff;border:1px solid #222;">Jump to... <i class="fas fa-chevron-down"></i></button>
-            <div class="podcast-submenu" x-show="submenuOpen" style="position:absolute;top:110%;left:0;background:#222;color:#fff;border:1px solid #222;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.18);padding:6px 0;min-width:180px;z-index:1001;">
-                <a href="#podcast-sunday-sermon" style="display:block;padding:6px 16px;font-size:0.97em;color:#fff;">Sunday Sermons</a>
-                <a href="#podcast-beyond" style="display:block;padding:6px 16px;font-size:0.97em;color:#fff;">Beyond</a>
-                <a href="#podcast-classes" style="display:block;padding:6px 16px;font-size:0.97em;color:#fff;">Classes</a>
-                <a href="#walking-podcast-table" style="display:block;padding:6px 16px;font-size:0.97em;color:#fff;">Walking with Jesus Through Sinai</a>
-                <a href="#wwb-sermon-table" style="display:block;padding:6px 16px;font-size:0.97em;color:#fff;">What We Believe</a>
-            </div>
-        </div>
-    </div>
+        .podcast-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            // Existing code...
+        .podcast-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 1px solid #e0e0e0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
 
-            // Handle floating nav and search bar visibility
-            const navItems = document.querySelectorAll('.podcast-nav-item');
-            const sections = document.querySelectorAll('.inner-page-section');
-            const floatingNav = document.querySelector('.podcast-floating-nav');
-            const searchBar = document.querySelector('.podcast-search-bar');
-            let lastScrollY = window.scrollY;
-            let ticking = false;
-            let scrollTimeout;
+        .podcast-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 16px 48px rgba(0, 0, 0, 0.15);
+        }
 
-            function updateActiveNavItem() {
-                const scrollPosition = window.scrollY;
+        .podcast-card-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #0078D4, #005A9E);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: white;
+            font-size: 2em;
+        }
 
-                sections.forEach((section, index) => {
-                    const sectionTop = section.offsetTop - 100;
-                    const sectionBottom = sectionTop + section.offsetHeight;
+        .podcast-card h3 {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            color: #333;
+        }
 
-                    if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
-                        navItems.forEach(item => item.classList.remove('active'));
-                        navItems[index].classList.add('active');
-                    }
-                });
+        .podcast-card p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        .podcast-card-button {
+            display: inline-block;
+            background: #0078D4;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s ease;
+        }
+
+        .podcast-card-button:hover {
+            background: #005A9E;
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .podcast-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
             }
 
-            function updateNavVisibility() {
-                const currentScrollY = window.scrollY;
-                
-                if (currentScrollY > lastScrollY) {
-                    // Scrolling down
-                    floatingNav.classList.add('hidden');
-                    searchBar.classList.add('hidden');
-                } else {
-                    // Scrolling up
-                    floatingNav.classList.remove('hidden');
-                    searchBar.classList.remove('hidden');
-                }
-                
-                lastScrollY = currentScrollY;
-                ticking = false;
+            .podcast-card {
+                padding: 25px 20px;
             }
 
-            // Update active state and visibility on scroll
-            window.addEventListener('scroll', () => {
-                if (!ticking) {
-                    window.requestAnimationFrame(() => {
-                        updateActiveNavItem();
-                        updateNavVisibility();
-                    });
-                    ticking = true;
-                }
-            });
-            
-            // Initial check
-            updateActiveNavItem();
-
-            // Show nav and search when user stops scrolling
-            window.addEventListener('scroll', () => {
-                clearTimeout(scrollTimeout);
-                scrollTimeout = setTimeout(() => {
-                    floatingNav.classList.remove('hidden');
-                    searchBar.classList.remove('hidden');
-                }, 1000);
-            });
-
-            // Show search bar when user hovers near top of screen
-            document.addEventListener('mousemove', (e) => {
-                if (e.clientY < 100) {
-                    searchBar.classList.remove('hidden');
-                }
-            });
-
-            // Smooth scroll for nav items with haptic feedback
-            navItems.forEach(item => {
-                item.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    const targetId = item.getAttribute('href');
-                    const targetSection = document.querySelector(targetId);
-                    
-                    if (targetSection) {
-                        // Add haptic feedback if available
-                        if (window.navigator && window.navigator.vibrate) {
-                            window.navigator.vibrate(5);
-                        }
-                        
-                        targetSection.scrollIntoView({ behavior: 'smooth' });
-                    }
-                });
-            });
-        });
-    </script>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            function createPodcastCards() {
-                const tables = ['sunday-sermon-table', 'beyond-sermon-table'];
-                
-                tables.forEach(tableId => {
-                    const table = document.getElementById(tableId);
-                    if (!table) return;
-                    
-                    const tbody = table.getElementsByTagName('tbody')[0];
-                    const rows = tbody.getElementsByTagName('tr');
-                    
-                    // Create container for cards if it doesn't exist
-                    let cardContainer = table.parentElement.querySelector('.podcast-cards');
-                    if (!cardContainer) {
-                        cardContainer = document.createElement('div');
-                        cardContainer.className = 'podcast-cards';
-                        table.parentElement.insertBefore(cardContainer, table);
-                    }
-                    
-                    // Clear existing cards
-                    cardContainer.innerHTML = '';
-                    
-                    // Convert each row to a card
-                    Array.from(rows).forEach(row => {
-                        const cells = row.getElementsByTagName('td');
-                        if (cells.length < 2) return;
-                        
-                        const card = document.createElement('div');
-                        card.className = 'podcast-card';
-                        
-                        const date = cells[0].textContent;
-                        const title = cells[1].textContent;
-                        const speaker = cells[2]?.textContent || '';
-                        const scripture = cells[3]?.textContent || '';
-                        const link = cells[cells.length - 1].querySelector('a')?.href;
-                        
-                        card.innerHTML = `
-                            <div class="podcast-card-header">
-                                <div class="podcast-card-date">${date}</div>
-                                <h3 class="podcast-card-title">${title}</h3>
-                                ${speaker ? `<div class="podcast-card-info">${speaker}</div>` : ''}
-                                ${scripture ? `<div class="podcast-card-scripture">${scripture}</div>` : ''}
-                            </div>
-                            ${link ? `<a href="${link}" class="podcast-card-link">Listen</a>` : ''}
-                        `;
-                        
-                        cardContainer.appendChild(card);
-                    });
-                });
+            .podcast-grid-section h2 {
+                font-size: 2em;
             }
-
-            // Create cards on load and window resize
-            createPodcastCards();
-            window.addEventListener('resize', createPodcastCards);
-        });
-    </script>
+        }
+    </style>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
@@ -537,5 +268,4 @@
     </script>
 
 </body>
-
 </html>

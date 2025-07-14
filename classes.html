@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TL0WH5R1EK"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-TL0WH5R1EK');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CPC New Haven Church - Classes Archive">
+    <meta name="keywords" content="CPC New Haven, Church, New Haven, CT, Classes">
+    <meta name="author" content="CPC New Haven">
+    <title>Classes - CPC New Haven Church</title>
+    <link rel="stylesheet" href="./src/css/global-body.css">
+    <link rel="stylesheet" href="./src/css/global-footer-cta.css">
+    <link rel="stylesheet" href="./src/css/podcasts.css">
+    <link rel="icon" href="https://storage.googleapis.com/cpc-public-website/web-assets/CPC%20-%20FAVICON%20-%20FALL%2024.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+</head>
+
+<body>
+    <header id="stickyHeader" class="sticky">
+        <nav class="main-navigation">
+            <a href="index.html">Home</a>
+            <a href="sundays.html">Sundays</a>
+            <a href="about.html">About</a>
+            <a href="podcasts.html">Podcasts</a>
+            <a href="events.html">Events</a>
+            <a href="community.html">Community</a>
+            <a href="live.html">Live</a>
+            <a href="resources.html">Resources</a>
+            <a href="give.html">Give</a>
+        </nav>
+    </header>
+
+    <!-- MOBILE HAMBURGER-->
+    <div class="hamburger-menu-button-container" id="hamburgerMenu">
+        <i id="closeMobileMenuButton" class="fas fa-bars"></i>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <nav class="mobile-navigation" id="mobileNavigation">
+        <div class="mobile-nav-header">
+            <button id="closeMenuButton" aria-label="Close menu">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <ul class="mobile-nav-links">
+            <li><a class="mobile-menu-link" href="index.html">Home</a></li>
+            <li><a class="mobile-menu-link" href="sundays.html">Sundays</a></li>
+            <li><a class="mobile-menu-link" href="about.html">About</a></li>
+            <li><a class="mobile-menu-link" href="podcasts.html">Podcasts</a></li>
+            <li><a class="mobile-menu-link" href="events.html">Events</a></li>
+            <li><a class="mobile-menu-link" href="community.html">Community</a></li>
+            <li><a class="mobile-menu-link" href="live.html">Live</a></li>
+            <li><a class="mobile-menu-link" href="resources.html">Resources</a></li>
+            <li><a class="mobile-menu-link" href="give.html">Give</a></li>
+        </ul>
+    </nav>
+
+    <div class="splash-hero">
+        <div class="hero-content">
+            <h1>Classes</h1>
+            <p>Educational content from our various classes and studies</p>
+        </div>
+    </div>
+
+    <div class="main-content-a">
+        <section class="classes-archive-section" x-data="{ 
+            selectedClass: 'all',
+            searchQuery: '',
+            classes: {
+                biblical: [],
+                membership: [],
+                compline: [],
+                confessional: []
+            },
+            filteredEpisodes: []
+        }" x-init="loadClasses()">
+            
+            <div class="class-controls">
+                <div class="class-filter">
+                    <label>Filter by class:</label>
+                    <select x-model="selectedClass" @change="filterEpisodes()">
+                        <option value="all">All Classes</option>
+                        <option value="biblical">Biblical Interpretation</option>
+                        <option value="membership">Membership Seminar</option>
+                        <option value="compline">Compline Homilies</option>
+                        <option value="confessional">Confessional Theology</option>
+                    </select>
+                </div>
+                
+                <div class="search-container">
+                    <i class="fas fa-search"></i>
+                    <input 
+                        type="text" 
+                        x-model="searchQuery" 
+                        placeholder="Search episodes by title..."
+                        @input="filterEpisodes()"
+                    >
+                </div>
+            </div>
+
+            <div class="class-grid" x-show="filteredEpisodes.length > 0">
+                <template x-for="episode in filteredEpisodes" :key="episode.id">
+                    <div class="class-card">
+                        <div class="class-type" x-text="episode.classType"></div>
+                        <div class="episode-number" x-text="'Episode ' + episode.number"></div>
+                        <h3 class="episode-title" x-text="episode.title"></h3>
+                        <div class="episode-actions">
+                            <a :href="episode.link" class="episode-listen-btn" target="_blank">
+                                <i class="fas fa-play"></i> Listen
+                            </a>
+                            <a :href="episode.handout" class="episode-handout-btn" target="_blank" x-show="episode.handout">
+                                <i class="fas fa-file-alt"></i> Handout
+                            </a>
+                        </div>
+                    </div>
+                </template>
+            </div>
+
+            <div class="no-results" x-show="filteredEpisodes.length === 0 && (classes.biblical.length > 0 || classes.membership.length > 0 || classes.compline.length > 0 || classes.confessional.length > 0)">
+                <i class="fas fa-search"></i>
+                <p>No episodes found matching your search.</p>
+            </div>
+
+            <div class="loading" x-show="classes.biblical.length === 0 && classes.membership.length === 0 && classes.compline.length === 0 && classes.confessional.length === 0">
+                <i class="fas fa-spinner fa-spin"></i>
+                <p>Loading classes...</p>
+            </div>
+        </section>
+    </div>
+
+    <script src="./src/js/function_toggle_mobileMenu.js"></script>
+    <script src="./src/js/classes.js"></script>
+
+    <style>
+        .classes-archive-section {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .class-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .class-filter {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .class-filter label {
+            font-weight: 600;
+            color: #333;
+        }
+
+        .class-filter select {
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            background: white;
+        }
+
+        .search-container {
+            position: relative;
+            flex: 1;
+            max-width: 400px;
+        }
+
+        .search-container i {
+            position: absolute;
+            left: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #666;
+        }
+
+        .search-container input {
+            width: 100%;
+            padding: 12px 12px 12px 40px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 1em;
+        }
+
+        .class-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 20px;
+        }
+
+        .class-card {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease;
+        }
+
+        .class-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .class-type {
+            font-size: 0.8em;
+            color: #0078D4;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+        }
+
+        .episode-number {
+            font-size: 0.9em;
+            color: #666;
+            margin-bottom: 8px;
+        }
+
+        .episode-title {
+            font-size: 1.2em;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .episode-actions {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .episode-listen-btn, .episode-handout-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 16px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9em;
+            transition: all 0.2s ease;
+        }
+
+        .episode-listen-btn {
+            background: #0078D4;
+            color: white;
+        }
+
+        .episode-listen-btn:hover {
+            background: #005A9E;
+            color: white;
+        }
+
+        .episode-handout-btn {
+            background: #f8f9fa;
+            color: #333;
+            border: 1px solid #ddd;
+        }
+
+        .episode-handout-btn:hover {
+            background: #e9ecef;
+            color: #333;
+        }
+
+        .no-results, .loading {
+            text-align: center;
+            padding: 40px;
+            color: #666;
+        }
+
+        .no-results i, .loading i {
+            font-size: 2em;
+            margin-bottom: 10px;
+            color: #999;
+        }
+
+        @media (max-width: 768px) {
+            .class-controls {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .search-container {
+                max-width: none;
+            }
+
+            .class-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .episode-actions {
+                flex-direction: column;
+            }
+        }
+    </style>
+</body>
+</html> 
