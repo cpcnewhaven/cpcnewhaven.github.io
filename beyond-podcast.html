@@ -73,13 +73,7 @@
     </div>
 
     <div class="main-content-a">
-        <section class="beyond-archive-section" x-data="{ 
-            sortKey: 'date_added', 
-            sortAsc: false, 
-            searchQuery: '',
-            episodes: [],
-            filteredEpisodes: []
-        }" x-init="loadEpisodes()">
+        <section class="beyond-archive-section" x-data="beyondPodcastData()">
             
             <div class="episode-controls">
                 <div class="search-container">
@@ -125,7 +119,7 @@
                 <p>No episodes found matching your search.</p>
             </div>
 
-            <div class="loading" x-show="episodes.length === 0">
+            <div class="loading" x-show="episodes.length === 0 && !loadingComplete">
                 <i class="fas fa-spinner fa-spin"></i>
                 <p>Loading episodes...</p>
             </div>

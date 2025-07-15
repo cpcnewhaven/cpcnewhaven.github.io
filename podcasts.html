@@ -82,27 +82,21 @@
             
             <div class="podcast-grid">
                 <div class="podcast-card" id="sunday-sermons-card">
-                    <div class="podcast-card-icon">
-                        <i class="fas fa-church"></i>
-                    </div>
+                    <img src="./assets/podcast-thumbnails/THE SUNDAY SERMON.jpg" alt="The Sunday Sermon" class="podcast-thumbnail">
                     <h3>Sunday Sermons</h3>
                     <p>Weekly sermons from our Sunday worship services. Explore our archive of biblical teaching and preaching.</p>
                     <a href="sunday-sermons.html" class="podcast-card-button">Browse Sermons</a>
                 </div>
 
                 <div class="podcast-card" id="beyond-card">
-                    <div class="podcast-card-icon">
-                        <i class="fas fa-microphone-alt"></i>
-                    </div>
+                    <img src="./assets/podcast-thumbnails/BEYOND - THE SUNDAY SERMON.jpg" alt="Beyond the Sunday Sermon" class="podcast-thumbnail">
                     <h3>Beyond the Sunday Sermon</h3>
                     <p>Dive deeper with discussions that go beyond the Sunday message. Join us for extended conversations about faith and life.</p>
                     <a href="beyond-podcast.html" class="podcast-card-button">Browse Episodes</a>
                 </div>
 
                 <div class="podcast-card" id="classes-card">
-                    <div class="podcast-card-icon">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
+                    <img src="./assets/podcast-thumbnails/CPC CLASSES.jpg" alt="Classes" class="podcast-thumbnail">
                     <h3>Classes</h3>
                     <p>Educational content from our various classes including Biblical Interpretation, Theology, and more.</p>
                     <a href="classes.html" class="podcast-card-button">Browse Classes</a>
@@ -154,10 +148,19 @@
             margin-top: 40px;
         }
 
+        .podcast-thumbnail {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 12px 12px 0 0;
+            margin-bottom: 20px;
+            display: block;
+        }
+
         .podcast-card {
             background: #fff;
             border-radius: 16px;
-            padding: 30px;
+            padding: 0;
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
             border: 1px solid #e0e0e0;
@@ -171,29 +174,16 @@
             box-shadow: 0 16px 48px rgba(0, 0, 0, 0.15);
         }
 
-        .podcast-card-icon {
-            width: 80px;
-            height: 80px;
-            background: linear-gradient(135deg, #0078D4, #005A9E);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 20px;
-            color: white;
-            font-size: 2em;
-        }
-
         .podcast-card h3 {
             font-size: 1.5em;
-            margin-bottom: 15px;
+            margin: 0 30px 15px 30px;
             color: #333;
         }
 
         .podcast-card p {
             color: #666;
             line-height: 1.6;
-            margin-bottom: 25px;
+            margin: 0 30px 25px 30px;
         }
 
         .podcast-card-button {
@@ -205,6 +195,7 @@
             text-decoration: none;
             font-weight: 600;
             transition: background 0.3s ease;
+            margin-bottom: 30px;
         }
 
         .podcast-card-button:hover {
