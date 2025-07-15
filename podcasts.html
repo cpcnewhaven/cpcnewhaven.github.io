@@ -143,9 +143,11 @@
 
         .podcast-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            grid-template-columns: 1fr;
             gap: 30px;
-            margin-top: 40px;
+            margin: 40px auto;
+            max-width: 600px;
+            justify-content: center;
         }
 
         .podcast-thumbnail {
@@ -168,6 +170,8 @@
             text-align: center;
             position: relative;
             overflow: hidden;
+            max-width: 100%;
+            margin: 0 auto;
         }
 
         .podcast-card:hover {
@@ -208,10 +212,12 @@
             .podcast-grid {
                 grid-template-columns: 1fr;
                 gap: 20px;
+                margin: 20px auto;
             }
 
             .podcast-card {
-                padding: 25px 20px;
+                padding: 0;
+                max-width: 100%;
             }
 
             .podcast-grid-section h2 {
