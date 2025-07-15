@@ -73,13 +73,7 @@
     </div>
 
     <div class="main-content-a">
-        <section class="sermon-archive-section" x-data="{ 
-            sortKey: 'date', 
-            sortAsc: false, 
-            searchQuery: '',
-            sermons: [],
-            filteredSermons: []
-        }" x-init="loadSermons()">
+        <section class="sermon-archive-section" x-data="sermonData()">
             
             <div class="sermon-controls">
                 <div class="search-container">
@@ -109,7 +103,7 @@
             <div class="sermon-grid" x-show="filteredSermons.length > 0">
                 <template x-for="sermon in filteredSermons" :key="sermon.id">
                     <div class="sermon-card">
-                        <div class="sermon-date" x-text="sermon.date"></div>
+                        <div class="sermon-date" x-text="sermon.displayDate || sermon.date"></div>
                         <h3 class="sermon-title" x-text="sermon.title"></h3>
                         <div class="sermon-speaker" x-text="sermon.author"></div>
                         <div class="sermon-scripture" x-text="sermon.scripture"></div>
@@ -125,9 +119,18 @@
                 <p>No sermons found matching your search.</p>
             </div>
 
-            <div class="loading" x-show="sermons.length === 0">
+            <div class="loading" x-show="sermons.length === 0 && !loadingComplete">
                 <i class="fas fa-spinner fa-spin"></i>
                 <p>Loading sermons...</p>
+            </div>
+
+            <!-- Debug info (remove this later) -->
+            <div style="background: #f0f0f0; padding: 10px; margin: 20px 0; font-family: monospace; font-size: 12px;">
+                <strong>Debug Info:</strong><br>
+                Sermons loaded: <span x-text="sermons.length"></span><br>
+                Filtered sermons: <span x-text="filteredSermons.length"></span><br>
+                Loading complete: <span x-text="loadingComplete"></span><br>
+                Search query: <span x-text="searchQuery"></span>
             </div>
         </section>
     </div>
