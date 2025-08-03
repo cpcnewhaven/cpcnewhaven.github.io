@@ -5,13 +5,13 @@
 
 
 :root {
-    --submenu-background-color: #e0ebff;
-    --submenu-button-color: #003c6d;
-    --submenu-button-hover-color: #004494;
-}
-
-:root {
     --cpc-blue: #003c6d;
+    --cpc-blue-dark: #002244;
+    --cpc-blue-light: #e6f0ff;
+    --cpc-blue-medium: #004494;
+    --submenu-background-color: #e6f0ff;
+    --submenu-button-color: #003c6d;
+    --submenu-button-hover-color: #002244;
 }
 
 /* CSS Reset */
@@ -146,13 +146,13 @@ body {
 }
 
 :root {
-    --primary-color: #0056b3;
-    --secondary-color: #004494;
+    --primary-color: #003c6d;
+    --secondary-color: #002244;
     --background-color: #f9f9f9;
     --text-color: #555;
     --heading-color: #333;
-    --button-color: #0056b3;
-    --button-hover-color: #004494;
+    --button-color: #003c6d;
+    --button-hover-color: #002244;
     --box-shadow-color: rgba(0, 0, 0, 0.1);
     --border-radius: 8px;
 }
@@ -424,7 +424,7 @@ footer p {
 }
 
 footer a {
-    color: #007bff;
+    color: var(--cpc-blue);
     /* Link color */
     text-decoration: none;
     /* Remove underline */
@@ -433,7 +433,7 @@ footer a {
 }
 
 footer a:hover {
-    color: #0056b3;
+    color: var(--cpc-blue-dark);
     /* Darker color on hover */
 }
 
@@ -533,7 +533,7 @@ a {
 .top-splash-welcome h1 {
     font-size: 3.5rem;
     /* Larger font size for emphasis */
-    color: #003c6d;
+    color: var(--cpc-blue);
     /* Darker color for better readability */
     text-align: center;
     /* Centered text */
@@ -1129,13 +1129,14 @@ p {
 }
 
 .ag-worship-additional-links a {
-    color: #007bff;
+    color: var(--cpc-blue);
     text-decoration: none;
     font-size: 0.9rem;
 }
 
 .ag-worship-additional-links a:hover {
     text-decoration: underline;
+    color: var(--cpc-blue-dark);
 }
 
 @media (max-width: 480px) {
@@ -1736,12 +1737,13 @@ p {
 
 /* Style for links in the table */
 .podcast-table a {
-    color: #007bff;
+    color: var(--cpc-blue);
     text-decoration: none;
 }
 
 .podcast-table a:hover {
     text-decoration: underline;
+    color: var(--cpc-blue-dark);
 }
 
 /* New styles for list tables */
@@ -1771,7 +1773,7 @@ p {
 }
 
 .list-table a:hover {
-    color: #007bff;
+    color: var(--cpc-blue);
 }
 
 .list-number {
@@ -1847,7 +1849,7 @@ p {
 }
 
 .list-table a:hover {
-    color: #007bff;
+    color: var(--cpc-blue);
 }
 
 .list-number {
@@ -2050,12 +2052,13 @@ p {
 
 /* Style for links in the table */
 .podcast-table a {
-    color: #007bff;
+    color: var(--cpc-blue);
     text-decoration: none;
 }
 
 .podcast-table a:hover {
     text-decoration: underline;
+    color: var(--cpc-blue-dark);
 }
 
 
@@ -2425,13 +2428,13 @@ p {
 .announcement-title {
     font-size: 28px;
     margin-bottom: 15px;
-    color: #003c6d;
+    color: var(--cpc-blue);
     text-align: center;
     font-weight: 700;
     padding: 15px 10px;
     background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
     border-radius: 8px;
-    border-bottom: 3px solid #4a90e2;
+    border-bottom: 3px solid var(--cpc-blue);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-transform: none;
     letter-spacing: -0.5px;
@@ -2460,7 +2463,7 @@ p {
 .announcement h3 {
     font-size: 22px;
     font-weight: 600;
-    color: #1e5f8a;
+    color: var(--cpc-blue);
     margin: 25px 0 15px 0;
     padding: 12px 0 8px 0;
     border-bottom: 2px solid #e9ecef;
@@ -2470,18 +2473,18 @@ p {
 
 .announcement strong {
     font-weight: 600;
-    color: #003c6d;
+    color: var(--cpc-blue);
 }
 
 .announcement a {
-    color: #4a90e2;
+    color: var(--cpc-blue);
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s ease;
 }
 
 .announcement a:hover {
-    color: #003c6d;
+    color: var(--cpc-blue-dark);
     text-decoration: underline;
 }
 
@@ -2626,7 +2629,7 @@ p {
     padding: 15px 30px;
     font-size: 18px;
     color: #fff;
-    background-color: #007bff;
+    background-color: var(--cpc-blue);
     border-radius: 5px;
     text-align: center;
     text-decoration: none;
@@ -2635,7 +2638,7 @@ p {
 }
 
 .big-button:hover {
-    background-color: #0056b3;
+    background-color: var(--cpc-blue-dark);
 }
 
 
