@@ -218,12 +218,45 @@
     {
       "id": "2025-027",
       "title": "Join us for Thursday Picnics @6PM in July",
-      "description": "This is simply a time to gather together as a church family and enjoy a meal together! No program other than a shared meal. Feel free to bring friends! We’ll gather on the front lawn, or the downstairs Fellowship Hall in case it rains.",
+      "description": "This is simply a time to gather together as a church family and enjoy a meal together! No program other than a shared meal. Feel free to bring friends! We'll gather on the front lawn, or the downstairs Fellowship Hall in case it rains.",
       "dateEntered": "2024-07-10",
-      "active": "true",
+      "active": "false",
       "type": "announcement",
       "category": "announcement",
       "tag": "superFeatured",
+      "superfeatured": true
+    },
+    {
+      "id": "2025-028",
+      "title": "CPC Moms Social | August 12, 6:00pm",
+      "description": "Please join us at the home of Meg Bogue for savory and sweet apps and conversation! We will discuss the upcoming year. Those who are newer to CPC are especially welcome. Food sign up & more information, Estela Gierbolini (<a href=\"mailto:egierbo1@gmail.com\">egierbo1@gmail.com</a>) or Alicia Kebabian (<a href=\"mailto:akebabian@gmail.com\">akebabian@gmail.com</a>)",
+      "dateEntered": "2025-08-03",
+      "active": "true",
+      "type": "event",
+      "category": "event",
+      "tag": "women",
+      "superfeatured": true
+    },
+    {
+      "id": "2025-029",
+      "title": "Bridges of Hope (BOH) is Hiring",
+      "description": "Bridges of Hope - an organization of churches serving New Haven together - is hiring a new Director for a new position combining the Mentoring Program and Executive Director roles. Please take a look at the job description. The application deadline will be August 31, so please pass along and ask people to apply today!",
+      "dateEntered": "2025-08-03",
+      "active": "true",
+      "type": "announcement",
+      "category": "announcement",
+      "tag": "job",
+      "superfeatured": true
+    },
+    {
+      "id": "2025-030",
+      "title": "Mercy Day! | August 23",
+      "description": "Sign up to volunteer or request a Mercy Project. More projects needed! <a href=\"https://docs.google.com/forms/d/e/1FAIpQLSePojMW7eLqoZMS1xRD2zr1DkRinxA0l5MWIVRN8ikUTYu74A/viewform\" target=\"_blank\">Register here</a>",
+      "dateEntered": "2025-08-03",
+      "active": "true",
+      "type": "event",
+      "category": "event",
+      "tag": "mercy",
       "superfeatured": true
     }
   ]
