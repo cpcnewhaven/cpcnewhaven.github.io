@@ -91,14 +91,14 @@
                 <div class="podcast-card" id="beyond-card">
                     <img src="./assets/podcast-thumbnails/BEYOND - THE SUNDAY SERMON.jpg" alt="Beyond the Sunday Sermon" class="podcast-thumbnail">
                     <h3>Beyond the Sunday Sermon</h3>
-                    <p>Dive deeper with discussions that go beyond the Sunday message. Join us for extended conversations about faith and life.</p>
+                    <p>Discussions with Pastors about the Sunday Sermon..</p>
                     <a href="beyond-podcast.html" class="podcast-card-button">Browse Episodes</a>
                 </div>
 
                 <div class="podcast-card" id="classes-card">
                     <img src="./assets/podcast-thumbnails/CPC CLASSES.jpg" alt="Classes" class="podcast-thumbnail">
                     <h3>Classes</h3>
-                    <p>Educational content from our various classes including Biblical Interpretation, Theology, and more.</p>
+                    <p>Educational content from our various classes including Biblical Interpretation, Confessional Theology, and more.</p>
                     <a href="classes.html" class="podcast-card-button">Browse Classes</a>
                 </div>
             </div>
@@ -118,6 +118,19 @@
     <script src="./src/js/function_toggle_mobileMenu.js"></script>
 
     <style>
+        /* Header styling with blue color */
+        .main-navigation {
+            background-color: #0078D4;
+        }
+        
+        .main-navigation a {
+            color: white;
+        }
+        
+        .main-navigation a:hover {
+            background-color: #005A9E;
+        }
+        
         .podcast-grid-section {
             padding: 40px 20px;
             max-width: 1200px;
@@ -143,19 +156,20 @@
 
         .podcast-grid {
             display: grid;
-            grid-template-columns: 1fr;
+            grid-template-columns: repeat(3, 1fr);
             gap: 30px;
             margin: 40px auto;
-            max-width: 600px;
+            max-width: 1200px;
             justify-content: center;
+            align-items: stretch;
         }
 
         .podcast-thumbnail {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 12px 12px 0 0;
-            margin-bottom: 20px;
+            width: 80%;
+            height: auto;
+            object-fit: contain;
+            border-radius: 12px;
+            margin: 20px auto;
             display: block;
             aspect-ratio: 1 / 1;
         }
@@ -165,19 +179,18 @@
             border-radius: 16px;
             padding: 0;
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
             border: 1px solid #e0e0e0;
             text-align: center;
             position: relative;
             overflow: hidden;
             max-width: 100%;
             margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
         }
 
-        .podcast-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 16px 48px rgba(0, 0, 0, 0.15);
-        }
+
 
         .podcast-card h3 {
             font-size: 1.5em;
@@ -199,29 +212,63 @@
             border-radius: 8px;
             text-decoration: none;
             font-weight: 600;
-            transition: background 0.3s ease;
             margin-bottom: 30px;
-        }
-
-        .podcast-card-button:hover {
-            background: #005A9E;
-            color: white;
+            margin-top: auto;
         }
 
         @media (max-width: 768px) {
             .podcast-grid {
-                grid-template-columns: 1fr;
-                gap: 20px;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 8px;
                 margin: 20px auto;
+                max-width: 100%;
+                padding: 0 10px;
             }
 
             .podcast-card {
                 padding: 0;
                 max-width: 100%;
+                border-radius: 8px;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            }
+
+            .podcast-thumbnail {
+                width: 70%;
+                border-radius: 8px;
+                margin: 8px auto;
+                aspect-ratio: 1 / 1;
+            }
+
+            .podcast-card h3 {
+                font-size: 0.9em;
+                margin: 0 8px 8px 8px;
+                line-height: 1.2;
+            }
+
+            .podcast-card p {
+                font-size: 0.8em;
+                margin: 0 8px 8px 8px;
+                line-height: 1.3;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+            }
+
+            .podcast-card-button {
+                font-size: 0.8em;
+                padding: 8px 12px;
+                margin: 8px;
+                margin-top: auto;
             }
 
             .podcast-grid-section h2 {
                 font-size: 2em;
+            }
+
+            .podcast-intro {
+                font-size: 1em;
+                margin-bottom: 20px;
             }
         }
     </style>
