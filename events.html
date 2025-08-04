@@ -213,6 +213,82 @@
   }
 }
 </style>
+
+        <!-- EVENTS PHOTO GALLERY -->
+        <section class="events-gallery-section">
+            <h2 style="text-align:center; font-size:2em; margin-bottom:30px; letter-spacing:1px; color:#0078D4;">Previous Events Gallery</h2>
+            <div id="events-gallery-container" class="gallery-grid">
+                <!-- Event photos will be populated here by JavaScript -->
+            </div>
+        </section>
+
+        <!-- Lightbox for gallery images -->
+        <div id="lightbox" style="display: none;">
+            <img id="lightbox-img" src="" alt="">
+        </div>
+
+        <style>
+            .events-gallery-section {
+                padding: 40px 20px;
+                max-width: 1200px;
+                margin: 0 auto;
+            }
+
+            .gallery-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 20px;
+                margin-top: 20px;
+            }
+
+            .gallery-image {
+                width: 100%;
+                height: 250px;
+                object-fit: cover;
+                border-radius: 12px;
+                cursor: pointer;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+
+            .gallery-image:hover {
+                transform: scale(1.05);
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            }
+
+            #lightbox {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.9);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                z-index: 1000;
+                cursor: pointer;
+            }
+
+            #lightbox-img {
+                max-width: 90%;
+                max-height: 90%;
+                object-fit: contain;
+                border-radius: 8px;
+            }
+
+            @media (max-width: 768px) {
+                .gallery-grid {
+                    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                    gap: 15px;
+                }
+
+                .gallery-image {
+                    height: 200px;
+                }
+            }
+        </style>
+
         <section class="general-announcements">
             <hr>
             <div class="book-pick-container">
@@ -344,6 +420,52 @@
             <p>© 2024 Christ Presbyterian Church.</p>
       
           </footer>
+
+        <!-- EVENTS GALLERY SCRIPT -->
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                fetch('data/image-gallery.json')
+                    .then(response => response.json())
+                    .then(data => {
+                        const eventsGalleryContainer = document.getElementById('events-gallery-container');
+                        const lightbox = document.getElementById('lightbox');
+                        const lightboxImg = document.getElementById('lightbox-img');
+
+                        // Filter for event images only
+                        const eventImages = data.images.filter(image => image.event === true);
+
+                        eventImages.forEach(image => {
+                            const imgElement = document.createElement('img');
+                            imgElement.src = image.url;
+                            imgElement.alt = image.name;
+                            imgElement.classList.add('gallery-image');
+
+                            imgElement.addEventListener('click', () => {
+                                lightbox.style.display = 'flex';
+                                lightboxImg.src = image.url;
+                                lightboxImg.alt = image.name;
+                            });
+
+                            eventsGalleryContainer.appendChild(imgElement);
+                        });
+
+                        // Close lightbox when clicking outside the image
+                        lightbox.addEventListener('click', (e) => {
+                            if (e.target !== lightboxImg) {
+                                lightbox.style.display = 'none';
+                            }
+                        });
+
+                        // Close lightbox with Escape key
+                        document.addEventListener('keydown', (e) => {
+                            if (e.key === 'Escape' && lightbox.style.display === 'flex') {
+                                lightbox.style.display = 'none';
+                            }
+                        });
+                    })
+                    .catch(error => console.error('Error loading gallery data:', error));
+            });
+        </script>
 
         <!-- DYNAMIC ANNOUNCEMNTS -->
         <script src="./src/js/populate-navigation.js"></script>
