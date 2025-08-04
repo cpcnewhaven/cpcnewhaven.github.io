@@ -1,0 +1,185 @@
+/* Color System - CSS Custom Properties */
+:root {
+    /* Primary Colors */
+    --title-color: #003c6d;
+    --border-color: rgba(25, 25, 112, 0.4);
+    --background-color: #ffffff;
+    --card-background: rgba(255, 255, 255, 0.95);
+    
+    /* Text Colors */
+        --description-color: #0f0f0f;
+    --metadata-color: #888;
+    --link-color: #003c6d;
+    --link-hover-color: #002244;
+    
+    /* Glass Effect Colors - Midnight Blue Theme */
+    --glass-border: rgba(25, 25, 112, 0.93);
+    --glass-shadow: rgba(25, 25, 112, 0.25);
+    --glass-backdrop: rgba(25, 25, 112, 0.05);
+    --midnight-blue: #191970;
+    --dark-blue-glass: rgba(25, 25, 112, 0.2);
+    
+    /* Error/Empty States */
+    --error-background: #f9f9f9;
+    --error-text: #666;
+    
+    /* Font Size System */
+    --title-size-large: 2.5rem;
+    --title-size-medium: 2.5rem;
+    --title-size-small: 2rem;
+    --description-size: 1rem;
+    --metadata-size: 0.875rem;
+    --link-size: 1rem;
+}
+
+#highlights {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 20px 0;
+}
+
+.highlights-content {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.highlight-card {
+    background: var(--card-background);
+    border-radius: 12px;
+    box-shadow: 0 4px 6px var(--glass-shadow);
+    margin-bottom: 2rem;
+    overflow: hidden;
+    border: 1px solid var(--glass-border);
+    width: 100%;
+    max-width: 600px;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    animation: fadeInUp 0.6s ease-out;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.highlight-image-container {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.highlight-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.highlight-content {
+    padding: 1.5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.highlight-title {
+    font-size: var(--title-size-large) !important;
+    font-weight: 600;
+    color: var(--title-color);
+    margin: 0 0 1rem 0;
+    line-height: 1.3;
+    font-family: inherit;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+}
+
+.highlight-description {
+    color: var(--description-color);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    flex: 1;
+    font-size: var(--description-size);
+    text-align: center;
+}
+
+.highlight-description * {
+    text-align: center;
+}
+
+.highlight-description ul {
+    margin: 0.5rem 0;
+    padding-left: 1.5rem;
+}
+
+.highlight-description li {
+    margin-bottom: 0.25rem;
+}
+
+.highlight-description a {
+    color: var(--link-color);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: var(--link-size);
+}
+
+.highlight-description a:hover {
+    text-decoration: underline;
+    color: var(--link-hover-color);
+}
+
+
+
+.highlight-error,
+.highlight-empty {
+    text-align: center;
+    padding: 3rem 1rem;
+    color: var(--error-text);
+    background: var(--error-background);
+    border-radius: 8px;
+    margin: 2rem 0;
+    width: 100%;
+    max-width: 600px;
+    border: 1px solid var(--glass-border);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .highlight-card {
+        margin-bottom: 1.5rem;
+        max-width: 100%;
+    }
+
+    .highlight-content {
+        padding: 1rem;
+    }
+
+    .highlight-title {
+        font-size: var(--title-size-medium);
+    }
+
+    .highlight-image-container {
+        height: 150px;
+    }
+
+
+}
+
+/* Animation for new highlights */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+} 
