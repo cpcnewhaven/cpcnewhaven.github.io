@@ -67,6 +67,13 @@
 
     <div class="splash-hero">
         <div class="hero-content">
+            <div class="breadcrumbs">
+                <a href="index.html">Home</a>
+                <span class="breadcrumb-separator">/</span>
+                <a href="podcasts.html">Podcasts</a>
+                <span class="breadcrumb-separator">/</span>
+                <span class="current-page">Beyond the Sunday Sermon</span>
+            </div>
             <h1>Beyond the Sunday Sermon</h1>
             <p style="color: #fff;">Dive deeper with discussions that go beyond the Sunday message</p>
         </div>
@@ -129,6 +136,33 @@
     <script src="./src/js/function_toggle_mobileMenu.js"></script>
 
     <style>
+        .breadcrumbs {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 20px;
+            font-size: 0.9em;
+        }
+
+        .breadcrumbs a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .breadcrumbs a:hover {
+            color: white;
+        }
+
+        .breadcrumb-separator {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .current-page {
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 500;
+        }
+
         .beyond-archive-section {
             padding: 40px 20px;
             max-width: 1200px;
@@ -227,6 +261,7 @@
             font-size: 1.2em;
             margin-bottom: 8px;
             color: #333;
+            text-align:left;
         }
 
         .episode-guest {

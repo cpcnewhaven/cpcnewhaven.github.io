@@ -80,21 +80,27 @@
             
             <div class="podcast-grid">
                 <div class="podcast-card" id="sunday-sermons-card">
-                    <img src="./assets/podcast-thumbnails/THE SUNDAY SERMON.jpg" alt="The Sunday Sermon" class="podcast-thumbnail">
+                    <a href="sunday-sermons.html" class="podcast-thumbnail-link">
+                        <img src="./assets/podcast-thumbnails/THE SUNDAY SERMON.jpg" alt="The Sunday Sermon" class="podcast-thumbnail">
+                    </a>
                     <h3>Sunday Sermons</h3>
                     <p>Weekly sermons from our Sunday worship services. Explore our archive of biblical teaching and preaching.</p>
                     <a href="sunday-sermons.html" class="podcast-card-button">Browse Sermons</a>
                 </div>
 
                 <div class="podcast-card" id="beyond-card">
-                    <img src="./assets/podcast-thumbnails/BEYOND - THE SUNDAY SERMON.jpg" alt="Beyond the Sunday Sermon" class="podcast-thumbnail">
+                    <a href="beyond-podcast.html" class="podcast-thumbnail-link">
+                        <img src="./assets/podcast-thumbnails/BEYOND - THE SUNDAY SERMON.jpg" alt="Beyond the Sunday Sermon" class="podcast-thumbnail">
+                    </a>
                     <h3>Beyond the Sunday Sermon</h3>
                     <p>Discussions with Pastors about the Sunday Sermon..</p>
                     <a href="beyond-podcast.html" class="podcast-card-button">Browse Episodes</a>
                 </div>
 
                 <div class="podcast-card" id="classes-card">
-                    <img src="./assets/podcast-thumbnails/CPC CLASSES.jpg" alt="Classes" class="podcast-thumbnail">
+                    <a href="classes.html" class="podcast-thumbnail-link">
+                        <img src="./assets/podcast-thumbnails/CPC CLASSES.jpg" alt="Classes" class="podcast-thumbnail">
+                    </a>
                     <h3>Classes</h3>
                     <p>Educational content from our various classes including Biblical Interpretation, Confessional Theology, and more.</p>
                     <a href="classes.html" class="podcast-card-button">Browse Classes</a>
@@ -157,6 +163,16 @@
             margin: 20px auto;
             display: block;
             aspect-ratio: 1 / 1;
+        }
+
+        .podcast-thumbnail-link {
+            display: block;
+            transition: transform 0.2s ease;
+            cursor: pointer;
+        }
+
+        .podcast-thumbnail-link:hover {
+            transform: scale(1.05);
         }
 
         .podcast-card {

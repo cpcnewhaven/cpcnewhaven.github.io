@@ -67,6 +67,13 @@
 
     <div class="splash-hero">
         <div class="hero-content">
+            <div class="breadcrumbs">
+                <a href="index.html">Home</a>
+                <span class="breadcrumb-separator">/</span>
+                <a href="podcasts.html">Podcasts</a>
+                <span class="breadcrumb-separator">/</span>
+                <span class="current-page">Classes</span>
+            </div>
             <h1>Classes</h1>
             <p style="color: #fff;">Dive deeper into theological education with our comprehensive class series</p>
         </div>
@@ -159,6 +166,33 @@
     <script src="./src/js/function_toggle_mobileMenu.js"></script>
 
     <style>
+        .breadcrumbs {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 20px;
+            font-size: 0.9em;
+        }
+
+        .breadcrumbs a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .breadcrumbs a:hover {
+            color: white;
+        }
+
+        .breadcrumb-separator {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .current-page {
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 500;
+        }
+
         /* Classes-specific styles */
         .classes-grid {
             display: grid;
