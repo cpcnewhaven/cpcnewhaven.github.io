@@ -122,14 +122,45 @@
       "event": true
     },
     {
-      "id": "misc1",
+      "id": "misc1event",
       "name": "misc_image.jpg",
-      "url": "https://storage.googleapis.com/cpc-public-website/misc/misc_image.jpg",
+      "url": "https://storage.googleapis.com/cpc-public-website/media-gallery/events/2.jpg",
+      "size": "Unknown",
+      "type": "image/jpeg",
+      "created": "Unknown",
+      "tags": [],
+      "event": false
+    },
+    {
+      "id": "misc2event",
+      "name": "misc_image2.jpg",
+      "url": "https://storage.googleapis.com/cpc-public-website/media-gallery/events/4.jpg",
+      "size": "Unknown",
+      "type": "image/jpeg",
+      "created": "Unknown",
+      "tags": [],
+      "event": false
+    },
+    {
+      "id": "misc3event",
+      "name": "misc_image3.jpg",
+      "url": "https://storage.googleapis.com/cpc-public-website/media-gallery/events/5.jpg",
+      "size": "Unknown",
+      "type": "image/jpeg",
+      "created": "Unknown",
+      "tags": [],
+      "event": false
+    },
+    
+    {
+      "id": "misc4event",
+      "name": "misc_image4.jpg",
+      "url": "https://storage.googleapis.com/cpc-public-website/misc/misc_image4.jpg",
       "size": "Unknown",
       "type": "image/jpeg",
       "created": "Unknown",
       "tags": [],
       "event": false
     }
-  ]
+    ]
 }

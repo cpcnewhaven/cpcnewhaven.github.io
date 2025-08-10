@@ -137,3 +137,242 @@
           padding-top:px;
         }
       }
+
+/* Video Section Styling */
+.video-section {
+  padding: 60px 20px;
+  margin: 40px auto;
+  max-width: 1000px;
+  text-align: center;
+}
+
+.video-container {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.video-title {
+  font-size: 2.2em;
+  margin-bottom: 25px;
+  color: #333;
+  font-weight: 600;
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto 25px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.video-wrapper iframe {
+  display: block;
+  width: 100%;
+  height: 450px;
+  border: none;
+}
+
+.video-description {
+  font-size: 1.1em;
+  color: #666;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Responsive design for video section */
+@media (max-width: 768px) {
+  .video-section {
+    padding: 40px 15px;
+    margin: 30px auto;
+  }
+  
+  .video-container {
+    padding: 25px 20px;
+  }
+  
+  .video-title {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+  }
+  
+  .video-wrapper iframe {
+    height: 250px;
+  }
+  
+  .video-description {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 480px) {
+  .video-wrapper iframe {
+    height: 200px;
+  }
+  
+  .video-title {
+    font-size: 1.5em;
+  }
+}
+
+/* Retreat Signup Section - Enhanced Call to Action Styling */
+.retreat-signup-container {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+  border-radius: 16px;
+  padding: 30px;
+  margin: 25px 0;
+  text-align: center;
+  color: white;
+  box-shadow: 0 8px 25px rgba(238, 90, 36, 0.3);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.retreat-signup-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.6s ease;
+}
+
+.retreat-signup-container:hover::before {
+  left: 100%;
+}
+
+.retreat-signup-container strong {
+  display: block;
+  font-size: 1.4em;
+  font-weight: 700;
+  margin-bottom: 15px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  letter-spacing: 0.5px;
+}
+
+.retreat-signup-container p {
+  margin: 8px 0;
+  font-size: 1.1em;
+  font-weight: 500;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.retreat-signup-container p:last-child {
+  margin-bottom: 0;
+  font-weight: 600;
+  font-size: 1.2em;
+}
+
+/* Retreat Register Button Styling */
+.retreat-register-btn {
+  display: inline-block;
+  background: #fff;
+  color: #ee5a24;
+  text-decoration: none;
+  padding: 15px 35px;
+  font-size: 1.3em;
+  font-weight: 700;
+  border-radius: 50px;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 3px solid #fff;
+}
+
+.retreat-register-btn:hover {
+  background: transparent;
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.retreat-register-btn:active {
+  transform: translateY(-1px);
+}
+
+/* Enhanced video section styling for retreat context */
+.video-section-announcement {
+  padding: 60px 20px;
+  margin: 40px auto;
+  max-width: 1000px;
+  text-align: center;
+}
+
+.video-section-announcement .video-container {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.video-section-announcement h2 {
+  color: #2c3e50;
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  font-weight: 700;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.video-section-announcement h3 {
+  color: #e74c3c;
+  font-size: 1.8em;
+  margin-bottom: 25px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Responsive design for retreat section */
+@media (max-width: 768px) {
+  .retreat-signup-container {
+    padding: 25px 20px;
+    margin: 20px 0;
+  }
+  
+  .retreat-signup-container strong {
+    font-size: 1.2em;
+  }
+  
+  .retreat-signup-container p {
+    font-size: 1em;
+  }
+  
+  .video-section-announcement h2 {
+    font-size: 2em;
+  }
+  
+  .video-section-announcement h3 {
+    font-size: 1.5em;
+  }
+}
+
+@media (max-width: 480px) {
+  .retreat-signup-container {
+    padding: 20px 15px;
+  }
+  
+  .retreat-signup-container strong {
+    font-size: 1.1em;
+  }
+  
+  .video-section-announcement h2 {
+    font-size: 1.8em;
+  }
+  
+  .video-section-announcement h3 {
+    font-size: 1.3em;
+  }
+}

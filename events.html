@@ -431,8 +431,11 @@
                         const lightbox = document.getElementById('lightbox');
                         const lightboxImg = document.getElementById('lightbox-img');
 
-                        // Filter for event images only
-                        const eventImages = data.images.filter(image => image.event === true);
+                        // Filter for event images and misc event images
+                        const eventImages = data.images.filter(image => 
+                            image.event === true || 
+                            (image.id && image.id.includes('misc') && image.id.includes('event'))
+                        );
 
                         eventImages.forEach(image => {
                             const imgElement = document.createElement('img');
