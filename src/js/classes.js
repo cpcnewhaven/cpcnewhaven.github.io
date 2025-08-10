@@ -4,6 +4,7 @@ window.classesData = function() {
         classes: [],
         filteredClasses: [],
         searchQuery: '',
+        viewMode: 'card', // Default to card view
         loadingComplete: false,
         
         init() {

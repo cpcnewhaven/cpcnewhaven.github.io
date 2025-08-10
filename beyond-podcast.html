@@ -93,6 +93,23 @@
                     >
                 </div>
                 
+                <div class="view-toggle">
+                    <button 
+                        @click="viewMode = 'card'" 
+                        :class="viewMode === 'card' ? 'active' : ''"
+                        class="view-toggle-btn"
+                    >
+                        <i class="fas fa-th-large"></i> Card View
+                    </button>
+                    <button 
+                        @click="viewMode = 'list'" 
+                        :class="viewMode === 'list' ? 'active' : ''"
+                        class="view-toggle-btn"
+                    >
+                        <i class="fas fa-list"></i> List View
+                    </button>
+                </div>
+                
                 <div class="sort-controls">
                     <label>Sort by:</label>
                     <select x-model="sortKey" @change="sortEpisodes()">
@@ -107,13 +124,31 @@
                 </div>
             </div>
 
-            <div class="episode-grid" x-show="filteredEpisodes.length > 0">
+            <!-- Card View -->
+            <div class="episode-grid" x-show="filteredEpisodes.length > 0 && viewMode === 'card'">
                 <template x-for="episode in filteredEpisodes" :key="episode.number">
                     <div class="episode-card">
                         <div class="episode-number">Episode <span x-text="episode.number"></span></div>
                         <div class="episode-date" x-text="episode.date_added"></div>
                         <h3 class="episode-title" x-text="episode.title"></h3>
                         <div class="episode-guest" x-text="episode.guest"></div>
+                        <a :href="episode.link" class="episode-listen-btn" target="_blank">
+                            <i class="fas fa-play"></i> Listen
+                        </a>
+                    </div>
+                </template>
+            </div>
+
+            <!-- List View -->
+            <div class="episode-list" x-show="filteredEpisodes.length > 0 && viewMode === 'list'">
+                <template x-for="episode in filteredEpisodes" :key="episode.number">
+                    <div class="episode-list-item">
+                        <div class="episode-list-info">
+                            <div class="episode-list-number">Episode <span x-text="episode.number"></span></div>
+                            <div class="episode-list-date" x-text="episode.date_added"></div>
+                            <h3 class="episode-list-title" x-text="episode.title"></h3>
+                            <div class="episode-list-guest" x-text="episode.guest"></div>
+                        </div>
                         <a :href="episode.link" class="episode-listen-btn" target="_blank">
                             <i class="fas fa-play"></i> Listen
                         </a>
@@ -300,6 +335,96 @@
             color: #999;
         }
 
+        /* View Toggle Styles */
+        .view-toggle {
+            display: flex;
+            gap: 10px;
+            margin-left: 20px;
+        }
+        .view-toggle-btn {
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            background: white;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 600;
+            color: #333;
+            transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+        }
+        .view-toggle-btn:hover {
+            background: #f0f0f0;
+            border-color: #ccc;
+            color: #0078D4;
+        }
+        .view-toggle-btn.active {
+            background: #0078D4;
+            border-color: #0078D4;
+            color: white;
+        }
+
+        /* Episode List View Styles */
+        .episode-list {
+            margin-top: 20px;
+        }
+        .episode-list-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: white;
+            border-radius: 12px;
+            padding: 15px 20px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+            margin-bottom: 10px;
+            transition: transform 0.2s ease;
+        }
+        .episode-list-item:hover {
+            transform: translateY(-2px);
+        }
+        .episode-list-info {
+            flex: 1;
+        }
+        .episode-list-number {
+            font-size: 0.9em;
+            color: #666;
+            margin-bottom: 4px;
+            font-weight: 600;
+        }
+        .episode-list-date {
+            font-size: 0.9em;
+            color: #666;
+            margin-bottom: 4px;
+        }
+        .episode-list-title {
+            font-size: 1.1em;
+            margin-bottom: 4px;
+            color: #333;
+            text-align: left;
+        }
+        .episode-list-guest {
+            font-weight: 600;
+            color: #0078D4;
+            margin-bottom: 4px;
+        }
+        .episode-listen-btn {
+            padding: 8px 16px;
+            background: #0078D4;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: background 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .episode-listen-btn:hover {
+            background: #005a9e;
+        }
+
+        /* Responsive adjustments */
         @media (max-width: 768px) {
             .episode-controls {
                 flex-direction: column;
@@ -312,6 +437,20 @@
 
             .episode-grid {
                 grid-template-columns: 1fr;
+            }
+            .view-toggle {
+                flex-direction: column;
+                gap: 8px;
+                margin-left: 0;
+            }
+            .episode-list-item {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+            }
+            .episode-listen-btn {
+                align-self: stretch;
+                justify-content: center;
             }
         }
     </style>

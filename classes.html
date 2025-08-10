@@ -96,6 +96,24 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
                     </svg>
                 </div>
+                
+                <!-- View Toggle -->
+                <div class="view-toggle">
+                    <button 
+                        @click="viewMode = 'card'" 
+                        :class="viewMode === 'card' ? 'active' : ''"
+                        class="view-toggle-btn"
+                    >
+                        <i class="fas fa-th-large"></i> Card View
+                    </button>
+                    <button 
+                        @click="viewMode = 'list'" 
+                        :class="viewMode === 'list' ? 'active' : ''"
+                        class="view-toggle-btn"
+                    >
+                        <i class="fas fa-list"></i> List View
+                    </button>
+                </div>
             </div>
 
             <!-- Loading State -->
@@ -104,8 +122,8 @@
                 <p>Loading classes...</p>
             </div>
 
-            <!-- Classes Grid -->
-            <div x-show="classes.length > 0" class="classes-grid">
+            <!-- Classes Grid (Card View) -->
+            <div x-show="classes.length > 0 && viewMode === 'card'" class="classes-grid">
                 <template x-for="classData in filteredClasses" :key="classData.className">
                     <div class="class-card">
                         <div class="class-header">
@@ -146,6 +164,49 @@
                                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
                                                 </svg>
                                                 Handout
+                                            </a>
+                                        </template>
+                                    </div>
+                                </div>
+                            </template>
+                        </div>
+                    </div>
+                </template>
+            </div>
+
+            <!-- Classes List (List View) -->
+            <div x-show="classes.length > 0 && viewMode === 'list'" class="classes-list">
+                <template x-for="classData in filteredClasses" :key="classData.className">
+                    <div class="class-list-section">
+                        <div class="class-list-header">
+                            <h3 x-text="classData.title"></h3>
+                            <span class="episode-count" x-text="`${classData.episodeCount} episodes`"></span>
+                        </div>
+                        
+                        <div class="episode-list-items">
+                            <template x-for="episode in classData.episodes" :key="episode.number">
+                                <div class="episode-list-item">
+                                    <div class="episode-list-info">
+                                        <div class="episode-list-number" x-text="`Episode ${episode.number}`"></div>
+                                        <h4 class="episode-list-title" x-text="episode.title"></h4>
+                                    </div>
+                                    
+                                    <div class="episode-list-actions">
+                                        <template x-if="episode.link">
+                                            <a :href="episode.link" target="_blank" class="episode-listen-btn">
+                                                <i class="fas fa-play"></i> Listen
+                                            </a>
+                                        </template>
+                                        
+                                        <template x-if="episode.listen">
+                                            <a :href="episode.listen" target="_blank" class="episode-listen-btn">
+                                                <i class="fas fa-play"></i> Listen
+                                            </a>
+                                        </template>
+                                        
+                                        <template x-if="episode.handout">
+                                            <a :href="episode.handout" target="_blank" class="episode-handout-btn">
+                                                <i class="fas fa-file-alt"></i> Handout
                                             </a>
                                         </template>
                                     </div>
@@ -321,6 +382,39 @@
             max-width: 800px;
             margin-left: auto;
             margin-right: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        /* View Toggle Styles */
+        .view-toggle {
+            display: flex;
+            gap: 10px;
+        }
+        .view-toggle-btn {
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            background: white;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 600;
+            color: #333;
+            transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+        }
+        .view-toggle-btn:hover {
+            background: #f0f0f0;
+            border-color: #ccc;
+            color: #0078D4;
+        }
+        .view-toggle-btn.active {
+            background: #0078D4;
+            border-color: #0078D4;
+            color: white;
         }
 
         .search-box {
@@ -375,25 +469,127 @@
             color: #666;
         }
 
+        /* Classes List View Styles */
+        .classes-list {
+            margin-top: 2rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .class-list-section {
+            margin-bottom: 2rem;
+        }
+        .class-list-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #f3f4f6;
+        }
+        .class-list-header h3 {
+            margin: 0;
+            color: #1f2937;
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+        .episode-list-items {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        .episode-list-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: white;
+            border-radius: 8px;
+            padding: 1rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e5e7eb;
+            transition: transform 0.2s ease;
+        }
+        .episode-list-item:hover {
+            transform: translateY(-1px);
+        }
+        .episode-list-info {
+            flex: 1;
+        }
+        .episode-list-number {
+            font-size: 0.875rem;
+            color: #6b7280;
+            font-weight: 500;
+            margin-bottom: 0.25rem;
+        }
+        .episode-list-title {
+            margin: 0;
+            color: #374151;
+            font-size: 1rem;
+            font-weight: 500;
+            line-height: 1.4;
+        }
+        .episode-list-actions {
+            display: flex;
+            gap: 0.5rem;
+            flex-shrink: 0;
+        }
+        .episode-listen-btn, .episode-handout-btn {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 0.875rem;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+        .episode-listen-btn {
+            background: #0078D4;
+            color: white;
+        }
+        .episode-listen-btn:hover {
+            background: #106ebe;
+            color: white;
+        }
+        .episode-handout-btn {
+            background: #f3f4f6;
+            color: #374151;
+            border: 1px solid #d1d5db;
+        }
+        .episode-handout-btn:hover {
+            background: #e5e7eb;
+        }
+
         @media (max-width: 768px) {
-            .classes-grid {
+            .search-filter-container {
+                flex-direction: column;
+                gap: 1rem;
+                align-items: stretch;
+            }
+            
+            .view-toggle {
+                justify-content: center;
+            }
+            
+            .classes-grid, .classes-list {
                 grid-template-columns: 1fr;
                 gap: 1rem;
                 margin: 1rem;
             }
             
-            .episode-item {
+            .episode-item, .episode-list-item {
                 flex-direction: column;
                 align-items: flex-start;
                 gap: 1rem;
             }
             
-            .episode-actions {
+            .episode-actions, .episode-list-actions {
                 width: 100%;
                 justify-content: flex-start;
             }
 
-            .class-header {
+            .class-header, .class-list-header {
                 flex-direction: column;
                 align-items: flex-start;
                 gap: 0.5rem;

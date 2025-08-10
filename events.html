@@ -288,7 +288,18 @@
                 }
             }
         </style>
-
+<section class="youtube-video-section">
+    <div class="video-container">
+        <iframe 
+            src="https://www.youtube.com/embed/lJleGeb9X94?si=Bso2iyxEXlP_lDhN" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" 
+            allowfullscreen>
+        </iframe>
+    </div>
+</section>
         <section class="general-announcements">
             <hr>
             <div class="book-pick-container">
@@ -315,6 +326,46 @@
         </section>
 
         <style>
+            /* YouTube Video Section - Centered */
+            .youtube-video-section {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 40px auto;
+                padding: 0 20px;
+            }
+            
+            .video-container {
+                width: 100%;
+                max-width: 800px;
+                position: relative;
+                padding-bottom: 56.25%; /* 16:9 aspect ratio */
+                border-radius: 12px;
+                overflow: hidden;
+                box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+            }
+            
+            .video-container iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border: none;
+            }
+            
+            /* Responsive adjustments */
+            @media (max-width: 768px) {
+                .youtube-video-section {
+                    margin: 30px auto;
+                    padding: 0 15px;
+                }
+                
+                .video-container {
+                    max-width: 100%;
+                }
+            }
+            
             .book-pick-container {
                 padding: 20px;
                 margin: 20px auto;
@@ -417,7 +468,7 @@
             <p>203.777.6960 | <a
                 href="mailto:admin@cpcnewhaven.org">admin@cpcnewhaven.org</a>
               | 135 Whitney Ave. New Haven CT 06510</p>
-            <p>© 2024 Christ Presbyterian Church.</p>
+            <p>© 2025 Christ Presbyterian Church.</p>
       
           </footer>
 

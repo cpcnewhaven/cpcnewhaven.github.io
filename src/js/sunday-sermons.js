@@ -6,6 +6,7 @@ window.sermonData = function() {
         sortKey: 'date',
         sortAsc: false,
         searchQuery: '',
+        viewMode: 'card', // Default to card view
         sermons: [],
         filteredSermons: [],
         loadingComplete: false,

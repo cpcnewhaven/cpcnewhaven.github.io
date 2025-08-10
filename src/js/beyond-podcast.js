@@ -6,6 +6,7 @@ window.beyondPodcastData = function() {
         sortKey: 'date_added',
         sortAsc: false,
         searchQuery: '',
+        viewMode: 'card', // Default to card view
         episodes: [],
         filteredEpisodes: [],
         loadingComplete: false,

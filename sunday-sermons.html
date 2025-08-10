@@ -126,6 +126,23 @@
                     >
                 </div>
                 
+                <div class="view-toggle">
+                    <button 
+                        @click="viewMode = 'card'" 
+                        :class="viewMode === 'card' ? 'active' : ''"
+                        class="view-toggle-btn"
+                    >
+                        <i class="fas fa-th-large"></i> Card View
+                    </button>
+                    <button 
+                        @click="viewMode = 'list'" 
+                        :class="viewMode === 'list' ? 'active' : ''"
+                        class="view-toggle-btn"
+                    >
+                        <i class="fas fa-list"></i> List View
+                    </button>
+                </div>
+                
                 <div class="sort-controls">
                     <label>Sort by:</label>
                     <select x-model="sortKey" @change="sortSermons()">
@@ -140,13 +157,31 @@
                 </div>
             </div>
 
-            <div class="sermon-grid" x-show="filteredSermons.length > 0">
+            <!-- Card View -->
+            <div class="sermon-grid" x-show="filteredSermons.length > 0 && viewMode === 'card'">
                 <template x-for="sermon in filteredSermons" :key="sermon.id">
                     <div class="sermon-card">
                         <div class="sermon-date" x-text="sermon.displayDate || sermon.date"></div>
                         <h3 class="sermon-title" x-text="sermon.title"></h3>
                         <div class="sermon-speaker" x-text="sermon.author"></div>
                         <div class="sermon-scripture" x-text="sermon.scripture"></div>
+                        <a :href="sermon.link" class="sermon-listen-btn" target="_blank">
+                            <i class="fas fa-play"></i> Listen
+                        </a>
+                    </div>
+                </template>
+            </div>
+
+            <!-- List View -->
+            <div class="sermon-list" x-show="filteredSermons.length > 0 && viewMode === 'list'">
+                <template x-for="sermon in filteredSermons" :key="sermon.id">
+                    <div class="sermon-list-item">
+                        <div class="sermon-list-info">
+                            <div class="sermon-list-date" x-text="sermon.displayDate || sermon.date"></div>
+                            <h3 class="sermon-list-title" x-text="sermon.title"></h3>
+                            <div class="sermon-list-speaker" x-text="sermon.author"></div>
+                            <div class="sermon-list-scripture" x-text="sermon.scripture"></div>
+                        </div>
                         <a :href="sermon.link" class="sermon-listen-btn" target="_blank">
                             <i class="fas fa-play"></i> Listen
                         </a>
@@ -215,6 +250,38 @@
             font-size: 1em;
         }
 
+        .view-toggle {
+            display: flex;
+            gap: 10px;
+            margin-left: 20px; /* Space between search and sort */
+        }
+
+        .view-toggle-btn {
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            background: white;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 600;
+            color: #333;
+            transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+        }
+
+        .view-toggle-btn:hover {
+            background: #f0f0f0;
+            border-color: #ccc;
+            color: #0078D4;
+        }
+
+        .view-toggle-btn.active {
+            background: #0078D4;
+            border-color: #0078D4;
+            color: white;
+        }
+
         .sort-controls {
             display: flex;
             align-items: center;
@@ -247,6 +314,56 @@
             gap: 20px;
         }
 
+        .sermon-list {
+            margin-top: 20px;
+        }
+
+        .sermon-list-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: white;
+            border-radius: 12px;
+            padding: 15px 20px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+            margin-bottom: 10px;
+            transition: transform 0.2s ease;
+        }
+
+        .sermon-list-item:hover {
+            transform: translateY(-2px);
+        }
+
+        .sermon-list-info {
+            flex: 1;
+        }
+
+        .sermon-list-date {
+            font-size: 0.9em;
+            color: #666;
+            margin-bottom: 4px;
+        }
+
+        .sermon-list-title {
+            font-size: 1.1em;
+            margin-bottom: 4px;
+            color: #333;
+            text-align:left;
+        }
+
+        .sermon-list-speaker {
+            font-weight: 600;
+            color: #0078D4;
+            margin-bottom: 4px;
+        }
+
+        .sermon-list-scripture {
+            font-style: italic;
+            color: #666;
+            margin-bottom: 0;
+        }
+
+        /* Card View Styles */
         .sermon-card {
             background: white;
             border-radius: 12px;
@@ -324,7 +441,13 @@
                 max-width: none;
             }
 
-            .sermon-grid {
+            .view-toggle {
+                flex-direction: column;
+                gap: 8px;
+                margin-left: 0;
+            }
+
+            .sermon-grid, .sermon-list {
                 grid-template-columns: 1fr;
             }
         }
