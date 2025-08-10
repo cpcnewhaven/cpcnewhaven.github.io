@@ -280,7 +280,20 @@ class="splash-hero--home"
     </section>
   </div>
 
- 
+  <!-- YouTube Video Section - Centered -->
+  <section class="youtube-video-section">
+    <div class="video-container">
+      <iframe 
+        src="https://www.youtube.com/embed/nN_0zTD-OyU?si=L0ClaAWzKkZg41K3" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        referrerpolicy="strict-origin-when-cross-origin" 
+        allowfullscreen>
+      </iframe>
+    </div>
+  </section>
+
   <section class="mid-splash-welcome sticky">
     <h1 class="headline">Subscribe to our Newsletter</h1>
   </section>
@@ -449,6 +462,42 @@ class="splash-hero--home"
             .mission-statement p {
                 font-size: 1rem;
                 line-height: 1.6;
+            }
+        }
+
+        /* YouTube Video Section - Centered */
+        .youtube-video-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .youtube-video-section .video-container {
+            width: 100%;
+            max-width: 800px;
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+        }
+        .youtube-video-section .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        /* Responsive adjustments for YouTube video */
+        @media (max-width: 768px) {
+            .youtube-video-section {
+                margin: 30px auto;
+                padding: 0 15px;
+            }
+            .youtube-video-section .video-container {
+                max-width: 100%;
             }
         }
     </style>

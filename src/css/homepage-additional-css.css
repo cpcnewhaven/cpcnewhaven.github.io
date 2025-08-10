@@ -398,12 +398,11 @@
   justify-content: center;
   align-items: center;
   padding: 60px;
-  background: linear-gradient(135deg, #ff8c00 0%, #ffa500 50%, #ffd700 100%);
+  background: url('https://s3-media0.fl.yelpcdn.com/bphoto/2k5K_CV62x963U5gygXJUw/348s.jpg') center center/cover no-repeat fixed;
   color: white;
   text-align: center;
   position: relative;
   overflow: hidden;
-  animation: autumnalRotate 20s ease-in-out infinite;
 }
 
 .retreat-content-left::before {
@@ -417,6 +416,19 @@
   opacity: 0.4;
   z-index: 1;
   animation: autumnalShift 15s ease-in-out infinite reverse;
+}
+
+.retreat-content-left::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, #ff8c00 0%, #ffa500 50%, #ffd700 100%);
+  opacity: 0.7;
+  z-index: 1;
+  animation: autumnalRotate 20s ease-in-out infinite;
 }
 
 @keyframes autumnalRotate {
