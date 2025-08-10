@@ -1,7 +1,7 @@
- #visit-old-site-cta {
+   #visit-old-site-cta {
     background: linear-gradient(135deg, #6B73FF 0%, #000DFF 100%);
     border-radius: 12px;
-    margin: 0;
+    margin: 0 auto;
     max-width: 800px;
     text-align: center;
     padding: 50px 20px;
@@ -40,7 +40,7 @@
   #featured-links {
     background: rgba(255, 255, 255, 0.15);
     padding: 40px 20px;
-    margin: 0;
+    margin: 0 auto;
     border-radius: 12px;
     max-width: 800px;
     text-align: center;
