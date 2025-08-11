@@ -31,15 +31,10 @@ window.sermonData = function() {
                 .then(data => {
                     console.log('Data loaded:', data);
                     console.log('Episodes count:', data.episodes ? data.episodes.length : 'no episodes');
-                    // Format dates for display
+                    // Format dates for display - always show as Sunday sermons
                     this.sermons = (data.episodes || []).map(sermon => ({
                         ...sermon,
-                        displayDate: sermon.date ? new Date(sermon.date).toLocaleDateString('en-US', {
-                            weekday: 'long',
-                            year: 'numeric',
-                            month: 'long',
-                            day: 'numeric'
-                        }) : sermon.date
+                        displayDate: sermon.date ? this.formatSundayDate(sermon.date) : sermon.date
                     }));
                     this.filteredSermons = [...this.sermons];
                     this.sortSermons();
@@ -54,6 +49,19 @@ window.sermonData = function() {
                     this.filteredSermons = [];
                     this.loadingComplete = true;
                 });
+        },
+
+        formatSundayDate(dateString) {
+            // Parse the date string and ensure it's treated as local time, not UTC
+            const [year, month, day] = dateString.split('-').map(num => parseInt(num, 10));
+            const date = new Date(year, month - 1, day); // month is 0-indexed in JavaScript
+            
+            const options = { 
+                year: 'numeric', 
+                month: 'long', 
+                day: 'numeric' 
+            };
+            return `Sunday, ${date.toLocaleDateString('en-US', options)}`;
         },
 
         filterSermons() {
