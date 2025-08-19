@@ -209,7 +209,7 @@
       "title": "The Mission Trip Team Needs Air Mattresses!",
       "description": "We leave for Atlantic City Aug. 2, and we need 8 air mattresses to take with us for our trip. As you may know, we’re partnering with a church - New City Fellowship - in an urban poor neighborhood of Atlantic City, NJ, doing mercy projects and Bible clubs with them. Please email <a href=\"mailto:admin@cpcnewhaven.org\" style=\"font-weight:bold; color:#0074D9; text-decoration:underline;\">admin@cpcnewhaven.org</a> if you have an air mattress we can use for the week, or just bring them to church and leave them in the foyer closet.",
       "dateEntered": "2024-07-10",
-      "active": "true",
+      "active": "false",
       "type": "announcement",
       "category": "announcement",
       "tag": "superFeatured",
@@ -231,7 +231,7 @@
       "title": "CPC Moms Social | August 12, 6:00pm",
       "description": "Please join us at the home of Meg Bogue for savory and sweet apps and conversation! We will discuss the upcoming year. Those who are newer to CPC are especially welcome. Food sign up & more information, Estela Gierbolini (<a href=\"mailto:egierbo1@gmail.com\">egierbo1@gmail.com</a>) or Alicia Kebabian (<a href=\"mailto:akebabian@gmail.com\">akebabian@gmail.com</a>)",
       "dateEntered": "2025-08-03",
-      "active": "true",
+      "active": "false",
       "type": "event",
       "category": "event",
       "tag": "women",
@@ -246,6 +246,7 @@
       "type": "announcement",
       "category": "announcement",
       "tag": "job",
+      "featuredImage": "https://www.bridgesnewhaven.org/uploads/1/3/4/4/134449555/editor/we-re-hiring-instagram-post-1.png?1754523670",
       "superfeatured": true
     },
     {
@@ -258,6 +259,31 @@
       "category": "event",
       "tag": "mercy",
       "superfeatured": true
+    },
+    {
+      "id": "2025-031",
+      "title": "Enjoy Fellowship lunches? The Foodservice Team needs your help!",
+      "description": "This ministry blesses our church by fostering stronger connections with one another over a shared meal. Please consider joining to help with setup and clean up. You will be scheduled to serve once every 4-6 weeks (more helpers = less often). <a href=\"mailto:Megan.Paek@yahoo.com\">Email Megan.Paek@yahoo.com</a> to find out more.",
+      "dateEntered": "2025-08-04",
+      "active": "true",
+      "type": "announcement",
+      "category": "volunteer",
+      "tag": "fellowship",
+      "superfeatured": false
+    },
+ 
+    {
+      "id": "2025-032",
+      "title": "Young Adults Park Cookout | Monday, September 1",
+      "description": "Hey Young Adults! Come join us this Labor Day at Wharton Brook State Park (675 Washington Ave. North Haven) starting at 1pm for food, games and fellowship. Meet on the upper part by the picnic tables. Please sign up to bring something for the potluck. If you need a ride from the church, contact joshuatsanders@yahoo.com (951-813-6521).",
+      "dateEntered": "2025-08-05",
+      "active": "true",
+      "type": "event",
+      "category": "event",
+      "tag": "youngAdults",
+      "superfeatured": false,
+      "featuredImage": "https://upload.wikimedia.org/wikipedia/commons/8/8a/Allen_Brook_Pond_in_Wharton_Brook_SP_at_dusk.jpg"
     }
+    
   ]
 }
