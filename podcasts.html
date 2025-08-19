@@ -1,118 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TL0WH5R1EK"></script>
-    <script>
+    <head>
+        <!-- Google tag (gtag.js) -->
+        <script async
+            src="https://www.googletagmanager.com/gtag/js?id=G-TL0WH5R1EK"></script>
+        <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
         gtag('config', 'G-TL0WH5R1EK');
     </script>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="CPC New Haven Church - Podcast Archive. Explore our collection of past sermons and discussions.">
-    <meta name="keywords" content="CPC New Haven, Church, New Haven, CT, Worship, Fellowship">
-    <meta name="author" content="CPC New Haven">
-    <title>Podcasts - CPC New Haven Church</title>
-    <link rel="stylesheet" href="./src/css/global-body.css">
-    <link rel="stylesheet" href="./src/css/global-footer-cta.css">
-    <link rel="stylesheet" href="./src/css/podcasts.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description"
+            content="CPC New Haven Church - Podcast Archive. Explore our collection of past sermons and discussions.">
+        <meta name="keywords"
+            content="CPC New Haven, Church, New Haven, CT, Worship, Fellowship">
+        <meta name="author" content="CPC New Haven">
+        <title>Podcasts - CPC New Haven Church</title>
+        <link rel="stylesheet" href="./src/css/global-body.css">
+        <link rel="stylesheet" href="./src/css/global-footer-cta.css">
+        <link rel="stylesheet" href="./src/css/podcasts.css">
 
-    <link rel="icon"
-        href="https://storage.googleapis.com/cpc-public-website/web-assets/CPC%20-%20FAVICON%20-%20FALL%2024.png"
-        type="image/png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+        <link rel="icon"
+            href="https://storage.googleapis.com/cpc-public-website/web-assets/CPC%20-%20FAVICON%20-%20FALL%2024.png"
+            type="image/png">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <script
+            src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+            defer></script>
 
-<body>
-    <header id="stickyHeader" class="sticky">
-        <nav class="main-navigation">
-            <a href="index.html">Home</a>
-            <a href="sundays.html">Sundays</a>
-            <a href="about.html">About</a>
-            <a href="podcasts.html">Podcasts</a>
-            <a href="events.html">Events</a>
-            <a href="community.html">Community</a>
-            <a href="live.html">Live</a>
-            <a href="resources.html">Resources</a>
-            <a href="give.html">Give</a>
-        </nav>
-    </header>
+        <body>
+            <header id="stickyHeader" class="sticky">
+                <nav class="main-navigation">
+                    <a href="index.html">Home</a>
+                    <a href="sundays.html">Sundays</a>
+                    <a href="about.html">About</a>
+                    <a href="podcasts.html">Podcasts</a>
+                    <a href="events.html">Events</a>
+                    <a href="community.html">Community</a>
+                    <a href="live.html">Live</a>
+                    <a href="resources.html">Resources</a>
+                    <a href="give.html">Give</a>
+                </nav>
+            </header>
 
-    <!-- MOBILE HAMBURGER-->
-    <div class="hamburger-menu-button-container" id="hamburgerMenu">
-        <i id="closeMobileMenuButton" class="fas fa-bars"></i>
-    </div>
-
-    <!-- Mobile Navigation -->
-    <nav class="mobile-navigation" id="mobileNavigation">
-        <div class="mobile-nav-header">
-            <button id="closeMenuButton" aria-label="Close menu">
-                <i class="fas fa-times"></i>
-            </button>
-        </div>
-        <ul class="mobile-nav-links">
-            <li><a class="mobile-menu-link" href="index.html">Home</a></li>
-            <li><a class="mobile-menu-link" href="sundays.html">Sundays</a></li>
-            <li><a class="mobile-menu-link" href="about.html">About</a></li>
-            <li><a class="mobile-menu-link" href="podcasts.html">Podcasts</a></li>
-            <li><a class="mobile-menu-link" href="events.html">Events</a></li>
-            <li><a class="mobile-menu-link" href="community.html">Community</a></li>
-            <li><a class="mobile-menu-link" href="live.html">Live</a></li>
-            <li><a class="mobile-menu-link" href="resources.html">Resources</a></li>
-            <li><a class="mobile-menu-link" href="give.html">Give</a></li>
-        </ul>
-    </nav>
-
- 
-
-
-
-    <!-- Main Content -->
-    <div class="main-content-a">
-        <section class="podcast-grid-section">
-            <h2>Explore Our Podcasts</h2>
-            <p class="podcast-intro">Discover our collection of sermons, discussions and classes.</p>
-            
-            <div class="podcast-grid">
-                <div class="podcast-card" id="sunday-sermons-card">
-                    <a href="sunday-sermons.html" class="podcast-thumbnail-link">
-                        <img src="./assets/podcast-thumbnails/THE SUNDAY SERMON.jpg" alt="The Sunday Sermon" class="podcast-thumbnail">
-                    </a>
-                    <h3>Sunday Sermons</h3>
-                    <p>Weekly sermons from our Sunday worship services. Explore our archive of biblical teaching and preaching.</p>
-                    <a href="sunday-sermons.html" class="podcast-card-button">Browse Sermons</a>
-                </div>
-
-                <div class="podcast-card" id="beyond-card">
-                    <a href="beyond-podcast.html" class="podcast-thumbnail-link">
-                        <img src="./assets/podcast-thumbnails/BEYOND - THE SUNDAY SERMON.jpg" alt="Beyond the Sunday Sermon" class="podcast-thumbnail">
-                    </a>
-                    <h3>Beyond the Sunday Sermon</h3>
-                    <p>Discussions with Pastors about the Sunday Sermon..</p>
-                    <a href="beyond-podcast.html" class="podcast-card-button">Browse Episodes</a>
-                </div>
-
-                <div class="podcast-card" id="classes-card">
-                    <a href="classes.html" class="podcast-thumbnail-link">
-                        <img src="./assets/podcast-thumbnails/CPC CLASSES.jpg" alt="Classes" class="podcast-thumbnail">
-                    </a>
-                    <h3>Classes</h3>
-                    <p>Educational content from our various classes including Biblical Interpretation, Confessional Theology, and more.</p>
-                    <a href="classes.html" class="podcast-card-button">Browse Classes</a>
-                </div>
+            <!-- MOBILE HAMBURGER-->
+            <div class="hamburger-menu-button-container" id="hamburgerMenu">
+                <i id="closeMobileMenuButton" class="fas fa-bars"></i>
             </div>
-        </section>
 
-    </div>
+            <!-- Mobile Navigation -->
+            <nav class="mobile-navigation" id="mobileNavigation">
+                <div class="mobile-nav-header">
+                    <button id="closeMenuButton" aria-label="Close menu">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <ul class="mobile-nav-links">
+                    <li><a class="mobile-menu-link"
+                            href="index.html">Home</a></li>
+                    <li><a class="mobile-menu-link"
+                            href="sundays.html">Sundays</a></li>
+                    <li><a class="mobile-menu-link"
+                            href="about.html">About</a></li>
+                    <li><a class="mobile-menu-link"
+                            href="podcasts.html">Podcasts</a></li>
+                    <li><a class="mobile-menu-link"
+                            href="events.html">Events</a></li>
+                    <li><a class="mobile-menu-link"
+                            href="community.html">Community</a></li>
+                    <li><a class="mobile-menu-link"
+                            href="live.html">Live</a></li>
+                    <li><a class="mobile-menu-link"
+                            href="resources.html">Resources</a></li>
+                    <li><a class="mobile-menu-link"
+                            href="give.html">Give</a></li>
+                </ul>
+            </nav>
 
-    <script src="./src/js/function_toggle_mobileMenu.js"></script>
+            <!-- Main Content -->
+            <div class="main-content-a">
+                <section class="podcast-grid-section">
+                    <h2>Explore Our Podcasts</h2>
+                    <p class="podcast-intro">Discover our collection of sermons,
+                        discussions and classes.</p>
 
-    <style>
+                    <div class="podcast-grid">
+                        <div class="podcast-card" id="sunday-sermons-card">
+                            <a href="sunday-sermons.html"
+                                class="podcast-thumbnail-link">
+                                <img
+                                    src="./assets/podcast-thumbnails/THE SUNDAY SERMON.jpg"
+                                    alt="The Sunday Sermon"
+                                    class="podcast-thumbnail">
+                            </a>
+                            <h3>Sunday Sermons</h3>
+                            <p>Weekly sermons from our Sunday worship services.
+                                Explore our archive of biblical teaching and
+                                preaching.</p>
+                            <a href="sunday-sermons.html"
+                                class="podcast-card-button">Browse Sermons</a>
+                        </div>
+
+                        <div class="podcast-card" id="beyond-card">
+                            <a href="beyond-podcast.html"
+                                class="podcast-thumbnail-link">
+                                <img
+                                    src="https://storage.googleapis.com/cpc-public-website/podcast-thumbnails/beyond/1_BEYOND%20-%20THE%20SUNDAY%20SERMON_001.jpg"
+                                    alt="Beyond the Sunday Sermon"
+                                    class="podcast-thumbnail">
+                            </a>
+                            <h3>Beyond the Sunday Sermon</h3>
+                            <p>Discussions with Pastors about the Sunday
+                                Sermon..</p>
+                            <a href="beyond-podcast.html"
+                                class="podcast-card-button">Browse Episodes</a>
+                        </div>
+
+                        <div class="podcast-card" id="classes-card">
+                            <a href="classes.html"
+                                class="podcast-thumbnail-link">
+                                <img
+                                    src="./assets/podcast-thumbnails/CPC CLASSES.jpg"
+                                    alt="Classes" class="podcast-thumbnail">
+                            </a>
+                            <h3>Classes</h3>
+                            <p>Educational content from our various classes
+                                including Biblical Interpretation, Confessional
+                                Theology, and more.</p>
+                            <a href="classes.html"
+                                class="podcast-card-button">Browse Classes</a>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+
+            <script src="./src/js/function_toggle_mobileMenu.js"></script>
+
+            <style>
         /* Splash hero styling with blue color */
         .splash-hero {
             background-color: #0078D4;
@@ -274,7 +304,7 @@
         }
     </style>
 
-    <script>
+            <script>
         document.addEventListener('DOMContentLoaded', () => {
             // Main Navigation Hamburger
             const hamburgerMenu = document.getElementById('hamburgerMenu');
@@ -313,5 +343,5 @@
         });
     </script>
 
-</body>
-</html>
+        </body>
+    </html>
