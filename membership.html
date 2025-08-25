@@ -27,6 +27,128 @@
         <link rel="icon"
             href="https://storage.googleapis.com/cpc-public-website/web-assets/CPC%20-%20FAVICON%20-%20FALL%202024.png"
             type="image/png">
+        <style>
+            .res-directory-container {
+                padding: 2rem 1rem;
+                max-width: 1200px;
+                margin: 0 auto;
+            }
+            
+            .res-directory-content {
+                background: white;
+                border-radius: 12px;
+                box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+                overflow: hidden;
+            }
+            
+            .res-directory-overview {
+                padding: 3rem 2rem;
+            }
+            
+            .res-directory-overview h2 {
+                font-size: 2.5rem;
+                color: #333;
+                margin-bottom: 1rem;
+                text-align: center;
+            }
+            
+            .res-directory-description {
+                font-size: 1.2rem;
+                color: #666;
+                text-align: center;
+                margin-bottom: 2rem;
+                line-height: 1.6;
+            }
+            
+            .body-text {
+                max-width: 800px;
+                margin: 0 auto;
+                line-height: 1.8;
+            }
+            
+            .body-text p {
+                margin-bottom: 1.5rem;
+                font-size: 1.1rem;
+                color: #333;
+            }
+            
+            .image-container {
+                margin: 2rem 0;
+                text-align: center;
+            }
+            
+            .big-image {
+                max-width: 100%;
+                height: auto;
+                border-radius: 8px;
+                box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            }
+            
+            .info-table {
+                margin: 3rem auto;
+                max-width: 700px;
+                border: 2px solid #e0e0e0;
+                border-radius: 12px;
+                background-color: #f9f9f9;
+                overflow: hidden;
+            }
+            
+            .info-table table {
+                width: 100%;
+                border-collapse: collapse;
+            }
+            
+            .info-table td {
+                padding: 1.5rem;
+                border-bottom: 1px solid #e0e0e0;
+            }
+            
+            .info-table td:last-child {
+                border-bottom: none;
+            }
+            
+            .info-table a {
+                text-decoration: underline;
+                color: #333;
+                display: block;
+                transition: transform 0.2s ease;
+            }
+            
+            .info-table a:hover {
+                transform: translateY(-2px);
+            }
+            
+            .info-table strong {
+                font-size: 1.2em;
+                color: #007BFF;
+                display: block;
+                margin-bottom: 0.5rem;
+            }
+            
+            .info-table span {
+                font-size: 0.95em;
+                    color: #666;
+                line-height: 1.5;
+            }
+            
+            @media (max-width: 768px) {
+                .res-directory-overview {
+                    padding: 2rem 1rem;
+                }
+                
+                .res-directory-overview h2 {
+                    font-size: 2rem;
+                }
+                
+                .body-text p {
+                    font-size: 1rem;
+                }
+                
+                .info-table td {
+                    padding: 1rem;
+                }
+            }
+        </style>
     </head>
 
     <body>
@@ -76,14 +198,10 @@
                 <li><a class="mobile-menu-link" href="give.html">Give</a></li>
             </ul>
         </nav>
-        <br><br><br>
         <div class="res-directory-container">
             <div class="res-directory-content">
                 <section class="res-directory-overview">
                     <h2>Church Membership</h2><br>
-                    <p class="res-directory-description">Join our church
-                        community through membership, where we support and grow
-                        together in faith.</p>
 
                     <div class="body-text">
                         <p>Throughout history, special relationships have been
@@ -123,7 +241,7 @@
                                         <a href="contact.html"
                                             style="text-decoration: none; color: #333;">
                                             <strong
-                                                style="font-size: 1.2em; color: #007BFF;">Contact
+                                                style="font-size: 1.2em; color: #007BFF; text-decoration: underline;">Contact
                                                 Us About Membership</strong><br>
                                             <span
                                                 style="font-size: 0.9em; color: #666;">Ready
@@ -139,7 +257,7 @@
                                         <a href="#"
                                             style="text-decoration: none; color: #333;">
                                             <strong
-                                                style="font-size: 1.2em; color: #007BFF;">Read
+                                                style="font-size: 1.2em; color: #007BFF; text-decoration: underline;">Read
                                                 More: Good News of Church
                                                 Membership</strong><br>
                                             <span
@@ -155,7 +273,7 @@
                                         <a href="discipleship.html"
                                             style="text-decoration: none; color: #333;">
                                             <strong
-                                                style="font-size: 1.2em; color: #007BFF;">Join
+                                                style="font-size: 1.2em; color: #007BFF; text-decoration: underline;">Join
                                                 a Discipleship
                                                 Group</strong><br>
                                             <span
@@ -171,7 +289,7 @@
                                         <a href="lifegroup.html"
                                             style="text-decoration: none; color: #333;">
                                             <strong
-                                                style="font-size: 1.2em; color: #007BFF;">Join
+                                                style="font-size: 1.2em; color: #007BFF; text-decoration: underline;">Join
                                                 a Life Group</strong><br>
                                             <span
                                                 style="font-size: 0.9em; color: #666;">Connect
@@ -186,7 +304,7 @@
                                         <a href="https://ccb.cpcnewhaven.org"
                                             style="text-decoration: none; color: #333;">
                                             <strong
-                                                style="font-size: 1.2em; color: #007BFF;">Access
+                                                style="font-size: 1.2em; color: #007BFF; text-decoration: underline;">Access
                                                 Church Community
                                                 Builder</strong><br>
                                             <span
@@ -204,6 +322,20 @@
                 </section>
             </div>
         </div>
+
+        <footer>
+            <div class="footer-content-logo">
+                <a href="index.html">
+                    <img src="./assets/CPC_LOGO_24.png"
+                        alt="CPC New Haven Church"
+                        class="top-splash-logo">
+                </a>
+            </div>
+            <p>203.777.6960 | <a
+                    href="mailto:admin@cpcnewhaven.org">admin@cpcnewhaven.org</a>
+                | 135 Whitney Ave. New Haven CT 06510</p>
+            <p>© 2025 Christ Presbyterian Church. All rights reserved.</p>
+        </footer>
 
         <script src="./src/js/populate-navigation.js"></script>
         <script src="./src/js/function_toggle_mobileMenu.js"></script>
