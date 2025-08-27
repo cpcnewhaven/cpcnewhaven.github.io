@@ -544,13 +544,24 @@
     },
     {
       "id": "25-08-17",
-      "title": "The Doctor Is In | The Sunday Sermon",
+      "title": "The Doctor Is In",
       "author": "Rev. Craig Luekens",
       "scripture": "Luke 5: 27-39",
       "date": "2025-08-17",
       "apple_podcasts_url": "",
       "spotify_url": "https://open.spotify.com/episode/3hTjb2CyHh5Y1x6y2ypahm?si=Nzu5DXCNQ5mLRMhnQBFVvQ",
       "link": "https://open.spotify.com/episode/3hTjb2CyHh5Y1x6y2ypahm?si=Nzu5DXCNQ5mLRMhnQBFVvQ",
+      "podcast-thumbnail_url": ""
+    },
+    {
+      "id": "25-08-24",
+      "title": "Who is the Lord of Your Life?",
+      "author": "Rev. Craig Luekens",
+      "scripture": "Luke 6: 1-11",
+      "date": "2025-08-24",
+      "apple_podcasts_url": "",
+      "spotify_url": "https://open.spotify.com/episode/5xXcnpAcgOgdcLiKpdwxuk?si=5125e8adeeeb43e7",
+      "link": "https://open.spotify.com/episode/5xXcnpAcgOgdcLiKpdwxuk?si=5125e8adeeeb43e7",
       "podcast-thumbnail_url": ""
     }
   ]
