@@ -5,24 +5,24 @@
     --border-color: rgba(25, 25, 112, 0.4);
     --background-color: #ffffff;
     --card-background: rgba(255, 255, 255, 0.95);
-    
+
     /* Text Colors */
-        --description-color: #0f0f0f;
+    --description-color: #0f0f0f;
     --metadata-color: #888;
     --link-color: #003c6d;
     --link-hover-color: #002244;
-    
+
     /* Glass Effect Colors - Midnight Blue Theme */
     --glass-border: rgba(25, 25, 112, 0.93);
     --glass-shadow: rgba(25, 25, 112, 0.25);
     --glass-backdrop: rgba(25, 25, 112, 0.05);
     --midnight-blue: #191970;
     --dark-blue-glass: rgba(25, 25, 112, 0.2);
-    
+
     /* Error/Empty States */
     --error-background: #f9f9f9;
     --error-text: #666;
-    
+
     /* Font Size System */
     --title-size-large: 2.5rem;
     --title-size-medium: 2.5rem;
@@ -98,7 +98,7 @@
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    text-align: center;
+    text-align: center !important;
 }
 
 .highlight-description {
@@ -112,6 +112,13 @@
 
 .highlight-description * {
     text-align: center;
+}
+
+/* Ensure all heading elements in highlights are centered */
+#highlights h1,
+#highlights h2,
+#highlights h3 {
+    text-align: center !important;
 }
 
 .highlight-description ul {
@@ -178,8 +185,9 @@
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
     }
-} 
+}

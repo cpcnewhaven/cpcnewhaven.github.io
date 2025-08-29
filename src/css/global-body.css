@@ -375,6 +375,7 @@ button:hover {
 .headline {
     font-size: 1.5rem;
     margin: 0px;
+    text-align: center;
 }
 
 @media (min-width: 600px) {

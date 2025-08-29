@@ -1,6 +1,28 @@
 {
   "announcements": [
     {
+      "id": "2025-034",
+      "title": "Important Dates",
+      "description": "<strong>Sept. 7 | Welcome Sunday</strong><br><strong>Sept. 14 | Congregational Meeting</strong><br><br>Introduce new Ministry Year, Budget presentation, and vote to confer the status of Pastor Emeritus to Preston Graham",
+      "dateEntered": "2025-08-26",
+      "active": "true",
+      "type": "announcement",
+      "category": "announcement",
+      "tag": "calendar",
+      "superfeatured": true
+    },
+    {
+      "id": "2025-033",
+      "title": "REGULAR SUNDAY SCHEDULE STARTS NEXT SUNDAY, 9/7",
+      "description": "<table><tr><td><strong>8:30am</strong></td><td>Prayer in the Parlor</td></tr><tr><td><strong>9:30am</strong></td><td>Children's Sunday School</td></tr><tr><td></td><td><ul><li>2yrs to Pre-K | Lower Level Classroom, Fellowship Hall</li><li>Kindergarten & 1st Grade | Upper Floor Classroom</li><li>2nd to 5th Grade | Main Floor Lecture Room</li><li>6th & 7th Grade | Upper Floor Conference Room</li><li>8th to 12th Grade | Upper Floor Youth Room</li></ul></td></tr><tr><td><strong>9:30am</strong></td><td>Adult Sunday Studies</td></tr><tr><td></td><td>\"Total Christ: The Full Vision for His Church\" | Fellowship Hall</td></tr><tr><td><strong>10:30am</strong></td><td>Worship Service</td></tr><tr><td><strong>12:00pm</strong></td><td>Fellowship Lunch</td></tr></table>",
+      "dateEntered": "2025-08-26",
+      "active": "true",
+      "type": "announcement",
+      "category": "announcement",
+      "tag": "schedule",
+      "superfeatured": true
+    },
+    {
       "id": "2025-022",
       "title": "Final Sunday School & Fellowship Lunch",
       "description": "This Sunday is the final day of Sunday School and Fellowship Lunch! Stay tuned for summer BBQs!",
