@@ -87,7 +87,7 @@
         currentIndex: 0
     }" 
     x-init="setInterval(() => { currentIndex = (currentIndex + 1) % images.length }, 5000)"
-    class="splash-hero--community"
+    class="splash-hero--community parallax-hero"
     :style="`background-image: url('${images[currentIndex]}')`">
         <h1>Community</h1>
     </div>
@@ -101,9 +101,275 @@
             background-color: #002a5327;
             color: white;
         }
+
+        /* Enhanced Parallax Hero Section */
+        .splash-hero--community {
+            height: 80vh;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            overflow: hidden;
+            will-change: transform;
+            transform: translateZ(0);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* Enhanced parallax effect */
+            background-position-y: 0;
+            transition: background-position 0.1s ease-out;
+        }
+        
+        /* Parallax scroll effect */
+        @media (min-width: 769px) {
+            .splash-hero--community {
+                background-position-y: calc(var(--scroll-offset, 0) * 0.5px);
+            }
+        }
+
+        .splash-hero--community::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 1;
+        }
+
+        .splash-hero--community h1 {
+            position: relative;
+            z-index: 2;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            font-size: 4rem;
+            font-weight: 700;
+            color: white;
+            text-align: center;
+        }
+
+        /* Ensure content below hero flows properly */
+        .long-info-container {
+            position: relative;
+            z-index: 3;
+        }
+
+        /* Mobile optimization - disable parallax on small screens */
+        @media (max-width: 768px) {
+            .splash-hero--community {
+                background-attachment: scroll;
+                height: 60vh;
+            }
+            
+            .splash-hero--community h1 {
+                font-size: 2.5rem;
+            }
+        }
+        
+        /* Enhanced Image Gallery with Lightbox */
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .gallery-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .gallery-image:hover {
+            transform: scale(1.02);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        /* Lightbox Styles */
+        .lightbox-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .lightbox-content {
+            position: relative;
+            max-width: 90vw;
+            max-height: 90vh;
+            text-align: center;
+        }
+
+        .lightbox-image {
+            max-width: 100%;
+            max-height: 80vh;
+            object-fit: contain;
+            border-radius: 8px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: -40px;
+            right: 0;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+            padding: 0;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: color 0.3s ease;
+        }
+
+        .lightbox-close:hover {
+            color: #ccc;
+        }
+        
+        /* Navigation Arrows */
+        .lightbox-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: transparent;
+            border: none;
+            color: white;
+            font-size: 1.2rem;
+            cursor: pointer;
+            padding: 10px 8px;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+            z-index: 1001;
+        }
+        
+        .lightbox-nav:hover {
+            background: transparent;
+            transform: translateY(-50%) scale(1.05);
+        }
+        
+        .lightbox-prev {
+            left: -50px;
+        }
+        
+        .lightbox-next {
+            right: -50px;
+        }
+        
+        /* Image Counter */
+        .lightbox-counter {
+            position: absolute;
+            bottom: -40px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            font-size: 1rem;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: 500;
+        }
+
+        /* Responsive adjustments for lightbox */
+        @media (max-width: 768px) {
+            .lightbox-content {
+                max-width: 95vw;
+                padding: 10px;
+            }
+            
+            .lightbox-close {
+                top: -35px;
+                right: 10px;
+            }
+            
+            .lightbox-nav {
+                padding: 8px 6px;
+                font-size: 1rem;
+            }
+            
+            .lightbox-prev {
+                left: -40px;
+            }
+            
+            .lightbox-next {
+                right: -40px;
+            }
+            
+            .lightbox-counter {
+                bottom: -35px;
+                font-size: 0.9rem;
+                padding: 6px 12px;
+            }
+            
+            .gallery-image {
+                height: 200px;
+            }
+        }
     </style>
 
-<div class="long-info-container" x-data="{ activeTab: 'smallGroups', activeSubTab: '' }">
+<div class="long-info-container" x-data="{ 
+    activeTab: 'smallGroups', 
+    activeSubTab: '', 
+    lightboxOpen: false, 
+    lightboxImage: '', 
+    lightboxAlt: '',
+    currentImageIndex: 0,
+    galleryImages: [
+        {
+            src: 'https://storage.googleapis.com/cpc-public-website/featuredIMGs/CPC_Lifegroup_2025.jpg',
+            alt: 'Life Group Meeting'
+        },
+        {
+            src: 'https://storage.googleapis.com/cpc-public-website/54.jpg',
+            alt: 'Life Group Meeting'
+        },
+        {
+            src: 'https://storage.googleapis.com/cpc-public-website/lifegroup-pics/cpc-lifegroup-2.jpeg',
+            alt: 'Life Group Gathering'
+        },
+        {
+            src: 'https://cpmfiles1.com/cpcnewhaven.org/life-group-header-1200-400-px.jpg',
+            alt: 'Life Group Community'
+        }
+    ],
+    openLightbox(src, alt) {
+        this.lightboxImage = src;
+        this.lightboxAlt = alt;
+        this.currentImageIndex = this.galleryImages.findIndex(img => img.src === src);
+        this.lightboxOpen = true;
+    },
+    closeLightbox() {
+        this.lightboxOpen = false;
+    },
+    nextImage() {
+        if (this.currentImageIndex < this.galleryImages.length - 1) {
+            this.currentImageIndex++;
+            this.lightboxImage = this.galleryImages[this.currentImageIndex].src;
+            this.lightboxAlt = this.galleryImages[this.currentImageIndex].alt;
+        }
+    },
+    previousImage() {
+        if (this.currentImageIndex > 0) {
+            this.currentImageIndex--;
+            this.lightboxImage = this.galleryImages[this.currentImageIndex].src;
+            this.lightboxAlt = this.galleryImages[this.currentImageIndex].alt;
+        }
+    }
+}">
     <div class="tooltip-container">
         <div class="longInfo-tab-menu" style="text-align: center;">
             <button @click="activeTab = 'smallGroups'; activeSubTab = ''" :class="{ 'active': activeTab === 'smallGroups' }">Small Groups</button>
@@ -128,10 +394,39 @@
                 <p class="body-text">Life Groups are our way of doing church in the small with all sorts of people engaged in prayer, teaching, fellowship and care. They are the vehicle that we use to help its participants continue to experience Christ outside of our worship gatherings and to impart the pastoral care that Christ provides through the love of His people. Thus, the worship, teaching, fellowship, and care for one another supply a more intimate and hands-on encounter with the living Christ.</p>
 
                 <div class="image-gallery">
-                    <img src="https://storage.googleapis.com/cpc-public-website/featuredIMGs/CPC_Lifegroup_2025.jpg" alt="Life Group Meeting" class="gallery-image">
-                    <img src="https://storage.googleapis.com/cpc-public-website/54.jpg" alt="Life Group Meeting" class="gallery-image">
-                    <img src="https://storage.googleapis.com/cpc-public-website/lifegroup-pics/cpc-lifegroup-2.jpeg" alt="Life Group Gathering" class="gallery-image">
-                    <img src="https://cpmfiles1.com/cpcnewhaven.org/life-group-header-1200-400-px.jpg" alt="Life Group Community" class="gallery-image">
+                    <template x-for="(image, index) in galleryImages" :key="index">
+                        <img :src="image.src" :alt="image.alt" class="gallery-image" @click="openLightbox(image.src, image.alt)">
+                    </template>
+                </div>
+                
+                <!-- Lightbox Modal -->
+                <div x-show="lightboxOpen" 
+                     x-transition:enter="transition ease-out duration-300"
+                     x-transition:enter-start="opacity-0"
+                     x-transition:enter-end="opacity-100"
+                     x-transition:leave="transition ease-in duration-200"
+                     x-transition:leave-start="opacity-100"
+                     x-transition:leave-end="opacity-0"
+                     class="lightbox-overlay"
+                     @click="closeLightbox()">
+                    <div class="lightbox-content" @click.stop>
+                        <button class="lightbox-close" @click="closeLightbox()">&times;</button>
+                        
+                        <!-- Navigation Arrows -->
+                        <button class="lightbox-nav lightbox-prev" @click="previousImage()" x-show="currentImageIndex > 0">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="lightbox-nav lightbox-next" @click="nextImage()" x-show="currentImageIndex < galleryImages.length - 1">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                        
+                        <img :src="lightboxImage" :alt="lightboxAlt" class="lightbox-image">
+                        
+                        <!-- Image Counter -->
+                        <div class="lightbox-counter" x-show="galleryImages.length > 1">
+                            <span x-text="currentImageIndex + 1"></span> / <span x-text="galleryImages.length"></span>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="video-container">
@@ -624,6 +919,79 @@
     <script src="./src/js/background-fetch-splash-image.js"></script>
     <script src="./src/js/load-community-events.js"></script>
     <script src="./src/js/function_toggle_mobileMenu.js"></script>
+    
+    <script>
+        // Enhanced parallax scrolling effect
+        function handleParallax() {
+            const hero = document.querySelector('.splash-hero--community');
+            if (hero && window.innerWidth > 768) {
+                const scrolled = window.pageYOffset;
+                const rate = scrolled * -0.5;
+                hero.style.backgroundPositionY = rate + 'px';
+            }
+        }
+        
+        // Throttle scroll events for better performance
+        let ticking = false;
+        function requestTick() {
+            if (!ticking) {
+                requestAnimationFrame(handleParallax);
+                ticking = true;
+            }
+        }
+        
+        // Add scroll event listener
+        window.addEventListener('scroll', requestTick, { passive: true });
+        
+        // Initial call
+        handleParallax();
+        
+        // Keyboard navigation for lightbox
+        document.addEventListener('keydown', function(e) {
+            if (window.Alpine && window.Alpine.store) {
+                const store = window.Alpine.store('lightbox');
+                if (store && store.lightboxOpen) {
+                    switch(e.key) {
+                        case 'ArrowLeft':
+                            e.preventDefault();
+                            store.previousImage();
+                            break;
+                        case 'ArrowRight':
+                            e.preventDefault();
+                            store.nextImage();
+                            break;
+                        case 'Escape':
+                            e.preventDefault();
+                            store.closeLightbox();
+                            break;
+                    }
+                }
+            }
+        });
+    </script>
+    
+    <script>
+        // Parallax effect for hero section
+        document.addEventListener('DOMContentLoaded', function() {
+            const hero = document.querySelector('.splash-hero--community');
+            
+            // Only apply parallax on devices that support it well
+            if (!window.matchMedia('(max-width: 768px)').matches) {
+                window.addEventListener('scroll', function() {
+                    const scrolled = window.pageYOffset;
+                    const rate = scrolled * -0.5;
+                    
+                    // Apply parallax effect
+                    hero.style.transform = `translateY(${rate}px)`;
+                });
+            }
+            
+            // Reset transform on window resize
+            window.addEventListener('resize', function() {
+                hero.style.transform = 'translateY(0)';
+            });
+        });
+    </script>
     <style>
         .small-groups-section {
             padding: 2rem;
