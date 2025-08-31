@@ -77,10 +77,12 @@
     </nav>
     <div x-data="{ 
         images: [
+        'https://storage.googleapis.com/cpc-public-website/featuredIMGs/CPC_Lifegroup_2025.jpg',
             'https://storage.googleapis.com/cpc-public-website/web-assets/heros/%5BHERO%5D%5BComm%7D6.jpg',
             'https://storage.googleapis.com/cpc-public-website/web-assets/heros/%5BHERO%5D%5BComm%7D5.jpg',
 
-            'https://storage.googleapis.com/cpc-public-website/web-assets/heros/%5BHERO%5D%5BCOMMUNITY%5D.-1.jpg'
+            'https://storage.googleapis.com/cpc-public-website/web-assets/heros/%5BHERO%5D%5BCOMMUNITY%5D.-1.jpg',
+         
         ],
         currentIndex: 0
     }" 
@@ -112,7 +114,7 @@
     </div>
     <div class="longInfo-tab-content">
         <div x-show="activeTab === 'smallGroups'" class="small-groups-section">
-            <h2>Small Groups</h2>
+            <h2 style="text-align: center; font-size: 2em; font-weight: bold; margin-top: 20px;">Small Groups</h2>
             
             <div class="section-hero">
                 <p class="block-quote">"God has so composed the body, giving greater honor to the part that lacked it, that there may be no division in the body, but that the members may have the same care for one another. If one member suffers, all suffer together; if one member is honored, all rejoice together." - 1 Corinthians 12:24-26</p>
@@ -126,6 +128,7 @@
                 <p class="body-text">Life Groups are our way of doing church in the small with all sorts of people engaged in prayer, teaching, fellowship and care. They are the vehicle that we use to help its participants continue to experience Christ outside of our worship gatherings and to impart the pastoral care that Christ provides through the love of His people. Thus, the worship, teaching, fellowship, and care for one another supply a more intimate and hands-on encounter with the living Christ.</p>
 
                 <div class="image-gallery">
+                    <img src="https://storage.googleapis.com/cpc-public-website/featuredIMGs/CPC_Lifegroup_2025.jpg" alt="Life Group Meeting" class="gallery-image">
                     <img src="https://storage.googleapis.com/cpc-public-website/54.jpg" alt="Life Group Meeting" class="gallery-image">
                     <img src="https://storage.googleapis.com/cpc-public-website/lifegroup-pics/cpc-lifegroup-2.jpeg" alt="Life Group Gathering" class="gallery-image">
                     <img src="https://cpmfiles1.com/cpcnewhaven.org/life-group-header-1200-400-px.jpg" alt="Life Group Community" class="gallery-image">
@@ -589,6 +592,17 @@
         </div>
     </section>
     
+    <!-- Connect Board Promotion Section -->
+    <section id="footer-cta-b" class="styled-section-b">
+        <div class="form-container">
+            <h2>Connect Board</h2>
+            <p class="body-text">Discover community events and activities posted by our church members! From bike rides to movie nights, sports events to worship gatherings - find ways to connect with others in and around New Haven and beyond.</p>
+            <div class="connect-board-cta">
+                <a href="connect.html" class="connect-board-btn">Browse Community Events</a>
+                <p class="connect-board-note">Have an event to share? Submit it to our Connect Board!</p>
+            </div>
+        </div>
+    </section>
     <section id="footer-cta-a" class="styled-section-a">
         <div class="form-container">
             <h2>Subscribe to our Newsletter</h2>
@@ -605,6 +619,7 @@
             </form>
         </div>
     </section>
+
 
     <script src="./src/js/background-fetch-splash-image.js"></script>
     <script src="./src/js/load-community-events.js"></script>
@@ -766,6 +781,44 @@
         .cta-button:hover {
             transform: translateY(-2px);
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        /* Connect Board Promotion Section */
+        .styled-section-b {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 60px 20px;
+            margin: 40px 0;
+        }
+
+        .connect-board-cta {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .connect-board-btn {
+            display: inline-block;
+            background: var(--cpc-blue, #003366);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            margin-bottom: 15px;
+        }
+
+        .connect-board-btn:hover {
+            background: #002a53;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .connect-board-note {
+            color: #666;
+            font-size: 0.9rem;
+            margin: 0;
+            font-style: italic;
         }
 
         /* YouTube Video Section - Centered */
