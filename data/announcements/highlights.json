@@ -305,6 +305,18 @@
       "tag": "youngAdults",
       "superfeatured": false,
       "featuredImage": "https://upload.wikimedia.org/wikipedia/commons/8/8a/Allen_Brook_Pond_in_Wharton_Brook_SP_at_dusk.jpg"
+    },
+    {
+      "id": "2024-007",
+      "title": "This Sunday is welcome sunday",
+      "description": "Join us this Sunday for our special welcome sunday celebration! We're excited to welcome new visitors and celebrate the start of the academic year together.",
+      "dateEntered": "2025-09-07",
+      "active": "true",
+      "type": "event",
+      "category": "event",
+      "tag": "welcome",
+      "superfeatured": true,
+      "featuredImage": "https://storage.googleapis.com/cpc-public-website/featuredIMGs/homepage/Homepage%20-%20FEATURED%20IMG-congregation.jpg"
     }
     
   ]

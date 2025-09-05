@@ -1,0 +1,40 @@
+{
+  "ongoingEvents": [
+    {
+      "id": "2024-002",
+      "title": "FACILITIES TEAM NEEDS YOU!",
+      "description": "There are a number of small fixes and tweaks that are in need of attention around our building and grounds. If you're interested in helping out - even if your handy skill level is low - please volunteer. Email fred.walker@yale.edu to help out.",
+      "dateEntered": "2024-08-25",
+      "active": "false",
+      "type": "ongoing",
+      "category": "ongoing"
+    },
+    {
+      "id": "2024-004",
+      "title": "Full Sunday Schedule",
+      "description": "<ul><li>Prayer @ 8:30am, </li><li>Children's and Adult Sunday Studies @ 9:30am, </li><li>Weekly Fellowship Lunches after worship</li></ul>",
+      "dateEntered": "2024-08-30",
+      "active": "true",
+      "type": "ongoing",
+      "category": "ongoing"
+    },
+    {
+      "id": "2024-005",
+      "title": "Pastor Drop-in Office Hours",
+      "description": "<ul><li>Craig: Fridays 7:30-10:30am</li><li>Jerry: Wednesdays 3:30-6:00pm</li></ul>",
+      "dateEntered": "2024-09-01",
+      "active": "true",
+      "type": "ongoing",
+      "category": "ongoing"
+    },
+    {
+      "id": "2024-006",
+      "title": "This Sunday is welcome sunday",
+      "description": "Join us this Sunday for our special welcome sunday celebration!",
+      "dateEntered": "2024-12-19",
+      "active": "true",
+      "type": "ongoing",
+      "category": "ongoing"
+    }
+  ]
+}
