@@ -28,6 +28,7 @@
     <link rel="stylesheet" href="./src/css/global-footer-cta.css">
         <link rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     </head>
     <body>
         <nav class="main-navigation">
@@ -71,21 +72,86 @@
             <li><a class="mobile-menu-link" href="give.html">Give</a></li>
           </ul>
         </nav>
-    <div class="splash-hero--events">
+    <div x-data="{ 
+        images: [
+       
+            'https://storage.googleapis.com/cpc-public-website/featuredIMGs/CPC_Lifegroup_2025.jpg',
+            'https://storage.googleapis.com/cpc-public-website/web-assets/heros/%5BHERO%5D%5BComm%7D6.jpg',
+            'https://storage.googleapis.com/cpc-public-website/web-assets/heros/%5BHERO%5D%5BComm%7D5.jpg'
+        ],
+        currentIndex: 0
+    }" 
+    x-init="setInterval(() => { currentIndex = (currentIndex + 1) % images.length }, 5000)"
+    class="splash-hero--events parallax-hero"
+    :style="`background-image: url('${images[currentIndex]}')`">
         <h1>Events</h1>
     </div>
-        <section id="community-calendar">
-            <h1>CPC Community Calendar</h1>
-            <hr>
-            <iframe src="https://calendar.google.com/calendar/embed?src=baf2h147ghi7nu8ifijjrt994k%40group.calendar.google.com&ctz=America%2FNew_York" style="border: 0" width="100%" height="360px" frameborder="0" scrolling="no"></iframe>
-        </section>
-        
+    
         <style>
+            /* Enhanced Parallax Hero Section */
+            .splash-hero--events {
+                height: 80vh;
+                background-attachment: fixed;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                position: relative;
+                overflow: hidden;
+                will-change: transform;
+                transform: translateZ(0);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                /* Enhanced parallax effect */
+                background-position-y: 0;
+                transition: background-position 0.1s ease-out;
+            }
+            
+            /* Parallax scroll effect */
+            @media (min-width: 769px) {
+                .splash-hero--events {
+                    background-position-y: calc(var(--scroll-offset, 0) * 0.5px);
+                }
+            }
+
+            .splash-hero--events::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgba(0, 0, 0, 0.4);
+                z-index: 1;
+            }
+
+            .splash-hero--events h1 {
+                position: relative;
+                z-index: 2;
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+                font-size: 4rem;
+                font-weight: 700;
+                color: white;
+                text-align: center;
+            }
+
+            /* Mobile optimization - disable parallax on small screens */
+            @media (max-width: 768px) {
+                .splash-hero--events {
+                    background-attachment: scroll;
+                    height: 60vh;
+                }
+                
+                .splash-hero--events h1 {
+                    font-size: 2.5rem;
+                }
+            }
+
             #community-calendar {
                 margin: 20px auto;
-                max-width: 1440px;
-                height:480px;
-                padding: 10px;
+                max-width: 1200px;
+                height: 400px;
+                padding: 15px;
                 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
                 border-radius: 8px;
                 background-color: #f9f9f9;
@@ -98,196 +164,368 @@
             }
         
             @media (max-width: 768px) {
-                #community-calendar iframe {
-                    height: 400px;
+                #community-calendar {
+                    height: 350px;
+                    padding: 10px;
                 }
-            }
-        
-            @media (max-width: 480px) {
                 #community-calendar iframe {
                     height: 300px;
                 }
             }
+        
+            @media (max-width: 480px) {
+                #community-calendar {
+                    height: 300px;
+                    padding: 8px;
+                }
+                #community-calendar iframe {
+                    height: 250px;
+                }
+            }
         </style>
-<section class="save-the-dates-section">
-  <h2 style="text-align:center; font-size:2em; margin-bottom:30px; letter-spacing:1px; color:#0078D4;">Save the Dates & Summer Events</h2>
-  <div class="save-the-dates-calendar">
-    <div class="save-the-dates-card">
-      <div class="date-badge">Thursdays<br><span>July</span></div>
-      <div class="event-details">
-        <h3>Picnics @ 6PM</h3>
-        <p>Gather as a church family for a simple shared meal! Bring friends. On the front lawn or in Fellowship Hall if it rains.</p>
+<section class="fall-events-section">
+  <h2 style="text-align:center; font-size:2em; margin-bottom:30px; letter-spacing:1px; color:#0078D4;">Upcoming Events</h2>
+  <div class="fall-events-list">
+    <div class="fall-event-item highlight-event">
+      <div class="event-date">Sept 7</div>
+      <div class="event-info">
+        <h3>Welcome Sunday & Regular Schedule Begins</h3>
+        <p>Join us for a fellowship meal after the service, and learn how you can get connected to the body of Christ. Regular Sunday schedule starts with prayer at 8:30am, Sunday School at 9:30am, and worship at 10:30am.</p>
       </div>
     </div>
-    <div class="save-the-dates-card">
-      <div class="date-badge">July<br><span>27</span></div>
-      <div class="event-details">
-        <h3>Summer Sunday Fellowship Lunch</h3>
-        <p>Enjoy a special summer lunch after worship. All are welcome!</p>
+    <div class="fall-event-item">
+      <div class="event-date">Sept 7</div>
+      <div class="event-info">
+        <h3>College Game Night</h3>
+        <p>Undergrads, you're invited to Pastor Jerry's home from 5pm-7pm for a classic game night and Zuppardi's Pizza! Stop by the welcome table to join the College WhatsApp group for details.</p>
       </div>
     </div>
-    <div class="save-the-dates-card">
-      <div class="date-badge">Aug<br><span>24</span></div>
-      <div class="event-details">
-        <h3>Resume Regular Sunday Lunches</h3>
-        <p>Our regular Sunday lunches return for the fall season.</p>
+    <div class="fall-event-item">
+      <div class="event-date">Sept 12</div>
+      <div class="event-info">
+        <h3>Pastor Drop-In Office Hours Begin</h3>
+        <p>Pastor Craig, Fridays 7:30am-10:30am. Drop in for casual discussion, Q&A, prayer, coffee, tea, or whatever you want to make it!</p>
       </div>
     </div>
-    <div class="save-the-dates-card">
-      <div class="date-badge">Oct<br><span>10-12</span></div>
-      <div class="event-details">
-        <h3>Church-wide Retreat</h3>
-        <p>Join us at Camp Wightman for a weekend of fellowship, worship, and fun!</p>
+    <div class="fall-event-item">
+      <div class="event-date">Sept 14</div>
+      <div class="event-info">
+        <h3>Congregational Meeting</h3>
+        <p>Introduce new Ministry Year, budget presentation, and vote to designate Rev. Preston Graham as Pastor Emeritus</p>
+      </div>
+    </div>
+    <div class="fall-event-item">
+      <div class="event-date">Sept 19</div>
+      <div class="event-info">
+        <h3>Women's Event</h3>
+        <p>All women welcome to join us during Happy Hour at Bear's Smokehouse (470 James Street, New Haven) from 4:30pm-6:30pm. First beverage and finger food provided!</p>
+      </div>
+    </div>
+    <div class="fall-event-item">
+      <div class="event-date">Sept 22</div>
+      <div class="event-info">
+        <h3>Women's Discipleship Group</h3>
+        <p>Meeting in CPC Parlor Room at 7PM. Also meeting Oct 20 and Nov 17</p>
+      </div>
+    </div>
+    <div class="fall-event-item">
+      <div class="event-date">Sept 28</div>
+      <div class="event-info">
+        <h3>Congregational Meeting</h3>
+        <p>Vote on electing Pete Chuchta to the Office of Ruling Elder</p>
+      </div>
+    </div>
+    <div class="fall-event-item highlight-event">
+      <div class="event-date">Oct 10-12</div>
+      <div class="event-info">
+        <h3>CPC Churchwide Fall Retreat</h3>
+        <p>@ Camp Wightman, Griswold, CT. Join us for a restful & invigorating weekend of fellowship in Christ! With Speakers Rob and Megan Hill. Details and registration available.</p>
       </div>
     </div>
   </div>
 </section>
 
 <style>
-.save-the-dates-calendar {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 24px;
-  justify-content: center;
-  margin: 0 auto 30px auto;
-  max-width: 1100px;
+.fall-events-section {
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: 0 auto;
 }
-.save-the-dates-card {
+
+.fall-events-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.fall-event-item {
+  display: flex;
+  align-items: flex-start;
+  padding: 20px;
   background: #fff;
-  border-radius: 14px;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-  display: flex;
-  align-items: center;
-  min-width: 260px;
-  max-width: 340px;
-  padding: 20px 18px;
-  transition: box-shadow 0.2s;
-  border-left: 6px solid #0078D4;
-  position: relative;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border-left: 4px solid #0078D4;
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
 }
-.save-the-dates-card:hover {
-  box-shadow: 0 8px 24px rgba(0,120,212,0.15);
+
+.fall-event-item:hover {
+  box-shadow: 0 4px 16px rgba(0,120,212,0.15);
+  transform: translateY(-2px);
 }
-.date-badge {
+
+.highlight-event {
+  border-left: 4px solid #ff6b35;
+  background: linear-gradient(135deg, #fff 0%, #fff8f5 100%);
+}
+
+.highlight-event .event-date {
+  background: #ff6b35;
+}
+
+.event-date {
   background: #0078D4;
   color: #fff;
   font-weight: bold;
   font-size: 1.1em;
   border-radius: 8px;
   padding: 12px 16px;
-  margin-right: 18px;
-  min-width: 70px;
+  margin-right: 20px;
+  min-width: 120px;
   text-align: center;
-  box-shadow: 0 2px 8px rgba(0,120,212,0.08);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  flex-shrink: 0;
 }
-.date-badge span {
-  font-size: 1.7em;
-  font-weight: 900;
-  margin-top: 2px;
-  letter-spacing: 1px;
+
+.event-info h3 {
+  margin: 0 0 8px 0;
+  font-size: 1.2em;
+  color: #333;
+  font-weight: 600;
 }
-.event-details h3 {
-  margin: 0 0 6px 0;
-  font-size: 1.15em;
-  color: #005A9E;
-  letter-spacing: 0.5px;
-}
-.event-details p {
+
+.event-info p {
   margin: 0;
-  color: #444;
+  color: #666;
   font-size: 1em;
   line-height: 1.5;
 }
-@media (max-width: 900px) {
-  .save-the-dates-calendar {
+
+@media (max-width: 768px) {
+  .fall-event-item {
     flex-direction: column;
-    align-items: center;
+    text-align: center;
   }
-  .save-the-dates-card {
-    width: 90%;
-    max-width: 400px;
+  
+  .event-date {
+    margin-right: 0;
+    margin-bottom: 15px;
+    align-self: center;
+  }
+  
+  .fall-events-section {
+    padding: 20px 15px;
+  }
+  }
+</style>
+
+<!-- ONGOING EVENTS SECTION -->
+<section class="ongoing-events-section">
+  <div class="ongoing-events-container">
+    <h2 style="text-align:center; font-size:2em; margin-bottom:30px; letter-spacing:1px; color:#0078D4;">Regular Schedule & Ongoing Events</h2>
+    
+    <div class="schedule-grid">
+      <div class="schedule-card">
+        <h3>Regular Sunday Schedule</h3>
+        <div class="schedule-times">
+          <div class="time-item">
+            <span class="time">8:30am</span>
+            <span class="activity">Prayer in the Parlor</span>
+          </div>
+          <div class="time-item">
+            <span class="time">9:30am</span>
+            <span class="activity">Children's Sunday School & Adult Sunday Studies</span>
+          </div>
+          <div class="time-item">
+            <span class="time">10:30am</span>
+            <span class="activity">Worship Service</span>
+          </div>
+          <div class="time-item">
+            <span class="time">12:00pm</span>
+            <span class="activity">Fellowship Lunch</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="schedule-card">
+        <h3>Children's Sunday School Locations</h3>
+        <div class="class-locations">
+          <div class="location-item">
+            <span class="age">2yrs to Pre-K</span>
+            <span class="location">Lower Level Classroom, Fellowship Hall</span>
+          </div>
+          <div class="location-item">
+            <span class="age">Kindergarten & 1st Grade</span>
+            <span class="location">Upper Floor Classroom</span>
+          </div>
+          <div class="location-item">
+            <span class="age">2nd to 5th Grade</span>
+            <span class="location">Main Floor Lecture Room</span>
+          </div>
+          <div class="location-item">
+            <span class="age">6th & 7th Grade</span>
+            <span class="location">Upper Floor Conference Room</span>
+          </div>
+          <div class="location-item">
+            <span class="age">8th to 12th Grade</span>
+            <span class="location">Upper Floor Youth Room</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="schedule-card">
+        <h3>Adult Sunday Studies</h3>
+        <div class="study-info">
+          <p><strong>"Total Christ: The Full Vision for His Church"</strong></p>
+          <p>Fellowship Hall</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="ongoing-events-list">
+      <h3 style="text-align:left; margin:40px 0 20px 0; color:#333;">Ongoing Events</h3>
+      <div class="ongoing-item">
+        <div class="ongoing-title">Pastor Drop-In Office Hours</div>
+        <div class="ongoing-details">Starting September 12 | Pastor Craig, Fridays 7:30am-10:30am | Other hours available upon request</div>
+      </div>
+      <div class="ongoing-item">
+        <div class="ongoing-title">Women's Discipleship Group</div>
+        <div class="ongoing-details">Meeting Mondays Sept 22, Oct 20, Nov 17 | CPC Parlor Room at 7PM</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.ongoing-events-section {
+  padding: 60px 20px;
+  background: #f8f9fa;
+  margin: 40px 0;
+}
+
+.ongoing-events-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.schedule-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.schedule-card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border-left: 4px solid #0078D4;
+}
+
+.schedule-card h3 {
+  margin: 0 0 20px 0;
+  color: #333;
+  font-size: 1.3em;
+  font-weight: 600;
+}
+
+.time-item, .location-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.time-item:last-child, .location-item:last-child {
+  border-bottom: none;
+}
+
+.time {
+  font-weight: bold;
+  color: #0078D4;
+  min-width: 80px;
+  margin-right: 15px;
+}
+
+.age {
+  font-weight: bold;
+  color: #0078D4;
+  min-width: 120px;
+  margin-right: 15px;
+}
+
+.activity, .location {
+  color: #666;
+  flex: 1;
+}
+
+.study-info {
+  text-align: center;
+}
+
+.study-info p {
+  margin: 10px 0;
+  color: #666;
+}
+
+.ongoing-events-list {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.ongoing-item {
+  padding: 15px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.ongoing-item:last-child {
+  border-bottom: none;
+}
+
+.ongoing-title {
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+  font-size: 1.1em;
+  text-align: left;
+}
+
+.ongoing-details {
+  color: #666;
+  font-size: 0.95em;
+}
+
+@media (max-width: 768px) {
+  .schedule-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .time-item, .location-item {
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .time, .age {
+    min-width: auto;
+    margin-right: 0;
   }
 }
 </style>
-
-        <!-- EVENTS PHOTO GALLERY -->
-        <section class="events-gallery-section">
-            <h2 style="text-align:center; font-size:2em; margin-bottom:30px; letter-spacing:1px; color:#0078D4;">Previous Events Gallery</h2>
-            <div id="events-gallery-container" class="gallery-grid">
-                <!-- Event photos will be populated here by JavaScript -->
-            </div>
-        </section>
-
-        <!-- Lightbox for gallery images -->
-        <div id="lightbox" style="display: none;">
-            <img id="lightbox-img" src="" alt="">
-        </div>
-
-        <style>
-            .events-gallery-section {
-                padding: 40px 20px;
-                max-width: 1200px;
-                margin: 0 auto;
-            }
-
-            .gallery-grid {
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-                gap: 20px;
-                margin-top: 20px;
-            }
-
-            .gallery-image {
-                width: 100%;
-                height: 250px;
-                object-fit: cover;
-                border-radius: 12px;
-                cursor: pointer;
-                transition: transform 0.3s ease, box-shadow 0.3s ease;
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            }
-
-            .gallery-image:hover {
-                transform: scale(1.05);
-                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-            }
-
-            #lightbox {
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background-color: rgba(0, 0, 0, 0.9);
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                z-index: 1000;
-                cursor: pointer;
-            }
-
-            #lightbox-img {
-                max-width: 90%;
-                max-height: 90%;
-                object-fit: contain;
-                border-radius: 8px;
-            }
-
-            @media (max-width: 768px) {
-                .gallery-grid {
-                    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-                    gap: 15px;
-                }
-
-                .gallery-image {
-                    height: 200px;
-                }
-            }
-        </style>
+    
 <section class="youtube-video-section">
     <div class="video-container">
         <iframe 
@@ -300,6 +538,102 @@
         </iframe>
     </div>
 </section>
+
+
+    <!-- PAST EVENTS SECTION -->
+    <section class="past-events-section">
+        <div class="past-events-container">
+            <h2 style="text-align:center; font-size:2em; margin-bottom:30px; letter-spacing:1px; color:#0078D4;">Past Events</h2>
+            <p style="text-align:center; font-size:1.1em; color:#666; margin-bottom:40px; max-width:600px; margin-left:auto; margin-right:auto;">
+                Take a look at some of our recent church events and community gatherings. These photos capture the fellowship, worship, and joy we share together as a church family.
+            </p>
+            <div id="events-gallery-container" class="gallery-grid">
+                <!-- Event photos will be populated here by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox for gallery images -->
+    <div id="lightbox" style="display: none;">
+        <img id="lightbox-img" src="" alt="">
+    </div>
+
+    <style>
+        .past-events-section {
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            margin: 40px 0;
+        }
+
+        .past-events-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .gallery-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .gallery-image:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        #lightbox {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            cursor: pointer;
+        }
+
+        #lightbox-img {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+            border-radius: 8px;
+        }
+
+        @media (max-width: 768px) {
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 15px;
+            }
+
+            .gallery-image {
+                height: 200px;
+            }
+        }
+    </style>
+
+
+<section id="community-calendar">
+    <h1>CPC Community Calendar</h1>
+    <hr>
+    <iframe src="https://calendar.google.com/calendar/embed?src=baf2h147ghi7nu8ifijjrt994k%40group.calendar.google.com&ctz=America%2FNew_York" style="border: 0" width="100%" height="320px" frameborder="0" scrolling="no"></iframe>
+</section>
+
+
+
         <section class="general-announcements">
             <hr>
             <div class="book-pick-container">
@@ -526,5 +860,32 @@
         <script
             src="./src/js/highlights.js"></script>
         <script src="./src/js/function_toggle_mobileMenu.js"></script>
+        
+        <script>
+            // Enhanced parallax scrolling effect
+            function handleParallax() {
+                const hero = document.querySelector('.splash-hero--events');
+                if (hero && window.innerWidth > 768) {
+                    const scrolled = window.pageYOffset;
+                    const rate = scrolled * -0.5;
+                    hero.style.backgroundPositionY = rate + 'px';
+                }
+            }
+            
+            // Throttle scroll events for better performance
+            let ticking = false;
+            function requestTick() {
+                if (!ticking) {
+                    requestAnimationFrame(handleParallax);
+                    ticking = true;
+                }
+            }
+            
+            // Add scroll event listener
+            window.addEventListener('scroll', requestTick, { passive: true });
+            
+            // Initial call
+            handleParallax();
+        </script>
     </body>
 </html>
