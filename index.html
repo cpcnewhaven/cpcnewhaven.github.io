@@ -281,6 +281,99 @@ class="splash-hero--home"
     </section>
   </div>
 
+  <!-- Adult Sunday Studies Highlight Section -->
+  <section class="adult-sunday-studies-highlight">
+    <div class="studies-container">
+      <div class="studies-content">
+        <div class="studies-left">
+          <h2>Adult Sunday Studies</h2>
+          <p class="studies-description">
+            Join us for in-depth Bible study and theological discussion every Sunday morning. 
+            Our Adult Sunday Studies provide opportunities to grow in faith and understanding 
+            through engaging with Scripture and Christian doctrine.
+          </p>
+          <div class="studies-details">
+            <div class="studies-time">
+              <i class="fas fa-clock"></i>
+              <span>Sundays at 9:00 AM</span>
+            </div>
+            <div class="studies-location">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>135 Whitney Ave, New Haven, CT</span>
+            </div>
+          </div>
+        </div>
+        <div class="studies-right">
+          <a href="adult-sunday-school.html" class="studies-cta-btn">
+            Learn More
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Connect Board Highlight Section -->
+  <section class="connect-board-highlight">
+    <div class="connect-container">
+      <div class="connect-content">
+        <div class="connect-left">
+          <h2>Connect Board</h2>
+          <p class="connect-description">
+            Discover community events and activities happening around New Haven! 
+            Join our church family in connecting with the community through worship nights, 
+            sports events, and local activities.
+          </p>
+          <div class="connect-details">
+            <div class="connect-feature">
+              <i class="fas fa-calendar-alt"></i>
+              <span>Community Events</span>
+            </div>
+            <div class="connect-feature">
+              <i class="fas fa-users"></i>
+              <span>Member-Submitted</span>
+            </div>
+          </div>
+        </div>
+        <div class="connect-right">
+          <a href="connect.html" class="connect-cta-btn">
+            View Events
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Total Christ Course Highlight Section -->
+  <section class="total-christ-highlight">
+    <div class="course-container">
+      <div class="course-content">
+        <div class="course-left">
+          <h2>Total Christ: The Full Vision for His Church</h2>
+          <p class="course-description">
+            Join our new Adult Sunday Study course exploring the comprehensive vision 
+            of Christ's work in and through His church. Deepen your understanding of 
+            biblical theology and Christian doctrine.
+          </p>
+          <div class="course-details">
+            <div class="course-time">
+              <i class="fas fa-clock"></i>
+              <span>Sundays at 9:00 AM</span>
+            </div>
+            <div class="course-location">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>135 Whitney Ave, New Haven, CT</span>
+            </div>
+          </div>
+        </div>
+        <div class="course-right">
+          <a href="sunday-studies/total-christ.html" class="course-cta-btn">
+            Learn More
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="mid-splash-welcome sticky">
     <h1 class="headline">Subscribe to our Newsletter</h1>
   </section>
@@ -438,6 +531,114 @@ class="splash-hero--home"
             }
         }
 
+        /* Adult Sunday Studies Highlight Section */
+        .adult-sunday-studies-highlight {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 50px 0;
+            margin: 40px 0;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .studies-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .studies-content {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .studies-left {
+            flex: 2;
+        }
+
+        .studies-right {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .studies-left h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #333;
+            font-weight: 400;
+        }
+
+        .studies-description {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 25px;
+        }
+
+        .studies-details {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .studies-time, .studies-location {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #666;
+            font-size: 1rem;
+        }
+
+        .studies-time i, .studies-location i {
+            color: #007bff;
+            font-size: 1.1rem;
+        }
+
+        .studies-cta-btn {
+            display: inline-block;
+            background: #333;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+
+        .studies-cta-btn:hover {
+            background: #444;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .adult-sunday-studies-highlight {
+                padding: 30px 0;
+            }
+
+            .studies-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 25px;
+            }
+
+            .studies-left h2 {
+                font-size: 2rem;
+            }
+
+            .studies-description {
+                font-size: 1rem;
+            }
+
+            .studies-details {
+                justify-content: center;
+                gap: 20px;
+            }
+        }
+
         /* YouTube Video Section - Centered */
         .youtube-video-section {
             display: flex;
@@ -471,6 +672,204 @@ class="splash-hero--home"
             }
             .youtube-video-section .video-container {
                 max-width: 100%;
+            }
+        }
+
+        /* Connect Board Highlight Section */
+        .connect-board-highlight {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 50px 0;
+            margin: 40px 0;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .connect-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .connect-content {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .connect-left {
+            flex: 2;
+        }
+
+        .connect-right {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        .connect-left h2 {
+            font-size: 2.2rem;
+            color: white;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .connect-description {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        .connect-details {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .connect-feature {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.95rem;
+        }
+
+        .connect-feature i {
+            color: #0078D4;
+            font-size: 1.1rem;
+        }
+
+        .connect-cta-btn {
+            background: #0078D4;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            display: inline-block;
+            text-align: center;
+            min-width: 150px;
+        }
+
+        .connect-cta-btn:hover {
+            background: #005a9e;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 120, 212, 0.3);
+        }
+
+        /* Total Christ Course Highlight Section */
+        .total-christ-highlight {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 50px 0;
+            margin: 40px 0;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .course-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .course-content {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .course-left {
+            flex: 2;
+        }
+
+        .course-right {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        .course-left h2 {
+            font-size: 2.2rem;
+            color: white;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .course-description {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        .course-details {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .course-time, .course-location {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.95rem;
+        }
+
+        .course-time i, .course-location i {
+            color: #0078D4;
+            font-size: 1.1rem;
+        }
+
+        .course-cta-btn {
+            background: #0078D4;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            display: inline-block;
+            text-align: center;
+            min-width: 150px;
+        }
+
+        .course-cta-btn:hover {
+            background: #005a9e;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 120, 212, 0.3);
+        }
+
+        /* Responsive Design for New Sections */
+        @media (max-width: 768px) {
+            .connect-container, .course-container {
+                padding: 0 15px;
+            }
+
+            .connect-content, .course-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 30px;
+            }
+
+            .connect-left, .connect-right, .course-left, .course-right {
+                flex: none;
+            }
+
+            .connect-cta-btn, .course-cta-btn {
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .connect-details, .course-details {
+                justify-content: center;
+            }
+
+            .connect-left h2, .course-left h2 {
+                font-size: 1.8rem;
             }
         }
     </style>

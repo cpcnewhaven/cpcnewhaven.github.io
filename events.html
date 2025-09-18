@@ -204,56 +204,49 @@
 <section class="fall-events-section">
   <h2 style="text-align:center; font-size:2em; margin-bottom:30px; letter-spacing:1px; color:#0078D4;">Upcoming Events</h2>
   <div class="fall-events-list">
-    <div class="fall-event-item highlight-event">
+    <div class="fall-event-item highlight-event" data-date="2025-09-07">
       <div class="event-date">Sept 7</div>
       <div class="event-info">
         <h3>Welcome Sunday & Regular Schedule Begins</h3>
         <p>Join us for a fellowship meal after the service, and learn how you can get connected to the body of Christ. Regular Sunday schedule starts with prayer at 8:30am, Sunday School at 9:30am, and worship at 10:30am.</p>
       </div>
     </div>
-    <div class="fall-event-item">
-      <div class="event-date">Sept 7</div>
-      <div class="event-info">
-        <h3>College Game Night</h3>
-        <p>Undergrads, you're invited to Pastor Jerry's home from 5pm-7pm for a classic game night and Zuppardi's Pizza! Stop by the welcome table to join the College WhatsApp group for details.</p>
-      </div>
-    </div>
-    <div class="fall-event-item">
+    <div class="fall-event-item" data-date="2025-09-12">
       <div class="event-date">Sept 12</div>
       <div class="event-info">
         <h3>Pastor Drop-In Office Hours Begin</h3>
         <p>Pastor Craig, Fridays 7:30am-10:30am. Drop in for casual discussion, Q&A, prayer, coffee, tea, or whatever you want to make it!</p>
       </div>
     </div>
-    <div class="fall-event-item">
+    <div class="fall-event-item" data-date="2025-09-14">
       <div class="event-date">Sept 14</div>
       <div class="event-info">
         <h3>Congregational Meeting</h3>
         <p>Introduce new Ministry Year, budget presentation, and vote to designate Rev. Preston Graham as Pastor Emeritus</p>
       </div>
     </div>
-    <div class="fall-event-item">
+    <div class="fall-event-item" data-date="2025-09-19">
       <div class="event-date">Sept 19</div>
       <div class="event-info">
         <h3>Women's Event</h3>
         <p>All women welcome to join us during Happy Hour at Bear's Smokehouse (470 James Street, New Haven) from 4:30pm-6:30pm. First beverage and finger food provided!</p>
       </div>
     </div>
-    <div class="fall-event-item">
+    <div class="fall-event-item" data-date="2025-09-22">
       <div class="event-date">Sept 22</div>
       <div class="event-info">
         <h3>Women's Discipleship Group</h3>
         <p>Meeting in CPC Parlor Room at 7PM. Also meeting Oct 20 and Nov 17</p>
       </div>
     </div>
-    <div class="fall-event-item">
+    <div class="fall-event-item" data-date="2025-09-28">
       <div class="event-date">Sept 28</div>
       <div class="event-info">
         <h3>Congregational Meeting</h3>
         <p>Vote on electing Pete Chuchta to the Office of Ruling Elder</p>
       </div>
     </div>
-    <div class="fall-event-item highlight-event">
+    <div class="fall-event-item highlight-event" data-date="2025-10-10">
       <div class="event-date">Oct 10-12</div>
       <div class="event-info">
         <h3>CPC Churchwide Fall Retreat</h3>
@@ -898,6 +891,39 @@
             
             // Initial call
             handleParallax();
+        </script>
+
+        <!-- FILTER PAST EVENTS SCRIPT -->
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                // Get today's date (September 16, 2025)
+                const today = new Date('2025-09-16');
+                
+                // Get all event items
+                const eventItems = document.querySelectorAll('.fall-event-item[data-date]');
+                
+                eventItems.forEach(function(eventItem) {
+                    const eventDateStr = eventItem.getAttribute('data-date');
+                    const eventDate = new Date(eventDateStr);
+                    
+                    // Hide events that are before today
+                    if (eventDate < today) {
+                        eventItem.style.display = 'none';
+                    }
+                });
+                
+                // Check if any events are visible after filtering
+                const visibleEvents = document.querySelectorAll('.fall-event-item[data-date]:not([style*="display: none"])');
+                
+                // If no events are visible, show a message
+                if (visibleEvents.length === 0) {
+                    const eventsList = document.querySelector('.fall-events-list');
+                    const noEventsMessage = document.createElement('div');
+                    noEventsMessage.className = 'no-events-message';
+                    noEventsMessage.innerHTML = '<p style="text-align: center; color: #666; font-style: italic; padding: 40px;">No upcoming events scheduled. Check back soon!</p>';
+                    eventsList.appendChild(noEventsMessage);
+                }
+            });
         </script>
     </body>
 </html>
