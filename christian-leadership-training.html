@@ -38,133 +38,151 @@
         <!-- Internal Styles Specific to the Christian Leadership Training Page -->
         <style>
       /* Container for the resource directory */
-      .res-directory-container {
+      #clt-container {
         padding: 40px 20px;
         max-width: 1000px;
         margin: 0 auto;
+        text-align: center;
       }
       /* Background and box styling for the resource directory content */
-      .res-directory-content {
-        background: rgba(255, 255, 255, 0.15);
+      #clt-content {
+        background: rgba(255, 255, 255, 0.95);
         backdrop-filter: blur(15px);
         border-radius: 24px;
         padding: 35px;
         border: 1px solid rgba(255, 255, 255, 0.3);
         box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        margin: 0 auto;
       }
       /* Title styling for the resource directory */
-      .res-directory-title {
+      #clt-title {
         color: #2c5282;
         margin-bottom: 30px;
         font-size: 2em;
         font-weight: 300;
         text-align: center;
+        font-family: "Barlow", sans-serif;
       }
       /* Description paragraph styling */
-      .res-directory-description {
+      #clt-description {
         text-align: center;
         color: #4a5568;
         margin-bottom: 25px;
         font-size: 1.1em;
         font-weight: 300;
+        font-family: "Barlow", sans-serif;
+      }
+      /* Resource category styling */
+      #clt-resource-category {
+        background: rgba(44, 82, 130, 0.1);
+        padding: 20px;
+        margin: 20px auto;
+        border-radius: 12px;
+        border-left: 4px solid #2c5282;
+        text-align: center;
+        max-width: 500px;
+      }
+      #clt-resource-category h3 {
+        color: #2c5282;
+        margin: 0 0 15px 0;
+        font-size: 1.3em;
+        font-weight: 600;
+        text-align: center;
+        font-family: "Barlow", sans-serif;
       }
       /* Wrapper for the table layout */
-      .res-directory-table-wrapper {
+      #clt-table-wrapper {
         margin-top: 20px;
         border-radius: 16px;
         background: rgba(255, 255, 255, 0.8);
         overflow: hidden;
         box-shadow: 0 4px 16px rgba(44, 82, 130, 0.05);
         border: 1px solid rgba(255, 255, 255, 0.5);
+        display: flex;
+        justify-content: center;
       }
       /* Table styling */
-      .res-directory-table {
+      #clt-table {
         width: 100%;
+        max-width: 400px;
         border-collapse: separate;
         border-spacing: 0;
-        margin: 0;
+        margin: 0 auto;
         font-size: 1em;
       }
       /* Table cell styling */
-      .res-directory-cell {
+      #clt-cell {
         padding: 16px 24px;
         transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        text-align: center;
       }
       /* Table row styling */
-      .res-directory-row {
+      #clt-row {
         border-bottom: 1px solid rgba(44, 82, 130, 0.08);
         transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
       }
       /* Hover effect for table rows */
-      .res-directory-row:hover {
+      #clt-row:hover {
         background: rgba(44, 82, 130, 0.03);
-        transform: translateX(5px);
+        transform: translateY(-2px);
         box-shadow: 0 2px 8px rgba(44, 82, 130, 0.05);
       }
-      .res-directory-row:last-of-type {
+      #clt-row:last-of-type {
         border-bottom: none;
       }
       /* Link styling within the table */
-      .res-directory-link {
+      #clt-link {
         color: #2c5282;
         text-decoration: none;
         transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        display: block;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
         font-weight: 400;
-        padding: 4px 0;
+        padding: 8px 16px;
+        border-radius: 8px;
+        background: rgba(44, 82, 130, 0.05);
+        font-family: "Barlow", sans-serif;
       }
-      .res-directory-link:hover {
+      #clt-link:hover {
         color: #1a365d;
-        transform: translateX(5px);
-        text-shadow: 0 0 1px rgba(26, 54, 93, 0.1);
+        background: rgba(44, 82, 130, 0.1);
+        transform: translateY(-1px);
+        box-shadow: 0 4px 12px rgba(44, 82, 130, 0.15);
       }
       /* PDF icon styling */
-      .pdf-icon {
+      #clt-pdf-icon {
         color: #d32f2f;
         margin-right: 8px;
         font-size: 1.1em;
       }
-      /* Resource category styling */
-      .resource-category {
-        background: rgba(44, 82, 130, 0.1);
-        padding: 20px;
-        margin: 20px 0;
-        border-radius: 12px;
-        border-left: 4px solid #2c5282;
+      /* Section styling */
+      .clt-section {
         text-align: center;
       }
-      .resource-category h3 {
-        color: #2c5282;
-        margin: 0 0 15px 0;
-        font-size: 1.3em;
-        font-weight: 600;
-        text-align: center;
-      }
-      .resource-category .res-directory-table-wrapper {
-        display: flex;
-        justify-content: center;
-      }
-      .resource-category .res-directory-table {
-        max-width: 400px;
-        margin: 0 auto;
-      }
+      
       /* Responsive adjustments */
       @media (max-width: 768px) {
-        .res-directory-container {
+        #clt-container {
           padding: 20px 10px;
         }
-        .res-directory-content {
+        #clt-content {
           padding: 20px;
         }
-        .res-directory-cell {
+        #clt-cell {
           padding: 14px 16px;
         }
-        .res-directory-title {
+        #clt-title {
           font-size: 1.5em;
         }
-        .res-directory-description {
+        #clt-description {
           font-size: 1em;
           margin-bottom: 20px;
+        }
+        #clt-resource-category {
+          margin: 15px auto;
+          padding: 15px;
         }
       }
     </style>
@@ -219,31 +237,31 @@
         </nav>
 
         <!-- MAIN CONTENT: CHRISTIAN LEADERSHIP TRAINING RESOURCES -->
-        <div class="res-directory-container">
-            <div class="res-directory-content">
+        <div id="clt-container">
+            <div id="clt-content">
                 <!-- Overview Section: Introduction to Christian Leadership Training -->
-                <section class="res-directory-overview">
-                    <h2 class="res-directory-title">Christian Leadership
-                        Training</h2>
-                    <p class="res-directory-description">
+                <section class="clt-section">
+                    <h2 id="clt-title">Christian Leadership Training</h2>
+                    <p style="text-align: center;">
                         Resources and materials to equip and develop Christian
                         leaders in our church community.
                     </p>
 
                     <!-- Available Resources -->
-                    <div class="resource-category">
+                    <div id="clt-resource-category">
                         <h3>Available Resources</h3>
-                        <div class="res-directory-table-wrapper">
-                            <table class="res-directory-table">
+                        <div id="clt-table-wrapper">
+                            <table id="clt-table">
                                 <tbody>
-                                    <tr class="res-directory-row">
-                                        <td class="res-directory-cell">
+                                    <tr id="clt-row">
+                                        <td id="clt-cell">
                                             <a
                                                 href="sunday-studies/handouts/clt/Keller_centrality gospel.pdf"
-                                                class="res-directory-link"
+                                                id="clt-link"
                                                 target="_blank">
                                                 <i
-                                                    class="fas fa-file-pdf pdf-icon"></i>
+                                                    class="fas fa-file-pdf"
+                                                    id="clt-pdf-icon"></i>
                                                 Keller - Centrality of the
                                                 Gospel
                                             </a>
