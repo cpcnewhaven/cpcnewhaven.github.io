@@ -79,7 +79,21 @@
             </ul>
         </nav>
 
-        <div class="splash-hero--connect">
+        <div x-data="{ 
+            images: [
+                'https://storage.googleapis.com/cpc-public-website/web-assets/CHURCHJPEG.jpg',
+                'https://storage.googleapis.com/cpc-public-website/web-assets/heros/%5BHERO%5D%5BComm%7D6.jpg',
+                'https://storage.googleapis.com/cpc-public-website/web-assets/heros/%5BHERO%5D%5BComm%7D5.jpg',
+                'https://storage.googleapis.com/cpc-public-website/web-assets/heros/%5BHERO%5D%5BCOMMUNITY%5D.-1.jpg',
+                'https://storage.googleapis.com/cpc-public-website/events/Young%20Adults%20Cookout%20-%20September%202025/2.jpg',
+                'https://storage.googleapis.com/cpc-public-website/events/Young%20Adults%20Cookout%20-%20September%202025/3.jpg',
+                'https://storage.googleapis.com/cpc-public-website/events/Young%20Adults%20Cookout%20-%20September%202025/6.jpg'
+            ],
+            currentIndex: Math.floor(Math.random() * 7)
+        }" 
+        x-init="setInterval(() => { currentIndex = (currentIndex + 1) % images.length }, 5000)"
+        class="splash-hero--connect parallax-hero"
+        :style="`background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('${images[currentIndex]}')`">
             <h1>Connect Board</h1>
         </div>
 
@@ -291,19 +305,74 @@
 
         <script src="./src/js/function_toggle_mobileMenu.js"></script>
 
+        <!-- Parallax Effect Script -->
+        <script>
+            // Enhanced parallax effect with throttling
+            let ticking = false;
+            
+            function updateParallax() {
+                const scrolled = window.pageYOffset;
+                const parallax = document.querySelector('.splash-hero--connect');
+                
+                if (parallax) {
+                    parallax.style.setProperty('--scroll-offset', scrolled);
+                }
+                
+                ticking = false;
+            }
+            
+            function requestTick() {
+                if (!ticking) {
+                    requestAnimationFrame(updateParallax);
+                    ticking = true;
+                }
+            }
+            
+            // Add scroll event listener
+            window.addEventListener('scroll', requestTick, { passive: true });
+            
+            // Initial call
+            updateParallax();
+        </script>
+
         <style>
         /* Connect Board Styles */
         .splash-hero--connect {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-                              url('https://storage.googleapis.com/cpc-public-website/web-assets/CHURCHJPEG.jpg');
-            background-size: cover;
+            height: 80vh;
+            background-attachment: fixed;
             background-position: center;
-            height: 60vh;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            overflow: hidden;
+            will-change: transform;
+            transform: translateZ(0);
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
             text-align: center;
+            /* Enhanced parallax effect */
+            background-position-y: 0;
+            transition: background-image 1s ease-in-out, background-position 0.1s ease-out;
+        }
+        
+        /* Parallax scroll effect */
+        @media (min-width: 769px) {
+            .splash-hero--connect {
+                background-position-y: calc(var(--scroll-offset, 0) * 0.5px);
+            }
+        }
+
+        .splash-hero--connect::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.4);
+            z-index: 1;
         }
 
         .splash-hero--connect h1 {
@@ -311,6 +380,8 @@
             font-weight: 700;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
             margin: 0;
+            position: relative;
+            z-index: 2;
         }
 
         .connect-container {
