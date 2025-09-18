@@ -35,157 +35,148 @@
             href="https://storage.googleapis.com/cpc-public-website/web-assets/CPC%20-%20FAVICON%20-%20FALL%202024.png"
             type="image/png" />
 
-        <!-- Internal Styles Specific to the Christian Leadership Training Page -->
+        <!-- Clean, Simple Styling for Christian Leadership Training Page -->
         <style>
-      /* Container for the resource directory */
-      #clt-container {
-        padding: 40px 20px;
-        max-width: 1000px;
-        margin: 0 auto;
-        text-align: center;
-      }
-      /* Background and box styling for the resource directory content */
-      #clt-content {
-        background: rgba(255, 255, 255, 0.95);
-        backdrop-filter: blur(15px);
-        border-radius: 24px;
-        padding: 35px;
-        border: 1px solid rgba(255, 255, 255, 0.3);
-        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-        text-align: center;
-        margin: 0 auto;
-      }
-      /* Title styling for the resource directory */
-      #clt-title {
-        color: #2c5282;
-        margin-bottom: 30px;
-        font-size: 2em;
-        font-weight: 300;
-        text-align: center;
-        font-family: "Barlow", sans-serif;
-      }
-      /* Description paragraph styling */
-      #clt-description {
-        text-align: center;
-        color: #4a5568;
-        margin-bottom: 25px;
-        font-size: 1.1em;
-        font-weight: 300;
-        font-family: "Barlow", sans-serif;
-      }
-      /* Resource category styling */
-      #clt-resource-category {
-        background: rgba(44, 82, 130, 0.1);
-        padding: 20px;
-        margin: 20px auto;
-        border-radius: 12px;
-        border-left: 4px solid #2c5282;
-        text-align: center;
-        max-width: 500px;
-      }
-      #clt-resource-category h3 {
-        color: #2c5282;
-        margin: 0 0 15px 0;
-        font-size: 1.3em;
-        font-weight: 600;
-        text-align: center;
-        font-family: "Barlow", sans-serif;
-      }
-      /* Wrapper for the table layout */
-      #clt-table-wrapper {
-        margin-top: 20px;
-        border-radius: 16px;
-        background: rgba(255, 255, 255, 0.8);
-        overflow: hidden;
-        box-shadow: 0 4px 16px rgba(44, 82, 130, 0.05);
-        border: 1px solid rgba(255, 255, 255, 0.5);
-        display: flex;
-        justify-content: center;
-      }
-      /* Table styling */
-      #clt-table {
-        width: 100%;
-        max-width: 400px;
-        border-collapse: separate;
-        border-spacing: 0;
-        margin: 0 auto;
-        font-size: 1em;
-      }
-      /* Table cell styling */
-      #clt-cell {
-        padding: 16px 24px;
-        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        text-align: center;
-      }
-      /* Table row styling */
-      #clt-row {
-        border-bottom: 1px solid rgba(44, 82, 130, 0.08);
-        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-      }
-      /* Hover effect for table rows */
-      #clt-row:hover {
-        background: rgba(44, 82, 130, 0.03);
-        transform: translateY(-2px);
-        box-shadow: 0 2px 8px rgba(44, 82, 130, 0.05);
-      }
-      #clt-row:last-of-type {
-        border-bottom: none;
-      }
-      /* Link styling within the table */
-      #clt-link {
-        color: #2c5282;
-        text-decoration: none;
-        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        font-weight: 400;
-        padding: 8px 16px;
-        border-radius: 8px;
-        background: rgba(44, 82, 130, 0.05);
-        font-family: "Barlow", sans-serif;
-      }
-      #clt-link:hover {
-        color: #1a365d;
-        background: rgba(44, 82, 130, 0.1);
-        transform: translateY(-1px);
-        box-shadow: 0 4px 12px rgba(44, 82, 130, 0.15);
-      }
-      /* PDF icon styling */
-      #clt-pdf-icon {
-        color: #d32f2f;
-        margin-right: 8px;
-        font-size: 1.1em;
-      }
-      /* Section styling */
-      .clt-section {
-        text-align: center;
-      }
-      
-      /* Responsive adjustments */
-      @media (max-width: 768px) {
-        #clt-container {
-          padding: 20px 10px;
-        }
-        #clt-content {
-          padding: 20px;
-        }
-        #clt-cell {
-          padding: 14px 16px;
-        }
-        #clt-title {
-          font-size: 1.5em;
-        }
-        #clt-description {
-          font-size: 1em;
-          margin-bottom: 20px;
-        }
-        #clt-resource-category {
-          margin: 15px auto;
-          padding: 15px;
-        }
-      }
-    </style>
+            /* Main Content Container */
+            .content-section {
+                padding: 80px 20px;
+                background: #f8f9fa;
+            }
+
+            .container {
+                max-width: 800px;
+                margin: 0 auto;
+            }
+
+            /* Resource Grid */
+            .resources-grid {
+                display: flex;
+                justify-content: center;
+                margin-top: 40px;
+            }
+
+            .resource-card {
+                background: white;
+                border-radius: 15px;
+                padding: 30px;
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+                transition: all 0.3s ease;
+                border: 1px solid rgba(0, 0, 0, 0.05);
+                max-width: 500px;
+                width: 100%;
+            }
+
+            .resource-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+                border-color: #0078D4;
+            }
+
+            .resource-card h3 {
+                color: #333;
+                font-size: 1.5rem;
+                margin-bottom: 15px;
+                font-weight: 600;
+            }
+
+            .resource-card p {
+                color: #666;
+                line-height: 1.6;
+                margin-bottom: 25px;
+            }
+
+            /* Resource Item */
+            .resource-item {
+                display: flex;
+                align-items: center;
+                padding: 15px;
+                background: #f8f9fa;
+                border-radius: 10px;
+                transition: all 0.3s ease;
+                text-decoration: none;
+                color: inherit;
+            }
+
+            .resource-item:hover {
+                background: #e9ecef;
+                transform: translateX(5px);
+                text-decoration: none;
+                color: inherit;
+            }
+
+            .resource-icon {
+                width: 50px;
+                height: 50px;
+                background: linear-gradient(135deg, #0078D4, #005a9e);
+                border-radius: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-right: 15px;
+                color: white;
+                font-size: 1.2rem;
+            }
+
+            .resource-info h4 {
+                margin: 0 0 5px 0;
+                color: #333;
+                font-weight: 500;
+            }
+
+            .resource-info p {
+                margin: 0;
+                color: #666;
+                font-size: 0.9rem;
+            }
+
+            /* Introduction Section */
+            .intro-section {
+                text-align: center;
+                margin-bottom: 50px;
+            }
+
+            .intro-section h2 {
+                font-size: 2.5rem;
+                color: #333;
+                margin-bottom: 20px;
+                font-weight: 600;
+            }
+
+            .intro-section p {
+                font-size: 1.1rem;
+                color: #666;
+                max-width: 600px;
+                margin: 0 auto;
+                line-height: 1.7;
+            }
+
+            /* Responsive Design */
+            @media (max-width: 768px) {
+                .content-section {
+                    padding: 50px 15px;
+                }
+
+                .resource-card {
+                    padding: 20px;
+                }
+
+                .intro-section h2 {
+                    font-size: 2rem;
+                }
+            }
+
+            @media (max-width: 480px) {
+                .resource-item {
+                    padding: 12px;
+                }
+
+                .resource-icon {
+                    width: 40px;
+                    height: 40px;
+                    font-size: 1rem;
+                }
+            }
+        </style>
     </head>
 
     <body>
@@ -236,45 +227,36 @@
             </ul>
         </nav>
 
-        <!-- MAIN CONTENT: CHRISTIAN LEADERSHIP TRAINING RESOURCES -->
-        <div id="clt-container">
-            <div id="clt-content">
-                <!-- Overview Section: Introduction to Christian Leadership Training -->
-                <section class="clt-section">
-                    <h2 id="clt-title">Christian Leadership Training</h2>
-                    <p style="text-align: center;">
-                        Resources and materials to equip and develop Christian
-                        leaders in our church community.
+        <!-- MAIN CONTENT SECTION -->
+        <section class="content-section">
+            <div class="container">
+                <!-- Introduction -->
+                <div class="intro-section">
+                    <h2>Christian Leadership Training</h2>
+                    <p>
+                        Resources and materials to equip and develop Christian leaders in our church community.
                     </p>
+                </div>
 
-                    <!-- Available Resources -->
-                    <div id="clt-resource-category">
+                <!-- Resource Card -->
+                <div class="resources-grid">
+                    <div class="resource-card">
                         <h3>Available Resources</h3>
-                        <div id="clt-table-wrapper">
-                            <table id="clt-table">
-                                <tbody>
-                                    <tr id="clt-row">
-                                        <td id="clt-cell">
-                                            <a
-                                                href="sunday-studies/handouts/clt/Keller_centrality gospel.pdf"
-                                                id="clt-link"
-                                                target="_blank">
-                                                <i
-                                                    class="fas fa-file-pdf"
-                                                    id="clt-pdf-icon"></i>
-                                                Keller - Centrality of the
-                                                Gospel
-                                            </a>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
+                        <p>Access our leadership training materials and theological resources.</p>
+                        
+                        <a href="sunday-studies/handouts/clt/Keller_centrality gospel.pdf" class="resource-item" target="_blank">
+                            <div class="resource-icon">
+                                <i class="fas fa-file-pdf"></i>
+                            </div>
+                            <div class="resource-info">
+                                <h4>Keller - Centrality of the Gospel</h4>
+                                <p>Essential theological foundation for Christian leadership</p>
+                            </div>
+                        </a>
                     </div>
-                </section>
-
+                </div>
             </div>
-        </div>
+        </section>
 
         <!-- FOOTER SECTION -->
         <footer>
