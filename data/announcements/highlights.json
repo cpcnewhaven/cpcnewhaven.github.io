@@ -1,6 +1,28 @@
 {
   "announcements": [
     {
+      "id": "2025-043",
+      "title": "Interested in Joining CPC?",
+      "description": "We consider the church an essential element of the gospel, so joining CPC as a member is a way to truly join the body of Christ, in all its blessings and with all its flaws! Before joining, you'll meet one-on-one with a pastor and then discuss how you've come to know Christ with the Shepherd Leaders. Contact Alexis Vano (admin@cpcnewhaven.org) to begin the process.",
+      "dateEntered": "2025-09-19",
+      "active": "true",
+      "type": "announcement",
+      "category": "announcement",
+      "tag": "membership",
+      "superfeatured": false
+    },
+    {
+      "id": "2025-044",
+      "title": "Fall Kick-off Lunch for College Students | 9/25",
+      "description": "Hey undergrads! Join us for a fun and relaxed fellowship lunch at Commons, 168 Grove Street, from 12–1pm. Everyone's welcome—whether you're at Yale or not, living on or off campus. Come share a meal, meet new friends, and enjoy community together! Contact Pastor Jerry if you have questions jerry.ornelas@cpcnewhaven.org. If you'd like to keep up with other fellowship events please join the CPC College WhatsApp group.",
+      "dateEntered": "2025-09-19",
+      "active": "true",
+      "type": "event",
+      "category": "event",
+      "tag": "college",
+      "superfeatured": true
+    },
+    {
       "id": "2025-037",
       "title": "Congregational Meeting | Sept. 28",
       "description": "Vote on electing Pete Chuchta to the Office of Ruling Elder, vote to designate Rev. Preston Graham as Pastor Emeritus",
@@ -358,6 +380,17 @@
       "category": "ongoing",
       "tag": "groups",
       "superfeatured": false
+    },
+    {
+      "id": "2025-045",
+      "title": "New Christian Leadership Training Begins this Friday!",
+      "description": "We're beginning monthly training sessions on key topics such as: Bible Interpretation, Small Group Leadership, Missional Living & Hospitality, and Lay Counseling. This class builds on the Total Christ vision from Sunday School. It is especially for small group leaders and anyone aspiring to grow in their faith and service to the church. All are welcome. Starts this Friday, Sept. 26, 6:30-8:30pm, meal provided. Will continue Oct. 24 & Nov. 21. See website for readings.",
+      "dateEntered": "2025-09-19",
+      "active": "true",
+      "type": "event",
+      "category": "event",
+      "tag": "training",
+      "superfeatured": true
     },
     {
       "id": "2025-041",
