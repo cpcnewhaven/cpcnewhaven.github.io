@@ -1,8 +1,19 @@
 {
   "announcements": [
     {
+      "id": "2025-037",
+      "title": "Congregational Meeting | Sept. 28",
+      "description": "Vote on electing Pete Chuchta to the Office of Ruling Elder, vote to designate Rev. Preston Graham as Pastor Emeritus",
+      "dateEntered": "2025-09-19",
+      "active": "true",
+      "type": "event",
+      "category": "event",
+      "tag": "meeting",
+      "superfeatured": true
+    },
+    {
       "id": "2025-036",
-      "title": "Women's Event | Friday, Sept. 19",
+      "title": "Women's Social | Friday, Sept. 19",
       "description": "All women - visitors, regular attenders, members - are welcome to join us during Happy Hour at Bear's Smokehouse (470 James Street, New Haven) for fellowship and fun on Friday, Sept. 19 from 4:30pm-6:30pm (and later if you wish!). Two outdoor tables are reserved. The first beverage and some finger food will be provided! Feel free to bring a friend! If you have any questions, please contact Tanilla Brown (203-243-2153) or Patty Chuchta (203-676-4935).",
       "dateEntered": "2025-09-07",
       "active": "true",
@@ -16,10 +27,21 @@
       "title": "College Game Night | This Sunday, Sept. 7",
       "description": "Undergrads, you're invited to Pastor Jerry's home tonight from 5pm-7pm for a classic game night and Zuppardi's Pizza! Stop by the welcome table to join the College WhatsApp group for details and future events - the address will be shared there.",
       "dateEntered": "2025-09-07",
-      "active": "true",
+      "active": "false",
       "type": "event",
       "category": "event",
       "tag": "college",
+      "superfeatured": true
+    },
+    {
+      "id": "2025-038",
+      "title": "CPC Churchwide Fall Retreat | October 10-12",
+      "description": "@ Camp Wightman, Griswold, CT. Join us for a restful & invigorating weekend of fellowship in Christ! With Speakers Rob and Megan Hill. Details and registration available.",
+      "dateEntered": "2025-09-19",
+      "active": "true",
+      "type": "event",
+      "category": "event",
+      "tag": "retreat",
       "superfeatured": true
     },
     {
@@ -34,11 +56,22 @@
       "superfeatured": true
     },
     {
+      "id": "2025-042",
+      "title": "OUR REGULAR SUNDAY SCHEDULE IS BACK FOR FALL",
+      "description": "<strong>8:30am | Prayer in the Parlor</strong><br><br><strong>9:30am | Children's Sunday School</strong><br>2yrs to Pre-K | Lower Level Classroom, Fellowship Hall<br>Kindergarten & 1st Grade | Upper Floor Classroom<br>2nd to 5th Grade | Main Floor Lecture Room<br>6th & 7th Grade | Upper Floor Conference Room<br>8th to 12th Grade | Upper Floor Youth Room<br><br><strong>9:30am | Adult Sunday Studies</strong><br>\"Total Christ: The Full Vision for His Church\" | Fellowship Hall<br><br><strong>10:30am | Worship Service</strong><br><br><strong>12:00pm | Fellowship Lunch</strong>",
+      "dateEntered": "2025-09-19",
+      "active": "true",
+      "type": "announcement",
+      "category": "announcement",
+      "tag": "schedule",
+      "superfeatured": true
+    },
+    {
       "id": "2025-033",
       "title": "REGULAR SUNDAY SCHEDULE STARTS NEXT SUNDAY, 9/7",
       "description": "<table><tr><td><strong>8:30am</strong></td><td>Prayer in the Parlor</td></tr><tr><td><strong>9:30am</strong></td><td>Children's Sunday School</td></tr><tr><td></td><td><ul><li>2yrs to Pre-K | Lower Level Classroom, Fellowship Hall</li><li>Kindergarten & 1st Grade | Upper Floor Classroom</li><li>2nd to 5th Grade | Main Floor Lecture Room</li><li>6th & 7th Grade | Upper Floor Conference Room</li><li>8th to 12th Grade | Upper Floor Youth Room</li></ul></td></tr><tr><td><strong>9:30am</strong></td><td>Adult Sunday Studies</td></tr><tr><td></td><td>\"Total Christ: The Full Vision for His Church\" | Fellowship Hall</td></tr><tr><td><strong>10:30am</strong></td><td>Worship Service</td></tr><tr><td><strong>12:00pm</strong></td><td>Fellowship Lunch</td></tr></table>",
       "dateEntered": "2025-08-26",
-      "active": "true",
+      "active": "false",
       "type": "announcement",
       "category": "announcement",
       "tag": "schedule",
@@ -303,6 +336,39 @@
       "category": "event",
       "tag": "mercy",
       "superfeatured": true
+    },
+    {
+      "id": "2025-039",
+      "title": "Women's Discipleship Group | Google Meet at 7:30pm",
+      "description": "1st and 3rd Mondays, New season starting Oct.6. Out of the love, comfort, and encouragement we find in Christ, we are then able to love, comfort, and encourage one another. Won't you consider joining us? We will be using Treasures of Encouragement by Sharon Betters. Contact Lisa Graham (lisahgraham44@gmail.com) or Diane Miller (auntiediane@att.net) for more information.",
+      "dateEntered": "2025-09-19",
+      "active": "true",
+      "type": "ongoing",
+      "category": "ongoing",
+      "tag": "groups",
+      "superfeatured": false
+    },
+    {
+      "id": "2025-040",
+      "title": "Mom's Discipleship Group | CPC Parlor Room at 7:00pm",
+      "description": "Mondays — Sept. 22, Oct. 20, and Nov. 17",
+      "dateEntered": "2025-09-19",
+      "active": "true",
+      "type": "ongoing",
+      "category": "ongoing",
+      "tag": "groups",
+      "superfeatured": false
+    },
+    {
+      "id": "2025-041",
+      "title": "Pastor Drop-In Office Hours | Starting September 12",
+      "description": "Pastor Craig, Fridays 7:30am-10:30am | Other hours available upon request. Drop in for a casual time of discussion, Q&A, prayer, coffee, tea, really whatever you want to make it! Wondering what God is doing in a certain part of your life? Let's wonder together! Have a tricky situation at home or work? Let's discern best steps! Want to just chat about nothing in particular? Come on in! If you have a more private or formal need, you're always welcome to set up a separate time with Pastor Craig (craig.luekens@cpcnewhaven.org), or Pastor Jerry (jerry.ornelas@cpcnewhaven.org), but this is meant to be a space where anyone can drop in.",
+      "dateEntered": "2025-09-19",
+      "active": "true",
+      "type": "ongoing",
+      "category": "ongoing",
+      "tag": "pastor",
+      "superfeatured": false
     },
     {
       "id": "2025-031",
