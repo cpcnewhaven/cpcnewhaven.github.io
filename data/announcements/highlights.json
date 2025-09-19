@@ -47,7 +47,7 @@
     {
       "id": "2025-034",
       "title": "Important Dates",
-      "description": "<strong>Sept. 7 | Welcome Sunday</strong><br><strong>Sept. 14 | Congregational Meeting</strong><br><br>Introduce new Ministry Year, Budget presentation, and vote to confer the status of Pastor Emeritus to Preston Graham",
+      "description": "<strong>Sept. 28 | Congregational Meeting</strong><br><br>Introduce new Ministry Year, Budget presentation, and vote to confer the status of Pastor Emeritus to Preston Graham",
       "dateEntered": "2025-08-26",
       "active": "true",
       "type": "announcement",
@@ -399,7 +399,7 @@
       "title": "This Sunday is welcome sunday",
       "description": "Join us this Sunday for our special welcome sunday celebration! We're excited to welcome new visitors and celebrate the start of the academic year together.",
       "dateEntered": "2025-09-07",
-      "active": "true",
+      "active": "false",
       "type": "event",
       "category": "event",
       "tag": "welcome",
