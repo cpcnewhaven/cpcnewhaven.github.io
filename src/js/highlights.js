@@ -56,16 +56,17 @@ class HighlightsManager {
     }
 
     filterActiveAnnouncements(announcements) {
-        const today = new Date('2025-09-16'); // Set today's date
+        const today = new Date(); // Use current date
+        today.setHours(0, 0, 0, 0); // Reset time to start of day for accurate comparison
         
         return announcements.filter(announcement => {
             // First check if announcement is active
             const isActive = announcement.active === "true" || announcement.active === true;
             if (!isActive) return false;
             
-            // For event-type announcements, try to parse dates from title
+            // For event-type announcements, try to parse dates from title or description
             if (announcement.type === 'event' || announcement.category === 'event') {
-                const eventDate = this.parseEventDateFromTitle(announcement.title);
+                const eventDate = this.parseEventDateFromContent(announcement);
                 if (eventDate) {
                     // If we found an event date, check if it's in the past
                     return eventDate >= today;
@@ -82,9 +83,38 @@ class HighlightsManager {
         });
     }
 
-    parseEventDateFromTitle(title) {
-        // Common date patterns in titles
+    parseEventDateFromContent(announcement) {
+        // First try to parse from title
+        let eventDate = this.parseEventDateFromTitle(announcement.title);
+        if (eventDate) return eventDate;
+        
+        // Then try to parse from description
+        eventDate = this.parseEventDateFromTitle(announcement.description);
+        if (eventDate) return eventDate;
+        
+        return null;
+    }
+
+    parseEventDateFromTitle(text) {
+        if (!text) return null;
+        
+        // Common date patterns in titles and descriptions
         const datePatterns = [
+            // Patterns with year (e.g., "Sept. 28, 2025" or "September 28, 2025")
+            /(?:Sept\.?|September)\s+(\d{1,2}),?\s+(\d{4})/i,
+            /(?:Oct\.?|October)\s+(\d{1,2}),?\s+(\d{4})/i,
+            /(?:Nov\.?|November)\s+(\d{1,2}),?\s+(\d{4})/i,
+            /(?:Dec\.?|December)\s+(\d{1,2}),?\s+(\d{4})/i,
+            /(?:Jan\.?|January)\s+(\d{1,2}),?\s+(\d{4})/i,
+            /(?:Feb\.?|February)\s+(\d{1,2}),?\s+(\d{4})/i,
+            /(?:Mar\.?|March)\s+(\d{1,2}),?\s+(\d{4})/i,
+            /(?:Apr\.?|April)\s+(\d{1,2}),?\s+(\d{4})/i,
+            /(?:May)\s+(\d{1,2}),?\s+(\d{4})/i,
+            /(?:Jun\.?|June)\s+(\d{1,2}),?\s+(\d{4})/i,
+            /(?:Jul\.?|July)\s+(\d{1,2}),?\s+(\d{4})/i,
+            /(?:Aug\.?|August)\s+(\d{1,2}),?\s+(\d{4})/i,
+            
+            // Patterns without year (assume current year)
             /(?:Sept\.?|September)\s+(\d{1,2})/i,
             /(?:Oct\.?|October)\s+(\d{1,2})/i,
             /(?:Nov\.?|November)\s+(\d{1,2})/i,
@@ -96,30 +126,60 @@ class HighlightsManager {
             /(?:May)\s+(\d{1,2})/i,
             /(?:Jun\.?|June)\s+(\d{1,2})/i,
             /(?:Jul\.?|July)\s+(\d{1,2})/i,
-            /(?:Aug\.?|August)\s+(\d{1,2})/i
+            /(?:Aug\.?|August)\s+(\d{1,2})/i,
+            
+            // Date range patterns (e.g., "Oct 10-12")
+            /(?:Sept\.?|September)\s+(\d{1,2})-(\d{1,2})/i,
+            /(?:Oct\.?|October)\s+(\d{1,2})-(\d{1,2})/i,
+            /(?:Nov\.?|November)\s+(\d{1,2})-(\d{1,2})/i,
+            /(?:Dec\.?|December)\s+(\d{1,2})-(\d{1,2})/i,
+            /(?:Jan\.?|January)\s+(\d{1,2})-(\d{1,2})/i,
+            /(?:Feb\.?|February)\s+(\d{1,2})-(\d{1,2})/i,
+            /(?:Mar\.?|March)\s+(\d{1,2})-(\d{1,2})/i,
+            /(?:Apr\.?|April)\s+(\d{1,2})-(\d{1,2})/i,
+            /(?:May)\s+(\d{1,2})-(\d{1,2})/i,
+            /(?:Jun\.?|June)\s+(\d{1,2})-(\d{1,2})/i,
+            /(?:Jul\.?|July)\s+(\d{1,2})-(\d{1,2})/i,
+            /(?:Aug\.?|August)\s+(\d{1,2})-(\d{1,2})/i
         ];
 
         for (const pattern of datePatterns) {
-            const match = title.match(pattern);
+            const match = text.match(pattern);
             if (match) {
-                const day = parseInt(match[1]);
                 const monthName = match[0].split(/\s+/)[0].toLowerCase();
                 
-                // Map month names to numbers
+                // Map month names to numbers (handle both with and without periods)
                 const monthMap = {
-                    'jan': 0, 'january': 0, 'feb': 1, 'february': 1,
-                    'mar': 2, 'march': 2, 'apr': 3, 'april': 3,
-                    'may': 4, 'jun': 5, 'june': 5, 'jul': 6, 'july': 6,
-                    'aug': 7, 'august': 7, 'sep': 8, 'sept': 8, 'september': 8,
-                    'oct': 9, 'october': 9, 'nov': 10, 'november': 10,
-                    'dec': 11, 'december': 11
+                    'jan': 0, 'jan.': 0, 'january': 0, 'feb': 1, 'feb.': 1, 'february': 1,
+                    'mar': 2, 'mar.': 2, 'march': 2, 'apr': 3, 'apr.': 3, 'april': 3,
+                    'may': 4, 'jun': 5, 'jun.': 5, 'june': 5, 'jul': 6, 'jul.': 6, 'july': 6,
+                    'aug': 7, 'aug.': 7, 'august': 7, 'sep': 8, 'sep.': 8, 'sept': 8, 'sept.': 8, 'september': 8,
+                    'oct': 9, 'oct.': 9, 'october': 9, 'nov': 10, 'nov.': 10, 'november': 10,
+                    'dec': 11, 'dec.': 11, 'december': 11
                 };
                 
                 const month = monthMap[monthName];
                 if (month !== undefined) {
-                    // Assume current year (2025) for events
-                    const eventDate = new Date(2025, month, day);
-                    return eventDate;
+                    // Check if we have a year in the match
+                    if (match[2]) {
+                        // Has year
+                        const year = parseInt(match[2]);
+                        const day = parseInt(match[1]);
+                        const eventDate = new Date(year, month, day);
+                        return eventDate;
+                    } else if (match[2] && match[3]) {
+                        // Date range - use the start date
+                        const currentYear = new Date().getFullYear();
+                        const day = parseInt(match[1]);
+                        const eventDate = new Date(currentYear, month, day);
+                        return eventDate;
+                    } else {
+                        // No year - assume current year
+                        const currentYear = new Date().getFullYear();
+                        const day = parseInt(match[1]);
+                        const eventDate = new Date(currentYear, month, day);
+                        return eventDate;
+                    }
                 }
             }
         }

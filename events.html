@@ -903,8 +903,9 @@
         <!-- FILTER PAST EVENTS SCRIPT -->
         <script>
             document.addEventListener("DOMContentLoaded", function() {
-                // Get today's date (September 16, 2025)
-                const today = new Date('2025-09-16');
+                // Get today's date
+                const today = new Date();
+                today.setHours(0, 0, 0, 0); // Reset time to start of day for accurate comparison
                 
                 // Get all event items
                 const eventItems = document.querySelectorAll('.fall-event-item[data-date]');
@@ -912,6 +913,7 @@
                 eventItems.forEach(function(eventItem) {
                     const eventDateStr = eventItem.getAttribute('data-date');
                     const eventDate = new Date(eventDateStr);
+                    eventDate.setHours(0, 0, 0, 0); // Reset time to start of day for accurate comparison
                     
                     // Hide events that are before today
                     if (eventDate < today) {
