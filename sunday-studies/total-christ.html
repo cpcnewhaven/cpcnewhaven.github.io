@@ -38,7 +38,14 @@ header {
     display: table-row;
 }
 
-.list-number, .episode-title, .list-table a {
+.list-number, .episode-title, .button-container {
+    display: table-cell;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    vertical-align: middle;
+}
+
+.list-table a {
     display: table-cell;
     padding: 10px;
     border-bottom: 1px solid #ddd;
@@ -71,6 +78,98 @@ header {
 .list-table a[style*="color: gray"] {
     pointer-events: none;
     text-decoration: none;
+}
+
+/* Glass button styles with CPC brand colors */
+.glass-button {
+    display: inline-block;
+    padding: 10px 18px;
+    margin: 0 4px;
+    background: rgba(0, 60, 109, 0.15);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(0, 60, 109, 0.3);
+    border-radius: 12px;
+    color: #003c6d;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0, 60, 109, 0.15);
+    position: relative;
+    overflow: hidden;
+    font-family: "Barlow", sans-serif;
+}
+
+.glass-button:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0, 60, 109, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.glass-button:hover:before {
+    left: 100%;
+}
+
+.glass-button:hover {
+    background: rgba(0, 60, 109, 0.25);
+    border-color: rgba(0, 60, 109, 0.5);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(0, 60, 109, 0.25);
+    color: #002244;
+    text-decoration: none;
+}
+
+.glass-button.handout {
+    background: rgba(0, 60, 109, 0.12);
+    border-color: rgba(0, 60, 109, 0.25);
+    color: #003c6d;
+}
+
+.glass-button.handout:hover {
+    background: rgba(0, 60, 109, 0.2);
+    border-color: rgba(0, 60, 109, 0.4);
+    color: #002244;
+}
+
+.glass-button.listen {
+    background: rgba(0, 68, 148, 0.12);
+    border-color: rgba(0, 68, 148, 0.25);
+    color: #004494;
+}
+
+.glass-button.listen:hover {
+    background: rgba(0, 68, 148, 0.2);
+    border-color: rgba(0, 68, 148, 0.4);
+    color: #002244;
+}
+
+.glass-button.disabled {
+    background: rgba(0, 60, 109, 0.05);
+    border-color: rgba(0, 60, 109, 0.1);
+    color: rgba(0, 60, 109, 0.4);
+    pointer-events: none;
+    cursor: not-allowed;
+}
+
+.glass-button.disabled:hover {
+    transform: none;
+    box-shadow: 0 4px 20px rgba(0, 60, 109, 0.15);
+    background: rgba(0, 60, 109, 0.05);
+    border-color: rgba(0, 60, 109, 0.1);
+}
+
+/* Button container for better spacing */
+.button-container {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Center content styles */
@@ -205,91 +304,81 @@ h1, h2, h3 {
                             <span class="episode-title">Introduction to
                                 Total Christ & the Five
                                 Marks</span>
-                            <a
-                                href="/sunday-studies/handouts/totalchrist/1_TC.pdf"
-                                target="_blank"
-                                style="color: #007BFF; text-decoration: underline;">Handout</a>
-                            -
-                            <a href="https://open.spotify.com/episode/1yGyMNjbapGXc0vdFzUowe?si=06efdc383caf4313"
-                                target="_blank"
-                                style="color: #007BFF; text-decoration: underline;">Listen</a>
+                            <div class="button-container">
+                                <a href="/sunday-studies/handouts/totalchrist/1_TC.pdf"
+                                   target="_blank"
+                                   class="glass-button handout">📋 Handout</a>
+                                <a href="https://open.spotify.com/episode/1yGyMNjbapGXc0vdFzUowe?si=06efdc383caf4313"
+                                   target="_blank"
+                                   class="glass-button listen">🎧 Listen</a>
+                            </div>
                         </li>
                         <li>
                             <span class="list-number">2.</span>
                             <span class="episode-title">Gospel-Centered:
                                 The Covenant of God sealed
                                 in Jesus Christ</span>
-                            <a
-                                href="/sunday-studies/handouts/totalchrist/2_TC.pdf"
-                                target="_blank"
-                                style="color: #007BFF; text-decoration: underline;">Handout</a>
-                            -
-                            <a href="https://open.spotify.com/episode/5auc75SaappbwbHAO4WKEk?si=07a628db8ab94fb1"
-                                target="_blank"
-                                style="color: #007BFF; text-decoration: underline;">Listen</a>
+                            <div class="button-container">
+                                <a href="/sunday-studies/handouts/totalchrist/2_TC.pdf"
+                                   target="_blank"
+                                   class="glass-button handout">📋 Handout</a>
+                                <a href="https://open.spotify.com/episode/5auc75SaappbwbHAO4WKEk?si=07a628db8ab94fb1"
+                                   target="_blank"
+                                   class="glass-button listen">🎧 Listen</a>
+                            </div>
                         </li>
                         <li>
                             <span class="list-number">3.</span>
                             <span class="episode-title">Missional: The
                                 Presence of God in Jesus
                                 Christ through the global Holy Spirit</span>
-                            <a
-                                href="/sunday-studies/handouts/totalchrist/3_TC.pdf"
-                                target="_blank"
-                                style="color: #007BFF; text-decoration: underline;">Handout</a>
-                            -
-                            <a href="https://open.spotify.com/episode/5YR7Ca7flEq8ZVjpcG0hfn?si=f60087cb87864362"
-                                target="_blank"
-                                style="color: #007BFF; text-decoration: underline;">Listen</a>
+                            <div class="button-container">
+                                <a href="/sunday-studies/handouts/totalchrist/3_TC.pdf"
+                                   target="_blank"
+                                   class="glass-button handout">📋 Handout</a>
+                                <a href="https://open.spotify.com/episode/5YR7Ca7flEq8ZVjpcG0hfn?si=f60087cb87864362"
+                                   target="_blank"
+                                   class="glass-button listen">🎧 Listen</a>
+                            </div>
                         </li>
                         <li>
                             <span class="list-number">4.</span>
                             <span class="episode-title">Confessional:
                                 Christ our Prophet</span>
-                            <a
-                                href="/sunday-studies/handouts/totalchrist/4_TC.pdf"
-                                target="_blank"
-                                style="color: #007BFF; text-decoration: underline;">Handout</a>
-                            -
-                            <a href="#"
-                                style="color: gray; pointer-events: none; text-decoration: none;">Listen</a>
+                            <div class="button-container">
+                                <a href="/sunday-studies/handouts/totalchrist/4_TC.pdf"
+                                   target="_blank"
+                                   class="glass-button handout">📋 Handout</a>
+                                <span class="glass-button disabled">🎧 Listen</span>
+                            </div>
                         </li>
                         <li>
                             <span class="list-number">5.</span>
                             <span class="episode-title">Sacramental:
                                 Christ our Priest</span>
-                            <a
-                                href="/sunday-studies/handouts/totalchrist/5_TC.pdf"
-                                target="_blank"
-                                style="color: gray; pointer-events: none; text-decoration: none;">Handout</a>
-                            -
-                            <a href="#"
-                                style="color: gray; pointer-events: none; text-decoration: none;">Listen</a>
+                            <div class="button-container">
+                                <span class="glass-button disabled">📋 Handout</span>
+                                <span class="glass-button disabled">🎧 Listen</span>
+                            </div>
                         </li>
                         <li>
                             <span class="list-number">6.</span>
                             <span class="episode-title">Communal: Christ
                                 our King</span>
-                            <a
-                                href="/sunday-studies/handouts/totalchrist/6_TC.pdf"
-                                target="_blank"
-                                style="color: gray; pointer-events: none; text-decoration: none;">Handout</a>
-                            -
-                            <a href="#"
-                                style="color: gray; pointer-events: none; text-decoration: none;">Listen</a>
+                            <div class="button-container">
+                                <span class="glass-button disabled">📋 Handout</span>
+                                <span class="glass-button disabled">🎧 Listen</span>
+                            </div>
                         </li>
                         <li>
                             <span class="list-number">7.</span>
                             <span class="episode-title">Seeing the
                                 Big Picture, Experiencing the Fullness of
                                 Christ</span>
-                            <a
-                                href="/sunday-studies/handouts/totalchrist/7_TC.pdf"
-                                target="_blank"
-                                style="color: gray; pointer-events: none; text-decoration: none;">Handout</a>
-                            -
-                            <a href="#"
-                                style="color: gray; pointer-events: none; text-decoration: none;">Listen</a>
+                            <div class="button-container">
+                                <span class="glass-button disabled">📋 Handout</span>
+                                <span class="glass-button disabled">🎧 Listen</span>
+                            </div>
                         </li>
                     </ul>
                 </div>
