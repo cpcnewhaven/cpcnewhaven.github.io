@@ -438,6 +438,28 @@
       "tag": "welcome",
       "superfeatured": true,
       "featuredImage": "https://storage.googleapis.com/cpc-public-website/featuredIMGs/homepage/Homepage%20-%20FEATURED%20IMG-congregation.jpg"
+    },
+    {
+      "id": "2025-046",
+      "title": "CPC Family Tailgate: Penn v. Yale (Men's Ministry) | Saturday October 25",
+      "description": "Please join us at 10:30 am at 56 Roger Road, New Haven (Preston & Lisa Graham's home) for fellowship and a tailgate meal hosted by the CPC Men's Ministry. The Yale Bulldogs will be hosting the Penn Quakers at the Yale Bowl, beginning at noon. The Bowl is a short walk from our location, and please bring your own drinks and a folding chair (soft drinks and food will be provided). This is a family tailgate, all are welcome! Tickets to the game may be purchased at the gate or purchase online. RSVP to Pat Clendenen at <a href=\"mailto:pat.clendenen@gmail.com\">pat.clendenen@gmail.com</a>. Go Bulldogs!",
+      "dateEntered": "2025-10-15",
+      "active": "true",
+      "type": "event",
+      "category": "event",
+      "tag": "fellowship",
+      "superfeatured": false
+    },
+    {
+      "id": "2025-047",
+      "title": "Church Journal",
+      "description": "Calling all writers and artists: CPC is creating a church-wide journal this fall on the topic of \"vocation.\" We'd love for you to contribute! Interested? Learn more here. Contact Seth Bollinger (<a href=\"mailto:sethbollinger15@gmail.com\">sethbollinger15@gmail.com</a>) with questions.",
+      "dateEntered": "2025-10-15",
+      "active": "true",
+      "type": "announcement",
+      "category": "announcement",
+      "tag": "arts",
+      "superfeatured": false
     }
     
   ]
