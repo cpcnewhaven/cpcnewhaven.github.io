@@ -412,7 +412,9 @@
       "type": "announcement",
       "category": "volunteer",
       "tag": "fellowship",
-      "superfeatured": false
+      "superfeatured": false,
+      "featuredImage": "https://storage.googleapis.com/cpc-public-website/announcements/FOOD%20SERVICE%20NEEDS%20HELP.jpg",
+      "imageDisplayType": "poster"
     },
  
     {
