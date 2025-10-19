@@ -26,6 +26,7 @@
         <link rel="stylesheet" href="./src/css/footer.css">
         <link rel="stylesheet" href="./src/css/global-body.css">
     <link rel="stylesheet" href="./src/css/global-footer-cta.css">
+    <link rel="stylesheet" href="./src/css/highlights.css">
         <link rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
         <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
@@ -198,9 +199,121 @@
                 }
                 #community-calendar iframe {
                     height: 250px;
-                }
-            }
-        </style>
+  }
+  }
+</style>
+
+<style>
+/* Highlights Section Styling */
+.mid-splash-welcome.sticky {
+    background: #f8f9fa;
+    padding: 30px 20px;
+    margin: 0;
+}
+
+.mid-splash-welcome .headline {
+    text-align: center;
+    font-size: 2.5em;
+    margin: 0;
+    color: #333;
+}
+
+#highlights {
+    padding: 40px 20px;
+    background: #f8f9fa;
+}
+
+.highlights-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.highlight-card {
+    background: white;
+    border: 2px solid #e1e5e9;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.highlight-card:hover {
+    border-color: #0078D4;
+    box-shadow: 0 4px 16px rgba(0, 120, 212, 0.1);
+    transform: translateY(-2px);
+}
+
+.highlight-content {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.highlight-title {
+    font-size: 1.4rem !important;
+    color: #333;
+    margin: 0 0 10px 0;
+    font-weight: 600;
+    text-align: center !important;
+}
+
+.highlight-description {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.highlight-description p {
+    margin-bottom: 10px;
+}
+
+.highlight-empty, .highlight-error {
+    text-align: center;
+    padding: 40px;
+    color: #666;
+    font-style: italic;
+    grid-column: 1 / -1;
+}
+
+@media (max-width: 768px) {
+    #highlights {
+        padding: 30px 15px;
+    }
+
+    .highlights-content {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .highlight-title {
+        font-size: 1.2rem !important;
+    }
+
+    .mid-splash-welcome .headline {
+        font-size: 2em;
+    }
+}
+</style>
+
+<!-- HIGHLIGHTS/ANNOUNCEMENTS SECTION -->
+<section class="mid-splash-welcome sticky">
+  <h1 class="headline">Highlights</h1>
+</section>
+
+<section id="highlights">
+  <div class="highlights-content">
+    <!-- Highlights will be populated here by the JavaScript -->
+  </div>
+</section>
+
 <section class="fall-events-section">
   <h2 style="text-align:center; font-size:2em; margin-bottom:30px; letter-spacing:1px; color:#0078D4;">Upcoming Events</h2>
   <div class="fall-events-list">
@@ -869,8 +982,7 @@
 
         <!-- DYNAMIC ANNOUNCEMNTS -->
         <script src="./src/js/populate-navigation.js"></script>
-        <script
-            src="./src/js/highlights.js"></script>
+        <script src="./src/js/highlights.js"></script>
         <script src="./src/js/function_toggle_mobileMenu.js"></script>
         
         <script>
