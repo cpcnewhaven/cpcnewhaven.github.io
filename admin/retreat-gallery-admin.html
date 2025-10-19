@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Retreat 2025 Gallery Admin</title>
+        <link rel="stylesheet" href="../src/css/global-body.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <style>
+        .admin-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .admin-section {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        .btn {
+            background: #0078D4;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            margin-right: 10px;
+        }
+        .btn:hover {
+            background: #005a9e;
+        }
+        .btn-danger {
+            background: #dc3545;
+        }
+        .btn-danger:hover {
+            background: #c82333;
+        }
+        .image-preview {
+            max-width: 200px;
+            max-height: 200px;
+            margin-top: 10px;
+            border-radius: 4px;
+        }
+        .current-images {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .image-item {
+            position: relative;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        .image-item img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+        .image-item .remove-btn {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            background: rgba(220, 53, 69, 0.8);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 25px;
+            height: 25px;
+            cursor: pointer;
+            font-size: 12px;
+        }
+        .image-item .image-name {
+            padding: 5px;
+            font-size: 12px;
+            background: #f8f9fa;
+            word-break: break-word;
+        }
+        .instructions {
+            background: #e7f3ff;
+            border: 1px solid #b3d9ff;
+            border-radius: 4px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        .instructions h3 {
+            margin-top: 0;
+            color: #0066cc;
+        }
+        .instructions ol {
+            margin-bottom: 0;
+        }
+        .instructions li {
+            margin-bottom: 5px;
+        }
+    </style>
+    </head>
+    <body>
+        <div class="admin-container">
+            <h1><i class="fas fa-images"></i> Retreat 2025 Gallery Admin</h1>
+
+            <div class="instructions">
+                <h3><i class="fas fa-info-circle"></i> How to Add Images</h3>
+                <ol>
+                    <li>Go to the <a
+                            href="https://drive.google.com/drive/folders/1zsVPlO7Zdlruu6JyLAjypbMTjMhgkyNW"
+                            target="_blank">Google Drive folder</a></li>
+                    <li>Right-click on an image and select "Get link"</li>
+                    <li>Copy the share link (it should look like:
+                        https://drive.google.com/file/d/FILE_ID/view?usp=sharing)</li>
+                    <li>Paste the link in the form below and add a
+                        description</li>
+                    <li>Click "Add Image" to add it to the gallery</li>
+                </ol>
+            </div>
+
+            <div class="admin-section">
+                <h2>Add New Image</h2>
+                <form id="addImageForm">
+                    <div class="form-group">
+                        <label for="imageUrl">Google Drive Image URL:</label>
+                        <input type="url" id="imageUrl"
+                            placeholder="https://drive.google.com/file/d/FILE_ID/view?usp=sharing"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <label for="imageName">Image Description:</label>
+                        <input type="text" id="imageName"
+                            placeholder="e.g., Group photo at the retreat">
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn">
+                            <i class="fas fa-plus"></i> Add Image
+                        </button>
+                        <button type="button" class="btn"
+                            onclick="previewImage()">
+                            <i class="fas fa-eye"></i> Preview
+                        </button>
+                    </div>
+                </form>
+                <div id="previewContainer"></div>
+            </div>
+
+            <div class="admin-section">
+                <h2>Current Gallery Images</h2>
+                <button class="btn btn-danger" onclick="clearAllImages()">
+                    <i class="fas fa-trash"></i> Clear All Images
+                </button>
+                <button class="btn" onclick="refreshGallery()">
+                    <i class="fas fa-sync"></i> Refresh
+                </button>
+                <div id="currentImages" class="current-images"></div>
+            </div>
+
+            <div class="admin-section">
+                <h2>Export/Import</h2>
+                <button class="btn" onclick="exportData()">
+                    <i class="fas fa-download"></i> Export Gallery Data
+                </button>
+                <input type="file" id="importFile" accept=".json"
+                    style="margin-left: 10px;">
+                <button class="btn" onclick="importData()">
+                    <i class="fas fa-upload"></i> Import Gallery Data
+                </button>
+            </div>
+        </div>
+
+        <script>
+        let galleryData = { images: [] };
+
+        // Load existing data
+        async function loadGalleryData() {
+            try {
+                const response = await fetch('../data/retreat2025-images.json');
+                galleryData = await response.json();
+                displayCurrentImages();
+            } catch (error) {
+                console.error('Error loading gallery data:', error);
+                displayCurrentImages();
+            }
+        }
+
+        // Convert Google Drive URL to direct image URL
+        function convertGoogleDriveUrl(shareUrl) {
+            const fileIdMatch = shareUrl.match(/\/file\/d\/([a-zA-Z0-9_-]+)/);
+            if (fileIdMatch) {
+                return `https://drive.google.com/uc?export=view&id=${fileIdMatch[1]}`;
+            }
+            return shareUrl;
+        }
+
+        // Add image to gallery
+        function addImage(url, name) {
+            const directUrl = convertGoogleDriveUrl(url);
+            const imageData = {
+                url: directUrl,
+                name: name || `Retreat Photo ${galleryData.images.length + 1}`,
+                addedAt: new Date().toISOString()
+            };
+            
+            galleryData.images.push(imageData);
+            saveGalleryData();
+            displayCurrentImages();
+            
+            // Clear form
+            document.getElementById('imageUrl').value = '';
+            document.getElementById('imageName').value = '';
+            document.getElementById('previewContainer').innerHTML = '';
+        }
+
+        // Save gallery data
+        async function saveGalleryData() {
+            try {
+                const response = await fetch('../data/retreat2025-images.json', {
+                    method: 'PUT',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(galleryData)
+                });
+                
+                if (response.ok) {
+                    console.log('Gallery data saved successfully');
+                } else {
+                    console.error('Error saving gallery data');
+                }
+            } catch (error) {
+                console.error('Error saving gallery data:', error);
+                // For local development, we can't actually save to the server
+                // This would need to be handled by a backend service
+                alert('Note: This is a demo. In a real implementation, you would need a backend service to save the data.');
+            }
+        }
+
+        // Display current images
+        function displayCurrentImages() {
+            const container = document.getElementById('currentImages');
+            container.innerHTML = '';
+            
+            if (galleryData.images.length === 0) {
+                container.innerHTML = '<p>No images in gallery yet.</p>';
+                return;
+            }
+            
+            galleryData.images.forEach((img, index) => {
+                const imageItem = document.createElement('div');
+                imageItem.className = 'image-item';
+                imageItem.innerHTML = `
+                    <img src="${img.url}" alt="${img.name}" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI2VlZSIvPjx0ZXh0IHg9IjUwIiB5PSI1MCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjEyIiBmaWxsPSIjOTk5IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSI+SW1hZ2UgRXJyb3I8L3RleHQ+PC9zdmc+'">
+                    <button class="remove-btn" onclick="removeImage(${index})" title="Remove image">×</button>
+                    <div class="image-name">${img.name}</div>
+                `;
+                container.appendChild(imageItem);
+            });
+        }
+
+        // Remove image
+        function removeImage(index) {
+            if (confirm('Are you sure you want to remove this image?')) {
+                galleryData.images.splice(index, 1);
+                saveGalleryData();
+                displayCurrentImages();
+            }
+        }
+
+        // Clear all images
+        function clearAllImages() {
+            if (confirm('Are you sure you want to clear all images? This cannot be undone.')) {
+                galleryData.images = [];
+                saveGalleryData();
+                displayCurrentImages();
+            }
+        }
+
+        // Preview image
+        function previewImage() {
+            const url = document.getElementById('imageUrl').value;
+            if (!url) {
+                alert('Please enter an image URL first');
+                return;
+            }
+            
+            const directUrl = convertGoogleDriveUrl(url);
+            const previewContainer = document.getElementById('previewContainer');
+            previewContainer.innerHTML = `
+                <h4>Preview:</h4>
+                <img src="${directUrl}" alt="Preview" class="image-preview" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <div style="display:none; color:red;">Failed to load preview image</div>
+            `;
+        }
+
+        // Export data
+        function exportData() {
+            const dataStr = JSON.stringify(galleryData, null, 2);
+            const dataBlob = new Blob([dataStr], {type: 'application/json'});
+            const url = URL.createObjectURL(dataBlob);
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = 'retreat2025-images.json';
+            link.click();
+            URL.revokeObjectURL(url);
+        }
+
+        // Import data
+        function importData() {
+            const fileInput = document.getElementById('importFile');
+            const file = fileInput.files[0];
+            if (!file) {
+                alert('Please select a file first');
+                return;
+            }
+            
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                try {
+                    const importedData = JSON.parse(e.target.result);
+                    if (confirm('This will replace all current images. Continue?')) {
+                        galleryData = importedData;
+                        saveGalleryData();
+                        displayCurrentImages();
+                    }
+                } catch (error) {
+                    alert('Error reading file. Please make sure it\'s a valid JSON file.');
+                }
+            };
+            reader.readAsText(file);
+        }
+
+        // Refresh gallery
+        function refreshGallery() {
+            loadGalleryData();
+        }
+
+        // Form submission
+        document.getElementById('addImageForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const url = document.getElementById('imageUrl').value;
+            const name = document.getElementById('imageName').value;
+            addImage(url, name);
+        });
+
+        // Load data on page load
+        loadGalleryData();
+    </script>
+    </body>
+</html>
