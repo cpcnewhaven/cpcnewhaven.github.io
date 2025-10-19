@@ -176,6 +176,74 @@
                     font-size: 1rem;
                 }
             }
+
+            /* Session Cards Styling */
+            .session-card {
+                background: white;
+                border-radius: 12px;
+                padding: 25px;
+                margin-bottom: 20px;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+                border-left: 4px solid #0078D4;
+                transition: all 0.3s ease;
+            }
+
+            .session-card:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 6px 20px rgba(0, 120, 212, 0.15);
+            }
+
+            .session-header h4 {
+                color: #0078D4;
+                font-size: 1.4rem;
+                margin: 0 0 15px 0;
+                font-weight: 600;
+            }
+
+            .session-content p {
+                color: #333;
+                line-height: 1.7;
+                margin-bottom: 12px;
+            }
+
+            .session-content ul {
+                color: #666;
+                line-height: 1.8;
+                margin: 10px 0 0 20px;
+                padding-left: 0;
+            }
+
+            .session-content li {
+                margin-bottom: 8px;
+            }
+
+            .session-content strong {
+                color: #333;
+                font-weight: 600;
+            }
+
+            .session-content em {
+                color: #555;
+            }
+
+            @media (max-width: 768px) {
+                .session-card {
+                    padding: 20px;
+                    margin-bottom: 15px;
+                }
+
+                .session-header h4 {
+                    font-size: 1.2rem;
+                }
+
+                .session-content p {
+                    font-size: 0.95rem;
+                }
+
+                .session-content ul {
+                    margin-left: 15px;
+                }
+            }
         </style>
     </head>
 
@@ -249,6 +317,203 @@
                         <strong>2025-26 Schedule:</strong> September 26, October
                         24, November 21, January, February, March, April, May
                     </p>
+                </div>
+
+                <!-- Complete Schedule -->
+                <div class="schedule-section" style="margin-bottom: 50px;">
+                    <h3
+                        style="text-align: center; font-size: 2rem; color: #333; margin-bottom: 30px;">2025-26
+                        Complete Schedule</h3>
+
+                    <!-- September Session -->
+                    <div class="session-card">
+                        <div class="session-header">
+                            <h4>September 26</h4>
+                        </div>
+                        <div class="session-content">
+                            <p><strong>Topics:</strong> Gospel-centered
+                                spirituality: Humility in Community and Boldness
+                                in Evangelism</p>
+                            <p><strong>Reading:</strong> Keller - Centrality of
+                                the Gospel (Please read before the 1st
+                                class)</p>
+                        </div>
+                    </div>
+
+                    <!-- October Session -->
+                    <div class="session-card">
+                        <div class="session-header">
+                            <h4>October 24</h4>
+                        </div>
+                        <div class="session-content">
+                            <p><strong>Topics:</strong> Missional Spirituality,
+                                Ecclesial Evangelism</p>
+                            <p><strong>Read for next time:</strong></p>
+                            <ul>
+                                <li>Newbigin's
+                                    "The Congregation as Hermeneutic of the Gospel,"
+                                    ch. 18 from <em>The Gospel in a Pluralist
+                                        Society</em></li>
+                                <li>"Sharing the Life of the Son: Mission as Love in Action,"
+                                    ch. 5 from <em>The Open Secret</em></li>
+                                <li>Study Guide for Rosaria Butterfield's
+                                    <em>The Gospel comes with a
+                                        HouseKey</em></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- November Session -->
+                    <div class="session-card">
+                        <div class="session-header">
+                            <h4>November 21</h4>
+                        </div>
+                        <div class="session-content">
+                            <p><strong>Topics:</strong> Missional Living,
+                                Hospitality</p>
+                            <p><strong>Read for next time:</strong></p>
+                            <ul>
+                                <li>Carl Trueman's <em>The Creedal
+                                        Imperative</em> (excerpts)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- January Session -->
+                    <div class="session-card">
+                        <div class="session-header">
+                            <h4>January 30</h4>
+                        </div>
+                        <div class="session-content">
+                            <p><strong>Topics:</strong> Confessional
+                                Spirituality, Bible Interpretation</p>
+                            <p><strong>Read for next time:</strong></p>
+                            <ul>
+                                <li>Michael Horton's Intro to Covenantal
+                                    Theology</li>
+                                <li>Michael Horton's <em>The Christian
+                                        Faith</em> - ch. On Scripture and
+                                    system</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- February Session -->
+                    <div class="session-card">
+                        <div class="session-header">
+                            <h4>February 27</h4>
+                        </div>
+                        <div class="session-content">
+                            <p><strong>Topics:</strong> Bible interpretation
+                                (cont.), Small Group Leadership</p>
+                            <p><strong>Read for next time:</strong></p>
+                            <ul>
+                                <li>Bryan Chappell's <em>Christ-Centered
+                                        Worship</em> (Chapters 1 & 7)</li>
+                                <li>James Torrance's <em>Worship, Community, and
+                                        the Triune God of Grace</em>
+                                    (excerpts)</li>
+                                <li>Schmemann's <em>Life of the World</em></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- March Session -->
+                    <div class="session-card">
+                        <div class="session-header">
+                            <h4>March 27</h4>
+                        </div>
+                        <div class="session-content">
+                            <p><strong>Topics:</strong> Sacramental Worship &
+                                Spirituality, Personal Devotion</p>
+                            <p><strong>Read for next time:</strong></p>
+                            <ul>
+                                <li>Bonhoeffer's <em>Life Together</em></li>
+                                <li>Cary, <em>Good News for Anxious
+                                        Christians</em> (excerpts)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- April Session -->
+                    <div class="session-card">
+                        <div class="session-header">
+                            <h4>April 24</h4>
+                        </div>
+                        <div class="session-content">
+                            <p><strong>Topics:</strong> Communal Spirituality,
+                                Lay Counseling</p>
+                            <p><strong>Read for next time:</strong></p>
+                            <ul>
+                                <li>Allender's <em>Cry of the Soul</em></li>
+                                <li>Thompson's <em>The Soul of Shame</em></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- May Session -->
+                    <div class="session-card">
+                        <div class="session-header">
+                            <h4>May 15/29</h4>
+                        </div>
+                        <div class="session-content">
+                            <p><strong>Topics:</strong> Communal Spirituality,
+                                Emotional & Relational Health</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Important Notes Section -->
+                <div class="notes-section"
+                    style="background: white; border-radius: 15px; padding: 30px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); margin-bottom: 40px;">
+                    <h3 style="color: #333; margin-bottom: 20px;">Important
+                        Notes</h3>
+                    <p
+                        style="color: #666; line-height: 1.7; margin-bottom: 15px;">
+                        <strong>Prerequisites:</strong> This class assumes
+                        participation in the Adult Sunday Studies "Total Christ"
+                        class. It is very important that you attend or listen to
+                        the recording and get the handouts. This class will be
+                        assuming that material and building on top of it. This
+                        class also assumes much of the "What We Believe" class,
+                        which is our core beliefs class.
+                    </p>
+                    <p style="color: #666; line-height: 1.7;">
+                        This class is for those interested in going deeper in
+                        their Christian faith, learning more about what it means
+                        to be a leader in the Church, and wanting to be
+                        challenged in their own life to follow Christ more
+                        radically.
+                    </p>
+                </div>
+
+                <!-- Extra Reading Section -->
+                <div class="reading-section"
+                    style="background: white; border-radius: 15px; padding: 30px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); margin-bottom: 40px;">
+                    <h3 style="color: #333; margin-bottom: 20px;">Suggested
+                        Reading List</h3>
+                    <p
+                        style="color: #666; line-height: 1.7; margin-bottom: 15px;">
+                        Besides reading more from the books we're choosing
+                        selections from, here's a suggested reading list for
+                        deeper engagement:
+                    </p>
+                    <ul
+                        style="color: #666; line-height: 1.9; margin-left: 20px;">
+                        <li>Dietrich Bonhoeffer's <em>Discipleship</em>
+                            (sometimes published as "Cost of Discipleship")</li>
+                        <li>Tim Keller's <em>Center Church</em></li>
+                        <li>Brian Devries' <em>You Will be My
+                                Witnesses</em></li>
+                        <li>Jack Miller's <em>A Praying Life</em></li>
+                        <li>Lesslie Newbigin's <em>The Open Secret</em></li>
+                        <li>Michael Horton's <em>The Christian Faith</em></li>
+                        <li>Michael Goheen's <em>A Light to the Nations: The
+                                Missional Church and the Biblical Story</em> and
+                            <em>The Church and its Vocation</em></li>
+                        <li>Ken Golden's <em>Presbytopia: What it means to be
+                                Presbyterian</em></li>
+                    </ul>
                 </div>
 
                 <!-- Resource Card -->
