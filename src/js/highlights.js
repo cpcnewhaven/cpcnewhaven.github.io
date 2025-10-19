@@ -202,7 +202,7 @@ class HighlightsManager {
         
         // Add featured image if available
         if (announcement.featuredImage) {
-            const imageContainer = this.createImageContainer(announcement.featuredImage);
+            const imageContainer = this.createImageContainer(announcement.featuredImage, announcement.imageDisplayType);
             element.appendChild(imageContainer);
         }
 
@@ -226,9 +226,14 @@ class HighlightsManager {
         return element;
     }
 
-    createImageContainer(imageUrl) {
+    createImageContainer(imageUrl, imageDisplayType) {
         const container = document.createElement('div');
         container.className = 'highlight-image-container';
+        
+        // Add special class for poster display type
+        if (imageDisplayType === 'poster') {
+            container.classList.add('poster-display');
+        }
         
         const image = document.createElement('img');
         image.src = imageUrl;

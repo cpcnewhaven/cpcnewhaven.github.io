@@ -39,10 +39,15 @@ document.addEventListener('DOMContentLoaded', function() {
                     const featuredImage = document.createElement('img');
                     featuredImage.src = announcement.featuredImage;
                     featuredImage.classList.add('featured-image');
+                    
+                    // Add poster class if specified
+                    if (announcement.imageDisplayType === 'poster') {
+                        featuredImage.classList.add('poster-image');
+                    }
+                    
                     featuredImage.style.width = '100%';
                     featuredImage.style.height = 'auto';
-                    featuredImage.style.maxHeight = '400px';
-                    featuredImage.style.objectFit = 'cover';
+                    featuredImage.style.objectFit = 'contain';
                     featuredImage.style.marginBottom = '1rem';
                     if (announcement.featuredImage.length > 400) {
                         featuredImage.style.backgroundAttachment = 'fixed';

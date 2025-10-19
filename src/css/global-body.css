@@ -2539,6 +2539,18 @@ p {
     color: black !important;
 }
 
+/* Poster image styling for homepage announcements */
+.featured-image.poster-image {
+    max-height: none !important;
+    min-height: 600px;
+}
+
+@media (max-width: 768px) {
+    .featured-image.poster-image {
+        min-height: 400px;
+    }
+}
+
 @media (max-width: 480px) {
     .announcement {
         min-width: auto;

@@ -80,6 +80,23 @@
     object-fit: cover;
 }
 
+/* Special styling for poster-type images */
+.highlight-image-container.poster-display {
+    height: auto;
+    min-height: 600px;
+    overflow: visible;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.highlight-image-container.poster-display .highlight-image {
+    width: 100%;
+    height: auto;
+    max-height: none;
+    object-fit: contain;
+}
+
 .highlight-content {
     padding: 1.5rem;
     flex: 1;
@@ -174,6 +191,11 @@
 
     .highlight-image-container {
         height: 150px;
+    }
+
+    .highlight-image-container.poster-display {
+        height: auto;
+        min-height: 400px;
     }
 
 

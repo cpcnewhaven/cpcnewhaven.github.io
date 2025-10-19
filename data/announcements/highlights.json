@@ -441,14 +441,16 @@
     },
     {
       "id": "2025-046",
-      "title": "CPC Family Tailgate: Penn v. Yale (Men's Ministry) | Saturday October 25",
+      "title": "CPC Family Tailgate: Penn v. Yale | Saturday October 25",
       "description": "Please join us at 10:30 am at 56 Roger Road, New Haven (Preston & Lisa Graham's home) for fellowship and a tailgate meal hosted by the CPC Men's Ministry. The Yale Bulldogs will be hosting the Penn Quakers at the Yale Bowl, beginning at noon. The Bowl is a short walk from our location, and please bring your own drinks and a folding chair (soft drinks and food will be provided). This is a family tailgate, all are welcome! Tickets to the game may be purchased at the gate or purchase online. RSVP to Pat Clendenen at <a href=\"mailto:pat.clendenen@gmail.com\">pat.clendenen@gmail.com</a>. Go Bulldogs!",
       "dateEntered": "2025-10-15",
       "active": "true",
       "type": "event",
       "category": "event",
       "tag": "fellowship",
-      "superfeatured": false
+      "superfeatured": false,
+      "featuredImage": "https://storage.googleapis.com/cpc-public-website/events/mensgroup/CPC%20FAMILY%20TAILGATE%20_%2001.jpg",
+      "imageDisplayType": "poster"
     },
     {
       "id": "2025-047",
