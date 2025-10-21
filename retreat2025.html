@@ -94,40 +94,23 @@
             </div>
         </div>
         
-      <div id="lightbox" class="lightbox hidden">
+        <div id="lightbox" class="lightbox">
             <div class="lightbox-content">
-                <div class="lightbox-counter">
-                    <span id="lightbox-counter">1 / 1</span>
-                </div>
-                
-                <div class="lightbox-controls">
-                    <button class="lightbox-btn" onclick="downloadImage()" title="Download">
-                        <i class="fas fa-download"></i>
-                    </button>
-                    <button class="lightbox-btn" onclick="shareImage()" title="Share">
-                        <i class="fas fa-share"></i>
-                    </button>
-                    <button class="lightbox-btn" onclick="closeLightbox()" title="Close">
-                        <i class="fas fa-times"></i>
-                    </button>
-                </div>
-                
                 <button class="lightbox-nav prev" onclick="previousImage()" title="Previous">
                     <i class="fas fa-chevron-left"></i>
                 </button>
                 
-        <img id="lightbox-img" alt />
+                <img id="lightbox-img" alt="" />
                 
                 <button class="lightbox-nav next" onclick="nextImage()" title="Next">
                     <i class="fas fa-chevron-right"></i>
                 </button>
                 
-                <div class="lightbox-info">
-                    <div class="lightbox-caption" id="lightbox-caption"></div>
-                    <div class="lightbox-meta" id="lightbox-meta"></div>
-                </div>
+                <button class="lightbox-close" onclick="closeLightbox()" title="Close">
+                    <i class="fas fa-times"></i>
+                </button>
             </div>
-      </div>
+        </div>
     </section>
 
     <footer>
@@ -239,22 +222,23 @@
             }
         }
         
-        /* Instagram-Style Lightbox */
+        /* Simple Lightbox */
         .lightbox { 
             position: fixed; 
-            inset: 0; 
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
             background: rgba(0,0,0,0.95); 
             display: none; 
             align-items: center; 
             justify-content: center; 
-            z-index: 9999; 
-            flex-direction: column;
-            backdrop-filter: blur(10px);
-            padding: 20px;
+            z-index: 99999; 
+            cursor: pointer;
         }
         
         .lightbox.show { 
-            display: flex; 
+            display: flex !important; 
         }
         
         .lightbox-content {
@@ -269,110 +253,55 @@
         }
         
         .lightbox img { 
-            max-width: 100%; 
-            max-height: 100%; 
-            border-radius: 12px; 
+            max-width: 90vw; 
+            max-height: 90vh; 
+            border-radius: 8px; 
             box-shadow: 0 20px 60px rgba(0,0,0,0.5);
             object-fit: contain;
+            cursor: default;
         }
         
-        /* Mobile Lightbox Controls */
-        .lightbox-controls {
+        /* Navigation Arrows */
+        .lightbox-nav {
             position: absolute;
-            top: 10px;
-            right: 10px;
-            display: flex;
-            gap: 8px;
-            z-index: 10000;
-        }
-        
-        .lightbox-btn {
+            top: 50%;
+            transform: translateY(-50%);
             background: rgba(255,255,255,0.2);
             border: none;
             color: white;
-            padding: 10px;
+            padding: 15px;
             border-radius: 50%;
             cursor: pointer;
-            font-size: 16px;
-            width: 40px;
-            height: 40px;
+            font-size: 20px;
+            width: 50px;
+            height: 50px;
             display: flex;
             align-items: center;
             justify-content: center;
             backdrop-filter: blur(10px);
             transition: all 0.3s ease;
-        }
-        
-        .lightbox-btn:hover {
-            background: rgba(255,255,255,0.3);
-            transform: scale(1.1);
-        }
-        
-        /* Tablet/Desktop Lightbox Controls */
-        @media (min-width: 768px) {
-            .lightbox-controls {
-                top: 20px;
-                right: 20px;
-                gap: 10px;
-            }
-            
-            .lightbox-btn {
-                padding: 12px;
-                font-size: 18px;
-                width: 44px;
-                height: 44px;
-            }
-        }
-        
-        /* Mobile Lightbox Info */
-        .lightbox-info {
-            position: absolute;
-            bottom: 10px;
-            left: 10px;
-            right: 10px;
-            background: rgba(0,0,0,0.7);
-            color: white;
-            padding: 15px;
-            border-radius: 12px;
-            backdrop-filter: blur(10px);
-        }
-        
-        .lightbox-caption {
-            font-size: 16px;
-            font-weight: 500;
-            margin-bottom: 6px;
-            line-height: 1.3;
-        }
-        
-        .lightbox-meta {
-            font-size: 12px;
             opacity: 0.8;
         }
         
-        /* Tablet/Desktop Lightbox Info */
-        @media (min-width: 768px) {
-            .lightbox-info {
-                bottom: 20px;
-                left: 20px;
-                right: 20px;
-                padding: 20px;
-            }
-            
-            .lightbox-caption {
-                font-size: 18px;
-                margin-bottom: 8px;
-            }
-            
-            .lightbox-meta {
-                font-size: 14px;
-            }
+        .lightbox-nav:hover {
+            background: rgba(255,255,255,0.3);
+            transform: translateY(-50%) scale(1.1);
+            opacity: 1;
         }
         
-        /* Mobile Navigation */
-        .lightbox-nav {
+        .lightbox-nav.prev {
+            left: 20px;
+        }
+        
+        .lightbox-nav.next {
+            right: 20px;
+        }
+        
+        /* Close Button */
+        .lightbox-close {
             position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
+            top: 20px;
+            right: 20px;
             background: rgba(255,255,255,0.2);
             border: none;
             color: white;
@@ -387,67 +316,42 @@
             justify-content: center;
             backdrop-filter: blur(10px);
             transition: all 0.3s ease;
-            opacity: 0.8;
         }
         
-        .lightbox:hover .lightbox-nav {
-            opacity: 1;
-        }
-        
-        .lightbox-nav:hover {
+        .lightbox-close:hover {
             background: rgba(255,255,255,0.3);
-            transform: translateY(-50%) scale(1.1);
+            transform: scale(1.1);
         }
         
-        .lightbox-nav.prev {
-            left: 10px;
-        }
-        
-        .lightbox-nav.next {
-            right: 10px;
-        }
-        
-        /* Tablet/Desktop Navigation */
-        @media (min-width: 768px) {
+        /* Mobile Navigation */
+        @media (max-width: 767px) {
             .lightbox-nav {
-                padding: 15px;
-                font-size: 20px;
-                width: 50px;
-                height: 50px;
-                opacity: 0;
+                padding: 12px;
+                font-size: 18px;
+                width: 44px;
+                height: 44px;
+                opacity: 1;
             }
             
             .lightbox-nav.prev {
-                left: 20px;
+                left: 10px;
             }
             
             .lightbox-nav.next {
-                right: 20px;
+                right: 10px;
+            }
+            
+            .lightbox-close {
+                top: 10px;
+                right: 10px;
+                padding: 10px;
+                font-size: 16px;
+                width: 40px;
+                height: 40px;
             }
         }
         
-        /* Mobile Counter */
-        .lightbox-counter {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            background: rgba(0,0,0,0.7);
-            color: white;
-            padding: 6px 12px;
-            border-radius: 20px;
-            font-size: 12px;
-            backdrop-filter: blur(10px);
-        }
         
-        /* Tablet/Desktop Counter */
-        @media (min-width: 768px) {
-            .lightbox-counter {
-                top: 20px;
-                left: 20px;
-                padding: 8px 16px;
-                font-size: 14px;
-            }
-        }
         
         /* Status Messages */
         .success-message {
@@ -676,6 +580,7 @@
                         loadedCount++;
                         
                         // Store image data for lightbox navigation
+                        const currentIndex = loadedImages.length;
                         loadedImages.push({
                             src: img.src,
                             alt: img.alt,
@@ -683,8 +588,7 @@
                         });
                         
                         img.onclick = () => {
-                            const imageIndex = loadedImages.length - 1;
-                            openLightbox(imageIndex);
+                            openLightbox(currentIndex);
                         };
                         galleryGrid.appendChild(img);
                         
@@ -757,16 +661,11 @@
             currentImageIndex = imageIndex;
             const lightbox = document.getElementById('lightbox');
             const lightboxImg = document.getElementById('lightbox-img');
-            const lightboxCaption = document.getElementById('lightbox-caption');
-            const lightboxMeta = document.getElementById('lightbox-meta');
-            const lightboxCounter = document.getElementById('lightbox-counter');
             
             const currentImage = loadedImages[currentImageIndex];
             
             lightboxImg.src = currentImage.src;
-            lightboxCaption.textContent = currentImage.alt;
-            lightboxMeta.textContent = `Retreat 2025 • ${currentImage.filename}`;
-            lightboxCounter.textContent = `${currentImageIndex + 1} / ${loadedImages.length}`;
+            lightboxImg.alt = currentImage.alt;
             
             lightbox.classList.add('show');
             document.body.style.overflow = 'hidden';
@@ -790,33 +689,6 @@
             openLightbox(currentImageIndex);
         }
 
-        function downloadImage() {
-            if (loadedImages.length === 0) return;
-            const currentImage = loadedImages[currentImageIndex];
-            const link = document.createElement('a');
-            link.href = currentImage.src;
-            link.download = currentImage.filename;
-            link.click();
-        }
-
-        function shareImage() {
-            if (loadedImages.length === 0) return;
-            const currentImage = loadedImages[currentImageIndex];
-            
-            if (navigator.share) {
-                navigator.share({
-                    title: 'Retreat 2025 Photo',
-                    text: currentImage.alt,
-                    url: currentImage.src
-                });
-            } else {
-                // Fallback: copy to clipboard
-                navigator.clipboard.writeText(currentImage.src).then(() => {
-                    showStatusMessage('Image URL copied to clipboard!', 'success');
-                });
-            }
-        }
-
         // Close lightbox when clicking outside the image
         document.getElementById('lightbox').addEventListener('click', function(e) {
             if (e.target === this) {
@@ -824,7 +696,7 @@
             }
         });
 
-        // Keyboard navigation for Instagram-style experience
+        // Keyboard navigation
         document.addEventListener('keydown', function(e) {
             const lightbox = document.getElementById('lightbox');
             if (!lightbox.classList.contains('show')) return;
@@ -837,10 +709,6 @@
                     previousImage();
                     break;
                 case 'ArrowRight':
-                    nextImage();
-                    break;
-                case ' ':
-                    e.preventDefault();
                     nextImage();
                     break;
             }
