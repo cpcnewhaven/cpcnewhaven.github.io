@@ -1,14 +1,299 @@
 {
   "images": [
     {
-      "id": "1zsVPlO7Zdlruu6JyLAjypbMTjMhgkyNW",
-      "url": "https://drive.google.com/uc?export=view&id=1zsVPlO7Zdlruu6JyLAjypbMTjMhgkyNW",
-      "name": "Retreat 2025 Group Photo",
-      "addedAt": "2025-01-27T00:00:00.000Z"
+      "filename": "0D28D2F4-E34E-4FFF-9FB6-FBD8BB15ED60.jpg",
+      "alt": "Retreat Photo 1",
+      "size": "3.3 MB"
+    },
+    {
+      "filename": "CPC Retreat 25 All.jpg",
+      "alt": "CPC Retreat 25 All",
+      "size": "1.6 MB"
+    },
+    {
+      "filename": "ED1ADD3A-6A89-46A7-88F1-710C2E3D5EC7.jpg",
+      "alt": "Retreat Photo 2",
+      "size": "3.3 MB"
+    },
+    {
+      "filename": "IMG_1081.JPG",
+      "alt": "Retreat Photo 3",
+      "size": "194.7 KB"
+    },
+    {
+      "filename": "IMG_8443.jpg",
+      "alt": "Retreat Photo 4",
+      "size": "3.1 MB"
+    },
+    {
+      "filename": "IMG_8446.jpg",
+      "alt": "Retreat Photo 5",
+      "size": "2.7 MB"
+    },
+    {
+      "filename": "IMG_8449.jpg",
+      "alt": "Retreat Photo 6",
+      "size": "5 MB"
+    },
+    {
+      "filename": "IMG_8455.jpg",
+      "alt": "Retreat Photo 7",
+      "size": "4.5 MB"
+    },
+    {
+      "filename": "IMG_8458.jpg",
+      "alt": "Retreat Photo 8",
+      "size": "4.5 MB"
+    },
+    {
+      "filename": "IMG_8459.jpg",
+      "alt": "Retreat Photo 9",
+      "size": "3.4 MB"
+    },
+    {
+      "filename": "IMG_8460.jpg",
+      "alt": "Retreat Photo 10",
+      "size": "4.8 MB"
+    },
+    {
+      "filename": "IMG_8461.jpg",
+      "alt": "Retreat Photo 11",
+      "size": "5.1 MB"
+    },
+    {
+      "filename": "IMG_8468.jpg",
+      "alt": "Retreat Photo 12",
+      "size": "6.7 MB"
+    },
+    {
+      "filename": "IMG_8473.jpg",
+      "alt": "Retreat Photo 13",
+      "size": "4.4 MB"
+    },
+    {
+      "filename": "IMG_8480.jpg",
+      "alt": "Retreat Photo 14",
+      "size": "4.4 MB"
+    },
+    {
+      "filename": "IMG_8484.jpg",
+      "alt": "Retreat Photo 15",
+      "size": "3.2 MB"
+    },
+    {
+      "filename": "IMG_8485.jpg",
+      "alt": "Retreat Photo 16",
+      "size": "4.6 MB"
+    },
+    {
+      "filename": "IMG_8487(1).jpg",
+      "alt": "Retreat Photo 17",
+      "size": "7.4 MB"
+    },
+    {
+      "filename": "IMG_8487.jpg",
+      "alt": "Retreat Photo 18",
+      "size": "7.4 MB"
+    },
+    {
+      "filename": "IMG_8488(1).jpg",
+      "alt": "Retreat Photo 19",
+      "size": "7.1 MB"
+    },
+    {
+      "filename": "IMG_8488.jpg",
+      "alt": "Retreat Photo 20",
+      "size": "7.1 MB"
+    },
+    {
+      "filename": "IMG_8543.jpg",
+      "alt": "Retreat Photo 21",
+      "size": "2.7 MB"
+    },
+    {
+      "filename": "IMG_8544.jpg",
+      "alt": "Retreat Photo 22",
+      "size": "2.5 MB"
+    },
+    {
+      "filename": "IMG_8548.jpg",
+      "alt": "Retreat Photo 23",
+      "size": "2.5 MB"
+    },
+    {
+      "filename": "IMG_8549.jpg",
+      "alt": "Retreat Photo 24",
+      "size": "2.1 MB"
+    },
+    {
+      "filename": "IMG_8552.jpg",
+      "alt": "Retreat Photo 25",
+      "size": "3.2 MB"
+    },
+    {
+      "filename": "IMG_8554.jpg",
+      "alt": "Retreat Photo 26",
+      "size": "1.4 MB"
+    },
+    {
+      "filename": "IMG_8558.jpg",
+      "alt": "Retreat Photo 27",
+      "size": "2.7 MB"
+    },
+    {
+      "filename": "IMG_8560.jpg",
+      "alt": "Retreat Photo 28",
+      "size": "3.3 MB"
+    },
+    {
+      "filename": "IMG_8563.jpg",
+      "alt": "Retreat Photo 29",
+      "size": "3.2 MB"
+    },
+    {
+      "filename": "IMG_9476.JPG",
+      "alt": "Retreat Photo 30",
+      "size": "3.2 MB"
+    },
+    {
+      "filename": "IMG_9478.jpg",
+      "alt": "Retreat Photo 31",
+      "size": "5.3 MB"
+    },
+    {
+      "filename": "IMG_9479.jpg",
+      "alt": "Retreat Photo 32",
+      "size": "4.6 MB"
+    },
+    {
+      "filename": "IMG_9482.jpg",
+      "alt": "Retreat Photo 33",
+      "size": "6.5 MB"
+    },
+    {
+      "filename": "IMG_9484.jpg",
+      "alt": "Retreat Photo 34",
+      "size": "5.2 MB"
+    },
+    {
+      "filename": "IMG_9486.jpg",
+      "alt": "Retreat Photo 35",
+      "size": "8.5 MB"
+    },
+    {
+      "filename": "IMG_9489.jpg",
+      "alt": "Retreat Photo 36",
+      "size": "3.9 MB"
+    },
+    {
+      "filename": "IMG_9492.jpg",
+      "alt": "Retreat Photo 37",
+      "size": "6.9 MB"
+    },
+    {
+      "filename": "IMG_9493.jpg",
+      "alt": "Retreat Photo 38",
+      "size": "9.4 MB"
+    },
+    {
+      "filename": "IMG_9494.jpg",
+      "alt": "Retreat Photo 39",
+      "size": "3.7 MB"
+    },
+    {
+      "filename": "IMG_9497.jpg",
+      "alt": "Retreat Photo 40",
+      "size": "3.9 MB"
+    },
+    {
+      "filename": "IMG_9499.jpg",
+      "alt": "Retreat Photo 41",
+      "size": "6.4 MB"
+    },
+    {
+      "filename": "IMG_9500.jpg",
+      "alt": "Retreat Photo 42",
+      "size": "9.3 MB"
+    },
+    {
+      "filename": "IMG_9633.JPG",
+      "alt": "Retreat Photo 43",
+      "size": "10.8 MB"
+    },
+    {
+      "filename": "IMG_9635.JPG",
+      "alt": "Retreat Photo 44",
+      "size": "6.7 MB"
+    },
+    {
+      "filename": "IMG_9641.JPG",
+      "alt": "Retreat Photo 45",
+      "size": "5.9 MB"
+    },
+    {
+      "filename": "IMG_9647.JPG",
+      "alt": "Retreat Photo 46",
+      "size": "5.3 MB"
+    },
+    {
+      "filename": "IMG_9658.JPG",
+      "alt": "Retreat Photo 47",
+      "size": "5.1 MB"
+    },
+    {
+      "filename": "PXL_20251011_004358498.jpg",
+      "alt": "Retreat Photo 48",
+      "size": "3.9 MB"
+    },
+    {
+      "filename": "PXL_20251011_004742758.jpg",
+      "alt": "Retreat Photo 49",
+      "size": "3 MB"
+    },
+    {
+      "filename": "PXL_20251011_182703391.jpg",
+      "alt": "Retreat Photo 50",
+      "size": "4.3 MB"
+    },
+    {
+      "filename": "PXL_20251011_184652321.jpg",
+      "alt": "Retreat Photo 51",
+      "size": "3.1 MB"
+    },
+    {
+      "filename": "PXL_20251011_185623162.jpg",
+      "alt": "Retreat Photo 52",
+      "size": "2 MB"
+    },
+    {
+      "filename": "PXL_20251011_192539351.MP.jpg",
+      "alt": "Retreat Photo 53",
+      "size": "10.4 MB"
+    },
+    {
+      "filename": "PXL_20251011_193217193.jpg",
+      "alt": "Retreat Photo 54",
+      "size": "2.9 MB"
+    },
+    {
+      "filename": "PXL_20251011_230655504.jpg",
+      "alt": "Retreat Photo 55",
+      "size": "3.2 MB"
+    },
+    {
+      "filename": "PXL_20251012_021516218.MP.jpg",
+      "alt": "Retreat Photo 56",
+      "size": "5.6 MB"
+    },
+    {
+      "filename": "PXL_20251012_144329814.MP.jpg",
+      "alt": "Retreat Photo 57",
+      "size": "6.8 MB"
+    },
+    {
+      "filename": "PXL_20251012_154356554.jpg",
+      "alt": "Retreat Photo 58",
+      "size": "2.9 MB"
     }
-  ],
-  "lastUpdated": "2025-01-27T00:00:00.000Z",
-  "totalImages": 1,
-  "instructions": "To add more images: 1) Use the gdrive-file-extractor.html tool to extract file IDs from Google Drive, 2) Add them to this JSON file, 3) Update the totalImages count"
+  ]
 }
-

@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-TL0WH5R1EK"></script>
-    <script>
+    <head>
+        <!-- Google tag (gtag.js) -->
+        <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-TL0WH5R1EK"></script>
+        <script>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
         dataLayer.push(arguments);
@@ -14,233 +14,107 @@
       gtag("config", "G-TL0WH5R1EK");
     </script>
 
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Retreat 2025 Photo Gallery - CPC New Haven Church. View photos from our church retreat and share memories with our community." />
-    <meta
-      name="keywords"
-      content="CPC New Haven, Retreat 2025, Photo Gallery, Church, New Haven, CT" />
-    <meta name="author" content="CPC New Haven" />
-    <title>Retreat 2025 Gallery | CPC New Haven</title>
-    <link rel="stylesheet" href="./src/css/global-body.css" />
-    <link rel="stylesheet" href="./src/css/global-footer-cta.css" />
-    <link rel="stylesheet" href="./src/css/highlights.css" />
-    <link
-      rel="icon"
-      href="https://storage.googleapis.com/cpc-public-website/web-assets/CPC%20-%20FAVICON%20-%20FALL%202024.png"
-      type="image/png" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-  </head>
-  <body>
-    <header id="stickyHeader" class="sticky">
-      <nav class="main-navigation">
-        <a href="index.html">Home</a>
-        <a href="sundays.html">Sundays</a>
-        <a href="about.html">About</a>
-        <a href="podcasts.html">Podcasts</a>
-        <a href="announcements.html">Announcements</a>
-        <a href="community.html">Community</a>
-        <a href="live.html">Live</a>
-        <a href="resources.html">Resources</a>
-        <a href="give.html">Give</a>
-      </nav>
-    </header>
-
-    <!-- MOBILE HAMBURGER-->
-    <div class="hamburger-menu-button-container" id="hamburgerMenu">
-      <i id="closeMobileMenuButton" class="fas fa-bars"></i>
-    </div>
-
-    <!-- Mobile Navigation -->
-    <nav class="mobile-navigation" id="mobileNavigation">
-      <div class="mobile-nav-header">
-        <button id="closeMenuButton" aria-label="Close menu">
-          <i class="fas fa-times"></i>
-        </button>
-      </div>
-      <ul class="mobile-nav-links">
-        <li><a class="mobile-menu-link" href="index.html">Home</a></li>
-        <li><a class="mobile-menu-link" href="sundays.html">Sundays</a></li>
-        <li><a class="mobile-menu-link" href="about.html">About</a></li>
-        <li><a class="mobile-menu-link" href="podcasts.html">Podcasts</a></li>
-        <li><a class="mobile-menu-link" href="announcements.html">Announcements</a></li>
-        <li><a class="mobile-menu-link" href="community.html">Community</a></li>
-        <li><a class="mobile-menu-link" href="live.html">Live</a></li>
-        <li><a class="mobile-menu-link" href="resources.html">Resources</a></li>
-        <li><a class="mobile-menu-link" href="give.html">Give</a></li>
-      </ul>
-    </nav>
-
-    <section class="mid-splash-welcome sticky">
-      <h1 class="headline">Retreat 2025 Photo Gallery</h1>
-    </section>
-
-    <section class="gallery-actions" style="padding:20px; text-align:center;">
-      <a class="widget-cta-btn"
-        href="https://console.cloud.google.com/storage/browser/cpc-public-website/retreat2025"
-        target="_blank" rel="noopener">Upload Photos</a>
-    </section>
-
-    <!-- Gallery Container -->
-    <section id="retreat2025-gallery" style="padding: 20px;">
-        <div id="gallery-grid" class="gallery-grid">
-            <div id="loading-message" style="text-align: center; padding: 40px; color: #666;">
-                <i class="fas fa-spinner fa-spin" style="font-size: 2rem; margin-bottom: 20px;"></i>
-                <p>Loading photos from Google Cloud Storage...</p>
-            </div>
-        </div>
-        
-        <div id="lightbox" class="lightbox">
-            <div class="lightbox-content">
-                <button class="lightbox-nav prev" onclick="previousImage()" title="Previous">
-                    <i class="fas fa-chevron-left"></i>
-                </button>
-                
-                <img id="lightbox-img" alt="" />
-                
-                <button class="lightbox-nav next" onclick="nextImage()" title="Next">
-                    <i class="fas fa-chevron-right"></i>
-                </button>
-                
-                <button class="lightbox-close" onclick="closeLightbox()" title="Close">
-                    <i class="fas fa-times"></i>
-                </button>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-      <div class="footer-content-logo">
-        <a href="index.html">
-          <img src="./assets/CPC_LOGO_24.png" alt="CPC New Haven Church"
-            class="top-splash-logo">
-        </a>
-      </div>
-      <p>© 2025 Christ Presbyterian Church.</p>
-    </footer>
-
-    <style>
-        /* Super Responsive Gallery Grid */
-        .gallery-grid { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); 
-            gap: 8px; 
-            max-width: 1400px; 
-            margin: 0 auto; 
-            padding: 0 10px;
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Retreat 2025 Photo Gallery - CPC New Haven Church. View photos from our church retreat and share memories with our community." />
+        <meta
+            name="keywords"
+            content="CPC New Haven, Retreat 2025, Photo Gallery, Church, New Haven, CT" />
+        <meta name="author" content="CPC New Haven" />
+        <title>Retreat 2025 Gallery | CPC New Haven</title>
+        <link rel="stylesheet" href="./src/css/global-body.css" />
+        <link rel="stylesheet" href="./src/css/global-footer-cta.css" />
+        <link rel="stylesheet" href="./src/css/highlights.css" />
+        <link
+            rel="icon"
+            href="https://storage.googleapis.com/cpc-public-website/web-assets/CPC%20-%20FAVICON%20-%20FALL%202024.png"
+            type="image/png" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+        <style>
+        /* Gallery Grid - Centered and Responsive */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 12px;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+            justify-items: center;
+            align-items: start;
         }
-        
-        .gallery-grid img { 
-            width: 100%; 
-            height: 120px; 
-            object-fit: cover; 
-            border-radius: 6px; 
-            cursor: pointer; 
+
+        .gallery-item {
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
             transition: all 0.3s ease;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            cursor: pointer;
+            width: 100%;
+            max-width: 300px;
         }
-        
-        .gallery-grid img:hover {
+
+        .gallery-item:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover img {
             transform: scale(1.05);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
         }
-        
-        /* Small Mobile (320px+) */
-        @media (min-width: 320px) {
-            .gallery-grid {
-                grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-                gap: 10px;
-            }
-            
-            .gallery-grid img {
-                height: 140px;
-            }
+
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: #666;
         }
-        
-        /* Large Mobile (480px+) */
-        @media (min-width: 480px) {
-            .gallery-grid {
-                grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-                gap: 12px;
-            }
-            
-            .gallery-grid img {
-                height: 160px;
-            }
+
+        .loading i {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            display: block;
         }
-        
-        /* Tablet Portrait (768px+) */
-        @media (min-width: 768px) {
-            .gallery-grid {
-                grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-                gap: 14px;
-                padding: 0 20px;
-            }
-            
-            .gallery-grid img {
-                height: 180px;
-            }
+
+        .error {
+            background: #f8d7da;
+            color: #721c24;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            margin: 20px;
         }
-        
-        /* Tablet Landscape (1024px+) */
-        @media (min-width: 1024px) {
-            .gallery-grid {
-                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-                gap: 16px;
-            }
-            
-            .gallery-grid img {
-                height: 200px;
-            }
-        }
-        
-        /* Desktop (1200px+) */
-        @media (min-width: 1200px) {
-            .gallery-grid {
-                grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-                gap: 18px;
-            }
-            
-            .gallery-grid img {
-                height: 220px;
-            }
-        }
-        
-        /* Large Desktop (1400px+) */
-        @media (min-width: 1400px) {
-            .gallery-grid {
-                grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-                gap: 20px;
-            }
-            
-            .gallery-grid img {
-                height: 240px;
-            }
-        }
-        
-        /* Simple Lightbox */
-        .lightbox { 
-            position: fixed; 
+
+        /* Lightbox - Fixed z-index */
+        .lightbox {
+            position: fixed;
             top: 0;
             left: 0;
             width: 100vw;
             height: 100vh;
-            background: rgba(0,0,0,0.95); 
-            display: none; 
-            align-items: center; 
-            justify-content: center; 
-            z-index: 999999 !important; 
+            background: rgba(0, 0, 0, 0.95);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 999999 !important;
             cursor: pointer;
         }
-        
-        .lightbox.show { 
-            display: flex !important; 
+
+        .lightbox.active {
+            display: flex !important;
         }
-        
+
         .lightbox-content {
             position: relative;
             width: 100%;
@@ -251,22 +125,21 @@
             max-width: 100vw;
             max-height: 100vh;
         }
-        
-        .lightbox img { 
-            max-width: 90vw; 
-            max-height: 90vh; 
-            border-radius: 8px; 
+
+        .lightbox img {
+            max-width: 90vw;
+            max-height: 90vh;
+            border-radius: 8px;
             box-shadow: 0 20px 60px rgba(0,0,0,0.5);
             object-fit: contain;
             cursor: default;
         }
-        
-        /* Navigation Arrows */
+
         .lightbox-nav {
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
-            background: rgba(255,255,255,0.2);
+            background: rgba(255, 255, 255, 0.2);
             border: none;
             color: white;
             padding: 15px;
@@ -283,27 +156,26 @@
             opacity: 0.8;
             z-index: 1000000;
         }
-        
+
         .lightbox-nav:hover {
-            background: rgba(255,255,255,0.3);
+            background: rgba(255, 255, 255, 0.3);
             transform: translateY(-50%) scale(1.1);
             opacity: 1;
         }
-        
+
         .lightbox-nav.prev {
             left: 20px;
         }
-        
+
         .lightbox-nav.next {
             right: 20px;
         }
-        
-        /* Close Button */
+
         .lightbox-close {
             position: absolute;
             top: 20px;
             right: 20px;
-            background: rgba(255,255,255,0.2);
+            background: rgba(255, 255, 255, 0.2);
             border: none;
             color: white;
             padding: 12px;
@@ -319,403 +191,268 @@
             transition: all 0.3s ease;
             z-index: 1000000;
         }
-        
+
         .lightbox-close:hover {
-            background: rgba(255,255,255,0.3);
+            background: rgba(255, 255, 255, 0.3);
             transform: scale(1.1);
         }
-        
-        /* Mobile Navigation */
-        @media (max-width: 767px) {
-            .lightbox-nav {
-                padding: 12px;
-                font-size: 18px;
-                width: 44px;
-                height: 44px;
-                opacity: 1;
+
+        /* Mobile Responsiveness */
+        @media (max-width: 1200px) {
+            .gallery-grid {
+                max-width: 1000px;
+                padding: 15px;
             }
-            
+        }
+
+        @media (max-width: 768px) {
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                gap: 8px;
+                padding: 15px;
+                max-width: 100%;
+            }
+
+            .gallery-item {
+                max-width: 100%;
+            }
+
+            .gallery-item img {
+                height: 150px;
+            }
+
+            .lightbox-nav {
+                width: 40px;
+                height: 40px;
+                font-size: 16px;
+            }
+
             .lightbox-nav.prev {
                 left: 10px;
             }
-            
+
             .lightbox-nav.next {
                 right: 10px;
             }
-            
-            .lightbox-close {
-                top: 10px;
-                right: 10px;
+        }
+
+        @media (max-width: 480px) {
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+                gap: 6px;
                 padding: 10px;
-                font-size: 16px;
-                width: 40px;
-                height: 40px;
             }
-        }
-        
-        
-        
-        /* Status Messages */
-        .success-message {
-            background: #d4edda;
-            color: #155724;
-            padding: 15px;
-            border-radius: 8px;
-            text-align: center;
-            margin: 15px 10px;
-            font-size: 14px;
-        }
-        
-        .error-message {
-            background: #f8d7da;
-            color: #721c24;
-            padding: 15px;
-            border-radius: 8px;
-            text-align: center;
-            margin: 15px 10px;
-            font-size: 14px;
-        }
-        
-        /* Tablet/Desktop Status Messages */
-        @media (min-width: 768px) {
-            .success-message,
-            .error-message {
-                padding: 20px;
-                margin: 20px 0;
-                font-size: 16px;
-            }
-        }
-        
-        /* Mobile Gallery Actions */
-        .gallery-actions {
-            padding: 15px 10px !important;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-        
-        .gallery-actions .widget-cta-btn {
-            width: 100%;
-            margin: 0 !important;
-        }
-        
-        /* Tablet Gallery Actions */
-        @media (min-width: 768px) {
-            .gallery-actions {
-                padding: 20px !important;
-                flex-direction: row;
-                justify-content: center;
-                gap: 15px;
-            }
-            
-            .gallery-actions .widget-cta-btn {
-                width: auto;
-                margin-left: 10px !important;
-            }
-        }
-        
-        /* Loading Message */
-        #loading-message {
-            text-align: center;
-            padding: 40px 20px;
-            color: #666;
-        }
-        
-        #loading-message i {
-            font-size: 2rem;
-            margin-bottom: 20px;
-        }
-        
-        #loading-message p {
-            font-size: 16px;
-            margin: 0;
-        }
-        
-        /* Mobile Loading */
-        @media (max-width: 767px) {
-            #loading-message {
-                padding: 30px 15px;
-            }
-            
-            #loading-message i {
-                font-size: 1.5rem;
-                margin-bottom: 15px;
-            }
-            
-            #loading-message p {
-                font-size: 14px;
-            }
-        }
-        
-        /* Touch-friendly interactions */
-        @media (hover: none) {
-            .gallery-grid img:hover {
-                transform: none;
-            }
-            
-            .lightbox-btn:hover,
-            .lightbox-nav:hover {
-                transform: none;
-                background: rgba(255,255,255,0.2);
+
+            .gallery-item img {
+                height: 120px;
             }
         }
     </style>
+    </head>
+    <body>
+        <header id="stickyHeader" class="sticky">
+            <nav class="main-navigation">
+                <a href="index.html">Home</a>
+                <a href="sundays.html">Sundays</a>
+                <a href="about.html">About</a>
+                <a href="podcasts.html">Podcasts</a>
+                <a href="announcements.html">Announcements</a>
+                <a href="community.html">Community</a>
+                <a href="live.html">Live</a>
+                <a href="resources.html">Resources</a>
+                <a href="give.html">Give</a>
+            </nav>
+        </header>
 
-    <script>
-        // Google Cloud Storage configuration
+        <!-- MOBILE HAMBURGER-->
+        <div class="hamburger-menu-button-container" id="hamburgerMenu">
+            <i id="closeMobileMenuButton" class="fas fa-bars"></i>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <nav class="mobile-navigation" id="mobileNavigation">
+            <div class="mobile-nav-header">
+                <button id="closeMenuButton" aria-label="Close menu">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <ul class="mobile-nav-links">
+                <li><a class="mobile-menu-link" href="index.html">Home</a></li>
+                <li><a class="mobile-menu-link"
+                        href="sundays.html">Sundays</a></li>
+                <li><a class="mobile-menu-link" href="about.html">About</a></li>
+                <li><a class="mobile-menu-link"
+                        href="podcasts.html">Podcasts</a></li>
+                <li><a class="mobile-menu-link"
+                        href="announcements.html">Announcements</a></li>
+                <li><a class="mobile-menu-link"
+                        href="community.html">Community</a></li>
+                <li><a class="mobile-menu-link" href="live.html">Live</a></li>
+                <li><a class="mobile-menu-link"
+                        href="resources.html">Resources</a></li>
+                <li><a class="mobile-menu-link" href="give.html">Give</a></li>
+            </ul>
+        </nav>
+
+        <section class="mid-splash-welcome sticky">
+            <h1 class="headline">Retreat 2025 Photo Gallery</h1>
+        </section>
+
+        <section class="gallery-actions"
+            style="padding:20px; text-align:center;">
+            <a class="widget-cta-btn"
+                href="https://console.cloud.google.com/storage/browser/cpc-public-website/retreat2025"
+                target="_blank" rel="noopener">Upload Photos</a>
+        </section>
+
+        <!-- Gallery Container -->
+        <section id="retreat2025-gallery" style="padding: 20px;">
+            <div id="loading" class="loading">
+                <i class="fas fa-spinner fa-spin"></i>
+                Loading photos...
+            </div>
+
+            <div id="gallery" class="gallery-grid" style="display: none;"></div>
+
+            <div id="error" class="error" style="display: none;"></div>
+        </section>
+
+        <!-- Lightbox -->
+        <div id="lightbox" class="lightbox">
+            <div class="lightbox-content">
+                <button class="lightbox-close" onclick="closeLightbox()">
+                    <i class="fas fa-times"></i>
+                </button>
+                <button class="lightbox-nav prev" onclick="previousImage()">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <img id="lightbox-img" alt>
+                <button class="lightbox-nav next" onclick="nextImage()">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+
+        <footer>
+            <div class="footer-content-logo">
+                <a href="index.html">
+                    <img src="./assets/CPC_LOGO_24.png"
+                        alt="CPC New Haven Church"
+                        class="top-splash-logo">
+                </a>
+            </div>
+            <p>© 2025 Christ Presbyterian Church.</p>
+        </footer>
+
+        <script>
         const BUCKET_NAME = 'cpc-public-website';
         const FOLDER_NAME = 'retreat2025';
         const BASE_URL = `https://storage.googleapis.com/${BUCKET_NAME}/${FOLDER_NAME}`;
 
-        // Global variables for lightbox
+        let images = [];
         let currentImageIndex = 0;
-        let loadedImages = [];
 
-        // All image files from your bucket (excluding videos) - Updated with JPG versions
-        const allImages = [
-            '0D28D2F4-E34E-4FFF-9FB6-FBD8BB15ED60.jpg',
-            'CPC Retreat 25 All.jpg',
-            'ED1ADD3A-6A89-46A7-88F1-710C2E3D5EC7.jpg',
-            'IMG_1081.JPG',
-            'IMG_8443.jpg',
-            'IMG_8446.jpg',
-            'IMG_8449.jpg',
-            'IMG_8455.jpg',
-            'IMG_8458.jpg',
-            'IMG_8459.jpg',
-            'IMG_8460.jpg',
-            'IMG_8461.jpg',
-            'IMG_8468.jpg',
-            'IMG_8473.jpg',
-            'IMG_8480.jpg',
-            'IMG_8484.jpg',
-            'IMG_8485.jpg',
-            'IMG_8487(1).jpg',
-            'IMG_8487.jpg',
-            'IMG_8488(1).jpg',
-            'IMG_8488.jpg',
-            'IMG_8543.jpg',
-            'IMG_8544.jpg',
-            'IMG_8548.jpg',
-            'IMG_8549.jpg',
-            'IMG_8552.jpg',
-            'IMG_8554.jpg',
-            'IMG_8558.jpg',
-            'IMG_8560.jpg',
-            'IMG_8563.jpg',
-            'IMG_9476.JPG',
-            'IMG_9478.jpg',
-            'IMG_9479.jpg',
-            'IMG_9482.jpg',
-            'IMG_9484.jpg',
-            'IMG_9486.jpg',
-            'IMG_9489.jpg',
-            'IMG_9492.jpg',
-            'IMG_9493.jpg',
-            'IMG_9494.jpg',
-            'IMG_9497.jpg',
-            'IMG_9499.jpg',
-            'IMG_9500.jpg',
-            'IMG_9633.JPG',
-            'IMG_9635.JPG',
-            'IMG_9641.JPG',
-            'IMG_9647.JPG',
-            'IMG_9658.JPG',
-            'PXL_20251011_004358498.jpg',
-            'PXL_20251011_004742758.jpg',
-            'PXL_20251011_182703391.jpg',
-            'PXL_20251011_184652321.jpg',
-            'PXL_20251011_185623162.jpg',
-            'PXL_20251011_192539351.MP.jpg',
-            'PXL_20251011_193217193.jpg',
-            'PXL_20251011_230655504.jpg',
-            'PXL_20251012_021516218.MP.jpg',
-            'PXL_20251012_144329814.MP.jpg',
-            'PXL_20251012_154356554.jpg'
-        ];
+        async function loadGallery() {
+            const loading = document.getElementById('loading');
+            const gallery = document.getElementById('gallery');
+            const error = document.getElementById('error');
 
-        // Function to convert HEIC to JPG URL (using Google Cloud's image processing)
-        function getImageUrl(filename) {
-            const baseUrl = `${BASE_URL}/${encodeURIComponent(filename)}`;
-            
-            // If it's a HEIC file, try to convert it to JPG
-            if (filename.toLowerCase().endsWith('.heic')) {
-                // Try the original HEIC first, then fallback to JPG conversion
-                return baseUrl;
-            }
-            
-            return baseUrl;
-        }
+            try {
+                const response = await fetch('./data/retreat2025-images.json');
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
 
-        function loadImagesFromBucket() {
-            const galleryGrid = document.getElementById('gallery-grid');
-            const loadingMessage = document.getElementById('loading-message');
-            
-            // Clear previous content
-            galleryGrid.innerHTML = '';
-            loadedImages = []; // Reset loaded images array
-            loadingMessage.style.display = 'block';
-            loadingMessage.innerHTML = `
-                <i class="fas fa-spinner fa-spin" style="font-size: 2rem; margin-bottom: 20px;"></i>
-                <p>Loading photos from Google Cloud Storage...</p>
-            `;
-            
-            // Use the complete list of images
-            let loadedCount = 0;
-            let errorCount = 0;
-            const batchSize = 10; // Load images in batches for better performance
-            let currentBatch = 0;
-            
-            function loadBatch() {
-                const startIndex = currentBatch * batchSize;
-                const endIndex = Math.min(startIndex + batchSize, allImages.length);
-                
-                for (let i = startIndex; i < endIndex; i++) {
-                    const filename = allImages[i];
-                    const img = document.createElement('img');
-                    img.loading = 'lazy'; // Enable lazy loading
-                    img.src = getImageUrl(filename);
-                    img.alt = filename.replace(/\.(jpg|jpeg|png|heic)$/i, '').replace(/[_-]/g, ' ');
+                const data = await response.json();
+                images = data.images;
+
+                if (images.length === 0) {
+                    throw new Error('No images found in data');
+                }
+
+                // Hide loading, show gallery
+                loading.style.display = 'none';
+                gallery.style.display = 'grid';
+
+                // Load images in batches for better performance
+                const batchSize = 20;
+                let currentBatch = 0;
+
+                function loadBatch() {
+                    const startIndex = currentBatch * batchSize;
+                    const endIndex = Math.min(startIndex + batchSize, images.length);
                     
-                    img.onload = () => {
-                        loadedCount++;
-                        
-                        // Store image data for lightbox navigation
-                        const currentIndex = loadedImages.length;
-                        loadedImages.push({
-                            src: img.src,
-                            alt: img.alt,
-                            filename: filename
-                        });
-                        
-                        img.onclick = () => {
-                            console.log('Image clicked, index:', currentIndex);
-                            openLightbox(currentIndex);
+                    for (let i = startIndex; i < endIndex; i++) {
+                        const imageData = images[i];
+                        const galleryItem = document.createElement('div');
+                        galleryItem.className = 'gallery-item';
+                        galleryItem.onclick = () => openLightbox(i);
+
+                        const img = document.createElement('img');
+                        img.src = `${BASE_URL}/${encodeURIComponent(imageData.filename)}`;
+                        img.alt = imageData.alt || 'Retreat Photo';
+                        img.loading = 'lazy';
+
+                        img.onerror = () => {
+                            console.warn('Failed to load:', imageData.filename);
                         };
-                        galleryGrid.appendChild(img);
-                        
-                        // Hide loading message when first image loads
-                        if (loadedCount === 1) {
-                            loadingMessage.style.display = 'none';
-                        }
-                        
-                        // Show success message when all images are processed
-                        if (loadedCount + errorCount === allImages.length) {
-                            if (loadedCount > 0) {
-                                showStatusMessage(`Loaded ${loadedCount} photos successfully! (${errorCount} failed to load)`, 'success');
-                            }
-                        }
-                    };
+
+                        galleryItem.appendChild(img);
+                        gallery.appendChild(galleryItem);
+                    }
                     
-                    img.onerror = () => {
-                        errorCount++;
-                        console.warn(`Failed to load: ${filename}`);
-                        
-                        // Show progress message
-                        if (loadedCount + errorCount === allImages.length) {
-                            if (loadedCount === 0) {
-                                showStatusMessage('No images could be loaded. Please check your bucket permissions.', 'error');
-                            } else {
-                                showStatusMessage(`Loaded ${loadedCount} photos successfully! (${errorCount} failed to load)`, 'success');
-                            }
-                        }
-                    };
+                    currentBatch++;
+                    if (endIndex < images.length) {
+                        setTimeout(loadBatch, 100);
+                    }
                 }
-                
-                currentBatch++;
-                
-                // Load next batch after a short delay
-                if (endIndex < allImages.length) {
-                    setTimeout(loadBatch, 100);
-                }
+
+                loadBatch();
+
+            } catch (err) {
+                console.error('Error loading gallery:', err);
+                loading.style.display = 'none';
+                error.style.display = 'block';
+                error.innerHTML = `
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <strong>Error loading gallery:</strong> ${err.message}
+                `;
             }
-            
-            // Start loading batches
-            loadBatch();
         }
 
-
-        function showStatusMessage(message, type) {
-            const existingMessage = document.querySelector('.status-message');
-            if (existingMessage) {
-                existingMessage.remove();
-            }
-            
-            const messageDiv = document.createElement('div');
-            messageDiv.className = `status-message ${type}-message`;
-            messageDiv.innerHTML = `
-                <i class="fas fa-${type === 'success' ? 'check-circle' : 'exclamation-triangle'}"></i>
-                ${message}
-            `;
-            
-            const gallery = document.getElementById('retreat2025-gallery');
-            gallery.insertBefore(messageDiv, gallery.firstChild);
-            
-            // Auto-hide after 5 seconds
-            setTimeout(() => {
-                messageDiv.remove();
-            }, 5000);
-        }
-
-        function openLightbox(imageIndex) {
-            console.log('Opening lightbox for image:', imageIndex);
-            if (loadedImages.length === 0) {
-                console.log('No images loaded');
-                return;
-            }
-            
-            currentImageIndex = imageIndex;
+        function openLightbox(index) {
+            currentImageIndex = index;
             const lightbox = document.getElementById('lightbox');
             const lightboxImg = document.getElementById('lightbox-img');
             
-            console.log('Lightbox element:', lightbox);
-            console.log('Lightbox img element:', lightboxImg);
+            lightboxImg.src = `${BASE_URL}/${encodeURIComponent(images[index].filename)}`;
+            lightboxImg.alt = images[index].alt;
             
-            const currentImage = loadedImages[currentImageIndex];
-            console.log('Current image data:', currentImage);
-            
-            lightboxImg.src = currentImage.src;
-            lightboxImg.alt = currentImage.alt;
-            
-            console.log('Adding show class to lightbox');
-            lightbox.classList.add('show');
-            console.log('Lightbox classes after:', lightbox.className);
-            console.log('Computed display style:', window.getComputedStyle(lightbox).display);
+            lightbox.classList.add('active');
             document.body.style.overflow = 'hidden';
         }
 
         function closeLightbox() {
             const lightbox = document.getElementById('lightbox');
-            lightbox.classList.remove('show');
+            lightbox.classList.remove('active');
             document.body.style.overflow = 'auto';
         }
 
         function nextImage() {
-            if (loadedImages.length === 0) return;
-            currentImageIndex = (currentImageIndex + 1) % loadedImages.length;
+            currentImageIndex = (currentImageIndex + 1) % images.length;
             openLightbox(currentImageIndex);
         }
 
         function previousImage() {
-            if (loadedImages.length === 0) return;
-            currentImageIndex = (currentImageIndex - 1 + loadedImages.length) % loadedImages.length;
+            currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
             openLightbox(currentImageIndex);
         }
 
-        // Close lightbox when clicking outside the image
-        document.addEventListener('click', function(e) {
-            const lightbox = document.getElementById('lightbox');
-            if (lightbox && lightbox.classList.contains('show') && e.target === lightbox) {
-                closeLightbox();
-            }
-        });
-
         // Keyboard navigation
-        document.addEventListener('keydown', function(e) {
+        document.addEventListener('keydown', (e) => {
             const lightbox = document.getElementById('lightbox');
-            if (!lightbox || !lightbox.classList.contains('show')) return;
-            
+            if (!lightbox.classList.contains('active')) return;
+
             switch(e.key) {
                 case 'Escape':
                     closeLightbox();
@@ -729,17 +466,18 @@
             }
         });
 
-        // Automatically load images when page loads
-        window.addEventListener('load', () => {
-            // Test if lightbox element exists
-            const lightbox = document.getElementById('lightbox');
-            console.log('Lightbox element on page load:', lightbox);
-            
-            setTimeout(loadImagesFromBucket, 500);
+        // Close lightbox when clicking outside image
+        document.getElementById('lightbox').addEventListener('click', (e) => {
+            if (e.target.id === 'lightbox') {
+                closeLightbox();
+            }
         });
+
+        // Load gallery when page loads
+        window.addEventListener('load', loadGallery);
     </script>
 
-    <!-- Mobile Menu Toggle Script -->
-    <script src="./src/js/function_toggle_mobileMenu.js"></script>
-  </body>
+        <!-- Mobile Menu Toggle Script -->
+        <script src="./src/js/function_toggle_mobileMenu.js"></script>
+    </body>
 </html>
