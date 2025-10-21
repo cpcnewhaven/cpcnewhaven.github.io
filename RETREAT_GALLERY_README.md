@@ -1,116 +1,138 @@
-# Retreat 2025 Photo Gallery System
+# Retreat 2025 Gallery - Google Drive Integration (Static Edition)
 
-This document explains how to manage the Retreat 2025 photo gallery on the CPC New Haven website.
+This gallery supports pulling images directly from your Google Drive folder using a **static-only approach** perfect for GitHub Pages and other static hosting platforms.
 
 ## Overview
 
-The gallery system allows community members to upload photos to a Google Drive folder, which are then displayed dynamically on the `retreat2025.html` page. The system includes:
+The retreat gallery uses a simple, reliable approach to fetch images from Google Drive:
 
-- **Public Gallery**: Displays photos on the website
-- **Upload Link**: Directs users to the Google Drive folder for uploading
-- **Admin Tools**: Tools for managing the gallery content
+1. **JSON file** with manually extracted file IDs (primary method)
+2. **Fallback** with predefined file IDs in the JavaScript
 
-## Files Structure
+## Quick Start
+
+### Method 1: Using the Gallery Manager Tool (Recommended)
+
+1. Open `admin/gdrive-gallery-manager.html` in your browser
+2. Follow the step-by-step instructions to extract file IDs from your Google Drive folder
+3. Copy the generated JSON and update `data/retreat2025-images.json`
+4. The gallery will automatically load the new images
+
+### Method 2: Manual Extraction
+
+1. Open your Google Drive folder: https://drive.google.com/drive/folders/1zsVPlO7Zdlruu6JyLAjypbMTjMhgkyNW
+2. Open browser developer tools (F12)
+3. Go to Console tab
+4. Run the extraction script from `scripts/extract-gdrive-file-ids.js`
+5. Copy the output and update the JSON file
+
+### Method 3: Manual File ID Entry
+
+1. Open `admin/gdrive-gallery-manager.html`
+2. Go to the "Manual Entry" tab
+3. Enter file IDs one per line
+4. Generate the JSON and update the file
+
+## File Structure
 
 ```
 ├── retreat2025.html                    # Main gallery page
-├── src/js/retreat2025-dynamic.js      # Gallery display logic
-├── data/retreat2025-images.json       # Gallery data (images list)
-├── admin/retreat-gallery-admin.html   # Admin interface
-└── scripts/update-retreat-gallery.js  # Command-line tool
+├── src/js/retreat2025-dynamic.js       # Gallery JavaScript
+├── data/retreat2025-images.json        # Image data (JSON)
+├── admin/
+│   ├── gdrive-gallery-manager.html     # Advanced gallery manager tool
+│   └── gdrive-file-extractor.html      # Simple file ID extraction tool
+├── scripts/
+│   ├── extract-gdrive-file-ids.js      # Browser console script
+│   └── update-retreat-gallery.js       # Gallery update utilities
 ```
 
 ## How It Works
 
-1. **Upload Photos**: Community members upload photos to the Google Drive folder
-2. **Add to Gallery**: Admin adds the photos to the gallery using the admin tools
-3. **Display**: Photos are automatically displayed on the website
+### Image URL Format
 
-## Google Drive Setup
+Google Drive images are accessed using this URL format:
+```
+https://drive.google.com/uc?export=view&id={FILE_ID}
+```
 
-The gallery uses this Google Drive folder:
-- **URL**: https://drive.google.com/drive/folders/1zsVPlO7Zdlruu6JyLAjypbMTjMhgkyNW
-- **Access**: Anyone with the link can view and upload
-- **Permissions**: Set to "Anyone with the link can view"
+### JSON Structure
 
-## Adding Photos to the Gallery
-
-### Method 1: Using the Admin Interface (Recommended)
-
-1. Open `admin/retreat-gallery-admin.html` in a web browser
-2. Go to the Google Drive folder and right-click on an image
-3. Select "Get link" and copy the share URL
-4. Paste the URL in the admin form and add a description
-5. Click "Add Image"
-
-### Method 2: Using the Command Line Tool
-
-1. Open terminal in the project directory
-2. Run: `node scripts/update-retreat-gallery.js`
-3. Follow the prompts to add images
-
-### Method 3: Manual JSON Editing
-
-1. Open `data/retreat2025-images.json`
-2. Add image objects to the `images` array:
+The `retreat2025-images.json` file should follow this structure:
 
 ```json
 {
-  "url": "https://drive.google.com/uc?export=view&id=FILE_ID",
-  "name": "Description of the photo",
-  "addedAt": "2025-01-27T00:00:00.000Z"
+  "images": [
+    {
+      "id": "FILE_ID_FROM_GOOGLE_DRIVE",
+      "url": "https://drive.google.com/uc?export=view&id=FILE_ID_FROM_GOOGLE_DRIVE",
+      "name": "Descriptive Name",
+      "addedAt": "2025-01-27T00:00:00.000Z"
+    }
+  ],
+  "lastUpdated": "2025-01-27T00:00:00.000Z",
+  "totalImages": 1
 }
 ```
 
-## Converting Google Drive URLs
-
-Google Drive share URLs need to be converted to direct image URLs:
-
-**From**: `https://drive.google.com/file/d/FILE_ID/view?usp=sharing`
-**To**: `https://drive.google.com/uc?export=view&id=FILE_ID`
-
-The admin tools automatically handle this conversion.
-
-## Gallery Features
-
-- **Responsive Design**: Works on desktop and mobile
-- **Lightbox**: Click images to view full-size
-- **Lazy Loading**: Images load as needed for better performance
-- **Error Handling**: Shows appropriate messages for missing images
-- **Empty State**: Encourages photo uploads when gallery is empty
-
 ## Troubleshooting
 
-### Images Not Loading
-- Check that the Google Drive URL is correct
-- Ensure the image is publicly accessible
-- Verify the URL conversion (share URL → direct URL)
+### No Images Loading
 
-### Admin Interface Not Working
-- Make sure you're running a local server (the admin page needs to make HTTP requests)
-- Check browser console for error messages
-- Ensure the data file exists and is valid JSON
+1. Check that the Google Drive folder is publicly accessible
+2. Verify that file IDs are correctly formatted (20+ characters)
+3. Ensure the JSON file is valid JSON
+4. Check browser console for error messages
 
-### Gallery Not Updating
-- Clear browser cache
-- Check that the JSON file was saved correctly
-- Verify the JavaScript file is loading without errors
+### Images Not Displaying
 
-## Best Practices
+1. Verify the Google Drive file IDs are correct
+2. Check that the images are actually image files (JPG, PNG, etc.)
+3. Ensure the Google Drive folder permissions allow public viewing
 
-1. **Image Descriptions**: Use descriptive names for photos
-2. **File Sizes**: Keep images under 5MB for better loading
-3. **Regular Updates**: Add new photos regularly to keep the gallery fresh
-4. **Quality Control**: Review photos before adding to ensure they're appropriate
-5. **Backup**: Keep a backup of the JSON file
+### File ID Extraction Issues
 
-## Technical Notes
+1. Make sure you're on the correct Google Drive folder page
+2. Try refreshing the page and running the extraction script again
+3. Use the manual entry method in the file extractor tool
 
-- The gallery uses vanilla JavaScript (no external dependencies)
-- Images are loaded asynchronously for better performance
-- The system is designed to work with static hosting (GitHub Pages)
-- No server-side processing is required
+## Updating Images
+
+To add new images to the gallery:
+
+1. Upload images to the Google Drive folder
+2. Use the file extractor tool to get new file IDs
+3. Add the new file IDs to the JSON file
+4. Update the `totalImages` count
+5. Refresh the gallery page
+
+## Features
+
+- **Automatic loading**: Images load automatically when the page opens
+- **Lightbox view**: Click any image to view it in full size
+- **Responsive design**: Gallery adapts to different screen sizes
+- **Error handling**: Graceful fallbacks when images fail to load
+- **Loading states**: Visual feedback during image loading
+
+## Browser Compatibility
+
+- Modern browsers with ES6+ support
+- Requires JavaScript enabled
+- **Perfect for static hosting** (GitHub Pages, Netlify, Vercel, etc.)
+
+## Security Notes
+
+- Google Drive folder must be publicly accessible
+- File IDs are not sensitive information
+- No authentication required for public folders
+- Images are served directly from Google Drive
+- **No server-side dependencies** - works with static hosting
 
 ## Support
 
-For technical issues or questions about the gallery system, contact the website administrator.
+If you encounter issues:
+
+1. Check the browser console for error messages
+2. Verify the Google Drive folder is accessible
+3. Test with a small number of images first
+4. Use the file extractor tool to verify file IDs are correct

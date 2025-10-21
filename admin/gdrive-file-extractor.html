@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Drive File ID Extractor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        .step {
+            margin: 20px 0;
+            padding: 15px;
+            background: #f8f9fa;
+            border-left: 4px solid #007bff;
+            border-radius: 5px;
+        }
+        .step h3 {
+            margin-top: 0;
+            color: #007bff;
+        }
+        .code-block {
+            background: #2d3748;
+            color: #e2e8f0;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            overflow-x: auto;
+            margin: 10px 0;
+        }
+        .button {
+            background: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px 5px;
+        }
+        .button:hover {
+            background: #0056b3;
+        }
+        .result {
+            background: #d4edda;
+            border: 1px solid #c3e6cb;
+            color: #155724;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+        .error {
+            background: #f8d7da;
+            border: 1px solid #f5c6cb;
+            color: #721c24;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+        .file-list {
+            max-height: 300px;
+            overflow-y: auto;
+            border: 1px solid #ddd;
+            padding: 10px;
+            background: #f9f9f9;
+        }
+        .file-item {
+            padding: 5px;
+            border-bottom: 1px solid #eee;
+            font-family: monospace;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Google Drive File ID Extractor</h1>
+        <p>This tool helps you extract file IDs from your Google Drive folder for the retreat gallery.</p>
+        
+        <div class="step">
+            <h3>Step 1: Open Google Drive Folder</h3>
+            <p>First, open your Google Drive folder in a new tab:</p>
+            <a href="https://drive.google.com/drive/folders/1zsVPlO7Zdlruu6JyLAjypbMTjMhgkyNW" target="_blank" class="button">Open Google Drive Folder</a>
+        </div>
+        
+        <div class="step">
+            <h3>Step 2: Extract File IDs</h3>
+            <p>Once the folder is open, follow these steps:</p>
+            <ol>
+                <li>Press F12 to open Developer Tools</li>
+                <li>Go to the Console tab</li>
+                <li>Paste and run the code below</li>
+            </ol>
+            
+            <div class="code-block">
+// Google Drive File ID Extractor
+function extractGoogleDriveFileIds() {
+    const fileIds = [];
+    
+    // Try multiple selectors to find file elements
+    const selectors = [
+        '[data-id]',
+        '[data-target-id]',
+        '[data-file-id]',
+        '.goog-drive-picker-item[data-id]',
+        '.goog-drive-picker-item[data-target-id]'
+    ];
+    
+    selectors.forEach(selector => {
+        const elements = document.querySelectorAll(selector);
+        elements.forEach(element => {
+            const fileId = element.getAttribute('data-id') || 
+                          element.getAttribute('data-target-id') || 
+                          element.getAttribute('data-file-id');
+            if (fileId && fileId.length > 20 && !fileIds.includes(fileId)) {
+                fileIds.push(fileId);
+            }
+        });
+    });
+    
+    // Also try to extract from the page source
+    const pageSource = document.documentElement.outerHTML;
+    const idRegex = /"id":"([a-zA-Z0-9_-]{20,})"/g;
+    let match;
+    while ((match = idRegex.exec(pageSource)) !== null) {
+        if (!fileIds.includes(match[1])) {
+            fileIds.push(match[1]);
+        }
+    }
+    
+    console.log('Found file IDs:', fileIds);
+    
+    // Generate JSON for the gallery
+    const galleryData = {
+        images: fileIds.map(id => ({
+            id: id,
+            url: `https://drive.google.com/uc?export=view&id=${id}`,
+            name: `Retreat Photo ${id.substring(0, 8)}`
+        }))
+    };
+    
+    console.log('Gallery JSON:');
+    console.log(JSON.stringify(galleryData, null, 2));
+    
+    // Copy to clipboard if possible
+    if (navigator.clipboard) {
+        navigator.clipboard.writeText(JSON.stringify(galleryData, null, 2))
+            .then(() => console.log('JSON copied to clipboard!'))
+            .catch(err => console.log('Could not copy to clipboard:', err));
+    }
+    
+    return fileIds;
+}
+
+// Run the extraction
+extractGoogleDriveFileIds();
+            </div>
+        </div>
+        
+        <div class="step">
+            <h3>Step 3: Update Gallery</h3>
+            <p>Copy the JSON output from the console and use it to update your gallery:</p>
+            <ul>
+                <li>Update the <code>data/retreat2025-images.json</code> file with the new data</li>
+                <li>The gallery will automatically load the new images on the next page refresh</li>
+            </ul>
+            
+            <div class="result">
+                <h4>Quick Update Method:</h4>
+                <p>1. Copy the JSON from the console</p>
+                <p>2. Replace the contents of <code>data/retreat2025-images.json</code></p>
+                <p>3. Save the file and refresh the gallery page</p>
+            </div>
+        </div>
+        
+        <div class="step">
+            <h3>Alternative: Manual File ID Entry</h3>
+            <p>If the automatic extraction doesn't work, you can manually enter file IDs:</p>
+            <div id="manual-entry">
+                <textarea id="fileIds" placeholder="Enter file IDs, one per line..." style="width: 100%; height: 100px; margin: 10px 0;"></textarea>
+                <button class="button" onclick="processManualIds()">Process File IDs</button>
+                <div id="manual-result"></div>
+            </div>
+        </div>
+        
+        <div class="step">
+            <h3>Instructions for Developers</h3>
+            <p>To integrate this with your gallery:</p>
+            <ol>
+                <li>Run the extraction script on the Google Drive folder</li>
+                <li>Copy the generated JSON</li>
+                <li>Update <code>data/retreat2025-images.json</code> with the new data</li>
+                <li>The gallery will automatically load the new images</li>
+            </ol>
+        </div>
+    </div>
+
+    <script>
+        function processManualIds() {
+            const textarea = document.getElementById('fileIds');
+            const resultDiv = document.getElementById('manual-result');
+            
+            const fileIds = textarea.value
+                .split('\n')
+                .map(id => id.trim())
+                .filter(id => id.length > 20);
+            
+            if (fileIds.length === 0) {
+                resultDiv.innerHTML = '<div class="error">No valid file IDs found. Please enter file IDs that are at least 20 characters long.</div>';
+                return;
+            }
+            
+            const galleryData = {
+                images: fileIds.map(id => ({
+                    id: id,
+                    url: `https://drive.google.com/uc?export=view&id=${id}`,
+                    name: `Retreat Photo ${id.substring(0, 8)}`
+                }))
+            };
+            
+            resultDiv.innerHTML = `
+                <div class="result">
+                    <h4>Generated JSON for ${fileIds.length} images:</h4>
+                    <div class="file-list">
+                        ${fileIds.map(id => `<div class="file-item">${id}</div>`).join('')}
+                    </div>
+                    <div class="code-block">${JSON.stringify(galleryData, null, 2)}</div>
+                    <button class="button" onclick="copyToClipboard('${JSON.stringify(galleryData).replace(/'/g, "\\'")}')">Copy JSON</button>
+                </div>
+            `;
+        }
+        
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text)
+                .then(() => alert('JSON copied to clipboard!'))
+                .catch(err => console.log('Could not copy to clipboard:', err));
+        }
+    </script>
+</body>
+</html>

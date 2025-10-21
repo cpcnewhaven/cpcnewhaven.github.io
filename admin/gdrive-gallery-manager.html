@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Drive Gallery Manager - Static Edition</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .step {
+            margin: 25px 0;
+            padding: 20px;
+            background: #f8f9fa;
+            border-left: 5px solid #007bff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .step h3 {
+            margin-top: 0;
+            color: #007bff;
+            display: flex;
+            align-items: center;
+        }
+        .step-number {
+            background: #007bff;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            font-weight: bold;
+        }
+        .code-block {
+            background: #2d3748;
+            color: #e2e8f0;
+            padding: 20px;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            overflow-x: auto;
+            margin: 15px 0;
+            position: relative;
+        }
+        .copy-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #4a5568;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 12px;
+        }
+        .copy-btn:hover {
+            background: #2d3748;
+        }
+        .button {
+            background: linear-gradient(45deg, #007bff, #0056b3);
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px 5px;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        .button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+        .button:active {
+            transform: translateY(0);
+        }
+        .result {
+            background: #d4edda;
+            border: 1px solid #c3e6cb;
+            color: #155724;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+        .error {
+            background: #f8d7da;
+            border: 1px solid #f5c6cb;
+            color: #721c24;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+        .file-list {
+            max-height: 300px;
+            overflow-y: auto;
+            border: 1px solid #ddd;
+            padding: 15px;
+            background: #f9f9f9;
+            border-radius: 5px;
+        }
+        .file-item {
+            padding: 8px;
+            border-bottom: 1px solid #eee;
+            font-family: monospace;
+            font-size: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .file-item:last-child {
+            border-bottom: none;
+        }
+        .file-id {
+            color: #666;
+        }
+        .file-name {
+            color: #333;
+            font-weight: bold;
+        }
+        .status {
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 11px;
+            font-weight: bold;
+        }
+        .status.success {
+            background: #d4edda;
+            color: #155724;
+        }
+        .status.error {
+            background: #f8d7da;
+            color: #721c24;
+        }
+        .status.loading {
+            background: #d1ecf1;
+            color: #0c5460;
+        }
+        .instructions {
+            background: #e7f3ff;
+            border: 1px solid #b3d9ff;
+            color: #004085;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .instructions h4 {
+            margin-top: 0;
+            color: #004085;
+        }
+        .tab-container {
+            margin: 20px 0;
+        }
+        .tab-buttons {
+            display: flex;
+            margin-bottom: 20px;
+        }
+        .tab-button {
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px 5px 0 0;
+            margin-right: 2px;
+        }
+        .tab-button.active {
+            background: #007bff;
+            color: white;
+            border-color: #007bff;
+        }
+        .tab-content {
+            display: none;
+            padding: 20px;
+            border: 1px solid #dee2e6;
+            border-radius: 0 5px 5px 5px;
+            background: white;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        .progress-bar {
+            width: 100%;
+            height: 20px;
+            background: #e9ecef;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 10px 0;
+        }
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(45deg, #007bff, #0056b3);
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 Google Drive Gallery Manager</h1>
+        <p style="text-align: center; color: #666; margin-bottom: 30px;">
+            Extract file IDs from your Google Drive folder and update your static gallery
+        </p>
+        
+        <div class="tab-container">
+            <div class="tab-buttons">
+                <button class="tab-button active" onclick="showTab('extract')">📁 Extract File IDs</button>
+                <button class="tab-button" onclick="showTab('manual')">✏️ Manual Entry</button>
+                <button class="tab-button" onclick="showTab('help')">❓ Help</button>
+            </div>
+            
+            <div id="extract-tab" class="tab-content active">
+                <div class="step">
+                    <h3><span class="step-number">1</span>Open Google Drive Folder</h3>
+                    <p>First, open your Google Drive folder in a new tab:</p>
+                    <a href="https://drive.google.com/drive/folders/1zsVPlO7Zdlruu6JyLAjypbMTjMhgkyNW" target="_blank" class="button">🔗 Open Google Drive Folder</a>
+                </div>
+                
+                <div class="step">
+                    <h3><span class="step-number">2</span>Extract File IDs</h3>
+                    <p>Once the folder is open, follow these steps:</p>
+                    <ol>
+                        <li>Press <strong>F12</strong> to open Developer Tools</li>
+                        <li>Go to the <strong>Console</strong> tab</li>
+                        <li>Paste and run the code below</li>
+                    </ol>
+                    
+                    <div class="code-block">
+                        <button class="copy-btn" onclick="copyToClipboard('extract-code')">Copy</button>
+                        <div id="extract-code">
+// Advanced Google Drive File ID Extractor
+function extractGoogleDriveFileIds() {
+    console.log('🔍 Starting file ID extraction...');
+    const fileIds = [];
+    const fileNames = [];
+    
+    // Multiple extraction methods
+    const methods = [
+        // Method 1: Data attributes
+        () => {
+            const selectors = ['[data-id]', '[data-target-id]', '[data-file-id]'];
+            selectors.forEach(selector => {
+                document.querySelectorAll(selector).forEach(element => {
+                    const fileId = element.getAttribute('data-id') || 
+                                  element.getAttribute('data-target-id') || 
+                                  element.getAttribute('data-file-id');
+                    if (fileId && fileId.length > 20) {
+                        fileIds.push(fileId);
+                        fileNames.push(element.getAttribute('aria-label') || 'Unknown');
+                    }
+                });
+            });
+        },
+        
+        // Method 2: Page source regex
+        () => {
+            const pageSource = document.documentElement.outerHTML;
+            const idRegex = /"id":"([a-zA-Z0-9_-]{20,})"/g;
+            let match;
+            while ((match = idRegex.exec(pageSource)) !== null) {
+                if (!fileIds.includes(match[1])) {
+                    fileIds.push(match[1]);
+                    fileNames.push('Extracted from source');
+                }
+            }
+        },
+        
+        // Method 3: Google Drive specific selectors
+        () => {
+            const driveSelectors = [
+                '.goog-drive-picker-item[data-id]',
+                '.goog-drive-picker-item[data-target-id]',
+                '[role="gridcell"][data-id]',
+                '.drive-picker-item[data-id]'
+            ];
+            driveSelectors.forEach(selector => {
+                document.querySelectorAll(selector).forEach(element => {
+                    const fileId = element.getAttribute('data-id') || 
+                                  element.getAttribute('data-target-id');
+                    if (fileId && fileId.length > 20 && !fileIds.includes(fileId)) {
+                        fileIds.push(fileId);
+                        fileNames.push(element.textContent?.trim() || 'Unknown');
+                    }
+                });
+            });
+        }
+    ];
+    
+    // Run all extraction methods
+    methods.forEach(method => {
+        try {
+            method();
+        } catch (error) {
+            console.warn('Extraction method failed:', error);
+        }
+    });
+    
+    console.log(`✅ Found ${fileIds.length} file IDs:`, fileIds);
+    
+    // Generate gallery JSON
+    const galleryData = {
+        images: fileIds.map((id, index) => ({
+            id: id,
+            url: `https://drive.google.com/uc?export=view&id=${id}`,
+            name: fileNames[index] || `Retreat Photo ${id.substring(0, 8)}`,
+            addedAt: new Date().toISOString()
+        })),
+        lastUpdated: new Date().toISOString(),
+        totalImages: fileIds.length,
+        instructions: "Generated by Google Drive Gallery Manager"
+    };
+    
+    console.log('📋 Gallery JSON:');
+    console.log(JSON.stringify(galleryData, null, 2));
+    
+    // Copy to clipboard
+    if (navigator.clipboard) {
+        navigator.clipboard.writeText(JSON.stringify(galleryData, null, 2))
+            .then(() => console.log('📋 JSON copied to clipboard!'))
+            .catch(err => console.log('❌ Could not copy to clipboard:', err));
+    }
+    
+    return { fileIds, galleryData };
+}
+
+// Run the extraction
+extractGoogleDriveFileIds();
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <h3><span class="step-number">3</span>Update Gallery</h3>
+                    <div class="instructions">
+                        <h4>📝 Quick Update Instructions:</h4>
+                        <ol>
+                            <li>Copy the JSON output from the console</li>
+                            <li>Open <code>data/retreat2025-images.json</code> in your editor</li>
+                            <li>Replace the entire contents with the copied JSON</li>
+                            <li>Save the file</li>
+                            <li>Refresh your gallery page</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="manual-tab" class="tab-content">
+                <div class="step">
+                    <h3>Manual File ID Entry</h3>
+                    <p>If the automatic extraction doesn't work, you can manually enter file IDs:</p>
+                    <div id="manual-entry">
+                        <textarea id="fileIds" placeholder="Enter file IDs, one per line..." style="width: 100%; height: 120px; margin: 15px 0; padding: 15px; border: 1px solid #ddd; border-radius: 5px; font-family: monospace;"></textarea>
+                        <button class="button" onclick="processManualIds()">🔄 Process File IDs</button>
+                        <div id="manual-result"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="help-tab" class="tab-content">
+                <div class="step">
+                    <h3>❓ Troubleshooting</h3>
+                    <div class="instructions">
+                        <h4>Common Issues:</h4>
+                        <ul>
+                            <li><strong>No file IDs found:</strong> Make sure you're on the correct Google Drive folder page</li>
+                            <li><strong>Extraction fails:</strong> Try refreshing the page and running the script again</li>
+                            <li><strong>Images don't load:</strong> Verify file IDs are correct and images are publicly accessible</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <h3>📚 How It Works</h3>
+                    <p>This tool extracts file IDs from Google Drive and creates a JSON file that your static gallery can read. The gallery uses these file IDs to construct direct image URLs.</p>
+                    <div class="code-block">
+                        <div>Image URL Format:</div>
+                        <div>https://drive.google.com/uc?export=view&id={FILE_ID}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showTab(tabName) {
+            // Hide all tabs
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            document.querySelectorAll('.tab-button').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            // Show selected tab
+            document.getElementById(tabName + '-tab').classList.add('active');
+            event.target.classList.add('active');
+        }
+        
+        function copyToClipboard(elementId) {
+            const element = document.getElementById(elementId);
+            const text = element.textContent || element.innerText;
+            
+            navigator.clipboard.writeText(text)
+                .then(() => {
+                    const btn = event.target;
+                    const originalText = btn.textContent;
+                    btn.textContent = 'Copied!';
+                    btn.style.background = '#28a745';
+                    setTimeout(() => {
+                        btn.textContent = originalText;
+                        btn.style.background = '#4a5568';
+                    }, 2000);
+                })
+                .catch(err => {
+                    console.log('Could not copy to clipboard:', err);
+                    alert('Could not copy to clipboard. Please select and copy manually.');
+                });
+        }
+        
+        function processManualIds() {
+            const textarea = document.getElementById('fileIds');
+            const resultDiv = document.getElementById('manual-result');
+            
+            const fileIds = textarea.value
+                .split('\n')
+                .map(id => id.trim())
+                .filter(id => id.length > 20);
+            
+            if (fileIds.length === 0) {
+                resultDiv.innerHTML = '<div class="error">❌ No valid file IDs found. Please enter file IDs that are at least 20 characters long.</div>';
+                return;
+            }
+            
+            const galleryData = {
+                images: fileIds.map(id => ({
+                    id: id,
+                    url: `https://drive.google.com/uc?export=view&id=${id}`,
+                    name: `Retreat Photo ${id.substring(0, 8)}`,
+                    addedAt: new Date().toISOString()
+                })),
+                lastUpdated: new Date().toISOString(),
+                totalImages: fileIds.length,
+                instructions: "Generated by Google Drive Gallery Manager - Manual Entry"
+            };
+            
+            resultDiv.innerHTML = `
+                <div class="result">
+                    <h4>✅ Generated JSON for ${fileIds.length} images:</h4>
+                    <div class="file-list">
+                        ${fileIds.map(id => `<div class="file-item"><span class="file-name">${id.substring(0, 8)}...</span><span class="file-id">${id}</span></div>`).join('')}
+                    </div>
+                    <div class="code-block">
+                        <button class="copy-btn" onclick="copyToClipboard('manual-json')">Copy</button>
+                        <div id="manual-json">${JSON.stringify(galleryData, null, 2)}</div>
+                    </div>
+                    <button class="button" onclick="copyToClipboard('manual-json')">📋 Copy JSON</button>
+                </div>
+            `;
+        }
+    </script>
+</body>
+</html>
