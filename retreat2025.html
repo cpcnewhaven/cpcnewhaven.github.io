@@ -588,6 +588,7 @@
                         });
                         
                         img.onclick = () => {
+                            console.log('Image clicked, index:', currentIndex);
                             openLightbox(currentIndex);
                         };
                         galleryGrid.appendChild(img);
@@ -656,18 +657,29 @@
         }
 
         function openLightbox(imageIndex) {
-            if (loadedImages.length === 0) return;
+            console.log('Opening lightbox for image:', imageIndex);
+            if (loadedImages.length === 0) {
+                console.log('No images loaded');
+                return;
+            }
             
             currentImageIndex = imageIndex;
             const lightbox = document.getElementById('lightbox');
             const lightboxImg = document.getElementById('lightbox-img');
             
+            console.log('Lightbox element:', lightbox);
+            console.log('Lightbox img element:', lightboxImg);
+            
             const currentImage = loadedImages[currentImageIndex];
+            console.log('Current image data:', currentImage);
             
             lightboxImg.src = currentImage.src;
             lightboxImg.alt = currentImage.alt;
             
+            console.log('Adding show class to lightbox');
             lightbox.classList.add('show');
+            console.log('Lightbox classes after:', lightbox.className);
+            console.log('Computed display style:', window.getComputedStyle(lightbox).display);
             document.body.style.overflow = 'hidden';
         }
 
@@ -690,8 +702,9 @@
         }
 
         // Close lightbox when clicking outside the image
-        document.getElementById('lightbox').addEventListener('click', function(e) {
-            if (e.target === this) {
+        document.addEventListener('click', function(e) {
+            const lightbox = document.getElementById('lightbox');
+            if (lightbox && lightbox.classList.contains('show') && e.target === lightbox) {
                 closeLightbox();
             }
         });
@@ -699,7 +712,7 @@
         // Keyboard navigation
         document.addEventListener('keydown', function(e) {
             const lightbox = document.getElementById('lightbox');
-            if (!lightbox.classList.contains('show')) return;
+            if (!lightbox || !lightbox.classList.contains('show')) return;
             
             switch(e.key) {
                 case 'Escape':
@@ -716,6 +729,10 @@
 
         // Automatically load images when page loads
         window.addEventListener('load', () => {
+            // Test if lightbox element exists
+            const lightbox = document.getElementById('lightbox');
+            console.log('Lightbox element on page load:', lightbox);
+            
             setTimeout(loadImagesFromBucket, 500);
         });
     </script>
