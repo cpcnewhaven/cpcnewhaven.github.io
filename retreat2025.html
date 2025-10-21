@@ -75,6 +75,16 @@
             transform: scale(1.05);
         }
 
+        /* Shimmer loading animation */
+        @keyframes shimmer {
+            0% {
+                background-position: -200% 0;
+            }
+            100% {
+                background-position: 200% 0;
+            }
+        }
+
         .loading {
             text-align: center;
             padding: 40px;
@@ -351,6 +361,26 @@
 
         let images = [];
         let currentImageIndex = 0;
+        let imageObserver;
+
+        // Intersection Observer for better lazy loading
+        function initImageObserver() {
+            imageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        if (img.dataset.src) {
+                            img.src = img.dataset.src;
+                            img.removeAttribute('data-src');
+                            observer.unobserve(img);
+                        }
+                    }
+                });
+            }, {
+                rootMargin: '50px 0px',
+                threshold: 0.01
+            });
+        }
 
         async function loadGallery() {
             const loading = document.getElementById('loading');
@@ -388,17 +418,58 @@
                         galleryItem.className = 'gallery-item';
                         galleryItem.onclick = () => openLightbox(i);
 
+                        // Create responsive image with multiple sizes
+                        const picture = document.createElement('picture');
+                        
+                        // WebP source (preferred)
+                        const webpSource = document.createElement('source');
+                        webpSource.type = 'image/webp';
+                        webpSource.srcset = `
+                            ${BASE_URL}/${encodeURIComponent(imageData.filename)}?w=200&h=200&f=webp&q=80 200w,
+                            ${BASE_URL}/${encodeURIComponent(imageData.filename)}?w=400&h=400&f=webp&q=80 400w,
+                            ${BASE_URL}/${encodeURIComponent(imageData.filename)}?w=600&h=600&f=webp&q=80 600w
+                        `.replace(/\s+/g, ' ').trim();
+                        webpSource.sizes = '(max-width: 480px) 120px, (max-width: 768px) 150px, (max-width: 1200px) 200px, 300px';
+                        
+                        // JPEG fallback
+                        const jpegSource = document.createElement('source');
+                        jpegSource.type = 'image/jpeg';
+                        jpegSource.srcset = `
+                            ${BASE_URL}/${encodeURIComponent(imageData.filename)}?w=200&h=200&f=jpg&q=80 200w,
+                            ${BASE_URL}/${encodeURIComponent(imageData.filename)}?w=400&h=400&f=jpg&q=80 400w,
+                            ${BASE_URL}/${encodeURIComponent(imageData.filename)}?w=600&h=600&f=jpg&q=80 600w
+                        `.replace(/\s+/g, ' ').trim();
+                        jpegSource.sizes = '(max-width: 480px) 120px, (max-width: 768px) 150px, (max-width: 1200px) 200px, 300px';
+                        
+                        // Fallback img element with intersection observer
                         const img = document.createElement('img');
-                        img.src = `${BASE_URL}/${encodeURIComponent(imageData.filename)}`;
+                        img.dataset.src = `${BASE_URL}/${encodeURIComponent(imageData.filename)}?w=400&h=400&f=webp&q=80`;
                         img.alt = imageData.alt || 'Retreat Photo';
-                        img.loading = 'lazy';
+                        img.decoding = 'async';
+                        
+                        // Add placeholder while loading
+                        img.style.background = 'linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%)';
+                        img.style.backgroundSize = '200% 100%';
+                        img.style.animation = 'shimmer 1.5s infinite';
 
                         img.onerror = () => {
-                            console.warn('Failed to load:', imageData.filename);
+                            console.warn('Failed to load compressed version, trying original:', imageData.filename);
+                            // Fallback to original image if compressed version fails
+                            img.src = `${BASE_URL}/${encodeURIComponent(imageData.filename)}`;
                         };
 
-                        galleryItem.appendChild(img);
+                        // Assemble the picture element
+                        picture.appendChild(webpSource);
+                        picture.appendChild(jpegSource);
+                        picture.appendChild(img);
+                        
+                        galleryItem.appendChild(picture);
                         gallery.appendChild(galleryItem);
+                        
+                        // Observe the image for lazy loading
+                        if (imageObserver) {
+                            imageObserver.observe(img);
+                        }
                     }
                     
                     currentBatch++;
@@ -425,8 +496,47 @@
             const lightbox = document.getElementById('lightbox');
             const lightboxImg = document.getElementById('lightbox-img');
             
-            lightboxImg.src = `${BASE_URL}/${encodeURIComponent(images[index].filename)}`;
+            // Create responsive lightbox image with multiple sizes
+            const picture = document.createElement('picture');
+            
+            // WebP source (preferred)
+            const webpSource = document.createElement('source');
+            webpSource.type = 'image/webp';
+            webpSource.srcset = `
+                ${BASE_URL}/${encodeURIComponent(images[index].filename)}?w=800&h=800&f=webp&q=85 800w,
+                ${BASE_URL}/${encodeURIComponent(images[index].filename)}?w=1200&h=1200&f=webp&q=85 1200w,
+                ${BASE_URL}/${encodeURIComponent(images[index].filename)}?w=1600&h=1600&f=webp&q=85 1600w
+            `.replace(/\s+/g, ' ').trim();
+            webpSource.sizes = '(max-width: 768px) 90vw, (max-width: 1200px) 80vw, 70vw';
+            
+            // JPEG fallback
+            const jpegSource = document.createElement('source');
+            jpegSource.type = 'image/jpeg';
+            jpegSource.srcset = `
+                ${BASE_URL}/${encodeURIComponent(images[index].filename)}?w=800&h=800&f=jpg&q=85 800w,
+                ${BASE_URL}/${encodeURIComponent(images[index].filename)}?w=1200&h=1200&f=jpg&q=85 1200w,
+                ${BASE_URL}/${encodeURIComponent(images[index].filename)}?w=1600&h=1600&f=jpg&q=85 1600w
+            `.replace(/\s+/g, ' ').trim();
+            jpegSource.sizes = '(max-width: 768px) 90vw, (max-width: 1200px) 80vw, 70vw';
+            
+            // Fallback img element
+            lightboxImg.src = `${BASE_URL}/${encodeURIComponent(images[index].filename)}?w=1200&h=1200&f=webp&q=85`;
             lightboxImg.alt = images[index].alt;
+            lightboxImg.loading = 'eager';
+            lightboxImg.decoding = 'async';
+            
+            // Clear existing sources and add new ones
+            const existingPicture = lightbox.querySelector('picture');
+            if (existingPicture) {
+                existingPicture.remove();
+            }
+            
+            picture.appendChild(webpSource);
+            picture.appendChild(jpegSource);
+            picture.appendChild(lightboxImg);
+            
+            const lightboxContent = lightbox.querySelector('.lightbox-content');
+            lightboxContent.insertBefore(picture, lightboxContent.firstChild);
             
             lightbox.classList.add('active');
             document.body.style.overflow = 'hidden';
@@ -473,8 +583,24 @@
             }
         });
 
+        // Register Service Worker
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(registration => {
+                        console.log('Service Worker registered successfully:', registration.scope);
+                    })
+                    .catch(error => {
+                        console.log('Service Worker registration failed:', error);
+                    });
+            });
+        }
+
         // Load gallery when page loads
-        window.addEventListener('load', loadGallery);
+        window.addEventListener('load', () => {
+            initImageObserver();
+            loadGallery();
+        });
     </script>
 
         <!-- Mobile Menu Toggle Script -->
