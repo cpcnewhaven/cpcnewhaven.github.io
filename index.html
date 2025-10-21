@@ -183,7 +183,12 @@ class="splash-hero--home"
   <div class="features-container">
     
     <!-- Retreat 2025 Gallery Widget -->
-    <div class="feature-widget">
+    <div class="feature-widget retreat-widget">
+      <div class="retreat-image-container">
+        <img src="https://storage.googleapis.com/cpc-public-website/retreat2025/CPC%20Retreat%2025%20All.jpg?w=600&h=400&f=webp&q=85" 
+             alt="CPC Retreat 2025 Group Photo" 
+             class="retreat-featured-image">
+      </div>
       <div class="widget-content">
         <div class="widget-left">
           <h3>Retreat 2025 Photo Gallery</h3>
@@ -375,7 +380,7 @@ class="splash-hero--home"
           <h3>Latest Podcast Episode</h3>
 
 
-          <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/episode/3thHalaJXnb6ygjEx1TAV0?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>     
+          <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/episode/2Bd4VNMhEyjhFXZTK1nOT2?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>     
           <div class="cpc-podcast-cta">
           <a href="podcasts.html" class="cpc-button">
             Visit Podcast Archive</a>
@@ -791,26 +796,36 @@ class="splash-hero--home"
 
         /* Retreat Widget Specific Styles */
         .retreat-widget .widget-content {
-            gap: 0;
+            gap: 15px;
         }
 
         .retreat-widget .widget-right {
             justify-content: center;
             align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
         }
 
-        .retreat-video-container {
+        .retreat-widget .widget-cta-btn {
+            padding: 8px 16px;
+            font-size: 0.9rem;
+            min-width: auto;
+            flex: 1;
+            max-width: 140px;
+        }
+
+        .retreat-image-container {
             width: 100%;
             border-radius: 8px 8px 0 0;
             overflow: hidden;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-            margin: -30px -30px 20px -30px;
+            margin: 0 0 20px 0;
         }
 
-        .retreat-video-container iframe {
+        .retreat-featured-image {
             width: 100%;
             height: 250px;
-            border: none;
+            object-fit: cover;
             display: block;
         }
 
@@ -837,6 +852,26 @@ class="splash-hero--home"
             .widget-cta-btn {
                 width: 100%;
                 max-width: 200px;
+            }
+
+            .retreat-image-container {
+                margin: 0 0 20px 0;
+            }
+
+            .retreat-featured-image {
+                height: 200px;
+            }
+
+            .retreat-widget .widget-right {
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .retreat-widget .widget-cta-btn {
+                width: 100%;
+                max-width: 200px;
+                padding: 10px 16px;
+                font-size: 0.9rem;
             }
         }
 
