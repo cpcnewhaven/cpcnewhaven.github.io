@@ -83,9 +83,6 @@
       <a class="widget-cta-btn"
         href="https://console.cloud.google.com/storage/browser/cpc-public-website/retreat2025"
         target="_blank" rel="noopener">Upload Photos</a>
-      <button onclick="refreshGallery()" class="widget-cta-btn" style="margin-left: 10px; background: #6c757d;">
-        <i class="fas fa-sync-alt"></i> Refresh Gallery
-      </button>
     </section>
 
     <!-- Gallery Container -->
@@ -144,36 +141,73 @@
     </footer>
 
     <style>
-        /* Mobile-First Responsive Gallery */
+        /* Super Responsive Gallery Grid */
         .gallery-grid { 
             display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
-            gap: 12px; 
-            max-width: 1200px; 
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); 
+            gap: 8px; 
+            max-width: 1400px; 
             margin: 0 auto; 
             padding: 0 10px;
         }
         
         .gallery-grid img { 
             width: 100%; 
-            height: 150px; 
+            height: 120px; 
             object-fit: cover; 
-            border-radius: 8px; 
+            border-radius: 6px; 
             cursor: pointer; 
-            transition: transform 0.3s ease;
+            transition: all 0.3s ease;
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
         
         .gallery-grid img:hover {
             transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
         }
         
-        /* Tablet Styles */
+        /* Small Mobile (320px+) */
+        @media (min-width: 320px) {
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+                gap: 10px;
+            }
+            
+            .gallery-grid img {
+                height: 140px;
+            }
+        }
+        
+        /* Large Mobile (480px+) */
+        @media (min-width: 480px) {
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+                gap: 12px;
+            }
+            
+            .gallery-grid img {
+                height: 160px;
+            }
+        }
+        
+        /* Tablet Portrait (768px+) */
         @media (min-width: 768px) {
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+                gap: 14px;
+                padding: 0 20px;
+            }
+            
+            .gallery-grid img {
+                height: 180px;
+            }
+        }
+        
+        /* Tablet Landscape (1024px+) */
+        @media (min-width: 1024px) {
             .gallery-grid {
                 grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
                 gap: 16px;
-                padding: 0 20px;
             }
             
             .gallery-grid img {
@@ -181,15 +215,27 @@
             }
         }
         
-        /* Desktop Styles */
-        @media (min-width: 1024px) {
+        /* Desktop (1200px+) */
+        @media (min-width: 1200px) {
             .gallery-grid {
                 grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-                gap: 20px;
+                gap: 18px;
             }
             
             .gallery-grid img {
                 height: 220px;
+            }
+        }
+        
+        /* Large Desktop (1400px+) */
+        @media (min-width: 1400px) {
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+                gap: 20px;
+            }
+            
+            .gallery-grid img {
+                height: 240px;
             }
         }
         
@@ -612,58 +658,76 @@
             // Use the complete list of images
             let loadedCount = 0;
             let errorCount = 0;
+            const batchSize = 10; // Load images in batches for better performance
+            let currentBatch = 0;
             
-            // Try to load each image
-            allImages.forEach((filename, index) => {
-                const img = document.createElement('img');
-                img.src = getImageUrl(filename);
-                img.alt = filename.replace(/\.(jpg|jpeg|png|heic)$/i, '').replace(/[_-]/g, ' ');
+            function loadBatch() {
+                const startIndex = currentBatch * batchSize;
+                const endIndex = Math.min(startIndex + batchSize, allImages.length);
                 
-                img.onload = () => {
-                    loadedCount++;
+                for (let i = startIndex; i < endIndex; i++) {
+                    const filename = allImages[i];
+                    const img = document.createElement('img');
+                    img.loading = 'lazy'; // Enable lazy loading
+                    img.src = getImageUrl(filename);
+                    img.alt = filename.replace(/\.(jpg|jpeg|png|heic)$/i, '').replace(/[_-]/g, ' ');
                     
-                    // Store image data for lightbox navigation
-                    loadedImages.push({
-                        src: img.src,
-                        alt: img.alt,
-                        filename: filename
-                    });
-                    
-                    img.onclick = () => openLightbox(loadedCount - 1);
-                    galleryGrid.appendChild(img);
-                    
-                    // Hide loading message when first image loads
-                    if (loadedCount === 1) {
-                        loadingMessage.style.display = 'none';
-                    }
-                    
-                    // Show success message when all images are processed
-                    if (loadedCount + errorCount === allImages.length) {
-                        if (loadedCount > 0) {
-                            showStatusMessage(`Loaded ${loadedCount} photos successfully! (${errorCount} failed to load)`, 'success');
+                    img.onload = () => {
+                        loadedCount++;
+                        
+                        // Store image data for lightbox navigation
+                        loadedImages.push({
+                            src: img.src,
+                            alt: img.alt,
+                            filename: filename
+                        });
+                        
+                        img.onclick = () => {
+                            const imageIndex = loadedImages.length - 1;
+                            openLightbox(imageIndex);
+                        };
+                        galleryGrid.appendChild(img);
+                        
+                        // Hide loading message when first image loads
+                        if (loadedCount === 1) {
+                            loadingMessage.style.display = 'none';
                         }
-                    }
-                };
+                        
+                        // Show success message when all images are processed
+                        if (loadedCount + errorCount === allImages.length) {
+                            if (loadedCount > 0) {
+                                showStatusMessage(`Loaded ${loadedCount} photos successfully! (${errorCount} failed to load)`, 'success');
+                            }
+                        }
+                    };
+                    
+                    img.onerror = () => {
+                        errorCount++;
+                        console.warn(`Failed to load: ${filename}`);
+                        
+                        // Show progress message
+                        if (loadedCount + errorCount === allImages.length) {
+                            if (loadedCount === 0) {
+                                showStatusMessage('No images could be loaded. Please check your bucket permissions.', 'error');
+                            } else {
+                                showStatusMessage(`Loaded ${loadedCount} photos successfully! (${errorCount} failed to load)`, 'success');
+                            }
+                        }
+                    };
+                }
                 
-                img.onerror = () => {
-                    errorCount++;
-                    console.warn(`Failed to load: ${filename}`);
-                    
-                    // Show progress message
-                    if (loadedCount + errorCount === allImages.length) {
-                        if (loadedCount === 0) {
-                            showStatusMessage('No images could be loaded. Please check your bucket permissions.', 'error');
-                        } else {
-                            showStatusMessage(`Loaded ${loadedCount} photos successfully! (${errorCount} failed to load)`, 'success');
-                        }
-                    }
-                };
-            });
+                currentBatch++;
+                
+                // Load next batch after a short delay
+                if (endIndex < allImages.length) {
+                    setTimeout(loadBatch, 100);
+                }
+            }
+            
+            // Start loading batches
+            loadBatch();
         }
 
-        function refreshGallery() {
-            loadImagesFromBucket();
-        }
 
         function showStatusMessage(message, type) {
             const existingMessage = document.querySelector('.status-message');
@@ -787,5 +851,8 @@
             setTimeout(loadImagesFromBucket, 500);
         });
     </script>
+
+    <!-- Mobile Menu Toggle Script -->
+    <script src="./src/js/function_toggle_mobileMenu.js"></script>
   </body>
 </html>
