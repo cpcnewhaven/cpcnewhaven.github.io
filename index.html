@@ -196,15 +196,12 @@ class="splash-hero--home"
             Upload your photos to help build our digital yearbook, and browse pictures from the retreat.
           </p>
           <div class="widget-details">
-            <div class="widget-detail">
-              <i class="fas fa-images"></i>
-              <span>View and contribute to the gallery</span>
-            </div>
+            <a href="retreat2025.html" class="widget-cta-btn">View Gallery</a>
+            <a href="https://drive.google.com/drive/folders/1zsVPlO7Zdlruu6JyLAjypbMTjMhgkyNW" class="widget-cta-btn" target="_blank" rel="noopener">Upload Photos</a>
           </div>
         </div>
         <div class="widget-right">
-          <a href="retreat2025.html" class="widget-cta-btn">View Gallery</a>
-          <a href="https://drive.google.com/drive/folders/1zsVPlO7Zdlruu6JyLAjypbMTjMhgkyNW" class="widget-cta-btn" target="_blank" rel="noopener">Upload Photos</a>
+    
         </div>
       </div>
     </div>
@@ -797,6 +794,8 @@ class="splash-hero--home"
         /* Retreat Widget Specific Styles */
         .retreat-widget .widget-content {
             gap: 15px;
+            display: flex !important;
+            flex-direction: column !important;
         }
 
         .retreat-widget .widget-right {
@@ -804,14 +803,35 @@ class="splash-hero--home"
             align-items: center;
             gap: 8px;
             flex-wrap: wrap;
+            display: flex !important;
+            margin-top: 15px;
         }
 
         .retreat-widget .widget-cta-btn {
-            padding: 8px 16px;
-            font-size: 0.9rem;
-            min-width: auto;
-            flex: 1;
-            max-width: 140px;
+            padding: 12px 24px !important;
+            font-size: 1rem !important;
+            min-width: 130px !important;
+            flex: 0 1 auto !important;
+            max-width: 180px !important;
+            opacity: 1 !important;
+            visibility: visible !important;
+            display: inline-block !important;
+            background: #0078D4 !important;
+            color: white !important;
+            text-decoration: none !important;
+            border-radius: 6px !important;
+            font-weight: 500 !important;
+            text-align: center !important;
+            transition: all 0.3s ease !important;
+            position: relative !important;
+            z-index: 10 !important;
+            pointer-events: auto !important;
+        }
+        
+        .retreat-widget .widget-cta-btn:hover {
+            background: #005a9e !important;
+            transform: translateY(-1px) !important;
+            box-shadow: 0 3px 8px rgba(0, 120, 212, 0.2) !important;
         }
 
         .retreat-image-container {
