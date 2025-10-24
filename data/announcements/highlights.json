@@ -464,6 +464,39 @@
       "category": "announcement",
       "tag": "arts",
       "superfeatured": false
+    },
+    {
+      "id": "2025-048",
+      "title": "Parent's Book Pick",
+      "description": "Worship is what we were made for—and that includes our kids! Teaching them to sit through and take part in worship isn't always easy, but it's such a beautiful journey as we watch them grow in the same faith we hold dear. God Made Me for Worship: Helping Children Understand Church by Jared Kennedy is a great resource to help little ones see what's really happening during a church service.",
+      "dateEntered": "2025-10-15",
+      "active": "true",
+      "type": "announcement",
+      "category": "announcement",
+      "tag": "resources",
+      "superfeatured": false
+    },
+    {
+      "id": "2025-049",
+      "title": "\"Roots to the Reformed Tradition\" | New Adult Sunday Studies Class begins next week!",
+      "description": "In this 6-week class, led by Church history professor John Roney, we'll be walking through major movements in the spirituality and theology of our ancestors in the faith. How did they live as witnesses to Christ? What did they struggle through and find hope in? How can we learn from them today? All are welcome! Join us Sundays, 9:30 in the Fellowship Hall.",
+      "dateEntered": "2025-10-15",
+      "active": "true",
+      "type": "announcement",
+      "category": "announcement",
+      "tag": "class",
+      "superfeatured": true
+    },
+    {
+      "id": "2025-050",
+      "title": "Thanksgiving Fellowship Meals | Sign Up Now as Host or Guest | Nov. 27",
+      "description": "Staying local for Thanksgiving? Come celebrate with your brothers and sisters in Christ! As we've done in the past, we're coordinating Hosts & Guests to have a Thanksgiving meal together on Nov. 27. If you're interested, please email admin@cpcnewhaven.org or <a href='https://cpcnewhaven.ccbchurch.com/goto/forms/171/responses/new'>fill out the form here</a>.",
+      "dateEntered": "2025-10-15",
+      "active": "true",
+      "type": "event",
+      "category": "event",
+      "tag": "fellowship",
+      "superfeatured": true
     }
     
   ]
