@@ -206,34 +206,6 @@ class="splash-hero--home"
       </div>
     </div>
     
-    <!-- Adult Sunday Studies Widget -->
-    <div class="feature-widget">
-      <div class="widget-content">
-        <div class="widget-left">
-          <h3>Adult Sunday Studies - Total Christ: The Full Vision for His Church</h3>
-          <p class="widget-description">
-         
-            Currently studying "Total Christ: The Full Vision for His Church" - exploring the 
-            comprehensive vision of Christ's work in and through His church. 
-          </p>
-          <div class="widget-details">
-            <div class="widget-detail">
-              <i class="fas fa-clock"></i>
-              <span>Sundays at 9:30 AM</span>
-            </div>
-            <div class="widget-detail">
-              <i class="fas fa-map-marker-alt"></i>
-              <span>135 Whitney Ave, New Haven, CT</span>
-            </div>
-          </div>
-        </div>
-        <div class="widget-right">
-          <a href="sunday-studies/total-christ.html" class="widget-cta-btn">
-            Learn More
-          </a>
-        </div>
-      </div>
-    </div>
 
     <!-- Roots: The Reformed Widget -->
     <div class="feature-widget roots-widget">
@@ -263,11 +235,7 @@ class="splash-hero--home"
             </div>
           </div>
         </div>
-        <div class="widget-right">
-          <a href="classes.html" class="widget-cta-btn">
-            Learn More
-          </a>
-        </div>
+      
       </div>
     </div>
 
@@ -1067,9 +1035,12 @@ class="splash-hero--home"
 
         .highlight-image {
             width: 100%;
-            height: 200px;
-            object-fit: cover;
+            min-height: 300px;
+            max-height: 500px;
+            height: auto;
+            object-fit: contain;
             border-radius: 8px;
+            background-color: #f8f9fa;
         }
 
         .highlight-empty, .highlight-error {

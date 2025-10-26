@@ -484,9 +484,10 @@
       "active": "true",
       "type": "announcement",
       "category": "announcement",
-      "tag": "class",
-      "superfeatured": true,
-      "featuredImage": "https://storage.googleapis.com/cpc-public-website/featuredIMGs/highlights/Roots%20to%20the%20Reformed%20Tradition%20-%204-13-25.jpg"
+      "tag": "class", 
+      "featuredImage": "https://storage.googleapis.com/cpc-public-website/featuredIMGs/classes/ROOTS%20THE%20REFORMED%20-%20POSTER.jpg",
+      "superfeatured": true
+     
     },
     {
       "id": "2025-050",
