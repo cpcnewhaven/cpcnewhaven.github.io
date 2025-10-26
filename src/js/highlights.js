@@ -6,7 +6,7 @@
 class HighlightsManager {
     constructor() {
         this.dataUrl = './data/announcements/highlights.json';
-        this.container = document.getElementById('highlights');
+        this.container = document.querySelector('#highlights .highlights-content');
         this.init();
     }
 
