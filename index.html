@@ -235,6 +235,42 @@ class="splash-hero--home"
       </div>
     </div>
 
+    <!-- Roots: The Reformed Widget -->
+    <div class="feature-widget roots-widget">
+      <div class="roots-image-container">
+        <img src="https://storage.googleapis.com/cpc-public-website/featuredIMGs/classes/ROOTS%20THE%20REFORMED%20-%20POSTER%20SQUARE.jpg" 
+             alt="Roots: The Reformed - Church History with John Roney" 
+             class="roots-featured-image">
+      </div>
+      <div class="widget-content">
+        <div class="widget-left">
+          <h3>Roots: The Reformed - Church History with John Roney</h3>
+          <p class="widget-description">
+            In this 6-week class, led by Church history professor John Roney, we'll be walking through major movements in the spirituality and theology of our ancestors in the faith. How did they live as witnesses to Christ? What did they struggle through and find hope in? How can we learn from them today? All are welcome!
+          </p>
+          <div class="widget-details">
+            <div class="widget-detail">
+              <i class="fas fa-clock"></i>
+              <span>Sundays at 9:30 AM</span>
+            </div>
+            <div class="widget-detail">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Fellowship Hall</span>
+            </div>
+            <div class="widget-detail">
+              <i class="fas fa-calendar-alt"></i>
+              <span>6-Week Class</span>
+            </div>
+          </div>
+        </div>
+        <div class="widget-right">
+          <a href="classes.html" class="widget-cta-btn">
+            Learn More
+          </a>
+        </div>
+      </div>
+    </div>
+
     <!-- Regular Sunday Schedule Widget -->
     <div class="feature-widget">
       <div class="widget-content">
@@ -849,6 +885,65 @@ class="splash-hero--home"
             display: block;
         }
 
+        /* Roots Widget Specific Styles */
+        .roots-widget .widget-content {
+            gap: 15px;
+            display: flex !important;
+            flex-direction: column !important;
+        }
+
+        .roots-widget .widget-right {
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+            display: flex !important;
+            margin-top: 15px;
+        }
+
+        .roots-widget .widget-cta-btn {
+            padding: 12px 24px !important;
+            font-size: 1rem !important;
+            min-width: 130px !important;
+            flex: 0 1 auto !important;
+            max-width: 180px !important;
+            opacity: 1 !important;
+            visibility: visible !important;
+            display: inline-block !important;
+            background: #0078D4 !important;
+            color: white !important;
+            text-decoration: none !important;
+            border-radius: 6px !important;
+            font-weight: 500 !important;
+            text-align: center !important;
+            transition: all 0.3s ease !important;
+            position: relative !important;
+            z-index: 10 !important;
+            pointer-events: auto !important;
+        }
+        
+        .roots-widget .widget-cta-btn:hover {
+            background: #005a9e !important;
+            transform: translateY(-1px) !important;
+            box-shadow: 0 3px 8px rgba(0, 120, 212, 0.2) !important;
+        }
+
+        .roots-image-container {
+            width: 100%;
+            border-radius: 8px 8px 0 0;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            margin: 0 0 20px 0;
+        }
+
+        .roots-featured-image {
+            width: 100%;
+            aspect-ratio: 1;
+            object-fit: contain;
+            display: block;
+            background-color: #f8f9fa;
+        }
+
         /* Responsive Design for Feature Widgets */
         @media (max-width: 768px) {
             .church-features-section {
@@ -888,6 +983,22 @@ class="splash-hero--home"
             }
 
             .retreat-widget .widget-cta-btn {
+                width: 100%;
+                max-width: 200px;
+                padding: 10px 16px;
+                font-size: 0.9rem;
+            }
+
+            .roots-image-container {
+                margin: 0 0 20px 0;
+            }
+
+            .roots-widget .widget-right {
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .roots-widget .widget-cta-btn {
                 width: 100%;
                 max-width: 200px;
                 padding: 10px 16px;
