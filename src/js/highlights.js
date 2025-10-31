@@ -20,7 +20,9 @@ class HighlightsManager {
     }
 
     async loadHighlights() {
-        const response = await fetch(this.dataUrl);
+        // Add cache-busting parameter to ensure fresh data
+        const cacheBuster = `?v=${Date.now()}`;
+        const response = await fetch(this.dataUrl + cacheBuster);
         
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);

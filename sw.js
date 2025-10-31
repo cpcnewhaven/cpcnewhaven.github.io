@@ -1,7 +1,7 @@
 // Service Worker for Retreat 2025 Gallery
 // Provides caching for better performance
 
-const CACHE_NAME = 'retreat2025-gallery-v1';
+const CACHE_NAME = 'retreat2025-gallery-v2';
 const CACHE_URLS = [
     '/retreat2025.html',
     '/data/retreat2025-images.json',

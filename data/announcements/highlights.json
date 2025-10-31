@@ -79,14 +79,14 @@
     },
     {
       "id": "2025-042",
-      "title": "OUR REGULAR SUNDAY SCHEDULE IS BACK FOR FALL",
-      "description": "<strong>8:30am | Prayer in the Parlor</strong><br><br><strong>9:30am | Children's Sunday School</strong><br>2yrs to Pre-K | Lower Level Classroom, Fellowship Hall<br>Kindergarten & 1st Grade | Upper Floor Classroom<br>2nd to 5th Grade | Main Floor Lecture Room<br>6th & 7th Grade | Upper Floor Conference Room<br>8th to 12th Grade | Upper Floor Youth Room<br><br><strong>9:30am | Adult Sunday Studies</strong><br>\"Total Christ: The Full Vision for His Church\" | Fellowship Hall<br><br><strong>10:30am | Worship Service</strong><br><br><strong>12:00pm | Fellowship Lunch</strong>",
+      "title": "Regular Sunday Schedule",
+      "description": "<strong>8:30am | Prayer in the Parlor</strong><br><br><strong>9:30am | Children's Sunday School</strong><br><br><strong>9:30am | Adult Sunday Studies</strong><br>\"Roots to the Reformed Tradition\" | Fellowship Hall<br><br><strong>10:30am | Worship Service</strong><br><br><strong>12:00pm | Fellowship Lunch</strong><br><br><em>Worship Service only on Nov. 30, Dec. 21, 28, Jan. 4</em>",
       "dateEntered": "2025-09-19",
       "active": "true",
-      "type": "announcement",
-      "category": "announcement",
+      "type": "ongoing",
+      "category": "ongoing",
       "tag": "schedule",
-      "superfeatured": true
+      "superfeatured": false
     },
     {
       "id": "2025-033",
@@ -135,8 +135,8 @@
     },
     {
       "id": "2025-009",
-      "title": "Life Groups & Discipleship Groups",
-      "description": "Restarting for the new year, join now! Talk to a welcome team member about all the groups that meet throughout the city. <a href='community.html'>Visit our Community page</a> to learn more about our Life Groups.",
+      "title": "Small Groups - Life Groups & Discipleship Groups",
+      "description": "For info on Life Groups & Discipleship Groups email admin@cpcnewhaven.org",
       "dateEntered": "2025-01-20",
       "active": "true",
       "type": "ongoing",
@@ -372,8 +372,8 @@
     },
     {
       "id": "2025-040",
-      "title": "Mom's Discipleship Group | CPC Parlor Room at 7:00pm",
-      "description": "We are reading Walking With God in the Season of Motherhood, by Melissa Krueger. New people are most welcome and it is easy to join our discussion without having read prior chapters. Mondays — Sept. 22, Oct. 20, and Nov. 17. For more information, Estela Gierbolini Norat, egierbo1@gmail.com or Meg Bogue, mhbogue@me.co",
+      "title": "Moms Discipleship Group | CPC Parlor Room at 7:00pm",
+      "description": "We are reading Walking With God in the Season of Motherhood, by Melissa Krueger. New people are most welcome and it is easy to join our discussion without having read prior chapters. Monday - 11/17, CPC Parlor at 7:00pm. For more information: Estela Gierbolini Norat, egierbo1@gmail.com or Meg Bogue, mhbogue@me.com",
       "dateEntered": "2025-09-19",
       "active": "true",
       "type": "ongoing",
@@ -500,6 +500,39 @@
       "category": "event",
       "tag": "fellowship",
       "superfeatured": true
+    },
+    {
+      "id": "2025-051",
+      "title": "College Game Night | This Sunday, 5-7 PM",
+      "description": "Hey College Students! We've got another Game Night happening this Sunday from 5–7 PM here at CPC in the Fellowship Hall! Bring a friend (or two!)—everyone's welcome. If you've got a favorite game, feel free to bring it along for us to enjoy together. We'll have refreshments provided!",
+      "dateEntered": "2025-11-17",
+      "active": "true",
+      "type": "event",
+      "category": "event",
+      "tag": "college",
+      "superfeatured": true
+    },
+    {
+      "id": "2025-052",
+      "title": "Save-The-Date! | CPC Christmas Drama and Nativity | Saturday December 13",
+      "description": "Come join us for a celebration of Christmas on Saturday the 13th of December! There will be Christmas Carols, a dramatic retelling of Old Testament Prophecies, and an interactive Nativity for children to take part in. We really encourage you to invite friends with young families and those who may not regularly attend CPC for a fun and lighthearted celebration. The celebration will be in the afternoon starting either at 4:00 or 5:00 pm with a pot-luck style reception after that. Keep an eye out for more information about the event, as well as opportunities to volunteer. Mark your calendars!",
+      "dateEntered": "2025-11-17",
+      "active": "true",
+      "type": "event",
+      "category": "event",
+      "tag": "worship",
+      "superfeatured": true
+    },
+    {
+      "id": "2025-053",
+      "title": "Reminder about Mercy Fund for Members and Regular Attenders",
+      "description": "As one body of Christ, we want to share our lives together, which includes our financial needs. Please don't be shy in asking for help. Contact Kaitlyn Jessee with any questions (<a href=\"mailto:kaijessee@gmail.com\">kaijessee@gmail.com</a>)",
+      "dateEntered": "2025-11-17",
+      "active": "true",
+      "type": "announcement",
+      "category": "announcement",
+      "tag": "mercy",
+      "superfeatured": false
     }
     
   ]
