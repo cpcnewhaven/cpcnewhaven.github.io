@@ -90,10 +90,10 @@
                 'https://storage.googleapis.com/cpc-public-website/events/Young%20Adults%20Cookout%20-%20September%202025/6.jpg'
             ],
             currentIndex: Math.floor(Math.random() * 7)
-        }" 
-        x-init="setInterval(() => { currentIndex = (currentIndex + 1) % images.length }, 5000)"
-        class="splash-hero--connect parallax-hero"
-        :style="`background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('${images[currentIndex]}')`">
+        }"
+            x-init="setInterval(() => { currentIndex = (currentIndex + 1) % images.length }, 5000)"
+            class="splash-hero--connect parallax-hero"
+            :style="`background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('${images[currentIndex]}')`">
             <h1>Connect Board</h1>
         </div>
 
@@ -130,6 +130,9 @@
             <div x-show="activeTab === 'upcoming'" class="connect-tab-content">
 
                 <div class="events-grid">
+                    <h2
+                        style="text-align:center; font-size:2em; margin-bottom:30px; letter-spacing:1px; color:#0078D4;">Past
+                        Connect Events</h2>
                     <!-- Jubilee New Haven Worship Night -->
                     <div class="event-card">
                         <div class="event-content">
