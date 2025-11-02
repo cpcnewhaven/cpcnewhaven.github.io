@@ -86,7 +86,8 @@
       "type": "ongoing",
       "category": "ongoing",
       "tag": "schedule",
-      "superfeatured": false
+      "superfeatured": false,
+      "featuredImage": "https://storage.googleapis.com/cpc-public-website/featuredIMGs/homepage/CPC_AUTUMN_PHOTO.jpg"
     },
     {
       "id": "2025-033",
