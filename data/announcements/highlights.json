@@ -523,7 +523,9 @@
       "type": "event",
       "category": "event",
       "tag": "worship",
-      "superfeatured": true
+      "featuredImage": "https://storage.googleapis.com/cpc-public-website/events/Christmas2025/CHRISTMAS%20DRAMA%20SAVE%20THE%20DATE.jpg",
+      "superfeatured": true,
+      "imageDisplayType": "poster"
     },
     {
       "id": "2025-053",
