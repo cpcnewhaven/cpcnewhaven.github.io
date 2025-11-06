@@ -204,6 +204,25 @@
 </style>
 
 <style>
+            /* Featured Poster Widget */
+            .featured-event-poster {
+                padding: 30px 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: #f8f9fa;
+            }
+            .featured-event-poster img.poster-img {
+                width: 100%;
+                max-width: 1000px;
+                border-radius: 12px;
+                box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+                display: block;
+            }
+            @media (max-width: 768px) {
+                .featured-event-poster { padding: 20px 15px; }
+            }
+
 /* Highlights Section Styling */
 .mid-splash-welcome.sticky {
     background: #f8f9fa;
@@ -303,6 +322,8 @@
 </style>
 
 
+
+<section id="featured-event" class="featured-event-poster" aria-label="Featured Event"></section>
 
 <section id="highlights">
   <div class="highlights-content">
@@ -899,6 +920,22 @@
         <!-- EVENTS GALLERY SCRIPT -->
         <script>
             document.addEventListener("DOMContentLoaded", function() {
+                // Featured Christmas Drama poster from highlights.json
+                fetch('data/announcements/highlights.json')
+                    .then(r => r.json())
+                    .then(json => {
+                        const item = (json.announcements || []).find(a => a.id === '2025-052' && a.active === 'true');
+                        const container = document.getElementById('featured-event');
+                        if (item && item.featuredImage && container) {
+                            const img = document.createElement('img');
+                            img.src = item.featuredImage;
+                            img.alt = item.title || 'Featured Event';
+                            img.className = 'poster-img';
+                            container.appendChild(img);
+                        }
+                    })
+                    .catch(()=>{});
+
                 fetch('data/image-gallery.json')
                     .then(response => response.json())
                     .then(data => {
