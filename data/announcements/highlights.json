@@ -501,7 +501,9 @@
       "type": "event",
       "category": "event",
       "tag": "fellowship",
-      "superfeatured": true
+      "superfeatured": true,
+      "featuredImage": "https://storage.googleapis.com/cpc-public-website/events/Thanksgiving%20Meals%202025/Thanksgiving%20Fellowship%20Meals.jpg",
+      "imageDisplayType": "poster"
     },
     {
       "id": "2025-051",
@@ -561,6 +563,19 @@
       "category": "event",
       "tag": "service",
       "superfeatured": true
+    },
+    {
+      "id": "2025-056",
+      "title": "Church Journal | Call for Writers",
+      "description": "Calling all writers and artists: CPC is creating a church-wide journal this fall on the topic of \"vocation.\" We'd love for you to contribute! Interested? Learn more here. Contact Seth Bollinger (<a href=\"mailto:sethbollinger15@gmail.com\">sethbollinger15@gmail.com</a>) with questions.",
+      "dateEntered": "2025-11-18",
+      "active": "true",
+      "type": "announcement",
+      "category": "announcement",
+      "tag": "arts",
+      "superfeatured": false,
+      "featuredImage": "https://storage.googleapis.com/cpc-public-website/events/Church%20Journal/CALL%20FOR%20WRTIERS.jpg",
+      "imageDisplayType": "poster"
     }
   ]
 }
