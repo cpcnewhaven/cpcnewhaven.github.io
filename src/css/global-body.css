@@ -4007,3 +4007,35 @@ p {
 @media (max-width: 768px) {
     #community-calendar { height: 350px; padding: 10px; }
 }
+
+/* Highlights extra utilities (from events.html) */
+.highlight-description {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+    text-align: center;
+}
+.highlight-description p {
+    margin-bottom: 10px;
+}
+.highlight-empty,
+.highlight-error {
+    text-align: center;
+    padding: 40px;
+    color: #666;
+    font-style: italic;
+    grid-column: 1 / -1;
+}
+
+/* Optional headline size inside mid-splash section */
+.mid-splash-welcome .headline {
+    text-align: center;
+    font-size: 2.5em;
+    margin: 0;
+    color: #333;
+}
+@media (max-width: 768px) {
+    .mid-splash-welcome .headline {
+        font-size: 2em;
+    }
+}
