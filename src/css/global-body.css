@@ -4002,7 +4002,7 @@ p {
 }
 
 /* Community calendar wrapper */
-#community-calendar { margin: 20px auto; max-width: 1200px; height: 400px; padding: 15px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-radius: 8px; background-color: #f9f9f9; }
+#community-calendar { margin: 20px auto; max-width: 1200px; height: 400px; padding: 15px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-radius: 8px; background-color: #f9f9f9; position: relative; z-index: 10; }
 #community-calendar h1 { text-align: center; font-size: 1.5em; margin-bottom: 20px; }
 @media (max-width: 768px) {
     #community-calendar { height: 350px; padding: 10px; }
