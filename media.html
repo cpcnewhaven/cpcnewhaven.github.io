@@ -3,10 +3,11 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Live - CPC New Haven Church</title>
+        <title>Media - CPC New Haven Church</title>
         <!--<link rel="stylesheet" href="/src/css/live.css">-->
         <link rel="stylesheet" href="./src/css/global-body.css">
         <link rel="stylesheet" href="./src/css/global-footer-cta.css">
+        <link rel="stylesheet" href="./src/css/media-gallery.css">
 
         <link rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
@@ -73,15 +74,23 @@
                 life.</p>
         </header>
 
-        <section>
-            <hr>
-            <h2>Women's Fall Brunch 2024</h2>
-            <div id="wfb-gallery-container" class="image-container"></div>
-        </section>
-
-        <section>
-            <h2>Hill Christmas Store 2023</h2>
-            <div id="hcs-gallery-container" class="image-container"></div>
+        <section class="media-gallery-section">
+            <div class="media-toolbar" role="toolbar" aria-label="Media filters">
+                <div class="filters-group" aria-label="Category filters">
+                    <button class="filter-chip" data-category="all" id="filterAll" aria-pressed="true">All</button>
+                    <button class="filter-chip" data-category="events" id="filterEvents" aria-pressed="false">Events</button>
+                    <button class="filter-chip" data-category="retreats" id="filterRetreats" aria-pressed="false">Retreats</button>
+                </div>
+                <div class="filters-group" id="yearChips" aria-label="Year filters">
+                    <!-- Year chips will be injected here -->
+                </div>
+                <div class="toolbar-spacer"></div>
+                <label class="search-input" aria-label="Search photos">
+                    <i class="fas fa-search" aria-hidden="true"></i>
+                    <input id="mediaSearch" type="search" placeholder="Search by tag or album">
+                </label>
+            </div>
+            <div id="media-grid" class="media-grid" aria-live="polite"></div>
         </section>
 
         <!-- Lightbox -->
