@@ -75,21 +75,23 @@
         </header>
 
         <section class="media-gallery-section">
-            <div class="media-toolbar" role="toolbar" aria-label="Media filters">
-                <div class="filters-group" aria-label="Category filters">
-                    <button class="filter-chip" data-category="all" id="filterAll" aria-pressed="true">All</button>
-                    <button class="filter-chip" data-category="events" id="filterEvents" aria-pressed="false">Events</button>
-                    <button class="filter-chip" data-category="retreats" id="filterRetreats" aria-pressed="false">Retreats</button>
+            <nav class="media-toolbar" role="navigation" aria-label="Media gallery filters">
+                <div class="filters-group" aria-label="Category" role="radiogroup">
+                    <button class="filter-chip" role="radio" data-category="all" id="filterAll" aria-checked="true" tabindex="0">All</button>
+                    <button class="filter-chip" role="radio" data-category="events" id="filterEvents" aria-checked="false" tabindex="-1">Events</button>
+                    <button class="filter-chip" role="radio" data-category="retreats" id="filterRetreats" aria-checked="false" tabindex="-1">Retreats</button>
                 </div>
-                <div class="filters-group" id="yearChips" aria-label="Year filters">
+                <div class="filters-group" id="yearChips" aria-label="Year" role="radiogroup">
                     <!-- Year chips will be injected here -->
                 </div>
                 <div class="toolbar-spacer"></div>
-                <label class="search-input" aria-label="Search photos">
+                <label class="search-input">
+                    <span id="mediaSearchLabel" class="sr-only">Search photos</span>
                     <i class="fas fa-search" aria-hidden="true"></i>
-                    <input id="mediaSearch" type="search" placeholder="Search by tag or album">
+                    <input id="mediaSearch" type="search" placeholder="Search by tag or album" aria-labelledby="mediaSearchLabel">
                 </label>
-            </div>
+            </nav>
+            <div id="media-results-summary" class="results-summary" aria-live="polite" aria-atomic="true"></div>
             <div id="media-grid" class="media-grid" aria-live="polite"></div>
         </section>
 

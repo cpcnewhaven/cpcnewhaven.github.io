@@ -7,6 +7,8 @@ document.addEventListener("DOMContentLoaded", function() {
     const filterRetreats = document.getElementById('filterRetreats');
     const yearChipsContainer = document.getElementById('yearChips');
     const searchInput = document.getElementById('mediaSearch');
+    const resultsSummary = document.getElementById('media-results-summary');
+    const categoryGroup = document.querySelector('.filters-group[role="radiogroup"][aria-label="Category"]');
 
     if (!mediaGrid) {
         // Page doesn't have media grid; nothing to do
@@ -87,15 +89,66 @@ document.addEventListener("DOMContentLoaded", function() {
             new Set(items.map(i => i.year).filter(y => y && /^\d{4}$/.test(y)))
         ).sort((a, b) => Number(b) - Number(a));
         yearChipsContainer.innerHTML = '';
+        // All years chip
+        const allBtn = document.createElement('button');
+        allBtn.className = 'filter-chip active';
+        allBtn.setAttribute('role', 'radio');
+        allBtn.setAttribute('data-year', 'all');
+        allBtn.setAttribute('aria-checked', 'true');
+        allBtn.tabIndex = 0;
+        allBtn.textContent = 'All years';
+        allBtn.addEventListener('click', () => {
+            currentYear = 'all';
+            updateYearActiveState();
+            render();
+        });
+        allBtn.addEventListener('keydown', (e) => {
+            const first = yearChipsContainer.querySelector('.filter-chip[role="radio"][data-year]:not([data-year="all"])');
+            if (!first) return;
+            const code = e.key;
+            if (code === 'ArrowRight' || code === 'ArrowDown') {
+                e.preventDefault();
+                first.focus();
+                first.click();
+            } else if (code === 'ArrowLeft' || code === 'ArrowUp') {
+                e.preventDefault();
+                const chips = yearChipsContainer.querySelectorAll('.filter-chip[role="radio"][data-year]');
+                const arr = Array.from(chips);
+                const last = arr[arr.length - 1];
+                if (last) {
+                    last.focus();
+                    last.click();
+                }
+            }
+        });
+        yearChipsContainer.appendChild(allBtn);
         years.forEach(year => {
             const btn = document.createElement('button');
             btn.className = 'filter-chip';
+            btn.setAttribute('role', 'radio');
             btn.setAttribute('data-year', year);
             btn.textContent = year;
             btn.addEventListener('click', () => {
-                currentYear = currentYear === year ? 'all' : year;
+                currentYear = year;
                 updateYearActiveState();
                 render();
+            });
+            btn.addEventListener('keydown', (e) => {
+                const chips = yearChipsContainer.querySelectorAll('.filter-chip[role="radio"][data-year]');
+                const arr = Array.from(chips);
+                const idx = arr.indexOf(btn);
+                const code = e.key;
+                if (code === 'ArrowRight' || code === 'ArrowDown') {
+                    e.preventDefault();
+                    const next = arr[(idx + 1) % arr.length];
+                    next.focus();
+                    next.click();
+                } else if (code === 'ArrowLeft' || code === 'ArrowUp') {
+                    e.preventDefault();
+                    const prev = arr[(idx - 1 + arr.length) % arr.length];
+                    prev.focus();
+                    prev.click();
+                }
             });
             yearChipsContainer.appendChild(btn);
         });
@@ -107,9 +160,10 @@ document.addEventListener("DOMContentLoaded", function() {
         buttons.forEach(btn => {
             if (!btn) return;
             const val = btn.getAttribute('data-category');
-            const isActive = (currentCategory === val) || (currentCategory === 'all' && val === 'all');
+            const isActive = currentCategory === val;
             btn.classList.toggle('active', isActive);
-            btn.setAttribute('aria-pressed', String(isActive));
+            btn.setAttribute('aria-checked', String(isActive));
+            btn.tabIndex = isActive ? 0 : -1;
         });
     }
 
@@ -118,7 +172,8 @@ document.addEventListener("DOMContentLoaded", function() {
             const val = btn.getAttribute('data-year');
             const isActive = currentYear === val;
             btn.classList.toggle('active', isActive);
-            btn.setAttribute('aria-pressed', String(isActive));
+            btn.setAttribute('aria-checked', String(isActive));
+            btn.tabIndex = isActive ? 0 : -1;
         });
     }
 
@@ -139,6 +194,22 @@ document.addEventListener("DOMContentLoaded", function() {
         while (mediaGrid.firstChild) {
             mediaGrid.removeChild(mediaGrid.firstChild);
         }
+    }
+
+    function updateResultsSummary(count) {
+        if (!resultsSummary) return;
+        const parts = [];
+        parts.push(`Showing ${count} photo${count === 1 ? '' : 's'}`);
+        if (currentCategory !== 'all') {
+            parts.push(`in ${currentCategory}`);
+        }
+        if (currentYear !== 'all') {
+            parts.push(`from ${currentYear}`);
+        }
+        if (currentQuery) {
+            parts.push(`matching "${currentQuery}"`);
+        }
+        resultsSummary.textContent = parts.join(' ');
     }
 
     function createCard(item) {
@@ -192,6 +263,7 @@ document.addEventListener("DOMContentLoaded", function() {
         filtered.forEach(item => {
             mediaGrid.appendChild(createCard(item));
         });
+        updateResultsSummary(filtered.length);
     }
 
     // Wire category filter buttons
@@ -201,6 +273,19 @@ document.addEventListener("DOMContentLoaded", function() {
             updateCategoryActiveState();
             render();
         });
+        filterAll.addEventListener('keydown', (e) => {
+            if (!categoryGroup) return;
+            const code = e.key;
+            if (code === 'ArrowRight' || code === 'ArrowDown') {
+                e.preventDefault();
+                filterEvents.focus();
+                filterEvents.click();
+            } else if (code === 'ArrowLeft' || code === 'ArrowUp') {
+                e.preventDefault();
+                filterRetreats.focus();
+                filterRetreats.click();
+            }
+        });
     }
     if (filterEvents) {
         filterEvents.addEventListener('click', () => {
@@ -208,12 +293,36 @@ document.addEventListener("DOMContentLoaded", function() {
             updateCategoryActiveState();
             render();
         });
+        filterEvents.addEventListener('keydown', (e) => {
+            const code = e.key;
+            if (code === 'ArrowRight' || code === 'ArrowDown') {
+                e.preventDefault();
+                filterRetreats.focus();
+                filterRetreats.click();
+            } else if (code === 'ArrowLeft' || code === 'ArrowUp') {
+                e.preventDefault();
+                filterAll.focus();
+                filterAll.click();
+            }
+        });
     }
     if (filterRetreats) {
         filterRetreats.addEventListener('click', () => {
             currentCategory = 'retreats';
             updateCategoryActiveState();
             render();
+        });
+        filterRetreats.addEventListener('keydown', (e) => {
+            const code = e.key;
+            if (code === 'ArrowRight' || code === 'ArrowDown') {
+                e.preventDefault();
+                filterAll.focus();
+                filterAll.click();
+            } else if (code === 'ArrowLeft' || code === 'ArrowUp') {
+                e.preventDefault();
+                filterEvents.focus();
+                filterEvents.click();
+            }
         });
     }
 
