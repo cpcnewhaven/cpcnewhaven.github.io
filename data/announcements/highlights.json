@@ -510,7 +510,7 @@
       "title": "College Game Night | This Sunday, 5-7 PM",
       "description": "Hey College Students! We've got another Game Night happening this Sunday from 5–7 PM here at CPC in the Fellowship Hall! Bring a friend (or two!)—everyone's welcome. If you've got a favorite game, feel free to bring it along for us to enjoy together. We'll have refreshments provided!",
       "dateEntered": "2025-11-17",
-      "active": "true",
+      "active": "false",
       "type": "event",
       "category": "event",
       "tag": "college",
@@ -539,8 +539,7 @@
       "category": "announcement",
       "tag": "mercy",
       "superfeatured": false
-    }
-    ,
+    },
     {
       "id": "2025-054",
       "title": "Volunteers Needed: Christmas Drama and Nativity",
@@ -550,9 +549,9 @@
       "type": "announcement",
       "category": "volunteer",
       "tag": "worship",
-      "superfeatured": true
-    }
-  ,
+      "superfeatured": true,
+      "featuredImage": "assets/CPCXMAS25.png"
+    },
     {
       "id": "2025-055",
       "title": "Work Day, Decor Setup & Chili Cookoff! | Dec. 6, 9am-12pm",
