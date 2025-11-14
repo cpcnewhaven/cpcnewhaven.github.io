@@ -576,6 +576,28 @@
       "superfeatured": false,
       "featuredImage": "https://storage.googleapis.com/cpc-public-website/events/Church%20Journal/CALL%20FOR%20WRTIERS.jpg",
       "imageDisplayType": "poster"
+    },
+    {
+      "id": "2025-057",
+      "title": "A Charlie Brown Thanksgiving Party | Saturday, November 22, 4–6pm",
+      "description": "In the spirit of Charlie Brown's Thanksgiving, the children and youth of CPC, along with their families and friends, are invited to a special Thanksgiving feast Saturday, November 22nd, where they will cooperatively prepare a meal for each other. Come join us from 4–6pm in the fellowship hall as we pop popcorn, share jelly beans, make crafts, play games, and see how many ways we can toast Thanksgiving!",
+      "dateEntered": "2025-11-14",
+      "active": "true",
+      "type": "event",
+      "category": "event",
+      "tag": "children",
+      "superfeatured": false
+    },
+    {
+      "id": "2025-058",
+      "title": "Join WhatsApp group “CPC Social!”",
+      "description": "If you’re interested in connecting more spontaneously with CPC folks, you’re welcome to join our WhatsApp group “CPC Social!” This won’t be an official means of communication for our church, just a laid-back place to invite each other to events, share activities, recruit casual help, etc. Essential communication will continue to happen after Sunday worship and in church-wide emails; and significant one-anothering will continue to happen through Life groups and Discipleship groups. Happy socializing!",
+      "dateEntered": "2025-11-14",
+      "active": "true",
+      "type": "announcement",
+      "category": "announcement",
+      "tag": "fellowship",
+      "superfeatured": false
     }
   ]
 }
