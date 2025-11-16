@@ -561,7 +561,8 @@
       "type": "event",
       "category": "event",
       "tag": "service",
-      "superfeatured": true
+      "superfeatured": true,
+      "featuredImage": "https://storage.googleapis.com/cpc-public-website/highlights/CHILI%20SQUARE.jpg"
     },
     {
       "id": "2025-056",
@@ -585,7 +586,8 @@
       "type": "event",
       "category": "event",
       "tag": "children",
-      "superfeatured": false
+      "superfeatured": false,
+      "featuredImage": "https://washingtonparent.com/wp-content/uploads/2022/10/charlie-brown-thanksgiving.jpg"
     },
     {
       "id": "2025-058",
@@ -596,7 +598,19 @@
       "type": "announcement",
       "category": "announcement",
       "tag": "fellowship",
-      "superfeatured": false
+      "superfeatured": false,
+      "featuredImage": "https://storage.googleapis.com/cpc-public-website/highlights/JOIN%20THE%20WHATSAPP.jpg"
+    },
+    {
+      "id": "2025-059",
+      "title": "Next Week!",
+      "description": "Just a reminder that our next Christian Leadership Training meeting is Friday, Nov. 21, 6:30-8:30pm.<br><br><a href=\"christian-leadership-training.html\" style=\"display: inline-block; padding: 10px 20px; background-color: #0078D4; color: white; text-decoration: none; border-radius: 4px; font-weight: 600; margin-top: 10px;\">Learn more</a>",
+      "dateEntered": "2025-11-17",
+      "active": "true",
+      "type": "event",
+      "category": "event",
+      "tag": "training",
+      "superfeatured": true
     }
   ]
 }
