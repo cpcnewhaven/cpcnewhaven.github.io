@@ -45,14 +45,13 @@
     gap: 24px;
 }
 
-/* Announcement Card Layout */
-.announcement-card {
-    background: #ffffff;
-    border: 1px solid #e6e9ed;
+.highlight-card {
+    background: white;
+    border: 2px solid #e1e5e9;
     border-radius: 12px;
     padding: 0;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
-    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -60,113 +59,74 @@
     overflow: hidden;
 }
 
-.announcement-card:hover {
-    border-color: #cfd6dd;
-    transform: translateY(-2px);
-    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+.highlight-card .highlight-content {
+    padding: 30px;
 }
 
-.announcement-content {
-    padding: 20px;
+.highlight-card:hover {
+    border-color: #0078D4;
+    box-shadow: 0 4px 16px rgba(0, 120, 212, 0.1);
+    transform: translateY(-2px);
+}
+
+.highlight-image-container {
+    width: 100%;
+    margin: 0 0 0 0;
+    border-radius: 0;
+    overflow: hidden;
+}
+
+.highlight-image {
+    width: 100%;
+    min-height: 300px;
+    max-height: 500px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+}
+
+/* Special styling for poster-type images */
+.highlight-image-container.poster-display {
+    overflow: visible;
+}
+
+.highlight-image-container.poster-display .highlight-image {
+    min-height: 400px;
+    max-height: 600px;
+    object-fit: contain;
+}
+
+.highlight-content {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 15px;
+    flex: 1;
 }
 
-.announcement-title {
-    font-size: 1.25rem;
-    color: #222;
-    margin: 0 0 6px 0;
-    font-weight: 700;
-    line-height: 1.3;
+.highlight-title {
+    font-size: 1.4rem;
+    color: #333;
+    margin: 0 0 10px 0;
+    font-weight: 600;
     text-align: left;
+    line-height: 1.3;
 }
 
-.announcement-text {
+.highlight-description {
     font-size: 1rem;
-    color: #555;
+    color: #666;
     line-height: 1.6;
     text-align: left;
     flex: 1;
 }
 
-.announcement-text p {
+.highlight-description p {
     margin-bottom: 10px;
 }
 
-.announcement-text * {
+.highlight-description * {
     text-align: left;
-}
-
-.announcement-meta {
-    font-size: 0.85rem;
-    color: #6b7280;
-}
-
-.announcement-actions {
-    margin-top: 8px;
-}
-
-.announcement-button {
-    display: inline-block;
-    background-color: #003c6d;
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: 600;
-    border-radius: 8px;
-    padding: 10px 14px;
-    transition: background-color 0.2s ease, transform 0.2s ease;
-}
-
-.announcement-button:hover {
-    background-color: #002c50;
-    transform: translateY(-1px);
-}
-
-/* Image container with fixed aspect ratio and rounded top corners */
-.announcement-image-container {
-    width: 100%;
-    position: relative;
-    aspect-ratio: 16 / 9;
-    overflow: hidden;
-    border-top-left-radius: 12px;
-    border-top-right-radius: 12px;
-    background-color: #f3f4f6;
-}
-
-.announcement-image {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-/* Support poster-style images (contain within area) */
-.announcement-image-container.poster-display {
-    aspect-ratio: auto;
-    max-height: 600px;
-}
-
-.announcement-image-container.poster-display .announcement-image {
-    position: static;
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-}
-
-/* Link styles inside description */
-.announcement-text a {
-    color: var(--link-color);
-    text-decoration: none;
-    font-weight: 500;
-    font-size: var(--link-size);
-}
-
-.announcement-text a:hover {
-    text-decoration: underline;
-    color: var(--link-hover-color);
 }
 
 /* Ensure all heading elements in highlights are left-aligned */
@@ -176,13 +136,28 @@
     text-align: left !important;
 }
 
-/* Preserve legacy highlight styles (no-op if not used) */
-.highlight-card,
-.highlight-content,
-.highlight-title,
-.highlight-description,
-.highlight-image-container,
-.highlight-image { }
+.highlight-description ul {
+    margin: 0.5rem 0;
+    padding-left: 1.5rem;
+}
+
+.highlight-description li {
+    margin-bottom: 0.25rem;
+}
+
+.highlight-description a {
+    color: var(--link-color);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: var(--link-size);
+}
+
+.highlight-description a:hover {
+    text-decoration: underline;
+    color: var(--link-hover-color);
+}
+
+
 
 .highlight-error,
 .highlight-empty {
@@ -203,16 +178,34 @@
         padding: 30px 15px;
     }
 
-    .announcement-content {
-        padding: 16px;
+    .highlights-content {
+        gap: 20px;
     }
 
-    .announcement-title {
-        font-size: 1.15rem;
+    .highlight-card .highlight-content {
+        padding: 20px;
+    }
+
+    .highlight-title {
+        font-size: 1.2rem;
+    }
+
+    .highlight-image-container {
+        margin-bottom: 15px;
+    }
+
+    .highlight-image {
+        min-height: 200px;
+        max-height: 400px;
+    }
+
+    .highlight-image-container.poster-display .highlight-image {
+        min-height: 300px;
+        max-height: 500px;
     }
 }
 
-/* Grid column breakpoints */
+/* Grid column breakpoints for highlights */
 @media (min-width: 640px) {
     .highlights-content {
         grid-template-columns: repeat(2, 1fr);
@@ -237,3 +230,5 @@
         transform: translateY(0);
     }
 }
+
+
