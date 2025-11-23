@@ -199,8 +199,8 @@ class HighlightsManager {
     }
 
     createAnnouncementElement(announcement) {
-        const element = document.createElement('article');
-        element.className = `highlight-card ${announcement.type || 'announcement'}`;
+        const element = document.createElement('div');
+        element.className = `announcement-card ${announcement.type || 'announcement'}`;
         
         // Add featured image if available
         if (announcement.featuredImage) {
@@ -210,19 +210,34 @@ class HighlightsManager {
 
         // Create content container
         const contentContainer = document.createElement('div');
-        contentContainer.className = 'highlight-content';
+        contentContainer.className = 'announcement-content';
 
         // Add title
         const title = document.createElement('h3');
-        title.className = 'highlight-title';
+        title.className = 'announcement-title';
         title.textContent = announcement.title;
         contentContainer.appendChild(title);
 
         // Add description
         const description = document.createElement('div');
-        description.className = 'highlight-description';
+        description.className = 'announcement-text';
         description.innerHTML = announcement.description;
         contentContainer.appendChild(description);
+
+        // Add metadata
+        const metadata = this.createMetadataElement(announcement);
+        if (metadata) {
+            contentContainer.appendChild(metadata);
+        }
+
+        // Add CTA button if a link is present in description
+        const cta = this.createCTAFromDescription(announcement.description);
+        if (cta) {
+            const actions = document.createElement('div');
+            actions.className = 'announcement-actions';
+            actions.appendChild(cta);
+            contentContainer.appendChild(actions);
+        }
 
         element.appendChild(contentContainer);
         return element;
@@ -230,7 +245,7 @@ class HighlightsManager {
 
     createImageContainer(imageUrl, imageDisplayType) {
         const container = document.createElement('div');
-        container.className = 'highlight-image-container';
+        container.className = 'announcement-image-container';
         
         // Add special class for poster display type
         if (imageDisplayType === 'poster') {
@@ -240,7 +255,7 @@ class HighlightsManager {
         const image = document.createElement('img');
         image.src = imageUrl;
         image.alt = 'Highlight image';
-        image.className = 'highlight-image';
+        image.className = 'announcement-image';
         image.loading = 'lazy';
         
         // Handle image loading errors
@@ -250,6 +265,54 @@ class HighlightsManager {
         
         container.appendChild(image);
         return container;
+    }
+
+    createMetadataElement(announcement) {
+        const pieces = [];
+        if (announcement.type) pieces.push(this.capitalize(announcement.type));
+        if (announcement.tag) pieces.push(this.capitalize(announcement.tag));
+
+        // Prefer parsed event date; fallback to dateEntered
+        const eventDate = this.parseEventDateFromContent(announcement);
+        const fallbackDate = announcement.dateEntered ? new Date(announcement.dateEntered) : null;
+        const dateToUse = eventDate || fallbackDate;
+        if (dateToUse && !isNaN(dateToUse)) {
+            pieces.push(this.formatDate(dateToUse));
+        }
+
+        if (pieces.length === 0) return null;
+
+        const meta = document.createElement('div');
+        meta.className = 'announcement-meta';
+        meta.textContent = pieces.join(' • ');
+        return meta;
+    }
+
+    createCTAFromDescription(descriptionHtml) {
+        if (!descriptionHtml) return null;
+        const temp = document.createElement('div');
+        temp.innerHTML = descriptionHtml;
+        const anchor = temp.querySelector('a[href]');
+        if (!anchor) return null;
+
+        const cta = document.createElement('a');
+        cta.className = 'announcement-button';
+        cta.href = anchor.getAttribute('href');
+        const target = anchor.getAttribute('target');
+        if (target) cta.setAttribute('target', target);
+        cta.setAttribute('rel', 'noopener');
+        cta.textContent = anchor.textContent?.trim() || 'Learn more';
+        return cta;
+    }
+
+    formatDate(date) {
+        const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+        return `${months[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()}`;
+    }
+
+    capitalize(text) {
+        if (typeof text !== 'string' || text.length === 0) return text;
+        return text.charAt(0).toUpperCase() + text.slice(1);
     }
 
     displayError() {
