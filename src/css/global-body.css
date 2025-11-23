@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&display=swap");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css");
 
 
@@ -12,6 +11,34 @@
     --submenu-background-color: #e6f0ff;
     --submenu-button-color: #003c6d;
     --submenu-button-hover-color: #002244;
+}
+
+/* Correct secondary variables block */
+:root {
+    --primary-color: #003c6d;
+    --secondary-color: #002244;
+    --background-color: #f9f9f9;
+    --text-color: #555;
+    --heading-color: #333;
+    --button-color: #003c6d;
+    --button-hover-color: #002244;
+    --box-shadow-color: rgba(0, 0, 0, 0.1);
+    --border-radius: 8px;
+    --cpc-accent-blue: #1E3A8A;
+    --cpc-accent-blue-dark: #1E40AF;
+}
+
+/* Override malformed ::root with correct :root and add accent variables */
+:root {
+    --cpc-blue: #003c6d;
+    --cpc-blue-dark: #002244;
+    --cpc-blue-light: #e6f0ff;
+    --cpc-blue-medium: #004494;
+    --submenu-background-color: #e6f0ff;
+    --submenu-button-color: #003c6d;
+    --submenu-button-hover-color: #002244;
+    --cpc-accent-blue: #1E3A8A;
+    --cpc-accent-blue-dark: #1E40AF;
 }
 
 /* CSS Reset */
@@ -498,6 +525,23 @@ li {
 
 a {
     text-decoration: none;
+}
+
+/* Link utilities for consistent styling */
+.link-clean {
+    text-decoration: none !important;
+    color: inherit;
+}
+.link-accent {
+    color: var(--cpc-accent-blue);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+.link-accent:hover,
+.link-accent:focus-visible {
+    color: var(--cpc-accent-blue-dark);
+    text-decoration: underline;
+    outline: none;
 }
 
 .left-content {

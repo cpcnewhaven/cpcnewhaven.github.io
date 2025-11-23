@@ -27,6 +27,7 @@
 
     <!-- External CSS Files -->
     <link rel="stylesheet" href="./src/css/global-body.css" />
+    <link rel="stylesheet" href="./src/css/resources.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
@@ -35,109 +36,7 @@
       href="https://storage.googleapis.com/cpc-public-website/web-assets/CPC%20-%20FAVICON%20-%20FALL%202024.png"
       type="image/png" />
 
-    <!-- Internal Styles Specific to the Resources Page -->
-    <style>
-      /* Container for the resource directory */
-      .res-directory-container {
-        padding: 40px 20px;
-        max-width: 1000px;
-        margin: 0 auto;
-      }
-      /* Background and box styling for the resource directory content */
-      .res-directory-content {
-        background: rgba(255, 255, 255, 0.15);
-        backdrop-filter: blur(15px);
-        border-radius: 24px;
-        padding: 35px;
-        border: 1px solid rgba(255, 255, 255, 0.3);
-        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-      }
-      /* Title styling for the resource directory */
-      .res-directory-title {
-        color: #2c5282;
-        margin-bottom: 30px;
-        font-size: 2em;
-        font-weight: 300;
-        text-align: center;
-      }
-      /* Description paragraph styling */
-      .res-directory-description {
-        text-align: center;
-        color: #4a5568;
-        margin-bottom: 25px;
-        font-size: 1.1em;
-        font-weight: 300;
-      }
-      /* Wrapper for the table layout */
-      .res-directory-table-wrapper {
-        margin-top: 20px;
-        border-radius: 16px;
-        background: rgba(255, 255, 255, 0.8);
-        overflow: hidden;
-        box-shadow: 0 4px 16px rgba(44, 82, 130, 0.05);
-        border: 1px solid rgba(255, 255, 255, 0.5);
-      }
-      /* Table styling */
-      .res-directory-table {
-        width: 100%;
-        border-collapse: separate;
-        border-spacing: 0;
-        margin: 0;
-        font-size: 1em;
-      }
-      /* Table cell styling */
-      .res-directory-cell {
-        padding: 16px 24px;
-        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-      }
-      /* Table row styling */
-      .res-directory-row {
-        border-bottom: 1px solid rgba(44, 82, 130, 0.08);
-        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-      }
-      /* Hover effect for table rows */
-      .res-directory-row:hover {
-        background: rgba(44, 82, 130, 0.03);
-        transform: translateX(5px);
-        box-shadow: 0 2px 8px rgba(44, 82, 130, 0.05);
-      }
-      .res-directory-row:last-of-type {
-        border-bottom: none;
-      }
-      /* Link styling within the table */
-      .res-directory-link {
-        color: #2c5282;
-        text-decoration: none;
-        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        display: block;
-        font-weight: 400;
-        padding: 4px 0;
-      }
-      .res-directory-link:hover {
-        color: #1a365d;
-        transform: translateX(5px);
-        text-shadow: 0 0 1px rgba(26, 54, 93, 0.1);
-      }
-      /* Responsive adjustments */
-      @media (max-width: 768px) {
-        .res-directory-container {
-          padding: 20px 10px;
-        }
-        .res-directory-content {
-          padding: 20px;
-        }
-        .res-directory-cell {
-          padding: 14px 16px;
-        }
-        .res-directory-title {
-          font-size: 1.5em;
-        }
-        .res-directory-description {
-          font-size: 1em;
-          margin-bottom: 20px;
-        }
-      }
-    </style>
+    <!-- Page-specific CSS moved to external file: ./src/css/resources.css -->
   </head>
 
   <body>
@@ -188,7 +87,7 @@
     <!-- The container below holds the resource directory overview, a table of links, and an archive section.
          The x-data attribute is present (for Alpine.js) to allow for future dynamic behavior if needed. -->
     <div
-      class="res-directory-container"
+      class="res-directory-container resources-page"
       x-data="{
         resources: [
           { title: 'Adult Sunday Studies', url: 'adult-sunday-school.html', category: 'Education' },
@@ -205,132 +104,83 @@
       <div class="res-directory-content">
         <!-- Overview Section: Introduction to the Resource Directory -->
         <section class="res-directory-overview">
-          <h2 class="res-directory-title">Resource Directory</h2>
-          <p class="res-directory-description">
-            Access important church resources, forms, and community information
-            all in one place.
-          </p>
-
-          <!-- Table Layout: List of Resource Links -->
-          <div class="res-directory-table-wrapper">
-            <table class="res-directory-table">
-              <tbody>
-                <!-- Education & Studies -->
-                <tr class="res-directory-row">
-                  <td class="res-directory-cell">
-                    <a href="adult-sunday-school.html"
-                      class="res-directory-link">
-                      Adult Sunday Studies
-                    </a>
-                  </td>
-                </tr>
-                <tr class="res-directory-row">
-                  <td class="res-directory-cell">
-                    <a href="https://www.cpcnewhaven.org/all-classes"
-                      class="res-directory-link">
-                      School of Discipleship Classes
-                    </a>
-                  </td>
-                </tr>
-                <tr class="res-directory-row">
-                  <td class="res-directory-cell">
-                    <a href="engaging-with-aging.html"
-                      class="res-directory-link">
-                      Engaging with Aging
-                    </a>
-                  </td>
-                </tr>
-                <tr class="res-directory-row">
-                  <td class="res-directory-cell">
-                    <a href="christian-leadership-training.html"
-                      class="res-directory-link">
-                      Christian Leadership Training
-                    </a>
-                  </td>
-                </tr>
-
-                <!-- Church Life & Community -->
-                <tr class="res-directory-row">
-                  <td class="res-directory-cell">
-                    <a href="https://ccb.cpcnewhaven.org"
-                      class="res-directory-link">
-                      Church Community Builder
-                    </a>
-                  </td>
-                </tr>
-                <tr class="res-directory-row">
-                  <td class="res-directory-cell">
-                    <a href="membership.html" class="res-directory-link">
-                      Church Membership
-                    </a>
-                  </td>
-                </tr>
-                <tr class="res-directory-row">
-                  <td class="res-directory-cell">
-                    <a href="contact.html" class="res-directory-link">
-                      Contact Us
-                    </a>
-                  </td>
-                </tr>
-                <tr class="res-directory-row">
-                  <td class="res-directory-cell">
-                    <a href="media.html" class="res-directory-link">
-                      Media Gallery
-                    </a>
-                  </td>
-                </tr>
-
-                <!-- Events & Activities -->
-                <tr class="res-directory-row">
-                  <td class="res-directory-cell">
-                    <a href="2025-missions-trip.html"
-                      class="res-directory-link">
-                      2025 Missions Trip
-                    </a>
-                  </td>
-                </tr>
-                <tr class="res-directory-row">
-                  <td class="res-directory-cell">
-                    <a href="mercy.html" class="res-directory-link">Mercy Day
-                      Registration and Resources</a>
-                  </td>
-                </tr>
-                <tr class="res-directory-row">
-                  <td class="res-directory-cell">
-                    <a href="congregational-meeting.html"
-                      class="res-directory-link">
-                      Congregational Meeting - September 14, 2025
-                    </a>
-                  </td>
-                </tr>
-                <tr class="res-directory-row">
-                  <td class="res-directory-cell">
-                    <a
-                      href="https://cpcnewhaven.ccbchurch.com/goto/forms/171/responses/new"
-                      class="res-directory-link">
-                      Thanksgiving Fellowship Meals - November 27, 2025
-                    </a>
-                  </td>
-                </tr>
-
-                <!-- Resources & Information -->
-                <tr class="res-directory-row">
-                  <td class="res-directory-cell">
-                    <a
-                      href="https://www.cpcnewhaven.org/racial-reconciliation-resources"
-                      class="res-directory-link">
-                      Racial Reconciliation Resources
-                    </a>
-                  </td>
-                </tr>
-                <tr class="res-directory-row">
-                  <td class="res-directory-cell">
-                    <a href="forms.html" class="res-directory-link">Forms</a>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+          <div class="res-header-band">
+            <h2 class="res-directory-title">Resource Directory</h2>
+            <p class="res-directory-description">
+              Access important church resources, forms, and community
+              information
+              all in one place.
+            </p>
           </div>
+
+          <!-- Resource Directory: Grid-based, section-grouped -->
+          <section id="resource-directory" aria-label="Resource Directory">
+            <!-- 1. Learning & Study -->
+            <section class="resource-section"
+              aria-labelledby="group-learning-study">
+              <h3 id="group-learning-study"
+                class="resource-section-title">Learning &amp; Study</h3>
+              <div class="resource-grid">
+                <a class="resource-card" href="adult-sunday-school.html">Adult
+                  Sunday Studies</a>
+                <a class="resource-card"
+                  href="https://www.cpcnewhaven.org/all-classes">School of
+                  Discipleship</a>
+
+                <a class="resource-card"
+                  href="christian-leadership-training.html">Christian Leadership
+                  Training</a>
+              </div>
+            </section>
+
+            <!-- 2. Community & Membership -->
+            <section class="resource-section"
+              aria-labelledby="group-community-membership">
+              <h3 id="group-community-membership"
+                class="resource-section-title">Community &amp; Membership</h3>
+              <div class="resource-grid">
+                <a class="resource-card"
+                  href="https://ccb.cpcnewhaven.org">Church Community
+                  Builder</a>
+                <a class="resource-card" href="membership.html">Church
+                  Membership</a>
+                <a class="resource-card" href="contact.html">Contact Us</a>
+              </div>
+            </section>
+
+            <!-- 3. Events & Signups -->
+            <section class="resource-section"
+              aria-labelledby="group-events-signups">
+              <h3 id="group-events-signups"
+                class="resource-section-title">Events &amp; Signups</h3>
+              <div class="resource-grid">
+                <a class="resource-card" href="2025-missions-trip.html">2025
+                  Missions Trip</a>
+                <a class="resource-card" href="mercy.html">Mercy Day
+                  Registration and Resources</a>
+                <a class="resource-card"
+                  href="congregational-meeting.html">Congregational Meeting –
+                  September 14, 2025</a>
+                <a class="resource-card"
+                  href="https://cpcnewhaven.ccbchurch.com/goto/forms/171/responses/new">Thanksgiving
+                  Fellowship Meals – November 27, 2025</a>
+              </div>
+            </section>
+
+            <!-- 4. Media & Reference -->
+            <section class="resource-section"
+              aria-labelledby="group-media-reference">
+              <h3 id="group-media-reference"
+                class="resource-section-title">Media &amp; Reference</h3>
+              <div class="resource-grid">
+                <a class="resource-card" href="media.html">Media Gallery</a>
+                <a class="resource-card"
+                  href="https://www.cpcnewhaven.org/racial-reconciliation-resources">Racial
+                  Reconciliation Resources</a>
+                <a class="resource-card" href="forms.html">Forms</a>
+              </div>
+            </section>
+          </section>
         </section>
 
       </div>

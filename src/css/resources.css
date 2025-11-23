@@ -1,0 +1,122 @@
+/* Resources page scoped styles */
+.resources-page.res-directory-container {
+  padding: 40px 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.resources-page .res-directory-content {
+  background: #ffffff;
+  border: 1px solid #e9e9e9;
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+}
+
+.resources-page .res-header-band {
+  background: #f0f5ff;
+  border-bottom: 1px solid #dbe8ff;
+  border-radius: 12px;
+  padding: 18px 16px;
+  margin-bottom: 18px;
+}
+
+.resources-page .res-directory-title {
+  color: var(--heading-color);
+  margin-bottom: 10px;
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.resources-page .res-directory-description {
+  text-align: center;
+  color: var(--text-color);
+  margin-bottom: 22px;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+/* Section heading (match subpage headers) */
+.resources-page .resource-section {
+  margin: 40px 0;
+  display: block; /* override global section{display:flex} */
+}
+.resources-page .resource-section-title {
+  color: var(--cpc-accent-blue);
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  margin: 0 0 12px;
+  padding: 4px 0 6px 10px;
+  border-left: 3px solid var(--cpc-accent-blue);
+  border-bottom: 2px solid #eef2f7;
+  text-align: left; /* override global section h3 center */
+  display: inline-block; /* keep border-left tight to text height */
+}
+
+/* Grid */
+.resources-page .resource-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+/* Card link */
+.resources-page .resource-card {
+  display: block;
+  background: #ffffff;
+  color: #111111;
+  border: 1px solid #e6e6e6;
+  border-radius: 8px;
+  padding: 12px 14px;
+  text-decoration: none;
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    color 0.2s ease;
+}
+.resources-page .resource-card:hover,
+.resources-page .resource-card:focus-visible {
+  background: #f8fafc;
+  border-color: var(--cpc-accent-blue);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+  color: var(--cpc-accent-blue);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  outline: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .resources-page .resource-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 600px) {
+  .resources-page .res-directory-container {
+    padding: 24px 12px;
+  }
+  .resources-page .res-directory-content {
+    padding: 18px;
+  }
+  .resources-page .resource-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .resources-page .resource-card {
+    padding: 12px 12px;
+  }
+  .resources-page .res-directory-title {
+    font-size: 1.5rem;
+  }
+  .resources-page .res-directory-description {
+    font-size: 0.95rem;
+    margin-bottom: 16px;
+  }
+}
+
+
