@@ -465,6 +465,7 @@
           height: 4px;
           background: rgba(0,0,0,0.1);
           z-index: 1000;
+          pointer-events: none;
       }
 
       .story-progress-bar {
@@ -478,6 +479,20 @@
           .story-progress-container {
               height: 3px;
           }
+      }
+
+      /* Mobile UX improvements */
+      .about-content-section {
+        scroll-margin-top: 72px; /* prevent sticky header overlap on anchor jumps */
+      }
+      .about-mobile-navigation {
+        -webkit-overflow-scrolling: touch; /* smooth scrolling on iOS */
+      }
+      /* Reduce parallax jank on mobile */
+      @media (max-width: 768px) {
+        .about-parallax-image {
+          background-attachment: scroll;
+        }
       }
     </style>
     </head>
@@ -1761,15 +1776,18 @@
             const mobileNav = document.getElementById('mobileNav');
             const closeMobileMenuButton = document.getElementById('closeMobileMenuButton');
             const mobileNavOverlay = document.getElementById('mobileNavOverlay');
+            const closeMobileIcon = closeMobileMenuButton ? closeMobileMenuButton.querySelector('i') : null;
 
             function toggleMainNav() {
                 mobileNav.classList.toggle('active');
-                if (mobileNav.classList.contains('active')) {
-                    closeMobileMenuButton.classList.remove('fa-bars');
-                    closeMobileMenuButton.classList.add('fa-times');
-                } else {
-                    closeMobileMenuButton.classList.add('fa-bars');
-                    closeMobileMenuButton.classList.remove('fa-times');
+                if (closeMobileIcon) {
+                    if (mobileNav.classList.contains('active')) {
+                        closeMobileIcon.classList.remove('fa-bars');
+                        closeMobileIcon.classList.add('fa-times');
+                    } else {
+                        closeMobileIcon.classList.add('fa-bars');
+                        closeMobileIcon.classList.remove('fa-times');
+                    }
                 }
             }
 
@@ -1783,8 +1801,10 @@
             document.querySelectorAll('.mobile-nav-links a').forEach(link => {
                 link.addEventListener('click', () => {
                     mobileNav.classList.remove('active');
-                    closeMobileMenuButton.classList.add('fa-bars');
-                    closeMobileMenuButton.classList.remove('fa-times');
+                    if (closeMobileIcon) {
+                        closeMobileIcon.classList.add('fa-bars');
+                        closeMobileIcon.classList.remove('fa-times');
+                    }
                 });
             });
 
