@@ -601,6 +601,31 @@
       "category": "event",
       "tag": "training",
       "superfeatured": true
+    },
+    {
+      "id": "2025-060",
+      "title": "Sunday during Fellowship Lunch | Presentation on Mission Anabaino by Rev. Graham.",
+      "description": "Come find out more about what God is doing in church planting around the region!",
+      "dateEntered": "2025-12-05",
+      "active": "true",
+      "type": "event",
+      "category": "event",
+      "tag": "missions",
+      "superfeatured": false,
+      "featuredImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-LIY6fNPvoA-Zoq5vEwu_gI-8PY3zEF_Syw&s"
+    },
+    {
+      "id": "2025-061",
+      "title": "Christmas Offering | Mercy Fund, Mission Anabaino, Undesignated",
+      "description": "Please consider giving above your regular church support to CPC's Special Christmas Offering. You may designate your gift to the funds listed below.<br><br><strong>Ways to Give:</strong><br><br><strong>Check:</strong> Write your designation in the memo (see above options) and give at any time via the Sunday collections throughout December or by mail (Christ Presbyterian Church, 135 Whitney Ave., New Haven, CT 06510).<br><br><strong>Online:</strong> Visit <a href='give.html'>cpcnewhaven.org/give</a>.<br><br><strong>Text-to-Give:</strong> Text GIVE to 860-467-0010 and follow the prompts to accept texts, set up mobile giving, and designate funds. You may save a card or bank information for future giving. If this is your first time texting us, after you are prompted to opt-in, you will need to text GIVE again to initiate the giving process.<br><br><strong>Non-Cash Gifts:</strong> CPC friends and members may utilize the PCA Foundation to assist with processing non-cash gifts (stocks, bonds, mutual funds, and real estate) to support the work of the church. Simply call (800-700-3221), email (<a href='mailto:pcaf@pcanet.org'>pcaf@pcanet.org</a>), or visit their website (<a href='https://pcafoundation.com' target='_blank' rel='noopener'>pcafoundation.com</a>). They’ve helped process more than $150M in gifts to advance God's kingdom.",
+      "dateEntered": "2025-12-05",
+      "active": "true",
+      "type": "announcement",
+      "category": "announcement",
+      "tag": "giving",
+      "superfeatured": true,
+      "featuredImage": "https://remixchurchmedia.com/wp-content/uploads/Christmas-Offering-HD-Title-Slide.jpg",
+      "imageDisplayType": "poster"
     }
   ]
 }
