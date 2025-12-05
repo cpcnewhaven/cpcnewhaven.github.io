@@ -1,40 +1,66 @@
-      // Add a transition effect for smoother opening and closing
-      const mobileNav = document.getElementById('mobileNavigation');
-      mobileNav.style.transition = 'transform 0.3s ease-in-out';
-      mobileNav.style.transform = 'translateX(100%)'; // Start off-screen
+// Mobile navigation toggle - resilient across page variants
+document.addEventListener('DOMContentLoaded', function () {
+  const hamburgerButton = document.getElementById('hamburgerMenu');
+  // Support both legacy and current IDs/classes
+  const mobileNav =
+    document.getElementById('mobileNav') ||
+    document.getElementById('mobileNavigation') ||
+    document.querySelector('.mobile-navigation');
+  const closeButton =
+    document.getElementById('closeMobileMenuButton') ||
+    document.getElementById('closeMenuButton');
+  const overlay =
+    document.getElementById('mobileNavOverlay') ||
+    document.querySelector('.mobile-nav-overlay');
 
-      document.getElementById('hamburgerMenu').addEventListener('click', function() {
-        mobileNav.classList.toggle('active');
-        mobileNav.style.transform = mobileNav.classList.contains('active') ? 'translateX(0)' : 'translateX(100%)'; // Slide in/out
-      });
-  
-      // Close menu when the exit button is clicked
-      document.getElementById('closeMenuButton').addEventListener('click', function() {
-        mobileNav.classList.remove('active');
-        mobileNav.style.transform = 'translateX(100%)'; // Slide out
-      });
-  
-      // Close the menu when clicking outside of it
-      document.addEventListener('click', function(event) {
-        var isClickInsideMenu = mobileNav.contains(event.target);
-        var isMenuActive = mobileNav.classList.contains('active');
-        var isHamburgerMenuClick = document.getElementById('hamburgerMenu').contains(event.target);
-  
-        if (!isClickInsideMenu && isMenuActive && !isHamburgerMenuClick) {
-          mobileNav.classList.remove('active');
-          mobileNav.style.transform = 'translateX(100%)'; // Slide out
-        }
-      });
+  if (!hamburgerButton || !mobileNav) {
+    return; // Nothing to wire up on this page
+  }
 
-      document.addEventListener('DOMContentLoaded', function() {
-        const hamburgerMenu = document.getElementById('hamburgerMenu');
-        const mobileNavigation = document.getElementById('mobileNavigation');
-        const closeMenuButton = document.getElementById('closeMenuButton');
+  // Initialize transition state if not already set
+  try {
+    mobileNav.style.transition = mobileNav.style.transition || 'transform 0.3s ease-in-out';
+    // Only apply transform-based sliding if element is off-canvas
+    if (!mobileNav.classList.contains('active')) {
+      mobileNav.style.transform = 'translateX(100%)';
+    }
+  } catch (_) {}
 
-        function toggleMobileMenu() {
-            mobileNavigation.style.display = mobileNavigation.style.display === 'block' ? 'none' : 'block';
-        }
+  function openMobileNav() {
+    mobileNav.classList.add('active');
+    try {
+      mobileNav.style.transform = 'translateX(0)';
+    } catch (_) {}
+  }
 
-        hamburgerMenu.addEventListener('click', toggleMobileMenu);
-        closeMenuButton.addEventListener('click', toggleMobileMenu);
-      });
+  function closeMobileNav() {
+    mobileNav.classList.remove('active');
+    try {
+      mobileNav.style.transform = 'translateX(100%)';
+    } catch (_) {}
+  }
+
+  function toggleMobileNav() {
+    if (mobileNav.classList.contains('active')) {
+      closeMobileNav();
+    } else {
+      openMobileNav();
+    }
+  }
+
+  hamburgerButton.addEventListener('click', toggleMobileNav);
+  if (closeButton) {
+    closeButton.addEventListener('click', toggleMobileNav);
+  }
+  if (overlay) {
+    overlay.addEventListener('click', closeMobileNav);
+  }
+
+  // Close on outside click
+  document.addEventListener('click', function (event) {
+    const clickedInside = mobileNav.contains(event.target) || hamburgerButton.contains(event.target);
+    if (!clickedInside && mobileNav.classList.contains('active')) {
+      closeMobileNav();
+    }
+  });
+});
