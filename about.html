@@ -1771,42 +1771,7 @@
                 });
             });
 
-            // MAIN NAV (RIGHT) HAMBURGER
-            const hamburgerMenu = document.getElementById('hamburgerMenu');
-            const mobileNav = document.getElementById('mobileNav');
-            const closeMobileMenuButton = document.getElementById('closeMobileMenuButton');
-            const mobileNavOverlay = document.getElementById('mobileNavOverlay');
-            const closeMobileIcon = closeMobileMenuButton ? closeMobileMenuButton.querySelector('i') : null;
-
-            function toggleMainNav() {
-                mobileNav.classList.toggle('active');
-                if (closeMobileIcon) {
-                    if (mobileNav.classList.contains('active')) {
-                        closeMobileIcon.classList.remove('fa-bars');
-                        closeMobileIcon.classList.add('fa-times');
-                    } else {
-                        closeMobileIcon.classList.add('fa-bars');
-                        closeMobileIcon.classList.remove('fa-times');
-                    }
-                }
-            }
-
-            hamburgerMenu.addEventListener('click', toggleMainNav);
-            closeMobileMenuButton.addEventListener('click', toggleMainNav);
-
-            // Close mobile nav when clicking overlay
-            mobileNavOverlay.addEventListener('click', toggleMainNav);
-
-            // Close mobile nav when clicking a link
-            document.querySelectorAll('.mobile-nav-links a').forEach(link => {
-                link.addEventListener('click', () => {
-                    mobileNav.classList.remove('active');
-                    if (closeMobileIcon) {
-                        closeMobileIcon.classList.add('fa-bars');
-                        closeMobileIcon.classList.remove('fa-times');
-                    }
-                });
-            });
+            /* Global main nav handled by shared script: src/js/function_toggle_mobileMenu.js */
 
             const aboutMobileNavOverlay = document.getElementById('aboutMobileNavOverlay');
             aboutMobileNavOverlay.addEventListener('click', () => {
