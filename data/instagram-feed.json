@@ -1,0 +1,35 @@
+{
+  "profileUrl": "https://www.instagram.com/cpcnewhaven/",
+  "posts": [
+    {
+      "imageUrl": "assets/websiteBG/10.jpg",
+      "caption": "CPC New Haven",
+      "link": "https://www.instagram.com/cpcnewhaven/"
+    },
+    {
+      "imageUrl": "assets/websiteBG/11.jpg",
+      "caption": "CPC New Haven",
+      "link": "https://www.instagram.com/cpcnewhaven/"
+    },
+    {
+      "imageUrl": "assets/websiteBG/12.jpg",
+      "caption": "CPC New Haven",
+      "link": "https://www.instagram.com/cpcnewhaven/"
+    },
+    {
+      "imageUrl": "assets/websiteBG/15.jpg",
+      "caption": "CPC New Haven",
+      "link": "https://www.instagram.com/cpcnewhaven/"
+    },
+    {
+      "imageUrl": "assets/websiteBG/16.jpg",
+      "caption": "CPC New Haven",
+      "link": "https://www.instagram.com/cpcnewhaven/"
+    },
+    {
+      "imageUrl": "assets/websiteBG/18.jpg",
+      "caption": "CPC New Haven",
+      "link": "https://www.instagram.com/cpcnewhaven/"
+    }
+  ]
+}
