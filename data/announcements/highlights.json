@@ -626,6 +626,17 @@
       "superfeatured": true,
       "featuredImage": "https://remixchurchmedia.com/wp-content/uploads/Christmas-Offering-HD-Title-Slide.jpg",
       "imageDisplayType": "poster"
+    },
+    {
+      "id": "2025-062",
+      "title": "Women’s Annual Service Project",
+      "description": "The CPC Women’s Annual Service Project of a meal for the Warming Center and cookies & notes to our college students will be held at CPC on Saturday morning, Jan. 24, 2026. We would love to have several women help plan the event. Please contact Diane Miller (<a href=\"mailto:auntie.diane@comcast.net\">auntie.diane@comcast.net</a>) if you’re interested in helping with the planning.",
+      "dateEntered": "2025-12-12",
+      "active": "true",
+      "type": "event",
+      "category": "event",
+      "tag": "women",
+      "superfeatured": true
     }
   ]
 }
