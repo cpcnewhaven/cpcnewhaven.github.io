@@ -472,7 +472,7 @@
       "title": "\"Roots to the Reformed Tradition\" | New Adult Sunday Studies Class begins next week!",
       "description": "In this 6-week class, led by Church history professor John Roney, we'll be walking through major movements in the spirituality and theology of our ancestors in the faith. How did they live as witnesses to Christ? What did they struggle through and find hope in? How can we learn from them today? All are welcome! Join us Sundays, 9:30 in the Fellowship Hall.",
       "dateEntered": "2025-10-15",
-      "active": "true",
+      "active": "false",
       "type": "announcement",
       "category": "announcement",
       "tag": "class", 
@@ -629,14 +629,36 @@
     },
     {
       "id": "2025-062",
-      "title": "Women’s Annual Service Project",
-      "description": "The CPC Women’s Annual Service Project of a meal for the Warming Center and cookies & notes to our college students will be held at CPC on Saturday morning, Jan. 24, 2026. We would love to have several women help plan the event. Please contact Diane Miller (<a href=\"mailto:auntie.diane@comcast.net\">auntie.diane@comcast.net</a>) if you’re interested in helping with the planning.",
+      "title": "Women's Annual Service Project",
+      "description": "The CPC Women's Annual Service Project of a meal for the Warming Center and cookies & notes to our college students will be held at CPC on Saturday morning, Jan. 24, 2026. We would love to have several women help plan the event. Please contact Diane Miller (<a href=\"mailto:auntie.diane@comcast.net\">auntie.diane@comcast.net</a>) if you're interested in helping with the planning.",
       "dateEntered": "2025-12-12",
       "active": "true",
       "type": "event",
       "category": "event",
       "tag": "women",
       "superfeatured": true
+    },
+    {
+      "id": "2025-063",
+      "title": "Upcoming Schedule | No Lunch or Sunday School Dec. 21, 28, Jan. 4. | Regular schedule resumes Jan. 11",
+      "description": "Upcoming Schedule | No Lunch or Sunday School Dec. 21, 28, Jan. 4. | Regular schedule resumes Jan. 11",
+      "dateEntered": "2025-12-12",
+      "active": "true",
+      "type": "upcoming",
+      "category": "upcoming",
+      "tag": "schedule",
+      "superfeatured": true
+    },
+    {
+      "id": "2025-064",
+      "title": "CPC Mom's Group, Parlor Room, NEW time & date | Wednesdays at 11am: 1/7/26, 2/11/26, 3/4/26",
+      "description": "Contact Estella Gierbolini, <a href=\"mailto:egierbo1@gmail.com\">egierbo1@gmail.com</a> or Meg Bogue, <a href=\"mailto:mhbogue@me.com\">mhbogue@me.com</a> to join our WhatsApp group or to receive our book. New members always welcome.",
+      "dateEntered": "2025-12-12",
+      "active": "true",
+      "type": "ongoing",
+      "category": "ongoing",
+      "tag": "groups",
+      "superfeatured": false
     }
   ]
 }
