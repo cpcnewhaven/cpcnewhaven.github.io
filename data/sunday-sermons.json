@@ -3,6 +3,17 @@
   "description": "Weekly sermons from our Sunday worship services",
   "episodes": [
     {
+      "id": "25-12-28",
+      "title": "Audacity, Assurance, & the Man Inside the House",
+      "author": "Rev. Jerry Ornelas",
+      "scripture": "Luke 10:41 - 11:13",
+      "date": "2025-12-28",
+      "apple_podcasts_url": "",
+      "spotify_url": "https://open.spotify.com/episode/0SetTxRKzWykeMUi9tYOcS?si=ih7AEoVJSgmdQarzhTTtxQ",
+      "link": "https://open.spotify.com/episode/0SetTxRKzWykeMUi9tYOcS?si=ih7AEoVJSgmdQarzhTTtxQ",
+      "podcast-thumbnail_url": ""
+    },
+    {
       "id": "24-09-08",
       "title": "Why Do We Praise?",
       "author": "Rev. Craig Luekens",
