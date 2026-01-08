@@ -942,17 +942,25 @@ p {
     overflow-y: auto;
 }
 
-/* Ensure mobile navigation is functional below 750px */
-@media (max-width: 750px) {
-    .mobile-navigation {
-        right: 0;
-        /* Adjust as necessary for initial hidden state */
-    }
+/* Prevent background scrolling when the mobile nav is open */
+body.mobile-nav-open {
+    overflow: hidden;
+}
 
-    .mobile-navigation.active {
-        right: 0;
-        /* Ensure it slides in when active */
-    }
+/* Optional overlay (only takes effect on pages that include the overlay element) */
+.mobile-nav-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+    z-index: 900;
+}
+
+.mobile-nav-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
 }
 
 .mobile-navigation.active {

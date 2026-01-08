@@ -307,44 +307,7 @@
         }
     </style>
 
-            <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            // Main Navigation Hamburger
-            const hamburgerMenu = document.getElementById('hamburgerMenu');
-            const mobileNav = document.getElementById('mobileNavigation');
-            const closeMobileMenuButton = document.getElementById('closeMenuButton');
-
-            function toggleMainNav() {
-                mobileNav.classList.toggle('active');
-                if (mobileNav.classList.contains('active')) {
-                    closeMobileMenuButton.innerHTML = '<i class="fas fa-times"></i>';
-                } else {
-                    closeMobileMenuButton.innerHTML = '<i class="fas fa-bars"></i>';
-                }
-            }
-
-            hamburgerMenu.addEventListener('click', toggleMainNav);
-            closeMobileMenuButton.addEventListener('click', toggleMainNav);
-
-            // Close mobile nav when clicking a link
-            document.querySelectorAll('.mobile-nav-links a').forEach(link => {
-                link.addEventListener('click', () => {
-                    mobileNav.classList.remove('active');
-                    closeMobileMenuButton.innerHTML = '<i class="fas fa-bars"></i>';
-                });
-            });
-
-            // Close mobile nav when clicking outside
-            document.addEventListener('click', (e) => {
-                if (mobileNav.classList.contains('active') && 
-                    !mobileNav.contains(e.target) && 
-                    !hamburgerMenu.contains(e.target)) {
-                    mobileNav.classList.remove('active');
-                    closeMobileMenuButton.innerHTML = '<i class="fas fa-bars"></i>';
-                }
-            });
-        });
-    </script>
+            <!-- Mobile nav behavior handled by shared script: ./src/js/function_toggle_mobileMenu.js -->
 
         </body>
     </html>
