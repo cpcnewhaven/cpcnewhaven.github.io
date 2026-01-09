@@ -1,0 +1,239 @@
+/* Search page */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.search-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px 12px 60px 12px;
+}
+
+.search-hero {
+  text-align: center;
+  padding: 16px 10px 10px 10px;
+}
+
+.search-hero h1 {
+  margin: 8px 0 6px 0;
+  font-size: 2.2rem;
+}
+
+.search-hero p {
+  margin: 0;
+  color: #334155;
+}
+
+/* Many pages use dark hero backgrounds; keep this readable on the global background. */
+.search-panel {
+  margin: 16px auto 0 auto;
+  max-width: 900px;
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 14px;
+  padding: 14px;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(10px);
+}
+
+.search-field {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  background: #fff;
+}
+
+.search-field i {
+  color: #4b5563;
+}
+
+.search-field input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  background: transparent;
+  color: #111827;
+}
+
+.search-suggestions {
+  position: relative;
+  margin-top: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 12px;
+  background: #fff;
+  overflow: hidden;
+}
+
+.search-suggestion {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 10px 12px;
+  cursor: pointer;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+.search-suggestion:first-child {
+  border-top: none;
+}
+.search-suggestion:hover,
+.search-suggestion.active {
+  background: rgba(0, 120, 212, 0.08);
+}
+.search-suggestion-title {
+  font-weight: 650;
+  color: #0b3b69;
+  line-height: 1.2;
+}
+.search-suggestion-meta {
+  font-size: 12px;
+  color: #64748b;
+}
+
+.search-filters {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.search-filter-label {
+  font-size: 13px;
+  color: #334155;
+}
+
+.search-chips {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.search-chip {
+  appearance: none;
+  border: 1px solid rgba(0, 0, 0, 0.14);
+  background: #fff;
+  color: #0f172a;
+  padding: 7px 10px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 13px;
+  user-select: none;
+}
+.search-chip.active {
+  background: #0078d4;
+  border-color: #0078d4;
+  color: #fff;
+}
+.search-chip:focus,
+.search-chip:focus-visible {
+  outline: 3px solid rgba(10, 102, 255, 0.35);
+  outline-offset: 2px;
+}
+
+.search-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.search-status {
+  color: #334155;
+  font-size: 13px;
+}
+
+.search-clear {
+  border: 1px solid rgba(0, 0, 0, 0.14);
+  background: #fff;
+  color: #0f172a;
+  border-radius: 10px;
+  padding: 8px 10px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.search-clear:hover {
+  background: rgba(0, 0, 0, 0.03);
+}
+
+.search-loading {
+  margin-top: 10px;
+  color: #475569;
+  font-size: 13px;
+}
+
+.search-results {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.search-result {
+  display: block;
+  padding: 12px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  background: #fff;
+  text-decoration: none;
+  color: inherit;
+}
+
+.search-result:hover {
+  border-color: rgba(0, 0, 0, 0.16);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+}
+
+.search-result-title {
+  font-weight: 700;
+  color: #0b3b69;
+  margin: 0 0 4px 0;
+  line-height: 1.2;
+}
+
+.search-result-url {
+  font-size: 12px;
+  color: #64748b;
+  margin: 0 0 6px 0;
+}
+
+.search-result-snippet {
+  margin: 0;
+  color: #0f172a;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.search-highlight {
+  background: rgba(255, 232, 120, 0.55);
+  padding: 0 2px;
+  border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+  .search-page {
+    padding: 18px 10px 50px 10px;
+  }
+  .search-hero h1 {
+    font-size: 1.8rem;
+  }
+  .search-panel {
+    padding: 12px;
+    backdrop-filter: none;
+  }
+}
+

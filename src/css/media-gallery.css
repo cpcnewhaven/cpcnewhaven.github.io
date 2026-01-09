@@ -183,6 +183,12 @@
 @media (max-width: 768px) {
     .media-toolbar {
         gap: 10px;
+        /* iOS Safari can be flaky focusing inputs inside sticky + backdrop-filter containers.
+           On small screens, prefer a normal-flow toolbar so the search reliably focuses. */
+        position: relative;
+        top: auto;
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
     }
     .search-input {
         min-width: 0;

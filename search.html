@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Search the CPC New Haven website." />
+    <title>Search - CPC New Haven</title>
+
+    <link rel="stylesheet" href="./src/css/global-body.css" />
+    <link rel="stylesheet" href="./src/css/global-footer-cta.css" />
+    <link rel="stylesheet" href="./src/css/search.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link
+      rel="icon"
+      href="https://storage.googleapis.com/cpc-public-website/web-assets/CPC%20-%20FAVICON%20-%20FALL%202024.png"
+      type="image/png" />
+  </head>
+
+  <body>
+    <header id="stickyHeader" class="sticky">
+      <nav class="main-navigation">
+        <a href="index.html">Home</a>
+        <a href="sundays.html">Sundays</a>
+        <a href="about.html">About</a>
+        <a href="podcasts.html">Podcasts</a>
+        <a href="events.html">Events</a>
+        <a href="community.html">Community</a>
+        <a href="live.html">Live</a>
+        <a href="resources.html">Resources</a>
+        <a href="give.html">Give</a>
+        <!-- Search link is also injected site-wide by ./src/js/function_toggle_mobileMenu.js -->
+        <a href="search.html">Search</a>
+      </nav>
+    </header>
+
+    <!-- MOBILE HAMBURGER -->
+    <div class="hamburger-menu-button-container" id="hamburgerMenu">
+      <i class="fas fa-bars" aria-hidden="true"></i>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <nav class="mobile-navigation" id="mobileNavigation">
+      <div class="mobile-nav-header">
+        <button id="closeMenuButton" aria-label="Close menu">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <ul class="mobile-nav-links">
+        <li><a class="mobile-menu-link" href="index.html">Home</a></li>
+        <li><a class="mobile-menu-link" href="sundays.html">Sundays</a></li>
+        <li><a class="mobile-menu-link" href="about.html">About</a></li>
+        <li><a class="mobile-menu-link" href="podcasts.html">Podcasts</a></li>
+        <li><a class="mobile-menu-link" href="events.html">Events</a></li>
+        <li><a class="mobile-menu-link" href="community.html">Community</a></li>
+        <li><a class="mobile-menu-link" href="live.html">Live</a></li>
+        <li><a class="mobile-menu-link" href="resources.html">Resources</a></li>
+        <li><a class="mobile-menu-link" href="give.html">Give</a></li>
+        <li><a class="mobile-menu-link" href="search.html">Search</a></li>
+      </ul>
+    </nav>
+
+    <main class="search-page">
+      <section class="search-hero">
+        <h1>Search</h1>
+        <p>Search pages across the CPC New Haven website.</p>
+      </section>
+
+      <section class="search-panel" aria-label="Website search">
+        <label class="search-field" for="searchInput">
+          <span class="sr-only">Search</span>
+          <i class="fas fa-search" aria-hidden="true"></i>
+          <input
+            id="searchInput"
+            type="search"
+            placeholder="Search (e.g., ‘retreat’, ‘membership’, ‘Sunday Sermons’)…"
+            autocomplete="off" />
+        </label>
+
+        <div id="searchSuggestions" class="search-suggestions" role="listbox" aria-label="Search suggestions" hidden></div>
+
+        <div class="search-filters" aria-label="Search filters">
+          <div class="search-filter-label">Filter:</div>
+          <div id="searchCategoryChips" class="search-chips" role="radiogroup" aria-label="Category"></div>
+        </div>
+
+        <div class="search-meta">
+          <div id="searchStatus" class="search-status" aria-live="polite"></div>
+          <button id="clearSearch" class="search-clear" type="button">Clear</button>
+        </div>
+
+        <div id="searchLoading" class="search-loading" hidden>
+          Loading search index…
+        </div>
+
+        <div id="searchResults" class="search-results" role="list"></div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-content-logo">
+        <a href="index.html">
+          <img
+            src="./assets/CPC_LOGO_24.png"
+            alt="CPC New Haven Church"
+            class="top-splash-logo" />
+        </a>
+      </div>
+      <p>
+        Join us for worship and fellowship. <a href="sundays.html">Learn more</a>
+      </p>
+      <p>
+        203.777.6960 |
+        <a href="mailto:admin@cpcnewhaven.org">admin@cpcnewhaven.org</a>
+        | 135 Whitney Ave. New Haven CT 06510
+      </p>
+      <p>© 2024 Christ Presbyterian Church.</p>
+    </footer>
+
+    <script src="./src/js/function_toggle_mobileMenu.js"></script>
+    <script src="./src/js/site-search.js"></script>
+  </body>
+</html>
+

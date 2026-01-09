@@ -1,5 +1,49 @@
 // Mobile navigation toggle - resilient across page variants
 document.addEventListener('DOMContentLoaded', function () {
+  function ensureNavLink(container, options) {
+    const href = options.href;
+    const text = options.text;
+    const kind = options.kind; // 'mobile' | 'desktop'
+
+    if (!container || !href || !text) return;
+
+    // Already present?
+    const existing = container.querySelector('a[href="' + href + '"]');
+    if (existing) return;
+
+    if (kind === 'mobile') {
+      // Expected structure: <ul class="mobile-nav-links"><li><a class="mobile-menu-link" ...>...</a></li>...</ul>
+      const ul =
+        container.classList && container.classList.contains('mobile-nav-links')
+          ? container
+          : container.querySelector('.mobile-nav-links');
+      if (!ul) return;
+
+      const li = document.createElement('li');
+      const a = document.createElement('a');
+      a.className = 'mobile-menu-link';
+      a.href = href;
+      a.textContent = text;
+      li.appendChild(a);
+      ul.appendChild(li);
+      return;
+    }
+
+    if (kind === 'desktop') {
+      // Expected structure: <nav class="main-navigation"><a ...>...</a>...</nav>
+      const nav =
+        container.classList && container.classList.contains('main-navigation')
+          ? container
+          : container.querySelector('.main-navigation');
+      if (!nav) return;
+
+      const a = document.createElement('a');
+      a.href = href;
+      a.textContent = text;
+      nav.appendChild(a);
+    }
+  }
+
   function wireMobileNav(options) {
     const hamburgerButton = options.hamburgerButton;
     const mobileNav = options.mobileNav;
@@ -10,6 +54,10 @@ document.addEventListener('DOMContentLoaded', function () {
     const openBodyClass = options.openBodyClass || 'mobile-nav-open';
 
     if (!hamburgerButton || !mobileNav) return null;
+
+    // Ensure the site-wide Search link exists in the mobile menu (without editing every HTML file).
+    // Do this before we attach "close on link click" listeners so it inherits the behavior.
+    ensureNavLink(mobileNav, { kind: 'mobile', href: 'search.html', text: 'Search' });
 
     // Basic accessibility hints (safe if attributes already exist)
     try {
@@ -52,7 +100,9 @@ document.addEventListener('DOMContentLoaded', function () {
     if (closeButton) {
       closeButton.addEventListener('click', function (e) {
         e.preventDefault();
-        toggle();
+        // Explicit close avoids double-toggle bugs on pages where the close target
+        // accidentally overlaps with the hamburger (event bubbling).
+        close();
       });
     }
 
@@ -95,12 +145,20 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('mobileNavigation') ||
     document.getElementById('mobileNav') ||
     document.querySelector('.mobile-navigation');
-  const mainClose =
-    document.getElementById('closeMenuButton') ||
-    document.getElementById('closeMobileMenuButton');
+
+  // IMPORTANT: Some pages have an element with id="closeMobileMenuButton" but it's actually the
+  // hamburger icon (<i class="fa-bars">) inside the hamburger button container. Treating that as
+  // a "close" button causes imperfect behavior (double handlers via bubbling).
+  let mainClose = document.getElementById('closeMenuButton');
+  if (!mainClose && mainMobileNav) {
+    mainClose = mainMobileNav.querySelector('#closeMenuButton, button[aria-label="Close menu"], .mobile-nav-header button');
+  }
   const mainOverlay =
     document.getElementById('mobileNavOverlay') ||
     document.querySelector('.mobile-nav-overlay');
+
+  // Also add Search to the desktop nav where present.
+  ensureNavLink(document, { kind: 'desktop', href: 'search.html', text: 'Search' });
 
   wireMobileNav({
     hamburgerButton: mainHamburger,
