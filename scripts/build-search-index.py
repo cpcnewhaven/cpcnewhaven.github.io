@@ -44,6 +44,7 @@ SKIP_FILE_NAMES = {
 SKIP_JSON_NAMES = {
     # Generated artifact
     "search-index.json",
+    "search-manifest.json",
     # Usually very large/noisy and already represented on the homepage
     "instagram-feed.json",
 }
@@ -318,6 +319,21 @@ def json_entries_for_known_files(root: Path, json_path: Path) -> List["SearchEnt
             )
         return out
 
+    # Site banner content (homepage)
+    if rel == "data/banner-content.json" and isinstance(payload, dict):
+        banner_text = str(payload.get("bannerText", "") or "")
+        button_text = str(payload.get("buttonText", "") or "")
+        button_url = str(payload.get("buttonUrl", "") or "")
+        add_entry(
+            url="index.html",
+            title="Site Banner",
+            description=banner_text,
+            text=" ".join([x for x in [button_text, button_url] if x]),
+            category="Other",
+            updated=safe_date_like(payload.get("enteredDate", "")) or file_updated(),
+        )
+        return out
+
     # Sunday sermons episodes (a lot of real content lives here)
     if rel == "data/sunday-sermons.json" and isinstance(payload, dict):
         for ep in (payload.get("episodes") or []):
@@ -371,6 +387,27 @@ def json_entries_for_known_files(root: Path, json_path: Path) -> List["SearchEnt
                     title=(f"What We Believe — {number}. {title}" if number else f"What We Believe — {title}"),
                     description="",
                     text="",
+                    category="Sunday Studies",
+                    updated=file_updated(),
+                )
+        return out
+
+    # What We Believe detailed data (includes handout PDFs + better titles)
+    if rel == "data/wwb/wwb-data.json" and isinstance(payload, dict):
+        episodes = payload.get("episodes") or []
+        if isinstance(episodes, list):
+            for ep in episodes:
+                if not isinstance(ep, dict):
+                    continue
+                number = ep.get("number", "")
+                title = str(ep.get("title", "") or "What We Believe")
+                spotify_title = str(ep.get("spotifyTitle", "") or "")
+                pdf_url = str(ep.get("pdfUrl", "") or "")
+                add_entry(
+                    url="what-we-believe.html",
+                    title=(f"What We Believe — {number}. {title}" if number else f"What We Believe — {title}"),
+                    description=spotify_title,
+                    text=pdf_url,
                     category="Sunday Studies",
                     updated=file_updated(),
                 )
@@ -489,12 +526,15 @@ def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--root", default=".", help="Site root (default: .)")
     ap.add_argument("--out", default="data/search-index.json", help="Output JSON file")
+    ap.add_argument("--manifest-out", default="data/search-manifest.json", help="Output manifest JSON file")
     ap.add_argument("--max-text-chars", type=int, default=6000, help="Max text chars per page")
     args = ap.parse_args()
 
     root = Path(args.root).resolve()
     out_path = (root / args.out).resolve()
     out_path.parent.mkdir(parents=True, exist_ok=True)
+    manifest_path = (root / args.manifest_out).resolve()
+    manifest_path.parent.mkdir(parents=True, exist_ok=True)
 
     entries: List[SearchEntry] = []
     for html_path in sorted(iter_html_files(root)):
@@ -523,6 +563,26 @@ def main() -> int:
     with out_path.open("w", encoding="utf-8") as f:
         json.dump(payload, f, ensure_ascii=False, separators=(",", ":"), sort_keys=False)
         f.write("\n")
+
+    # Small manifest that documents what's indexed (helpful for debugging + transparency)
+    try:
+        sources = sorted({rel_url(root, p) for p in iter_json_files(root)})
+        manifest = {
+            "generatedAt": __import__("datetime").datetime.now().isoformat(timespec="seconds"),
+            "entryCount": len(payload),
+            "htmlPagesIndexed": len([p for p in iter_html_files(root)]),
+            "jsonFilesIndexed": sources,
+            "notes": [
+                "search-index.json is a generated artifact (commit it).",
+                "search-manifest.json documents index sources; safe to commit.",
+            ],
+        }
+        with manifest_path.open("w", encoding="utf-8") as f:
+            json.dump(manifest, f, ensure_ascii=False, separators=(",", ":"), sort_keys=False)
+            f.write("\n")
+    except Exception:
+        # Don't fail builds over manifest.
+        pass
 
     print(f"Wrote {len(payload)} entries to {out_path}")
     return 0

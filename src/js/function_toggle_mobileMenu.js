@@ -1,5 +1,17 @@
 // Mobile navigation toggle - resilient across page variants
 document.addEventListener('DOMContentLoaded', function () {
+  // Ensure a web manifest is present (helps installability / best-practice Lighthouse checks).
+  // We inject it here so we don't have to edit every HTML page head.
+  try {
+    const hasManifest = document.querySelector('link[rel="manifest"]');
+    if (!hasManifest) {
+      const link = document.createElement('link');
+      link.setAttribute('rel', 'manifest');
+      link.setAttribute('href', '/site.webmanifest');
+      document.head.appendChild(link);
+    }
+  } catch (_) {}
+
   function ensureNavLink(container, options) {
     const href = options.href;
     const text = options.text;

@@ -1,0 +1,34 @@
+{
+  "name": "CPC New Haven",
+  "short_name": "CPC",
+  "description": "Christ Presbyterian Church (New Haven) website.",
+  "start_url": "/index.html",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#001f3f",
+  "theme_color": "#001f3f",
+  "icons": [
+    {
+      "src": "/assets/CPC_LOGO_24.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Search",
+      "short_name": "Search",
+      "description": "Search the site",
+      "url": "/search.html",
+      "icons": [
+        {
+          "src": "/assets/CPC_LOGO_24.png",
+          "sizes": "512x512",
+          "type": "image/png"
+        }
+      ]
+    }
+  ]
+}
+
