@@ -12,6 +12,30 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   } catch (_) {}
 
+  // Minimal styles for the injected mobile menu search box (avoid editing every page/CSS file).
+  try {
+    const id = 'cpc-mobile-search-style';
+    if (!document.getElementById(id)) {
+      const style = document.createElement('style');
+      style.id = id;
+      style.textContent = `
+        .mobile-nav-search { padding: 10px 14px 6px 14px; }
+        .mobile-nav-search form { margin: 0; }
+        .mobile-nav-search input[type="search"] {
+          width: 100%;
+          padding: 10px 12px;
+          border-radius: 10px;
+          border: 1px solid rgba(255,255,255,0.14);
+          background: rgba(255,255,255,0.08);
+          color: rgba(255,255,255,0.92);
+          outline: none;
+        }
+        .mobile-nav-search input[type="search"]::placeholder { color: rgba(255,255,255,0.65); }
+      `;
+      document.head.appendChild(style);
+    }
+  } catch (_) {}
+
   function ensureNavLink(container, options) {
     const href = options.href;
     const text = options.text;
@@ -56,6 +80,51 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
+  function ensureMobileSearchBox(mobileNav, onSubmit) {
+    if (!mobileNav) return;
+    // Already present?
+    if (mobileNav.querySelector('.mobile-nav-search')) return;
+
+    const container = document.createElement('div');
+    container.className = 'mobile-nav-search';
+
+    const form = document.createElement('form');
+    form.setAttribute('role', 'search');
+    form.autocomplete = 'off';
+
+    const input = document.createElement('input');
+    input.type = 'search';
+    input.placeholder = 'Search…';
+    input.setAttribute('aria-label', 'Search the site');
+
+    form.appendChild(input);
+    container.appendChild(form);
+
+    // Place right below the header so it’s immediately usable.
+    const header = mobileNav.querySelector('.mobile-nav-header');
+    if (header && header.parentNode === mobileNav) {
+      header.insertAdjacentElement('afterend', container);
+    } else {
+      mobileNav.insertAdjacentElement('afterbegin', container);
+    }
+
+    function submit() {
+      const q = (input.value || '').toString().trim();
+      if (!q) return;
+      try {
+        window.location.href = 'search.html?q=' + encodeURIComponent(q.slice(0, 120));
+      } catch (_) {
+        window.location.href = 'search.html';
+      }
+      if (typeof onSubmit === 'function') onSubmit();
+    }
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      submit();
+    });
+  }
+
   function wireMobileNav(options) {
     const hamburgerButton = options.hamburgerButton;
     const mobileNav = options.mobileNav;
@@ -98,6 +167,9 @@ document.addEventListener('DOMContentLoaded', function () {
       if (overlay) overlay.classList.remove(activeClass);
       setOpenState(false);
     }
+
+    // Add a search box at the top of the mobile menu (routes to search.html?q=...).
+    ensureMobileSearchBox(mobileNav, close);
 
     function toggle() {
       if (mobileNav.classList.contains(activeClass)) close();
