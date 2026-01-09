@@ -197,4 +197,75 @@ document.addEventListener('DOMContentLoaded', function () {
     activeClass: 'active',
     openBodyClass: 'about-mobile-nav-open',
   });
+
+  // Deep-link "find in page" behavior.
+  // If a user lands on any page with ?find=..., scroll to the first match and highlight it.
+  // This makes search results feel like real "in-page search" even when headings don't have IDs.
+  try {
+    const url = new URL(window.location.href);
+    const find = (url.searchParams.get('find') || '').toString().trim();
+    // Keep it conservative to avoid heavy DOM work for huge queries.
+    if (find && find.length >= 3 && find.length <= 120) {
+      const needle = find.toLowerCase();
+      const ignoreClosest = 'script,style,noscript,nav,header,footer';
+      const walker = document.createTreeWalker(
+        document.body,
+        NodeFilter.SHOW_TEXT,
+        {
+          acceptNode: function (node) {
+            const parent = node && node.parentElement;
+            if (!parent) return NodeFilter.FILTER_REJECT;
+            if (parent.closest(ignoreClosest)) return NodeFilter.FILTER_REJECT;
+            const txt = (node.nodeValue || '').trim();
+            if (txt.length < 6) return NodeFilter.FILTER_REJECT;
+            return NodeFilter.FILTER_ACCEPT;
+          },
+        }
+      );
+
+      let matchNode = null;
+      let matchIndex = -1;
+      while (walker.nextNode()) {
+        const node = walker.currentNode;
+        const hay = (node.nodeValue || '').toLowerCase();
+        const idx = hay.indexOf(needle);
+        if (idx !== -1) {
+          matchNode = node;
+          matchIndex = idx;
+          break;
+        }
+      }
+
+      if (matchNode && matchNode.parentElement) {
+        // Highlight by splitting the text node (safe + no external CSS required).
+        const original = matchNode.nodeValue || '';
+        const before = original.slice(0, matchIndex);
+        const mid = original.slice(matchIndex, matchIndex + find.length);
+        const after = original.slice(matchIndex + find.length);
+
+        const frag = document.createDocumentFragment();
+        if (before) frag.appendChild(document.createTextNode(before));
+
+        const mark = document.createElement('span');
+        mark.textContent = mid;
+        mark.setAttribute('data-find-highlight', 'true');
+        mark.style.background = 'rgba(255, 232, 120, 0.65)';
+        mark.style.borderRadius = '4px';
+        mark.style.padding = '0 2px';
+        frag.appendChild(mark);
+
+        if (after) frag.appendChild(document.createTextNode(after));
+        matchNode.parentNode.replaceChild(frag, matchNode);
+
+        // Scroll the highlight into view.
+        setTimeout(function () {
+          try {
+            mark.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'nearest' });
+          } catch (_) {
+            mark.scrollIntoView();
+          }
+        }, 50);
+      }
+    }
+  } catch (_) {}
 });

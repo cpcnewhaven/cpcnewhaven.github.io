@@ -53,6 +53,32 @@ document.addEventListener('DOMContentLoaded', function () {
       .slice(0, 8);
   }
 
+  function getRawQuery(q) {
+    return (q || '').toString().trim();
+  }
+
+  function isExternalUrl(url) {
+    const u = (url || '').toString().trim().toLowerCase();
+    return u.startsWith('http://') || u.startsWith('https://');
+  }
+
+  function withFindParam(url, find) {
+    const u = (url || '').toString();
+    const f = getRawQuery(find);
+    if (!u || !f) return u || '#';
+    if (isExternalUrl(u)) return u;
+    // Avoid adding find param when linking to the search page itself.
+    if (u.indexOf('search.html') !== -1) return u;
+
+    const encoded = encodeURIComponent(f.slice(0, 120));
+    // Preserve any existing hash.
+    const parts = u.split('#');
+    const base = parts[0];
+    const hash = parts.length > 1 ? '#' + parts.slice(1).join('#') : '';
+    const sep = base.indexOf('?') === -1 ? '?' : '&';
+    return base + sep + 'find=' + encoded + hash;
+  }
+
   function getCategory(entry) {
     return (entry && entry.category) ? entry.category : 'Other';
   }
@@ -108,7 +134,7 @@ document.addEventListener('DOMContentLoaded', function () {
     return 0;
   }
 
-  function scoreEntry(entry, terms) {
+  function scoreEntry(entry, terms, rawQuery) {
     const title = norm(entry.title);
     const headings = (entry.headings || []).map(norm).join(' ');
     const text = norm(entry.text);
@@ -135,6 +161,14 @@ document.addEventListener('DOMContentLoaded', function () {
     const cat = getCategory(entry);
     if (cat === 'Community') score += 1;
     if (cat === 'Sunday Studies') score += 1;
+
+    // Phrase boost (what users expect when they type a multi-word query).
+    const phrase = norm(rawQuery);
+    if (phrase && phrase.length >= 4 && phrase.indexOf(' ') !== -1) {
+      if (title.includes(phrase)) score += 30;
+      if (headings.includes(phrase)) score += 14;
+      if (text.includes(phrase)) score += 6;
+    }
 
     score += recencyBoost(entry);
     return score;
@@ -209,7 +243,7 @@ document.addEventListener('DOMContentLoaded', function () {
         ev.preventDefault();
       });
       item.addEventListener('click', function () {
-        window.location.href = e.url || '#';
+        window.location.href = withFindParam(e.url || '#', input.value || '');
       });
 
       suggestionsEl.appendChild(item);
@@ -227,6 +261,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function renderResults(query) {
+    const rawQuery = getRawQuery(query);
     const terms = tokenize(query);
     clearResults();
 
@@ -246,7 +281,7 @@ document.addEventListener('DOMContentLoaded', function () {
         return passesCategory(entry) && matchesAllTerms(entry, terms);
       })
       .map(function (entry) {
-        return { entry: entry, score: scoreEntry(entry, terms) };
+        return { entry: entry, score: scoreEntry(entry, terms, rawQuery) };
       })
       .filter(function (row) {
         return row.score > 0;
@@ -271,7 +306,7 @@ document.addEventListener('DOMContentLoaded', function () {
       const e = row.entry;
       const a = document.createElement('a');
       a.className = 'search-result';
-      a.href = e.url || '#';
+      a.href = withFindParam(e.url || '#', rawQuery);
       a.setAttribute('role', 'listitem');
 
       const title = document.createElement('div');
