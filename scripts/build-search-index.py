@@ -65,7 +65,7 @@ class TextExtractor(HTMLParser):
     Extracts:
     - <title>
     - <meta name="description" content="...">
-    - headings h1-h3
+    - headings h1-h6
     - visible body text (excluding script/style/nav/header/footer)
     """
 
@@ -138,7 +138,7 @@ class TextExtractor(HTMLParser):
         if not txt:
             return
 
-        if tag in {"h1", "h2", "h3"}:
+        if tag in {"h1", "h2", "h3", "h4", "h5", "h6"}:
             self.headings.append(txt)
             # Also include headings in the searchable body text.
             self.text_chunks.append(txt)
@@ -210,10 +210,18 @@ def build_entry(root: Path, html_path: Path, max_text_chars: int) -> Optional[Se
     # If a page is effectively empty (template stubs / placeholders), skip it.
     if len(text) < 40 and not headings:
         return None
-    if len(text) > max_text_chars:
-        text = text[:max_text_chars].rsplit(" ", 1)[0] + "…"
-
+    # Give long-form pages more room (people often search deep within these).
     url = rel_url(root, html_path)
+    long_form_boost = 0
+    if url in {"about.html", "new-about.html"}:
+        long_form_boost = 20000
+    if url.startswith("sunday-studies/"):
+        long_form_boost = 8000
+
+    effective_max = max_text_chars + long_form_boost
+    if len(text) > effective_max:
+        text = text[:effective_max].rsplit(" ", 1)[0] + "…"
+
     category = categorize(url)
     try:
         updated = html_path.stat().st_mtime
