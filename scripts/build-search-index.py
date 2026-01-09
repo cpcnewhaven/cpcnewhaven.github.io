@@ -41,9 +41,27 @@ SKIP_FILE_NAMES = {
     "cpc-retreat.html",
 }
 
+SKIP_JSON_NAMES = {
+    # Generated artifact
+    "search-index.json",
+    # Usually very large/noisy and already represented on the homepage
+    "instagram-feed.json",
+}
+
 
 def normalize_ws(s: str) -> str:
     return re.sub(r"\s+", " ", (s or "").strip())
+
+_TAG_RE = re.compile(r"<[^>]+>")
+
+
+def strip_html(s: str) -> str:
+    # Best-effort: convert <br> to spaces, then drop all remaining tags.
+    if not s:
+        return ""
+    s = s.replace("<br>", " ").replace("<br/>", " ").replace("<br />", " ")
+    s = _TAG_RE.sub(" ", s)
+    return normalize_ws(s)
 
 
 def rel_url(root: Path, file_path: Path) -> str:
@@ -181,6 +199,225 @@ def categorize(url: str) -> str:
         return "About"
     return "Other"
 
+def safe_date_like(s: str) -> str:
+    # Accept YYYY-MM-DD if present; otherwise return empty
+    if not s:
+        return ""
+    s = str(s).strip()
+    return s if re.match(r"^\d{4}-\d{2}-\d{2}$", s) else ""
+
+
+def is_urlish(s: str) -> bool:
+    s = (s or "").strip().lower()
+    return s.startswith("http://") or s.startswith("https://")
+
+
+def iter_json_files(root: Path) -> Iterable[Path]:
+    data_dir = root / "data"
+    if not data_dir.exists():
+        return []
+    for p in data_dir.rglob("*.json"):
+        if p.name in SKIP_JSON_NAMES:
+            continue
+        yield p
+
+
+def json_entries_for_known_files(root: Path, json_path: Path) -> List["SearchEntry"]:
+    """
+    Turn known JSON content into user-facing search entries that link to real pages.
+    """
+    rel = rel_url(root, json_path)
+    try:
+        payload = json.loads(json_path.read_text(encoding="utf-8", errors="ignore"))
+    except Exception:
+        return []
+
+    out: List[SearchEntry] = []
+
+    def file_updated() -> str:
+        try:
+            ts = json_path.stat().st_mtime
+            return __import__("datetime").datetime.fromtimestamp(ts).date().isoformat()
+        except Exception:
+            return ""
+
+    def add_entry(url: str, title: str, description: str, text: str, category: Optional[str] = None, updated: str = "") -> None:
+        u = url or ""
+        out.append(
+            SearchEntry(
+                url=u,
+                title=strip_html(title),
+                description=strip_html(description),
+                headings=[],
+                text=strip_html(text),
+                category=category or categorize(u),
+                updated=updated or file_updated(),
+            )
+        )
+
+    # Announcements / highlights
+    if rel == "data/announcements/highlights.json" and isinstance(payload, dict):
+        for a in (payload.get("announcements") or []):
+            if not isinstance(a, dict):
+                continue
+            add_entry(
+                url="announcements.html",
+                title=a.get("title", "") or "Announcement",
+                description=a.get("description", ""),
+                text="tag: " + str(a.get("tag", "") or "") + " • " + str(a.get("category", "") or ""),
+                category="Events",
+                updated=safe_date_like(a.get("dateEntered", "")) or file_updated(),
+            )
+        return out
+
+    if rel == "data/announcements/ongoingEvents.json" and isinstance(payload, dict):
+        for a in (payload.get("events") or []):
+            if not isinstance(a, dict):
+                continue
+            add_entry(
+                url="events.html",
+                title=a.get("title", "") or "Ongoing Event",
+                description=a.get("description", ""),
+                text=str(a.get("date", "") or ""),
+                category="Events",
+                updated=file_updated(),
+            )
+        return out
+
+    # Events list
+    if rel == "data/events.json" and isinstance(payload, dict):
+        for e in (payload.get("events") or []):
+            if not isinstance(e, dict):
+                continue
+            add_entry(
+                url="events.html",
+                title=str(e.get("date", "") or "Event"),
+                description=str(e.get("description", "") or ""),
+                text="",
+                category="Events",
+                updated=file_updated(),
+            )
+        return out
+
+    # Resources directory
+    if rel == "data/resources.json" and isinstance(payload, dict):
+        for r in (payload.get("resources") or []):
+            if not isinstance(r, dict):
+                continue
+            url = str(r.get("url", "") or "")
+            # Skip internal/admin control center from search results (still indexed via HTML if needed)
+            if url.endswith("a-c-c.html"):
+                continue
+            add_entry(
+                url=url if url else "resources.html",
+                title=str(r.get("title", "") or "Resource"),
+                description=str(r.get("category", "") or ""),
+                text="",
+                category=categorize(url) if url else "Resources",
+                updated=file_updated(),
+            )
+        return out
+
+    # Sunday sermons episodes (a lot of real content lives here)
+    if rel == "data/sunday-sermons.json" and isinstance(payload, dict):
+        for ep in (payload.get("episodes") or []):
+            if not isinstance(ep, dict):
+                continue
+            title = str(ep.get("title", "") or "Sunday Sermon")
+            author = str(ep.get("author", "") or "")
+            scripture = str(ep.get("scripture", "") or "")
+            date = safe_date_like(ep.get("date", "")) or ""
+            add_entry(
+                url="sunday-sermons.html",
+                title=title,
+                description=" • ".join([x for x in [author, scripture, date] if x]),
+                text="",
+                category="Podcasts",
+                updated=date or file_updated(),
+            )
+        return out
+
+    # Beyond podcast episodes
+    if rel == "data/beyond-podcast.json" and isinstance(payload, dict):
+        for ep in (payload.get("episodes") or []):
+            if not isinstance(ep, dict):
+                continue
+            title = str(ep.get("title", "") or "Beyond episode")
+            guest = str(ep.get("guest", "") or "")
+            season = str(ep.get("season", "") or "")
+            date = safe_date_like(ep.get("date_added", "")) or ""
+            add_entry(
+                url="beyond-podcast.html",
+                title=title,
+                description=" • ".join([x for x in [guest, season, date] if x]),
+                text="",
+                category="Podcasts",
+                updated=date or file_updated(),
+            )
+        return out
+
+    # What We Believe podcast index
+    if rel == "data/podcast-index.json" and isinstance(payload, dict):
+        series = payload.get("podcastSeries") or {}
+        episodes = series.get("episodes") if isinstance(series, dict) else None
+        if isinstance(episodes, list):
+            for ep in episodes:
+                if not isinstance(ep, dict):
+                    continue
+                title = str(ep.get("title", "") or "What We Believe")
+                number = ep.get("number", "")
+                add_entry(
+                    url="what-we-believe.html",
+                    title=(f"What We Believe — {number}. {title}" if number else f"What We Believe — {title}"),
+                    description="",
+                    text="",
+                    category="Sunday Studies",
+                    updated=file_updated(),
+                )
+        return out
+
+    # Class podcast JSONs (data/podcasts/*.json)
+    if rel.startswith("data/podcasts/") and isinstance(payload, dict):
+        series_title = str(payload.get("title", "") or "Class")
+        for ep in (payload.get("episodes") or []):
+            if not isinstance(ep, dict):
+                continue
+            title = str(ep.get("title", "") or series_title)
+            number = ep.get("number", "")
+            add_entry(
+                url="adult-sunday-school.html",
+                title=(f"{series_title} — {number}. {title}" if number else f"{series_title} — {title}"),
+                description="",
+                text="",
+                category="Sunday Studies",
+                updated=file_updated(),
+            )
+        return out
+
+    # Media gallery tags (aggregate)
+    if rel in {"data/image-gallery.json", "data/retreat2025-images.json"} and isinstance(payload, dict):
+        # Avoid indexing every image (too big); instead index unique tags/album names.
+        tags = set()
+        images = payload.get("images") or []
+        if isinstance(images, list):
+            for img in images[:2000]:
+                if isinstance(img, dict):
+                    for t in (img.get("tags") or []):
+                        if isinstance(t, str):
+                            tags.add(strip_html(t).lower())
+        tag_text = ", ".join(sorted([t for t in tags if t and len(t) <= 40])[:120])
+        add_entry(
+            url="media.html",
+            title="Media Gallery",
+            description="Searchable tags and albums",
+            text=tag_text,
+            category="Media",
+            updated=file_updated(),
+        )
+        return out
+
+    return []
+
 
 def build_entry(root: Path, html_path: Path, max_text_chars: int) -> Optional[SearchEntry]:
     try:
@@ -264,6 +501,10 @@ def main() -> int:
         entry = build_entry(root, html_path, max_text_chars=args.max_text_chars)
         if entry:
             entries.append(entry)
+
+    # JSON-backed content (events/resources/episodes/etc.)
+    for json_path in sorted(iter_json_files(root)):
+        entries.extend(json_entries_for_known_files(root, json_path))
 
     payload = [
         {
