@@ -7,7 +7,13 @@ document.addEventListener('DOMContentLoaded', function() {
         .then(response => response.json())
         .then(data => {
             if (data.posts && data.posts.length > 0) {
-                renderInstagramFeed(data.posts, feedContainer);
+                // Ensure "latest" posts show first even if the JSON order is off.
+                const posts = [...data.posts].sort((a, b) => {
+                    const ta = Date.parse(a.timestamp || a.date || '') || 0;
+                    const tb = Date.parse(b.timestamp || b.date || '') || 0;
+                    return tb - ta;
+                });
+                renderInstagramFeed(posts, feedContainer);
             }
         })
         .catch(error => {
@@ -23,9 +29,12 @@ function renderInstagramFeed(posts, container) {
     let html = '<div class="instagram-grid">';
     
     displayPosts.forEach(post => {
+        const imageUrl = post.imageUrl || post.media_url || post.thumbnail_url || '';
+        const link = post.link || post.permalink || 'https://www.instagram.com/cpcnewhaven/';
+        const caption = post.caption || 'Instagram Post';
         html += `
-            <a href="${post.link}" target="_blank" rel="noopener noreferrer" class="instagram-item">
-                <img src="${post.imageUrl}" alt="${post.caption || 'Instagram Post'}" loading="lazy">
+            <a href="${link}" target="_blank" rel="noopener noreferrer" class="instagram-item">
+                <img src="${imageUrl}" alt="${caption}" loading="lazy" decoding="async">
                 <div class="instagram-overlay">
                     <i class="fab fa-instagram"></i>
                 </div>

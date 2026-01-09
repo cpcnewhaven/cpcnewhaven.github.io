@@ -105,7 +105,8 @@
         /* Enhanced Parallax Hero Section */
         .splash-hero--community {
             height: 80vh;
-            background-attachment: fixed;
+            /* Avoid scroll jank from fixed backgrounds */
+            background-attachment: scroll;
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
@@ -925,13 +926,18 @@
     
     <script>
         // Enhanced parallax scrolling effect
+        const enableParallax =
+          window.matchMedia && window.matchMedia('(min-width: 769px)').matches &&
+          !(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+
         function handleParallax() {
             const hero = document.querySelector('.splash-hero--community');
-            if (hero && window.innerWidth > 768) {
+            if (hero && enableParallax) {
                 const scrolled = window.pageYOffset;
                 const rate = scrolled * -0.5;
                 hero.style.backgroundPositionY = rate + 'px';
             }
+            ticking = false;
         }
         
         // Throttle scroll events for better performance
@@ -943,11 +949,10 @@
             }
         }
         
-        // Add scroll event listener
-        window.addEventListener('scroll', requestTick, { passive: true });
-        
-        // Initial call
-        handleParallax();
+        if (enableParallax) {
+          window.addEventListener('scroll', requestTick, { passive: true });
+          handleParallax();
+        }
         
         // Keyboard navigation for lightbox
         document.addEventListener('keydown', function(e) {
@@ -970,29 +975,6 @@
                     }
                 }
             }
-        });
-    </script>
-    
-    <script>
-        // Parallax effect for hero section
-        document.addEventListener('DOMContentLoaded', function() {
-            const hero = document.querySelector('.splash-hero--community');
-            
-            // Only apply parallax on devices that support it well
-            if (!window.matchMedia('(max-width: 768px)').matches) {
-                window.addEventListener('scroll', function() {
-                    const scrolled = window.pageYOffset;
-                    const rate = scrolled * -0.5;
-                    
-                    // Apply parallax effect
-                    hero.style.transform = `translateY(${rate}px)`;
-                });
-            }
-            
-            // Reset transform on window resize
-            window.addEventListener('resize', function() {
-                hero.style.transform = 'translateY(0)';
-            });
         });
     </script>
     <style>

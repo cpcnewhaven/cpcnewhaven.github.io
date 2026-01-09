@@ -162,7 +162,8 @@
         height: 300px;
         background-size: cover;
         background-position: center;
-        background-attachment: fixed;
+        /* Avoid scroll jank from fixed backgrounds */
+        background-attachment: scroll;
         margin: 30px 0;
         border-radius: 8px;
       }
@@ -1732,31 +1733,42 @@
                 aboutHamburgerIcon.classList.remove('fa-times');
             });
 
-            // Story Progress Bar
+            // Story Progress Bar (throttled; passive scroll)
             const storySection = document.getElementById('ourStory');
             const progressBar = document.querySelector('.story-progress-bar');
-            
-            window.addEventListener('scroll', () => {
-                if (storySection) {
-                    const sectionTop = storySection.offsetTop;
-                    const sectionHeight = storySection.offsetHeight;
-                    const scrollPosition = window.scrollY;
-                    const windowHeight = window.innerHeight;
-                    
-                    // Calculate how far we've scrolled through the section
-                    const scrolled = scrollPosition - sectionTop;
-                    const progress = (scrolled / (sectionHeight - windowHeight)) * 100;
-                    
-                    // Update progress bar
-                    if (progress >= 0 && progress <= 100) {
-                        progressBar.style.width = `${progress}%`;
-                    } else if (progress < 0) {
-                        progressBar.style.width = '0%';
-                    } else {
-                        progressBar.style.width = '100%';
-                    }
+
+            let progressTicking = false;
+            function updateStoryProgress() {
+                if (!storySection || !progressBar) {
+                    progressTicking = false;
+                    return;
                 }
-            });
+
+                const sectionTop = storySection.offsetTop;
+                const sectionHeight = storySection.offsetHeight;
+                const scrollPosition = window.scrollY;
+                const windowHeight = window.innerHeight;
+
+                const scrolled = scrollPosition - sectionTop;
+                const denom = (sectionHeight - windowHeight) || 1;
+                const progress = (scrolled / denom) * 100;
+
+                if (progress <= 0) progressBar.style.width = '0%';
+                else if (progress >= 100) progressBar.style.width = '100%';
+                else progressBar.style.width = `${progress}%`;
+
+                progressTicking = false;
+            }
+
+            function requestProgressTick() {
+                if (!progressTicking) {
+                    progressTicking = true;
+                    requestAnimationFrame(updateStoryProgress);
+                }
+            }
+
+            window.addEventListener('scroll', requestProgressTick, { passive: true });
+            updateStoryProgress();
         </script>
 
         <!-- Footer -->

@@ -20,9 +20,8 @@ class HighlightsManager {
     }
 
     async loadHighlights() {
-        // Add cache-busting parameter to ensure fresh data
-        const cacheBuster = `?v=${Date.now()}`;
-        const response = await fetch(this.dataUrl + cacheBuster);
+        // Allow normal browser/CDN caching (cache-busting here makes the homepage feel sluggish)
+        const response = await fetch(this.dataUrl);
         
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
@@ -242,6 +241,7 @@ class HighlightsManager {
         image.alt = 'Highlight image';
         image.className = 'highlight-image';
         image.loading = 'lazy';
+        image.decoding = 'async';
         
         // Handle image loading errors
         image.onerror = () => {

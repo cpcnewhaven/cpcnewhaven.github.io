@@ -244,7 +244,8 @@
             /* Enhanced Parallax Hero Section */
             #sunday-hero.splash-hero--sunday {
                 height: 80vh;
-                background-attachment: fixed;
+                /* Avoid scroll jank from fixed backgrounds */
+                background-attachment: scroll;
                 background-position: center;
                 background-repeat: no-repeat;
                 background-size: cover;
@@ -685,13 +686,18 @@
         
         <script>
             // Enhanced parallax scrolling effect
+            const enableParallax =
+              window.matchMedia && window.matchMedia('(min-width: 769px)').matches &&
+              !(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+
             function handleParallax() {
                 const hero = document.querySelector('#sunday-hero.splash-hero--sunday');
-                if (hero && window.innerWidth > 768) {
+                if (hero && enableParallax) {
                     const scrolled = window.pageYOffset;
                     const rate = scrolled * -0.5;
                     hero.style.backgroundPositionY = rate + 'px';
                 }
+                ticking = false;
             }
             
             // Throttle scroll events for better performance
@@ -703,11 +709,10 @@
                 }
             }
             
-            // Add scroll event listener
-            window.addEventListener('scroll', requestTick, { passive: true });
-            
-            // Initial call
-            handleParallax();
+            if (enableParallax) {
+              window.addEventListener('scroll', requestTick, { passive: true });
+              handleParallax();
+            }
         </script>
     </body>
 </html>

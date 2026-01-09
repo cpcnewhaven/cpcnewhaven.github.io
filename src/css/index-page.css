@@ -9,9 +9,10 @@
     align-items: center;
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
+    /* "fixed" backgrounds are a common cause of scroll jank on many devices */
+    background-attachment: scroll;
     position: relative;
-    transition: all 1s ease-in-out;
+    transition: background-image 1s ease-in-out;
     margin-top: -60px;
 }
 

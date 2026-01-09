@@ -361,7 +361,7 @@
 
         <script src="./src/js/function_toggle_mobileMenu.js"></script>
 
-        <!-- Parallax Effect Script -->
+        <!-- Parallax Effect Script (desktop only; reduced-motion friendly) -->
         <script>
             // Enhanced parallax effect with throttling
             let ticking = false;
@@ -384,18 +384,23 @@
                 }
             }
             
-            // Add scroll event listener
-            window.addEventListener('scroll', requestTick, { passive: true });
-            
-            // Initial call
-            updateParallax();
+            // Only enable parallax on larger screens, and respect reduced motion.
+            const enableParallax =
+              window.matchMedia && window.matchMedia('(min-width: 769px)').matches &&
+              !(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+
+            if (enableParallax) {
+              window.addEventListener('scroll', requestTick, { passive: true });
+              updateParallax();
+            }
         </script>
 
         <style>
         /* Connect Board Styles */
         .splash-hero--connect {
             height: 15vh;
-            background-attachment: fixed;
+            /* Avoid scroll jank from fixed backgrounds */
+            background-attachment: scroll;
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
