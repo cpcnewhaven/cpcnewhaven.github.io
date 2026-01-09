@@ -33,7 +33,6 @@ SKIP_DIR_NAMES = {
 }
 
 SKIP_FILE_NAMES = {
-    "archive/index.html",  # generated/legacy index, often very noisy
     # Internal / dev / legacy pages that shouldn't show up in public search
     "a-c-c.html",
     "old-home.html",
@@ -211,6 +210,94 @@ def safe_date_like(s: str) -> str:
 def is_urlish(s: str) -> bool:
     s = (s or "").strip().lower()
     return s.startswith("http://") or s.startswith("https://")
+
+def is_internal_html_url(s: str) -> bool:
+    s = (s or "").strip()
+    if not s:
+        return False
+    if is_urlish(s):
+        return False
+    return s.endswith(".html") or ".html#" in s
+
+
+def guess_destination_from_json(rel: str) -> str:
+    r = (rel or "").lower()
+    if "announcements/" in r:
+        return "announcements.html"
+    if r.endswith("events.json") or "events" in r:
+        return "events.html"
+    if "resources" in r:
+        return "resources.html"
+    if "sunday-sermons" in r:
+        return "sunday-sermons.html"
+    if "beyond" in r:
+        return "beyond-podcast.html"
+    if "podcast" in r:
+        return "podcasts.html"
+    if "wwb" in r or "what-we-believe" in r:
+        return "what-we-believe.html"
+    if "retreat" in r or "gallery" in r or "image" in r:
+        return "media.html"
+    return "resources.html"
+
+
+def extract_strings_from_json(value, max_items: int = 4000) -> List[str]:
+    """
+    Recursively extract human-readable strings from arbitrary JSON.
+
+    We keep this conservative to avoid polluting search with:
+    - very long strings/blobs
+    - external URLs
+    - PDF URLs (PDF content extraction is intentionally off)
+    """
+    out: List[str] = []
+    seen = 0
+
+    def add(s: str) -> None:
+        nonlocal seen
+        if seen >= max_items:
+            return
+        s = strip_html(str(s))
+        if not s:
+            return
+        # Skip giant blobs / junk
+        if len(s) > 600:
+            return
+        sl = s.lower()
+        # Skip external URLs and pdf URLs
+        if sl.startswith("http://") or sl.startswith("https://"):
+            return
+        if ".pdf" in sl:
+            return
+        out.append(s)
+        seen += 1
+
+    def walk(v):
+        if seen >= max_items:
+            return
+        if v is None:
+            return
+        if isinstance(v, (str, int, float, bool)):
+            add(v)
+            return
+        if isinstance(v, list):
+            for item in v:
+                walk(item)
+                if seen >= max_items:
+                    return
+            return
+        if isinstance(v, dict):
+            for k, vv in v.items():
+                # Some key names can be meaningful for search
+                if isinstance(k, str) and k.lower() in {"tag", "category", "scripture", "author", "speaker", "season"}:
+                    add(k)
+                walk(vv)
+                if seen >= max_items:
+                    return
+            return
+
+    walk(value)
+    return out
 
 
 def iter_json_files(root: Path) -> Iterable[Path]:
@@ -456,6 +543,42 @@ def json_entries_for_known_files(root: Path, json_path: Path) -> List["SearchEnt
     return []
 
 
+def json_entries_fallback(root: Path, json_path: Path) -> List["SearchEntry"]:
+    """
+    Generic JSON indexing for any remaining data/*.json not covered by known handlers.
+    Creates one aggregated entry per JSON file, mapped to a best-guess destination page.
+    """
+    rel = rel_url(root, json_path)
+    try:
+        payload = json.loads(json_path.read_text(encoding="utf-8", errors="ignore"))
+    except Exception:
+        return []
+
+    strings = extract_strings_from_json(payload, max_items=4000)
+    text = normalize_ws(" ".join(strings))
+    if len(text) < 80:
+        return []
+
+    try:
+        ts = json_path.stat().st_mtime
+        updated = __import__("datetime").datetime.fromtimestamp(ts).date().isoformat()
+    except Exception:
+        updated = ""
+
+    dest = guess_destination_from_json(rel)
+    return [
+        SearchEntry(
+            url=dest,
+            title=f"Data: {rel}",
+            description="Indexed JSON-backed content",
+            headings=[],
+            text=text,
+            category=categorize(dest),
+            updated=updated,
+        )
+    ]
+
+
 def build_entry(root: Path, html_path: Path, max_text_chars: int) -> Optional[SearchEntry]:
     try:
         raw = html_path.read_text(encoding="utf-8", errors="ignore")
@@ -544,7 +667,11 @@ def main() -> int:
 
     # JSON-backed content (events/resources/episodes/etc.)
     for json_path in sorted(iter_json_files(root)):
-        entries.extend(json_entries_for_known_files(root, json_path))
+        known = json_entries_for_known_files(root, json_path)
+        if known:
+            entries.extend(known)
+        else:
+            entries.extend(json_entries_fallback(root, json_path))
 
     payload = [
         {
