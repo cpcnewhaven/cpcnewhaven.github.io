@@ -1482,6 +1482,7 @@ body.mobile-nav-open {
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15), 0 1px 3px rgba(0, 0, 0, 0.1);
     transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
     border: none;
+    cursor: pointer;
 }
 
 .hamburger-menu-button-container:hover {
@@ -3760,6 +3761,7 @@ body.mobile-nav-open {
 
     .mobile-navigation {
         display: block;
+        z-index: 3000;
     }
 }
 
@@ -3820,6 +3822,7 @@ body.mobile-nav-open {
         justify-content: center;
         padding: 0;
         transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        cursor: pointer !important;
     }
 
     .hamburger-menu-button-container:hover {

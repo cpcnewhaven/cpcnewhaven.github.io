@@ -400,7 +400,6 @@ body {
     .podcast-cards { display: block; }
     .splash-hero { height: 20vh; margin-top: 0; }
     .hero-content h1 { font-size: 1.5rem; }
-    .hamburger-menu-button-container { z-index: 1000; }
 }
 @media (min-width: 769px) {
     .podcast-search-bar { top: 10px; width: 320px; max-width: 40%; padding: 6px 10px; }
