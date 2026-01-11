@@ -12,6 +12,10 @@ class HighlightsManager {
 
     async init() {
         try {
+            if (!this.container) {
+                console.warn('Highlights container not found. Looking for: #highlights .highlights-content');
+                return;
+            }
             await this.loadHighlights();
         } catch (error) {
             console.error('Failed to initialize highlights:', error);
@@ -28,6 +32,7 @@ class HighlightsManager {
         }
         
         const data = await response.json();
+        console.log(`Loaded ${data.announcements?.length || 0} announcements from highlights.json`);
         this.renderHighlights(data.announcements);
     }
 
@@ -43,6 +48,8 @@ class HighlightsManager {
         // Filter and sort announcements
         const activeAnnouncements = this.filterActiveAnnouncements(announcements);
         const sortedAnnouncements = this.sortAnnouncements(activeAnnouncements);
+
+        console.log(`Filtered to ${sortedAnnouncements.length} active announcements (from ${announcements.length} total)`);
 
         // Render all announcements with unified styling
         sortedAnnouncements.forEach(announcement => {
@@ -65,11 +72,18 @@ class HighlightsManager {
             const isActive = announcement.active === "true" || announcement.active === true;
             if (!isActive) return false;
             
+            // Check if this is an ongoing announcement (should always be shown if active)
+            const isOngoing = announcement.type === 'ongoing' || announcement.category === 'ongoing';
+            if (isOngoing) {
+                return true; // Keep ongoing announcements regardless of date
+            }
+            
             // For event-type announcements, try to parse dates from title or description
             if (announcement.type === 'event' || announcement.category === 'event') {
                 const eventDate = this.parseEventDateFromContent(announcement);
                 if (eventDate) {
                     // If we found an event date, check if it's in the past
+                    // Events beyond today's date should be filtered out (unless ongoing)
                     return eventDate >= today;
                 }
             }
@@ -99,88 +113,86 @@ class HighlightsManager {
     parseEventDateFromTitle(text) {
         if (!text) return null;
         
-        // Common date patterns in titles and descriptions
-        const datePatterns = [
-            // Patterns with year (e.g., "Sept. 28, 2025" or "September 28, 2025")
-            /(?:Sept\.?|September)\s+(\d{1,2}),?\s+(\d{4})/i,
-            /(?:Oct\.?|October)\s+(\d{1,2}),?\s+(\d{4})/i,
-            /(?:Nov\.?|November)\s+(\d{1,2}),?\s+(\d{4})/i,
-            /(?:Dec\.?|December)\s+(\d{1,2}),?\s+(\d{4})/i,
-            /(?:Jan\.?|January)\s+(\d{1,2}),?\s+(\d{4})/i,
-            /(?:Feb\.?|February)\s+(\d{1,2}),?\s+(\d{4})/i,
-            /(?:Mar\.?|March)\s+(\d{1,2}),?\s+(\d{4})/i,
-            /(?:Apr\.?|April)\s+(\d{1,2}),?\s+(\d{4})/i,
-            /(?:May)\s+(\d{1,2}),?\s+(\d{4})/i,
-            /(?:Jun\.?|June)\s+(\d{1,2}),?\s+(\d{4})/i,
-            /(?:Jul\.?|July)\s+(\d{1,2}),?\s+(\d{4})/i,
-            /(?:Aug\.?|August)\s+(\d{1,2}),?\s+(\d{4})/i,
-            
-            // Patterns without year (assume current year)
-            /(?:Sept\.?|September)\s+(\d{1,2})/i,
-            /(?:Oct\.?|October)\s+(\d{1,2})/i,
-            /(?:Nov\.?|November)\s+(\d{1,2})/i,
-            /(?:Dec\.?|December)\s+(\d{1,2})/i,
-            /(?:Jan\.?|January)\s+(\d{1,2})/i,
-            /(?:Feb\.?|February)\s+(\d{1,2})/i,
-            /(?:Mar\.?|March)\s+(\d{1,2})/i,
-            /(?:Apr\.?|April)\s+(\d{1,2})/i,
-            /(?:May)\s+(\d{1,2})/i,
-            /(?:Jun\.?|June)\s+(\d{1,2})/i,
-            /(?:Jul\.?|July)\s+(\d{1,2})/i,
-            /(?:Aug\.?|August)\s+(\d{1,2})/i,
-            
-            // Date range patterns (e.g., "Oct 10-12")
-            /(?:Sept\.?|September)\s+(\d{1,2})-(\d{1,2})/i,
-            /(?:Oct\.?|October)\s+(\d{1,2})-(\d{1,2})/i,
-            /(?:Nov\.?|November)\s+(\d{1,2})-(\d{1,2})/i,
-            /(?:Dec\.?|December)\s+(\d{1,2})-(\d{1,2})/i,
-            /(?:Jan\.?|January)\s+(\d{1,2})-(\d{1,2})/i,
-            /(?:Feb\.?|February)\s+(\d{1,2})-(\d{1,2})/i,
-            /(?:Mar\.?|March)\s+(\d{1,2})-(\d{1,2})/i,
-            /(?:Apr\.?|April)\s+(\d{1,2})-(\d{1,2})/i,
-            /(?:May)\s+(\d{1,2})-(\d{1,2})/i,
-            /(?:Jun\.?|June)\s+(\d{1,2})-(\d{1,2})/i,
-            /(?:Jul\.?|July)\s+(\d{1,2})-(\d{1,2})/i,
-            /(?:Aug\.?|August)\s+(\d{1,2})-(\d{1,2})/i
-        ];
-
-        for (const pattern of datePatterns) {
-            const match = text.match(pattern);
-            if (match) {
-                const monthName = match[0].split(/\s+/)[0].toLowerCase();
-                
-                // Map month names to numbers (handle both with and without periods)
-                const monthMap = {
-                    'jan': 0, 'jan.': 0, 'january': 0, 'feb': 1, 'feb.': 1, 'february': 1,
-                    'mar': 2, 'mar.': 2, 'march': 2, 'apr': 3, 'apr.': 3, 'april': 3,
-                    'may': 4, 'jun': 5, 'jun.': 5, 'june': 5, 'jul': 6, 'jul.': 6, 'july': 6,
-                    'aug': 7, 'aug.': 7, 'august': 7, 'sep': 8, 'sep.': 8, 'sept': 8, 'sept.': 8, 'september': 8,
-                    'oct': 9, 'oct.': 9, 'october': 9, 'nov': 10, 'nov.': 10, 'november': 10,
-                    'dec': 11, 'dec.': 11, 'december': 11
-                };
-                
+        // Map month names to numbers (handle both with and without periods)
+        const monthMap = {
+            'jan': 0, 'jan.': 0, 'january': 0, 'feb': 1, 'feb.': 1, 'february': 1,
+            'mar': 2, 'mar.': 2, 'march': 2, 'apr': 3, 'apr.': 3, 'april': 3,
+            'may': 4, 'jun': 5, 'jun.': 5, 'june': 5, 'jul': 6, 'jul.': 6, 'july': 6,
+            'aug': 7, 'aug.': 7, 'august': 7, 'sep': 8, 'sep.': 8, 'sept': 8, 'sept.': 8, 'september': 8,
+            'oct': 9, 'oct.': 9, 'october': 9, 'nov': 10, 'nov.': 10, 'november': 10,
+            'dec': 11, 'dec.': 11, 'december': 11
+        };
+        
+        const currentYear = new Date().getFullYear();
+        
+        // First, try to match "the Xth of Month" format (e.g., "the 13th of December")
+        const theXthOfMonth = text.match(/the\s+(\d{1,2})(?:st|nd|rd|th)?\s+of\s+(?:Sept\.?|September|Oct\.?|October|Nov\.?|November|Dec\.?|December|Jan\.?|January|Feb\.?|February|Mar\.?|March|Apr\.?|April|May|Jun\.?|June|Jul\.?|July|Aug\.?|August)/i);
+        if (theXthOfMonth) {
+            const day = parseInt(theXthOfMonth[1]);
+            const monthMatch = text.match(/the\s+\d{1,2}(?:st|nd|rd|th)?\s+of\s+((?:Sept\.?|September|Oct\.?|October|Nov\.?|November|Dec\.?|December|Jan\.?|January|Feb\.?|February|Mar\.?|March|Apr\.?|April|May|Jun\.?|June|Jul\.?|July|Aug\.?|August))/i);
+            if (monthMatch) {
+                const monthName = monthMatch[1].toLowerCase();
                 const month = monthMap[monthName];
                 if (month !== undefined) {
-                    // Check if we have a year in the match
-                    if (match[2]) {
-                        // Has year
-                        const year = parseInt(match[2]);
-                        const day = parseInt(match[1]);
-                        const eventDate = new Date(year, month, day);
-                        return eventDate;
-                    } else if (match[2] && match[3]) {
-                        // Date range - use the start date
-                        const currentYear = new Date().getFullYear();
-                        const day = parseInt(match[1]);
-                        const eventDate = new Date(currentYear, month, day);
-                        return eventDate;
-                    } else {
-                        // No year - assume current year
-                        const currentYear = new Date().getFullYear();
-                        const day = parseInt(match[1]);
-                        const eventDate = new Date(currentYear, month, day);
-                        return eventDate;
-                    }
+                    return new Date(currentYear, month, day);
+                }
+            }
+        }
+        
+        // Try date ranges with year (e.g., "Oct 10-12, 2025" or "Saturday October 10-12, 2025")
+        const dateRangeWithYear = text.match(/(?:Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday|Mon|Tue|Wed|Thu|Fri|Sat|Sun)?\s*(?:Sept\.?|September|Oct\.?|October|Nov\.?|November|Dec\.?|December|Jan\.?|January|Feb\.?|February|Mar\.?|March|Apr\.?|April|May|Jun\.?|June|Jul\.?|July|Aug\.?|August)\s+(\d{1,2})-(\d{1,2}),?\s+(\d{4})/i);
+        if (dateRangeWithYear) {
+            const monthMatch = dateRangeWithYear[0].match(/(?:Sept\.?|September|Oct\.?|October|Nov\.?|November|Dec\.?|December|Jan\.?|January|Feb\.?|February|Mar\.?|March|Apr\.?|April|May|Jun\.?|June|Jul\.?|July|Aug\.?|August)/i);
+            if (monthMatch) {
+                const monthName = monthMatch[0].toLowerCase();
+                const month = monthMap[monthName];
+                if (month !== undefined) {
+                    const endDay = parseInt(dateRangeWithYear[2]);
+                    const year = parseInt(dateRangeWithYear[3]);
+                    return new Date(year, month, endDay);
+                }
+            }
+        }
+        
+        // Check for date ranges without year (e.g., "Oct 10-12" or "Saturday October 10-12")
+        const dateRange = text.match(/(?:Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday|Mon|Tue|Wed|Thu|Fri|Sat|Sun)?\s*(?:Sept\.?|September|Oct\.?|October|Nov\.?|November|Dec\.?|December|Jan\.?|January|Feb\.?|February|Mar\.?|March|Apr\.?|April|May|Jun\.?|June|Jul\.?|July|Aug\.?|August)\s+(\d{1,2})-(\d{1,2})/i);
+        if (dateRange) {
+            const monthMatch = dateRange[0].match(/(?:Sept\.?|September|Oct\.?|October|Nov\.?|November|Dec\.?|December|Jan\.?|January|Feb\.?|February|Mar\.?|March|Apr\.?|April|May|Jun\.?|June|Jul\.?|July|Aug\.?|August)/i);
+            if (monthMatch) {
+                const monthName = monthMatch[0].toLowerCase();
+                const month = monthMap[monthName];
+                if (month !== undefined) {
+                    const endDay = parseInt(dateRange[2]);
+                    return new Date(currentYear, month, endDay);
+                }
+            }
+        }
+        
+        // Try single dates with year (e.g., "Sept. 28, 2025" or "Saturday December 13, 2025")
+        const dateWithYear = text.match(/(?:Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday|Mon|Tue|Wed|Thu|Fri|Sat|Sun)?\s*(?:Sept\.?|September|Oct\.?|October|Nov\.?|November|Dec\.?|December|Jan\.?|January|Feb\.?|February|Mar\.?|March|Apr\.?|April|May|Jun\.?|June|Jul\.?|July|Aug\.?|August)\s+(\d{1,2}),?\s+(\d{4})/i);
+        if (dateWithYear) {
+            const monthMatch = dateWithYear[0].match(/(?:Sept\.?|September|Oct\.?|October|Nov\.?|November|Dec\.?|December|Jan\.?|January|Feb\.?|February|Mar\.?|March|Apr\.?|April|May|Jun\.?|June|Jul\.?|July|Aug\.?|August)/i);
+            if (monthMatch) {
+                const monthName = monthMatch[0].toLowerCase();
+                const month = monthMap[monthName];
+                if (month !== undefined) {
+                    const day = parseInt(dateWithYear[1]);
+                    const year = parseInt(dateWithYear[2]);
+                    return new Date(year, month, day);
+                }
+            }
+        }
+        
+        // Finally, try single dates without year (e.g., "Sept. 28" or "Saturday December 13")
+        const dateWithoutYear = text.match(/(?:Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday|Mon|Tue|Wed|Thu|Fri|Sat|Sun)?\s*(?:Sept\.?|September|Oct\.?|October|Nov\.?|November|Dec\.?|December|Jan\.?|January|Feb\.?|February|Mar\.?|March|Apr\.?|April|May|Jun\.?|June|Jul\.?|July|Aug\.?|August)\s+(\d{1,2})(?!-)/i);
+        if (dateWithoutYear) {
+            const monthMatch = dateWithoutYear[0].match(/(?:Sept\.?|September|Oct\.?|October|Nov\.?|November|Dec\.?|December|Jan\.?|January|Feb\.?|February|Mar\.?|March|Apr\.?|April|May|Jun\.?|June|Jul\.?|July|Aug\.?|August)/i);
+            if (monthMatch) {
+                const monthName = monthMatch[0].toLowerCase();
+                const month = monthMap[monthName];
+                if (month !== undefined) {
+                    const day = parseInt(dateWithoutYear[1]);
+                    return new Date(currentYear, month, day);
                 }
             }
         }
@@ -274,8 +286,14 @@ class HighlightsManager {
 }
 
 // Initialize highlights when DOM is loaded
-document.addEventListener('DOMContentLoaded', () => {
+// Handle both cases: script loaded before or after DOMContentLoaded
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => {
+        new HighlightsManager();
+    });
+} else {
+    // DOM is already loaded, initialize immediately
     new HighlightsManager();
-});
+}
 
 
