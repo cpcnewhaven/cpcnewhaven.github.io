@@ -183,8 +183,9 @@ class HighlightsManager {
             }
         }
         
-        // Finally, try single dates without year (e.g., "Sept. 28" or "Saturday December 13")
-        const dateWithoutYear = text.match(/(?:Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday|Mon|Tue|Wed|Thu|Fri|Sat|Sun)?\s*(?:Sept\.?|September|Oct\.?|October|Nov\.?|November|Dec\.?|December|Jan\.?|January|Feb\.?|February|Mar\.?|March|Apr\.?|April|May|Jun\.?|June|Jul\.?|July|Aug\.?|August)\s+(\d{1,2})(?!-)/i);
+        // Finally, try single dates without year (e.g., "Sept. 28" or "Saturday December 13" or "Saturday, January 24")
+        // Updated to handle commas after day names
+        const dateWithoutYear = text.match(/(?:Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday|Mon|Tue|Wed|Thu|Fri|Sat|Sun)?,?\s*(?:Sept\.?|September|Oct\.?|October|Nov\.?|November|Dec\.?|December|Jan\.?|January|Feb\.?|February|Mar\.?|March|Apr\.?|April|May|Jun\.?|June|Jul\.?|July|Aug\.?|August)\s+(\d{1,2})(?!-)/i);
         if (dateWithoutYear) {
             const monthMatch = dateWithoutYear[0].match(/(?:Sept\.?|September|Oct\.?|October|Nov\.?|November|Dec\.?|December|Jan\.?|January|Feb\.?|February|Mar\.?|March|Apr\.?|April|May|Jun\.?|June|Jul\.?|July|Aug\.?|August)/i);
             if (monthMatch) {
@@ -194,6 +195,19 @@ class HighlightsManager {
                     const day = parseInt(dateWithoutYear[1]);
                     return new Date(currentYear, month, day);
                 }
+            }
+        }
+        
+        // Also try numeric date formats like "1/17" or "1/17/26" (month/day or month/day/year)
+        const numericDate = text.match(/(\d{1,2})\/(\d{1,2})(?:\/(\d{2,4}))?/);
+        if (numericDate) {
+            const month = parseInt(numericDate[1]) - 1; // JavaScript months are 0-indexed
+            const day = parseInt(numericDate[2]);
+            const year = numericDate[3] ? 
+                (numericDate[3].length === 2 ? 2000 + parseInt(numericDate[3]) : parseInt(numericDate[3])) : 
+                currentYear;
+            if (month >= 0 && month <= 11 && day >= 1 && day <= 31) {
+                return new Date(year, month, day);
             }
         }
         

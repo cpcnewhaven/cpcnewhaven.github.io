@@ -1,6 +1,50 @@
 {
   "announcements": [
     {
+      "id": "2026-001",
+      "title": "Southern New England Presbytery Worship Service | 1/17",
+      "description": "We’re hosting our Southern New England presbytery tomorrow, and all are welcome to join pastors and elders from around the region for the worship service at 12:45pm.",
+      "dateEntered": "2026-01-16",
+      "active": "true",
+      "type": "event",
+      "category": "event",
+      "tag": "meeting",
+      "superfeatured": true
+    },
+    {
+      "id": "2026-002",
+      "title": "Women’s Fellowship and Service Event | Saturday, January 24 | 9am | Fellowship Hall",
+      "description": "Please join us for breakfast and a time to connect and re-connect as we love one another and love others through service. Breakfast will be served and then we’ll be making a meal for about 40 folks. We’ll also be putting together cookie packages for our covenant children who are away at school.<br><br>Feel free to just show up and bring a friend. However, if you’d like to bake cookies or help with the breakfast, you can use the sign up sheet in the foyer or contact Diane Miller (<a href=\"mailto:auntie.diane@comcast.net\">auntie.diane@comcast.net</a>).",
+      "dateEntered": "2026-01-16",
+      "active": "true",
+      "type": "event",
+      "category": "event",
+      "tag": "women",
+      "superfeatured": true
+    },
+    {
+      "id": "2026-003",
+      "title": "Youth Winter Camp | February 28 | 10am-2pm",
+      "description": "Join students from across southern New England in a joint youth event with our Presbytery. We will be at Whitinsville Christian School in eastern Massachusetts for a half day of fun, fellowship, food, and worship. Cost $10 per student. Age range: 6th to 12th grade. Be on the lookout for registration. If you have any questions, contact Pastor Jerry (<a href=\"mailto:jerry.ornelas@cpcnewhaven.org\">jerry.ornelas@cpcnewhaven.org</a>).",
+      "dateEntered": "2026-01-16",
+      "active": "true",
+      "type": "event",
+      "category": "event",
+      "tag": "youth",
+      "superfeatured": true
+    },
+    {
+      "id": "2026-004",
+      "title": "New Pastor’s Book Pick | Life Together, by Dietrich Bonhoeffer",
+      "description": "A modern classic, we’re treading into deep waters with this one! Written by pastor-theologian and martyr, Life Together is Bonhoeffer’s vision for the Christian life, both individually and communally. Though dense, this book is certainly worth our time and has the potential to spur on genuine gospel transformation. Copies in the foyer - suggested donation of $15.",
+      "dateEntered": "2026-01-16",
+      "active": "true",
+      "type": "announcement",
+      "category": "announcement",
+      "tag": "resources",
+      "superfeatured": false
+    },
+    {
       "id": "2025-043",
       "title": "Interested in Joining CPC?",
       "description": "We consider the church an essential element of the gospel, so joining CPC as a member is a way to truly join the body of Christ, in all its blessings and with all its flaws! Before joining, you'll meet one-on-one with a pastor and then discuss how you've come to know Christ with the Shepherd Leaders. Contact Alexis Vano (admin@cpcnewhaven.org) to begin the process.",
@@ -618,13 +662,13 @@
     {
       "id": "2025-062",
       "title": "Women's Annual Service Project",
-      "description": "The CPC Women's Annual Service Project of a meal for the Warming Center and cookies & notes to our college students will be held at CPC on Saturday morning, Jan. 24, 2026. We would love to have several women help plan the event. Please contact Diane Miller (<a href=\"mailto:auntie.diane@comcast.net\">auntie.diane@comcast.net</a>) if you're interested in helping with the planning.",
-      "dateEntered": "2025-12-12",
-      "active": "true",
+      "description": "The CPC Women's Annual Service Project of a meal for the Warming Center and cookies & notes to our college students will be held at CPC on Saturday morning, Jan. 24, 2026. Please contact Diane Miller (<a href=\"mailto:auntie.diane@comcast.net\">auntie.diane@comcast.net</a>) with any questions.",
+      "dateEntered": "2026-01-16",
+      "active": "false",
       "type": "event",
       "category": "event",
       "tag": "women",
-      "superfeatured": true
+      "superfeatured": false
     },
     {
       "id": "2025-063",
@@ -639,9 +683,9 @@
     },
     {
       "id": "2025-064",
-      "title": "CPC Mom's Group, Parlor Room, NEW time & date | Wednesdays at 11am: 1/7/26, 2/11/26, 3/4/26",
+      "title": "CPC Mom's Group, Parlor Room, NEW time & date | Wednesdays at 11am: 2/11/26, 3/4/26",
       "description": "Contact Estella Gierbolini, <a href=\"mailto:egierbo1@gmail.com\">egierbo1@gmail.com</a> or Meg Bogue, <a href=\"mailto:mhbogue@me.com\">mhbogue@me.com</a> to join our WhatsApp group or to receive our book. New members always welcome.",
-      "dateEntered": "2025-12-12",
+      "dateEntered": "2026-01-16",
       "active": "true",
       "type": "ongoing",
       "category": "ongoing",
