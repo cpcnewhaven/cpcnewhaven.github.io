@@ -35,7 +35,6 @@ SKIP_DIR_NAMES = {
 SKIP_FILE_NAMES = {
     # Internal / dev / legacy pages that shouldn't show up in public search
     "a-c-c.html",
-    "old-home.html",
     "full-podcast-monte.html",
     "cpc-retreat.html",
 }
@@ -195,7 +194,7 @@ def categorize(url: str) -> str:
         return "Live"
     if u in {"give.html"}:
         return "Give"
-    if u in {"about.html", "new-about.html", "pastor-craig.html", "pastor-jerry.html"}:
+    if u in {"about.html", "pastor-craig.html", "pastor-jerry.html"}:
         return "About"
     return "Other"
 
@@ -610,7 +609,7 @@ def build_entry(root: Path, html_path: Path, max_text_chars: int) -> Optional[Se
     # Give long-form pages more room (people often search deep within these).
     url = rel_url(root, html_path)
     long_form_boost = 0
-    if url in {"about.html", "new-about.html"}:
+    if url in {"about.html"}:
         long_form_boost = 20000
     if url.startswith("sunday-studies/"):
         long_form_boost = 8000
