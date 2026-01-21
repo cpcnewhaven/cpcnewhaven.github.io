@@ -5,7 +5,7 @@
       "title": "Worship with Presbytery TOMORROW | 12:45PM CPC Sanctuary",
       "description": "We're hosting our Southern New England presbytery tomorrow, and all are welcome to join pastors and elders from around the region for the worship service at 12:45pm.",
       "dateEntered": "2026-01-16",
-      "active": "true",
+      "active": "false",
       "type": "event",
       "category": "event",
       "tag": "meeting",
@@ -181,7 +181,7 @@
     {
       "id": "2025-009",
       "title": "Small Groups",
-      "description": "For info on Life Groups & Discipleship Groups email admin@cpcnewhaven.org",
+      "description": "For info on Life Groups & Discipleship Groups email admin@cpcnewhaven.org<br><br><a href='new-community.html'>Learn more about Small Groups</a>",
       "dateEntered": "2025-01-20",
       "active": "true",
       "type": "ongoing",
