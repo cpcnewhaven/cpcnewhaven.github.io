@@ -444,7 +444,7 @@
         .connect-container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 50px 20px;
+            padding: 60px 20px;
         }
 
         .connect-intro {
@@ -453,17 +453,20 @@
         }
 
         .connect-intro h2 {
-            font-size: 2.5rem;
+            font-size: 2.6rem;
             color: var(--cpc-blue, #003366);
-            margin-bottom: 20px;
+            margin-bottom: 25px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
         }
 
         .connect-description {
-            font-size: 1.15rem;
-            color: #666;
+            font-size: 1.2rem;
+            color: #444;
             max-width: 800px;
-            margin: 15px auto;
-            line-height: 1.8;
+            margin: 20px auto;
+            line-height: 1.9;
+            font-weight: 400;
         }
 
         .connect-description:first-of-type {
@@ -480,18 +483,19 @@
         }
 
         .connect-tab-menu button {
-            padding: 15px 25px;
+            padding: 16px 28px;
             border: 2px solid var(--cpc-blue, #003366);
             background: white;
             color: var(--cpc-blue, #003366);
             border-radius: 30px;
             cursor: pointer;
-            font-size: 1rem;
+            font-size: 1.05rem;
             font-weight: 600;
             transition: all 0.3s ease;
             display: flex;
             align-items: center;
             gap: 8px;
+            letter-spacing: 0.2px;
         }
 
         .connect-tab-menu button:hover,
@@ -532,19 +536,19 @@
         }
 
         .section-title {
-            font-size: 2.2rem;
+            font-size: 2.4rem;
             color: var(--cpc-blue, #003366);
             margin: 0;
-            letter-spacing: 0.5px;
-            font-weight: 600;
+            letter-spacing: -0.3px;
+            font-weight: 700;
         }
 
         /* Events Grid */
         .events-grid {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 30px;
-            margin-bottom: 40px;
+            gap: 35px;
+            margin-bottom: 50px;
         }
 
         .event-card {
@@ -581,29 +585,31 @@
 
 
         .event-content {
-            padding: 30px;
+            padding: 35px;
         }
 
         .event-content h3 {
-            font-size: 1.6rem;
+            font-size: 1.75rem;
             color: var(--cpc-blue, #003366);
-            margin: 0 0 25px 0;
-            font-weight: 600;
-            line-height: 1.3;
+            margin: 0 0 30px 0;
+            font-weight: 700;
+            line-height: 1.4;
+            letter-spacing: -0.3px;
         }
 
         .event-details {
-            margin-bottom: 25px;
+            margin-bottom: 30px;
             padding: 0;
         }
 
         .event-detail {
             display: flex;
             align-items: flex-start;
-            gap: 12px;
-            margin-bottom: 15px;
-            line-height: 1.6;
-            color: #555;
+            gap: 15px;
+            margin-bottom: 18px;
+            line-height: 1.8;
+            color: #333;
+            font-size: 1.05rem;
         }
 
         .event-detail span {
@@ -614,9 +620,10 @@
             content: '•';
             color: var(--cpc-blue, #003366);
             font-weight: bold;
-            font-size: 1.2rem;
-            line-height: 1.4;
+            font-size: 1.3rem;
+            line-height: 1.5;
             flex-shrink: 0;
+            margin-top: 2px;
         }
 
 
@@ -624,10 +631,13 @@
         .event-detail a {
             color: var(--cpc-blue, #003366);
             text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
         }
 
         .event-detail a:hover {
             text-decoration: underline;
+            color: #002a53;
         }
 
         .event-actions {
@@ -637,16 +647,17 @@
         }
 
         .event-action-btn {
-            padding: 10px 20px;
+            padding: 12px 24px;
             border: none;
             border-radius: 25px;
             cursor: pointer;
-            font-size: 0.9rem;
+            font-size: 1rem;
             font-weight: 600;
             transition: all 0.3s ease;
             text-decoration: none;
             display: inline-block;
             text-align: center;
+            letter-spacing: 0.3px;
         }
 
         .event-action-btn.primary {
@@ -679,16 +690,20 @@
         }
 
         .submit-event-form h3 {
-            font-size: 2rem;
+            font-size: 2.2rem;
             color: var(--cpc-blue, #003366);
             text-align: center;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
+            font-weight: 700;
+            letter-spacing: -0.3px;
         }
 
         .submit-event-form p {
             text-align: center;
-            color: #666;
-            margin-bottom: 30px;
+            color: #444;
+            margin-bottom: 35px;
+            font-size: 1.1rem;
+            line-height: 1.7;
         }
 
         .event-submission-form {
@@ -710,25 +725,32 @@
 
         .form-group label {
             font-weight: 600;
-            color: #333;
-            margin-bottom: 8px;
+            color: #222;
+            margin-bottom: 10px;
+            font-size: 1.05rem;
         }
 
         .form-group input,
         .form-group select,
         .form-group textarea {
-            padding: 14px;
+            padding: 14px 16px;
             border: 2px solid #ddd;
             border-radius: 8px;
-            font-size: 1rem;
+            font-size: 1.05rem;
             transition: all 0.3s ease;
             font-family: inherit;
+            color: #333;
+            line-height: 1.5;
         }
 
         .form-group input:hover,
         .form-group select:hover,
         .form-group textarea:hover {
             border-color: #bbb;
+        }
+
+        .form-group textarea {
+            line-height: 1.7;
         }
 
         .form-group input:focus,
