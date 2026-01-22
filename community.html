@@ -92,39 +92,462 @@
         <h1>Community</h1>
     </div>
     <style>
+        /* Main Container - Redesigned */
         .long-info-container {
             width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
             display: flex;
             flex-direction: column;
-            padding-top: 20px;
-            justify-content: center;   
-            background-color: #002a5327;
+            padding: 40px 20px;
+            background: linear-gradient(to bottom, #ffffff 0%, #f8f9fa 100%);
+        }
+        
+        /* Tab Navigation - Modern Design */
+        .community-tab-wrapper {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            margin: -40px -20px 40px -20px;
+            padding: 20px;
+        }
+        
+        .longInfo-tab-menu {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .longInfo-tab-menu button {
+            padding: 14px 32px;
+            border: 2px solid var(--cpc-blue, #003366);
+            background: white;
+            color: var(--cpc-blue, #003366);
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .longInfo-tab-menu button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: var(--cpc-blue, #003366);
+            transition: left 0.3s ease;
+            z-index: -1;
+        }
+        
+        .longInfo-tab-menu button:hover::before,
+        .longInfo-tab-menu button.active::before {
+            left: 0;
+        }
+        
+        .longInfo-tab-menu button:hover,
+        .longInfo-tab-menu button.active {
             color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 51, 102, 0.2);
+        }
+        
+        /* Content Area - Clean Layout */
+        .longInfo-tab-content {
+            padding: 0;
+            background: transparent;
+            border-radius: 0;
+        }
+        
+        /* Section Cards */
+        .community-section-card {
+            background: white;
+            border-radius: 16px;
+            padding: 50px 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .community-section-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+        }
+        
+        .community-section-card h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--cpc-blue, #003366);
+            margin-bottom: 30px;
+            text-align: center;
+            position: relative;
+            padding-bottom: 20px;
+        }
+        
+        .community-section-card h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--cpc-blue, #003366), #006cd8);
+            border-radius: 2px;
+        }
+        
+        .community-section-card h3 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #333;
+            margin: 40px 0 20px 0;
+            padding-left: 20px;
+            border-left: 4px solid var(--cpc-blue, #003366);
+        }
+        
+        /* Quote Section - Enhanced */
+        .section-hero {
+            background: linear-gradient(135deg, rgba(0, 51, 102, 0.05) 0%, rgba(0, 108, 216, 0.05) 100%);
+            padding: 40px;
+            border-radius: 12px;
+            margin: 30px 0;
+            border-left: 5px solid var(--cpc-blue, #003366);
+        }
+        
+        .block-quote {
+            font-style: italic;
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+            line-height: 1.8;
+            font-size: 1.3rem;
+            color: #444;
+            position: relative;
+        }
+        
+        .block-quote::before,
+        .block-quote::after {
+            content: '"';
+            font-size: 4rem;
+            color: var(--cpc-blue, #003366);
+            opacity: 0.3;
+            position: absolute;
+        }
+        
+        .block-quote::before {
+            top: -20px;
+            left: -40px;
+        }
+        
+        .block-quote::after {
+            bottom: -40px;
+            right: -40px;
+        }
+        
+        /* Content Sections */
+        .section-content {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .body-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 20px;
+        }
+        
+        /* Contact Grid - Modern Cards */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
+        }
+        
+        .contact-card {
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            border: 2px solid transparent;
+        }
+        
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+            border-color: var(--cpc-blue, #003366);
+        }
+        
+        .contact-card h4 {
+            margin: 0 0 15px 0;
+            color: var(--cpc-blue, #003366);
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+        
+        .contact-card a {
+            display: inline-block;
+            padding: 10px 20px;
+            background: var(--cpc-blue, #003366);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+        
+        .contact-card a:hover {
+            background: #006cd8;
+            transform: scale(1.05);
+        }
+        
+        /* Image Gallery - Enhanced */
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+        
+        .gallery-image {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .gallery-image:hover {
+            transform: scale(1.05) translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+        }
+        
+        /* Video Container - Enhanced */
+        .video-container {
+            margin: 50px 0;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+        }
+        
+        .video-responsive {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            background: #000;
+        }
+        
+        .video-responsive iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        /* CTA Section - Modern Design */
+        .cta-section {
+            text-align: center;
+            padding: 60px 40px;
+            margin-top: 50px;
+            background: linear-gradient(135deg, var(--cpc-blue, #003366) 0%, #006cd8 100%);
+            border-radius: 16px;
+            color: white;
+        }
+        
+        .cta-section h3 {
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+            color: white;
+        }
+        
+        .cta-section p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: rgba(255,255,255,0.9);
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .cta-button {
+            padding: 16px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+        }
+        
+        .cta-button.primary {
+            background: white;
+            color: var(--cpc-blue, #003366);
+        }
+        
+        .cta-button.secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+        }
+        
+        .cta-button.primary:hover {
+            background: #f0f0f0;
+        }
+        
+        .cta-button.secondary:hover {
+            background: white;
+            color: var(--cpc-blue, #003366);
+        }
+        
+        /* Submenu - Modern Design */
+        .longInfo-submenu {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 12px;
+        }
+        
+        .longInfo-submenu button {
+            padding: 12px 24px;
+            border: 2px solid #dee2e6;
+            background: white;
+            color: #495057;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .longInfo-submenu button:hover,
+        .longInfo-submenu button.active {
+            background: var(--cpc-blue, #003366);
+            color: white;
+            border-color: var(--cpc-blue, #003366);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,51,102,0.2);
+        }
+        
+        /* Group Section */
+        .group-section {
+            margin: 50px 0;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .long-info-container {
+                padding: 20px 15px;
+            }
+            
+            .community-tab-wrapper {
+                margin: -20px -15px 30px -15px;
+                padding: 15px;
+            }
+            
+            .longInfo-tab-menu {
+                gap: 10px;
+            }
+            
+            .longInfo-tab-menu button {
+                padding: 12px 20px;
+                font-size: 0.9rem;
+            }
+            
+            .community-section-card {
+                padding: 30px 20px;
+                margin-bottom: 30px;
+            }
+            
+            .community-section-card h2 {
+                font-size: 2rem;
+            }
+            
+            .community-section-card h3 {
+                font-size: 1.5rem;
+            }
+            
+            .block-quote {
+                font-size: 1.1rem;
+                padding: 0 20px;
+            }
+            
+            .block-quote::before,
+            .block-quote::after {
+                display: none;
+            }
+            
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .image-gallery {
+                grid-template-columns: 1fr;
+            }
+            
+            .cta-section {
+                padding: 40px 20px;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+            }
+            
+            .cta-button {
+                width: 100%;
+            }
         }
 
         /* Enhanced Parallax Hero Section */
         .splash-hero--community {
-            height: 80vh;
-            /* Avoid scroll jank from fixed backgrounds */
+            height: 60vh;
+            min-height: 400px;
             background-attachment: scroll;
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
             position: relative;
             overflow: hidden;
-            will-change: transform;
-            transform: translateZ(0);
             display: flex;
             align-items: center;
             justify-content: center;
-            /* Enhanced parallax effect */
-            background-position-y: 0;
             transition: background-position 0.1s ease-out;
         }
         
         /* Parallax scroll effect */
         @media (min-width: 769px) {
             .splash-hero--community {
+                background-attachment: fixed;
+                height: 70vh;
                 background-position-y: calc(var(--scroll-offset, 0) * 0.5px);
             }
         }
@@ -144,23 +567,18 @@
             position: relative;
             z-index: 2;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-            font-size: 4rem;
+            font-size: 3.5rem;
             font-weight: 700;
             color: white;
             text-align: center;
         }
 
-        /* Ensure content below hero flows properly */
-        .long-info-container {
-            position: relative;
-            z-index: 3;
-        }
-
-        /* Mobile optimization - disable parallax on small screens */
+        /* Mobile optimization */
         @media (max-width: 768px) {
             .splash-hero--community {
                 background-attachment: scroll;
-                height: 60vh;
+                height: 50vh;
+                min-height: 300px;
             }
             
             .splash-hero--community h1 {
@@ -371,17 +789,16 @@
         }
     }
 }">
-    <div class="tooltip-container">
-        <div class="longInfo-tab-menu" style="text-align: center;">
+    <div class="community-tab-wrapper">
+        <div class="longInfo-tab-menu">
             <button @click="activeTab = 'smallGroups'; activeSubTab = ''" :class="{ 'active': activeTab === 'smallGroups' }">Small Groups</button>
             <button @click="activeTab = 'ministries'; activeSubTab = ''" :class="{ 'active': activeTab === 'ministries' }">Ministries</button>
             <button onclick="window.location.href='membership.html'" :class="{ 'active': activeTab === 'membership' }">Membership</button>
         </div>
-        <span class="tooltip-text">Explore our community offerings by selecting a tab.</span>
     </div>
     <div class="longInfo-tab-content">
-        <div x-show="activeTab === 'smallGroups'" class="small-groups-section">
-            <h2 style="text-align: center; font-size: 2em; font-weight: bold; margin-top: 20px;">Small Groups</h2>
+        <div x-show="activeTab === 'smallGroups'" class="community-section-card">
+            <h2>Small Groups</h2>
             
             <div class="section-hero">
                 <p class="block-quote">"God has so composed the body, giving greater honor to the part that lacked it, that there may be no division in the body, but that the members may have the same care for one another. If one member suffers, all suffer together; if one member is honored, all rejoice together." - 1 Corinthians 12:24-26</p>
@@ -517,10 +934,9 @@
                 </div>
             </div>
         </div>
-        <div x-show="activeTab === 'ministries'">
+        <div x-show="activeTab === 'ministries'" class="community-section-card">
             <h2>Ministries</h2>
-            <br>
-            <div class="longInfo-submenu" style="text-align: center;">
+            <div class="longInfo-submenu">
                 <button @click="activeSubTab = 'children'" :class="{ 'active': activeSubTab === 'children' }">Children</button>
                 <button @click="activeSubTab = 'youth'" :class="{ 'active': activeSubTab === 'youth' }">Youth</button>
                 <button @click="activeSubTab = 'undergraduate'" :class="{ 'active': activeSubTab === 'undergraduate' }">Undergraduate</button>
@@ -807,9 +1223,10 @@
                 </p>
             </div>
         </div>
-        <div x-show="activeTab === 'membership'">
+        <div x-show="activeTab === 'membership'" class="community-section-card">
             <h2>Membership</h2>
-            <p>Throughout history, special relationships have been set apart
+            <div class="section-content">
+            <p class="body-text">Throughout history, special relationships have been set apart
                 by the taking of vows. What exactly is a vow? A vow is a
                 "confession" regarding the meaning of ones participation in
                 a given institution. Therefore, vows are ordinarily limited
@@ -826,7 +1243,7 @@
                 you that every one of the above examples can be located in
                 the Bible? We will review briefly the biblical rationale
                 that relates to the taking of vows in the church sphere.</p>
-            <p>According to the apostle Paul, one becomes a Christian when
+            <p class="body-text">According to the apostle Paul, one becomes a Christian when
                 "you confess with your lips that Jesus is Lord, and believe
                 in your heart that God raised him from the dead" (Romans
                 10:9). Who are we "confessing" to with our lips and in what
@@ -849,7 +1266,7 @@
                 means something to bind one's self to another through the
                 authenticating protections of an initiation ceremony? (2
                 Corinthians 8).</p>
-            <p>And so, for these abbreviated reasons, we believe that church
+            <p class="body-text">And so, for these abbreviated reasons, we believe that church
                 membership as a good thing. It sets people apart into a
                 special relationship with each other, where the terms are
                 clear and where loyalties for the mutual benefit of all are
@@ -857,9 +1274,10 @@
                 "I confess my faith in solidarity with you so as to enjoy
                 the mutual support of one another until, for whatever
                 reason, someone is led elsewhere."</p>
-            <p>Contact us for more information on becoming a member at
+            <p class="body-text">Contact us for more information on becoming a member at
                 CPC.</p>
-            <p>For more read Good News of Church Membership</p>
+            <p class="body-text">For more read Good News of Church Membership</p>
+            </div>
         </div>
     </div>
 </div>
@@ -977,164 +1395,6 @@
             }
         });
     </script>
-    <style>
-        .small-groups-section {
-            padding: 2rem;
-            color: #333;
-        }
-
-        .section-hero {
-            background: rgba(0,0,0,0.05);
-            padding: 2rem;
-            border-radius: 8px;
-            margin: 2rem 0;
-        }
-
-        .block-quote {
-            font-style: italic;
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
-            line-height: 1.6;
-            font-size: 1.2rem;
-            color: #333;
-        }
-
-        .section-content {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .image-gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
-            margin: 2rem 0;
-        }
-
-        .gallery-image {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-            border-radius: 8px;
-            transition: transform 0.3s ease;
-        }
-
-        .gallery-image:hover {
-            transform: scale(1.02);
-        }
-
-        .video-container {
-            margin: 3rem 0;
-        }
-
-        .video-responsive {
-            position: relative;
-            padding-bottom: 56.25%;
-            height: 0;
-            overflow: hidden;
-        }
-
-        .video-responsive iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin: 2rem 0;
-        }
-
-        .contact-card {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 8px;
-            text-align: center;
-            transition: transform 0.3s ease;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-
-        .contact-card:hover {
-            transform: translateY(-3px);
-        }
-
-        .contact-card h4 {
-            margin: 0 0 1rem 0;
-            color: #333;
-            font-size: 1.1rem;
-        }
-
-        .contact-card a {
-            display: inline-block;
-            padding: 0.5rem 1rem;
-            background: #333;
-            color: white;
-            text-decoration: none;
-            border-radius: 25px;
-            font-size: 0.9rem;
-            transition: background 0.3s ease;
-        }
-
-        .contact-card a:hover {
-            background: #555;
-        }
-
-        /* New CTA styles */
-        .cta-section {
-            text-align: center;
-            padding: 4rem 2rem;
-            margin-top: 3rem;
-            background: linear-gradient(rgba(0,0,0,0.02), rgba(0,0,0,0.05));
-            border-radius: 12px;
-        }
-
-        .cta-section h3 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            color: #333;
-        }
-
-        .cta-section p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            color: #666;
-        }
-
-        .cta-buttons {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .cta-button {
-            padding: 1rem 2rem;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .cta-button.primary {
-            background: #333;
-            color: white;
-        }
-
-        .cta-button.secondary {
-            background: white;
-            color: #333;
-            border: 2px solid #333;
-        }
-
-        .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
 
         /* Connect Board Promotion Section */
         .styled-section-b {
@@ -1214,32 +1474,6 @@
             }
         }
         
-        @media (max-width: 768px) {
-            .small-groups-section {
-                padding: 1rem;
-            }
-
-            .image-gallery {
-                grid-template-columns: 1fr;
-            }
-
-            .gallery-image {
-                height: 200px;
-            }
-
-            .cta-section {
-                padding: 2rem 1rem;
-            }
-
-            .cta-buttons {
-                flex-direction: column;
-            }
-
-            .cta-button {
-                width: 100%;
-                text-align: center;
-            }
-        }
     </style>
         <footer>
             <div class="footer-content-logo">
