@@ -118,6 +118,18 @@
     margin: 0;
 }
 
+.weather-announcement-text a {
+    color: #003c6d;
+    font-weight: 600;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.weather-announcement-text a:hover {
+    color: #004494;
+    text-decoration: none;
+}
+
 @media (max-width: 768px) {
     .weather-announcement-section {
         padding: 30px 15px;
