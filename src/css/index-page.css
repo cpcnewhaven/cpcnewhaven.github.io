@@ -622,6 +622,51 @@
     display: block;
 }
 
+/* Instagram Widget Specific Styles */
+.instagram-widget {
+    background: linear-gradient(135deg, #833ab4 0%, #fd1d1d 50%, #fcb045 100%);
+    border: 2px solid #833ab4;
+}
+
+.instagram-widget .widget-content {
+    color: white;
+}
+
+.instagram-widget .widget-left h3 {
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.instagram-widget .widget-left h3 i {
+    font-size: 1.5rem;
+}
+
+.instagram-widget .widget-description {
+    color: rgba(255, 255, 255, 0.95);
+}
+
+.instagram-widget .widget-cta-btn {
+    background: white;
+    color: #833ab4;
+    border: 2px solid white;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.instagram-widget .widget-cta-btn:hover {
+    background: rgba(255, 255, 255, 0.9);
+    color: #833ab4;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.instagram-widget .widget-cta-btn i {
+    font-size: 1.2rem;
+}
+
 /* Responsive Design for Feature Widgets */
 @media (max-width: 768px) {
     .church-features-section {
