@@ -24,8 +24,10 @@ class HighlightsManager {
     }
 
     async loadHighlights() {
-        // Allow normal browser/CDN caching (cache-busting here makes the homepage feel sluggish)
-        const response = await fetch(this.dataUrl);
+        // Add version parameter for cache-busting (update this when highlights.json changes)
+        // Using timestamp of last major update: 2026-01-30
+        const cacheBuster = `?v=20260130`;
+        const response = await fetch(this.dataUrl + cacheBuster);
         
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
