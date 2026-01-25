@@ -241,10 +241,24 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('mobileNavOverlay') ||
     document.querySelector('.mobile-nav-overlay');
 
+  // CRITICAL: Force close mobile menu on page load to prevent stuck state
+  // This fixes issues where cached state or CSS keeps the menu open
+  if (mainMobileNav) {
+    mainMobileNav.classList.remove('active');
+    document.body.classList.remove('mobile-nav-open');
+    if (mainOverlay) mainOverlay.classList.remove('active');
+    if (mainHamburger) {
+      mainHamburger.setAttribute('aria-expanded', 'false');
+    }
+    if (mainMobileNav) {
+      mainMobileNav.setAttribute('aria-hidden', 'true');
+    }
+  }
+
   // Also add Search to the desktop nav where present.
   ensureNavLink(document, { kind: 'desktop', href: 'search.html', text: 'Search' });
 
-  wireMobileNav({
+  const mainNavController = wireMobileNav({
     hamburgerButton: mainHamburger,
     mobileNav: mainMobileNav,
     closeButton: mainClose,
@@ -254,13 +268,33 @@ document.addEventListener('DOMContentLoaded', function () {
     openBodyClass: 'mobile-nav-open',
   });
 
+  // Additional safety: Force close again after a brief delay to catch any race conditions
+  if (mainNavController && mainNavController.close) {
+    setTimeout(function() {
+      mainNavController.close();
+    }, 100);
+  }
+
   // About page internal (section) mobile nav
   const aboutHamburger = document.getElementById('aboutHamburgerMenu');
   const aboutMobileNav = document.getElementById('aboutMobileNav');
   const aboutClose = document.getElementById('closeAboutMobileMenuButton');
   const aboutOverlay = document.getElementById('aboutMobileNavOverlay');
 
-  wireMobileNav({
+  // CRITICAL: Force close about mobile menu on page load
+  if (aboutMobileNav) {
+    aboutMobileNav.classList.remove('active');
+    document.body.classList.remove('about-mobile-nav-open');
+    if (aboutOverlay) aboutOverlay.classList.remove('active');
+    if (aboutHamburger) {
+      aboutHamburger.setAttribute('aria-expanded', 'false');
+    }
+    if (aboutMobileNav) {
+      aboutMobileNav.setAttribute('aria-hidden', 'true');
+    }
+  }
+
+  const aboutNavController = wireMobileNav({
     hamburgerButton: aboutHamburger,
     mobileNav: aboutMobileNav,
     closeButton: aboutClose,
@@ -269,6 +303,13 @@ document.addEventListener('DOMContentLoaded', function () {
     activeClass: 'active',
     openBodyClass: 'about-mobile-nav-open',
   });
+
+  // Additional safety: Force close again after a brief delay
+  if (aboutNavController && aboutNavController.close) {
+    setTimeout(function() {
+      aboutNavController.close();
+    }, 100);
+  }
 
   // Deep-link "find in page" behavior.
   // If a user lands on any page with ?find=..., scroll to the first match and highlight it.

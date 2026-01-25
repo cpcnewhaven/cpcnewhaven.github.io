@@ -929,7 +929,7 @@ p {
 .mobile-navigation {
     position: fixed;
     top: 0;
-    right: -100%;
+    right: -100% !important; /* Force hidden on page load - prevents stuck menu */
     width: 80%;
     max-width: 280px;
     height: 100vh;
@@ -945,6 +945,11 @@ p {
 /* Prevent background scrolling when the mobile nav is open */
 body.mobile-nav-open {
     overflow: hidden;
+}
+
+/* Safety: Ensure mobile menu is closed on initial page load */
+body:not(.mobile-nav-open) .mobile-navigation {
+    right: -100% !important;
 }
 
 /* Optional overlay (only takes effect on pages that include the overlay element) */
@@ -964,7 +969,7 @@ body.mobile-nav-open {
 }
 
 .mobile-navigation.active {
-    right: 0;
+    right: 0 !important; /* Only show when explicitly activated */
 }
 
 .mobile-nav-header {
