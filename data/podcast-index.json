@@ -189,6 +189,17 @@
         "title": "Sunday Sermons",
         "episodes": [
             {
+                "id": "26-01-25",
+                "title": "A Life of Readiness",
+                "author": "Rev. Jerry Ornelas",
+                "scripture": "Luke 12:35-59",
+                "date": "2026-01-25",
+                "apple_podcasts_url": "",
+                "spotify_url": "https://open.spotify.com/episode/5Pryj1VNlFDl3deMFFvDIa?si=G9EszNibQZa40xMwH0IwxA",
+                "link": "https://open.spotify.com/episode/5Pryj1VNlFDl3deMFFvDIa?si=G9EszNibQZa40xMwH0IwxA",
+                "podcast-thumbnail_url": ""
+            },
+            {
                 "id": "25-12-28",
                 "title": "Audacity, Assurance, & the Man Inside the House",
                 "author": "Rev. Jerry Ornelas",
