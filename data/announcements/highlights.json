@@ -1,25 +1,6 @@
 {
   "announcements": [
-    {
-      "id": "2026-020",
-      "title": "10:30am Worship This Sunday",
-      "description": "",
-      "dateEntered": "2026-01-31",
-      "active": "true",
-      "type": "announcement",
-      "category": "announcement",
-      "tag": "worship"
-    },
-    {
-      "id": "2026-021",
-      "title": "Large Print Bulletin",
-      "description": "",
-      "dateEntered": "2026-01-31",
-      "active": "true",
-      "type": "announcement",
-      "category": "announcement",
-      "tag": "accessibility"
-    },
+  
     {
       "id": "2026-022",
       "title": "Christian Leadership Training is back TODAY Friday, January 30",
