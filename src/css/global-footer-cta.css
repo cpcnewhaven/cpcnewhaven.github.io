@@ -33,9 +33,14 @@
 #footer-cta-a .body-text {
     font-family: 'Inter', sans-serif;
     font-size: 0.975rem;
-    color: #c7d7f2;
+    color: #ffffff;
     margin-bottom: 1.5rem;
     line-height: 1.5;
+}
+
+#footer-cta-a .form-container .body-text,
+#footer-cta-a .form-container p {
+    color: #ffffff;
 }
 
 .neumorphic-form {
