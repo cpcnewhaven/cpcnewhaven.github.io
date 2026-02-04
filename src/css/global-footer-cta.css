@@ -1,26 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
 #footer-cta-a {
-    background-color: #f0f4f8;
+    background:
+        radial-gradient(circle at 20% 15%, rgba(64, 156, 255, 0.25), transparent 45%),
+        radial-gradient(circle at 85% 80%, rgba(10, 74, 140, 0.5), transparent 55%),
+        linear-gradient(135deg, #050c18 0%, #07182a 45%, #081f3b 100%);
     padding: 60px 24px;
     text-align: center;
+    color: #e7f1ff;
 }
 
 .form-container {
     max-width: 680px;
     margin: 0 auto;
     padding: 32px 24px;
-    background: #ffffff;
-    border: 1px solid #e6ebf0;
-    border-radius: 12px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+    background: linear-gradient(145deg, rgba(8, 28, 56, 0.78), rgba(12, 48, 92, 0.62));
+    border: 1px solid rgba(120, 180, 255, 0.22);
+    border-radius: 18px;
+    box-shadow: 0 18px 45px rgba(2, 8, 20, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(18px) saturate(135%);
 }
 
 #footer-cta-a h2 {
     font-family: 'Inter', sans-serif;
     font-size: 2rem;
     font-weight: 700;
-    color: #1a202c;
+    color: #eaf4ff;
     margin-bottom: 0.75rem;
     margin-top: 0;
 }
@@ -28,7 +33,7 @@
 #footer-cta-a .body-text {
     font-family: 'Inter', sans-serif;
     font-size: 0.975rem;
-    color: #4a5568;
+    color: #c7d7f2;
     margin-bottom: 1.5rem;
     line-height: 1.5;
 }
@@ -44,18 +49,24 @@
     font-family: 'Inter', sans-serif;
     font-size: 1rem;
     padding: 0.7rem 0.9rem;
-    border: 1px solid #e2e8f0;
+    border: 1px solid rgba(118, 170, 235, 0.35);
     border-radius: 9999px;
-    background-color: #ffffff;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
-    transition: box-shadow 0.2s ease, border-color 0.2s ease;
+    background: rgba(6, 20, 38, 0.55);
+    color: #e8f2ff;
+    box-shadow: inset 0 1px 6px rgba(0, 0, 0, 0.35);
+    transition: box-shadow 0.2s ease, border-color 0.2s ease, background 0.2s ease;
     width: 100%;
+}
+
+.neumorphic-form input::placeholder {
+    color: rgba(199, 217, 242, 0.75);
 }
 
 .neumorphic-form input:focus {
     outline: none;
-    border-color: rgba(66, 153, 225, 0.7);
-    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.25);
+    border-color: rgba(120, 190, 255, 0.85);
+    background: rgba(7, 26, 48, 0.75);
+    box-shadow: 0 0 0 3px rgba(80, 170, 255, 0.25), inset 0 1px 8px rgba(0, 0, 0, 0.4);
 }
 
 .neumorphic-form button {
@@ -63,20 +74,20 @@
     font-size: 0.95rem;
     font-weight: 600;
     color: #ffffff;
-    background-color: var(--cpc-blue, #003c6d);
+    background: linear-gradient(135deg, #0b4f99 0%, #0a3c6f 55%, #082a52 100%);
     border: none;
     border-radius: 9999px;
     padding: 0.7rem 1.25rem;
     cursor: pointer;
     transition: background-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
-    box-shadow: 0 2px 6px rgba(0, 60, 109, 0.18);
+    box-shadow: 0 10px 24px rgba(5, 40, 88, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.16);
     width: 100%;
 }
 
 .neumorphic-form button:hover {
-    background-color: var(--cpc-blue-dark, #002244);
+    background: linear-gradient(135deg, #1263bf 0%, #0e4a86 55%, #0a3565 100%);
     transform: translateY(-1px);
-    box-shadow: 0 6px 12px rgba(0, 60, 109, 0.18);
+    box-shadow: 0 14px 28px rgba(6, 52, 115, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.2);
 }
 
 @media (min-width: 640px) {
@@ -108,7 +119,7 @@
     }
     .form-container {
         padding: 24px 20px;
-        box-shadow: 0 1px 6px rgba(0,0,0,0.04);
+        box-shadow: 0 14px 30px rgba(2, 10, 24, 0.55);
     }
 }
 
