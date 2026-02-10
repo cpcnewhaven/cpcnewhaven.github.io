@@ -2,11 +2,31 @@
   "announcements": [
   
     {
+      "id": "2026-029",
+      "title": "Interested in Joining the Body of Christ at CPC?",
+      "description": "We consider the church an essential element of the gospel, so joining CPC as a member is a way to truly join the body of Christ, in all its blessings and with all its flaws! Before joining, you'll meet one-on-one with a pastor and then discuss how you've come to know Christ with the Shepherd Leaders. Contact Alexis Vano (admin@cpcnewhaven.org) to begin the process. Our next joining will take place on Sunday, April 19.",
+      "dateEntered": "2026-02-10",
+      "active": "true",
+      "type": "announcement",
+      "category": "membership",
+      "tag": "membership"
+    },
+    {
+      "id": "2026-030",
+      "title": "New Adult Sunday Studies Class Begins Sunday Feb. 15",
+      "description": "We're starting a four-week class titled \"Missionally Living in our Neighborhoods,\" which will include a theology of mission as well as guest speakers sharing their wisdom and passion about mission. All are welcome, 9:30am in the Fellowship Hall.",
+      "dateEntered": "2026-02-10",
+      "active": "true",
+      "type": "event",
+      "category": "event",
+      "tag": "sunday-school"
+    },
+    {
       "id": "2026-022",
       "title": "Christian Leadership Training is back TODAY Friday, January 30",
       "description": "For all those interested in shaping the future culture of our church! We're holding monthly training sessions on key topics such as: Gospel-centered community, Small Group Leadership, Missional Living & Hospitality, and Lay Counseling. This class builds on the Total Christ vision from Sunday School. It is especially for small group leaders and anyone aspiring to grow in their faith and service to the church. All are welcome. Continues today, 6:30-8:30pm, meal provided. See website for readings.",
       "dateEntered": "2026-01-30",
-      "active": "true",
+      "active": "false",
       "type": "event",
       "category": "event",
       "tag": "training"
@@ -16,7 +36,7 @@
       "title": "Newcomer's Lunch | THIS SUNDAY, February 1 | During Lunch",
       "description": "For those who are new, or new-ish, join us for a \"Newcomer's Lunch\" in the Lecture Room to learn more about CPC and to meet some of our leadership teams. Lunch will be provided in the Lecture Room for you, just head there! Also, fill out a Welcome Card from the pew and return it to the Welcome Bar in the foyer.",
       "dateEntered": "2026-01-30",
-      "active": "true",
+      "active": "false",
       "type": "event",
       "category": "event",
       "tag": "newcomer"
@@ -44,7 +64,7 @@
     {
       "id": "2026-026",
       "title": "Regular Sunday Schedule",
-      "description": "<strong>8:30am | Prayer in the Parlor</strong><br><br><strong>9:30am | Children's Sunday School</strong><br><br><strong>9:30am | Adult Sunday Studies</strong> - \"Biblical Overview of Redemptive-History\"<br><br><strong>10:30am | Worship Service</strong><br><br><strong>12:00pm | Fellowship Lunch</strong>",
+      "description": "<strong>8:30am | Prayer in the Parlor</strong><br><br><strong>9:30am | Children's Sunday School</strong><br><br><strong>9:30am | Adult Sunday Studies</strong> - \"Missionally Living in our Neighborhoods\" (4-week class began Feb. 15)<br><br><strong>10:30am | Worship Service</strong><br><br><strong>12:00pm | Fellowship Lunch</strong>",
       "dateEntered": "2026-01-29",
       "active": "true",
       "type": "ongoing",

@@ -26,7 +26,7 @@ class HighlightsManager {
     async loadHighlights() {
         // Add version parameter for cache-busting (update this when highlights.json changes)
         // Using timestamp of last major update: 2026-01-30
-        const cacheBuster = `?v=20260130`;
+        const cacheBuster = `?v=20260210`;
         const response = await fetch(this.dataUrl + cacheBuster);
         
         if (!response.ok) {
