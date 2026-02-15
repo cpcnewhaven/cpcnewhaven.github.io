@@ -1,6 +1,15 @@
 {
   "announcements": [
-  
+    {
+      "id": "2026-031",
+      "title": "Emeritus Celebration | Sunday Feb. 22 | Fellowship Hall Lunch",
+      "description": "Join us as we celebrate the faithful service of some of our previous Shepherd Leaders. Rob Hawkes has become Elder Emeritus, Lisa Hawkes is WLB Emeritus, and we're also celebrating JoAnn Kupiec and Lisa Graham, who served as WLB several years ago. There will be brief mention of their service and an open mic time to share your experience of their faithfulness and inspiration.",
+      "dateEntered": "2026-02-15",
+      "active": "true",
+      "type": "event",
+      "category": "event",
+      "tag": "celebration"
+    },
     {
       "id": "2026-029",
       "title": "Interested in Joining the Body of Christ at CPC?",
