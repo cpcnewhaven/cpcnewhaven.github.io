@@ -3,6 +3,15 @@
   "description": "Dive deeper with discussions that go beyond the Sunday message",
   "episodes": [
     {
+      "number": 58,
+      "title": "Beyond the Sunday Sermon | Luke 14 | with Guest Karen Peck",
+      "link": "https://open.spotify.com/episode/3wBlc9BpnTahRMX9VqGUH7?si=514d736eac4c4813",
+      "guest": "Karen Peck",
+      "date_added": "2026-02-16",
+      "season": "winter 2026",
+      "scripture": "Luke 14"
+    },
+    {
       "number": 57,
       "title": "Beyond the Sunday Sermon | The Rich Fool and The Heart's Treasure | Luke 12:13-34 | 1.20.26",
       "link": "https://open.spotify.com/episode/2Cvvdrf3ZK4z8UacjaL3hW?si=f96a7905571c40dd",
@@ -389,4 +398,4 @@
       "podcast-thumbnail_url": "https://d3t3ozftmdmh3i.cloudfront.net/production/podcast_uploaded_nologo/12709107/12709107-1624048854428-01a9e30b41437.jpg"
     }
   ]
-} 
+}
