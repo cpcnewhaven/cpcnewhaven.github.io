@@ -1,11 +1,31 @@
 {
   "announcements": [
     {
+      "id": "2026-033",
+      "title": "Save the Date! Spring Work Day | Saturday, March 21",
+      "description": "Join your church family as we take care of our grounds and building before Easter weekend. This is a (surprisingly fun!) time of service and fellowship, as we do the church’s version of Spring cleaning. This is the second of only two work days each year. There will be projects available for all skill levels!",
+      "dateEntered": "2026-02-27",
+      "active": "true",
+      "type": "event",
+      "category": "event",
+      "tag": "workday"
+    },
+    {
+      "id": "2026-032",
+      "title": "Newcomer’s Lunch | This Sunday During Lunch",
+      "description": "For those who are new, or new-ish, join us for a “Newcomer’s Lunch” This Sunday, March 1 in the Lecture Room to learn more about CPC and to meet some of our leadership teams. Lunch will be provided in the Lecture Room for you, just head there! Also, fill out a Welcome Card from the pew and return it to the Welcome Bar in the foyer.",
+      "dateEntered": "2026-02-27",
+      "active": "true",
+      "type": "event",
+      "category": "event",
+      "tag": "newcomer"
+    },
+    {
       "id": "2026-031",
       "title": "Emeritus Celebration | Sunday Feb. 22 | Fellowship Hall Lunch",
       "description": "Join us as we celebrate the faithful service of some of our previous Shepherd Leaders. Rob Hawkes has become Elder Emeritus, Lisa Hawkes is WLB Emeritus, and we're also celebrating JoAnn Kupiec and Lisa Graham, who served as WLB several years ago. There will be brief mention of their service and an open mic time to share your experience of their faithfulness and inspiration.",
       "dateEntered": "2026-02-15",
-      "active": "true",
+      "active": "false",
       "type": "event",
       "category": "event",
       "tag": "celebration"
