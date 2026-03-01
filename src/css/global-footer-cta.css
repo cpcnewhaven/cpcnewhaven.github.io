@@ -40,7 +40,7 @@
 
 #footer-cta-a .form-container .body-text,
 #footer-cta-a .form-container p {
-    color: #ffffff;
+    color: #ffffff !important;
 }
 
 .neumorphic-form {

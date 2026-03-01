@@ -306,44 +306,25 @@
             </ul>
         </nav>
 
-        <section class="mid-splash-welcome sticky">
-            <h1 class="headline">Retreat 2025 Photo Gallery</h1>
-        </section>
-
-        <section class="gallery-actions"
-            style="padding:20px; text-align:center;">
-            <a class="widget-cta-btn"
-                href="https://console.cloud.google.com/storage/browser/cpc-public-website/retreat2025"
-                target="_blank" rel="noopener">Upload Photos</a>
-        </section>
-
-        <!-- Gallery Container -->
-        <section id="retreat2025-gallery" style="padding: 20px;">
-            <div id="loading" class="loading">
-                <i class="fas fa-spinner fa-spin"></i>
-                Loading photos...
-            </div>
-
-            <div id="gallery" class="gallery-grid" style="display: none;"></div>
-
-            <div id="error" class="error" style="display: none;"></div>
-        </section>
-
-        <!-- Lightbox -->
-        <div id="lightbox" class="lightbox">
-            <div class="lightbox-content">
-                <button class="lightbox-close" onclick="closeLightbox()">
-                    <i class="fas fa-times"></i>
-                </button>
-                <button class="lightbox-nav prev" onclick="previousImage()">
-                    <i class="fas fa-chevron-left"></i>
-                </button>
-                <img id="lightbox-img" alt>
-                <button class="lightbox-nav next" onclick="nextImage()">
-                    <i class="fas fa-chevron-right"></i>
-                </button>
-            </div>
-        </div>
+  <section class="mid-splash-welcome sticky" style="background-color: #050c18; border-top: 1px solid rgba(120, 180, 255, 0.22);">
+    <h1 class="headline" style="color: #ffffff;">Subscribe to our Newsletter</h1>
+  </section>
+  <section id="footer-cta-a" class="styled-section-a">
+    <div class="form-container">
+      <p class="body-text center" style="text-align: center !important">
+        Our weekly newsletter goes out on Friday mornings with Sunday Service
+        information, highlights, upcoming events, and useful links.
+      </p>
+      <form
+        action="https://formspree.io/f/meojowwg"
+        method="POST"
+        class="neumorphic-form">
+        <input type="text" name="name" placeholder="Your name" required />
+        <input type="email" name="email" placeholder="Your email" required />
+        <button type="submit">Subscribe to CPC New Haven</button>
+      </form>
+    </div>
+  </section>
 
     <footer>
       <div class="footer-content-logo">
