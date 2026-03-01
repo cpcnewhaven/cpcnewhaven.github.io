@@ -71,10 +71,10 @@
 
 /* Easter Distinct Feature Styling - Matte Look */
 .highlight-card.easter {
-    border: 3px solid #9c27b0;
+    border: 1.5px solid #9c27b0;
     background: #fdfbff;
     position: relative;
-    box-shadow: 4px 4px 0px #9c27b0;
+    box-shadow: 2px 2px 0px #9c27b0;
 }
 
 .highlight-card.easter .highlight-title {
@@ -90,8 +90,8 @@
 
 .highlight-card.easter:hover {
     border-color: #7b1fa2;
-    box-shadow: 6px 6px 0px #7b1fa2;
-    transform: translate(-2px, -2px);
+    box-shadow: 3px 3px 0px #7b1fa2;
+    transform: translate(-1px, -1px);
 }
 
 .highlight-image-container {
