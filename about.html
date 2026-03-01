@@ -1,514 +1,538 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <!-- Google tag (gtag.js) -->
-        <script async
-            src="https://www.googletagmanager.com/gtag/js?id=G-TL0WH5R1EK"></script>
-        <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){ dataLayer.push(arguments); }
-      gtag('js', new Date());
-      gtag('config', 'G-TL0WH5R1EK');
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TL0WH5R1EK"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-TL0WH5R1EK');
     </script>
 
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description"
-            content="CPC New Haven Church - 135 Whitney Ave New Haven, CT. We are a church committed to serving and reaching the Greater New Haven area. Join us for worship and fellowship." />
-        <meta name="keywords"
-            content="CPC New Haven, Church, New Haven, CT, Worship, Fellowship" />
-        <meta name="author" content="CPC New Haven" />
-        <title>About CPC New Haven</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="CPC New Haven Church - 135 Whitney Ave New Haven, CT. We are a church committed to serving and reaching the Greater New Haven area. Join us for worship and fellowship." />
+    <meta name="keywords" content="CPC New Haven, Church, New Haven, CT, Worship, Fellowship" />
+    <meta name="author" content="CPC New Haven" />
+    <title>About CPC New Haven</title>
 
-        <!-- Include your global CSS and FontAwesome -->
-        <link rel="stylesheet" href="./src/css/global-body.css" />
-        <link rel="stylesheet" href="./src/css/global-footer-cta.css" />
-        <link rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <!-- Include your global CSS and FontAwesome -->
+    <link rel="stylesheet" href="./src/css/global-body.css" />
+    <link rel="stylesheet" href="./src/css/global-footer-cta.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 
-        <!-- Alpine.js -->
-        <script defer
-            src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
-        <!-- Cache clearing script - runs on every page load -->
-        <script src="./src/js/clear-cache.js"></script>
+    <!-- Alpine.js -->
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <!-- Cache clearing script - runs on every page load -->
+    <script src="./src/js/clear-cache.js"></script>
 
-        <style>
-      /* Main container for layout */
-      .about-main-container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 10px;
-        position: relative;
-      }
+    <style>
+        /* Main container for layout */
+        .about-main-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 10px;
+            position: relative;
+        }
 
-      /* Floating Navigation - Sleek Dark Design */
-      .about-floating-nav {
-        position: fixed;
-        top: 50%;
-        left: 20px;
-        transform: translateY(-50%);
-        background: linear-gradient(135deg, rgba(0, 15, 50, 0.95) 0%, rgba(0, 34, 68, 0.95) 100%);
-        padding: 12px 10px;
-        border-radius: 8px;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25), 0 2px 8px rgba(0, 0, 0, 0.15);
-        z-index: 1000;
-        display: flex;
-        flex-direction: column;
-        gap: 4px;
-        backdrop-filter: blur(15px);
-        max-height: 80vh;
-        overflow-y: auto;
-        border: 1px solid rgba(255, 255, 255, 0.1);
-      }
-
-      .about-floating-nav ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        display: flex;
-        flex-direction: column;
-        gap: 4px;
-      }
-
-      .about-floating-nav a {
-        color: rgba(255, 255, 255, 0.85);
-        text-decoration: none;
-        font-size: 13px;
-        font-weight: 500;
-        letter-spacing: 0.3px;
-        transition: all 0.2s ease;
-        padding: 10px 14px;
-        border-radius: 6px;
-        white-space: nowrap;
-        border-left: 3px solid transparent;
-      }
-
-      .about-floating-nav a:hover,
-      .about-floating-nav a.active {
-        background: rgba(255, 255, 255, 0.15);
-        color: #ffffff;
-        border-left-color: rgba(255, 255, 255, 0.8);
-        padding-left: 18px;
-      }
-
-      /* Custom scrollbar for floating nav */
-      .about-floating-nav::-webkit-scrollbar {
-        width: 6px;
-      }
-
-      .about-floating-nav::-webkit-scrollbar-track {
-        background: rgba(0, 0, 0, 0.2);
-        border-radius: 3px;
-      }
-
-      .about-floating-nav::-webkit-scrollbar-thumb {
-        background: rgba(255, 255, 255, 0.3);
-        border-radius: 3px;
-        transition: background 0.2s ease;
-      }
-
-      .about-floating-nav::-webkit-scrollbar-thumb:hover {
-        background: rgba(255, 255, 255, 0.5);
-      }
-
-      /* Content Sections */
-      .about-content-section {
-        min-height: 60vh;
-        padding: 40px 10px 30px 10px;
-        opacity: 0;
-        transform: translateY(20px);
-        transition: all 0.6s ease;
-        margin: 0 auto;
-        max-width: 800px;
-        font-size: 16px;
-        line-height: 1.6;
-        margin-left: 180px;
-      }
-
-      .about-content-section.visible {
-        opacity: 1;
-        transform: translateY(0);
-      }
-
-    
-      .about-sub-title {
-        font-size: 1.4em;
-        margin-top: 1.2em;
-        margin-bottom: 0.8em;
-        font-weight: 600;
-        color: var(--cpc-blue);
-        letter-spacing: -0.5px;
-      }
-      .about-body-text, .about-content-section p, .about-content-section li {
-        font-size: 1.05em;
-        margin-bottom: 0.7em;
-      }
-      .about-content-section strong {
-        font-weight: 700;
-        color: var(--cpc-blue);
-        font-size: 1.1em;
-      }
-      .about-content-section ul, .about-content-section ol {
-        margin-left: 1.2em;
-        font-size: 1.05em;
-      }
-      .about-content-section blockquote {
-        font-size: 1.05em;
-        margin: 1em 0 1em 1.5em;
-        padding-left: 1em;
-        border-left: 3px solid #eee;
-      }
-      /* Parallax Images */
-      .about-parallax-image {
-        width: 100%;
-        height: 300px;
-        background-size: cover;
-        background-position: center;
-        /* Avoid scroll jank from fixed backgrounds */
-        background-attachment: scroll;
-        margin: 30px 0;
-        border-radius: 8px;
-      }
-      /* Remove old sidebar styles */
-      .about-sidebar {
-        display: none;
-      }
-      /* Responsive adjustments */
-      @media (max-width: 900px) {
+        /* Floating Navigation - Sleek Dark Design */
         .about-floating-nav {
-          display: none !important;
+            position: fixed;
+            top: 50%;
+            left: 20px;
+            transform: translateY(-50%);
+            background: linear-gradient(135deg, rgba(0, 15, 50, 0.95) 0%, rgba(0, 34, 68, 0.95) 100%);
+            padding: 12px 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25), 0 2px 8px rgba(0, 0, 0, 0.15);
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            backdrop-filter: blur(15px);
+            max-height: 80vh;
+            overflow-y: auto;
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
-        .about-hamburger-menu-button-container {
-          display: flex !important;
+        .about-floating-nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
         }
 
+        .about-floating-nav a {
+            color: rgba(255, 255, 255, 0.85);
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 0.3px;
+            transition: all 0.2s ease;
+            padding: 10px 14px;
+            border-radius: 6px;
+            white-space: nowrap;
+            border-left: 3px solid transparent;
+        }
+
+        .about-floating-nav a:hover,
+        .about-floating-nav a.active {
+            background: rgba(255, 255, 255, 0.15);
+            color: #ffffff;
+            border-left-color: rgba(255, 255, 255, 0.8);
+            padding-left: 18px;
+        }
+
+        /* Custom scrollbar for floating nav */
+        .about-floating-nav::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .about-floating-nav::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 3px;
+        }
+
+        .about-floating-nav::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 3px;
+            transition: background 0.2s ease;
+        }
+
+        .about-floating-nav::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.5);
+        }
+
+        /* Content Sections */
         .about-content-section {
-          margin-left: 0;
-          padding: 20px 15px;
-          font-size: 15px;
+            min-height: 60vh;
+            padding: 40px 10px 30px 10px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease;
+            margin: 0 auto;
+            max-width: 800px;
+            font-size: 16px;
+            line-height: 1.6;
+            margin-left: 180px;
         }
-      }
 
-      @media (max-width: 768px) {
-        .about-content-section {
-          margin-left: 0;
-          padding: 20px 15px;
-          font-size: 15px;
+        .about-content-section.visible {
+            opacity: 1;
+            transform: translateY(0);
         }
 
+
+        .about-sub-title {
+            font-size: 1.4em;
+            margin-top: 1.2em;
+            margin-bottom: 0.8em;
+            font-weight: 600;
+            color: var(--cpc-blue);
+            letter-spacing: -0.5px;
+        }
+
+        .about-body-text,
+        .about-content-section p,
+        .about-content-section li {
+            font-size: 1.05em;
+            margin-bottom: 0.7em;
+        }
+
+        .about-content-section strong {
+            font-weight: 700;
+            color: var(--cpc-blue);
+            font-size: 1.1em;
+        }
+
+        .about-content-section ul,
+        .about-content-section ol {
+            margin-left: 1.2em;
+            font-size: 1.05em;
+        }
+
+        .about-content-section blockquote {
+            font-size: 1.05em;
+            margin: 1em 0 1em 1.5em;
+            padding-left: 1em;
+            border-left: 3px solid #eee;
+        }
+
+        /* Parallax Images */
+        .about-parallax-image {
+            width: 100%;
+            height: 300px;
+            background-size: cover;
+            background-position: center;
+            /* Avoid scroll jank from fixed backgrounds */
+            background-attachment: scroll;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+
+        /* Remove old sidebar styles */
+        .about-sidebar {
+            display: none;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 900px) {
+            .about-floating-nav {
+                display: none !important;
+            }
+
+            .about-hamburger-menu-button-container {
+                display: flex !important;
+            }
+
+            .about-content-section {
+                margin-left: 0;
+                padding: 20px 15px;
+                font-size: 15px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .about-content-section {
+                margin-left: 0;
+                padding: 20px 15px;
+                font-size: 15px;
+            }
+
+            .about-staff-grid {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+                gap: 15px;
+            }
+
+            .about-staff-member {
+                padding: 15px;
+            }
+
+            .about-compact-centered-image {
+                max-width: 300px;
+            }
+
+            .about-heading {
+                font-size: 1.5em;
+            }
+
+            .about-sub-title {
+                font-size: 1.4em;
+            }
+
+            .read-more-button {
+                font-size: 0.95em;
+                padding: 8px 15px;
+            }
+        }
+
+        /* Gallery Section Styles */
+        .about-gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .about-gallery-item {
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .about-gallery-item img:hover {
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+            .about-gallery-grid {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            }
+        }
+
+        /* Footer Styles */
+        #footer-about-page {
+            background: var(--cpc-blue);
+            color: white;
+            padding: 40px 20px;
+            margin-top: 60px;
+        }
+
+        #footer-about-page .footer-content-logo {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        #footer-about-page .top-splash-logo {
+            max-width: 200px;
+            height: auto;
+            color: white !important;
+        }
+
+        #footer-about-page .body-text {
+            max-width: 800px;
+            margin: 0 auto 20px;
+            text-align: center;
+            line-height: 1.6;
+            font-size: 0.95em;
+            color: white !important;
+        }
+
+        #footer-about-page p {
+            text-align: center;
+            margin: 10px 0;
+            font-size: 0.9em;
+            color: white !important;
+        }
+
+        #footer-about-page a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+        }
+
+        #footer-about-page a:hover {
+            opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+            #footer-about-page {
+                padding: 30px 15px;
+            }
+
+            #footer-about-page .top-splash-logo {
+                max-width: 150px;
+            }
+
+            #footer-about-page .body-text {
+                font-size: 0.9em;
+            }
+
+            #footer-about-page p {
+                font-size: 0.85em;
+            }
+        }
+
+        /* Staff and Leadership Sections */
         .about-staff-grid {
-          grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-          gap: 15px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
         }
 
         .about-staff-member {
-          padding: 15px;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
         }
 
-        .about-compact-centered-image {
-          max-width: 300px;
+        .about-staff-member:hover {
+            transform: translateY(-5px);
         }
 
-        .about-heading {
-          font-size: 1.5em;
+        .about-staff-member h3 {
+            color: var(--cpc-blue);
+            margin: 0 0 5px 0;
+            font-size: 1.2em;
         }
 
-        .about-sub-title {
-          font-size: 1.4em;
+        .about-staff-member h4 {
+            color: #666;
+            margin: 0 0 15px 0;
+            font-size: 1em;
+            font-weight: normal;
         }
 
         .read-more-button {
-          font-size: 0.95em;
-          padding: 8px 15px;
+            background: var(--cpc-blue);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: opacity 0.3s ease;
         }
-      }
 
-      /* Gallery Section Styles */
-      .about-gallery-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-        gap: 10px;
-        margin-top: 20px;
-      }
-
-      .about-gallery-item {
-        overflow: hidden;
-        border-radius: 8px;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-      }
-
-      .about-gallery-item img {
-        width: 100%;
-        height: auto;
-        display: block;
-        transition: transform 0.3s ease;
-      }
-
-      .about-gallery-item img:hover {
-        transform: scale(1.05);
-      }
-
-      @media (max-width: 768px) {
-        .about-gallery-grid {
-          grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        .read-more-button:hover {
+            opacity: 0.9;
         }
-      }
 
-      /* Footer Styles */
-      #footer-about-page {
-        background: var(--cpc-blue);
-        color: white;
-        padding: 40px 20px;
-        margin-top: 60px;
-      }
-
-      #footer-about-page .footer-content-logo {
-        text-align: center;
-        margin-bottom: 30px;
-      }
-
-      #footer-about-page .top-splash-logo {
-        max-width: 200px;
-        height: auto;
-        color:white!important;
-      }
-
-      #footer-about-page .body-text {
-        max-width: 800px;
-        margin: 0 auto 20px;
-        text-align: center;
-        line-height: 1.6;
-        font-size: 0.95em;
-        color:white!important;
-      }
-
-      #footer-about-page p {
-        text-align: center;
-        margin: 10px 0;
-        font-size: 0.9em;
-        color:white!important;
-      }
-
-      #footer-about-page a {
-        color: white;
-        text-decoration: none;
-        transition: opacity 0.3s ease;
-      }
-
-      #footer-about-page a:hover {
-        opacity: 0.8;
-      }
-
-      @media (max-width: 768px) {
-        #footer-about-page {
-          padding: 30px 15px;
+        /* Mission Anabaino Image */
+        .about-compact-centered-image {
+            max-width: 400px;
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
-        
-        #footer-about-page .top-splash-logo {
-          max-width: 150px;
-        }
-        
-        #footer-about-page .body-text {
-          font-size: 0.9em;
-        }
-        
-        #footer-about-page p {
-          font-size: 0.85em;
-        }
-      }
 
-      /* Staff and Leadership Sections */
-      .about-staff-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-        gap: 20px;
-        margin-top: 30px;
-      }
-
-      .about-staff-member {
-        background: white;
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        text-align: center;
-        transition: transform 0.3s ease;
-      }
-
-      .about-staff-member:hover {
-        transform: translateY(-5px);
-      }
-
-      .about-staff-member h3 {
-        color: var(--cpc-blue);
-        margin: 0 0 5px 0;
-        font-size: 1.2em;
-      }
-
-      .about-staff-member h4 {
-        color: #666;
-        margin: 0 0 15px 0;
-        font-size: 1em;
-        font-weight: normal;
-      }
-
-      .read-more-button {
-        background: var(--cpc-blue);
-        color: white;
-        border: none;
-        padding: 10px 20px;
-        border-radius: 4px;
-        cursor: pointer;
-        font-size: 1em;
-        transition: opacity 0.3s ease;
-      }
-
-      .read-more-button:hover {
-        opacity: 0.9;
-      }
-
-      /* Mission Anabaino Image */
-      .about-compact-centered-image {
-        max-width: 400px;
-        width: 100%;
-        height: auto;
-        display: block;
-        margin: 20px auto;
-        border-radius: 8px;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-      }
-
-      /* Mission Church Image */
-      .mission-church-image {
-        max-width: 100%;
-        width: 100%;
-        height: auto;
-        display: block;
-        margin: 30px auto;
-        border-radius: 12px;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-      }
-
-      .mission-church-image:hover {
-        transform: scale(1.02);
-        box-shadow: 0 6px 20px rgba(0,0,0,0.2);
-      }
-
-      @media (max-width: 768px) {
+        /* Mission Church Image */
         .mission-church-image {
-          margin: 20px auto;
-          border-radius: 8px;
+            max-width: 100%;
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 30px auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-      }
 
-      @media (max-width: 480px) {
-        .mission-church-image {
-          margin: 15px auto;
-          border-radius: 6px;
+        .mission-church-image:hover {
+            transform: scale(1.02);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
         }
-      }
 
-      /* About mobile nav visuals use global styles in src/css/global-body.css */
-
-      /* Story Progress Bar Styles */
-      .story-progress-container {
-          position: fixed;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 4px;
-          background: rgba(0,0,0,0.1);
-          z-index: 1000;
-          pointer-events: none;
-      }
-
-      .story-progress-bar {
-          height: 100%;
-          background: var(--cpc-blue);
-          width: 0%;
-          transition: width 0.1s ease;
-      }
-
-      @media (max-width: 768px) {
-          .story-progress-container {
-              height: 3px;
-          }
-      }
-
-      /* Mobile UX improvements */
-      .about-content-section {
-        scroll-margin-top: 72px; /* prevent sticky header overlap on anchor jumps */
-      }
-      .about-mobile-navigation {
-        -webkit-overflow-scrolling: touch; /* smooth scrolling on iOS */
-      }
-      /* Reduce parallax jank on mobile */
-      @media (max-width: 768px) {
-        .about-parallax-image {
-          background-attachment: scroll;
+        @media (max-width: 768px) {
+            .mission-church-image {
+                margin: 20px auto;
+                border-radius: 8px;
+            }
         }
-      }
+
+        @media (max-width: 480px) {
+            .mission-church-image {
+                margin: 15px auto;
+                border-radius: 6px;
+            }
+        }
+
+        /* About mobile nav visuals use global styles in src/css/global-body.css */
+
+        /* Story Progress Bar Styles */
+        .story-progress-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            pointer-events: none;
+        }
+
+        .story-progress-bar {
+            height: 100%;
+            background: var(--cpc-blue);
+            width: 0%;
+            transition: width 0.1s ease;
+        }
+
+        @media (max-width: 768px) {
+            .story-progress-container {
+                height: 3px;
+            }
+        }
+
+        /* Mobile UX improvements */
+        .about-content-section {
+            scroll-margin-top: 72px;
+            /* prevent sticky header overlap on anchor jumps */
+        }
+
+        .about-mobile-navigation {
+            -webkit-overflow-scrolling: touch;
+            /* smooth scrolling on iOS */
+        }
+
+        /* Reduce parallax jank on mobile */
+        @media (max-width: 768px) {
+            .about-parallax-image {
+                background-attachment: scroll;
+            }
+        }
     </style>
-    </head>
+</head>
 
-    <body>
-        <!-- Main Navigation (header) remains unchanged -->
-        <nav class="main-navigation">
-            <a href="index.html">Home</a>
-            <a href="sundays.html">Sundays</a>
-            <a href="about.html">About</a>
-            <a href="podcasts.html">Podcasts</a>
-            <a href="events.html">Events</a>
-            <a href="community.html">Community</a>
-            <a href="live.html">Live</a>
-            <a href="resources.html">Resources</a>
-            <a href="give.html">Give</a>
-        </nav>
+<body>
+    <!-- Main Navigation (header) remains unchanged -->
+    <nav class="main-navigation">
+        <a href="index.html">Home</a>
+        <a href="sundays.html">Sundays</a>
+        <a href="about.html">About</a>
+        <a href="podcasts.html">Podcasts</a>
+        <a href="events.html">Events</a>
+        <a href="community.html">Community</a>
+        <a href="live.html">Live</a>
+        <a href="resources.html">Resources</a>
+        <a href="give.html">Give</a>
+    </nav>
 
-        <!-- Mobile Navigation -->
-        <div class="hamburger-menu-button-container" id="hamburgerMenu">
-            <i class="fas fa-bars"></i>
+    <!-- Mobile Navigation -->
+    <div class="hamburger-menu-button-container" id="hamburgerMenu">
+        <i class="fas fa-bars"></i>
+    </div>
+    <div class="mobile-navigation" id="mobileNav">
+        <div class="mobile-nav-header">
+            <img src="./assets/CPC_LOGO_24.png" alt="CPC New Haven Church" id="mobile-menu-logo" />
+            <span id="closeMobileMenuButton"><i class="fas fa-times"></i></span>
         </div>
-        <div class="mobile-navigation" id="mobileNav">
-            <div class="mobile-nav-header">
-                <img src="./assets/CPC_LOGO_24.png" alt="CPC New Haven Church"
-                    id="mobile-menu-logo" />
-                <span id="closeMobileMenuButton"><i
-                        class="fas fa-times"></i></span>
-            </div>
-            <ul class="mobile-nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="sundays.html">Sundays</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="podcasts.html">Podcasts</a></li>
-                <li><a href="events.html">Events</a></li>
-                <li><a href="community.html">Community</a></li>
-                <li><a href="live.html">Live</a></li>
-                <li><a href="resources.html">Resources</a></li>
-                <li><a href="give.html">Give</a></li>
-            </ul>
-        </div>
-        <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+        <ul class="mobile-nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="sundays.html">Sundays</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="podcasts.html">Podcasts</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="community.html">Community</a></li>
+            <li><a href="live.html">Live</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="give.html">Give</a></li>
+        </ul>
+    </div>
+    <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
 
-        <!-- Splash Hero or page header -->
-        <div class="splash-hero--about">
-            <h1>About</h1>
-        </div>
+    <!-- Splash Hero or page header -->
+    <div class="splash-hero--about">
+        <h1>About</h1>
+    </div>
 
-        <!-- About Floating Nav Hamburger (Left) -->
-        <div class="about-hamburger-menu-button-container"
-            id="aboutHamburgerMenu">
-            <i id="aboutHamburgerIcon" class="fas fa-bars"></i>
+    <!-- About Floating Nav Hamburger (Left) -->
+    <div class="about-hamburger-menu-button-container" id="aboutHamburgerMenu">
+        <i id="aboutHamburgerIcon" class="fas fa-bars"></i>
+    </div>
+    <div class="about-mobile-navigation" id="aboutMobileNav">
+        <div class="about-mobile-nav-header">
+            <img src="./assets/CPC_LOGO_24.png" alt="CPC New Haven Church" id="about-mobile-menu-logo" />
+            <span id="closeAboutMobileMenuButton"><i class="fas fa-times"></i></span>
         </div>
-        <div class="about-mobile-navigation" id="aboutMobileNav">
-            <div class="about-mobile-nav-header">
-                <img src="./assets/CPC_LOGO_24.png" alt="CPC New Haven Church"
-                    id="about-mobile-menu-logo" />
-                <span id="closeAboutMobileMenuButton"><i
-                        class="fas fa-times"></i></span>
-            </div>
-            <ul class="about-mobile-nav-links">
+        <ul class="about-mobile-nav-links">
+            <li><a href="#mission">Mission</a></li>
+            <li><a href="#totalChrist">Total Christ</a></li>
+            <li><a href="#commitments">Commitments</a></li>
+            <li><a href="#staff">Staff</a></li>
+            <li><a href="#session">Session</a></li>
+            <li><a href="#wlb">Women's Leadership</a></li>
+            <li><a href="#slb">Servant Leadership</a></li>
+            <li><a href="#missionAnabaino">Mission Anabaino</a></li>
+            <li><a href="#ourStory">Our Story</a></li>
+        </ul>
+    </div>
+    <div class="about-mobile-nav-overlay" id="aboutMobileNavOverlay"></div>
+
+    <!-- Main Content -->
+    <div class="about-main-container">
+        <!-- Floating Navigation -->
+        <nav class="about-floating-nav">
+            <ul>
                 <li><a href="#mission">Mission</a></li>
                 <li><a href="#totalChrist">Total Christ</a></li>
                 <li><a href="#commitments">Commitments</a></li>
@@ -519,1290 +543,1292 @@
                 <li><a href="#missionAnabaino">Mission Anabaino</a></li>
                 <li><a href="#ourStory">Our Story</a></li>
             </ul>
-        </div>
-        <div class="about-mobile-nav-overlay" id="aboutMobileNavOverlay"></div>
+        </nav>
 
-        <!-- Main Content -->
-        <div class="about-main-container">
-            <!-- Floating Navigation -->
-            <nav class="about-floating-nav">
-                <ul>
-                    <li><a href="#mission">Mission</a></li>
-                    <li><a href="#totalChrist">Total Christ</a></li>
-                    <li><a href="#commitments">Commitments</a></li>
-                    <li><a href="#staff">Staff</a></li>
-                    <li><a href="#session">Session</a></li>
-                    <li><a href="#wlb">Women's Leadership</a></li>
-                    <li><a href="#slb">Servant Leadership</a></li>
-                    <li><a href="#missionAnabaino">Mission Anabaino</a></li>
-                    <li><a href="#ourStory">Our Story</a></li>
-                </ul>
-            </nav>
+        <!-- Content Sections -->
+        <div class="about-content-wrapper">
+            <!-- Mission Section -->
+            <section id="mission" class="about-content-section">
+                <div class="about-inner-section">
+                    <h1 class="about-sub-title">The Mission of Christ
+                        Presbyterian Church</h1>
+                    <p class="about-body-text">
+                        We are a church that is ambitious for the glory of
+                        God by
+                        <strong>GROWING</strong> in the truth and grace of
+                        Jesus Christ,
+                        <strong>ACTING</strong> as a faithful witness in the
+                        greater New
+                        Haven community and world,
+                        <strong>TRUSTING</strong> in the grace and power of
+                        the Holy Spirit.
+                    </p>
 
-            <!-- Content Sections -->
-            <div class="about-content-wrapper">
-                <!-- Mission Section -->
-                <section id="mission" class="about-content-section">
-                    <div class="about-inner-section">
-                        <h1 class="about-sub-title">The Mission of Christ
-                            Presbyterian Church</h1>
-                        <p class="about-body-text">
-                            We are a church that is ambitious for the glory of
-                            God by
-                            <strong>GROWING</strong> in the truth and grace of
-                            Jesus Christ,
-                            <strong>ACTING</strong> as a faithful witness in the
-                            greater New
-                            Haven community and world,
-                            <strong>TRUSTING</strong> in the grace and power of
-                            the Holy Spirit.
-                        </p>
-                    
-                    </div>
-                </section>
+                </div>
+            </section>
 
-                <!-- Total Christ Section -->
-                <section id="totalChrist" class="about-content-section">
-                    <div class="about-inner-section">
-                        <h1 class="about-sub-title">Our Total Christ
-                            Spirituality</h1>
-                        <p class="about-body-text">
-                            We want this to be all about Christ—his work, not
-                            ours, as the
-                            basis of our relationship to God and one another,
-                            and his glory,
-                            not ours or any popular leader, as the object of our
-                            ultimate
-                            affection and respect. It is our desire to
-                            experience total
-                            Christ, not just one or another brand of Christ.
-                        </p>
-                        <p class="about-body-text">
-                            The term "Total Christ" originates from the
-                            5th-century
-                            pastor-theologian St. Augustine, who described the
-                            relationship of
-                            Christ's incarnational ministry (past) to his
-                            ongoing ascension
-                            ministry (present) as
-                            "the Word was made flesh, and dwelled among us; to that flesh is joined the church, and there is made total Christ, both head and body."
-                        </p>
+            <!-- Total Christ Section -->
+            <section id="totalChrist" class="about-content-section">
+                <div class="about-inner-section">
+                    <h1 class="about-sub-title">Our Total Christ
+                        Spirituality</h1>
+                    <p class="about-body-text">
+                        We want this to be all about Christ—his work, not
+                        ours, as the
+                        basis of our relationship to God and one another,
+                        and his glory,
+                        not ours or any popular leader, as the object of our
+                        ultimate
+                        affection and respect. It is our desire to
+                        experience total
+                        Christ, not just one or another brand of Christ.
+                    </p>
+                    <p class="about-body-text">
+                        The term "Total Christ" originates from the
+                        5th-century
+                        pastor-theologian St. Augustine, who described the
+                        relationship of
+                        Christ's incarnational ministry (past) to his
+                        ongoing ascension
+                        ministry (present) as
+                        "the Word was made flesh, and dwelled among us; to that flesh is joined the church, and there is
+                        made total Christ, both head and body."
+                    </p>
 
-                        <h2 class="about-sub-title">The Five Marks</h2>
-                        <p class="about-body-text">
-                            <strong>1. Gospel-Centered:</strong> Trust in the
-                            gospel motivates
-                            us to be humble because we know Christ's work to us
-                            is purely a
-                            gift, but also boldly confident in the face of shame
-                            and sin
-                            because it's based in God's power! This grounds us
-                            in God's
-                            finished work on the cross, where he forgave our
-                            sins and
-                            reconciled us to himself. Everything we do is
-                            motivated from and
-                            by the gospel.
-                            <strong style="font-weight: bold;">Think: Humble,
-                                honest, authentic, gracious, safe, desire
-                                to be truly known and loved by God and
-                                others</strong>
-                        </p>
-                        <p class="about-body-text">
-                            <strong>2. Missional: </strong> More (though not
-                            less!) than being
-                            evangelistic, we strive to be missional because God
-                            promises to
-                            dwell with His people in all their God-given
-                            cultures, languages,
-                            and demographics through the church. This grounds us
-                            in God's
-                            global presence, where the church is the evangelist
-                            for a whole
-                            new way of life, showing the world who Jesus is and
-                            what it means
-                            to follow Him in all our relationships.
-                            <strong style="font-weight: bold;">Think: Culturally
-                                self-aware, open & inviting, purposeful,
-                                holistic evangelism</strong>
-                        </p>
-                        <p class="about-body-text">
-                            <strong>3. Confessional - Christ as our Prophet:
-                            </strong>We are
-                            not the first ones to consider what church should be
-                            (thank God!).
-                            We humbly submit to God's revelation in the Word as
-                            it has been
-                            historically interpreted, seeking to be united in
-                            belief across
-                            generations and cultures. Officially, we subscribe
-                            to the
-                            documents of Westminster (c.1630) as the summary of
-                            our faith.
-                            This grounds us in Christ as our Prophet who still
-                            speaks.
-                            <strong style="font-weight: bold;">Think: doctrine
-                                that is alive and an unwillingness to be
-                                distracted by cultural fads</strong>
-                        </p>
-                        <p class="about-body-text">
-                            <strong>4. Sacramental - Christ as our Priest:
-                            </strong> Christ is "fleshed out" in a carefully
-                            designed four movement worship service that follows
-                            the logic of the gospel and culminates every week in
-                            a participation in eucharistic communion with
-                            Christ. Jesus is experienced in the body of Christ
-                            through different cultural styles specific to each
-                            local community (1 Cor. 10:14-17, Heb. 12:22-24,
-                            Rev. 4-5).
-                            <strong style="font-weight: bold;">Think: Friendly,
-                                worshipful, mysterious</strong>
-                        </p>
-                        <p class="about-body-text">
-                            <strong>5. Communal - Christ as our King:</strong>
-                            Christ did not
-                            leave us as orphans, but joined us with Himself to
-                            the church, so
-                            to be a Christian is to be a part of the redeemed
-                            community. Many
-                            of us experience Christ first through the love of
-                            his body. We
-                            also take church government as an instrument of
-                            mercy seriously.
-                            This grounds us in Christ as our King.
-                            <strong style="font-weight: bold;">Think: loving,
-                                humble accountability and
-                                one-anothering</strong>
-                        </p>
-                    </div>
-                </section>
+                    <h2 class="about-sub-title">The Five Marks</h2>
+                    <p class="about-body-text">
+                        <strong>1. Gospel-Centered:</strong> Trust in the
+                        gospel motivates
+                        us to be humble because we know Christ's work to us
+                        is purely a
+                        gift, but also boldly confident in the face of shame
+                        and sin
+                        because it's based in God's power! This grounds us
+                        in God's
+                        finished work on the cross, where he forgave our
+                        sins and
+                        reconciled us to himself. Everything we do is
+                        motivated from and
+                        by the gospel.
+                        <strong style="font-weight: bold;">Think: Humble,
+                            honest, authentic, gracious, safe, desire
+                            to be truly known and loved by God and
+                            others</strong>
+                    </p>
+                    <p class="about-body-text">
+                        <strong>2. Missional: </strong> More (though not
+                        less!) than being
+                        evangelistic, we strive to be missional because God
+                        promises to
+                        dwell with His people in all their God-given
+                        cultures, languages,
+                        and demographics through the church. This grounds us
+                        in God's
+                        global presence, where the church is the evangelist
+                        for a whole
+                        new way of life, showing the world who Jesus is and
+                        what it means
+                        to follow Him in all our relationships.
+                        <strong style="font-weight: bold;">Think: Culturally
+                            self-aware, open & inviting, purposeful,
+                            holistic evangelism</strong>
+                    </p>
+                    <p class="about-body-text">
+                        <strong>3. Confessional - Christ as our Prophet:
+                        </strong>We are
+                        not the first ones to consider what church should be
+                        (thank God!).
+                        We humbly submit to God's revelation in the Word as
+                        it has been
+                        historically interpreted, seeking to be united in
+                        belief across
+                        generations and cultures. Officially, we subscribe
+                        to the
+                        documents of Westminster (c.1630) as the summary of
+                        our faith.
+                        This grounds us in Christ as our Prophet who still
+                        speaks.
+                        <strong style="font-weight: bold;">Think: doctrine
+                            that is alive and an unwillingness to be
+                            distracted by cultural fads</strong>
+                    </p>
+                    <p class="about-body-text">
+                        <strong>4. Sacramental - Christ as our Priest:
+                        </strong> Christ is "fleshed out" in a carefully
+                        designed four movement worship service that follows
+                        the logic of the gospel and culminates every week in
+                        a participation in eucharistic communion with
+                        Christ. Jesus is experienced in the body of Christ
+                        through different cultural styles specific to each
+                        local community (1 Cor. 10:14-17, Heb. 12:22-24,
+                        Rev. 4-5).
+                        <strong style="font-weight: bold;">Think: Friendly,
+                            worshipful, mysterious</strong>
+                    </p>
+                    <p class="about-body-text">
+                        <strong>5. Communal - Christ as our King:</strong>
+                        Christ did not
+                        leave us as orphans, but joined us with Himself to
+                        the church, so
+                        to be a Christian is to be a part of the redeemed
+                        community. Many
+                        of us experience Christ first through the love of
+                        his body. We
+                        also take church government as an instrument of
+                        mercy seriously.
+                        This grounds us in Christ as our King.
+                        <strong style="font-weight: bold;">Think: loving,
+                            humble accountability and
+                            one-anothering</strong>
+                    </p>
+                </div>
+            </section>
 
-                <!-- Commitments Section -->
-                <section id="commitments" class="about-content-section">
-                    <div class="about-inner-section">
-                        <h1 class="about-sub-title">Our Commitments</h1>
-                        <p class="about-body-text">
-                            We seek to be radically grounded in the good news
-                            that though we
-                            are more sinful than we may ever dare to believe, we
-                            are more
-                            loved in Christ than we can ever dare to hope. A
-                            community united
-                            in the love of Jesus changes lives and communities.
-                            We hope that
-                            Sunday worship is the touchstone of our lives and
-                            that it bleeds
-                            into how we treat each other inside and outside of
-                            the church.
-                            Many of us didn't grow up Presbyterian - or even
-                            Christian - so
-                            please feel comfortable coming with lots of
-                            questions. We hope to
-                            be a community that knows we are all in need of
-                            God's mercy and
-                            have the privilege to embody it in the church.
-                        </p>
+            <!-- Commitments Section -->
+            <section id="commitments" class="about-content-section">
+                <div class="about-inner-section">
+                    <h1 class="about-sub-title">Our Commitments</h1>
+                    <p class="about-body-text">
+                        We seek to be radically grounded in the good news
+                        that though we
+                        are more sinful than we may ever dare to believe, we
+                        are more
+                        loved in Christ than we can ever dare to hope. A
+                        community united
+                        in the love of Jesus changes lives and communities.
+                        We hope that
+                        Sunday worship is the touchstone of our lives and
+                        that it bleeds
+                        into how we treat each other inside and outside of
+                        the church.
+                        Many of us didn't grow up Presbyterian - or even
+                        Christian - so
+                        please feel comfortable coming with lots of
+                        questions. We hope to
+                        be a community that knows we are all in need of
+                        God's mercy and
+                        have the privilege to embody it in the church.
+                    </p>
 
-                        <h2 class="about-sub-title">Our Five Basic
-                            Commitments</h2>
-                        <p class="about-body-text">
-                            <b>1.</b><strong> Scripture - We are committed to
-                                the Old and New Testament Scriptures as our only
-                                rule of faith and practice. </strong> While
-                            believing that God powerfully manifests his infinite
-                            glory in a general way through creation, our
-                            Christian faith and practice is grounded in God's
-                            works of redemption in history as explained to us
-                            through the divinely appointed means of inspired
-                            Scripture. We believe that all things necessary for
-                            salvation are sufficiently revealed to us by the
-                            Holy Spirit speaking through the Scriptures of the
-                            Old and New Testaments. It is, therefore, our
-                            ambition to teach the whole counsel of God's word,
-                            not adding to, or subtracting from, anything
-                            contained within it, recognizing no other source for
-                            divine revelation, whether by ecclesiastical
-                            traditions or private revelations.
-                            <br><br><strong style="font-weight: bold;">WHY
-                                SHOULD I CARE?</strong> To liberate all of us
-                            from oppressive, human-made opinions and guard the
-                            gracious gospel against
-                            manipulation and self-serving abuses. We want the
-                            God of grace and glory to be our only Lord.
-                        </p>
-                        <p class="about-body-text">
-                            <b>2.</b><strong> Teachings of Grace - We are
-                                committed to the teachings of grace as they are
-                                summarized in the historic Westminster
-                                Confession of Faith. </strong> Whereas the Holy
-                            Scriptures is our only rule of faith and practice,
-                            Church unity is predicated upon a consensus about
-                            what the Scriptures principally teach. Our consensus
-                            is reflected in the 350-year--old Westminster
-                            Confession of Faith. In summary, it affirms that God
-                            is no less sovereign in our salvation than He is
-                            sovereign in our creation, to the praise of God's
-                            glorious grace! This means that we are accepted by
-                            God, from beginning to end, not by our own works or
-                            attempts to perform for God, but by faith alone in
-                            the perfect and all sufficient work of Christ on our
-                            behalf, faith itself being the free gift of God.
-                            <br><br><strong style="font-weight: bold;">WHY
-                                SHOULD I CARE?</strong> To affirm the
-                            sovereignty of grace, to connect us to wise men and
-                            women who have gone before us, and to prevent as
-                            much as possible our historical and cultural
-                            blind-spots.
-                        </p>
-                        <p class="about-body-text">
-                            <b>3.</b><strong> God-Centered Worship - We are
-                                committed to God-centered worship designed after
-                                a covenantal pattern, where Christ promises to
-                                be present through Word and Sacrament. </strong>
-                            In every period of redemptive history, God has
-                            chosen to be with his people through the divine
-                            institutions of word, sacrament and prayers. Today,
-                            through the sacraments of the Lord's Supper and
-                            Christian Baptism, together with the preaching of
-                            God's word and corporate prayers (both sung and
-                            unsung), God has promised to be with us until the
-                            end of the age. Our worship is set to the pattern of
-                            covenant initiation and renewal including the weekly
-                            participation of the Lord's supper. Our music and
-                            style of worship is "blended" to reflect the
-                            vernacular context of those God has brought to our
-                            city. Our desire is for our worship to be as
-                            God-centered as our theology, communicating the
-                            truth and grace of God to the nations. We welcome
-                            all believers together with those who are searching.
-                            <br><br><strong style="font-weight: bold;">WHY
-                                SHOULD I CARE?</strong> Not only is it biblical,
-                            but it keeps us grounded in the gospel every week,
-                            secured upon Christ's redemption accomplished. Our
-                            worship embodies the gospel as we experience God's
-                            presence.
-                        </p>
-                        <p class="about-body-text">
-                            <b>4.</b><strong> Multi-Cultural Church and Church
-                                Planting </strong> We are committed to being a
-                            multi-cultural church and church planting movement.
-                            We believe that the church, the household of God, is
-                            an essential element of the gospel into which people
-                            of every tribe and nation are welcomed. While
-                            affirming that every follower of Christ is called to
-                            be a witness to the truth and grace of God revealed
-                            in Jesus Christ, we also believe that true
-                            evangelism is best accomplished through church
-                            planting. It is therefore our ambition to be not
-                            only a growing church, but also a growing church
-                            planting movement. While holding to a time-honored
-                            understanding of faith, we are strategically
-                            progressive. Our aim is to plant churches that reach
-                            the different cultures in our city, New England and
-                            the world. For more info on church planting, visit
-                            <a style="text-decoration: underline"
-                                href="https://anabaino.org">anabaino.org</a>.
-                            <br><br><strong style="font-weight: bold;">WHY
-                                SHOULD I CARE?</strong> Because no one culture
-                            is closer to God than another, you don't have to
-                            become American (or Western, or whatever!) to become
-                            Christian, and the communal witness of the gospel is
-                            the best testament to its power!
-                        </p>
-                        <p class="about-body-text">
-                            <b>5.</b><strong> High View of Christian Calling -
-                                We are committed to a high view of Christian
-                                calling as reflected in the vocational spheres
-                                of family, church, and public service. </strong>
-                            We believe that God has given us roles that reflect
-                            his own sovereign design to accomplish his work in
-                            the world, which extends into the spheres of family,
-                            church and civil vocations. We desire to help people
-                            find a balance that is unique to their individual
-                            callings and spheres of service. While believing
-                            that the Christian Scriptures does not address all
-                            things pertaining to life in this world, we do
-                            affirm that we should take
-                            "every thought captive to the obedience of Christ"
-                            and that the Christian worldview is applicable and
-                            relevant to all spheres of life.
-                            <br><br><strong style="font-weight: bold;">WHY
-                                SHOULD I CARE?</strong> Because God didn't make
-                            us just one way or with one part of ourselves, but
-                            made ALL of us, and he deserves it all to be offered
-                            as thankful worship.
-                        </p>
-                    </div>
-                </section>
+                    <h2 class="about-sub-title">Our Five Basic
+                        Commitments</h2>
+                    <p class="about-body-text">
+                        <b>1.</b><strong> Scripture - We are committed to
+                            the Old and New Testament Scriptures as our only
+                            rule of faith and practice. </strong> While
+                        believing that God powerfully manifests his infinite
+                        glory in a general way through creation, our
+                        Christian faith and practice is grounded in God's
+                        works of redemption in history as explained to us
+                        through the divinely appointed means of inspired
+                        Scripture. We believe that all things necessary for
+                        salvation are sufficiently revealed to us by the
+                        Holy Spirit speaking through the Scriptures of the
+                        Old and New Testaments. It is, therefore, our
+                        ambition to teach the whole counsel of God's word,
+                        not adding to, or subtracting from, anything
+                        contained within it, recognizing no other source for
+                        divine revelation, whether by ecclesiastical
+                        traditions or private revelations.
+                        <br><br><strong style="font-weight: bold;">WHY
+                            SHOULD I CARE?</strong> To liberate all of us
+                        from oppressive, human-made opinions and guard the
+                        gracious gospel against
+                        manipulation and self-serving abuses. We want the
+                        God of grace and glory to be our only Lord.
+                    </p>
+                    <p class="about-body-text">
+                        <b>2.</b><strong> Teachings of Grace - We are
+                            committed to the teachings of grace as they are
+                            summarized in the historic Westminster
+                            Confession of Faith. </strong> Whereas the Holy
+                        Scriptures is our only rule of faith and practice,
+                        Church unity is predicated upon a consensus about
+                        what the Scriptures principally teach. Our consensus
+                        is reflected in the 350-year--old Westminster
+                        Confession of Faith. In summary, it affirms that God
+                        is no less sovereign in our salvation than He is
+                        sovereign in our creation, to the praise of God's
+                        glorious grace! This means that we are accepted by
+                        God, from beginning to end, not by our own works or
+                        attempts to perform for God, but by faith alone in
+                        the perfect and all sufficient work of Christ on our
+                        behalf, faith itself being the free gift of God.
+                        <br><br><strong style="font-weight: bold;">WHY
+                            SHOULD I CARE?</strong> To affirm the
+                        sovereignty of grace, to connect us to wise men and
+                        women who have gone before us, and to prevent as
+                        much as possible our historical and cultural
+                        blind-spots.
+                    </p>
+                    <p class="about-body-text">
+                        <b>3.</b><strong> God-Centered Worship - We are
+                            committed to God-centered worship designed after
+                            a covenantal pattern, where Christ promises to
+                            be present through Word and Sacrament. </strong>
+                        In every period of redemptive history, God has
+                        chosen to be with his people through the divine
+                        institutions of word, sacrament and prayers. Today,
+                        through the sacraments of the Lord's Supper and
+                        Christian Baptism, together with the preaching of
+                        God's word and corporate prayers (both sung and
+                        unsung), God has promised to be with us until the
+                        end of the age. Our worship is set to the pattern of
+                        covenant initiation and renewal including the weekly
+                        participation of the Lord's supper. Our music and
+                        style of worship is "blended" to reflect the
+                        vernacular context of those God has brought to our
+                        city. Our desire is for our worship to be as
+                        God-centered as our theology, communicating the
+                        truth and grace of God to the nations. We welcome
+                        all believers together with those who are searching.
+                        <br><br><strong style="font-weight: bold;">WHY
+                            SHOULD I CARE?</strong> Not only is it biblical,
+                        but it keeps us grounded in the gospel every week,
+                        secured upon Christ's redemption accomplished. Our
+                        worship embodies the gospel as we experience God's
+                        presence.
+                    </p>
+                    <p class="about-body-text">
+                        <b>4.</b><strong> Multi-Cultural Church and Church
+                            Planting </strong> We are committed to being a
+                        multi-cultural church and church planting movement.
+                        We believe that the church, the household of God, is
+                        an essential element of the gospel into which people
+                        of every tribe and nation are welcomed. While
+                        affirming that every follower of Christ is called to
+                        be a witness to the truth and grace of God revealed
+                        in Jesus Christ, we also believe that true
+                        evangelism is best accomplished through church
+                        planting. It is therefore our ambition to be not
+                        only a growing church, but also a growing church
+                        planting movement. While holding to a time-honored
+                        understanding of faith, we are strategically
+                        progressive. Our aim is to plant churches that reach
+                        the different cultures in our city, New England and
+                        the world. For more info on church planting, visit
+                        <a style="text-decoration: underline" href="https://anabaino.org">anabaino.org</a>.
+                        <br><br><strong style="font-weight: bold;">WHY
+                            SHOULD I CARE?</strong> Because no one culture
+                        is closer to God than another, you don't have to
+                        become American (or Western, or whatever!) to become
+                        Christian, and the communal witness of the gospel is
+                        the best testament to its power!
+                    </p>
+                    <p class="about-body-text">
+                        <b>5.</b><strong> High View of Christian Calling -
+                            We are committed to a high view of Christian
+                            calling as reflected in the vocational spheres
+                            of family, church, and public service. </strong>
+                        We believe that God has given us roles that reflect
+                        his own sovereign design to accomplish his work in
+                        the world, which extends into the spheres of family,
+                        church and civil vocations. We desire to help people
+                        find a balance that is unique to their individual
+                        callings and spheres of service. While believing
+                        that the Christian Scriptures does not address all
+                        things pertaining to life in this world, we do
+                        affirm that we should take
+                        "every thought captive to the obedience of Christ"
+                        and that the Christian worldview is applicable and
+                        relevant to all spheres of life.
+                        <br><br><strong style="font-weight: bold;">WHY
+                            SHOULD I CARE?</strong> Because God didn't make
+                        us just one way or with one part of ourselves, but
+                        made ALL of us, and he deserves it all to be offered
+                        as thankful worship.
+                    </p>
+                </div>
+            </section>
 
-                <!-- Staff Section -->
-                <section id="staff" class="about-content-section">
-                    <div class="about-inner-section">
-                        <h1 class="about-sub-title">Staff</h1>
-                        <div class="about-staff-grid">
-                            <div class="about-staff-member">
-                                <h3>Craig Luekens</h3>
-                                <h4>Senior Pastor</h4>
-                                <div class="read-more-cont"
-                                    style="text-align: center; margin-top: 15px; display:flex; justify-content: center;">
-                                    <button class="read-more-button"
-                                        onclick="window.location.href='pastor-craig.html'"
-                                        style="padding: 8px 16px; background: transparent; border: 1px solid var(--cpc-blue); color: var(--cpc-blue); font-size: 0.9em; transition: all 0.3s ease;"
-                                        onmouseover="this.style.background='var(--cpc-blue)'; this.style.color='white';"
-                                        onmouseout="this.style.background='transparent'; this.style.color='var(--cpc-blue)';">
-                                        <i class="fas fa-user-circle"
-                                            style="margin-right: 6px;"></i>Meet
-                                        Pastor Craig
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="about-staff-member">
-                                <h3>Jerry Ornelas</h3>
-                                <h4>Assistant Pastor</h4>
-                                <div class="read-more-cont"
-                                    style="text-align: center; margin-top: 15px; display:flex; justify-content: center;">
-                                    <button class="read-more-button"
-                                        onclick="window.location.href='pastor-jerry.html'"
-                                        style="padding: 8px 16px; background: transparent; border: 1px solid var(--cpc-blue); color: var(--cpc-blue); font-size: 0.9em; transition: all 0.3s ease;"
-                                        onmouseover="this.style.background='var(--cpc-blue)'; this.style.color='white';"
-                                        onmouseout="this.style.background='transparent'; this.style.color='var(--cpc-blue)';">
-                                        <i class="fas fa-user-circle"
-                                            style="margin-right: 6px;"></i>Meet
-                                        Pastor Jerry
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="about-staff-member">
-                                <h3>Preston Graham</h3>
-                                <h4>Pastor Emeritus</h4>
-                            </div>
-                            <div class="about-staff-member">
-                                <h3>Alexis Vano</h3>
-                                <h4>Administrative Coordinator</h4>
-                            </div>
-                            <div class="about-staff-member">
-                                <h3>Alex Gonzalez</h3>
-                                <h4>AV Director</h4>
-                            </div>
-                            <div class="about-staff-member">
-                                <h3>Christopher Battista</h3>
-                                <h4>Audio and IT Specialist</h4>
-                            </div>
-                            <div class="about-staff-member">
-                                <h3>Paul Wildey</h3>
-                                <h4>Sexton</h4>
-                            </div>
-                            <div class="about-staff-member">
-                                <h3>Jennifer Cheng</h3>
-                                <h4>Music Coordinator</h4>
+            <!-- Staff Section -->
+            <section id="staff" class="about-content-section">
+                <div class="about-inner-section">
+                    <h1 class="about-sub-title">Staff</h1>
+                    <div class="about-staff-grid">
+                        <div class="about-staff-member">
+                            <h3>Craig Luekens</h3>
+                            <h4>Senior Pastor</h4>
+                            <div class="read-more-cont"
+                                style="text-align: center; margin-top: 15px; display:flex; justify-content: center;">
+                                <button class="read-more-button" onclick="window.location.href='pastor-craig.html'"
+                                    style="padding: 8px 16px; background: transparent; border: 1px solid var(--cpc-blue); color: var(--cpc-blue); font-size: 0.9em; transition: all 0.3s ease;"
+                                    onmouseover="this.style.background='var(--cpc-blue)'; this.style.color='white';"
+                                    onmouseout="this.style.background='transparent'; this.style.color='var(--cpc-blue)';">
+                                    <i class="fas fa-user-circle" style="margin-right: 6px;"></i>Meet
+                                    Pastor Craig
+                                </button>
                             </div>
                         </div>
-                    </div>
-                </section>
-
-                <!-- Session Section -->
-                <section id="session" class="about-content-section">
-                    <div class="about-inner-section">
-                        <h1 class="about-sub-title">Session</h1>
-                        <div class="about-staff-grid" id="session-members">
-                            <div class="about-staff-member">
-                                <h3>Craig Luekens</h3>
-                                <h4>Senior Pastor</h4>
-                            </div>
-                            <div class="about-staff-member">
-                                <h3>Rob Hawkes</h3>
-                                <h4>Emeritus</h4>
-                            </div>
-                            <div class="about-staff-member">
-                                <h3>George Levesque</h3>
-                            </div>
-                            <div class="about-staff-member">
-                                <h3>David Taylor</h3>
-                            </div>
-                            <div class="about-staff-member">
-                                <h3>Tyler Rice</h3>
-                                <h4>Clerk</h4>
-                            </div>
-                            <div class="about-staff-member">
-                                <h3>Josh Kebabian</h3>
-                            </div>
-                            <div class="about-staff-member">
-                                <h3>Peter Chuchta</h3>
-                            </div>
-                            <div class="about-staff-member">
-                                <h3>Alan Phillips</h3>
-                                <h4>Emeritus Member</h4>
+                        <div class="about-staff-member">
+                            <h3>Jerry Ornelas</h3>
+                            <h4>Assistant Pastor</h4>
+                            <div class="read-more-cont"
+                                style="text-align: center; margin-top: 15px; display:flex; justify-content: center;">
+                                <button class="read-more-button" onclick="window.location.href='pastor-jerry.html'"
+                                    style="padding: 8px 16px; background: transparent; border: 1px solid var(--cpc-blue); color: var(--cpc-blue); font-size: 0.9em; transition: all 0.3s ease;"
+                                    onmouseover="this.style.background='var(--cpc-blue)'; this.style.color='white';"
+                                    onmouseout="this.style.background='transparent'; this.style.color='var(--cpc-blue)';">
+                                    <i class="fas fa-user-circle" style="margin-right: 6px;"></i>Meet
+                                    Pastor Jerry
+                                </button>
                             </div>
                         </div>
-                    </div>
-                </section>
-
-                <!-- Women's Leadership Board Section -->
-                <section id="wlb" class="about-content-section">
-                    <div class="about-inner-section">
-                        <h1 class="about-sub-title">Women's Leadership
-                            Board</h1>
-                        <div class="about-staff-grid">
-                            <div class="about-staff-member">
-                                <h3>Lisa Hawkes</h3>
-                            </div>
-                            <div class="about-staff-member">
-                                <h3>Diane Miller</h3>
-                                <h4>Clerk</h4>
-                            </div>
-                            <div class="about-staff-member">
-                                <h3>Peggy Kebabian</h3>
-                            </div>
-                            <div class="about-staff-member">
-                                <h3>Jennifer Cheng</h3>
-                                <h4>(Sabbatical 24-25)</h4>
-                            </div>
-                            <div class="about-staff-member">
-                                <h3>Meg Bogue</h3>
-                            </div>
-                            <div class="about-staff-member">
-                                <h3>Stacy Roney</h3>
-                                <h4>Moderator</h4>
-                            </div>
-                            <div class="about-staff-member">
-                                <h3>Tanilla Brown</h3>
-                                <h4>Apprentice</h4>
-                            </div>
-                            <div class="about-staff-member">
-                                <h3>Patty Chuchta</h3>
-                            </div>
+                        <div class="about-staff-member">
+                            <h3>Preston Graham</h3>
+                            <h4>Pastor Emeritus</h4>
+                        </div>
+                        <div class="about-staff-member">
+                            <h3>Alexis Vano</h3>
+                            <h4>Administrative Coordinator</h4>
+                        </div>
+                        <div class="about-staff-member">
+                            <h3>Alex Gonzalez</h3>
+                            <h4>AV Director</h4>
+                        </div>
+                        <div class="about-staff-member">
+                            <h3>Christopher Battista</h3>
+                            <h4>Audio and IT Specialist</h4>
+                        </div>
+                        <div class="about-staff-member">
+                            <h3>Paul Wildey</h3>
+                            <h4>Sexton</h4>
+                        </div>
+                        <div class="about-staff-member">
+                            <h3>Jennifer Cheng</h3>
+                            <h4>Music Coordinator</h4>
                         </div>
                     </div>
-                </section>
+                </div>
+            </section>
 
-                <!-- Servant Leadership Board Section -->
-                <section id="slb" class="about-content-section">
-                    <div class="about-inner-section">
-                        <h1 class="about-sub-title">Servant Leadership
-                            Board</h1>
-                        <div class="about-staff-grid">
-                            <div class="about-staff-member">
-                                <h3>Craig Luekens</h3>
-                                <h4>(Moderator)</h4>
-                            </div>
-                            <div class="about-staff-member">
-                                <h3>Gary Wininger</h3>
-                                <h4>(Security)</h4>
-                            </div>
-                            <div class="about-staff-member">
-                                <h3>Paul Wildey</h3>
-                                <h4>(Sexton)</h4>
-                            </div>
-                            <div class="about-staff-member">
-                                <h3>Crossan Cooper</h3>
-                                <h4>(Welcome)</h4>
-                            </div>
-
-                            <div class="about-staff-member">
-                                <h3>Colleen Rice</h3>
-                                <h4>(Sabbatical 24-25)</h4>
-                            </div>
-                            <div class="about-staff-member">
-                                <h3>Elena Gerard</h3>
-                                <h4>(Sabbatical 24-25)</h4>
-                            </div>
-                            <div class="about-staff-member">
-                                <h3>Kaitlyn Jessee</h3>
-                                <h4>(Mercy)</h4>
-                            </div>
-                            <div class="about-staff-member">
-                                <h3>Julie Walker</h3>
-                                <h4>(Nursery)</h4>
-                            </div>
-                            <div class="about-staff-member">
-                                <h3>Barbara Battista</h3>
-                                <h4>(Facilities)</h4>
-                            </div>
-                            <div class="about-staff-member">
-                                <h3>Evan Finch</h3>
-                            </div>
-                            <div class="about-staff-member">
-                                <h3>Megan Paek</h3>
-                                <h4>(Food Service)</h4>
-                            </div>
-                            <div class="about-staff-member">
-                                <h3>Josh Sanders</h3>
-                            </div>
-                            <div class="about-staff-member">
-                                <h3>Pat Clendenen</h3>
-                            </div>
+            <!-- Session Section -->
+            <section id="session" class="about-content-section">
+                <div class="about-inner-section">
+                    <h1 class="about-sub-title">Session</h1>
+                    <div class="about-staff-grid" id="session-members">
+                        <div class="about-staff-member">
+                            <h3>Craig Luekens</h3>
+                            <h4>Senior Pastor</h4>
+                        </div>
+                        <div class="about-staff-member">
+                            <h3>Rob Hawkes</h3>
+                            <h4>Emeritus</h4>
+                        </div>
+                        <div class="about-staff-member">
+                            <h3>George Levesque</h3>
+                        </div>
+                        <div class="about-staff-member">
+                            <h3>David Taylor</h3>
+                        </div>
+                        <div class="about-staff-member">
+                            <h3>Tyler Rice</h3>
+                            <h4>Clerk</h4>
+                        </div>
+                        <div class="about-staff-member">
+                            <h3>Josh Kebabian</h3>
+                        </div>
+                        <div class="about-staff-member">
+                            <h3>Peter Chuchta</h3>
+                        </div>
+                        <div class="about-staff-member">
+                            <h3>Alan Phillips</h3>
+                            <h4>Emeritus Member</h4>
                         </div>
                     </div>
-                </section>
+                </div>
+            </section>
 
-                <!-- Mission Anabaino Section -->
-                <section id="missionAnabaino" class="about-content-section">
-                    <div class="about-inner-section">
-                        <h1 class="about-sub-title">Mission Anabaino</h1>
-                        <img
-                            src="https://storage.googleapis.com/cpc-public-website/63.jpg"
-                            alt="Mission Anabaino"
-                            class="about-compact-centered-image" />
-                        <p class="about-body-text">
-                            Mission Anabaino (MA) seeks to fulfill the
-                            "greater things" in relation to Christ's great
-                            expectations regarding his ascension ministry today.
-                            It involves participating in the real and personal
-                            advent of Christ through church planting and the
-                            ecumenically-oriented rediscovery of missional
-                            ecclesiology.
-                            <br /><br />
-                            <div class="center-content">
-                                <a href="https://anabaino.org"
-                                    style="text-decoration: underline">
-                                    <h4>For more info, visit anabaino.org</h4>
-                                </a>
-                            </div>
-                        </p>
-                    </div>
-                </section>
-
-                <!-- Our Story Section -->
-                <section id="ourStory" class="about-content-section">
-                    <div class="about-inner-section">
-                        <div class="story-progress-container">
-                            <div class="story-progress-bar"></div>
+            <!-- Women's Leadership Board Section -->
+            <section id="wlb" class="about-content-section">
+                <div class="about-inner-section">
+                    <h1 class="about-sub-title">Women's Leadership
+                        Board</h1>
+                    <div class="about-staff-grid">
+                        <div class="about-staff-member">
+                            <h3>Lisa Hawkes</h3>
                         </div>
-                        <h1 class="about-sub-title">Our Story</h1>
-                        <div class="about-body-text">
+                        <div class="about-staff-member">
+                            <h3>Diane Miller</h3>
+                            <h4>Clerk</h4>
+                        </div>
+                        <div class="about-staff-member">
+                            <h3>Peggy Kebabian</h3>
+                        </div>
+                        <div class="about-staff-member">
+                            <h3>Jennifer Cheng</h3>
+                            <h4>(Sabbatical 24-25)</h4>
+                        </div>
+                        <div class="about-staff-member">
+                            <h3>Meg Bogue</h3>
+                        </div>
+                        <div class="about-staff-member">
+                            <h3>Stacy Roney</h3>
+                            <h4>Moderator</h4>
+                        </div>
+                        <div class="about-staff-member">
+                            <h3>Tanilla Brown</h3>
+                            <h4>Apprentice</h4>
+                        </div>
+                        <div class="about-staff-member">
+                            <h3>Patty Chuchta</h3>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-                            <p>It all began in the summer of 1991 when three
-                                young families and a graduate student at Yale
-                                scheduled a ferry ride from Bridgeport, CT to
-                                Port Jefferson, NY. Their purpose was to meet up
-                                with several church planters and pastors from
-                                the Presbyterian Church in America (Tim Keller,
-                                Skip Ryan and Charlie Drew) to discuss a
-                                possible church plant in New Haven.</p>
+            <!-- Servant Leadership Board Section -->
+            <section id="slb" class="about-content-section">
+                <div class="about-inner-section">
+                    <h1 class="about-sub-title">Servant Leadership
+                        Board</h1>
+                    <div class="about-staff-grid">
+                        <div class="about-staff-member">
+                            <h3>Craig Luekens</h3>
+                            <h4>(Moderator)</h4>
+                        </div>
+                        <div class="about-staff-member">
+                            <h3>Gary Wininger</h3>
+                            <h4>(Security)</h4>
+                        </div>
+                        <div class="about-staff-member">
+                            <h3>Paul Wildey</h3>
+                            <h4>(Sexton)</h4>
+                        </div>
+                        <div class="about-staff-member">
+                            <h3>Crossan Cooper</h3>
+                            <h4>(Welcome)</h4>
+                        </div>
 
-                            <p>Meanwhile, recent Gordon Conwell Seminary
-                                graduate Preston Graham was scheduled to visit
-                                New Haven in order to locate sufficient housing
-                                for his family while a graduate student in
-                                American Religious History at Yale. Having been
-                                introduced to one of the families prior to
-                                coming, Preston was invited to join them in
-                                their providential ferry ride to "Port Jeff."
-                                After about a three hour conversation on Long
-                                Island, and while dreaming and scheming together
-                                on the return trip back from Port Jeff, Preston
-                                accepted an invitation from the small
-                                contingency to lead a Bible Study while at Yale
-                                until such time as the group could locate a
-                                church planter.</p>
+                        <div class="about-staff-member">
+                            <h3>Colleen Rice</h3>
+                            <h4>(Sabbatical 24-25)</h4>
+                        </div>
+                        <div class="about-staff-member">
+                            <h3>Elena Gerard</h3>
+                            <h4>(Sabbatical 24-25)</h4>
+                        </div>
+                        <div class="about-staff-member">
+                            <h3>Kaitlyn Jessee</h3>
+                            <h4>(Mercy)</h4>
+                        </div>
+                        <div class="about-staff-member">
+                            <h3>Julie Walker</h3>
+                            <h4>(Nursery)</h4>
+                        </div>
+                        <div class="about-staff-member">
+                            <h3>Barbara Battista</h3>
+                            <h4>(Facilities)</h4>
+                        </div>
+                        <div class="about-staff-member">
+                            <h3>Evan Finch</h3>
+                        </div>
+                        <div class="about-staff-member">
+                            <h3>Megan Paek</h3>
+                            <h4>(Food Service)</h4>
+                        </div>
+                        <div class="about-staff-member">
+                            <h3>Josh Sanders</h3>
+                        </div>
+                        <div class="about-staff-member">
+                            <h3>Pat Clendenen</h3>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-                            <p>During the '91-'92 academic year, the group was
-                                joined by a few others (about 8 in all) and met
-                                every Thursday evening in the Westville area of
-                                New Haven. As the year progressed, the group
-                                began to discern a vision for a church in New
-                                Haven that would blend together a progressive,
-                                gospel-centered and missional-oriented emphasis
-                                ("High Gospel") coupled with a classically
-                                defined confessional, sacramental and
-                                communal-oriented emphasis ("High Church) in
-                                church planting. And the conviction for such a
-                                church in New Haven escalated.</p>
+            <!-- Mission Anabaino Section -->
+            <section id="missionAnabaino" class="about-content-section">
+                <div class="about-inner-section">
+                    <h1 class="about-sub-title">Mission Anabaino</h1>
+                    <img src="https://storage.googleapis.com/cpc-public-website/63.jpg" alt="Mission Anabaino"
+                        class="about-compact-centered-image" />
+                    <p class="about-body-text">
+                        Mission Anabaino (MA) seeks to fulfill the
+                        "greater things" in relation to Christ's great
+                        expectations regarding his ascension ministry today.
+                        It involves participating in the real and personal
+                        advent of Christ through church planting and the
+                        ecumenically-oriented rediscovery of missional
+                        ecclesiology.
+                        <br /><br />
+                    <div class="center-content">
+                        <a href="https://anabaino.org" style="text-decoration: underline">
+                            <h4>For more info, visit anabaino.org</h4>
+                        </a>
+                    </div>
+                    </p>
+                </div>
+            </section>
 
-                            <p>Even as the group grew in their conviction for a
-                                high gospel, high church presence of Christ in
-                                New Haven, Preston was invited to preach a final
-                                candidacy sermon at a congregation in his
-                                hometown of Atlanta, Georgia. His sermon text on
-                                Matthew's great commission (Mt. 28) was met with
-                                great enthusiasm, especially by a man who just
-                                happened to be a senior undergraduate and acting
-                                president of the Intervarsity Fellowship at
-                                Yale. Immediately after the sermon, the student
-                                greeted Preston with both the perceived need for
-                                "such a church in New Haven as you describe"
-                                along with a challenge to consider planting a
-                                church in downtown New Haven rather than accept
-                                a pastoral position in Atlanta. As Preston tells
-                                it, and contrary to all previous planning and
-                                expectations,
-                                "the voice of God could not have been more clear and compelling"
-                                (the human mind plans the way, but the Lord
-                                directs the steps. Prov.16:9).</p>
+            <!-- Our Story Section -->
+            <section id="ourStory" class="about-content-section">
+                <div class="about-inner-section">
+                    <div class="story-progress-container">
+                        <div class="story-progress-bar"></div>
+                    </div>
+                    <h1 class="about-sub-title">Our Story</h1>
+                    <div class="about-body-text">
 
-                            <p>What then is commonly called a core group (or
-                                launch team) development phase in church
-                                planting was completed, if humanly speaking,
-                                unintended -- a church conceived!</p>
+                        <p>It all began in the summer of 1991 when three
+                            young families and a graduate student at Yale
+                            scheduled a ferry ride from Bridgeport, CT to
+                            Port Jefferson, NY. Their purpose was to meet up
+                            with several church planters and pastors from
+                            the Presbyterian Church in America (Tim Keller,
+                            Skip Ryan and Charlie Drew) to discuss a
+                            possible church plant in New Haven.</p>
 
-                            <p>After spending the summer raising needed funds to
-                                cover a total first year budget of $73,000,
-                                Preston was ordained and commissioned in
-                                September of 1992 by then Northeast Presbytery
-                                of the PCA as an evangelist to plant a church in
-                                New Haven under the supervision of a church in
-                                distant Nashua, New Hampshire. Meanwhile, with a
-                                vision to build a church like an oak tree vs. a
-                                mushroom plant, all the members of the launch
-                                team (about 8 in all initially) agreed to a year
-                                long study in confessional theology while
-                                serving as a leadership team for the mission
-                                church. After much discussion, a name for the
-                                church was prayerfully discerned as
-                                "Christ Presbyterian Church" under the
-                                inspiration of Colossians 1:18,
-                                "that Christ might have first place in everything."</p>
+                        <p>Meanwhile, recent Gordon Conwell Seminary
+                            graduate Preston Graham was scheduled to visit
+                            New Haven in order to locate sufficient housing
+                            for his family while a graduate student in
+                            American Religious History at Yale. Having been
+                            introduced to one of the families prior to
+                            coming, Preston was invited to join them in
+                            their providential ferry ride to "Port Jeff."
+                            After about a three hour conversation on Long
+                            Island, and while dreaming and scheming together
+                            on the return trip back from Port Jeff, Preston
+                            accepted an invitation from the small
+                            contingency to lead a Bible Study while at Yale
+                            until such time as the group could locate a
+                            church planter.</p>
 
-                            <p>Soon afterwards, on October 11,1992 at 9:30 am,
-                                the "mission" stage of church planting was
-                                initiated with a first worship service held at
-                                the Amity Regional Junior High in Orange, CT. It
-                                was of no small inconvenience that the worship
-                                room was a small, windowless choir room with
-                                chairs suitable for junior high students! The
-                                sermon text that morning was Matthew 28 coupled
-                                with Christ's promise "I will build my church"
-                                (Mt 16). In attendance were 28 people, children
-                                and adults combined (more children than adults).
-                                Envisioned as a "quiet launch," there was
-                                initially no advertisement of the service other
-                                than by word of mouth. But the church began to
-                                grow, if slowly.</p>
+                        <p>During the '91-'92 academic year, the group was
+                            joined by a few others (about 8 in all) and met
+                            every Thursday evening in the Westville area of
+                            New Haven. As the year progressed, the group
+                            began to discern a vision for a church in New
+                            Haven that would blend together a progressive,
+                            gospel-centered and missional-oriented emphasis
+                            ("High Gospel") coupled with a classically
+                            defined confessional, sacramental and
+                            communal-oriented emphasis ("High Church) in
+                            church planting. And the conviction for such a
+                            church in New Haven escalated.</p>
 
-                            <p>During this first year, the expositional sermons
-                                were from Ephesians. Meanwhile, the launch team
-                                continued to meet during the week for study and
-                                leadership, even as most were involved in
-                                teaching children Sunday School that met after
-                                worship while the adults participated in the
-                                novel, at the time, practice of sermon
-                                discussions. Within the first four months, the
-                                congregation grew to about 22 adults (college,
-                                graduate and young professionals) and 26
-                                children members.</p>
+                        <p>Even as the group grew in their conviction for a
+                            high gospel, high church presence of Christ in
+                            New Haven, Preston was invited to preach a final
+                            candidacy sermon at a congregation in his
+                            hometown of Atlanta, Georgia. His sermon text on
+                            Matthew's great commission (Mt. 28) was met with
+                            great enthusiasm, especially by a man who just
+                            happened to be a senior undergraduate and acting
+                            president of the Intervarsity Fellowship at
+                            Yale. Immediately after the sermon, the student
+                            greeted Preston with both the perceived need for
+                            "such a church in New Haven as you describe"
+                            along with a challenge to consider planting a
+                            church in downtown New Haven rather than accept
+                            a pastoral position in Atlanta. As Preston tells
+                            it, and contrary to all previous planning and
+                            expectations,
+                            "the voice of God could not have been more clear and compelling"
+                            (the human mind plans the way, but the Lord
+                            directs the steps. Prov.16:9).</p>
 
-                            <p>A high gospel, high church congregation was
-                                born!</p>
+                        <p>What then is commonly called a core group (or
+                            launch team) development phase in church
+                            planting was completed, if humanly speaking,
+                            unintended -- a church conceived!</p>
 
-                            <p>In two years, and after completing a sermon
-                                series through the book of Jonah with an
-                                emphasis upon God's love for "the city," the
-                                congregation agreed to begin transitioning to
-                                downtown New Haven. On August 1, 1994 a study
-                                center and church office was leased at 383
-                                Orange St. consisting of a library/prayer room,
-                                a meeting room, a pastor's study, and an office
-                                for then seminarian apprentice George Levesque.
-                                On August 28, 1994, Sunday worship was relocated
-                                nearby at the Neighborhood Music School located
-                                at 100 Audubon Street. November 6, 1994 at 4:00
-                                PM, there was a special service of
-                                "organization" whereby church planter-evangelist
-                                Preston Graham was installed as the pastor and
-                                Cliff Bogue, Robert Hawkes and George Levesque
-                                were ordained as ruling elders. Also during this
-                                time, family groups were established - one in
-                                Orange, one in Westville, and one in
-                                Guilford.</p>
+                        <p>After spending the summer raising needed funds to
+                            cover a total first year budget of $73,000,
+                            Preston was ordained and commissioned in
+                            September of 1992 by then Northeast Presbytery
+                            of the PCA as an evangelist to plant a church in
+                            New Haven under the supervision of a church in
+                            distant Nashua, New Hampshire. Meanwhile, with a
+                            vision to build a church like an oak tree vs. a
+                            mushroom plant, all the members of the launch
+                            team (about 8 in all initially) agreed to a year
+                            long study in confessional theology while
+                            serving as a leadership team for the mission
+                            church. After much discussion, a name for the
+                            church was prayerfully discerned as
+                            "Christ Presbyterian Church" under the
+                            inspiration of Colossians 1:18,
+                            "that Christ might have first place in everything."</p>
 
-                            <p>By God's grace, the 1994-1995 years were
-                                characterized by many wonderful evidences of
-                                spiritual power and transformation. Between the
-                                months of September 1994 and August 1995, there
-                                were 7 professions of faith together with many
-                                signs of growing spiritual maturity in the
-                                members. Of particular importance was a growing
-                                commitment to family worship in families. By the
-                                end of August 1995, the membership had grown to
-                                77 and the weekly worship attendance was
-                                averaging 140. As previously committed to
-                                planting a first church prior to purchasing a
-                                building, by God's grace in the following year,
-                                plans were laid with Yale Divinity Student and
-                                CPC intern, Mel Sensenig, toward planting a
-                                daughter church in downtown Providence, R.I.
-                                This was initiated in 1997.</p>
+                        <p>Soon afterwards, on October 11,1992 at 9:30 am,
+                            the "mission" stage of church planting was
+                            initiated with a first worship service held at
+                            the Amity Regional Junior High in Orange, CT. It
+                            was of no small inconvenience that the worship
+                            room was a small, windowless choir room with
+                            chairs suitable for junior high students! The
+                            sermon text that morning was Matthew 28 coupled
+                            with Christ's promise "I will build my church"
+                            (Mt 16). In attendance were 28 people, children
+                            and adults combined (more children than adults).
+                            Envisioned as a "quiet launch," there was
+                            initially no advertisement of the service other
+                            than by word of mouth. But the church began to
+                            grow, if slowly.</p>
 
-                            <p>As the church grew and its commitment to New
-                                Haven increased, on September 5, 1997, Christ
-                                Presbyterian Church became the 4th owner of 135
-                                Whitney Avenue with its 1850 Gothic Revival
-                                Cottage for the price of $400,000. As designed
-                                by Architect Jackson Downing and featured in his
-                                The Architecture of Country House (1850) under
-                                the title "A Symmetrical Cottage Design # 7,"
-                                Downing described the cottage as combining
-                                "the beautiful with the good" as commissioned by
-                                Esra Reid, President of the Bank of New Haven,
-                                for his aging parents. (c.f. picture in church
-                                parlor). In 1922, the cottage was sold to its
-                                second owner, Father Riggs, the first Catholic
-                                chaplain at Yale and founder of St. Thomas Moore
-                                Chapel (c.f. alcove outside the Sr. Pastor
-                                office where the patron saint would have most
-                                likely stood. For a short biography of Father
-                                Riggs including a delightful description of his
-                                use of the "Gate House" cottage, c.f. "Father
-                                Riggs of Yale by Stephen Schmalhofer, The New
-                                Criterion, March 24, 2021). In 1958, the cottage
-                                was sold to Dr. Jack McGrail and converted to a
-                                Dentist office and drug store (in the basement),
-                                later to be converted into law offices for rent
-                                when CPC pursued purchasing it as it's study
-                                center and potential property for the building
-                                of a modest Sanctuary.</p>
+                        <p>During this first year, the expositional sermons
+                            were from Ephesians. Meanwhile, the launch team
+                            continued to meet during the week for study and
+                            leadership, even as most were involved in
+                            teaching children Sunday School that met after
+                            worship while the adults participated in the
+                            novel, at the time, practice of sermon
+                            discussions. Within the first four months, the
+                            congregation grew to about 22 adults (college,
+                            graduate and young professionals) and 26
+                            children members.</p>
 
-                            <p>Involving both the sweat and financial equity of
-                                CPC members and friends, CPC immediately
-                                initiated a much needed renovation project on
-                                the cottage involving a restoration to its
-                                original design. Due to outgrowing the
-                                Neighborhood Music School, the church moved its
-                                worship service to the Marquand Chapel at the
-                                Yale Divinity School the summer of 1998. In
-                                1999, the church hired an associate pastor of
-                                college ministry to assist in ministry with Yale
-                                students especially. And in 2000, the church
-                                hired a part time Music and Worship Arts
-                                coordinator, Dan Kellogg, toward developing
-                                greater participation and excellence in Sacred
-                                Music.</p>
+                        <p>A high gospel, high church congregation was
+                            born!</p>
 
-                            <p>Meanwhile, momentum and enthusiasm grew along
-                                with the need to acquire a permanent worship
-                                facility. As the congregation had grown to
-                                approximately 200 people, the church established
-                                an ambitious three part strategy to:</p>
+                        <p>In two years, and after completing a sermon
+                            series through the book of Jonah with an
+                            emphasis upon God's love for "the city," the
+                            congregation agreed to begin transitioning to
+                            downtown New Haven. On August 1, 1994 a study
+                            center and church office was leased at 383
+                            Orange St. consisting of a library/prayer room,
+                            a meeting room, a pastor's study, and an office
+                            for then seminarian apprentice George Levesque.
+                            On August 28, 1994, Sunday worship was relocated
+                            nearby at the Neighborhood Music School located
+                            at 100 Audubon Street. November 6, 1994 at 4:00
+                            PM, there was a special service of
+                            "organization" whereby church planter-evangelist
+                            Preston Graham was installed as the pastor and
+                            Cliff Bogue, Robert Hawkes and George Levesque
+                            were ordained as ruling elders. Also during this
+                            time, family groups were established - one in
+                            Orange, one in Westville, and one in
+                            Guilford.</p>
 
-                            <ol>
-                                <li>Establish a Reformed University Ministry at
-                                    Yale, an affiliated ministry with the PCA
-                                    denomination committed to Christian
-                                    discipleship from a gospel driven and
-                                    reformed perspective</li>
-                                <li>Establish Hope For New Haven, a separate
-                                    faith-based, non-profit subsidiary
-                                    organization of CPC as a collaborative
-                                    project with other like minded churches in
-                                    New Haven for the purpose of bringing the
-                                    hope of Christ to the "outward" needs of our
-                                    city through a child care program and
-                                    counseling center.</li>
-                                <li>Initiate a 3.5 million dollar building
-                                    project to renovate the basement of the
-                                    existing study center for additional
-                                    programming space, and to design and build a
-                                    multi-story facility of about 10,000 sq.
-                                    feet to house a worship facility, a day care
-                                    facility and additional classroom space
-                                    upstairs.</li>
-                            </ol>
+                        <p>By God's grace, the 1994-1995 years were
+                            characterized by many wonderful evidences of
+                            spiritual power and transformation. Between the
+                            months of September 1994 and August 1995, there
+                            were 7 professions of faith together with many
+                            signs of growing spiritual maturity in the
+                            members. Of particular importance was a growing
+                            commitment to family worship in families. By the
+                            end of August 1995, the membership had grown to
+                            77 and the weekly worship attendance was
+                            averaging 140. As previously committed to
+                            planting a first church prior to purchasing a
+                            building, by God's grace in the following year,
+                            plans were laid with Yale Divinity Student and
+                            CPC intern, Mel Sensenig, toward planting a
+                            daughter church in downtown Providence, R.I.
+                            This was initiated in 1997.</p>
 
-                            <p>In April of 2001, after two years of legal,
-                                political, financial and architectural
-                                preparations, there was groundbreaking at 135
-                                Whitney Avenue! But not without some high drama
-                                involving both the approval of the city building
-                                commission by a 1 vote margin, and the
-                                miraculous and last minute anonymous gift at the
-                                time of $850k to complete financing. After a
-                                year of building, the city granted CPC a
-                                temporary certificate of occupancy in April of
-                                2002 for the adjoining sanctuary and fellowship
-                                hall just in time for a first worship service on
-                                Easter Sunday. The sanctuary was not yet
-                                carpeted or painted, but it was consecrated by
-                                the sacred temple presence of Christ wherein it
-                                could be said that "Christ filled all in all"
-                                (Eph 1:23).</p>
+                        <p>As the church grew and its commitment to New
+                            Haven increased, on September 5, 1997, Christ
+                            Presbyterian Church became the 4th owner of 135
+                            Whitney Avenue with its 1850 Gothic Revival
+                            Cottage for the price of $400,000. As designed
+                            by Architect Jackson Downing and featured in his
+                            The Architecture of Country House (1850) under
+                            the title "A Symmetrical Cottage Design # 7,"
+                            Downing described the cottage as combining
+                            "the beautiful with the good" as commissioned by
+                            Esra Reid, President of the Bank of New Haven,
+                            for his aging parents. (c.f. picture in church
+                            parlor). In 1922, the cottage was sold to its
+                            second owner, Father Riggs, the first Catholic
+                            chaplain at Yale and founder of St. Thomas Moore
+                            Chapel (c.f. alcove outside the Sr. Pastor
+                            office where the patron saint would have most
+                            likely stood. For a short biography of Father
+                            Riggs including a delightful description of his
+                            use of the "Gate House" cottage, c.f. "Father
+                            Riggs of Yale by Stephen Schmalhofer, The New
+                            Criterion, March 24, 2021). In 1958, the cottage
+                            was sold to Dr. Jack McGrail and converted to a
+                            Dentist office and drug store (in the basement),
+                            later to be converted into law offices for rent
+                            when CPC pursued purchasing it as it's study
+                            center and potential property for the building
+                            of a modest Sanctuary.</p>
 
-                            <p>After several years of being saddled by an
-                                enormous financial burden preventing CPC from
-                                proactively expressing its church planting DNA,
-                                a vision was established to seek God's power in
-                                paying down the mortgage. In God's mercy,
-                                without any "campaign" other than to make the
-                                need known to members and friends, the 3.5
-                                million mortgage was paid in full. A
-                                "burning of the mortgage" ceremony was had,
-                                together with the excitement of planting
-                                churches again. This was initiated by the hire
-                                of Rev. David Hutchinson in planting a daughter
-                                church in Danbury, CT.</p>
+                        <p>Involving both the sweat and financial equity of
+                            CPC members and friends, CPC immediately
+                            initiated a much needed renovation project on
+                            the cottage involving a restoration to its
+                            original design. Due to outgrowing the
+                            Neighborhood Music School, the church moved its
+                            worship service to the Marquand Chapel at the
+                            Yale Divinity School the summer of 1998. In
+                            1999, the church hired an associate pastor of
+                            college ministry to assist in ministry with Yale
+                            students especially. And in 2000, the church
+                            hired a part time Music and Worship Arts
+                            coordinator, Dan Kellogg, toward developing
+                            greater participation and excellence in Sacred
+                            Music.</p>
 
-                            <p>During this time, CPC was being led to
-                                distinguish its missional identity and
-                                theological vision for planting under the title
-                                "Total Christ" as summarized by the "Five Marks"
-                                of a Total Christ church as an essential element
-                                of Christ's ascension ministry - and thus the
-                                conception "Mission Anabaino" (I am ascending,
-                                c.f. anabaino.org). It was also felt that the
-                                same God who could miraculously raise up 3.5
-                                million to pay down a mortgage could just as
-                                well raise the same for the exclusive vision of
-                                planting churches, both locally in Southern CT
-                                and globally. With the strategic plan of
-                                "10-10-10" (ten local churches and ten global
-                                churches in ten years), a campaign was begun. In
-                                less than two years, and again with no campaign
-                                other than to make the need known and prayer,
-                                God granted CPC its goal.</p>
+                        <p>Meanwhile, momentum and enthusiasm grew along
+                            with the need to acquire a permanent worship
+                            facility. As the congregation had grown to
+                            approximately 200 people, the church established
+                            an ambitious three part strategy to:</p>
 
-                            <p>As of the Spring of 2017, Mission Anabaino is
-                                inspiring a multiplying momentum for both an
-                                engagement in theological collaboration in
-                                missional ecclesiology and church planting. At
-                                present, Mission Anabaino consists of five local
-                                church plants, 12 global church plants with 3
-                                anchor churches including CPC New Haven. The
-                                congregation at 135 Whitney Ave. continues to
-                                flourish, albeit having to engage the increasing
-                                challenge, and opportunities, of the
-                                post-Christian, and yet post-secular, context of
-                                our postmodern city.</p>
+                        <ol>
+                            <li>Establish a Reformed University Ministry at
+                                Yale, an affiliated ministry with the PCA
+                                denomination committed to Christian
+                                discipleship from a gospel driven and
+                                reformed perspective</li>
+                            <li>Establish Hope For New Haven, a separate
+                                faith-based, non-profit subsidiary
+                                organization of CPC as a collaborative
+                                project with other like minded churches in
+                                New Haven for the purpose of bringing the
+                                hope of Christ to the "outward" needs of our
+                                city through a child care program and
+                                counseling center.</li>
+                            <li>Initiate a 3.5 million dollar building
+                                project to renovate the basement of the
+                                existing study center for additional
+                                programming space, and to design and build a
+                                multi-story facility of about 10,000 sq.
+                                feet to house a worship facility, a day care
+                                facility and additional classroom space
+                                upstairs.</li>
+                        </ol>
 
-                            <h2 class="about-sub-title">The Continuing
-                                Church</h2>
-                            <p>The great 18th century Congregationalist pastor,
-                                scholar and revivalist Jonathan Edwards once
-                                wrote to a friend that
-                                "the Presbyterian way has ever appeared to me most agreeable to the word of God and the reason and nature of things."*
-                                At the time, it is probable that Edwards never
-                                would have imagined a high gospel and high
-                                church "Presbyterian" congregation in
-                                Congregationalist saturated New Haven right
-                                across the street from his alma mater. Perhaps
-                                even more ironic, the Puritan Congregationalist
-                                church in Edwards' day utilized the same
-                                Westminster Shorter Catechism that CPC utilizes
-                                to this day in the catechesis of our children
-                                and adults. And as it happens, New Haven colony
-                                was the location for its printing on behalf of
-                                the entire New England region. Such is the
-                                historical import that was begun on October 11,
-                                1992 at 9:30 AM, the fruition of a puritan's
-                                dream, the consummation of a puritan's
-                                printing.</p>
+                        <p>In April of 2001, after two years of legal,
+                            political, financial and architectural
+                            preparations, there was groundbreaking at 135
+                            Whitney Avenue! But not without some high drama
+                            involving both the approval of the city building
+                            commission by a 1 vote margin, and the
+                            miraculous and last minute anonymous gift at the
+                            time of $850k to complete financing. After a
+                            year of building, the city granted CPC a
+                            temporary certificate of occupancy in April of
+                            2002 for the adjoining sanctuary and fellowship
+                            hall just in time for a first worship service on
+                            Easter Sunday. The sanctuary was not yet
+                            carpeted or painted, but it was consecrated by
+                            the sacred temple presence of Christ wherein it
+                            could be said that "Christ filled all in all"
+                            (Eph 1:23).</p>
 
-                            <p>And yet by far the greater import of what began
-                                in 1991 is the materialization of a
-                                "Total Christ" vision for the mediatorial
-                                presence of Christ in greater New Haven and
-                                throughout the world. Described as the
-                                "pillar and bulwark of the church" in 1 Timothy
-                                3:15, and the "dwelling place of God" in
-                                Ephesians 2:22, as long as CPC is faithful to
-                                "Christ first" - not merely a campaign slogan or
-                                a sentimental thought, but a principle in how to
-                                interpret the scripture and the substance that
-                                informs everything the church does and how she
-                                does it - we are assured that even the
-                                "gates of hell will not prevail against her."
-                                (Mt 16)</p>
+                        <p>After several years of being saddled by an
+                            enormous financial burden preventing CPC from
+                            proactively expressing its church planting DNA,
+                            a vision was established to seek God's power in
+                            paying down the mortgage. In God's mercy,
+                            without any "campaign" other than to make the
+                            need known to members and friends, the 3.5
+                            million mortgage was paid in full. A
+                            "burning of the mortgage" ceremony was had,
+                            together with the excitement of planting
+                            churches again. This was initiated by the hire
+                            of Rev. David Hutchinson in planting a daughter
+                            church in Danbury, CT.</p>
 
-                            <p>And as far back as the Acts of the Apostles,
-                                history has shown that the best way to reach new
-                                generations, new residents and new people groups
-                                for the Gospel of Jesus Christ is quite simply
-                                to get people to the person of Christ himself!
-                                At Mission Anabaino, we believe that during
-                                Christ's ascension ministry today, Christ has an
-                                address at every place where there is an
-                                apostolic, Christ-centered church. T. F.
-                                Torrance in Royal Priesthood explained it like
-                                this:</p>
+                        <p>During this time, CPC was being led to
+                            distinguish its missional identity and
+                            theological vision for planting under the title
+                            "Total Christ" as summarized by the "Five Marks"
+                            of a Total Christ church as an essential element
+                            of Christ's ascension ministry - and thus the
+                            conception "Mission Anabaino" (I am ascending,
+                            c.f. anabaino.org). It was also felt that the
+                            same God who could miraculously raise up 3.5
+                            million to pay down a mortgage could just as
+                            well raise the same for the exclusive vision of
+                            planting churches, both locally in Southern CT
+                            and globally. With the strategic plan of
+                            "10-10-10" (ten local churches and ten global
+                            churches in ten years), a campaign was begun. In
+                            less than two years, and again with no campaign
+                            other than to make the need known and prayer,
+                            God granted CPC its goal.</p>
 
-                            <blockquote>
-                                The Spirit operates by creating out of the word
-                                a body, which St. Paul calls the Body of
-                                Christ…. As such this body becomes matched to
-                                Christ as His vis-à-vis in history and as the
-                                instrument of His saving purpose in the Gospel.
-                                It is the sphere where through the presence of
-                                the Spirit the salvation-events of the birth,
-                                life, death, resurrection, and ascension are
-                                operative here and now in history, the sphere
-                                where within the old creation the new creation
-                                has broken in with power.
-                            </blockquote>
+                        <p>As of the Spring of 2017, Mission Anabaino is
+                            inspiring a multiplying momentum for both an
+                            engagement in theological collaboration in
+                            missional ecclesiology and church planting. At
+                            present, Mission Anabaino consists of five local
+                            church plants, 12 global church plants with 3
+                            anchor churches including CPC New Haven. The
+                            congregation at 135 Whitney Ave. continues to
+                            flourish, albeit having to engage the increasing
+                            challenge, and opportunities, of the
+                            post-Christian, and yet post-secular, context of
+                            our postmodern city.</p>
 
-                            <p>This is our story and testimony!</p>
+                        <h2 class="about-sub-title">The Continuing
+                            Church</h2>
+                        <p>The great 18th century Congregationalist pastor,
+                            scholar and revivalist Jonathan Edwards once
+                            wrote to a friend that
+                            "the Presbyterian way has ever appeared to me most agreeable to the word of God and the
+                            reason and nature of things."*
+                            At the time, it is probable that Edwards never
+                            would have imagined a high gospel and high
+                            church "Presbyterian" congregation in
+                            Congregationalist saturated New Haven right
+                            across the street from his alma mater. Perhaps
+                            even more ironic, the Puritan Congregationalist
+                            church in Edwards' day utilized the same
+                            Westminster Shorter Catechism that CPC utilizes
+                            to this day in the catechesis of our children
+                            and adults. And as it happens, New Haven colony
+                            was the location for its printing on behalf of
+                            the entire New England region. Such is the
+                            historical import that was begun on October 11,
+                            1992 at 9:30 AM, the fruition of a puritan's
+                            dream, the consummation of a puritan's
+                            printing.</p>
 
-                            <h2 class="about-sub-title">A Timeline</h2>
-                            <p
-                                class="timeline-quote">"I will build my church..."
-                                Matthew 16</p>
+                        <p>And yet by far the greater import of what began
+                            in 1991 is the materialization of a
+                            "Total Christ" vision for the mediatorial
+                            presence of Christ in greater New Haven and
+                            throughout the world. Described as the
+                            "pillar and bulwark of the church" in 1 Timothy
+                            3:15, and the "dwelling place of God" in
+                            Ephesians 2:22, as long as CPC is faithful to
+                            "Christ first" - not merely a campaign slogan or
+                            a sentimental thought, but a principle in how to
+                            interpret the scripture and the substance that
+                            informs everything the church does and how she
+                            does it - we are assured that even the
+                            "gates of hell will not prevail against her."
+                            (Mt 16)</p>
 
-                            <style>
-                                .timeline {
-                                    position: relative;
-                                    max-width: 800px;
-                                    margin: 40px auto;
-                                    padding: 0;
-                                    list-style: none;
+                        <p>And as far back as the Acts of the Apostles,
+                            history has shown that the best way to reach new
+                            generations, new residents and new people groups
+                            for the Gospel of Jesus Christ is quite simply
+                            to get people to the person of Christ himself!
+                            At Mission Anabaino, we believe that during
+                            Christ's ascension ministry today, Christ has an
+                            address at every place where there is an
+                            apostolic, Christ-centered church. T. F.
+                            Torrance in Royal Priesthood explained it like
+                            this:</p>
+
+                        <blockquote>
+                            The Spirit operates by creating out of the word
+                            a body, which St. Paul calls the Body of
+                            Christ…. As such this body becomes matched to
+                            Christ as His vis-à-vis in history and as the
+                            instrument of His saving purpose in the Gospel.
+                            It is the sphere where through the presence of
+                            the Spirit the salvation-events of the birth,
+                            life, death, resurrection, and ascension are
+                            operative here and now in history, the sphere
+                            where within the old creation the new creation
+                            has broken in with power.
+                        </blockquote>
+
+                        <p>This is our story and testimony!</p>
+
+                        <h2 class="about-sub-title">A Timeline</h2>
+                        <p class="timeline-quote">"I will build my church..."
+                            Matthew 16</p>
+
+                        <style>
+                            .timeline {
+                                position: relative;
+                                max-width: 800px;
+                                margin: 40px auto;
+                                padding: 0;
+                                list-style: none;
+                            }
+
+                            .timeline::before {
+                                content: '';
+                                position: absolute;
+                                top: 0;
+                                left: 50%;
+                                width: 2px;
+                                height: 100%;
+                                background: var(--cpc-blue);
+                                transform: translateX(-50%);
+                            }
+
+                            .timeline li {
+                                position: relative;
+                                width: 50%;
+                                padding: 20px 40px;
+                                box-sizing: border-box;
+                                opacity: 0;
+                                animation: fadeIn 0.5s ease forwards;
+                                animation-delay: calc(0.2s * var(--i));
+                            }
+
+                            .timeline li:nth-child(odd) {
+                                left: 0;
+                                clear: both;
+                            }
+
+                            .timeline li:nth-child(even) {
+                                left: 50%;
+                            }
+
+                            .timeline li::before {
+                                content: '';
+                                position: absolute;
+                                width: 15px;
+                                height: 15px;
+                                background: white;
+                                border: 2px solid var(--cpc-blue);
+                                border-radius: 50%;
+                                top: 24px;
+                            }
+
+                            .timeline li:nth-child(odd)::before {
+                                right: -9px;
+                            }
+
+                            .timeline li:nth-child(even)::before {
+                                left: -9px;
+                            }
+
+                            .timeline li .date {
+                                color: var(--cpc-blue);
+                                font-weight: bold;
+                                margin-bottom: 5px;
+                                font-size: 1.1em;
+                            }
+
+                            .timeline li .content {
+                                padding: 15px;
+                                background: white;
+                                border-radius: 8px;
+                                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                            }
+
+                            @keyframes fadeIn {
+                                from {
+                                    opacity: 0;
+                                    transform: translateY(20px);
                                 }
 
+                                to {
+                                    opacity: 1;
+                                    transform: translateY(0);
+                                }
+                            }
+
+                            @media screen and (max-width: 768px) {
                                 .timeline::before {
-                                    content: '';
-                                    position: absolute;
-                                    top: 0;
-                                    left: 50%;
-                                    width: 2px;
-                                    height: 100%;
-                                    background: var(--cpc-blue);
-                                    transform: translateX(-50%);
+                                    left: 20px;
                                 }
 
                                 .timeline li {
-                                    position: relative;
-                                    width: 50%;
-                                    padding: 20px 40px;
-                                    box-sizing: border-box;
-                                    opacity: 0;
-                                    animation: fadeIn 0.5s ease forwards;
-                                    animation-delay: calc(0.2s * var(--i));
-                                }
-
-                                .timeline li:nth-child(odd) {
+                                    width: 100%;
+                                    padding-left: 50px;
                                     left: 0;
-                                    clear: both;
-                                }
-
-                                .timeline li:nth-child(even) {
-                                    left: 50%;
                                 }
 
                                 .timeline li::before {
-                                    content: '';
-                                    position: absolute;
-                                    width: 15px;
-                                    height: 15px;
-                                    background: white;
-                                    border: 2px solid var(--cpc-blue);
-                                    border-radius: 50%;
-                                    top: 24px;
+                                    left: 12px;
                                 }
-
-                                .timeline li:nth-child(odd)::before {
-                                    right: -9px;
-                                }
-
-                                .timeline li:nth-child(even)::before {
-                                    left: -9px;
-                                }
-
-                                .timeline li .date {
-                                    color: var(--cpc-blue);
-                                    font-weight: bold;
-                                    margin-bottom: 5px;
-                                    font-size: 1.1em;
-                                }
-
-                                .timeline li .content {
-                                    padding: 15px;
-                                    background: white;
-                                    border-radius: 8px;
-                                    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-                                }
-
-                                @keyframes fadeIn {
-                                    from { opacity: 0; transform: translateY(20px); }
-                                    to { opacity: 1; transform: translateY(0); }
-                                }
-
-                                @media screen and (max-width: 768px) {
-                                    .timeline::before {
-                                        left: 20px;
-                                    }
-
-                                    .timeline li {
-                                        width: 100%;
-                                        padding-left: 50px;
-                                        left: 0;
-                                    }
-
-                                    .timeline li::before {
-                                        left: 12px;
-                                    }
-                                }
-                            </style>
-
-                            <ul class="timeline">
-                                <li style="--i:1">
-                                    <div class="content">
-                                        <div class="date">July 1, 1643 -
-                                            February 22, 1649</div>
-                                        Westminster Assembly and the adoption of
-                                        the Westminster Confession of Faith -
-                                        see An Anglican Renewal Movement (J.I.
-                                        Packer)
-                                    </div>
-                                </li>
-                                <li style="--i:2">
-                                    <div class="content">
-                                        <div class="date">1705</div>
-                                        The first Presbytery was formed
-                                        reflecting the efforts of first
-                                        Presbyterian minister, church planter,
-                                        Francis Mackem
-                                    </div>
-                                </li>
-                                <li style="--i:3">
-                                    <div class="content">
-                                        <div class="date">1716</div>
-                                        The first synod, the Synod of
-                                        Philadelphia was formed including the
-                                        New York Region
-                                    </div>
-                                </li>
-                                <li style="--i:4">
-                                    <div class="content">
-                                        <div class="date">1729</div>
-                                        The Adoption Act Synod of New York
-                                    </div>
-                                </li>
-                                <li style="--i:5">
-                                    <div class="content">
-                                        <div class="date">1786</div>
-                                        The First Publishing of Westminster
-                                        Shorter Catechism in New Haven
-                                    </div>
-                                </li>
-                                <li style="--i:6">
-                                    <div class="content">
-                                        <div class="date">Summer of 1991</div>
-                                        A "serendipitous" trip across the Long
-                                        Island Sound
-                                    </div>
-                                </li>
-                                <li style="--i:7">
-                                    <div class="content">
-                                        <div class="date">Fall 1991</div>
-                                        The Formation of a
-                                        "High Gospel-High Church" Vision: A
-                                        Thursday evening Bible Study in the
-                                        Westville area of New Haven
-                                    </div>
-                                </li>
-                                <li style="--i:8">
-                                    <div class="content">
-                                        <div class="date">1993</div>
-                                        Sermon Series in Ephesians,
-                                        Establishment of Sunday School, Mid-Week
-                                        Study Center Congregation of 22 adults
-                                        and 26 children
-                                    </div>
-                                </li>
-                                <li style="--i:9">
-                                    <div class="content">
-                                        <div class="date">November 6, 1994</div>
-                                        Special Service of Organization at the
-                                        Neighborhood Music School. Installation
-                                        of Pastor Preston Graham Jr. and Ruling
-                                        Elders
-                                    </div>
-                                </li>
-                                <li style="--i:10">
-                                    <div class="content">
-                                        <div class="date">1994-1995</div>
-                                        Period of spiritual growth with 7 adult
-                                        professions of faith. Membership grows
-                                        to 77 with 140 average attendance
-                                    </div>
-                                </li>
-                                <li style="--i:11">
-                                    <div class="content">
-                                        <div class="date">September 5,
-                                            1997</div>
-                                        Purchase of 135 Whitney Avenue - the
-                                        historic 1850 Gothic Revival Cottage
-                                    </div>
-                                </li>
-                                <li style="--i:12">
-                                    <div class="content">
-                                        <div class="date">Fall 1999</div>
-                                        Hiring of associate pastor Tom Morrison
-                                        for college ministry
-                                    </div>
-                                </li>
-                                <li style="--i:13">
-                                    <div class="content">
-                                        <div class="date">April 2001</div>
-                                        Groundbreaking at 135 Whitney Avenue for
-                                        future Sanctuary
-                                    </div>
-                                </li>
-                                <li style="--i:14">
-                                    <div class="content">
-                                        <div class="date">April 2002</div>
-                                        First worship service in new building on
-                                        Easter Sunday
-                                    </div>
-                                </li>
-                                <li style="--i:15">
-                                    <div class="content">
-                                        <div class="date">2005-2012</div>
-                                        Period of expansion with new
-                                        congregations in Danbury, the Hill
-                                        neighborhood, and Goatville
-                                    </div>
-                                </li>
-                            </ul>
-
-                            <p>This is our story and testimony!</p>
-
-                            <blockquote>
-                                The Spirit operates by creating out of the word
-                                a body, which St. Paul calls the Body of
-                                Christ…. As such this body becomes matched to
-                                Christ as His vis-à-vis in history and as the
-                                instrument of His saving purpose in the Gospel.
-                                It is the sphere where through the presence of
-                                the Spirit the salvation-events of the birth,
-                                life, death, resurrection, and ascension are
-                                operative here and now in history, the sphere
-                                where within the old creation the new creation
-                                has broken in with power.
-                            </blockquote>
-
-                        </div>
-                    </div>
-                </section>
-            </div>
-        </div>
-
-        <!-- Update scroll animation script -->
-        <script>
-            // Intersection Observer for scroll animations
-            const aboutObserver = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                        // Update active nav link
-                        const id = entry.target.getAttribute('id');
-                        document.querySelectorAll('.about-mobile-nav-links a').forEach(link => {
-                            link.classList.remove('active');
-                            if (link.getAttribute('href') === `#${id}`) {
-                                link.classList.add('active');
                             }
-                        });
-                    }
-                });
-            }, {
-                threshold: 0.1,
-                rootMargin: '-100px 0px'
-            });
+                        </style>
 
-            // Observe all content sections
-            document.querySelectorAll('.about-content-section').forEach(section => {
-                aboutObserver.observe(section);
-            });
+                        <ul class="timeline">
+                            <li style="--i:1">
+                                <div class="content">
+                                    <div class="date">July 1, 1643 -
+                                        February 22, 1649</div>
+                                    Westminster Assembly and the adoption of
+                                    the Westminster Confession of Faith -
+                                    see An Anglican Renewal Movement (J.I.
+                                    Packer)
+                                </div>
+                            </li>
+                            <li style="--i:2">
+                                <div class="content">
+                                    <div class="date">1705</div>
+                                    The first Presbytery was formed
+                                    reflecting the efforts of first
+                                    Presbyterian minister, church planter,
+                                    Francis Mackem
+                                </div>
+                            </li>
+                            <li style="--i:3">
+                                <div class="content">
+                                    <div class="date">1716</div>
+                                    The first synod, the Synod of
+                                    Philadelphia was formed including the
+                                    New York Region
+                                </div>
+                            </li>
+                            <li style="--i:4">
+                                <div class="content">
+                                    <div class="date">1729</div>
+                                    The Adoption Act Synod of New York
+                                </div>
+                            </li>
+                            <li style="--i:5">
+                                <div class="content">
+                                    <div class="date">1786</div>
+                                    The First Publishing of Westminster
+                                    Shorter Catechism in New Haven
+                                </div>
+                            </li>
+                            <li style="--i:6">
+                                <div class="content">
+                                    <div class="date">Summer of 1991</div>
+                                    A "serendipitous" trip across the Long
+                                    Island Sound
+                                </div>
+                            </li>
+                            <li style="--i:7">
+                                <div class="content">
+                                    <div class="date">Fall 1991</div>
+                                    The Formation of a
+                                    "High Gospel-High Church" Vision: A
+                                    Thursday evening Bible Study in the
+                                    Westville area of New Haven
+                                </div>
+                            </li>
+                            <li style="--i:8">
+                                <div class="content">
+                                    <div class="date">1993</div>
+                                    Sermon Series in Ephesians,
+                                    Establishment of Sunday School, Mid-Week
+                                    Study Center Congregation of 22 adults
+                                    and 26 children
+                                </div>
+                            </li>
+                            <li style="--i:9">
+                                <div class="content">
+                                    <div class="date">November 6, 1994</div>
+                                    Special Service of Organization at the
+                                    Neighborhood Music School. Installation
+                                    of Pastor Preston Graham Jr. and Ruling
+                                    Elders
+                                </div>
+                            </li>
+                            <li style="--i:10">
+                                <div class="content">
+                                    <div class="date">1994-1995</div>
+                                    Period of spiritual growth with 7 adult
+                                    professions of faith. Membership grows
+                                    to 77 with 140 average attendance
+                                </div>
+                            </li>
+                            <li style="--i:11">
+                                <div class="content">
+                                    <div class="date">September 5,
+                                        1997</div>
+                                    Purchase of 135 Whitney Avenue - the
+                                    historic 1850 Gothic Revival Cottage
+                                </div>
+                            </li>
+                            <li style="--i:12">
+                                <div class="content">
+                                    <div class="date">Fall 1999</div>
+                                    Hiring of associate pastor Tom Morrison
+                                    for college ministry
+                                </div>
+                            </li>
+                            <li style="--i:13">
+                                <div class="content">
+                                    <div class="date">April 2001</div>
+                                    Groundbreaking at 135 Whitney Avenue for
+                                    future Sanctuary
+                                </div>
+                            </li>
+                            <li style="--i:14">
+                                <div class="content">
+                                    <div class="date">April 2002</div>
+                                    First worship service in new building on
+                                    Easter Sunday
+                                </div>
+                            </li>
+                            <li style="--i:15">
+                                <div class="content">
+                                    <div class="date">2005-2012</div>
+                                    Period of expansion with new
+                                    congregations in Danbury, the Hill
+                                    neighborhood, and Goatville
+                                </div>
+                            </li>
+                        </ul>
 
-            // ABOUT NAV (LEFT) HAMBURGER
-            const aboutHamburgerMenu = document.getElementById('aboutHamburgerMenu');
-            const aboutMobileNav = document.getElementById('aboutMobileNav');
-            const aboutHamburgerIcon = document.getElementById('aboutHamburgerIcon');
-            const closeAboutMobileMenuButton = document.getElementById('closeAboutMobileMenuButton');
+                        <p>This is our story and testimony!</p>
 
-            function toggleAboutNav() {
-                aboutMobileNav.classList.toggle('active');
-                if (aboutMobileNav.classList.contains('active')) {
-                    aboutHamburgerIcon.classList.remove('fa-bars');
-                    aboutHamburgerIcon.classList.add('fa-times');
-                } else {
-                    aboutHamburgerIcon.classList.add('fa-bars');
-                    aboutHamburgerIcon.classList.remove('fa-times');
+                        <blockquote>
+                            The Spirit operates by creating out of the word
+                            a body, which St. Paul calls the Body of
+                            Christ…. As such this body becomes matched to
+                            Christ as His vis-à-vis in history and as the
+                            instrument of His saving purpose in the Gospel.
+                            It is the sphere where through the presence of
+                            the Spirit the salvation-events of the birth,
+                            life, death, resurrection, and ascension are
+                            operative here and now in history, the sphere
+                            where within the old creation the new creation
+                            has broken in with power.
+                        </blockquote>
+
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Update scroll animation script -->
+    <script>
+        // Intersection Observer for scroll animations
+        const aboutObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    // Update active nav link
+                    const id = entry.target.getAttribute('id');
+                    document.querySelectorAll('.about-mobile-nav-links a').forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href') === `#${id}`) {
+                            link.classList.add('active');
+                        }
+                    });
                 }
-            }
-            aboutHamburgerMenu.addEventListener('click', toggleAboutNav);
-            closeAboutMobileMenuButton.addEventListener('click', toggleAboutNav);
-
-            // Close about nav when clicking a link
-            document.querySelectorAll('.about-mobile-nav-links a').forEach(link => {
-                link.addEventListener('click', () => {
-                    aboutMobileNav.classList.remove('active');
-                    aboutHamburgerIcon.classList.add('fa-bars');
-                    aboutHamburgerIcon.classList.remove('fa-times');
-                });
             });
+        }, {
+            threshold: 0.1,
+            rootMargin: '-100px 0px'
+        });
 
-            /* Global main nav handled by shared script: src/js/function_toggle_mobileMenu.js */
+        // Observe all content sections
+        document.querySelectorAll('.about-content-section').forEach(section => {
+            aboutObserver.observe(section);
+        });
 
-            const aboutMobileNavOverlay = document.getElementById('aboutMobileNavOverlay');
-            aboutMobileNavOverlay.addEventListener('click', () => {
+        // ABOUT NAV (LEFT) HAMBURGER
+        const aboutHamburgerMenu = document.getElementById('aboutHamburgerMenu');
+        const aboutMobileNav = document.getElementById('aboutMobileNav');
+        const aboutHamburgerIcon = document.getElementById('aboutHamburgerIcon');
+        const closeAboutMobileMenuButton = document.getElementById('closeAboutMobileMenuButton');
+
+        function toggleAboutNav() {
+            aboutMobileNav.classList.toggle('active');
+            if (aboutMobileNav.classList.contains('active')) {
+                aboutHamburgerIcon.classList.remove('fa-bars');
+                aboutHamburgerIcon.classList.add('fa-times');
+            } else {
+                aboutHamburgerIcon.classList.add('fa-bars');
+                aboutHamburgerIcon.classList.remove('fa-times');
+            }
+        }
+        aboutHamburgerMenu.addEventListener('click', toggleAboutNav);
+        closeAboutMobileMenuButton.addEventListener('click', toggleAboutNav);
+
+        // Close about nav when clicking a link
+        document.querySelectorAll('.about-mobile-nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
                 aboutMobileNav.classList.remove('active');
                 aboutHamburgerIcon.classList.add('fa-bars');
                 aboutHamburgerIcon.classList.remove('fa-times');
             });
+        });
 
-            // Story Progress Bar (throttled; passive scroll)
-            const storySection = document.getElementById('ourStory');
-            const progressBar = document.querySelector('.story-progress-bar');
+        /* Global main nav handled by shared script: src/js/function_toggle_mobileMenu.js */
 
-            let progressTicking = false;
-            function updateStoryProgress() {
-                if (!storySection || !progressBar) {
-                    progressTicking = false;
-                    return;
-                }
+        const aboutMobileNavOverlay = document.getElementById('aboutMobileNavOverlay');
+        aboutMobileNavOverlay.addEventListener('click', () => {
+            aboutMobileNav.classList.remove('active');
+            aboutHamburgerIcon.classList.add('fa-bars');
+            aboutHamburgerIcon.classList.remove('fa-times');
+        });
 
-                const sectionTop = storySection.offsetTop;
-                const sectionHeight = storySection.offsetHeight;
-                const scrollPosition = window.scrollY;
-                const windowHeight = window.innerHeight;
+        // Story Progress Bar (throttled; passive scroll)
+        const storySection = document.getElementById('ourStory');
+        const progressBar = document.querySelector('.story-progress-bar');
 
-                const scrolled = scrollPosition - sectionTop;
-                const denom = (sectionHeight - windowHeight) || 1;
-                const progress = (scrolled / denom) * 100;
-
-                if (progress <= 0) progressBar.style.width = '0%';
-                else if (progress >= 100) progressBar.style.width = '100%';
-                else progressBar.style.width = `${progress}%`;
-
+        let progressTicking = false;
+        function updateStoryProgress() {
+            if (!storySection || !progressBar) {
                 progressTicking = false;
+                return;
             }
 
-            function requestProgressTick() {
-                if (!progressTicking) {
-                    progressTicking = true;
-                    requestAnimationFrame(updateStoryProgress);
-                }
+            const sectionTop = storySection.offsetTop;
+            const sectionHeight = storySection.offsetHeight;
+            const scrollPosition = window.scrollY;
+            const windowHeight = window.innerHeight;
+
+            const scrolled = scrollPosition - sectionTop;
+            const denom = (sectionHeight - windowHeight) || 1;
+            const progress = (scrolled / denom) * 100;
+
+            if (progress <= 0) progressBar.style.width = '0%';
+            else if (progress >= 100) progressBar.style.width = '100%';
+            else progressBar.style.width = `${progress}%`;
+
+            progressTicking = false;
+        }
+
+        function requestProgressTick() {
+            if (!progressTicking) {
+                progressTicking = true;
+                requestAnimationFrame(updateStoryProgress);
             }
+        }
 
-            window.addEventListener('scroll', requestProgressTick, { passive: true });
-            updateStoryProgress();
-        </script>
+        window.addEventListener('scroll', requestProgressTick, { passive: true });
+        updateStoryProgress();
+    </script>
 
-        <!-- Footer -->
-        <footer id="footer-about-page">
-            <div class="footer-content-logo">
-                <a href="index.html">
-                    <img src="./assets/CPC_LOGO_24.png"
-                        alt="CPC New Haven Church" class="top-splash-logo"
-                        style="filter: brightness(0) invert(1); width: 250px;" />
-                </a>
-            </div>
-            <p class="body-text">
-                Christ Presbyterian Church, New Haven, is a member of the
-                Presbyterian Church in America (PCA).
-                As one of many communions in the church universal, the PCA may
-                be distinguished by its affirmation
-                of what has been described as the "Reformed system of faith" as
-                reflected in the Westminster
-                Confession of Faith. The PCA is characterized by its emphasis on
-                both personal revival and
-                theological reformation. By promoting reformation and revival,
-                we seek to carry out the Great
-                Commission with Biblical integrity and personal authenticity
-                unto the glory of God.
+    <section id="footer-cta-a" class="styled-section-a">
+        <div class="form-container">
+            <h1 class="headline">Subscribe to our Newsletter</h1>
+            <p class="body-text center">
+                Our weekly newsletter goes out on Friday mornings with Sunday Service
+                information, highlights, upcoming events, and useful links.
             </p>
+            <form action="https://formspree.io/f/meojowwg" method="POST" class="neumorphic-form">
+                <input type="text" name="name" placeholder="Your name" required />
+                <input type="email" name="email" placeholder="Your email" required />
+                <button type="submit">Subscribe to CPC New Haven</button>
+            </form>
+        </div>
+    </section>
 
-        </footer>
+    <section id="contact-cta" class="styled-section-a"
+        style="background-color: #f8f9fa; border-top: 1px solid #e9ecef; border-bottom: none;">
+        <div class="form-container" style="background: white; border: 1px solid #dee2e6;">
+            <h2 style="color: #1a202c;">Contact Us</h2>
+            <p class="body-text" style="color: #4a5568;">
+                Have questions? We'd love to hear from you. Reach out to us anytime.
+            </p>
+            <a href="contact.html"><button style="background-color: #2b6cb0; color: white; width: auto;">Get in
+                    Touch</button></a>
+        </div>
+    </section>
 
-        <!-- Other scripts -->
-        <script src="./photos/fetch-jubilee-images.js"></script>
-        <script src="./src/js/background-fetch-splash-image.js"></script>
-        <script src="./src/js/function_toggle_mobileMenu.js"></script>
-    </body>
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content-logo">
+            <a href="index.html">
+                <img src="./assets/CPC_LOGO_24.png" alt="CPC New Haven Church" class="top-splash-logo" loading="lazy"
+                    decoding="async">
+            </a>
+        </div>
+        <p>Join us for worship and fellowship. <a href="sundays.html">Learn more</a></p>
+        <p>203.777.6960 | <a href="mailto:admin@cpcnewhaven.org">admin@cpcnewhaven.org</a> | 135 Whitney Ave. New Haven
+            CT 06510</p>
+        <p><a href="contact.html">Contact Us</a> | <a href="https://www.cpcnewhaven.org/" target="_blank"
+                rel="noopener">Visit Our Old Website</a></p>
+        <p><a href="https://open.spotify.com/show/22kjUJyC0VH3cMfCSe9kEk?si=7081d23d84be4812" target="_blank"
+                rel="noopener">Listen to CPC New Haven Podcasts on Spotify</a></p>
+        <p>© 2025 Christ Presbyterian Church.</p>
+    </footer>
+
+    <!-- Other scripts -->
+    <script src="./photos/fetch-jubilee-images.js"></script>
+    <script src="./src/js/background-fetch-splash-image.js"></script>
+    <script src="./src/js/function_toggle_mobileMenu.js"></script>
+</body>
+
 </html>
