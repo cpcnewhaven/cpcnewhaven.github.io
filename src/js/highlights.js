@@ -44,23 +44,42 @@ class HighlightsManager {
             return;
         }
 
-        // Clear existing content
-        this.container.innerHTML = '';
+        const easterSection = document.getElementById('easter-highlights');
+        const easterContainer = document.querySelector('.easter-highlights-content');
 
         // Filter and sort announcements
         const activeAnnouncements = this.filterActiveAnnouncements(announcements);
         const sortedAnnouncements = this.sortAnnouncements(activeAnnouncements);
 
-        console.log(`Filtered to ${sortedAnnouncements.length} active announcements (from ${announcements.length} total)`);
+        // Separate into Easter and General
+        const easterAnnouncements = sortedAnnouncements.filter(a => a.type === 'easter' || a.category === 'easter');
+        const generalAnnouncements = sortedAnnouncements.filter(a => a.type !== 'easter' && a.category !== 'easter');
 
-        // Render all announcements with unified styling
-        sortedAnnouncements.forEach(announcement => {
+        console.log(`Filtered to ${sortedAnnouncements.length} active announcements (${easterAnnouncements.length} Easter, ${generalAnnouncements.length} General)`);
+
+        // Handle Easter Section
+        if (easterSection && easterContainer) {
+            easterContainer.innerHTML = '';
+            if (easterAnnouncements.length > 0) {
+                easterSection.style.display = 'block';
+                easterAnnouncements.forEach(announcement => {
+                    const element = this.createAnnouncementElement(announcement);
+                    easterContainer.appendChild(element);
+                });
+            } else {
+                easterSection.style.display = 'none';
+            }
+        }
+
+        // Handle General Section
+        this.container.innerHTML = '';
+        generalAnnouncements.forEach(announcement => {
             const element = this.createAnnouncementElement(announcement);
             this.container.appendChild(element);
         });
 
-        // Add no content message if no announcements
-        if (sortedAnnouncements.length === 0) {
+        // Add no content message if no general announcements
+        if (generalAnnouncements.length === 0) {
             this.displayNoContent();
         }
     }
