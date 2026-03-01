@@ -786,176 +786,19 @@
         </style>
         <hr>
 
-        <section id="footer-cta-a" class="styled-section-a">
-            <div class="form-container">
-                <h2>Subscribe to our Newsletter</h2>
-                <p class="body-text ">Our weekly newsletter goes out on
-                    Friday
-                    mornings with
-                    Sunday Service information, highlights, upcoming events,
-                    and
-                    useful links.</p>
-                <form action="https://formspree.io/f/meojowwg" method="POST"
-                    class="neumorphic-form">
-                    <input type="text" name="name" placeholder="Your name"
-                        required>
-                    <!-- Added name input -->
-                    <input type="email" name="email"
-                        placeholder="Your email"
-                        required>
-                    <button type="submit">Subscribe to CPC New
-                        Haven</button>
-                </form>
-            </div>
-        </section>
-    <footer>
-      <div class="footer-content-logo">
-        <a href="index.html">
-          <img src="./assets/CPC_LOGO_24.png" alt="CPC New Haven Church"
-            class="top-splash-logo" loading="lazy" decoding="async">
-        </a></div>
-      <p>Join us for worship and fellowship. <a href="sundays.html">Learn
-          more</a></p>
+  <section id="footer-cta-a" class="styled-section-a">
+    <div class="form-container">
+      <h1 class="headline">Subscribe to our Newsletter</h1>
+      <p class="body-text center">
+        Our weekly newsletter goes out on Friday mornings with Sunday Service
+        information, highlights, upcoming events, and useful links.
+      </p>
+      <form action="https://formspree.io/f/meojowwg" method="POST" class="neumorphic-form">
+        <input type="text" name="name" placeholder="Your name" required />
+        <input type="email" name="email" placeholder="Your email" required />
+        <button type="submit">Subscribe to CPC New Haven</button>
+      </form>
+    </div>
+  </section>
 
-      <p>203.777.6960 | <a
-          href="mailto:admin@cpcnewhaven.org">admin@cpcnewhaven.org</a>
-        | 135 Whitney Ave. New Haven CT 06510</p>
-      <p><a href="contact.html">Contact Us</a> | <a href="https://www.cpcnewhaven.org/" target="_blank" rel="noopener">Visit Our Old Website</a></p>
-      <p><a href="https://open.spotify.com/show/22kjUJyC0VH3cMfCSe9kEk?si=7081d23d84be4812" target="_blank" rel="noopener">Listen to CPC New Haven Podcasts on Spotify</a></p>
-      <p>© 2025 Christ Presbyterian Church.</p>
-
-    </footer>
-
-        <!-- EVENTS GALLERY SCRIPT -->
-        <script>
-            document.addEventListener("DOMContentLoaded", function() {
-                // Featured Christmas Drama poster from highlights.json
-                fetch('data/announcements/highlights.json')
-                    .then(r => r.json())
-                    .then(json => {
-                        const item = (json.announcements || []).find(a => a.id === '2025-052' && a.active === 'true');
-                        const container = document.getElementById('featured-event');
-                        if (item && item.featuredImage && container) {
-                            const img = document.createElement('img');
-                            img.src = item.featuredImage;
-                            img.alt = item.title || 'Featured Event';
-                            img.className = 'poster-img';
-                            container.appendChild(img);
-                        }
-                    })
-                    .catch(()=>{});
-
-                fetch('data/image-gallery.json')
-                    .then(response => response.json())
-                    .then(data => {
-                        const eventsGalleryContainer = document.getElementById('events-gallery-container');
-                        const lightbox = document.getElementById('lightbox');
-                        const lightboxImg = document.getElementById('lightbox-img');
-
-                        // Filter for event images and misc event images
-                        const eventImages = data.images.filter(image => 
-                            image.event === true || 
-                            (image.id && image.id.includes('misc') && image.id.includes('event'))
-                        );
-
-                        eventImages.forEach(image => {
-                            const imgElement = document.createElement('img');
-                            imgElement.src = image.url;
-                            imgElement.alt = image.name;
-                            imgElement.classList.add('gallery-image');
-
-                            imgElement.addEventListener('click', () => {
-                                lightbox.style.display = 'flex';
-                                lightboxImg.src = image.url;
-                                lightboxImg.alt = image.name;
-                            });
-
-                            eventsGalleryContainer.appendChild(imgElement);
-                        });
-
-                        // Close lightbox when clicking outside the image
-                        lightbox.addEventListener('click', (e) => {
-                            if (e.target !== lightboxImg) {
-                                lightbox.style.display = 'none';
-                            }
-                        });
-
-                        // Close lightbox with Escape key
-                        document.addEventListener('keydown', (e) => {
-                            if (e.key === 'Escape' && lightbox.style.display === 'flex') {
-                                lightbox.style.display = 'none';
-                            }
-                        });
-                    })
-                    .catch(error => console.error('Error loading gallery data:', error));
-            });
-        </script>
-
-        <!-- DYNAMIC ANNOUNCEMNTS -->
-        <script src="./src/js/populate-navigation.js"></script>
-        <script src="./src/js/highlights.js"></script>
-        <script src="./src/js/function_toggle_mobileMenu.js"></script>
-        
-        <script>
-            // Enhanced parallax scrolling effect
-            function handleParallax() {
-                const hero = document.querySelector('.splash-hero--events');
-                if (hero && window.innerWidth > 768) {
-                    const scrolled = window.pageYOffset;
-                    const rate = scrolled * -0.5;
-                    hero.style.backgroundPositionY = rate + 'px';
-                }
-            }
-            
-            // Throttle scroll events for better performance
-            let ticking = false;
-            function requestTick() {
-                if (!ticking) {
-                    requestAnimationFrame(handleParallax);
-                    ticking = true;
-                }
-            }
-            
-            // Add scroll event listener
-            window.addEventListener('scroll', requestTick, { passive: true });
-            
-            // Initial call
-            handleParallax();
-        </script>
-
-        <!-- FILTER PAST EVENTS SCRIPT -->
-        <script>
-            document.addEventListener("DOMContentLoaded", function() {
-                // Get today's date
-                const today = new Date();
-                today.setHours(0, 0, 0, 0); // Reset time to start of day for accurate comparison
-                
-                // Get all event items
-                const eventItems = document.querySelectorAll('.fall-event-item[data-date]');
-                
-                eventItems.forEach(function(eventItem) {
-                    const eventDateStr = eventItem.getAttribute('data-date');
-                    const eventDate = new Date(eventDateStr);
-                    eventDate.setHours(0, 0, 0, 0); // Reset time to start of day for accurate comparison
-                    
-                    // Hide events that are before today
-                    if (eventDate < today) {
-                        eventItem.style.display = 'none';
-                    }
-                });
-                
-                // Check if any events are visible after filtering
-                const visibleEvents = document.querySelectorAll('.fall-event-item[data-date]:not([style*="display: none"])');
-                
-                // If no events are visible, show a message
-                if (visibleEvents.length === 0) {
-                    const eventsList = document.querySelector('.fall-events-list');
-                    const noEventsMessage = document.createElement('div');
-                    noEventsMessage.className = 'no-events-message';
-                    noEventsMessage.innerHTML = '<p style="text-align: center; color: #666; font-style: italic; padding: 40px;">No upcoming events scheduled. Check back soon!</p>';
-                    eventsList.appendChild(noEventsMessage);
-                }
-            });
-        </script>
-    </body>
-</html>
+  <section id="contact-cta"

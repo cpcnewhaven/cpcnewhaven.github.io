@@ -1310,140 +1310,19 @@
         </div>
     </section>
     
-    <section id="footer-cta-a" class="styled-section-a">
-        <div class="form-container">
-            <h2>Subscribe to our Newsletter</h2>
-            <p class="body-text ">Our weekly newsletter goes out on
-                Friday mornings with
-                Sunday Service information, highlights, upcoming
-                events, and useful links.</p>
-            <form action="https://formspree.io/f/meojowwg" method="POST" class="neumorphic-form">
-                <input type="text" name="name" placeholder="Your name" required>
-                <!-- Added name input -->
-                <input type="email" name="email" placeholder="Your email" required>
-                <button type="submit">Subscribe to CPC New
-                    Haven</button>
-            </form>
-        </div>
-    </section>
+  <section id="footer-cta-a" class="styled-section-a">
+    <div class="form-container">
+      <h1 class="headline">Subscribe to our Newsletter</h1>
+      <p class="body-text center">
+        Our weekly newsletter goes out on Friday mornings with Sunday Service
+        information, highlights, upcoming events, and useful links.
+      </p>
+      <form action="https://formspree.io/f/meojowwg" method="POST" class="neumorphic-form">
+        <input type="text" name="name" placeholder="Your name" required />
+        <input type="email" name="email" placeholder="Your email" required />
+        <button type="submit">Subscribe to CPC New Haven</button>
+      </form>
+    </div>
+  </section>
 
-
-    <script src="./src/js/background-fetch-splash-image.js"></script>
-    <script src="./src/js/load-community-events.js"></script>
-    <script src="./src/js/function_toggle_mobileMenu.js"></script>
-    
-    <script>
-        // Enhanced parallax scrolling effect
-        const enableParallax =
-          window.matchMedia && window.matchMedia('(min-width: 769px)').matches &&
-          !(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
-
-        function handleParallax() {
-            const hero = document.querySelector('.splash-hero--community');
-            if (hero && enableParallax) {
-                const scrolled = window.pageYOffset;
-                const rate = scrolled * -0.5;
-                hero.style.backgroundPositionY = rate + 'px';
-            }
-            ticking = false;
-        }
-        
-        // Throttle scroll events for better performance
-        let ticking = false;
-        function requestTick() {
-            if (!ticking) {
-                requestAnimationFrame(handleParallax);
-                ticking = true;
-            }
-        }
-        
-        if (enableParallax) {
-          window.addEventListener('scroll', requestTick, { passive: true });
-          handleParallax();
-        }
-        
-        // Keyboard navigation for lightbox
-        document.addEventListener('keydown', function(e) {
-            if (window.Alpine && window.Alpine.store) {
-                const store = window.Alpine.store('lightbox');
-                if (store && store.lightboxOpen) {
-                    switch(e.key) {
-                        case 'ArrowLeft':
-                            e.preventDefault();
-                            store.previousImage();
-                            break;
-                        case 'ArrowRight':
-                            e.preventDefault();
-                            store.nextImage();
-                            break;
-                        case 'Escape':
-                            e.preventDefault();
-                            store.closeLightbox();
-                            break;
-                    }
-                }
-            }
-        });
-    </script>
-
-        /* YouTube Video Section - Centered */
-        .youtube-video-section {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-        
-        .youtube-video-section .video-container {
-            width: 100%;
-            max-width: 800px;
-            position: relative;
-            padding-bottom: 56.25%; /* 16:9 aspect ratio */
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
-        }
-        
-        .youtube-video-section .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-        
-        /* Responsive adjustments for YouTube video */
-        @media (max-width: 768px) {
-            .youtube-video-section {
-                margin: 30px auto;
-                padding: 0 15px;
-            }
-            
-            .youtube-video-section .video-container {
-                max-width: 100%;
-            }
-        }
-        
-    </style>
-    <footer>
-      <div class="footer-content-logo">
-        <a href="index.html">
-          <img src="./assets/CPC_LOGO_24.png" alt="CPC New Haven Church"
-            class="top-splash-logo" loading="lazy" decoding="async">
-        </a></div>
-      <p>Join us for worship and fellowship. <a href="sundays.html">Learn
-          more</a></p>
-
-      <p>203.777.6960 | <a
-          href="mailto:admin@cpcnewhaven.org">admin@cpcnewhaven.org</a>
-        | 135 Whitney Ave. New Haven CT 06510</p>
-      <p><a href="contact.html">Contact Us</a> | <a href="https://www.cpcnewhaven.org/" target="_blank" rel="noopener">Visit Our Old Website</a></p>
-      <p><a href="https://open.spotify.com/show/22kjUJyC0VH3cMfCSe9kEk?si=7081d23d84be4812" target="_blank" rel="noopener">Listen to CPC New Haven Podcasts on Spotify</a></p>
-      <p>© 2025 Christ Presbyterian Church.</p>
-
-    </footer>
-</body>
-
-</html>
+  <section id="contact-cta"
