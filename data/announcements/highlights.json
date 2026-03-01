@@ -1,6 +1,36 @@
 {
   "announcements": [
     {
+      "id": "2026-036",
+      "title": "Easter Fellowship Meals | Sunday, April 5",
+      "description": "Sign up now to Host or Join others in the congregation for an Easter meal. All are welcome! Easter is an opportunity for us to celebrate the risen King as a family. What better way to do this than sitting around a table with family and friends giving thanks to Jesus for his wonderful gift of salvation?",
+      "dateEntered": "2026-03-01",
+      "active": "true",
+      "type": "easter",
+      "category": "easter",
+      "tag": "fellowship"
+    },
+    {
+      "id": "2026-035",
+      "title": "Good Friday Service: “Does God Lament?” | April 3 @ 6:30pm",
+      "description": "Readers and musicians needed, please email admin@cpcnewhaven.org if you’re interested in being involved. And consider who you can invite to the service!",
+      "dateEntered": "2026-03-01",
+      "active": "true",
+      "type": "easter",
+      "category": "easter",
+      "tag": "service"
+    },
+    {
+      "id": "2026-034",
+      "title": "Egg Hunt | Saturday, March 28 @ 11am",
+      "description": "If your children love hunting for easter eggs, come join us at CPC for a youth-sponsored Easter Egg hunt. We will have plenty of eggs filled with all sorts of goodies, games to play, and plenty of fun to be had. Invite your friends, family, and neighbors.",
+      "dateEntered": "2026-03-01",
+      "active": "true",
+      "type": "easter",
+      "category": "easter",
+      "tag": "youth"
+    },
+    {
       "id": "2026-033",
       "title": "Save the Date! Spring Work Day | Saturday, March 21",
       "description": "Join your church family as we take care of our grounds and building before Easter weekend. This is a (surprisingly fun!) time of service and fellowship, as we do the church’s version of Spring cleaning. This is the second of only two work days each year. There will be projects available for all skill levels!",
@@ -85,7 +115,7 @@
       "title": "Youth Winter Camp | February 28 | 10am-2pm",
       "description": "Join students from across southern New England in a joint youth event with our Presbytery! We will be in Whitinsville Christian School in eastern Massachusetts for a half day of team games, lunch, worship, and small groups. Cost is $10 per student. Age range, 6th to 12th grade. If you are interested and wish to join, contact Pastor Jerry.",
       "dateEntered": "2026-01-30",
-      "active": "true",
+      "active": "false",
       "type": "event",
       "category": "event",
       "tag": "youth"

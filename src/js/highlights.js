@@ -25,14 +25,14 @@ class HighlightsManager {
 
     async loadHighlights() {
         // Add version parameter for cache-busting (update this when highlights.json changes)
-        // Using timestamp of last major update: 2026-01-30
-        const cacheBuster = `?v=20260210`;
+        // Using timestamp of last major update: 2026-03-01
+        const cacheBuster = `?v=20260301`;
         const response = await fetch(this.dataUrl + cacheBuster);
-        
+
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
-        
+
         const data = await response.json();
         console.log(`Loaded ${data.announcements?.length || 0} announcements from highlights.json`);
         this.renderHighlights(data.announcements);
@@ -68,18 +68,18 @@ class HighlightsManager {
     filterActiveAnnouncements(announcements) {
         const today = new Date(); // Use current date
         today.setHours(0, 0, 0, 0); // Reset time to start of day for accurate comparison
-        
+
         return announcements.filter(announcement => {
             // First check if announcement is active
             const isActive = announcement.active === "true" || announcement.active === true;
             if (!isActive) return false;
-            
+
             // Check if this is an ongoing announcement (should always be shown if active)
             const isOngoing = announcement.type === 'ongoing' || announcement.category === 'ongoing';
             if (isOngoing) {
                 return true; // Keep ongoing announcements regardless of date
             }
-            
+
             // For event-type announcements, try to parse dates from title or description
             if (announcement.type === 'event' || announcement.category === 'event') {
                 const eventDate = this.parseEventDateFromContent(announcement);
@@ -89,13 +89,13 @@ class HighlightsManager {
                     return eventDate >= today;
                 }
             }
-            
+
             // For other announcements, use dateEntered as fallback
             // Only filter out very old announcements (older than 6 months)
             const sixMonthsAgo = new Date(today);
             sixMonthsAgo.setMonth(sixMonthsAgo.getMonth() - 6);
             const dateEntered = new Date(announcement.dateEntered || '1970-01-01');
-            
+
             return dateEntered >= sixMonthsAgo;
         });
     }
@@ -104,17 +104,17 @@ class HighlightsManager {
         // First try to parse from title
         let eventDate = this.parseEventDateFromTitle(announcement.title);
         if (eventDate) return eventDate;
-        
+
         // Then try to parse from description
         eventDate = this.parseEventDateFromTitle(announcement.description);
         if (eventDate) return eventDate;
-        
+
         return null;
     }
 
     parseEventDateFromTitle(text) {
         if (!text) return null;
-        
+
         // Map month names to numbers (handle both with and without periods)
         const monthMap = {
             'jan': 0, 'jan.': 0, 'january': 0, 'feb': 1, 'feb.': 1, 'february': 1,
@@ -124,9 +124,9 @@ class HighlightsManager {
             'oct': 9, 'oct.': 9, 'october': 9, 'nov': 10, 'nov.': 10, 'november': 10,
             'dec': 11, 'dec.': 11, 'december': 11
         };
-        
+
         const currentYear = new Date().getFullYear();
-        
+
         // First, try to match "the Xth of Month" format (e.g., "the 13th of December")
         const theXthOfMonth = text.match(/the\s+(\d{1,2})(?:st|nd|rd|th)?\s+of\s+(?:Sept\.?|September|Oct\.?|October|Nov\.?|November|Dec\.?|December|Jan\.?|January|Feb\.?|February|Mar\.?|March|Apr\.?|April|May|Jun\.?|June|Jul\.?|July|Aug\.?|August)/i);
         if (theXthOfMonth) {
@@ -140,7 +140,7 @@ class HighlightsManager {
                 }
             }
         }
-        
+
         // Try date ranges with year (e.g., "Oct 10-12, 2025" or "Saturday October 10-12, 2025")
         const dateRangeWithYear = text.match(/(?:Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday|Mon|Tue|Wed|Thu|Fri|Sat|Sun)?\s*(?:Sept\.?|September|Oct\.?|October|Nov\.?|November|Dec\.?|December|Jan\.?|January|Feb\.?|February|Mar\.?|March|Apr\.?|April|May|Jun\.?|June|Jul\.?|July|Aug\.?|August)\s+(\d{1,2})-(\d{1,2}),?\s+(\d{4})/i);
         if (dateRangeWithYear) {
@@ -155,7 +155,7 @@ class HighlightsManager {
                 }
             }
         }
-        
+
         // Check for date ranges without year (e.g., "Oct 10-12" or "Saturday October 10-12")
         const dateRange = text.match(/(?:Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday|Mon|Tue|Wed|Thu|Fri|Sat|Sun)?\s*(?:Sept\.?|September|Oct\.?|October|Nov\.?|November|Dec\.?|December|Jan\.?|January|Feb\.?|February|Mar\.?|March|Apr\.?|April|May|Jun\.?|June|Jul\.?|July|Aug\.?|August)\s+(\d{1,2})-(\d{1,2})/i);
         if (dateRange) {
@@ -169,7 +169,7 @@ class HighlightsManager {
                 }
             }
         }
-        
+
         // Try single dates with year (e.g., "Sept. 28, 2025" or "Saturday December 13, 2025")
         const dateWithYear = text.match(/(?:Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday|Mon|Tue|Wed|Thu|Fri|Sat|Sun)?\s*(?:Sept\.?|September|Oct\.?|October|Nov\.?|November|Dec\.?|December|Jan\.?|January|Feb\.?|February|Mar\.?|March|Apr\.?|April|May|Jun\.?|June|Jul\.?|July|Aug\.?|August)\s+(\d{1,2}),?\s+(\d{4})/i);
         if (dateWithYear) {
@@ -184,7 +184,7 @@ class HighlightsManager {
                 }
             }
         }
-        
+
         // Finally, try single dates without year (e.g., "Sept. 28" or "Saturday December 13" or "Saturday, January 24")
         // Updated to handle commas after day names
         const dateWithoutYear = text.match(/(?:Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday|Mon|Tue|Wed|Thu|Fri|Sat|Sun)?,?\s*(?:Sept\.?|September|Oct\.?|October|Nov\.?|November|Dec\.?|December|Jan\.?|January|Feb\.?|February|Mar\.?|March|Apr\.?|April|May|Jun\.?|June|Jul\.?|July|Aug\.?|August)\s+(\d{1,2})(?!-)/i);
@@ -199,20 +199,20 @@ class HighlightsManager {
                 }
             }
         }
-        
+
         // Also try numeric date formats like "1/17" or "1/17/26" (month/day or month/day/year)
         const numericDate = text.match(/(\d{1,2})\/(\d{1,2})(?:\/(\d{2,4}))?/);
         if (numericDate) {
             const month = parseInt(numericDate[1]) - 1; // JavaScript months are 0-indexed
             const day = parseInt(numericDate[2]);
-            const year = numericDate[3] ? 
-                (numericDate[3].length === 2 ? 2000 + parseInt(numericDate[3]) : parseInt(numericDate[3])) : 
+            const year = numericDate[3] ?
+                (numericDate[3].length === 2 ? 2000 + parseInt(numericDate[3]) : parseInt(numericDate[3])) :
                 currentYear;
             if (month >= 0 && month <= 11 && day >= 1 && day <= 31) {
                 return new Date(year, month, day);
             }
         }
-        
+
         return null;
     }
 
@@ -228,7 +228,7 @@ class HighlightsManager {
     createAnnouncementElement(announcement) {
         const element = document.createElement('article');
         element.className = `highlight-card ${announcement.type || 'announcement'}`;
-        
+
         // Add featured image if available
         if (announcement.featuredImage) {
             const imageContainer = this.createImageContainer(announcement.featuredImage, announcement.imageDisplayType);
@@ -258,24 +258,24 @@ class HighlightsManager {
     createImageContainer(imageUrl, imageDisplayType) {
         const container = document.createElement('div');
         container.className = 'highlight-image-container';
-        
+
         // Add special class for poster display type
         if (imageDisplayType === 'poster') {
             container.classList.add('poster-display');
         }
-        
+
         const image = document.createElement('img');
         image.src = imageUrl;
         image.alt = 'Highlight image';
         image.className = 'highlight-image';
         image.loading = 'lazy';
         image.decoding = 'async';
-        
+
         // Handle image loading errors
         image.onerror = () => {
             container.style.display = 'none';
         };
-        
+
         container.appendChild(image);
         return container;
     }

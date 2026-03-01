@@ -69,6 +69,42 @@
     transform: translateY(-2px);
 }
 
+/* Easter Distinct Feature Styling */
+.highlight-card.easter {
+    border: 2px solid #9c27b0;
+    background: linear-gradient(135deg, #ffffff 0%, #f3e5f5 100%);
+    position: relative;
+    box-shadow: 0 4px 15px rgba(156, 39, 176, 0.1);
+}
+
+.highlight-card.easter::before {
+    content: "Easter at CPC";
+    position: absolute;
+    top: 15px;
+    right: -25px;
+    background: #9c27b0;
+    color: white;
+    padding: 5px 30px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    transform: rotate(45deg);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.highlight-card.easter .highlight-title {
+    color: #4a148c;
+    border-bottom: 2px solid rgba(156, 39, 176, 0.2);
+    padding-bottom: 8px;
+    margin-right: 40px; /* Make room for the ribbon */
+}
+
+.highlight-card.easter:hover {
+    border-color: #7b1fa2;
+    box-shadow: 0 6px 20px rgba(156, 39, 176, 0.2);
+}
+
 .highlight-image-container {
     width: 100%;
     margin: 0 0 0 0;
