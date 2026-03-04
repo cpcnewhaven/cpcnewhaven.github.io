@@ -1,0 +1,430 @@
+/* Main container for layout */
+.about-main-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+    position: relative;
+}
+
+/* Floating Navigation - Sleek Dark Design */
+.about-floating-nav {
+    position: fixed;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    background: linear-gradient(135deg, rgba(0, 15, 50, 0.95) 0%, rgba(0, 34, 68, 0.95) 100%);
+    padding: 12px 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25), 0 2px 8px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    backdrop-filter: blur(15px);
+    max-height: 80vh;
+    overflow-y: auto;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.about-floating-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.about-floating-nav a {
+    color: rgba(255, 255, 255, 0.85);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    transition: all 0.2s ease;
+    padding: 10px 14px;
+    border-radius: 6px;
+    white-space: nowrap;
+    border-left: 3px solid transparent;
+}
+
+.about-floating-nav a:hover,
+.about-floating-nav a.active {
+    background: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    border-left-color: rgba(255, 255, 255, 0.8);
+    padding-left: 18px;
+}
+
+/* Custom scrollbar for floating nav */
+.about-floating-nav::-webkit-scrollbar {
+    width: 6px;
+}
+
+.about-floating-nav::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+}
+
+.about-floating-nav::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 3px;
+    transition: background 0.2s ease;
+}
+
+.about-floating-nav::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+/* Content Sections */
+.about-content-section {
+    min-height: 60vh;
+    padding: 40px 10px 30px 10px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease;
+    margin: 0 auto;
+    max-width: 800px;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-left: 180px;
+}
+
+.about-content-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.about-sub-title {
+    font-size: 1.4em;
+    margin-top: 1.2em;
+    margin-bottom: 0.8em;
+    font-weight: 600;
+    color: var(--cpc-blue);
+    letter-spacing: -0.5px;
+}
+
+.about-body-text,
+.about-content-section p,
+.about-content-section li {
+    font-size: 1.05em;
+    margin-bottom: 0.7em;
+}
+
+.about-content-section strong {
+    font-weight: 700;
+    color: var(--cpc-blue);
+    font-size: 1.1em;
+}
+
+.about-content-section ul,
+.about-content-section ol {
+    margin-left: 1.2em;
+    font-size: 1.05em;
+}
+
+.about-content-section blockquote {
+    font-size: 1.05em;
+    margin: 1em 0 1em 1.5em;
+    padding-left: 1em;
+    border-left: 3px solid #eee;
+}
+
+/* Parallax Images */
+.about-parallax-image {
+    width: 100%;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    /* Avoid scroll jank from fixed backgrounds */
+    background-attachment: scroll;
+    margin: 30px 0;
+    border-radius: 8px;
+}
+
+/* Remove old sidebar styles */
+.about-sidebar {
+    display: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+    .about-floating-nav {
+        display: none !important;
+    }
+
+    .about-hamburger-menu-button-container {
+        display: flex !important;
+    }
+
+    .about-content-section {
+        margin-left: 0;
+        padding: 20px 15px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-content-section {
+        margin-left: 0;
+        padding: 20px 15px;
+        font-size: 15px;
+    }
+
+    .about-staff-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 15px;
+    }
+
+    .about-staff-member {
+        padding: 15px;
+    }
+
+    .about-compact-centered-image {
+        max-width: 300px;
+    }
+
+    .about-heading {
+        font-size: 1.5em;
+    }
+
+    .about-sub-title {
+        font-size: 1.4em;
+    }
+
+    .read-more-button {
+        font-size: 0.95em;
+        padding: 8px 15px;
+    }
+}
+
+/* Gallery Section Styles */
+.about-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.about-gallery-item {
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.about-gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s Paradox ease;
+}
+
+.about-gallery-item img:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .about-gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+}
+
+/* Footer Styles */
+#footer-about-page {
+    background: var(--cpc-blue);
+    color: white;
+    padding: 40px 20px;
+    margin-top: 60px;
+}
+
+#footer-about-page .footer-content-logo {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#footer-about-page .top-splash-logo {
+    max-width: 200px;
+    height: auto;
+    color: white !important;
+}
+
+#footer-about-page .body-text {
+    max-width: 800px;
+    margin: 0 auto 20px;
+    text-align: center;
+    line-height: 1.6;
+    font-size: 0.95em;
+    color: white !important;
+}
+
+#footer-about-page p {
+    text-align: center;
+    margin: 10px 0;
+    font-size: 0.9em;
+    color: white !important;
+}
+
+#footer-about-page a {
+    color: white;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+#footer-about-page a:hover {
+    opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+    #footer-about-page {
+        padding: 30px 15px;
+    }
+
+    #footer-about-page .top-splash-logo {
+        max-width: 150px;
+    }
+
+    #footer-about-page .body-text {
+        font-size: 0.9em;
+    }
+
+    #footer-about-page p {
+        font-size: 0.85em;
+    }
+}
+
+/* Staff and Leadership Sections */
+.about-staff-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.about-staff-member {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.about-staff-member:hover {
+    transform: translateY(-5px);
+}
+
+.about-staff-member h3 {
+    color: var(--cpc-blue);
+    margin: 0 0 5px 0;
+    font-size: 1.2em;
+}
+
+.about-staff-member h4 {
+    color: #666;
+    margin: 0 0 15px 0;
+    font-size: 1em;
+    font-weight: normal;
+}
+
+.read-more-button {
+    background: var(--cpc-blue);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: opacity 0.3s ease;
+}
+
+.read-more-button:hover {
+    opacity: 0.9;
+}
+
+/* Mission Anabaino Image */
+.about-compact-centered-image {
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Mission Church Image */
+.mission-church-image {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 30px auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mission-church-image:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .mission-church-image {
+        margin: 20px auto;
+        border-radius: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .mission-church-image {
+        margin: 15px auto;
+        border-radius: 6px;
+    }
+}
+
+/* About mobile nav visuals use global styles in src/css/global-body.css */
+
+/* Story Progress Bar Styles */
+.story-progress-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    pointer-events: none;
+}
+
+.story-progress-bar {
+    height: 100%;
+    background: var(--cpc-blue);
+    width: 0%;
+    transition: width 0.1s ease;
+}
+
+@media (max-width: 768px) {
+    .story-progress-container {
+        height: 3px;
+    }
+}
+
+/* Mobile UX improvements */
+.about-content-section {
+    scroll-margin-top: 72px;
+    /* prevent sticky header overlap on anchor jumps */
+}
+
+.about-mobile-navigation {
+    -webkit-overflow-scrolling: touch;
+    /* smooth scrolling on iOS */
+}
+
+/* Reduce parallax jank on mobile */
+@media (max-width: 768px) {
+    .about-parallax-image {
+        background-attachment: scroll;
+    }
+}
