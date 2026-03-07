@@ -1,8 +1,18 @@
 {
   "announcements": [
     {
+      "id": "2026-037",
+      "title": "Interested in being involved in the Good Friday service?",
+      "description": "Readers and musicians needed! Please email admin@cpcnewhaven.org if you’re interested in being involved.",
+      "dateEntered": "2026-03-07",
+      "active": "true",
+      "type": "announcement",
+      "category": "announcement",
+      "tag": "service"
+    },
+    {
       "id": "2026-036",
-      "title": "Easter Fellowship Meals | Sunday, April 5",
+      "title": "Easter Fellowship Meals | Sunday, 4/5",
       "description": "Sign up now to Host or Join others in the congregation for an Easter meal. All are welcome! Easter is an opportunity for us to celebrate the risen King as a family. What better way to do this than sitting around a table with family and friends giving thanks to Jesus for his wonderful gift of salvation?",
       "dateEntered": "2026-03-01",
       "active": "true",
@@ -12,7 +22,7 @@
     },
     {
       "id": "2026-035",
-      "title": "Good Friday Service: “Does God Lament?” | April 3 @ 6:30pm",
+      "title": "“Does God Lament?” - Good Friday service | 4/3 @ 6:30pm",
       "description": "Readers and musicians needed, please email admin@cpcnewhaven.org if you’re interested in being involved. And consider who you can invite to the service!",
       "dateEntered": "2026-03-01",
       "active": "true",
@@ -22,7 +32,7 @@
     },
     {
       "id": "2026-034",
-      "title": "Egg Hunt | Saturday, March 28 @ 11am",
+      "title": "Egg Hunt | Saturday Before Easter, 3/28 @ 11am",
       "description": "If your children love hunting for easter eggs, come join us at CPC for a youth-sponsored Easter Egg hunt. We will have plenty of eggs filled with all sorts of goodies, games to play, and plenty of fun to be had. Invite your friends, family, and neighbors.",
       "dateEntered": "2026-03-01",
       "active": "true",
@@ -123,7 +133,7 @@
     {
       "id": "2026-026",
       "title": "Regular Sunday Schedule",
-      "description": "<strong>8:30am | Prayer in the Parlor</strong><br><br><strong>9:30am | Children's Sunday School</strong><br><br><strong>9:30am | Adult Sunday Studies</strong> - \"Missionally Living in our Neighborhoods\" (4-week class began Feb. 15)<br><br><strong>10:30am | Worship Service</strong><br><br><strong>12:00pm | Fellowship Lunch</strong>",
+      "description": "<strong>**Worship service only 03/29 & 04/05</strong><br><br><strong>8:30am | Prayer in the Parlor</strong><br><br><strong>9:30am | Children’s Sunday School</strong><br><br><strong>9:30am | Adult Sunday Studies</strong><br><br><strong>10:30am | Worship Service</strong><br><br><strong>12:00pm | Fellowship Lunch</strong>",
       "dateEntered": "2026-01-29",
       "active": "true",
       "type": "ongoing",
@@ -142,8 +152,8 @@
     },
     {
       "id": "2026-028",
-      "title": "Friday Pastor Drop-In Office Hours",
-      "description": "Craig, Fridays 7:30-10:30am | Other hours available upon request",
+      "title": "Pastor Drop-in Office Hours",
+      "description": "<strong>Craig, Fridays 7:30-10:30am | Other hours available upon request</strong><br><br>Drop in for a casual time of discussion, Q&A, prayer, coffee, tea, really whatever you want to make it! If you have a more private or formal need, you’re always welcome to set up a separate time with Pastor Craig (craig.luekens@cpcnewhaven.org), or Pastor Jerry (jerry.ornelas@cpcnewhaven.org) but this is meant to be a space where anyone can drop in.",
       "dateEntered": "2026-01-29",
       "active": "true",
       "type": "ongoing",
