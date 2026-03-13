@@ -65,29 +65,31 @@
     margin-left: 268px;
 }
 
-.sunday-studies-dashboard .main-content header {
-    margin-bottom: 32px;
-    margin-top: 8px;
+/* Header inside the card */
+.sunday-studies-dashboard .center-content header {
+    margin-bottom: 0;
+    margin-top: 0;
+    text-align: center;
 }
 
-.sunday-studies-dashboard .main-content header h1 {
+.sunday-studies-dashboard .center-content header h1 {
     margin-bottom: 2rem;
 }
 
-.sunday-studies-dashboard .main-content header h2 {
+.sunday-studies-dashboard .center-content header h2 {
     margin-bottom: 8px;
 }
 
-.sunday-studies-dashboard .main-content header p {
+.sunday-studies-dashboard .center-content header p {
     font-size: 0.95em;
     color: #555;
     margin-top: 4px;
 }
 
-/* Glass-style content block */
+/* Glass-style content block — centered in main area */
 .sunday-studies-dashboard .center-content {
     padding: 2.5rem 28px 3rem !important;
-    margin: 0 16px;
+    margin: 0 auto;
     max-width: 780px;
     background: rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(12px);
@@ -100,7 +102,7 @@
 .sunday-studies-dashboard .center-content hr {
     border: none;
     border-top: 1px solid rgba(0, 0, 0, 0.08);
-    margin: 28px 0;
+    margin: 6px 0;
 }
 
 .sunday-studies-dashboard .center-content p {
@@ -110,6 +112,7 @@
 .sunday-studies-dashboard .center-content h2 {
     margin-top: 28px;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .sunday-studies-dashboard .mission-schedule {
