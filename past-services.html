@@ -380,6 +380,7 @@
                 margin: 0 0 6px 0;
                 display: -webkit-box;
                 -webkit-line-clamp: 2;
+                line-clamp: 2;
                 -webkit-box-orient: vertical;
                 overflow: hidden;
                 text-overflow: ellipsis;
@@ -413,6 +414,136 @@
             /* Dark mode tweaks for hover if needed */
             .yt-card:active .yt-thumbnail {
                 opacity: 0.8;
+            }
+
+            .sermon-controls {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 30px;
+                flex-wrap: wrap;
+                gap: 20px;
+            }
+
+            .search-container {
+                position: relative;
+                flex: 1;
+                max-width: 400px;
+            }
+
+            .search-container i {
+                position: absolute;
+                left: 12px;
+                top: 50%;
+                transform: translateY(-50%);
+                color: #666;
+            }
+
+            .search-container input {
+                width: 100%;
+                padding: 12px 12px 12px 40px;
+                border: 1px solid #ddd;
+                border-radius: 8px;
+                font-size: 1em;
+                box-sizing: border-box;
+            }
+
+            .view-toggle {
+                display: flex;
+                gap: 10px;
+                margin-left: 20px;
+            }
+
+            .view-toggle-btn {
+                padding: 8px 12px;
+                border: 1px solid #ddd;
+                border-radius: 6px;
+                background: white;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                font-weight: 600;
+                color: #333;
+                transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+            }
+
+            .view-toggle-btn:hover {
+                background: #f0f0f0;
+                border-color: #ccc;
+                color: #0078D4;
+            }
+
+            .view-toggle-btn.active {
+                background: #0078D4;
+                border-color: #0078D4;
+                color: white;
+            }
+
+            .sort-controls {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+
+            .sort-controls label {
+                font-weight: 600;
+                color: #333;
+            }
+
+            .sort-controls select {
+                padding: 8px 12px;
+                border: 1px solid #ddd;
+                border-radius: 6px;
+                background: white;
+                cursor: pointer;
+            }
+
+            .sort-direction {
+                padding: 8px 12px;
+                border: 1px solid #ddd;
+                border-radius: 6px;
+                background: white;
+                cursor: pointer;
+                transition: background 0.2s ease;
+            }
+
+            .sort-direction:hover {
+                background: #f0f0f0;
+            }
+
+            .no-results, .loading {
+                text-align: center;
+                padding: 40px;
+                color: #666;
+            }
+
+            .no-results i, .loading i {
+                font-size: 2em;
+                margin-bottom: 10px;
+                color: #999;
+            }
+
+            @media (max-width: 768px) {
+                .sermon-controls {
+                    flex-direction: column;
+                    align-items: stretch;
+                }
+
+                .search-container {
+                    max-width: none;
+                }
+
+                .view-toggle {
+                    flex-direction: row;
+                    justify-content: center;
+                    gap: 8px;
+                    margin-left: 0;
+                }
+
+                .sort-controls {
+                    justify-content: center;
+                }
             }
         </style>
 
