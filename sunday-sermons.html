@@ -129,6 +129,14 @@
     </div>
 
     <div class="main-content-a">
+        <div class="glass-banner-container">
+            <a href="https://www.cpcnewhaven.org/sermons" class="liquid-glass-banner" target="_blank">
+                <div class="glass-content">
+                    <i class="fas fa-archive"></i>
+                    <span>Looking for older sermons? Click here for the Pre-2025 Sermon Archive</span>
+                </div>
+            </a>
+        </div>
         <section class="sermon-archive-section" x-data="sermonData()">
             
             <div class="sermon-controls">
@@ -229,6 +237,70 @@
     <script src="./src/js/function_toggle_mobileMenu.js"></script>
 
     <style>
+        .glass-banner-container {
+            max-width: 1200px;
+            margin: 40px auto 0 auto;
+            padding: 0 20px;
+        }
+        .liquid-glass-banner {
+            display: block;
+            text-decoration: none;
+            background: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(20px) saturate(200%);
+            -webkit-backdrop-filter: blur(20px) saturate(200%);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            border-radius: 16px;
+            padding: 24px 30px;
+            color: #0078D4;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.05), inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+            transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+            position: relative;
+            overflow: hidden;
+            background-image: linear-gradient(135deg, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.2) 100%);
+        }
+        .liquid-glass-banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.8) 50%, rgba(255,255,255,0) 100%);
+            transform: skewX(-25deg);
+            transition: all 0.7s ease;
+        }
+        .liquid-glass-banner:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.1), inset 0 0 0 1px rgba(255, 255, 255, 1);
+            color: #005A9E;
+        }
+        .liquid-glass-banner:hover::before {
+            left: 200%;
+        }
+        .liquid-glass-banner .glass-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            font-size: 1.25em;
+            font-weight: 600;
+        }
+        .liquid-glass-banner .glass-content i {
+            font-size: 1.5em;
+        }
+
+        @media (max-width: 768px) {
+            .liquid-glass-banner .glass-content {
+                flex-direction: column;
+                text-align: center;
+                font-size: 1.1em;
+                gap: 10px;
+            }
+            .glass-banner-container {
+                margin: 20px auto 0 auto;
+            }
+        }
+
         .sermon-archive-section {
             padding: 40px 20px;
             max-width: 1200px;
