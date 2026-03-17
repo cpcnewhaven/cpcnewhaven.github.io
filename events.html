@@ -34,18 +34,27 @@
 
 <body>
   <nav class="main-navigation">
-    <a href="index.html">Home</a>
-    <a href="sundays.html">Sundays</a>
-      <a href="sunday-sermons.html">Sermons</a>
-      <a href="past-services.html">Past Services</a>
-    <a href="about.html">About</a>
-    <a href="podcasts.html">Podcasts</a>
-    <a href="events.html">Events</a>
-    <a href="community.html">Community</a>
-    <a href="live.html">Live</a>
-    <a href="resources.html">Resources</a>
-    <a href="give.html">Give</a>
-  </nav>
+        <a href="index.html">Home</a>
+        <a href="sundays.html">Sundays</a>
+        <a href="sunday-sermons.html">Sermons</a>
+        <a href="past-services.html">Past Services</a>
+        <a href="about.html">About</a>
+        <a href="podcasts.html">Podcasts</a>
+        <div class="nav-dropdown">
+            <a href="community.html" class="nav-dropbtn">Community <i class="fas fa-caret-down" style="font-size: 0.8em;"></i></a>
+            <div class="nav-dropdown-content">
+                <a href="events.html">Events</a>
+            </div>
+        </div>
+        <a href="live.html">Live</a>
+        <div class="nav-dropdown">
+            <a href="#" class="nav-dropbtn" onclick="event.preventDefault();">More <i class="fas fa-caret-down" style="font-size: 0.8em;"></i></a>
+            <div class="nav-dropdown-content">
+                <a href="resources.html">Resources</a>
+            </div>
+        </div>
+        <a href="give.html">Give</a>
+    </nav>
   </header>
 
   <!-- MOBILE HAMBURGER-->
@@ -61,20 +70,18 @@
       </button>
     </div>
     <ul class="mobile-nav-links">
-      <li><a class="mobile-menu-link" href="index.html">Home</a></li>
-      <li><a class="mobile-menu-link" href="sundays.html">Sundays</a></li>
-      <li><a class="mobile-menu-link" href="sunday-sermons.html">Sermons</a></li>
-      <li><a class="mobile-menu-link" href="past-services.html">Past Services</a></li>
-      <li><a class="mobile-menu-link" href="about.html">About</a></li>
-      <li><a class="mobile-menu-link" href="podcasts.html">Podcasts</a></li>
-
-      <li>
-        <a class="mobile-menu-link" href="announcements.html">Announcements</a>
-      </li>
-      <li><a class="mobile-menu-link" href="community.html">Community</a></li>
-      <li><a class="mobile-menu-link" href="live.html">Live</a></li>
-      <li><a class="mobile-menu-link" href="resources.html">Resources</a></li>
-      <li><a class="mobile-menu-link" href="give.html">Give</a></li>
+        <li><a class="mobile-menu-link" href="index.html">Home</a></li>
+        <li><a class="mobile-menu-link" href="sundays.html">Sundays</a></li>
+        <li><a class="mobile-menu-link" href="sunday-sermons.html">Sermons</a></li>
+        <li><a class="mobile-menu-link" href="past-services.html">Past Services</a></li>
+        <li><a class="mobile-menu-link" href="about.html">About</a></li>
+        <li><a class="mobile-menu-link" href="podcasts.html">Podcasts</a></li>
+        <li><a class="mobile-menu-link" href="community.html">Community</a></li>
+        <li><a class="mobile-menu-link" href="events.html" style="padding-left: 40px; border-left: 2px solid rgba(255,255,255,0.2);">- Events</a></li>
+        <li><a class="mobile-menu-link" href="live.html">Live</a></li>
+        <li><div  class="mobile-menu-link" style="color: rgba(255, 255, 255, 0.5); pointer-events: none;">More</div></li>
+        <li><a class="mobile-menu-link" href="resources.html" style="padding-left: 40px; border-left: 2px solid rgba(255,255,255,0.2);">- Resources</a></li>
+        <li><a class="mobile-menu-link" href="give.html">Give</a></li>
     </ul>
   </nav>
   <div x-data="{ 
