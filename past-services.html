@@ -158,16 +158,24 @@
             </div>
 
             <!-- Card View -->
-            <div class="sermon-grid" x-show="filteredServices.length > 0 && viewMode === 'card'">
+            <div class="sermon-grid yt-grid" x-show="filteredServices.length > 0 && viewMode === 'card'">
                 <template x-for="service in filteredServices" :key="service.id">
-                    <div class="sermon-card">
-                        <div class="sermon-date" x-text="service.displayDate || service.date"></div>
-                        <h3 class="sermon-title" x-text="service.title" style="font-size: 1.1em; line-height: 1.3; min-height: 2.6em;"></h3>
-                        <img :src="service.thumbnail" alt="thumbnail" style="width: 100%; border-radius: 8px; margin-top: 10px; margin-bottom: 15px; aspect-ratio: 16/9; object-fit: cover;">
-                        <a :href="service.url" class="sermon-listen-btn" target="_blank">
-                            <i class="fab fa-youtube"></i> Watch on YouTube
-                        </a>
-                    </div>
+                    <a :href="service.url" class="yt-card" target="_blank">
+                        <div class="yt-thumbnail-container">
+                            <img :src="service.thumbnail" alt="thumbnail" class="yt-thumbnail">
+                            <div class="yt-play-overlay">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                        <div class="yt-info">
+                            <h3 class="yt-title" x-text="service.title" :title="service.title"></h3>
+                            <div class="yt-metadata">
+                                <span class="yt-channel">CPC New Haven</span>
+                                <span class="yt-dot">•</span>
+                                <span class="yt-date" x-text="service.displayDate || service.date"></span>
+                            </div>
+                        </div>
+                    </a>
                 </template>
             </div>
 
@@ -275,6 +283,136 @@
 
             .hero-image.active {
                 opacity: 1;
+            }
+
+            /* YouTube-style Grid CSS */
+            .yt-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+                gap: 24px 16px;
+                padding: 20px 0;
+            }
+
+            @media (min-width: 1024px) {
+                .yt-grid {
+                    grid-template-columns: repeat(3, 1fr);
+                }
+            }
+
+            @media (min-width: 1440px) {
+                .yt-grid {
+                    grid-template-columns: repeat(4, 1fr);
+                }
+            }
+
+            .yt-card {
+                display: flex;
+                flex-direction: column;
+                text-decoration: none;
+                cursor: pointer;
+                border-radius: 12px;
+                transition: transform 0.2s, box-shadow 0.2s;
+                background: transparent;
+            }
+
+            .yt-card:hover {
+                transform: translateY(-2px);
+            }
+
+            .yt-thumbnail-container {
+                position: relative;
+                width: 100%;
+                aspect-ratio: 16 / 9;
+                border-radius: 12px;
+                overflow: hidden;
+                background-color: #e5e5e5;
+                margin-bottom: 12px;
+            }
+
+            .yt-thumbnail {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: opacity 0.2s;
+            }
+
+            .yt-play-overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: background 0.2s;
+            }
+
+            .yt-play-overlay i {
+                color: white;
+                font-size: 48px;
+                opacity: 0;
+                transform: scale(0.8);
+                transition: opacity 0.2s, transform 0.2s;
+            }
+
+            .yt-card:hover .yt-play-overlay {
+                background: rgba(0, 0, 0, 0.3);
+            }
+
+            .yt-card:hover .yt-play-overlay i {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+            .yt-info {
+                display: flex;
+                flex-direction: column;
+                padding: 0 4px;
+            }
+
+            .yt-title {
+                color: #0f0f0f;
+                font-size: 16px;
+                font-weight: 600;
+                line-height: 1.4;
+                margin: 0 0 6px 0;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                max-height: 2.8em;
+                font-family: "Roboto", "Barlow", sans-serif;
+            }
+
+            .yt-metadata {
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                color: #606060;
+                font-size: 14px;
+                line-height: 1.2;
+                font-family: "Roboto", "Barlow", sans-serif;
+            }
+
+            .yt-channel {
+                font-weight: 400;
+            }
+
+            .yt-dot {
+                margin: 0 4px;
+                font-size: 10px;
+            }
+
+            .yt-date {
+                font-weight: 400;
+            }
+
+            /* Dark mode tweaks for hover if needed */
+            .yt-card:active .yt-thumbnail {
+                opacity: 0.8;
             }
         </style>
 
