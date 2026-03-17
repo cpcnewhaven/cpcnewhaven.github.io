@@ -3,6 +3,39 @@
   "description": "Weekly sermons from our Sunday worship services",
   "episodes": [
     {
+      "id": "26-03-08",
+      "title": "Prodigal: Comfort and Challenge from the Lavish Grace of God",
+      "author": "Rev. Craig Luekens",
+      "scripture": "Luke 15:11-32",
+      "date": "2026-03-08",
+      "apple_podcasts_url": "",
+      "spotify_url": "https://open.spotify.com/episode/5XDIrfDwputTu4e2zkJ9mT",
+      "link": "https://open.spotify.com/episode/5XDIrfDwputTu4e2zkJ9mT",
+      "podcast-thumbnail_url": ""
+    },
+    {
+      "id": "26-03-01",
+      "title": "The Gospel of the Pharisee and the Gospel of Jesus",
+      "author": "Rev. Jerry Ornelas",
+      "scripture": "Luke 15:1-10",
+      "date": "2026-03-01",
+      "apple_podcasts_url": "",
+      "spotify_url": "https://open.spotify.com/episode/0fuyongSLKLpgge4hgXUp3",
+      "link": "https://open.spotify.com/episode/0fuyongSLKLpgge4hgXUp3",
+      "podcast-thumbnail_url": ""
+    },
+    {
+      "id": "26-02-22",
+      "title": "The Cost",
+      "author": "Rev. Craig Luekens",
+      "scripture": "Luke 14: 25-35",
+      "date": "2026-02-22",
+      "apple_podcasts_url": "",
+      "spotify_url": "https://open.spotify.com/episode/2FJKTZN8wwBzSFPoG1K3GR",
+      "link": "https://open.spotify.com/episode/2FJKTZN8wwBzSFPoG1K3GR",
+      "podcast-thumbnail_url": ""
+    },
+    {
       "id": "26-02-15",
       "title": "Dining with the King: Humility, Grace, and 'Excuses, Excuses'",
       "author": "Rev. Craig Luekens",

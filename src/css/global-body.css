@@ -886,14 +886,14 @@ p {
     color: rgba(255, 255, 255, 0.92);
     /* Slightly transparent white */
     text-decoration: none;
-    font-size: 16px;
-    /* Slightly smaller for sleeker look */
+    font-size: 18px;
+    /* Slightly larger */
     font-weight: 500;
     /* Medium weight */
     letter-spacing: 0.3px;
     /* Subtle spacing */
     margin: 0 10px;
-    padding: 4px 8px;
+    padding: 6px 12px;
     border-bottom: 2px solid rgba(255, 255, 255, 0);
     transition: all 0.2s ease;
 }
