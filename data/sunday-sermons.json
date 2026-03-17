@@ -3,6 +3,17 @@
   "description": "Weekly sermons from our Sunday worship services",
   "episodes": [
     {
+      "id": "26-03-15",
+      "title": "God or Money: Choose One",
+      "author": "Rev. Craig Luekens",
+      "scripture": "Luke 16: 1-31",
+      "date": "2026-03-15",
+      "apple_podcasts_url": "",
+      "spotify_url": "https://open.spotify.com/episode/4dvZCMMeobTsMgzT8MukSm?si=64658186fa904295",
+      "link": "https://open.spotify.com/episode/4dvZCMMeobTsMgzT8MukSm?si=64658186fa904295",
+      "podcast-thumbnail_url": ""
+    },
+    {
       "id": "26-03-08",
       "title": "Prodigal: Comfort and Challenge from the Lavish Grace of God",
       "author": "Rev. Craig Luekens",
