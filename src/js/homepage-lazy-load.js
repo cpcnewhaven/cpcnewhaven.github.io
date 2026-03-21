@@ -48,7 +48,6 @@
   }
 
   document.addEventListener('DOMContentLoaded', () => {
-    observeAndLoad('highlights', './src/js/highlights.js', '1000px 0px');
     observeAndLoad('instagram-feed', './src/js/instagram-feed.js', '1200px 0px');
   });
 })();
