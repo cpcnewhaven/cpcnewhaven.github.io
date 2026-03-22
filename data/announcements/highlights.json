@@ -91,11 +91,11 @@
       "tag": "workday"
     },
     {
-      “id”: “2026-032”,
-      “title”: “Newcomer’s Lunch | This Sunday During Lunch”,
-      “description”: “For those who are new, or new-ish, join us for a “Newcomer’s Lunch” This Sunday, March 1 in the Lecture Room to learn more about CPC and to meet some of our leadership teams. Lunch will be provided in the Lecture Room for you, just head there! Also, fill out a Welcome Card from the pew and return it to the Welcome Bar in the foyer.”,
-      “dateEntered”: “2026-02-27”,
-      “active”: “false”,
+      "id": "2026-032",
+      "title": "Newcomer’s Lunch | This Sunday During Lunch",
+      "description": "For those who are new, or new-ish, join us for a \"Newcomer’s Lunch\" This Sunday, March 1 in the Lecture Room to learn more about CPC and to meet some of our leadership teams. Lunch will be provided in the Lecture Room for you, just head there! Also, fill out a Welcome Card from the pew and return it to the Welcome Bar in the foyer.",
+      "dateEntered": "2026-02-27",
+      "active": "false",
       "type": "event",
       "category": "event",
       "tag": "newcomer"
