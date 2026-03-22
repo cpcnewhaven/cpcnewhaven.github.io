@@ -11,7 +11,16 @@
       "Bash(git -C /Users/agworkywork/work/cpcnewhaven.github.io status --porcelain)",
       "Bash(xargs:*)",
       "Bash(git -C /Users/agworkywork/work/cpcnewhaven.github.io status)",
-      "Bash(git -C /Users/agworkywork/work/cpcnewhaven.github.io diff claude.md)"
+      "Bash(git -C /Users/agworkywork/work/cpcnewhaven.github.io diff claude.md)",
+      "Bash(python3:*)",
+      "Bash(for f:*)",
+      "Bash(do echo:*)",
+      "Bash(head -10 grep -n \"base href\\\\|main-navigation\" /Users/agworkywork/work/cpcnewhaven.github.io/sunday-studies/confessional-theology.html)",
+      "Bash(head -10 grep -n \"base href\\\\|main-navigation\" /Users/agworkywork/work/cpcnewhaven.github.io/sunday-studies/biblical-interpretation.html)",
+      "Bash(head -10 grep -n \"base href\\\\|main-navigation\" /Users/agworkywork/work/cpcnewhaven.github.io/sunday-studies/walking-through-sinai.html)",
+      "Bash(head -10 grep -n \"base href\\\\|main-navigation\" /Users/agworkywork/work/cpcnewhaven.github.io/sunday-studies/what-we-believe.html)",
+      "Bash(echo \"=== Checking for old Community dropdown pattern ===\" grep -rl 'href=\"\"\"\"community\\\\.html\"\"\"\" class=\"\"\"\"nav-dropbtn\"\"\"\"' /Users/agworkywork/work/cpcnewhaven.github.io --include=\"*.html\")",
+      "Bash(echo \"=== Count of files with new nav structure \\(search.html in nav-dropdown-content\\) ===\" grep -rl 'nav-dropdown-content' /Users/agworkywork/work/cpcnewhaven.github.io --include=\"*.html\")"
     ]
   }
 }
