@@ -17,17 +17,26 @@
             type="image/png">
 
         <style>
-            header { text-align: center; margin-bottom: 20px; margin-top: 20px; word-wrap: break-word; }
-            h1, h2, h3 { text-align: center; }
+            header { text-align: left; margin-bottom: 20px; margin-top: 20px; word-wrap: break-word; }
+            h1, h2, h3 { text-align: left; }
             .center-content { max-width: 800px; margin: 0 auto; padding: 0 20px; }
             .center-content p { line-height: 1.6; margin-bottom: 1rem; }
-            .list-table { list-style: none; padding: 0; margin: 0; border-collapse: collapse; width: 100%; }
-            .list-table li { display: table-row; }
-            .list-number, .episode-title, .list-table a { display: table-cell; padding: 10px; border-bottom: 1px solid #ddd; vertical-align: middle; }
-            .list-number { width: 30px; text-align: right; font-weight: bold; }
-            .episode-title { font-weight: bold; }
-            .list-table a { text-decoration: none; color: #007BFF; }
-            .list-table a:hover { text-decoration: underline; }
+
+            /* Episode list */
+            .episode-list { list-style: none; padding: 0; margin: 0 0 1.5rem 0; border: 1px solid #e2e8f0; border-radius: 8px; overflow: hidden; }
+            .episode-list li { display: flex; align-items: center; gap: 12px; padding: 14px 16px; border-bottom: 1px solid #e2e8f0; background: #fff; }
+            .episode-list li:last-child { border-bottom: none; }
+            .episode-list li:hover { background: #f8fafc; }
+            .ep-num { flex-shrink: 0; width: 28px; height: 28px; border-radius: 50%; background: #1a2a4a; color: #fff; font-size: 0.8rem; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+            .ep-title { flex: 1; font-weight: 600; color: #1a202c; font-size: 0.95rem; }
+            .ep-listen { flex-shrink: 0; display: inline-flex; align-items: center; gap: 6px; padding: 6px 14px; background: #1db954; color: #fff; border-radius: 20px; text-decoration: none; font-size: 0.82rem; font-weight: 600; white-space: nowrap; transition: background 0.2s; }
+            .ep-listen:hover { background: #17a348; }
+            .ep-listen::before { content: "▶"; font-size: 0.7rem; }
+            .ep-coming { flex-shrink: 0; font-size: 0.8rem; color: #94a3b8; font-style: italic; }
+
+            /* Schedule list */
+            .mission-schedule { padding-left: 1.2rem; margin: 0 0 1.5rem; }
+            .mission-schedule li { margin-bottom: 0.75rem; line-height: 1.5; }
         </style>
     </head>
     <body>
@@ -106,15 +115,30 @@
                     <p><a href="/sunday-studies/handouts/mission/Mission_SS_2026_1.pdf" target="_blank" rel="noopener" style="font-weight: 600;">📋 Download handout (PDF)</a></p>
                     <p>For more on our theology of mission, see <a href="/sunday-studies/total-christ.html">Total Christ</a> class #2, <em>Missional</em>.</p>
                     <h2>Teaching Series Episodes</h2>
-                    <ul class="list-table">
+                    <ul class=”episode-list”>
                         <li>
-                            <span class="list-number">1.</span>
-                            <span class="episode-title">Introduction to a Theology of Mission and Missional Living</span>
-                            <a href="https://open.spotify.com/episode/7sQEr5K27BSdey4oSWnBb2?si=83f3b15bc9884c37" target="_blank" rel="noopener">Listen</a>
+                            <span class=”ep-num”>1</span>
+                            <span class=”ep-title”>Introduction to a Theology of Mission and Missional Living <span style=”font-weight:400;color:#64748b;font-size:0.85em;”>— Mar 15</span></span>
+                            <a class=”ep-listen” href=”https://open.spotify.com/episode/7sQEr5K27BSdey4oSWnBb2” target=”_blank” rel=”noopener”>Listen</a>
+                        </li>
+                        <li>
+                            <span class=”ep-num”>2</span>
+                            <span class=”ep-title”>Practices of Missional Living and Hospitality <span style=”font-weight:400;color:#64748b;font-size:0.85em;”>— Mar 22</span></span>
+                            <span class=”ep-coming”>Coming soon</span>
+                        </li>
+                        <li>
+                            <span class=”ep-num”>3</span>
+                            <span class=”ep-title”>Special Guest: Matthew Denney (Jubilee New Haven) <span style=”font-weight:400;color:#64748b;font-size:0.85em;”>— Apr 12</span></span>
+                            <span class=”ep-coming”>Coming soon</span>
+                        </li>
+                        <li>
+                            <span class=”ep-num”>4</span>
+                            <span class=”ep-title”>Colleen &amp; Tyler Rice — Missional Practices in Neighborhood &amp; Spheres <span style=”font-weight:400;color:#64748b;font-size:0.85em;”>— Apr 19</span></span>
+                            <span class=”ep-coming”>Coming soon</span>
                         </li>
                     </ul>
                     <h2>Where We’re Going</h2>
-                    <ol class="mission-schedule">
+                    <ol class=”mission-schedule”>
                         <li>
                             <strong>March 15</strong> — Introduction to a Theology of Mission and Missional Living
                         </li>
@@ -123,7 +147,7 @@
                         </li>
                         <li>
                             <strong>April 12</strong> — Special Guest: Matthew Denney<br>
-                            <span style="font-size: 0.95em; color: #555;">“JMatt” is a member of Trinity Baptist Church and works as Executive Director of <a href="https://jubileenewhaven.org" target="_blank" rel="noopener">Jubilee New Haven</a>, an organization that exists to cultivate holistic flourishing in New Haven through community-building, spiritual formation, and housing justice.</span>
+                            <span style=”font-size: 0.9em; color: #555;”>”JMatt” is a member of Trinity Baptist Church and works as Executive Director of <a href=”https://jubileenewhaven.org” target=”_blank” rel=”noopener”>Jubilee New Haven</a>, an organization that exists to cultivate holistic flourishing in New Haven through community-building, spiritual formation, and housing justice.</span>
                         </li>
                         <li>
                             <strong>April 19</strong> — Colleen &amp; Tyler Rice lead us in discussion of missional practices in their neighborhood and spheres
