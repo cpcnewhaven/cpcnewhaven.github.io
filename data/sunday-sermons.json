@@ -3,6 +3,17 @@
   "description": "Weekly sermons from our Sunday worship services",
   "episodes": [
     {
+      "id": "26-03-23",
+      "title": "Simple, but Not Easy",
+      "author": "",
+      "scripture": "Luke 17:1-19",
+      "date": "2026-03-23",
+      "apple_podcasts_url": "",
+      "spotify_url": "https://open.spotify.com/episode/514qIjRimZaiVWv4GUovKB?si=8QvIQQzTSk-lyENtk5aKEQ",
+      "link": "https://open.spotify.com/episode/514qIjRimZaiVWv4GUovKB?si=8QvIQQzTSk-lyENtk5aKEQ",
+      "podcast-thumbnail_url": ""
+    },
+    {
       "id": "26-03-15",
       "title": "God or Money: Choose One",
       "author": "Rev. Craig Luekens",
