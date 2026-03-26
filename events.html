@@ -339,15 +339,53 @@
   </section>
 
   <section id="community-calendar">
-    <h1>CPC Community Calendar</h1>
-    <hr>
-    <iframe
-      src="https://calendar.google.com/calendar/embed?src=baf2h147ghi7nu8ifijjrt994k%40group.calendar.google.com&ctz=America%2FNew_York"
-      style="border: 0" width="100%" height="320px" frameborder="0" scrolling="no"></iframe>
+    <div class="calendar-container">
+      <h1>CPC Community Calendar</h1>
+      <hr>
+      <iframe
+        src="https://calendar.google.com/calendar/embed?src=baf2h147ghi7nu8ifijjrt994k%40group.calendar.google.com&ctz=America%2FNew_York"
+        style="border: 0" width="100%" height="450px" frameborder="0" scrolling="no"></iframe>
+    </div>
   </section>
 
 
   <style>
+    #community-calendar {
+      padding: 60px 20px;
+      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+      margin: 60px 0;
+    }
+
+    .calendar-container {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    #community-calendar h1 {
+      text-align: center;
+      font-size: 2.5em;
+      margin-bottom: 20px;
+      color: #333;
+      letter-spacing: 1px;
+    }
+
+    #community-calendar hr {
+      margin: 20px auto 40px;
+      max-width: 200px;
+      border: 2px solid #0078D4;
+    }
+
+    @media (max-width: 768px) {
+      #community-calendar {
+        padding: 40px 15px;
+        margin: 40px 0;
+      }
+
+      #community-calendar h1 {
+        font-size: 1.8em;
+      }
+    }
+
     .fall-events-section {
       padding: 40px 20px;
       max-width: 800px;
