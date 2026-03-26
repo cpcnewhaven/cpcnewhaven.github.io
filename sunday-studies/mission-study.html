@@ -22,17 +22,20 @@
             .center-content { max-width: 800px; margin: 0 auto; padding: 0 20px; }
             .center-content p { line-height: 1.6; margin-bottom: 1rem; }
 
-            /* Episode list */
-            .episode-list { list-style: none; padding: 0; margin: 0 0 1.5rem 0; border: 1px solid #e2e8f0; border-radius: 8px; overflow: hidden; }
-            .episode-list li { display: flex; align-items: center; gap: 12px; padding: 14px 16px; border-bottom: 1px solid #e2e8f0; background: #fff; }
-            .episode-list li:last-child { border-bottom: none; }
-            .episode-list li:hover { background: #f8fafc; }
-            .ep-num { flex-shrink: 0; width: 28px; height: 28px; border-radius: 50%; background: #1a2a4a; color: #fff; font-size: 0.8rem; font-weight: 700; display: flex; align-items: center; justify-content: center; }
-            .ep-title { flex: 1; font-weight: 600; color: #1a202c; font-size: 0.95rem; }
-            .ep-listen { flex-shrink: 0; display: inline-flex; align-items: center; gap: 6px; padding: 6px 14px; background: #1db954; color: #fff; border-radius: 20px; text-decoration: none; font-size: 0.82rem; font-weight: 600; white-space: nowrap; transition: background 0.2s; }
+            /* Episode table */
+            .episode-table { width: 100%; border-collapse: collapse; margin: 0 0 1.5rem 0; border: 1px solid #e2e8f0; border-radius: 8px; overflow: hidden; background: #fff; }
+            .episode-table thead { background: #1a2a4a; color: #fff; }
+            .episode-table th { padding: 14px 16px; text-align: left; font-weight: 600; font-size: 0.9rem; }
+            .episode-table td { padding: 14px 16px; border-bottom: 1px solid #e2e8f0; vertical-align: middle; }
+            .episode-table tbody tr:last-child td { border-bottom: none; }
+            .episode-table tbody tr:hover { background: #f8fafc; }
+            .ep-num { width: 28px; height: 28px; border-radius: 50%; background: #1db954; color: #fff; font-size: 0.8rem; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+            .ep-title { font-weight: 600; color: #1a202c; }
+            .ep-date { color: #64748b; font-size: 0.9rem; white-space: nowrap; }
+            .ep-listen { display: inline-flex; align-items: center; gap: 6px; padding: 6px 14px; background: #1db954; color: #fff; border-radius: 20px; text-decoration: none; font-size: 0.82rem; font-weight: 600; white-space: nowrap; transition: background 0.2s; }
             .ep-listen:hover { background: #17a348; }
             .ep-listen::before { content: "▶"; font-size: 0.7rem; }
-            .ep-coming { flex-shrink: 0; font-size: 0.8rem; color: #94a3b8; font-style: italic; }
+            .ep-coming { font-size: 0.8rem; color: #94a3b8; font-style: italic; }
 
             /* Schedule list */
             .mission-schedule { padding-left: 1.2rem; margin: 0 0 1.5rem; }
@@ -113,28 +116,42 @@
                     <p><a href="/sunday-studies/handouts/mission/Mission_SS_2026_1.pdf" target="_blank" rel="noopener" style="font-weight: 600;">📋 Download handout (PDF)</a></p>
                     <p>For more on our theology of mission, see <a href="/sunday-studies/total-christ.html">Total Christ</a> class #2, <em>Missional</em>.</p>
                     <h2>Teaching Series Episodes</h2>
-                    <ul class=”episode-list”>
-                        <li>
-                            <span class=”ep-num”>1</span>
-                            <span class=”ep-title”>Introduction to a Theology of Mission and Missional Living <span style=”font-weight:400;color:#64748b;font-size:0.85em;”>— Mar 15</span></span>
-                            <a class=”ep-listen” href=”https://open.spotify.com/episode/7sQEr5K27BSdey4oSWnBb2” target=”_blank” rel=”noopener”>Listen</a>
-                        </li>
-                        <li>
-                            <span class=”ep-num”>2</span>
-                            <span class=”ep-title”>Practices of Missional Living and Hospitality <span style=”font-weight:400;color:#64748b;font-size:0.85em;”>— Mar 22</span></span>
-                            <a class=”ep-listen” href=”https://open.spotify.com/episode/4SvX0rViIKJyJJlV4Lkjdi” target=”_blank” rel=”noopener”>Listen</a>
-                        </li>
-                        <li>
-                            <span class=”ep-num”>3</span>
-                            <span class=”ep-title”>Special Guest: Matthew Denney (Jubilee New Haven) <span style=”font-weight:400;color:#64748b;font-size:0.85em;”>— Apr 12</span></span>
-                            <span class=”ep-coming”>Coming soon</span>
-                        </li>
-                        <li>
-                            <span class=”ep-num”>4</span>
-                            <span class=”ep-title”>Colleen &amp; Tyler Rice — Missional Practices in Neighborhood &amp; Spheres <span style=”font-weight:400;color:#64748b;font-size:0.85em;”>— Apr 19</span></span>
-                            <span class=”ep-coming”>Coming soon</span>
-                        </li>
-                    </ul>
+                    <table class=”episode-table”>
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Episode</th>
+                                <th>Date</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class=”ep-num”>1</span></td>
+                                <td><span class=”ep-title”>Introduction to a Theology of Mission and Missional Living</span></td>
+                                <td><span class=”ep-date”>Mar 15</span></td>
+                                <td><a class=”ep-listen” href=”https://open.spotify.com/episode/7sQEr5K27BSdey4oSWnBb2” target=”_blank” rel=”noopener”>Listen</a></td>
+                            </tr>
+                            <tr>
+                                <td><span class=”ep-num”>2</span></td>
+                                <td><span class=”ep-title”>Practices of Missional Living and Hospitality</span></td>
+                                <td><span class=”ep-date”>Mar 22</span></td>
+                                <td><a class=”ep-listen” href=”https://open.spotify.com/episode/4SvX0rViIKJyJJlV4Lkjdi” target=”_blank” rel=”noopener”>Listen</a></td>
+                            </tr>
+                            <tr>
+                                <td><span class=”ep-num”>3</span></td>
+                                <td><span class=”ep-title”>Special Guest: Matthew Denney (Jubilee New Haven)</span></td>
+                                <td><span class=”ep-date”>Apr 12</span></td>
+                                <td><span class=”ep-coming”>Coming soon</span></td>
+                            </tr>
+                            <tr>
+                                <td><span class=”ep-num”>4</span></td>
+                                <td><span class=”ep-title”>Colleen &amp; Tyler Rice — Missional Practices in Neighborhood &amp; Spheres</span></td>
+                                <td><span class=”ep-date”>Apr 19</span></td>
+                                <td><span class=”ep-coming”>Coming soon</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
                     <h2>Where We’re Going</h2>
                     <ol class=”mission-schedule”>
                         <li>
