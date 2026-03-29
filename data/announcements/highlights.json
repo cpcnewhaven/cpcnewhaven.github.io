@@ -35,7 +35,7 @@
       "title": "Egg Hunt | Saturday Before Easter, 3/28 | 11 AM–1 PM",
       "description": "If your children love hunting for easter eggs, come join us at CPC for a youth-sponsored Easter Egg hunt. We will have plenty of eggs filled with all sorts of goodies, games to play, and plenty of fun to be had. Invite your friends, family, and neighbors. Rain date: Saturday, 4/4 @ 11am–1pm.",
       "dateEntered": "2026-03-01",
-      "active": "true",
+      "active": "false",
       "type": "easter",
       "category": "easter",
       "tag": "youth"
@@ -45,7 +45,7 @@
       "title": "Last Call! Easter Egg Hunt Donation",
       "description": "We are looking for a few people to bring a bag of wrapped candy (no nuts including peanuts) to CPC youth room during Sunday school by 9:30am 3/22 (THIS SUNDAY). The youth team will stuff eggs on 3/22. We stuff around 1000 eggs for the hunt, so a few donated bags would be a great help!",
       "dateEntered": "2026-03-21",
-      "active": "true",
+      "active": "false",
       "type": "easter",
       "category": "easter",
       "tag": "youth"
