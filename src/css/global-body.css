@@ -4280,17 +4280,17 @@ body:not(.mobile-nav-open) .mobile-navigation {
     }
 }
 
-/* Community calendar wrapper */
+/* Community calendar wrapper - height is driven by inline styles in events.html via .calendar-wrapper padding-top ratio */
 #community-calendar {
-    margin: 20px auto;
-    max-width: 1200px;
-    height: 400px;
-    padding: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    background-color: #f9f9f9;
-    position: relative;
-    z-index: 10;
+    margin: 0;
+    max-width: 100%;
+    height: auto;
+    padding: 0;
+    box-shadow: none;
+    border-radius: 0;
+    background-color: transparent;
+    position: static;
+    z-index: auto;
 }
 
 #community-calendar h1 {
@@ -4301,8 +4301,8 @@ body:not(.mobile-nav-open) .mobile-navigation {
 
 @media (max-width: 768px) {
     #community-calendar {
-        height: 350px;
-        padding: 10px;
+        height: auto;
+        padding: 0;
     }
 }
 
