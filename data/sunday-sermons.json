@@ -3,6 +3,17 @@
   "description": "Weekly sermons from our Sunday worship services",
   "episodes": [
     {
+      "id": "26-03-29",
+      "title": "Wake Up! But Wait!",
+      "author": "Rev. Craig Luekens",
+      "scripture": "Luke 17:20-37",
+      "date": "2026-03-29",
+      "apple_podcasts_url": "",
+      "spotify_url": "https://open.spotify.com/episode/0bn3CG4qVAb0LhmUwELRFW?si=4e6cd50a96aa40ff",
+      "link": "https://open.spotify.com/episode/0bn3CG4qVAb0LhmUwELRFW?si=4e6cd50a96aa40ff",
+      "podcast-thumbnail_url": ""
+    },
+    {
       "id": "26-03-23",
       "title": "Simple, but Not Easy",
       "author": "Rev. Craig Luekens",
