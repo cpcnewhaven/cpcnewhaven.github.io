@@ -12,7 +12,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(135deg, #6B73FF 0%, #000DFF 100%);
+    /* Align hero colors with other subpages (teal gradient) */
+    background: linear-gradient(135deg, #004f6f 0%, #003c6d 100%);
     position: relative;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
     border-radius: 0 0 24px 24px;
@@ -25,10 +26,11 @@ body {
     letter-spacing: 1px;
     font-family: inherit;
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.08);
+    line-height: 1.2;
 }
 @media (max-width: 768px) {
-    .splash-hero { height: 20vh; }
-    .hero-content h1 { font-size: 1.5rem; }
+    .splash-hero { min-height: 53vh; height: auto; padding-top: calc(env(safe-area-inset-top, 0) + 28px); }
+    .hero-content h1 { font-size: 1.7rem; }
 }
 
 .main-content-a {
@@ -331,28 +333,42 @@ body {
 .hamburger-menu-button-container {
     display: none;
     position: fixed;
-    top: 10px;
-    right: 10px;
-    z-index: 3000;
+    top: 16px;
+    right: 16px;
+    z-index: 1000;
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    background: rgba(0, 60, 109, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15), 0 1px 3px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
-    background: rgba(255, 255, 255, 0.9);
-    padding: 6px;
-    border-radius: 4px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
-.hamburger-menu-button-container i { font-size: 18px; color: #003366; }
+.hamburger-menu-button-container:hover {
+    background: rgba(0, 34, 68, 0.98);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2), 0 2px 6px rgba(0, 0, 0, 0.15);
+    transform: translateY(-1px);
+}
+.hamburger-menu-button-container i { font-size: 18px; color: #ffffff !important; transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1); }
+.hamburger-menu-button-container:hover i { color: #ffffff; transform: scale(1.05); }
 .mobile-navigation {
     display: block;
     position: fixed;
     top: 0;
     right: -100%;
     width: 80%;
-    max-width: 220px;
+    max-width: 280px;
     height: 100vh;
-    background: white;
+    /* Match homepage dark gradient panel */
+    background: linear-gradient(135deg, rgba(0, 15, 50, 0.98) 0%, rgba(0, 34, 68, 0.98) 100%);
+    backdrop-filter: blur(20px);
     z-index: 3001;
     padding: 10px;
-    box-shadow: -2px 0 5px rgba(0,0,0,0.04);
+    box-shadow: -4px 0 24px rgba(0,0,0,0.3);
     transition: right 0.3s ease-in-out;
     overflow-y: auto;
 }
@@ -362,13 +378,28 @@ body {
     background: none;
     border: none;
     font-size: 18px;
-    color: #003366;
+    color: rgba(255, 255, 255, 0.9) !important;
     cursor: pointer;
     padding: 2px;
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: color 0.2s ease;
 }
+.mobile-nav-links { list-style: none; padding: 0; margin: 0; }
+.mobile-nav-links li { margin: 5px 0; }
+.mobile-nav-links a { 
+    color: rgba(255, 255, 255, 0.92) !important;
+    text-decoration: none;
+    font-size: 15px;
+    display: block;
+    padding: 12px 14px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 0;
+    transition: all 0.2s ease;
+    background: transparent;
+}
+.mobile-nav-links a:hover { background: rgba(255, 255, 255, 0.1); color: #ffffff; transform: translateX(3px); }
 .mobile-nav-links { list-style: none; padding: 0; margin: 0; }
 .mobile-nav-links li { margin: 5px 0; }
 .mobile-nav-links a {
@@ -384,9 +415,7 @@ body {
 .mobile-nav-links a:hover { background: rgba(0,0,0,0.03); transform: translateX(3px); }
 @media (max-width: 768px) {
     .main-content-a { padding-top: 20px; padding-bottom: 20px; }
-    .hamburger-menu-button-container { display: block; position: fixed; top: 10px; right: 10px; z-index: 3000; cursor: pointer; background: rgba(255, 255, 255, 0.95); padding: 8px; border-radius: 6px; box-shadow: 0 1px 6px rgba(0,0,0,0.04); transition: all 0.3s ease; }
-    .hamburger-menu-button-container:hover { transform: scale(1.03); box-shadow: 0 2px 8px rgba(0,0,0,0.07); }
-    .hamburger-menu-button-container i { font-size: 18px; color: #003366; transition: all 0.3s ease; }
+    .hamburger-menu-button-container { display: block; }
     .main-navigation { display: none; }
     .podcast-cards { flex-direction: column; gap: 8px; }
     .podcast-card { min-width: 0; max-width: 100%; padding: 0.7rem; }
