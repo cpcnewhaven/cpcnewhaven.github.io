@@ -1,6 +1,16 @@
 {
   "announcements": [
     {
+      "id": "2026-042",
+      "title": "Mercy Day | May 2 | Volunteers and Mercy Projects Needed!",
+      "description": "To truly love and serve one another, we’ll tackle projects for those who need any help. Each project will have a dedicated project lead/captain who will give instructions to volunteers. <a href=\"https://forms.gle/3aCpgoGMborM4KAP6\" target=\"_blank\">Sign up here!</a>",
+      "dateEntered": "2026-04-03",
+      "active": "true",
+      "type": "event",
+      "category": "event",
+      "tag": "mercy"
+    },
+    {
       "id": "2026-037",
       "title": "Interested in being involved in the Good Friday service?",
       "description": "Readers and musicians needed! Please email admin@cpcnewhaven.org if you’re interested in being involved.",
@@ -22,8 +32,8 @@
     },
     {
       "id": "2026-035",
-      "title": "\"Does God Lament?\" - Good Friday service | 4/3 @ 6:30pm",
-      "description": "Readers and musicians needed — please email admin@cpcnewhaven.org if you're interested in being involved. And consider who you can invite to the service!",
+      "title": "Good Friday Service | TONIGHT, 4/3 @ 6:30pm | “Does God Lament?”",
+      "description": "A service open to seekers and skeptics, we’ll be focusing on the heart of God shown in the cross.",
       "dateEntered": "2026-03-21",
       "active": "true",
       "type": "easter",
