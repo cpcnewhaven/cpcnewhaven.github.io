@@ -44,42 +44,21 @@ class HighlightsManager {
             return;
         }
 
-        const easterSection = document.getElementById('easter-highlights');
-        const easterContainer = document.querySelector('.easter-highlights-content');
-
         // Filter and sort announcements
         const activeAnnouncements = this.filterActiveAnnouncements(announcements);
         const sortedAnnouncements = this.sortAnnouncements(activeAnnouncements);
 
-        // Separate into Easter and General
-        const easterAnnouncements = sortedAnnouncements.filter(a => a.type === 'easter' || a.category === 'easter');
-        const generalAnnouncements = sortedAnnouncements.filter(a => a.type !== 'easter' && a.category !== 'easter');
-
-        console.log(`Filtered to ${sortedAnnouncements.length} active announcements (${easterAnnouncements.length} Easter, ${generalAnnouncements.length} General)`);
-
-        // Handle Easter Section
-        if (easterSection && easterContainer) {
-            easterContainer.innerHTML = '';
-            if (easterAnnouncements.length > 0) {
-                easterSection.style.display = 'block';
-                easterAnnouncements.forEach(announcement => {
-                    const element = this.createAnnouncementElement(announcement);
-                    easterContainer.appendChild(element);
-                });
-            } else {
-                easterSection.style.display = 'none';
-            }
-        }
+        console.log(`Filtered to ${sortedAnnouncements.length} active announcements`);
 
         // Handle General Section
         this.container.innerHTML = '';
-        generalAnnouncements.forEach(announcement => {
+        sortedAnnouncements.forEach(announcement => {
             const element = this.createAnnouncementElement(announcement);
             this.container.appendChild(element);
         });
 
-        // Add no content message if no general announcements
-        if (generalAnnouncements.length === 0) {
+        // Add no content message if no announcements
+        if (sortedAnnouncements.length === 0) {
             this.displayNoContent();
         }
     }

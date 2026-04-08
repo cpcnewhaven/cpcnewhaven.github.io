@@ -69,40 +69,6 @@
     transform: translateY(-2px);
 }
 
-/* Easter Distinct Feature Styling - Matte Look */
-.highlight-card.easter {
-    border: 2px solid #9c27b0;
-    background: #fdfbff;
-    position: relative;
-    box-shadow: 4px 4px 0px #9c27b0;
-    animation: fadeInUp 0.6s ease-out, borderPulse 3s infinite ease-in-out;
-}
-
-@keyframes borderPulse {
-    0% { box-shadow: 4px 4px 0px #9c27b0; }
-    50% { box-shadow: 4px 4px 12px rgba(156, 39, 176, 0.4); }
-    100% { box-shadow: 4px 4px 0px #9c27b0; }
-}
-
-.highlight-card.easter .highlight-title {
-    color: #4a148c;
-    border-bottom: 2px solid #9c27b0;
-    padding-bottom: 8px;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
-
-.highlight-card.easter .highlight-description {
-    color: #4a148c;
-    font-weight: 500;
-}
-
-.highlight-card.easter:hover {
-    border-color: #7b1fa2;
-    box-shadow: 6px 6px 0px #7b1fa2;
-    transform: translate(-2px, -2px);
-}
 
 .highlight-image-container {
     width: 100%;

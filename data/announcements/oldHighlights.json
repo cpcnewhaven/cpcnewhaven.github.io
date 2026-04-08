@@ -109,6 +109,26 @@
       "type": "event",
       "category": "event",
       "tag": "youth"
+    },
+    {
+      "id": "2026-036",
+      "title": "Easter Fellowship Meals | Sunday, 4/5",
+      "description": "Sign up now to Host or Join others in the congregation for an Easter meal. All are welcome! Easter is an opportunity for us to celebrate the risen King as a family. What better way to do this than sitting around a table with family and friends giving thanks to Jesus for his wonderful gift of salvation?",
+      "dateEntered": "2026-03-01",
+      "active": "false",
+      "type": "easter",
+      "category": "easter",
+      "tag": "fellowship"
+    },
+    {
+      "id": "2026-041",
+      "title": "No Sunday School or Fellowship Lunch | March 29 & April 5",
+      "description": "Worship service only on March 29 and April 5. No Sunday School or Fellowship Lunch on those two Sundays.",
+      "dateEntered": "2026-03-21",
+      "active": "false",
+      "type": "announcement",
+      "category": "announcement",
+      "tag": "schedule"
     }
   ]
 }
