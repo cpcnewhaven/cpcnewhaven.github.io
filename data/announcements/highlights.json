@@ -1,10 +1,20 @@
 {
   "announcements": [
     {
+      "id": "2026-043",
+      "title": "Emotions & Spirituality | New Adult Class Starts Next Sunday",
+      "description": "What do my emotions have to do with my faith? Does God care about my feelings? Should I always have positive feelings for God, and what should I do when I don’t? Why does my heart seem to change so little, even after being a Christian for years? What should Christian transformation and sanctification look like? We’ll be discussing these questions and more about emotionally healthy spirituality in our 4-week Adult Sunday class that starts this Sunday. All are welcome! 9:30 in the downstairs Fellowship Hall.",
+      "dateEntered": "2026-04-17",
+      "active": "true",
+      "type": "event",
+      "category": "event",
+      "tag": "sunday-school"
+    },
+    {
       "id": "2026-042",
-      "title": "Mercy Day | May 2 | Volunteers and Mercy Projects Needed!",
-      "description": "To truly love and serve one another, we’ll tackle projects for those who need any help. Each project will have a dedicated project lead/captain who will give instructions to volunteers. <a href=\"https://forms.gle/3aCpgoGMborM4KAP6\" target=\"_blank\">Sign up here!</a>",
-      "dateEntered": "2026-04-03",
+      "title": "Mercy Day | May 2 | Volunteers and Mercy Projects Needed! | Sign up here!",
+      "description": "To truly love and serve one another, we’ll tackle projects for those who need any help. Each project will have a dedicated project lead/captain who will give instructions to volunteers. <a href=\"https://docs.google.com/forms/d/e/1FAIpQLSePojMW7eLqoZMS1xRD2zr1DkRinxA0l5MWIVRN8ikUTYu74A/viewform\" target=\"_blank\">Sign up here!</a>",
+      "dateEntered": "2026-04-17",
       "active": "true",
       "type": "event",
       "category": "event",
@@ -47,7 +57,7 @@
       "title": "New Adult Sunday Studies Class Begins Sunday Feb. 15",
       "description": "We're starting a four-week class titled \"Missionally Living in our Neighborhoods,\" which will include a theology of mission as well as guest speakers sharing their wisdom and passion about mission. All are welcome, 9:30am in the Fellowship Hall.",
       "dateEntered": "2026-02-10",
-      "active": "true",
+      "active": "false",
       "type": "event",
       "category": "event",
       "tag": "sunday-school"
