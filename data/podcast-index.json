@@ -189,6 +189,17 @@
         "title": "Sunday Sermons",
         "episodes": [
             {
+                "id": "26-04-19",
+                "title": "How Difficult! How Easy! Receiving the Kingdom of God",
+                "author": "Rev. Craig Luekens",
+                "scripture": "Luke 18: 9-30",
+                "date": "2026-04-19",
+                "apple_podcasts_url": "",
+                "spotify_url": "https://open.spotify.com/episode/4Q7RCUqzXQxlxVddr0VbHm?si=f0AewhjJTpaTBrZQoUKevw",
+                "link": "https://open.spotify.com/episode/4Q7RCUqzXQxlxVddr0VbHm?si=f0AewhjJTpaTBrZQoUKevw",
+                "podcast-thumbnail_url": ""
+            },
+            {
                 "id": "26-01-25",
                 "title": "A Life of Readiness",
                 "author": "Rev. Jerry Ornelas",
@@ -712,6 +723,15 @@
     "beyond": {
         "title": "Beyond",
         "episodes": [
+            {
+                "number": 65,
+                "title": "Beyond the Sunday Sermon | Luke 18: 9-30 | With Rev. Jerry Ornelas and Rev. Craig Luekens",
+                "link": "https://open.spotify.com/episode/5kbOlaGftd6nQzp8nfSWj8?si=dZi5jfxDR4KVcX0nn166RA",
+                "guest": "Rev. Jerry Ornelas and Rev. Craig Luekens",
+                "date_added": "2026-04-20",
+                "season": "spring 2026",
+                "scripture": "Luke 18: 9-30"
+            },
         
             {
                 "number": 13,
