@@ -1,0 +1,188 @@
+/* What's New Section Styling */
+.whats-new-section {
+    padding: 80px 20px;
+    background: linear-gradient(180deg, #ffffff 0%, #f4f7f9 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.whats-new-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.whats-new-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.whats-new-header h2 {
+    font-size: 3rem;
+    color: #1a1a1a;
+    margin-bottom: 15px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+.whats-new-header p {
+    font-size: 1.2rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.whats-new-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+/* Card Styling */
+.whats-new-card {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+}
+
+.whats-new-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #0078D4, #00bcf2);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.whats-new-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.whats-new-card:hover::before {
+    opacity: 1;
+}
+
+.whats-new-card .card-tag {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 100px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 20px;
+    background: rgba(0, 120, 212, 0.1);
+    color: #0078D4;
+}
+
+.whats-new-card.tag-podcast .card-tag {
+    background: rgba(131, 58, 180, 0.1);
+    color: #833ab4;
+}
+
+.whats-new-card.tag-announcement .card-tag {
+    background: rgba(253, 29, 29, 0.1);
+    color: #fd1d1d;
+}
+
+.whats-new-card.tag-sermon .card-tag {
+    background: rgba(0, 188, 242, 0.1);
+    color: #00bcf2;
+}
+
+.whats-new-card h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.3;
+    margin-bottom: 15px;
+    color: #1a1a1a;
+}
+
+.whats-new-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 25px;
+    flex-grow: 1;
+}
+
+.whats-new-card .card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.whats-new-card .card-date {
+    font-size: 0.85rem;
+    color: #999;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.whats-new-card .card-link {
+    font-weight: 600;
+    color: #0078D4;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: gap 0.2s ease;
+}
+
+.whats-new-card:hover .card-link {
+    gap: 12px;
+}
+
+/* Loading State */
+.whats-new-loading {
+    text-align: center;
+    padding: 50px;
+    color: #999;
+}
+
+.whats-new-loading i {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+/* Error State */
+.whats-new-error {
+    text-align: center;
+    padding: 50px;
+    color: #d13438;
+    background: rgba(209, 52, 56, 0.05);
+    border-radius: 12px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .whats-new-section {
+        padding: 50px 15px;
+    }
+
+    .whats-new-header h2 {
+        font-size: 2.2rem;
+    }
+
+    .whats-new-grid {
+        grid-template-columns: 1fr;
+    }
+}

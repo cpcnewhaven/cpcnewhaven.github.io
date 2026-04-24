@@ -1,8 +1,30 @@
 {
   "announcements": [
     {
+      "id": "2026-044-college",
+      "title": "College Event This Sunday! | CPC Fellowship Hall, 5pm-7pm",
+      "description": "Undergraduate students—join us this Sunday from 5–7 PM in the CPC Fellowship Hall for a Pizza Cook-Off! We’ll provide the dough, sauce, and cheese—just bring your most creative (or random) toppings and come ready to compete. There will also be games and time to hang out. All are welcome.",
+      "dateEntered": "2026-04-24",
+      "active": "true",
+      "type": "event",
+      "category": "event",
+      "tag": "college"
+    },
+    {
+      "id": "2026-040",
+      "title": "Tomorrow! Young Adults’ Ozdust Ball | 6:00-10:00 PM | CPC Fellowship Hall",
+      "description": "We are hosting a ball to reach out to the young adult students and professionals inside our church and in the wider New Haven community. We also hope this will be a chance for those who have not yet come to church to experience our community in a fun way. Please invite friends who fall into this category! There will be food, music and dancing, and the theme is the land of Oz.<br><br><a href=\"https://partiful.imgix.net/external/user/GpJGatjzQAZA6L6xI7wtwziXjl93/fRLKa-QyxLePlBM7thoEW?fit=clip&w=800&auto=format\" target=\"_blank\">RSVP here!</a><br><br>Reach out to Josh Sanders, Marney Walker or Ellen Martin if you’d like to volunteer with making decorations or clean-up!",
+      "dateEntered": "2026-04-12",
+      "featuredImage": "https://partiful.imgix.net/external/user/GpJGatjzQAZA6L6xI7wtwziXjl93/fRLKa-QyxLePlBM7thoEW?fit=clip&w=800&auto=format",
+      "imageDisplayType": "poster",
+      "active": "true",
+      "type": "event",
+      "category": "event",
+      "tag": "young-adults"
+    },
+    {
       "id": "2026-043",
-      "title": "Emotions & Spirituality | New Adult Class Starts Next Sunday",
+      "title": "Emotions & Spirituality | New Adult Class Starts This Sunday",
       "description": "What do my emotions have to do with my faith? Does God care about my feelings? Should I always have positive feelings for God, and what should I do when I don’t? Why does my heart seem to change so little, even after being a Christian for years? What should Christian transformation and sanctification look like? We’ll be discussing these questions and more about emotionally healthy spirituality in our 4-week Adult Sunday class that starts this Sunday. All are welcome! 9:30 in the downstairs Fellowship Hall.",
       "dateEntered": "2026-04-17",
       "active": "true",
@@ -21,6 +43,46 @@
       "tag": "mercy"
     },
     {
+      "id": "2026-044",
+      "title": "Congregational Meeting | May 3 During Lunch",
+      "description": "Our bi-annual congregational meeting takes place next Sunday, May 3rd after the worship service in the Fellowship Hall. We will hear a recap of all that God has done this year, and discuss plans for the future. All are welcome to attend, and members are highly encouraged, though there will be no official voting.",
+      "dateEntered": "2026-04-24",
+      "active": "true",
+      "type": "event",
+      "category": "event",
+      "tag": "meeting"
+    },
+    {
+      "id": "2026-045",
+      "title": "Lost and Found",
+      "description": "It is that time of year again to clear out the clutter and return lost items to their owners. The table will be set up for 3 weeks. Owners will have the first 2 weeks to retrieve their lost belongings. If you know who it belongs to, let them know or tag it. On the third week, the remaining items can find new owners with anyone who can use them and wish to take them home. All leftovers items will be donated.",
+      "dateEntered": "2026-04-24",
+      "active": "true",
+      "type": "announcement",
+      "category": "announcement",
+      "tag": "community"
+    },
+    {
+      "id": "2026-046",
+      "title": "I Heart New Haven Day! | Saturday, June 6",
+      "description": "Mark your calendars for June 6 for Bridges of Hope’s annual I Heart New Haven Day! This is an exciting day joining with other churches around the city to love the greater New Haven area with projects such as clean up, gardening, painting, and repair.",
+      "dateEntered": "2026-04-24",
+      "active": "true",
+      "type": "event",
+      "category": "event",
+      "tag": "mercy"
+    },
+    {
+      "id": "2026-047",
+      "title": "The CPC College Internship Program",
+      "description": "An opportunity for undergraduate students who desire to grow deeper in theology, godliness, and participation in ministry. Students will engage in theological training, personal formation, and missional opportunities in New Haven. The goal is to ground participants in sound doctrine, cultivate personal godliness, and, where applicable, help discern a call to ministry. The program offers two tracks: a Ministry Track for those exploring vocational ministry and a Formation Track for those seeking deeper theological and spiritual growth. Open to all undergraduate students. For more information or to apply, contact Pastor Jerry at jerry.ornelas@cpcnewhaven.org. Application deadline: Sunday, May 3rd.",
+      "dateEntered": "2026-04-24",
+      "active": "true",
+      "type": "announcement",
+      "category": "college",
+      "tag": "internship"
+    },
+    {
       "id": "2026-039",
       "title": "Pastor's Book Pick | Life Together, by Dietrich Bonhoeffer",
       "description": "A modern classic, we're treading into deep waters with this one! Written by pastor-theologian and martyr, Life Together is Bonhoeffer's vision for the Christian life, both individually and communally. Copies in the foyer — suggested donation of $15.",
@@ -31,46 +93,24 @@
       "tag": "books"
     },
     {
-      "id": "2026-040",
-      "title": "Young Adults' Ozdust Ball | Saturday, April 25 | 6:30–10:00 PM | CPC Fellowship Hall",
-      "description": "We are hosting a ball to reach out to the young adult students and professionals inside our church and in the wider New Haven community. We also hope this will be a chance for those who have not yet come to church to experience our community in a fun way. Please invite friends! There will be food, music and dancing, and the theme is the land of Oz.<br><br><a href=\"https://partiful.imgix.net/external/user/GpJGatjzQAZA6L6xI7wtwziXjl93/fRLKa-QyxLePlBM7thoEW?fit=clip&w=800&auto=format\" target=\"_blank\">RSVP here!</a><br><br>Reach out to Josh Sanders, Marney Walker, or Ellen Martin if you'd like to volunteer with decorations or clean-up!",
-      "dateEntered": "2026-04-12",
-      "featuredImage": "https://partiful.imgix.net/external/user/GpJGatjzQAZA6L6xI7wtwziXjl93/fRLKa-QyxLePlBM7thoEW?fit=clip&w=800&auto=format",
-      "imageDisplayType": "poster",
-      "active": "true",
-      "type": "event",
-      "category": "event",
-      "tag": "young-adults"
-    },
-    {
-      "id": "2026-029",
-      "title": "Interested in Joining the Body of Christ at CPC?",
-      "description": "We consider the church an essential element of the gospel, so joining CPC as a member is a way to truly join the body of Christ, in all its blessings and with all its flaws! Before joining, you'll meet one-on-one with a pastor and then discuss how you've come to know Christ with the Shepherd Leaders. Contact Alexis Vano (admin@cpcnewhaven.org) to begin the process. Our next joining will take place on Sunday, April 19.",
-      "dateEntered": "2026-02-10",
-      "active": "true",
-      "type": "announcement",
-      "category": "membership",
-      "tag": "membership"
-    },
-    {
-      "id": "2026-030",
-      "title": "New Adult Sunday Studies Class Begins Sunday Feb. 15",
-      "description": "We're starting a four-week class titled \"Missionally Living in our Neighborhoods,\" which will include a theology of mission as well as guest speakers sharing their wisdom and passion about mission. All are welcome, 9:30am in the Fellowship Hall.",
-      "dateEntered": "2026-02-10",
-      "active": "false",
-      "type": "event",
-      "category": "event",
-      "tag": "sunday-school"
-    },
-    {
       "id": "2026-026",
-      "title": "Regular Sunday Schedule",
-      "description": "<strong>**Worship service only 03/29 & 04/05</strong><br><br><strong>8:30am | Prayer in the Parlor</strong><br><br><strong>9:30am | Children’s Sunday School</strong><br><br><strong>9:30am | Adult Sunday Studies</strong><br><br><strong>10:30am | Worship Service</strong><br><br><strong>12:00pm | Fellowship Lunch</strong>",
+      "title": "Regular Sunday Schedule | Resumes Sunday!",
+      "description": "8:30am | Prayer in the Parlor<br>9:30am | Children’s Sunday School<br>9:30am | Adult Sunday Studies<br>10:30am | Worship Service<br>12:00pm | Fellowship Lunch",
       "dateEntered": "2026-01-29",
       "active": "true",
       "type": "ongoing",
       "category": "ongoing",
       "tag": "schedule"
+    },
+    {
+      "id": "2026-029",
+      "title": "Interested in Joining the Body of Christ at CPC?",
+      "description": "We consider the church an essential element of the gospel, so joining CPC as a member is a way to truly join the body of Christ, in all its blessings and with all its flaws! Before joining, you'll meet one-on-one with a pastor and then discuss how you've come to know Christ with the Shepherd Leaders. Contact Alexis Vano (admin@cpcnewhaven.org) to begin the process.",
+      "dateEntered": "2026-02-10",
+      "active": "true",
+      "type": "announcement",
+      "category": "membership",
+      "tag": "membership"
     },
     {
       "id": "2026-027",

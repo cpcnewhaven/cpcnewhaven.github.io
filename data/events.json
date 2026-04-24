@@ -1,20 +1,28 @@
 {
   "events": [
     {
+      "date": "26 Apr 2026",
+      "description": "College Event This Sunday! Pizza Cook-Off, 5:00pm - 7:00pm, Fellowship Hall"
+    },
+    {
+      "date": "25 Apr 2026",
+      "description": "Young Adults' Ozdust Ball, 6:00pm - 10:00pm, Fellowship Hall"
+    },
+    {
       "date": "2 May 2026",
       "description": "Mercy Day, 9:00am - 12:00pm, Church-Wide Projects"
     },
     {
+      "date": "3 May 2026",
+      "description": "Congregational Meeting, After Worship, Fellowship Hall"
+    },
+    {
+      "date": "6 Jun 2026",
+      "description": "I Heart New Haven Day! Bridges of Hope, Church-Wide"
+    },
+    {
       "date": "19 Apr 2026",
       "description": "New Adult Sunday Class: Emotions & Spirituality, 9:30am, Fellowship Hall"
-    },
-    {
-      "date": "22 Dec 2024",
-      "description": "This Sunday is welcome sunday, Church-Wide, 10:30am – 12:00pm"
-    },
-    {
-      "date": "6 Dec 2025",
-      "description": "Work Day, Decor Setup & Chili Cookoff!, Church-Wide, 9:00am – 12:00pm"
     }
   ]
 }
