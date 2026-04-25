@@ -416,53 +416,58 @@ button:hover {
     font-size: 20px;
 }
 
-/* Add styles for the footer */
 footer {
+    background: transparent;
+    color: #4a5568;
+    padding: 36px 24px 24px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    background-color: #f8f8f8;
-    /* Light background color */
-    padding: 20px 0;
-    /* Vertical padding */
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
-    /* Subtle shadow for depth */
-    border-top: 1px solid #ddd;
-    /* Top border for separation */
+    gap: 16px;
+    border-top: 1px solid #e2e8f0;
+}
+
+footer .footer-content-logo {
+    margin-bottom: 4px;
 }
 
 footer img {
-    width: 100px;
-    /* Adjust the size of the logo */
+    width: 72px;
     height: auto;
-    margin-bottom: 10px;
-    /* Space below the logo */
+    opacity: 0.9;
 }
 
 footer p {
-    font-size: 14px;
-    /* Smaller font size for text */
-    color: #333;
-    /* Dark text color */
+    font-size: 12.5px;
+    color: #718096;
     margin: 0;
-    /* Remove default margin */
     text-align: center;
-    /* Center text */
+    line-height: 1.6;
+}
+
+footer .footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px 18px;
+    font-size: 12.5px;
 }
 
 footer a {
-    color: var(--cpc-blue);
-    /* Link color */
+    color: #2b6cb0;
     text-decoration: none;
-    /* Remove underline */
-    transition: color 0.3s ease;
-    /* Smooth transition for hover */
+    transition: color 0.2s ease;
 }
 
 footer a:hover {
-    color: var(--cpc-blue-dark);
-    /* Darker color on hover */
+    color: #2c5282;
+    text-decoration: underline;
+}
+
+footer .footer-copyright {
+    font-size: 11.5px;
+    color: #a0aec0;
+    margin-top: 4px;
 }
 
 .heading-1 {
@@ -2676,7 +2681,7 @@ body:not(.mobile-nav-open) .mobile-navigation {
 }
 
 .footer-content-logo img {
-    width: 100px;
+    width: 72px;
 }
 
 

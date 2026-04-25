@@ -1,21 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
 #footer-cta-a {
-    background: #050c18;
+    background: #f5f7fa;
     padding: 80px 24px;
     text-align: center;
-    color: #ffffff;
-    border-top: 1px solid rgba(120, 180, 255, 0.1);
+    color: #1a202c;
+    border-top: 1px solid #e2e8f0;
 }
 
 .form-container {
     max-width: 800px;
     margin: 0 auto;
     padding: 48px 32px;
-    background: #0a1930;
-    border: 1.5px solid rgba(120, 180, 255, 0.15);
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
     border-radius: 12px;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.07);
 }
 
 #footer-cta-a h1,
@@ -23,7 +23,7 @@
     font-family: 'Inter', sans-serif;
     font-size: 2.2rem;
     font-weight: 700;
-    color: #ffffff;
+    color: #1a202c;
     margin-bottom: 1rem;
     margin-top: 0;
     letter-spacing: -0.5px;
@@ -32,7 +32,7 @@
 #footer-cta-a .body-text {
     font-family: 'Inter', sans-serif;
     font-size: 1rem;
-    color: rgba(255, 255, 255, 0.85);
+    color: #4a5568;
     margin-bottom: 2rem;
     line-height: 1.6;
     max-width: 600px;
@@ -42,7 +42,7 @@
 
 #footer-cta-a .form-container .body-text,
 #footer-cta-a .form-container p {
-    color: rgba(255, 255, 255, 0.85) !important;
+    color: #4a5568 !important;
 }
 
 .neumorphic-form {
@@ -57,29 +57,30 @@
     font-family: 'Inter', sans-serif;
     font-size: 1rem;
     padding: 12px 20px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid #cbd5e0;
     border-radius: 8px;
-    background: rgba(255, 255, 255, 0.03);
-    color: #ffffff;
+    background: #f7fafc;
+    color: #1a202c;
     transition: all 0.2s ease;
 }
 
 .neumorphic-form input::placeholder {
-    color: rgba(255, 255, 255, 0.4);
+    color: #a0aec0;
 }
 
 .neumorphic-form input:focus {
     outline: none;
-    border-color: rgba(120, 180, 255, 0.5);
-    background: rgba(255, 255, 255, 0.06);
+    border-color: #4299e1;
+    background: #ffffff;
+    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.15);
 }
 
 .neumorphic-form button {
     font-family: 'Inter', sans-serif;
     font-size: 1rem;
     font-weight: 600;
-    color: #050c18;
-    background: #ffffff;
+    color: #ffffff;
+    background: #2b6cb0;
     border: none;
     border-radius: 8px;
     padding: 12px 28px;
@@ -88,9 +89,9 @@
 }
 
 .neumorphic-form button:hover {
-    background: #e7f1ff;
+    background: #2c5282;
     transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 12px rgba(43, 108, 176, 0.3);
 }
 
 @media (min-width: 640px) {
