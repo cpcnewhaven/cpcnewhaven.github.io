@@ -189,6 +189,17 @@
         "title": "Sunday Sermons",
         "episodes": [
             {
+                "id": "26-04-26",
+                "title": "Salvation Has Come!",
+                "author": "Rev. Craig Luekens",
+                "scripture": "Luke 18:31-19:10",
+                "date": "2026-04-26",
+                "apple_podcasts_url": "",
+                "spotify_url": "https://open.spotify.com/episode/25YXGQzbLzTJS3epDIhHkS?si=THftvwsUSOqTJOWsmGT5hA",
+                "link": "https://open.spotify.com/episode/25YXGQzbLzTJS3epDIhHkS?si=THftvwsUSOqTJOWsmGT5hA",
+                "podcast-thumbnail_url": ""
+            },
+            {
                 "id": "26-04-19",
                 "title": "How Difficult! How Easy! Receiving the Kingdom of God",
                 "author": "Rev. Craig Luekens",
