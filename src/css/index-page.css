@@ -827,3 +827,228 @@
         gap: 10px;
     }
 }
+/* Emotions & Spirituality Featured Widget */
+.featured-study-widget-section {
+    padding: 60px 20px;
+    background: linear-gradient(180deg, #ffffff 0%, #f0f4f8 100%);
+}
+
+.featured-study-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.featured-study-card {
+    display: flex;
+    background: white;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.featured-study-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.12);
+}
+
+.featured-study-image {
+    flex: 1.2;
+    min-height: 400px;
+    position: relative;
+}
+
+.featured-study-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.featured-study-info {
+    flex: 1;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: white;
+}
+
+.featured-study-eyebrow {
+    display: inline-block;
+    color: #0078D4;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.85rem;
+    margin-bottom: 15px;
+}
+
+.featured-study-title {
+    font-size: 2.8rem;
+    color: #1a1a1a;
+    margin-bottom: 20px;
+    line-height: 1.1;
+    font-weight: 800;
+}
+
+.featured-study-text {
+    font-size: 1.15rem;
+    color: #4a4a4a;
+    line-height: 1.7;
+    margin-bottom: 24px;
+}
+
+.featured-series-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 28px;
+}
+
+.featured-series-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 12px 14px;
+    border: 1px solid rgba(0, 60, 109, 0.1);
+    border-radius: 12px;
+    background: #f8fafc;
+    color: #333;
+    text-decoration: none;
+}
+
+.featured-series-row.is-available {
+    background: #eef7f1;
+    border-color: rgba(30, 125, 66, 0.2);
+}
+
+.featured-series-row.is-available:hover {
+    background: #e4f3e8;
+    transform: translateY(-1px);
+}
+
+.series-number {
+    width: 32px;
+    height: 32px;
+    flex: 0 0 32px;
+    border-radius: 50%;
+    background: #003c6d;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+}
+
+.series-copy {
+    display: flex;
+    flex: 1;
+    min-width: 0;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.series-copy strong {
+    color: #1a1a1a;
+    font-size: 0.98rem;
+    line-height: 1.25;
+}
+
+.series-copy span {
+    color: #667085;
+    font-size: 0.9rem;
+}
+
+.featured-series-row .fa-spotify {
+    color: #1db954;
+    font-size: 1.35rem;
+}
+
+.featured-study-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.featured-study-cta {
+    align-self: flex-start;
+    background: #1a1a1a;
+    color: white;
+    padding: 16px 32px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.featured-study-secondary-cta {
+    align-self: flex-start;
+    background: white;
+    color: #1a1a1a;
+    padding: 15px 24px;
+    border: 1px solid #d0d5dd;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.featured-study-cta:hover {
+    background: #333;
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.featured-study-secondary-cta:hover {
+    border-color: #1a1a1a;
+    transform: scale(1.03);
+}
+
+@media (max-width: 992px) {
+    .featured-study-card {
+        flex-direction: column;
+    }
+    
+    .featured-study-image {
+        min-height: 300px;
+    }
+    
+    .featured-study-info {
+        padding: 40px;
+    }
+    
+    .featured-study-title {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .featured-study-widget-section {
+        padding: 40px 15px;
+    }
+    
+    .featured-study-info {
+        padding: 30px 20px;
+    }
+    
+    .featured-study-title {
+        font-size: 1.8rem;
+    }
+    
+    .featured-study-text {
+        font-size: 1rem;
+    }
+
+    .featured-study-actions {
+        flex-direction: column;
+    }
+
+    .featured-study-cta,
+    .featured-study-secondary-cta {
+        width: 100%;
+        text-align: center;
+    }
+}

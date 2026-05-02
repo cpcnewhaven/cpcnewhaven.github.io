@@ -6,8 +6,8 @@
       "description": "This Sunday, during the Passing of the Peace, all children are invited to come to the front by the worship team. Mrs. Patty will have shakers available for the children to use during the Song of Thanksgiving. We are grateful for our covenant children, and it is both our joy and privilege to help train them in the Worship of God.",
       "dateEntered": "2026-05-01",
       "active": "true",
-      "type": "event",
-      "category": "event",
+      "type": "announcement",
+      "category": "sunday-school",
       "tag": "children"
     },
     {
@@ -34,8 +34,8 @@
     },
     {
       "id": "2026-043",
-      "title": "Emotions & Spirituality | New Adult Class Starts This Sunday",
-      "description": "What do my emotions have to do with my faith? Does God care about my feelings? Should I always have positive feelings for God, and what should I do when I don’t? Why does my heart seem to change so little, even after being a Christian for years? What should Christian transformation and sanctification look like? We’ll be discussing these questions and more about emotionally healthy spirituality in our 4-week Adult Sunday class that starts this Sunday. All are welcome! 9:30 in the downstairs Fellowship Hall. <a href=\"/sunday-studies/emotions-spirituality.html\">Learn more</a>.",
+      "title": "HEART | Emotions & Spirituality | Adult Sunday Studies",
+      "description": "Our 4-week Adult Sunday class explores the connection between our faith and our feelings. Episode 1, Introduction and Why?, is available now. Upcoming classes: May 3 - Shame, its monsters, and healing from it; May 10 - Facing all our emotions and how we cope with them; May 17 - Emotions and relationships. All are welcome Sundays at 9:30 in the downstairs Fellowship Hall. <a href=\"/sunday-studies/emotions-spirituality.html\">View the teaching series</a>.",
       "dateEntered": "2026-04-17",
       "active": "true",
       "type": "event",

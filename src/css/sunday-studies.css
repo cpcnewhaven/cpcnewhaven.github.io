@@ -53,7 +53,7 @@
     color: var(--cpc-blue);
 }
 
-.sunday-studies-dashboard .sidebar ul li a[href*="mission-study"] {
+.sunday-studies-dashboard .sidebar ul li a.active {
     background: rgba(0, 60, 109, 0.1);
     color: var(--cpc-blue);
     font-weight: 600;

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Emotions and Spirituality, a four-week Adult Sunday Studies class at CPC New Haven on faith, feelings, transformation, and emotionally healthy spirituality.">
+        <title>Emotions &amp; Spirituality - CPC New Haven Church | Adult Sunday Studies</title>
+        <base href="https://cpcnewhaven.org/">
+        <link rel="stylesheet" href="../src/css/global-body.css">
+        <link rel="stylesheet" href="../src/css/global-nav-bar.css">
+        <link rel="stylesheet" href="../src/css/global-footer-cta.css">
+        <link rel="stylesheet" href="../src/css/sunday-studies.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <link rel="icon"
+            href="https://files.cpcnewhaven.org/web-assets/CPC%20-%20FAVICON%20-%20FALL%2024.png"
+            type="image/png">
+        <style>
+            .study-hero-image {
+                width: 100%;
+                max-width: 420px;
+                margin: 0 auto 2rem;
+                display: block;
+                border-radius: 12px;
+                box-shadow: 0 8px 24px rgba(0, 60, 109, 0.12);
+            }
+
+            .study-details {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+                gap: 12px;
+                margin: 2rem 0;
+            }
+
+            .study-detail {
+                background: rgba(255, 255, 255, 0.65);
+                border: 1px solid rgba(0, 60, 109, 0.12);
+                border-radius: 12px;
+                padding: 16px;
+                text-align: center;
+            }
+
+            .study-detail i {
+                color: #003c6d;
+                display: block;
+                margin-bottom: 8px;
+            }
+
+            .study-detail strong {
+                display: block;
+                color: #1f2933;
+                margin-bottom: 4px;
+            }
+
+            .question-list {
+                text-align: left;
+                margin: 1.5rem auto 2rem;
+                max-width: 620px;
+            }
+
+            .question-list li {
+                margin-bottom: 0.85rem;
+                line-height: 1.5;
+            }
+
+            .episode-table {
+                width: 100%;
+                border-collapse: collapse;
+                margin: 1.5rem 0 2rem;
+                text-align: left;
+            }
+
+            .episode-table th,
+            .episode-table td {
+                border-bottom: 1px solid rgba(0, 60, 109, 0.14);
+                padding: 14px 10px;
+                vertical-align: middle;
+            }
+
+            .episode-table th {
+                color: #003c6d;
+                font-size: 0.85rem;
+                letter-spacing: 0.04em;
+                text-transform: uppercase;
+            }
+
+            .episode-table a,
+            .episode-link {
+                color: #003c6d;
+                font-weight: 700;
+                text-decoration: none;
+            }
+
+            .episode-link:hover {
+                text-decoration: underline;
+            }
+
+            .episode-coming {
+                color: #64748b;
+                font-size: 0.9rem;
+                font-weight: 600;
+            }
+
+            .return-link {
+                display: inline-block;
+                margin-top: 1rem;
+                font-weight: 600;
+            }
+
+            @media (max-width: 640px) {
+                .episode-table,
+                .episode-table tbody,
+                .episode-table tr,
+                .episode-table td {
+                    display: block;
+                    width: 100%;
+                }
+
+                .episode-table thead {
+                    display: none;
+                }
+
+                .episode-table tr {
+                    border-bottom: 1px solid rgba(0, 60, 109, 0.14);
+                    padding: 12px 0;
+                }
+
+                .episode-table td {
+                    border-bottom: none;
+                    padding: 5px 0;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header id="stickyHeader" class="sticky">
+            <nav class="main-navigation">
+        <a href="index.html">Home</a>
+        <a href="sundays.html">Sundays</a>
+        <a href="sunday-sermons.html">Sermons</a>
+        <a href="past-services.html">Past Services</a>
+        <a href="podcasts.html">Podcasts</a>
+        <a href="community.html">Community</a>
+        <a href="events.html">Events</a>
+        <a href="live.html">Live</a>
+        <div class="nav-dropdown">
+            <a href="#" class="nav-dropbtn" onclick="event.preventDefault();">More <i class="fas fa-caret-down" style="font-size: 0.8em;"></i></a>
+            <div class="nav-dropdown-content">
+                <a href="about.html">About</a>
+                <a href="resources.html">Resources</a>
+                <a href="give.html">Give</a>
+                <a href="search.html">Search</a>
+            </div>
+        </div>
+    </nav>
+        </header>
+        <div class="hamburger-menu-button-container" id="hamburgerMenu">
+            <i id="closeMobileMenuButton" class="fas fa-bars"></i>
+        </div>
+        <nav class="mobile-navigation" id="mobileNavigation">
+            <div class="mobile-nav-header">
+                <button id="closeMenuButton" aria-label="Close menu">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <ul class="mobile-nav-links">
+        <li><a class="mobile-menu-link" href="index.html">Home</a></li>
+        <li><a class="mobile-menu-link" href="sundays.html">Sundays</a></li>
+        <li><a class="mobile-menu-link" href="sunday-sermons.html">Sermons</a></li>
+        <li><a class="mobile-menu-link" href="past-services.html">Past Services</a></li>
+        <li><a class="mobile-menu-link" href="podcasts.html">Podcasts</a></li>
+        <li><a class="mobile-menu-link" href="community.html">Community</a></li>
+        <li><a class="mobile-menu-link" href="events.html">Events</a></li>
+        <li><a class="mobile-menu-link" href="live.html">Live</a></li>
+        <li><div class="mobile-menu-link" style="color: rgba(255, 255, 255, 0.5); pointer-events: none;">More</div></li>
+        <li><a class="mobile-menu-link" href="about.html" style="padding-left: 40px; border-left: 2px solid rgba(255,255,255,0.2);">- About</a></li>
+        <li><a class="mobile-menu-link" href="resources.html" style="padding-left: 40px; border-left: 2px solid rgba(255,255,255,0.2);">- Resources</a></li>
+        <li><a class="mobile-menu-link" href="give.html" style="padding-left: 40px; border-left: 2px solid rgba(255,255,255,0.2);">- Give</a></li>
+        <li><a class="mobile-menu-link" href="search.html" style="padding-left: 40px; border-left: 2px solid rgba(255,255,255,0.2);">- Search</a></li>
+    </ul>
+        </nav>
+
+        <div class="dashboard-container sunday-studies-dashboard">
+            <div class="sidebar fixed-sidebar">
+                <img src="../assets/CPC_LOGO_24.png" class="sidebar-logo">
+                <h1><a href="../adult-sunday-school.html">Adult Sunday Studies</a></h1>
+                <ul></ul>
+                <hr>
+                <ul>
+                    <li><a class="active" href="/sunday-studies/emotions-spirituality.html">Emotions &amp; Spirituality</a></li>
+                    <li><a href="/sunday-studies/mission-study.html">Mission Study</a></li>
+                    <li><a href="/sunday-studies/walking-through-sinai.html">Walking With Jesus Through Sinai</a></li>
+                    <li><a href="/sunday-studies/what-we-believe.html">What We Believe</a></li>
+                    <li><a href="/sunday-studies/confessional-theology.html">Confessional Theology</a></li>
+                    <li><a href="/sunday-studies/biblical-interpretation.html">Biblical Interpretation</a></li>
+                    <li><a href="/sunday-studies/total-christ.html">Total Christ</a></li>
+                </ul>
+            </div>
+            <div class="main-content">
+                <div class="center-content">
+                    <header>
+                        <h1>Adult Sunday Studies</h1>
+                        <h2>HEART | Emotions &amp; Spirituality</h2>
+                        <p>A four-week class exploring the connection between our faith and our feelings.</p>
+                    </header>
+                    <hr>
+                    <img class="study-hero-image" src="../assets/web-assets/emotions-class.png" alt="Emotions and Spirituality class">
+
+                    <div class="study-details">
+                        <div class="study-detail">
+                            <i class="far fa-calendar-alt"></i>
+                            <strong>Sundays</strong>
+                            <span>April 26-May 17</span>
+                        </div>
+                        <div class="study-detail">
+                            <i class="far fa-clock"></i>
+                            <strong>9:30am</strong>
+                            <span>During Sunday Studies</span>
+                        </div>
+                        <div class="study-detail">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <strong>Fellowship Hall</strong>
+                            <span>Downstairs at CPC</span>
+                        </div>
+                    </div>
+
+                    <p>What do my emotions have to do with my faith? Does God care about my feelings? Should I always have positive feelings for God, and what should I do when I don't?</p>
+                    <p>This class will discuss emotionally healthy spirituality, Christian transformation, and sanctification. All are welcome.</p>
+
+                    <h2>Teaching Series Episodes</h2>
+                    <table class="episode-table">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Episode</th>
+                                <th>Date</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Introduction and Why?</td>
+                                <td>April 26</td>
+                                <td><a class="episode-link" href="https://open.spotify.com/episode/4IdMJVPZC9a0PHVV2RT6nZ?si=R0OzoQcGQEms8WIg6VKZJQ" target="_blank" rel="noopener">Listen</a></td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Shame, its monsters, and healing from it</td>
+                                <td>May 3</td>
+                                <td><span class="episode-coming">Coming soon</span></td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Facing all our emotions and how we cope with them</td>
+                                <td>May 10</td>
+                                <td><span class="episode-coming">Coming soon</span></td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Emotions and relationships</td>
+                                <td>May 17</td>
+                                <td><span class="episode-coming">Coming soon</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h2>Where We&rsquo;re Going</h2>
+                    <ol class="question-list">
+                        <li><strong>April 26</strong> - Introduction and Why?</li>
+                        <li><strong>May 3</strong> - Shame, its monsters, and healing from it</li>
+                        <li><strong>May 10</strong> - Facing all our emotions and how we cope with them</li>
+                        <li><strong>May 17</strong> - Emotions and relationships</li>
+                    </ol>
+
+                    <a class="return-link" href="../adult-sunday-school.html">Back to Adult Sunday Studies</a>
+                    <hr>
+                    <p style="font-size: 0.9em; color: #666;">Last updated: May 2, 2026</p>
+                </div>
+
+                <footer>
+                    <div class="footer-content-logo">
+                        <a href="../index.html">
+                            <img src="../assets/CPC_LOGO_24.png" alt="CPC New Haven Church" class="top-splash-logo">
+                        </a>
+                    </div>
+                    <p>Join us for worship and fellowship. <a href="../sundays.html">Learn more</a></p>
+                    <p>203.777.6960 | <a href="mailto:admin@cpcnewhaven.org">admin@cpcnewhaven.org</a> | 135 Whitney Ave. New Haven CT 06510</p>
+                    <p>&copy; 2025 Christ Presbyterian Church.</p>
+                </footer>
+            </div>
+        </div>
+        <script src="../src/js/function_toggle_mobileMenu.js"></script>
+    </body>
+</html>
