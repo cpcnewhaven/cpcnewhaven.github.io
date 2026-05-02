@@ -15,193 +15,122 @@
         <link rel="icon"
             href="https://files.cpcnewhaven.org/web-assets/CPC%20-%20FAVICON%20-%20FALL%2024.png"
             type="image/png">
-
-            /* 
-               --- LIQUID GLASS VIBE & SITE UNIFICATION --- 
-            */
-            :root {
-                --glass-bg: rgba(255, 255, 255, 0.7);
-                --glass-border: rgba(0, 60, 109, 0.15);
-                --cpc-blue: #003c6d;
-                --cpc-blue-light: #e6f0ff;
-                --cpc-accent: #004494;
-            }
-
-            .main-content { 
-                background: linear-gradient(135deg, #f8faff 0%, #e3eaff 100%);
-                min-height: 100vh;
-            }
-
-            .glass-vibe-container {
-                position: relative;
-                padding: 40px 0;
+        <style>
+            .study-details {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+                gap: 12px;
                 margin: 2rem 0;
-                isolation: isolate;
             }
 
-            /* Liquid Decorative Blobs */
-            .liquid-blob {
-                position: absolute;
-                border-radius: 50%;
-                filter: blur(60px);
-                z-index: -1;
-                opacity: 0.4;
-                animation: liquid-float 20s infinite alternate ease-in-out;
-            }
-            .blob-1 {
-                width: 300px;
-                height: 300px;
-                background: var(--cpc-blue);
-                top: -50px;
-                right: -100px;
-            }
-            .blob-2 {
-                width: 250px;
-                height: 250px;
-                background: var(--cpc-accent);
-                bottom: -50px;
-                left: -80px;
-                animation-delay: -5s;
+            .study-detail {
+                background: rgba(255, 255, 255, 0.65);
+                border: 1px solid rgba(0, 60, 109, 0.12);
+                border-radius: 12px;
+                padding: 16px;
+                text-align: center;
             }
 
-            @keyframes liquid-float {
-                0% { transform: translate(0, 0) scale(1); }
-                100% { transform: translate(30px, 50px) scale(1.1); }
+            .study-detail i {
+                color: #003c6d;
+                display: block;
+                margin-bottom: 8px;
             }
 
-            /* Glassmorphic Table */
-            .episode-table { 
-                width: 100%; 
-                border-collapse: separate; 
-                border-spacing: 0;
-                margin: 1.5rem 0; 
-                background: var(--glass-bg);
-                backdrop-filter: blur(12px);
-                -webkit-backdrop-filter: blur(12px);
-                border: 1px solid var(--glass-border);
-                border-radius: 16px; 
-                overflow: hidden; 
-                box-shadow: 0 8px 32px rgba(0, 60, 109, 0.08);
+            .study-detail strong {
+                display: block;
+                color: #1f2933;
+                margin-bottom: 4px;
             }
 
-            .episode-table thead { background: rgba(0, 60, 109, 0.8); color: #fff; }
-            .episode-table th { 
-                padding: 16px 20px; 
-                text-align: left; 
-                font-weight: 700; 
-                font-size: 0.95rem; 
-                letter-spacing: 0.05em;
+            .resource-link {
+                display: inline-block;
+                color: #003c6d;
+                font-weight: 700;
+                margin: 0.5rem 0 1.25rem;
+                text-decoration: none;
+            }
+
+            .resource-link:hover {
+                text-decoration: underline;
+            }
+
+            .episode-table {
+                width: 100%;
+                border-collapse: collapse;
+                margin: 1.5rem 0 2rem;
+                text-align: left;
+            }
+
+            .episode-table th,
+            .episode-table td {
+                border-bottom: 1px solid rgba(0, 60, 109, 0.14);
+                padding: 14px 10px;
+                vertical-align: middle;
+            }
+
+            .episode-table th {
+                color: #003c6d;
+                font-size: 0.85rem;
+                letter-spacing: 0.04em;
                 text-transform: uppercase;
             }
-            .episode-table td { 
-                padding: 18px 20px; 
-                border-bottom: 1px solid var(--glass-border); 
-                vertical-align: middle; 
-                transition: background 0.3s ease;
-            }
-            .episode-table tbody tr:last-child td { border-bottom: none; }
-            .episode-table tbody tr:hover td { background: rgba(255, 255, 255, 0.4); }
 
-            .ep-num { 
-                width: 32px; 
-                height: 32px; 
-                border-radius: 10px; 
-                background: var(--cpc-blue); 
-                color: #fff; 
-                font-size: 0.9rem; 
-                font-weight: 700; 
-                display: flex; 
-                align-items: center; 
-                justify-content: center; 
-                box-shadow: 0 4px 12px rgba(0, 60, 109, 0.2);
+            .episode-link {
+                color: #003c6d;
+                font-weight: 700;
+                text-decoration: none;
             }
-            .ep-title { font-weight: 600; color: #1a202c; font-size: 1.05rem; }
-            .ep-date { color: #475569; font-weight: 600; font-size: 0.9rem; white-space: nowrap; }
-            
-            .ep-listen { 
-                display: inline-flex; 
-                align-items: center; 
-                gap: 8px; 
-                padding: 8px 18px; 
-                background: var(--cpc-blue); 
-                color: #fff !important; 
-                border-radius: 12px; 
-                text-decoration: none; 
-                font-size: 0.85rem; 
-                font-weight: 700; 
-                white-space: nowrap; 
-                transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); 
-                box-shadow: 0 4px 12px rgba(0, 60, 109, 0.15);
+
+            .episode-link:hover {
+                text-decoration: underline;
             }
-            .ep-listen:hover { 
-                background: var(--cpc-accent); 
-                transform: translateY(-2px);
-                box-shadow: 0 6px 16px rgba(0, 60, 109, 0.25);
+
+            .episode-coming {
+                color: #64748b;
+                font-size: 0.9rem;
+                font-weight: 600;
             }
-            .ep-listen::before { content: "\f04b"; font-family: "Font Awesome 5 Free"; font-weight: 900; font-size: 0.7rem; }
-            
-            .ep-coming { 
+
+            .mission-schedule {
+                text-align: left;
+                margin: 1.5rem auto 2rem;
+                max-width: 620px;
+            }
+
+            .mission-schedule li {
+                margin-bottom: 0.85rem;
+                line-height: 1.5;
+            }
+
+            .return-link {
                 display: inline-block;
-                padding: 6px 14px;
-                background: rgba(0, 0, 0, 0.05);
-                border-radius: 8px;
-                font-size: 0.8rem; 
-                color: #64748b; 
-                font-weight: 500;
+                margin-top: 1rem;
+                font-weight: 600;
             }
 
-            /* Mobile Responsiveness: Card Stack */
-            @media (max-width: 768px) {
-                .glass-vibe-container { padding: 20px 0; }
-                .episode-table, .episode-table thead, .episode-table tbody, .episode-table th, .episode-table td, .episode-table tr { 
-                    display: block; 
+            @media (max-width: 640px) {
+                .episode-table,
+                .episode-table tbody,
+                .episode-table tr,
+                .episode-table td {
+                    display: block;
+                    width: 100%;
                 }
-                .episode-table thead tr { position: absolute; top: -9999px; left: -9999px; }
-                .episode-table tr { 
-                    margin-bottom: 1.5rem; 
-                    background: rgba(255, 255, 255, 0.5);
-                    border-radius: 16px;
-                    border: 1px solid var(--glass-border);
-                    padding: 10px;
-                }
-                .episode-table td { 
-                    border: none; 
-                    position: relative; 
-                    padding-left: 50%; 
-                    text-align: right;
-                    min-height: 48px;
-                }
-                .episode-table td:before { 
-                    position: absolute; 
-                    left: 20px; 
-                    width: 45%; 
-                    padding-right: 10px; 
-                    white-space: nowrap; 
-                    text-align: left; 
-                    font-weight: 700;
-                    color: var(--cpc-blue);
-                    font-size: 0.8rem;
-                    text-transform: uppercase;
-                }
-                .episode-table td:nth-of-type(1):before { content: "Episode"; }
-                .episode-table td:nth-of-type(2):before { content: "Title"; }
-                .episode-table td:nth-of-type(3):before { content: "Date"; }
-                .episode-table td:nth-of-type(4):before { content: "Link"; }
-                
-                .episode-table td .ep-num { margin-left: auto; }
-                .episode-table td .ep-listen, .episode-table td .ep-coming { margin-top: 5px; }
-            }
 
-            /* Schedule list unification */
-            .mission-schedule { padding: 0; margin: 2rem 0; }
-            .mission-schedule li { 
-                background: #fff; 
-                margin-bottom: 1rem; 
-                padding: 20px; 
-                border-radius: 12px; 
-                box-shadow: 0 2px 8px rgba(0,0,0,0.03);
-                border-left: 4px solid var(--cpc-blue);
-                line-height: 1.6;
+                .episode-table thead {
+                    display: none;
+                }
+
+                .episode-table tr {
+                    border-bottom: 1px solid rgba(0, 60, 109, 0.14);
+                    padding: 12px 0;
+                }
+
+                .episode-table td {
+                    border-bottom: none;
+                    padding: 5px 0;
+                }
             }
         </style>
     </head>
@@ -273,73 +202,86 @@
                 <div class="center-content">
                     <header>
                         <h1>Adult Sunday Studies</h1>
-                        <h2>Mission Study</h2>
-                        <p>MISSION | Living Missionally in our Neighborhoods — CPC Spring 2026</p>
+                        <h2>MISSION | Living Missionally in our Neighborhoods</h2>
+                        <p>A four-week class exploring our theology and practices of mission in New Haven.</p>
                     </header>
                     <hr>
-                    <p><a href="/sunday-studies/handouts/mission/Mission_SS_2026_1.pdf" target="_blank" rel="noopener" style="font-weight: 600;">📋 Download handout (PDF)</a></p>
-                    <p>For more on our theology of mission, see <a href="/sunday-studies/total-christ.html">Total Christ</a> class #2, <em>Missional</em>.</p>
- 
-                    <div class="glass-vibe-container">
-                        <div class="liquid-blob blob-1"></div>
-                        <div class="liquid-blob blob-2"></div>
-                        <h2>Teaching Series Episodes</h2>
-                        <table class="episode-table">
-                            <thead>
-                                <tr>
-                                    <th>#</th>
-                                    <th>Episode</th>
-                                    <th>Date</th>
-                                    <th></th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><span class="ep-num">1</span></td>
-                                    <td><span class="ep-title">Introduction to a Theology of Mission and Missional Living</span></td>
-                                    <td><span class="ep-date">Mar 15</span></td>
-                                    <td><a class="ep-listen" href="https://open.spotify.com/episode/7sQEr5K27BSdey4oSWnBb2" target="_blank" rel="noopener">Listen</a></td>
-                                </tr>
-                                <tr>
-                                    <td><span class="ep-num">2</span></td>
-                                    <td><span class="ep-title">Practices of Missional Living and Hospitality</span></td>
-                                    <td><span class="ep-date">Mar 22</span></td>
-                                    <td><a class="ep-listen" href="https://open.spotify.com/episode/4SvX0rViIKJyJJlV4Lkjdi" target="_blank" rel="noopener">Listen</a></td>
-                                </tr>
-                                <tr>
-                                    <td><span class="ep-num">3</span></td>
-                                    <td><span class="ep-title">Special Guest: Matthew Denney (Jubilee New Haven)</span></td>
-                                    <td><span class="ep-date">Apr 12</span></td>
-                                    <td><a class="ep-listen" href="https://open.spotify.com/episode/0wbYwxYm9WklMcce4xY528?si=Z9mG8ZmKQv-DFruhh-OtIg" target="_blank" rel="noopener">Listen</a></td>
-                                </tr>
-                                <tr>
-                                    <td><span class="ep-num">4</span></td>
-                                    <td><span class="ep-title">Colleen &amp; Tyler Rice — Missional Practices in Neighborhood &amp; Spheres</span></td>
-                                    <td><span class="ep-date">Apr 19</span></td>
-                                    <td><span class="ep-coming">Coming soon</span></td>
-                                </tr>
-                            </tbody>
-                        </table>
+                    <div class="study-details">
+                        <div class="study-detail">
+                            <i class="far fa-calendar-alt"></i>
+                            <strong>Sundays</strong>
+                            <span>March 15-April 19</span>
+                        </div>
+                        <div class="study-detail">
+                            <i class="far fa-clock"></i>
+                            <strong>9:30am</strong>
+                            <span>During Sunday Studies</span>
+                        </div>
+                        <div class="study-detail">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <strong>Fellowship Hall</strong>
+                            <span>Downstairs at CPC</span>
+                        </div>
                     </div>
+
+                    <p>What does it mean to live missionally in our neighborhoods, relationships, and God-given spheres? This class explores a theology of mission and practical ways to practice hospitality, presence, and gospel witness in New Haven.</p>
+                    <p>For more on our theology of mission, see <a href="/sunday-studies/total-christ.html">Total Christ</a> class #2, <em>Missional</em>.</p>
+
+                    <a class="resource-link" href="/sunday-studies/handouts/mission/Mission_SS_2026_1.pdf" target="_blank" rel="noopener">Download handout (PDF)</a>
+
+                    <h2>Teaching Series Episodes</h2>
+                    <table class="episode-table">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Episode</th>
+                                <th>Date</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Introduction to a Theology of Mission and Missional Living</td>
+                                <td>Mar 15</td>
+                                <td><a class="episode-link" href="https://open.spotify.com/episode/7sQEr5K27BSdey4oSWnBb2" target="_blank" rel="noopener">Listen</a></td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Practices of Missional Living and Hospitality</td>
+                                <td>Mar 22</td>
+                                <td><a class="episode-link" href="https://open.spotify.com/episode/4SvX0rViIKJyJJlV4Lkjdi" target="_blank" rel="noopener">Listen</a></td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Special Guest: Matthew Denney (Jubilee New Haven)</td>
+                                <td>Apr 12</td>
+                                <td><a class="episode-link" href="https://open.spotify.com/episode/0wbYwxYm9WklMcce4xY528?si=Z9mG8ZmKQv-DFruhh-OtIg" target="_blank" rel="noopener">Listen</a></td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Colleen &amp; Tyler Rice - Missional Practices in Neighborhood &amp; Spheres</td>
+                                <td>Apr 19</td>
+                                <td><span class="episode-coming">Coming soon</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
  
-                    <h2>Where We’re Going</h2>
+                    <h2>Where We&rsquo;re Going</h2>
                     <ol class="mission-schedule">
+                        <li><strong>March 15</strong> - Introduction to a Theology of Mission and Missional Living</li>
+                        <li><strong>March 22</strong> - Practices of Missional Living and Hospitality</li>
                         <li>
-                            <strong>March 15</strong> — Introduction to a Theology of Mission and Missional Living
+                            <strong>April 12</strong> - Special Guest: Matthew Denney
+                            <br>
+                            <span style="font-size: 0.9em; color: #555;">"JMatt" is a member of Trinity Baptist Church and works as Executive Director of <a href="https://jubileenewhaven.org" target="_blank" rel="noopener">Jubilee New Haven</a>, an organization that exists to cultivate holistic flourishing in New Haven through community-building, spiritual formation, and housing justice.</span>
                         </li>
-                        <li>
-                            <strong>March 22</strong> — Practices of Missional Living and Hospitality
-                        </li>
-                        <li>
-                            <strong>April 12</strong> — Special Guest: Matthew Denney<br>
-                            <span style="font-size: 0.9em; color: #555;">”JMatt” is a member of Trinity Baptist Church and works as Executive Director of <a href="https://jubileenewhaven.org" target="_blank" rel="noopener">Jubilee New Haven</a>, an organization that exists to cultivate holistic flourishing in New Haven through community-building, spiritual formation, and housing justice.</span>
-                        </li>
-                        <li>
-                            <strong>April 19</strong> — Colleen &amp; Tyler Rice lead us in discussion of missional practices in their neighborhood and spheres
-                        </li>
+                        <li><strong>April 19</strong> - Colleen &amp; Tyler Rice lead us in discussion of missional practices in their neighborhood and spheres</li>
                     </ol>
+
+                    <a class="return-link" href="../adult-sunday-school.html">Back to Adult Sunday Studies</a>
                     <hr>
-                    <p style="font-size: 0.9em; color: #666;">Last updated: March 26, 2026</p>
+                    <p style="font-size: 0.9em; color: #666;">Last updated: May 2, 2026</p>
                 </div>
 
                 <footer>
