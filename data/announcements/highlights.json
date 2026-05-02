@@ -1,11 +1,21 @@
 {
   "announcements": [
     {
+      "id": "2026-048",
+      "title": "Children's Participation in Worship This Sunday",
+      "description": "This Sunday, during the Passing of the Peace, all children are invited to come to the front by the worship team. Mrs. Patty will have shakers available for the children to use during the Song of Thanksgiving. We are grateful for our covenant children, and it is both our joy and privilege to help train them in the Worship of God.",
+      "dateEntered": "2026-05-01",
+      "active": "true",
+      "type": "event",
+      "category": "event",
+      "tag": "children"
+    },
+    {
       "id": "2026-044-college",
       "title": "College Event This Sunday! | CPC Fellowship Hall, 5pm-7pm",
       "description": "Undergraduate students—join us this Sunday from 5–7 PM in the CPC Fellowship Hall for a Pizza Cook-Off! We’ll provide the dough, sauce, and cheese—just bring your most creative (or random) toppings and come ready to compete. There will also be games and time to hang out. All are welcome.",
       "dateEntered": "2026-04-24",
-      "active": "true",
+      "active": false,
       "type": "event",
       "category": "event",
       "tag": "college"
@@ -17,7 +27,7 @@
       "dateEntered": "2026-04-12",
       "featuredImage": "https://partiful.imgix.net/external/user/GpJGatjzQAZA6L6xI7wtwziXjl93/fRLKa-QyxLePlBM7thoEW?fit=clip&w=800&auto=format",
       "imageDisplayType": "poster",
-      "active": "true",
+      "active": false,
       "type": "event",
       "category": "event",
       "tag": "young-adults"
@@ -25,7 +35,7 @@
     {
       "id": "2026-043",
       "title": "Emotions & Spirituality | New Adult Class Starts This Sunday",
-      "description": "What do my emotions have to do with my faith? Does God care about my feelings? Should I always have positive feelings for God, and what should I do when I don’t? Why does my heart seem to change so little, even after being a Christian for years? What should Christian transformation and sanctification look like? We’ll be discussing these questions and more about emotionally healthy spirituality in our 4-week Adult Sunday class that starts this Sunday. All are welcome! 9:30 in the downstairs Fellowship Hall.",
+      "description": "What do my emotions have to do with my faith? Does God care about my feelings? Should I always have positive feelings for God, and what should I do when I don’t? Why does my heart seem to change so little, even after being a Christian for years? What should Christian transformation and sanctification look like? We’ll be discussing these questions and more about emotionally healthy spirituality in our 4-week Adult Sunday class that starts this Sunday. All are welcome! 9:30 in the downstairs Fellowship Hall. <a href=\"/sunday-studies/emotions-spirituality.html\">Learn more</a>.",
       "dateEntered": "2026-04-17",
       "active": "true",
       "type": "event",
@@ -94,7 +104,7 @@
     },
     {
       "id": "2026-026",
-      "title": "Regular Sunday Schedule | Resumes Sunday!",
+      "title": "Regular Sunday Schedule",
       "description": "8:30am | Prayer in the Parlor<br>9:30am | Children’s Sunday School<br>9:30am | Adult Sunday Studies<br>10:30am | Worship Service<br>12:00pm | Fellowship Lunch",
       "dateEntered": "2026-01-29",
       "active": "true",
