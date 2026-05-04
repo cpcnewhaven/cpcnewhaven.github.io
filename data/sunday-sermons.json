@@ -3,6 +3,17 @@
   "description": "Weekly sermons from our Sunday worship services",
   "episodes": [
     {
+      "id": "26-05-04",
+      "title": "The Heart of Christ",
+      "author": "Rev. Jerry Ornelas",
+      "scripture": "Luke 19:11-40",
+      "date": "2026-05-04",
+      "apple_podcasts_url": "",
+      "spotify_url": "https://open.spotify.com/episode/0YSCQZ68Xe6kMKopoPm00A?si=1dmDNbgJRLumlrqa8A0bAQ",
+      "link": "https://open.spotify.com/episode/0YSCQZ68Xe6kMKopoPm00A?si=1dmDNbgJRLumlrqa8A0bAQ",
+      "podcast-thumbnail_url": ""
+    },
+    {
       "id": "26-04-26",
       "title": "Salvation Has Come!",
       "author": "Rev. Craig Luekens",
