@@ -21,7 +21,15 @@
       "Bash(head -10 grep -n \"base href\\\\|main-navigation\" /Users/agworkywork/work/cpcnewhaven.github.io/sunday-studies/what-we-believe.html)",
       "Bash(echo \"=== Checking for old Community dropdown pattern ===\" grep -rl 'href=\"\"\"\"community\\\\.html\"\"\"\" class=\"\"\"\"nav-dropbtn\"\"\"\"' /Users/agworkywork/work/cpcnewhaven.github.io --include=\"*.html\")",
       "Bash(echo \"=== Count of files with new nav structure \\(search.html in nav-dropdown-content\\) ===\" grep -rl 'nav-dropdown-content' /Users/agworkywork/work/cpcnewhaven.github.io --include=\"*.html\")",
-      "Bash(git push:*)"
+      "Bash(git push:*)",
+      "Bash(cat)",
+      "Read(//tmp/**)",
+      "Bash(git -C /Users/agworkywork/work/cpcnewhaven.github.io add -)",
+      "Bash(git -C /Users/agworkywork/work/cpcnewhaven.github.io add about.html christian-leadership-training.html contact.html data/sunday-sermons.json engaging-with-aging.html full-podcast-monte.html get-started-groups.html give.html lifegroup.html membership.html mercy.html mission-anabaino.html pastor-craig.html pastor-jerry.html resources.html search.html sinai.html sunday-studies/biblical-interpretation.html sunday-studies/confessional-theology.html sunday-studies/emotions-spirituality.html sunday-studies/mission-study.html sunday-studies/total-christ.html sunday-studies/walking-through-sinai.html sunday-studies/what-we-believe.html sundays.html what-we-believe.html)",
+      "Bash(git -C /Users/agworkywork/work/cpcnewhaven.github.io commit -m ' *)",
+      "Bash(git *)",
+      "Bash(bash /tmp/process_all_pages.sh)",
+      "Bash(bash /tmp/remove_contact.sh)"
     ]
   }
 }
