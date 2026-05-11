@@ -1,6 +1,16 @@
 {
   "announcements": [
     {
+      "id": "2026-052",
+      "title": "Final CLT Meeting | Friday, May 15 | 6:30pm",
+      "description": "Our last Christian Leadership Training meeting is this Friday, May 15th at 6:30pm. We'll discuss how Christ is our king through the church — especially through mercy ministries (Keller reading) and our relationships (Allender reading). We'll also look back on the whole class, so come with any lingering questions from previous sessions!",
+      "dateEntered": "2026-05-11",
+      "active": "true",
+      "type": "event",
+      "category": "event",
+      "tag": "clt"
+    },
+    {
       "id": "2026-051",
       "title": "Vocation Journal Drops Sunday!",
       "description": "\"Koinonia\", CPC’s inaugural journal, comes out this Sunday, highlighting different members of CPC and how they view their work in light of God’s grace. Pick one up today!",
