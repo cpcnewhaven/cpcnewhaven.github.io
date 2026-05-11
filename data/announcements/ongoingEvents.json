@@ -32,7 +32,7 @@
       "title": "This Sunday is welcome sunday",
       "description": "Join us this Sunday for our special welcome sunday celebration!",
       "dateEntered": "2024-12-19",
-      "active": "true",
+      "active": "false",
       "type": "ongoing",
       "category": "ongoing"
     }

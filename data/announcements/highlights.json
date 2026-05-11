@@ -1,11 +1,51 @@
 {
   "announcements": [
     {
+      "id": "2026-051",
+      "title": "Vocation Journal Drops Sunday!",
+      "description": "\"Koinonia\", CPC’s inaugural journal, comes out this Sunday, highlighting different members of CPC and how they view their work in light of God’s grace. Pick one up today!",
+      "dateEntered": "2026-05-11",
+      "active": "true",
+      "type": "announcement",
+      "category": "announcement",
+      "tag": "community"
+    },
+    {
+      "id": "2026-050",
+      "title": "Summer Break Begins May 24",
+      "description": "Regular events like Sunday school, fellowship lunch, and pastor drop-in office hours will be on summer break beginning May 24 through August.",
+      "dateEntered": "2026-05-11",
+      "active": "true",
+      "type": "announcement",
+      "category": "announcement",
+      "tag": "schedule"
+    },
+    {
+      "id": "2026-046",
+      "title": "I Heart New Haven Day! | Saturday, June 6",
+      "description": "Mark your calendars for June 6 for Bridges of Hope’s annual I Heart New Haven Day! This is an exciting day joining with other churches around the city to love the greater New Haven area with projects such as clean up, gardening, painting, and repair.",
+      "dateEntered": "2026-04-24",
+      "active": "true",
+      "type": "event",
+      "category": "event",
+      "tag": "mercy"
+    },
+    {
+      "id": "2026-043",
+      "title": "HEART | Emotions & Spirituality | Adult Sunday Studies | Final Class May 17",
+      "description": "Our 4-week Adult Sunday class wraps up this Sunday, May 17 with the final session: Emotions and relationships. All are welcome at 9:30am in the downstairs Fellowship Hall. <a href=\"/sunday-studies/emotions-spirituality.html\">View the teaching series</a>.",
+      "dateEntered": "2026-04-17",
+      "active": "true",
+      "type": "event",
+      "category": "event",
+      "tag": "sunday-school"
+    },
+    {
       "id": "2026-048",
-      "title": "Children's Participation in Worship This Sunday",
+      "title": "Children’s Participation in Worship This Sunday",
       "description": "This Sunday, during the Passing of the Peace, all children are invited to come to the front by the worship team. Mrs. Patty will have shakers available for the children to use during the Song of Thanksgiving. We are grateful for our covenant children, and it is both our joy and privilege to help train them in the Worship of God.",
       "dateEntered": "2026-05-01",
-      "active": "true",
+      "active": false,
       "type": "announcement",
       "category": "sunday-school",
       "tag": "children"
@@ -33,21 +73,11 @@
       "tag": "young-adults"
     },
     {
-      "id": "2026-043",
-      "title": "HEART | Emotions & Spirituality | Adult Sunday Studies",
-      "description": "Our 4-week Adult Sunday class explores the connection between our faith and our feelings. Episode 1, Introduction and Why?, is available now. Upcoming classes: May 3 - Shame, its monsters, and healing from it; May 10 - Facing all our emotions and how we cope with them; May 17 - Emotions and relationships. All are welcome Sundays at 9:30 in the downstairs Fellowship Hall. <a href=\"/sunday-studies/emotions-spirituality.html\">View the teaching series</a>.",
-      "dateEntered": "2026-04-17",
-      "active": "true",
-      "type": "event",
-      "category": "event",
-      "tag": "sunday-school"
-    },
-    {
       "id": "2026-042",
       "title": "Mercy Day | May 2 | Volunteers and Mercy Projects Needed! | Sign up here!",
       "description": "To truly love and serve one another, we’ll tackle projects for those who need any help. Each project will have a dedicated project lead/captain who will give instructions to volunteers. <a href=\"https://docs.google.com/forms/d/e/1FAIpQLSePojMW7eLqoZMS1xRD2zr1DkRinxA0l5MWIVRN8ikUTYu74A/viewform\" target=\"_blank\">Sign up here!</a>",
       "dateEntered": "2026-04-17",
-      "active": "true",
+      "active": false,
       "type": "event",
       "category": "event",
       "tag": "mercy"
@@ -57,7 +87,7 @@
       "title": "Congregational Meeting | May 3 During Lunch",
       "description": "Our bi-annual congregational meeting takes place next Sunday, May 3rd after the worship service in the Fellowship Hall. We will hear a recap of all that God has done this year, and discuss plans for the future. All are welcome to attend, and members are highly encouraged, though there will be no official voting.",
       "dateEntered": "2026-04-24",
-      "active": "true",
+      "active": false,
       "type": "event",
       "category": "event",
       "tag": "meeting"
@@ -67,27 +97,17 @@
       "title": "Lost and Found",
       "description": "It is that time of year again to clear out the clutter and return lost items to their owners. The table will be set up for 3 weeks. Owners will have the first 2 weeks to retrieve their lost belongings. If you know who it belongs to, let them know or tag it. On the third week, the remaining items can find new owners with anyone who can use them and wish to take them home. All leftovers items will be donated.",
       "dateEntered": "2026-04-24",
-      "active": "true",
+      "active": false,
       "type": "announcement",
       "category": "announcement",
       "tag": "community"
-    },
-    {
-      "id": "2026-046",
-      "title": "I Heart New Haven Day! | Saturday, June 6",
-      "description": "Mark your calendars for June 6 for Bridges of Hope’s annual I Heart New Haven Day! This is an exciting day joining with other churches around the city to love the greater New Haven area with projects such as clean up, gardening, painting, and repair.",
-      "dateEntered": "2026-04-24",
-      "active": "true",
-      "type": "event",
-      "category": "event",
-      "tag": "mercy"
     },
     {
       "id": "2026-047",
       "title": "The CPC College Internship Program",
       "description": "An opportunity for undergraduate students who desire to grow deeper in theology, godliness, and participation in ministry. Students will engage in theological training, personal formation, and missional opportunities in New Haven. The goal is to ground participants in sound doctrine, cultivate personal godliness, and, where applicable, help discern a call to ministry. The program offers two tracks: a Ministry Track for those exploring vocational ministry and a Formation Track for those seeking deeper theological and spiritual growth. Open to all undergraduate students. For more information or to apply, contact Pastor Jerry at jerry.ornelas@cpcnewhaven.org. Application deadline: Sunday, May 3rd.",
       "dateEntered": "2026-04-24",
-      "active": "true",
+      "active": false,
       "type": "announcement",
       "category": "college",
       "tag": "internship"
