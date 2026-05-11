@@ -1,5 +1,5 @@
 {
-  "showBanner": true,
+  "showBanner": false,
   "bannerText": "Warning: This website is in beta mode",
   "buttonText": "Visit Old Website",
   "buttonUrl": "https://cpcnewhaven.org",
