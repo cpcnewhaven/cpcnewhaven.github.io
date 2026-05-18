@@ -15,7 +15,7 @@
       "title": "Vocation Journal | \"Koinonia\" Now Available!",
       "description": "\"Koinonia\", CPC's inaugural journal, is now available! Pick up a copy — it highlights different members of CPC and how they view their work in light of God's grace.",
       "dateEntered": "2026-05-11",
-      "active": "true",
+      "active": true,
       "type": "announcement",
       "category": "announcement",
       "tag": "community"
@@ -25,7 +25,7 @@
       "title": "Summer Schedule Now in Effect",
       "description": "We're on a summer break from Sunday school, Fellowship Lunches, and pastor drop-in office hours. You're always welcome to set up a separate time with Pastor Craig (craig.luekens@cpcnewhaven.org), or Pastor Jerry (jerry.ornelas@cpcnewhaven.org).",
       "dateEntered": "2026-05-11",
-      "active": "true",
+      "active": true,
       "type": "announcement",
       "category": "announcement",
       "tag": "schedule"
@@ -35,7 +35,7 @@
       "title": "I Heart New Haven Day! | Saturday, June 6",
       "description": "Mark your calendars for June 6 for Bridges of Hope's annual I Heart New Haven Day! This is an exciting day joining with other churches around the city to love the greater New Haven area with projects such as clean up, gardening, painting, and repair.",
       "dateEntered": "2026-04-24",
-      "active": "true",
+      "active": true,
       "type": "event",
       "category": "event",
       "tag": "mercy"
@@ -127,7 +127,7 @@
       "title": "Pastor's Book Pick | Life Together, by Dietrich Bonhoeffer",
       "description": "A modern classic, we're treading into deep waters with this one! Written by pastor-theologian and martyr, Life Together is Bonhoeffer's vision for the Christian life, both individually and communally. Copies in the foyer — suggested donation of $15.",
       "dateEntered": "2026-03-13",
-      "active": "true",
+      "active": true,
       "type": "ongoing",
       "category": "ongoing",
       "tag": "books"
@@ -137,7 +137,7 @@
       "title": "Summer Sunday Schedule",
       "description": "8:30am | Prayer in the Parlor<br>10:30am | Worship Service",
       "dateEntered": "2026-01-29",
-      "active": "true",
+      "active": true,
       "type": "ongoing",
       "category": "ongoing",
       "tag": "schedule"
@@ -147,7 +147,7 @@
       "title": "Interested in Joining the Body of Christ at CPC?",
       "description": "We consider the church an essential element of the gospel, so joining CPC as a member is a way to truly join the body of Christ, in all its blessings and with all its flaws! Before joining, you'll meet one-on-one with a pastor and then discuss how you've come to know Christ with the Shepherd Leaders. Contact Alexis Vano (admin@cpcnewhaven.org) to begin the process.",
       "dateEntered": "2026-02-10",
-      "active": "true",
+      "active": true,
       "type": "announcement",
       "category": "membership",
       "tag": "membership"
@@ -157,7 +157,7 @@
       "title": "Life Groups and Discipleship Groups",
       "description": "Life Groups and Discipleship Groups are our way of doing \"church in the small\" where we meet throughout Greater New Haven to be engaged in prayer, teaching, fellowship and care. For information on which Life Group may be a good fit, contact Alexis, admin@cpcnewhaven.org.",
       "dateEntered": "2026-01-29",
-      "active": "true",
+      "active": true,
       "type": "ongoing",
       "category": "ongoing",
       "tag": "groups"
@@ -167,7 +167,7 @@
       "title": "Pastor Drop-in Office Hours",
       "description": "<strong>Craig, Fridays 7:30-10:30am | Other hours available upon request</strong><br><br>Drop in for a casual time of discussion, Q&A, prayer, coffee, tea, really whatever you want to make it! If you have a more private or formal need, you're always welcome to set up a separate time with Pastor Craig (craig.luekens@cpcnewhaven.org), or Pastor Jerry (jerry.ornelas@cpcnewhaven.org) but this is meant to be a space where anyone can drop in.",
       "dateEntered": "2026-01-29",
-      "active": "true",
+      "active": false,
       "type": "ongoing",
       "category": "ongoing",
       "tag": "office"
