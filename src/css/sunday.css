@@ -357,55 +357,6 @@ body {
     margin: 0 auto;
 }
 
-/* Ongoing Events */
-#sunday-ongoing-events.ongoing-events {
-    background: white;
-    padding: 2rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    margin: 0 auto;
-    max-width: 1000px;
-    width: 100%;
-}
-
-#sunday-ongoing-events.ongoing-events p,
-#sunday-ongoing-events.ongoing-events h3 {
-    max-width: none !important;
-    width: 100% !important;
-}
-
-#sunday-ongoing-title {
-    font-size: 1.5rem;
-    color: #333;
-    margin-bottom: 1.5rem;
-    text-align: center;
-}
-
-.events-list {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.event-item {
-    padding: 1rem;
-    background: #f8f9fa;
-    border-radius: 8px;
-    border-left: 3px solid #0078D4;
-}
-
-.event-title {
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 0.5rem;
-    font-size: 1.1rem;
-}
-
-.event-details {
-    color: #666;
-    font-size: 0.95rem;
-}
-
 /* Desktop Specific Improvements */
 @media (min-width: 769px) {
     #sunday-info-grid.info-grid {
