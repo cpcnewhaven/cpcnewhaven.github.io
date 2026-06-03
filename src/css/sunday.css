@@ -125,6 +125,36 @@ body {
     margin-top: 1rem;
 }
 
+#sunday-worship-banner.worship-banner {
+    margin: 1.5rem auto 0;
+    max-width: 520px;
+    width: 100%;
+    padding: 1rem 1.5rem;
+    border-radius: 999px;
+    background: linear-gradient(135deg, rgba(0, 120, 212, 0.08), rgba(0, 120, 212, 0.02));
+    border: 1px solid rgba(0, 120, 212, 0.22);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.worship-banner-label {
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #666;
+    font-weight: 700;
+}
+
+.worship-banner-time {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #0078D4;
+}
+
 .highlight-item {
     display: flex;
     align-items: center;
