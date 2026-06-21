@@ -1,6 +1,56 @@
 {
   "announcements": [
     {
+      "id": "2026-064",
+      "title": "Save the Dates!",
+      "description": "<ul><li>Summer Sunday Lunches | June 28 &amp; July 26</li><li>Men's Bike Ride &amp; Lunch | Saturday, August 1</li><li>Regular Sunday Lunches Resume | August 23</li><li>CPC Women's Conference | October 3rd at CPC</li></ul>",
+      "dateEntered": "2026-06-21",
+      "active": true,
+      "type": "announcement",
+      "category": "announcement",
+      "tag": "community"
+    },
+    {
+      "id": "2026-063",
+      "title": "CPC Mom's Group",
+      "description": "Moms with young kids: join our WhatsApp group to stay up to date with meet-ups this summer! Some happening on weekends too! Reach out to Meg Bogue for more information: <a href=\"mailto:mhbogue@me.com\">mhbogue@me.com</a>",
+      "dateEntered": "2026-06-21",
+      "active": true,
+      "type": "announcement",
+      "category": "announcement",
+      "tag": "community"
+    },
+    {
+      "id": "2026-062",
+      "title": "Men's Bike Ride & Lunch | Saturday, August 1",
+      "description": "Bike ride the Canal trail to Mikro — time and route details to follow. Sign up sheet in the foyer.",
+      "dateEntered": "2026-06-21",
+      "active": true,
+      "type": "event",
+      "category": "event",
+      "tag": "men"
+    },
+    {
+      "id": "2026-061",
+      "title": "Serve with CPC in the Hill: Wednesday Night Summer BBQs",
+      "description": "Wednesday evenings at Trowbridge Square Park in the Hill: 169 Cedar St, New Haven, CT 06519. Volunteers needed to help set up, serve, and clean up (4:45pm–7:00pm). <a href=\"https://us.list-manage.com/mSHNqshleo6?e=9da175cc40&amp;c2id=6df9b900f2d1d0ec64fac5dfc299411c\" target=\"_blank\">Sign up here!</a>",
+      "dateEntered": "2026-06-21",
+      "active": true,
+      "type": "event",
+      "category": "event",
+      "tag": "mercy"
+    },
+    {
+      "id": "2026-060",
+      "title": "Thursday Picnics on the CPC Lawn | July 9, 16, 23, 30",
+      "description": "Join us for our Summer Thursday Picnics! These gatherings are a wonderful opportunity to enjoy fellowship, food, and fun together as a church family. Each picnic date will have two key leaders and three support volunteers responsible for selecting the meal and coordinating setup and cleanup. Please sign up on the sheet in the foyer.",
+      "dateEntered": "2026-06-21",
+      "active": true,
+      "type": "event",
+      "category": "event",
+      "tag": "community"
+    },
+    {
       "id": "2026-052",
       "title": "Final CLT Meeting | Friday, May 15 | 6:30pm",
       "description": "Our last Christian Leadership Training meeting is this Friday, May 15th at 6:30pm. We'll discuss how Christ is our king through the church — especially through mercy ministries (Keller reading) and our relationships (Allender reading). We'll also look back on the whole class, so come with any lingering questions from previous sessions!",
