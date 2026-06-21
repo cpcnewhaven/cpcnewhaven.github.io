@@ -187,7 +187,7 @@
       "title": "Summer Sunday Schedule",
       "description": "8:30am | Prayer in the Parlor<br>10:30am | Worship Service",
       "dateEntered": "2026-01-29",
-      "active": true,
+      "active": false,
       "type": "ongoing",
       "category": "ongoing",
       "tag": "schedule"
