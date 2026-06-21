@@ -24,12 +24,21 @@ class WhatsNewManager {
             ]);
 
             const allItems = [...podcastItems, ...sermonItems];
-            
+
             // Sort by date (newest first)
             allItems.sort((a, b) => new Date(b.date) - new Date(a.date));
 
+            // Deduplicate by normalized title (podcast feed often mirrors sermons)
+            const seen = new Set();
+            const deduped = allItems.filter(item => {
+                const key = item.title.toLowerCase().replace(/\s+/g, ' ').trim();
+                if (seen.has(key)) return false;
+                seen.add(key);
+                return true;
+            });
+
             // Take top N items
-            const latestItems = allItems.slice(0, this.limit);
+            const latestItems = deduped.slice(0, this.limit);
 
             this.renderItems(latestItems);
         } catch (error) {
