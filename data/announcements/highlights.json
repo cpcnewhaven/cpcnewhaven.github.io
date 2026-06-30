@@ -3,7 +3,7 @@
     {
       "id": "2026-064",
       "title": "Save the Dates!",
-      "description": "<ul><li>Summer Sunday Lunches | June 28 &amp; July 26</li><li>Men's Bike Ride &amp; Lunch | Saturday, August 1</li><li>Regular Sunday Lunches Resume | August 23</li><li>CPC Women's Conference | October 3rd at CPC</li></ul>",
+      "description": "<ul><li>Summer Sunday Lunches | July 26</li><li>Men's Bike Ride &amp; Lunch | Saturday, August 1</li><li>Regular Sunday Lunches Resume | August 23</li><li>CPC Women's Conference | Save the Date! | October 3rd at CPC</li></ul>",
       "dateEntered": "2026-06-21",
       "active": true,
       "type": "announcement",
@@ -42,8 +42,8 @@
     },
     {
       "id": "2026-060",
-      "title": "Thursday Picnics on the CPC Lawn | July 9, 16, 23, 30",
-      "description": "Join us for our Summer Thursday Picnics! These gatherings are a wonderful opportunity to enjoy fellowship, food, and fun together as a church family. Each picnic date will have two key leaders and three support volunteers responsible for selecting the meal and coordinating setup and cleanup. Please sign up on the sheet in the foyer.",
+      "title": "Thursday Picnics on the CPC Lawn | July 9, 16, 23, 30 at 6pm",
+      "description": "Join us for our Summer Thursday Picnics! These gatherings are a wonderful opportunity to enjoy fellowship, food, and fun together as a church family. Each picnic date will have two key leaders and three support volunteers responsible for utilizing the provided budget to select the meal and coordinating setup and cleanup. Please sign up on the sheet in the foyer.",
       "dateEntered": "2026-06-21",
       "active": true,
       "type": "event",
@@ -211,6 +211,16 @@
       "type": "ongoing",
       "category": "ongoing",
       "tag": "groups"
+    },
+    {
+      "id": "2026-065",
+      "title": "Join WhatsApp group \"CPC Social!\"",
+      "description": "If you're interested in connecting more spontaneously with CPC folks, you're welcome to join our WhatsApp group \"CPC Social!\"",
+      "dateEntered": "2026-06-30",
+      "active": true,
+      "type": "ongoing",
+      "category": "ongoing",
+      "tag": "community"
     },
     {
       "id": "2026-028",
