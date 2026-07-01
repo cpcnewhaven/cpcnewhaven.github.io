@@ -3,12 +3,7 @@
     {
       "id": "2026-064",
       "title": "Save the Dates!",
-      "description": "<ul>
-          <li>July 26 - Summer Sunday Lunch</li>
-          <li>August 1 - Men's Bike Ride &amp; Lunch</li>
-          <li>August 23 - Regular Sunday Lunches Resume</li>
-          <li>October 3rd - CPC Women's Conference</li>
-        </ul>",
+      "description": "<ul><li>July 26 - Summer Sunday Lunch</li><li>August 1 - Men's Bike Ride &amp; Lunch</li><li>October 3rd - CPC Women's Conference</li></ul>",
       "dateEntered": "2026-06-21",
       "active": true,
       "type": "announcement",
@@ -27,7 +22,7 @@
     },
     {
       "id": "2026-062",
-      "title": "Men's Bike Ride & Lunch\nSaturday, August 1",
+      "title": "Men's Bike Ride & Lunch<br>Saturday, August 1",
       "description": "Bike ride the Canal trail to Mikro — time and route details to follow. Sign up sheet in the foyer.",
       "dateEntered": "2026-06-21",
       "active": true,
@@ -219,7 +214,7 @@
     },
     {
       "id": "2026-065",
-      "title": "Join the WhatsApp group\n\"CPC Social!\"",
+      "title": "Join the WhatsApp group<br>\"CPC Social!\"",
       "description": "If you're interested in connecting more spontaneously with CPC folks, you're welcome to join our WhatsApp group \"CPC Social!\"",
       "dateEntered": "2026-06-30",
       "active": true,
