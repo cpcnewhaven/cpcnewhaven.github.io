@@ -3,7 +3,7 @@
     {
       "id": "2026-064",
       "title": "Save the Dates!",
-      "description": "<ul><li>July 26 - Summer Sunday Lunch</li><li>August 1 - Men's Bike Ride &amp; Lunch</li><li>October 3rd - CPC Women's Conference</li></ul>",
+      "description": "• July 26 - Summer Sunday Lunch<br/>•  August 1 - Men's Bike Ride &amp; Lunch<br/>•  August 23 - Sunday Lunches Resume<br/>•  October 3rd - CPC Women's Conference",
       "dateEntered": "2026-06-21",
       "active": true,
       "type": "announcement",
@@ -22,8 +22,8 @@
     },
     {
       "id": "2026-062",
-      "title": "Men's Bike Ride & Lunch<br>Saturday, August 1",
-      "description": "Bike ride the Canal trail to Mikro — time and route details to follow. Sign up sheet in the foyer.",
+      "title": "Men's Bike Ride & Lunch Saturday, August 1",
+      "description": "Bike ride the Canal trail to Mikro — time and route details to follow.<br/>Sign up sheet in the foyer.",
       "dateEntered": "2026-06-21",
       "active": true,
       "type": "event",
@@ -33,7 +33,7 @@
     {
       "id": "2026-061",
       "title": "Serve with CPC in the Hill: Wednesday Night Summer BBQs",
-      "description": "Wednesday evenings at Trowbridge Square Park in the Hill: 169 Cedar St, New Haven, CT 06519. Volunteers needed to help set up, serve, and clean up (4:45pm–7:00pm). <a href=\"https://us.list-manage.com/mSHNqshleo6?e=9da175cc40&amp;c2id=6df9b900f2d1d0ec64fac5dfc299411c\" target=\"_blank\">Sign up here!</a>",
+      "description": "Wednesday evenings at Trowbridge Square Park in the Hill: 169 Cedar St, New Haven, CT 06519. Volunteers needed to help set up, serve, and clean up (4:45pm–7:00pm).<br/><a href=\"https://us.list-manage.com/mSHNqshleo6?e=9da175cc40&amp;c2id=6df9b900f2d1d0ec64fac5dfc299411c\" target=\"_blank\">Sign up here!</a>",
       "dateEntered": "2026-06-21",
       "active": true,
       "type": "event",
@@ -43,7 +43,7 @@
     {
       "id": "2026-060",
       "title": "Thursday Picnics on the CPC Lawn | July 9, 16, 23, 30 at 6pm",
-      "description": "Join us for our Summer Thursday Picnics! These gatherings are a wonderful opportunity to enjoy fellowship, food, and fun together as a church family. Each picnic date will have two key leaders and three support volunteers responsible for utilizing the provided budget to select the meal and coordinating setup and cleanup. Please sign up on the sheet in the foyer.",
+      "description": "Join us for our Summer Thursday Picnics! These gatherings are a wonderful opportunity to enjoy fellowship, food, and fun together as a church family. Each picnic date will have two key leaders and three support volunteers responsible for utilizing the provided budget to select the meal and coordinating setup and cleanup.<br/>Please sign up on the sheet in the foyer.",
       "dateEntered": "2026-06-21",
       "active": true,
       "type": "event",
@@ -73,7 +73,7 @@
     {
       "id": "2026-050",
       "title": "Summer Schedule Now in Effect",
-      "description": "We're on a summer break from Sunday school, Fellowship Lunches, and pastor drop-in office hours. You're always welcome to set up a separate time with Pastor Craig (craig.luekens@cpcnewhaven.org), or Pastor Jerry (jerry.ornelas@cpcnewhaven.org).",
+      "description": "We're on a summer break from Sunday school, Fellowship Lunches, and pastor drop-in office hours. You're always welcome to set up a separate time with Pastor Craig <a href=\"mailto:craig.luekens@cpcnewhaven.org\">(craig.luekens@cpcnewhaven.org)</a>, or Pastor Jerry <a href=\"mailto:jerry.ornelas@cpcnewhaven.org\">(jerry.ornelas@cpcnewhaven.org)</a>.",
       "dateEntered": "2026-05-11",
       "active": true,
       "type": "announcement",
@@ -165,7 +165,7 @@
     {
       "id": "2026-047",
       "title": "The CPC College Internship Program",
-      "description": "An opportunity for undergraduate students who desire to grow deeper in theology, godliness, and participation in ministry. Students will engage in theological training, personal formation, and missional opportunities in New Haven. The goal is to ground participants in sound doctrine, cultivate personal godliness, and, where applicable, help discern a call to ministry. The program offers two tracks: a Ministry Track for those exploring vocational ministry and a Formation Track for those seeking deeper theological and spiritual growth. Open to all undergraduate students. For more information or to apply, contact Pastor Jerry at jerry.ornelas@cpcnewhaven.org. Application deadline: Sunday, May 3rd.",
+      "description": "An opportunity for undergraduate students who desire to grow deeper in theology, godliness, and participation in ministry. Students will engage in theological training, personal formation, and missional opportunities in New Haven. The goal is to ground participants in sound doctrine, cultivate personal godliness, and, where applicable, help discern a call to ministry. The program offers two tracks: a Ministry Track for those exploring vocational ministry and a Formation Track for those seeking deeper theological and spiritual growth. Open to all undergraduate students. For more information or to apply, contact Pastor Jerry at <a href=\"mailto:jerry.ornelas@cpcnewhaven.org\">(jerry.ornelas@cpcnewhaven.org)</a>. Application deadline: Sunday, May 3rd.",
       "dateEntered": "2026-04-24",
       "active": false,
       "type": "announcement",
@@ -175,7 +175,7 @@
     {
       "id": "2026-039",
       "title": "Pastor's Book Pick | Life Together, by Dietrich Bonhoeffer",
-      "description": "A modern classic, we're treading into deep waters with this one! Written by pastor-theologian and martyr, Life Together is Bonhoeffer's vision for the Christian life, both individually and communally. Copies in the foyer — suggested donation of $15.",
+      "description": "A modern classic, we're treading into deep waters with this one! Written by pastor-theologian and martyr, Life Together is Bonhoeffer's vision for the Christian life, both individually and communally.<br/>Copies in the foyer — suggested donation of $15.",
       "dateEntered": "2026-03-13",
       "active": true,
       "type": "ongoing",
@@ -195,7 +195,7 @@
     {
       "id": "2026-029",
       "title": "Interested in Joining the Body of Christ at CPC?",
-      "description": "We consider the church an essential element of the gospel, so joining CPC as a member is a way to truly join the body of Christ, in all its blessings and with all its flaws! Before joining, you'll meet one-on-one with a pastor and then discuss how you've come to know Christ with the Shepherd Leaders. Contact Alexis Vano (admin@cpcnewhaven.org) to begin the process.",
+      "description": "We consider the church an essential element of the gospel, so joining CPC as a member is a way to truly join the body of Christ, in all its blessings and with all its flaws! Before joining, you'll meet one-on-one with a pastor and then discuss how you've come to know Christ with the Shepherd Leaders.<br/>Contact Alexis Vano <a href=\"mailto:admin@cpcnewhaven.org\">(admin@cpcnewhaven.org)</a> to begin the process.",
       "dateEntered": "2026-02-10",
       "active": true,
       "type": "announcement",
@@ -205,7 +205,7 @@
     {
       "id": "2026-027",
       "title": "Life Groups and Discipleship Groups",
-      "description": "Life Groups and Discipleship Groups are our way of doing \"church in the small\" where we meet throughout Greater New Haven to be engaged in prayer, teaching, fellowship and care. For information on which Life Group may be a good fit, contact Alexis, admin@cpcnewhaven.org.",
+      "description": "Life Groups and Discipleship Groups are our way of doing \"church in the small\" where we meet throughout Greater New Haven to be engaged in prayer, teaching, fellowship and care.<br/>For information on which Life Group may be a good fit, contact Alexis, <a href=\"mailto:admin@cpcnewhaven.org\">(admin@cpcnewhaven.org)</a>.",
       "dateEntered": "2026-01-29",
       "active": true,
       "type": "ongoing",
@@ -214,7 +214,7 @@
     },
     {
       "id": "2026-065",
-      "title": "Join the WhatsApp group<br>\"CPC Social!\"",
+      "title": "Join \"CPC Social!\" on WhatsApp",
       "description": "If you're interested in connecting more spontaneously with CPC folks, you're welcome to join our WhatsApp group \"CPC Social!\"",
       "dateEntered": "2026-06-30",
       "active": true,
@@ -225,7 +225,7 @@
     {
       "id": "2026-028",
       "title": "Pastor Drop-in Office Hours",
-      "description": "<strong>Craig, Fridays 7:30-10:30am | Other hours available upon request</strong><br><br>Drop in for a casual time of discussion, Q&A, prayer, coffee, tea, really whatever you want to make it! If you have a more private or formal need, you're always welcome to set up a separate time with Pastor Craig (craig.luekens@cpcnewhaven.org), or Pastor Jerry (jerry.ornelas@cpcnewhaven.org) but this is meant to be a space where anyone can drop in.",
+      "description": "<strong>Craig, Fridays 7:30-10:30am | Other hours available upon request</strong><br><br>Drop in for a casual time of discussion, Q&A, prayer, coffee, tea, really whatever you want to make it! If you have a more private or formal need, you're always welcome to set up a separate time with Pastor Craig <a href=\"mailto:craig.luekens@cpcnewhaven.org\">(craig.luekens@cpcnewhaven.org)</a>, or Pastor Jerry <a href=\"mailto:jerry.ornelas@cpcnewhaven.org\">(jerry.ornelas@cpcnewhaven.org)</a> but this is meant to be a space where anyone can drop in.",
       "dateEntered": "2026-01-29",
       "active": false,
       "type": "ongoing",

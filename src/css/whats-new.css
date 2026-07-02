@@ -7,7 +7,7 @@
 }
 
 .whats-new-section .container {
-    max-width: 1300px;
+    max-width: 1200px; /* Calculated 3 cards at 447.52px each with two 30px gaps when full. Not sure what is limiting width when there is plenty of space. Can set to min-width instead of max-width, but will not collapse properly on small screens. Header is not centered.*/
     margin: 0 auto;
 }
 
