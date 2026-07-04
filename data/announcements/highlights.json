@@ -51,16 +51,6 @@
       "tag": "community"
     },
     {
-      "id": "2026-052",
-      "title": "Final CLT Meeting | Friday, May 15 | 6:30pm",
-      "description": "Our last Christian Leadership Training meeting is this Friday, May 15th at 6:30pm. We'll discuss how Christ is our king through the church — especially through mercy ministries (Keller reading) and our relationships (Allender reading). We'll also look back on the whole class, so come with any lingering questions from previous sessions!",
-      "dateEntered": "2026-05-11",
-      "active": false,
-      "type": "event",
-      "category": "event",
-      "tag": "clt"
-    },
-    {
       "id": "2026-051",
       "title": "Vocation Journal | \"Koinonia\" Now Available!",
       "description": "\"Koinonia\", CPC's inaugural journal, is now available! Pick up a copy — it highlights different members of CPC and how they view their work in light of God's grace.",
@@ -73,104 +63,12 @@
     {
       "id": "2026-050",
       "title": "Summer Schedule Now in Effect",
-      "description": "We're on a summer break from Sunday school, Fellowship Lunches, and pastor drop-in office hours. You're always welcome to set up a separate time with Pastor Craig <a href=\"mailto:craig.luekens@cpcnewhaven.org\">(craig.luekens@cpcnewhaven.org)</a>, or Pastor Jerry <a href=\"mailto:jerry.ornelas@cpcnewhaven.org\">(jerry.ornelas@cpcnewhaven.org)</a>.",
+      "description": "We're on a summer break from Sunday school, Fellowship Lunches, and pastor drop-in office hours. You're always welcome to set up a separate time with Pastor Craig <a href=\"mailto:craig.luekens@cpcnewhaven.org\">(craig.luekels@cpcnewhaven.org)</a>, or Pastor Jerry <a href=\"mailto:jerry.ornelas@cpcnewhaven.org\">(jerry.ornelas@cpcnewhaven.org)</a>.",
       "dateEntered": "2026-05-11",
       "active": true,
       "type": "announcement",
       "category": "announcement",
       "tag": "schedule"
-    },
-    {
-      "id": "2026-046",
-      "title": "I Heart New Haven Day! | Saturday, June 6",
-      "description": "Mark your calendars for June 6 for Bridges of Hope's annual I Heart New Haven Day! This is an exciting day joining with other churches around the city to love the greater New Haven area with projects such as clean up, gardening, painting, and repair.",
-      "dateEntered": "2026-04-24",
-      "active": false,
-      "type": "event",
-      "category": "event",
-      "tag": "mercy"
-    },
-    {
-      "id": "2026-043",
-      "title": "HEART | Emotions & Spirituality | Adult Sunday Studies | Final Class May 17",
-      "description": "Our 4-week Adult Sunday class wraps up this Sunday, May 17 with the final session: Emotions and relationships. All are welcome at 9:30am in the downstairs Fellowship Hall. <a href=\"/sunday-studies/emotions-spirituality.html\">View the teaching series</a>.",
-      "dateEntered": "2026-04-17",
-      "active": false,
-      "type": "event",
-      "category": "event",
-      "tag": "sunday-school"
-    },
-    {
-      "id": "2026-048",
-      "title": "Children's Participation in Worship This Sunday",
-      "description": "This Sunday, during the Passing of the Peace, all children are invited to come to the front by the worship team. Mrs. Patty will have shakers available for the children to use during the Song of Thanksgiving. We are grateful for our covenant children, and it is both our joy and privilege to help train them in the Worship of God.",
-      "dateEntered": "2026-05-01",
-      "active": false,
-      "type": "announcement",
-      "category": "sunday-school",
-      "tag": "children"
-    },
-    {
-      "id": "2026-044-college",
-      "title": "College Event This Sunday! | CPC Fellowship Hall, 5pm-7pm",
-      "description": "Undergraduate students—join us this Sunday from 5–7 PM in the CPC Fellowship Hall for a Pizza Cook-Off! We'll provide the dough, sauce, and cheese—just bring your most creative (or random) toppings and come ready to compete. There will also be games and time to hang out. All are welcome.",
-      "dateEntered": "2026-04-24",
-      "active": false,
-      "type": "event",
-      "category": "event",
-      "tag": "college"
-    },
-    {
-      "id": "2026-040",
-      "title": "Tomorrow! Young Adults' Ozdust Ball | 6:00-10:00 PM | CPC Fellowship Hall",
-      "description": "We are hosting a ball to reach out to the young adult students and professionals inside our church and in the wider New Haven community. We also hope this will be a chance for those who have not yet come to church to experience our community in a fun way. Please invite friends who fall into this category! There will be food, music and dancing, and the theme is the land of Oz.<br><br><a href=\"https://partiful.imgix.net/external/user/GpJGatjzQAZA6L6xI7wtwziXjl93/fRLKa-QyxLePlBM7thoEW?fit=clip&w=800&auto=format\" target=\"_blank\">RSVP here!</a><br><br>Reach out to Josh Sanders, Marney Walker or Ellen Martin if you'd like to volunteer with making decorations or clean-up!",
-      "dateEntered": "2026-04-12",
-      "featuredImage": "https://partiful.imgix.net/external/user/GpJGatjzQAZA6L6xI7wtwziXjl93/fRLKa-QyxLePlBM7thoEW?fit=clip&w=800&auto=format",
-      "imageDisplayType": "poster",
-      "active": false,
-      "type": "event",
-      "category": "event",
-      "tag": "young-adults"
-    },
-    {
-      "id": "2026-042",
-      "title": "Mercy Day | May 2 | Volunteers and Mercy Projects Needed! | Sign up here!",
-      "description": "To truly love and serve one another, we'll tackle projects for those who need any help. Each project will have a dedicated project lead/captain who will give instructions to volunteers. <a href=\"https://docs.google.com/forms/d/e/1FAIpQLSePojMW7eLqoZMS1xRD2zr1DkRinxA0l5MWIVRN8ikUTYu74A/viewform\" target=\"_blank\">Sign up here!</a>",
-      "dateEntered": "2026-04-17",
-      "active": false,
-      "type": "event",
-      "category": "event",
-      "tag": "mercy"
-    },
-    {
-      "id": "2026-044",
-      "title": "Congregational Meeting | May 3 During Lunch",
-      "description": "Our bi-annual congregational meeting takes place next Sunday, May 3rd after the worship service in the Fellowship Hall. We will hear a recap of all that God has done this year, and discuss plans for the future. All are welcome to attend, and members are highly encouraged, though there will be no official voting.",
-      "dateEntered": "2026-04-24",
-      "active": false,
-      "type": "event",
-      "category": "event",
-      "tag": "meeting"
-    },
-    {
-      "id": "2026-045",
-      "title": "Lost and Found",
-      "description": "It is that time of year again to clear out the clutter and return lost items to their owners. The table will be set up for 3 weeks. Owners will have the first 2 weeks to retrieve their lost belongings. If you know who it belongs to, let them know or tag it. On the third week, the remaining items can find new owners with anyone who can use them and wish to take them home. All leftovers items will be donated.",
-      "dateEntered": "2026-04-24",
-      "active": false,
-      "type": "announcement",
-      "category": "announcement",
-      "tag": "community"
-    },
-    {
-      "id": "2026-047",
-      "title": "The CPC College Internship Program",
-      "description": "An opportunity for undergraduate students who desire to grow deeper in theology, godliness, and participation in ministry. Students will engage in theological training, personal formation, and missional opportunities in New Haven. The goal is to ground participants in sound doctrine, cultivate personal godliness, and, where applicable, help discern a call to ministry. The program offers two tracks: a Ministry Track for those exploring vocational ministry and a Formation Track for those seeking deeper theological and spiritual growth. Open to all undergraduate students. For more information or to apply, contact Pastor Jerry at <a href=\"mailto:jerry.ornelas@cpcnewhaven.org\">(jerry.ornelas@cpcnewhaven.org)</a>. Application deadline: Sunday, May 3rd.",
-      "dateEntered": "2026-04-24",
-      "active": false,
-      "type": "announcement",
-      "category": "college",
-      "tag": "internship"
     },
     {
       "id": "2026-039",
@@ -181,16 +79,6 @@
       "type": "ongoing",
       "category": "ongoing",
       "tag": "books"
-    },
-    {
-      "id": "2026-026",
-      "title": "Summer Sunday Schedule",
-      "description": "8:30am | Prayer in the Parlor<br>10:30am | Worship Service",
-      "dateEntered": "2026-01-29",
-      "active": false,
-      "type": "ongoing",
-      "category": "ongoing",
-      "tag": "schedule"
     },
     {
       "id": "2026-029",
@@ -221,16 +109,6 @@
       "type": "ongoing",
       "category": "ongoing",
       "tag": "community"
-    },
-    {
-      "id": "2026-028",
-      "title": "Pastor Drop-in Office Hours",
-      "description": "<strong>Craig, Fridays 7:30-10:30am | Other hours available upon request</strong><br><br>Drop in for a casual time of discussion, Q&A, prayer, coffee, tea, really whatever you want to make it! If you have a more private or formal need, you're always welcome to set up a separate time with Pastor Craig <a href=\"mailto:craig.luekens@cpcnewhaven.org\">(craig.luekens@cpcnewhaven.org)</a>, or Pastor Jerry <a href=\"mailto:jerry.ornelas@cpcnewhaven.org\">(jerry.ornelas@cpcnewhaven.org)</a> but this is meant to be a space where anyone can drop in.",
-      "dateEntered": "2026-01-29",
-      "active": false,
-      "type": "ongoing",
-      "category": "ongoing",
-      "tag": "office"
     }
   ]
 }
