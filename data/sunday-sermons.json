@@ -3,6 +3,28 @@
   "description": "Weekly sermons from our Sunday worship services",
   "episodes": [
     {
+      "id": "26-07-12",
+      "title": "How Do You Keep Your Confidence in God?",
+      "author": "Rev. Jerry Ornelas",
+      "scripture": "Psalm 31:1-24",
+      "date": "2026-07-12",
+      "apple_podcasts_url": "",
+      "spotify_url": "https://open.spotify.com/episode/2wrw0uUsMJW1fjapfUL5gr?si=6Vy4rfdMRfyyBbC4wh6Owg",
+      "link": "https://open.spotify.com/episode/2wrw0uUsMJW1fjapfUL5gr?si=6Vy4rfdMRfyyBbC4wh6Owg",
+      "podcast-thumbnail_url": ""
+    },
+    {
+      "id": "26-07-19",
+      "title": "Devoted Discipleship: A Battle Worth Fighting",
+      "author": "Rev. Brandon Farquhar (guest preacher)",
+      "scripture": "1 Timothy 3:15-4:16",
+      "date": "2026-07-19",
+      "apple_podcasts_url": "",
+      "spotify_url": "https://open.spotify.com/episode/4lUpuWtz3umIjqB3N4wQ7Z?si=T7DKBn2NRyeBiCAInrYxrA",
+      "link": "https://open.spotify.com/episode/4lUpuWtz3umIjqB3N4wQ7Z?si=T7DKBn2NRyeBiCAInrYxrA",
+      "podcast-thumbnail_url": ""
+    },
+    {
       "id": "26-07-06",
       "title": "Abandonment, Lament, and the Salvation Jesus Secures",
       "author": "Rev. Craig Luekens",
