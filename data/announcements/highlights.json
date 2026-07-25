@@ -1,9 +1,49 @@
 {
   "announcements": [
     {
+      "id": "2026-060",
+      "title": "Last Thursday Picnic Next Week! | July 30 at 6pm",
+      "description": "Join us for our final Summer Thursday Picnic! This is a wonderful opportunity to enjoy fellowship, food, and fun together as a church family.<br/>Please sign up on the sheet in the foyer to help set up.<br/>Each picnic will have two key leaders and three support volunteers responsible for utilizing the provided budget to select the meal and coordinating setup and cleanup.",
+      "dateEntered": "2026-06-21",
+      "active": true,
+      "type": "event",
+      "category": "event",
+      "tag": "community"
+    },
+    {
+      "id": "2026-068",
+      "title": "Mercy Day! | August 29",
+      "description": "BOTH Volunteers and Mercy Projects Needed! To truly love and serve one another, we'll tackle projects for those who need any help. Each project will have a dedicated project lead/captain who will give instructions to volunteers.<br/><a href=\"https://us.list-manage.com/\" target=\"_blank\">Sign up here!</a>",
+      "dateEntered": "2026-07-25",
+      "active": true,
+      "type": "event",
+      "category": "event",
+      "tag": "mercy"
+    },
+    {
+      "id": "2026-061",
+      "title": "Volunteers Still Needed! | Serve with CPC in the Hill",
+      "description": "Wednesday Night Summer BBQs (July 1-August 19) | Trowbridge Square Park in the Hill: 169 Cedar St, New Haven, CT 06519. Volunteers needed to help set up, serve, and clean up (4:45pm–7:00pm).<br/><a href=\"https://us.list-manage.com/mSHNqshleo6?e=9da175cc40&amp;c2id=6df9b900f2d1d0ec64fac5dfc299411c\" target=\"_blank\">Sign up here!</a>",
+      "dateEntered": "2026-06-21",
+      "active": true,
+      "type": "event",
+      "category": "event",
+      "tag": "mercy"
+    },
+    {
+      "id": "2026-062",
+      "title": "Men's Bike Ride &amp; Lunch | Saturday, August 1 @11am",
+      "description": "Bike ride the Canal trail to Mikro for lunch, meeting at 11am at CPC parking lot.<br/>Sign up sheet in the foyer.",
+      "dateEntered": "2026-06-21",
+      "active": true,
+      "type": "event",
+      "category": "event",
+      "tag": "men"
+    },
+    {
       "id": "2026-064",
-      "title": "Save the Dates!",
-      "description": "• July 26 - Summer Sunday Lunch<br/>•  August 1 - Men's Bike Ride &amp; Lunch<br/>•  August 23 - Sunday Lunches Resume<br/>•  October 3rd - CPC Women's Conference",
+      "title": "Ongoing: Save the Dates!",
+      "description": "• August 1 - Men's Bike Ride &amp; Lunch<br/>• August 23 - Regular Sunday Lunches Resume<br/>• October 3rd - CPC Women's Conference",
       "dateEntered": "2026-06-21",
       "active": true,
       "type": "announcement",
@@ -18,36 +58,6 @@
       "active": true,
       "type": "announcement",
       "category": "announcement",
-      "tag": "community"
-    },
-    {
-      "id": "2026-062",
-      "title": "Men's Bike Ride & Lunch Saturday, August 1",
-      "description": "Bike ride the Canal trail to Mikro — time and route details to follow.<br/>Sign up sheet in the foyer.",
-      "dateEntered": "2026-06-21",
-      "active": true,
-      "type": "event",
-      "category": "event",
-      "tag": "men"
-    },
-    {
-      "id": "2026-061",
-      "title": "Serve with CPC in the Hill: Wednesday Night Summer BBQs",
-      "description": "Wednesday evenings at Trowbridge Square Park in the Hill: 169 Cedar St, New Haven, CT 06519. Volunteers needed to help set up, serve, and clean up (4:45pm–7:00pm).<br/><a href=\"https://us.list-manage.com/mSHNqshleo6?e=9da175cc40&amp;c2id=6df9b900f2d1d0ec64fac5dfc299411c\" target=\"_blank\">Sign up here!</a>",
-      "dateEntered": "2026-06-21",
-      "active": true,
-      "type": "event",
-      "category": "event",
-      "tag": "mercy"
-    },
-    {
-      "id": "2026-060",
-      "title": "Thursday Picnics on the CPC Lawn | July 9, 16, 23, 30 at 6pm",
-      "description": "Join us for our Summer Thursday Picnics! These gatherings are a wonderful opportunity to enjoy fellowship, food, and fun together as a church family. Each picnic date will have two key leaders and three support volunteers responsible for utilizing the provided budget to select the meal and coordinating setup and cleanup.<br/>Please sign up on the sheet in the foyer.",
-      "dateEntered": "2026-06-21",
-      "active": true,
-      "type": "event",
-      "category": "event",
       "tag": "community"
     },
     {
