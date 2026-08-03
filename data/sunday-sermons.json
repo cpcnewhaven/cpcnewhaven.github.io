@@ -3,6 +3,28 @@
   "description": "Weekly sermons from our Sunday worship services",
   "episodes": [
     {
+      "id": "26-08-02",
+      "title": "The Darkness of Christ",
+      "author": "Rev. Craig Luekens",
+      "scripture": "Psalm 88: 1-18",
+      "date": "2026-08-02",
+      "apple_podcasts_url": "",
+      "spotify_url": "https://open.spotify.com/episode/1dmAIRmuJMsrJ1FWRJzUUi?si=h8Sfe5qxSuWwbWE0Qs0NjA",
+      "link": "https://open.spotify.com/episode/1dmAIRmuJMsrJ1FWRJzUUi?si=h8Sfe5qxSuWwbWE0Qs0NjA",
+      "podcast-thumbnail_url": ""
+    },
+    {
+      "id": "26-07-26",
+      "title": "Crying Out in Christ",
+      "author": "Rev. Craig Luekens",
+      "scripture": "Psalm 55:1-23",
+      "date": "2026-07-26",
+      "apple_podcasts_url": "",
+      "spotify_url": "https://open.spotify.com/episode/4ITJ9Q04dbHKrGunYdRtiF?si=lYqyK08WRUeRL5v4VXFHhA",
+      "link": "https://open.spotify.com/episode/4ITJ9Q04dbHKrGunYdRtiF?si=lYqyK08WRUeRL5v4VXFHhA",
+      "podcast-thumbnail_url": ""
+    },
+    {
       "id": "26-07-12",
       "title": "How Do You Keep Your Confidence in God?",
       "author": "Rev. Jerry Ornelas",
