@@ -1,11 +1,10 @@
 /**
  * What's New Manager
- * Dynamically aggregates latest podcast episodes and sermons
+ * Dynamically displays the latest sermons from CPC
  */
 
 class WhatsNewManager {
     constructor() {
-        this.rssUrl = 'https://anchor.fm/s/4c59256c/podcast/rss';
         this.sermonsUrl = './data/sunday-sermons.json';
         this.container = document.getElementById('whats-new-container');
         this.limit = 3; // Total items to show
@@ -18,19 +17,14 @@ class WhatsNewManager {
         this.displayLoading();
 
         try {
-            const [podcastItems, sermonItems] = await Promise.all([
-                this.fetchPodcasts(),
-                this.fetchSermons()
-            ]);
-
-            const allItems = [...podcastItems, ...sermonItems];
+            const sermonItems = await this.fetchSermons();
 
             // Sort by date (newest first)
-            allItems.sort((a, b) => new Date(b.date) - new Date(a.date));
+            sermonItems.sort((a, b) => new Date(b.date) - new Date(a.date));
 
-            // Deduplicate by normalized title (podcast feed often mirrors sermons)
+            // Deduplicate by normalized title just in case the source file includes repeats
             const seen = new Set();
-            const deduped = allItems.filter(item => {
+            const deduped = sermonItems.filter(item => {
                 const key = item.title.toLowerCase().replace(/\s+/g, ' ').trim();
                 if (seen.has(key)) return false;
                 seen.add(key);
@@ -47,48 +41,21 @@ class WhatsNewManager {
         }
     }
 
-    async fetchPodcasts() {
-        try {
-            // Using rss2json to avoid CORS issues and get easy-to-parse JSON
-            const apiUrl = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(this.rssUrl)}`;
-            const response = await fetch(apiUrl);
-            if (!response.ok) throw new Error('Failed to fetch RSS');
-            
-            const data = await response.json();
-            if (data.status !== 'ok') throw new Error('RSS conversion failed');
-
-            return data.items.map(item => ({
-                type: 'podcast',
-                tag: 'Podcast',
-                title: item.title,
-                description: this.stripHtml(item.description).substring(0, 150) + '...',
-                date: item.pubDate,
-                link: item.link,
-                image: item.thumbnail
-            }));
-        } catch (error) {
-            console.warn('Podcast fetch failed:', error);
-            return [];
-        }
-    }
-
     async fetchSermons() {
         try {
             const response = await fetch(this.sermonsUrl);
             if (!response.ok) throw new Error('Failed to fetch sermons');
-            
+
             const data = await response.json();
             const episodes = data.episodes || [];
 
-            // Return first 5 episodes to be safe for sorting
-            return episodes.slice(0, 5).map(s => ({
+            return episodes.map(s => ({
                 type: 'sermon',
                 tag: 'Sermon',
                 title: s.title,
                 description: `${s.scripture} | ${s.author}`,
                 date: s.date,
-                link: s.link || s.spotify_url || 'sunday-sermons.html',
-                image: s['podcast-thumbnail_url'] || 'assets/web-assets/cpcLOGO.png'
+                link: s.link || s.spotify_url || 'sunday-sermons.html'
             }));
         } catch (error) {
             console.warn('Sermons fetch failed:', error);
@@ -104,7 +71,8 @@ class WhatsNewManager {
 
     formatDate(dateString) {
         const options = { year: 'numeric', month: 'long', day: 'numeric' };
-        return new Date(dateString).toLocaleDateString(undefined, options);
+        const [year, month, day] = dateString.split('-').map(Number);
+        return new Date(year, month - 1, day).toLocaleDateString(undefined, options);
     }
 
     renderItems(items) {
@@ -120,8 +88,8 @@ class WhatsNewManager {
         items.forEach(item => {
             const card = document.createElement('a');
             card.href = item.link;
-            card.className = `whats-new-card tag-${item.type}`;
-            if (item.type === 'podcast' || item.link.includes('spotify.com') || item.link.includes('youtube.com')) {
+            card.className = 'whats-new-card tag-sermon';
+            if (item.link.includes('spotify.com') || item.link.includes('youtube.com')) {
                 card.target = '_blank';
             }
 
@@ -131,7 +99,7 @@ class WhatsNewManager {
                 <p>${item.description}</p>
                 <div class="card-footer">
                     <span class="card-date"><i class="far fa-calendar-alt"></i> ${this.formatDate(item.date)}</span>
-                    <span class="card-link">${item.type === 'podcast' || item.type === 'sermon' ? 'Listen Now' : 'Learn More'} <i class="fas fa-arrow-right"></i></span>
+                    <span class="card-link">Listen Now <i class="fas fa-arrow-right"></i></span>
                 </div>
             `;
             grid.appendChild(card);

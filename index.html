@@ -182,11 +182,28 @@
     <div id="highlights-container" class="highlights-content" style="padding: 40px 20px;">
       <!-- Highlights will be injected here by highlights.js -->
     </div>
+  </section>
+
+  <section id="upcoming-sermon" class="upcoming-sermon-section">
+    <div class="container">
+      <div class="whats-new-header">
+        <h2>Upcoming Sermon</h2>
+        <p>Here’s what we’ll hear from God’s Word this Sunday morning.</p>
+      </div>
+      <div id="upcoming-sermon-widget" class="upcoming-sermon-widget">
+        <div class="upcoming-sermon-loading">
+          <i class="fas fa-spinner fa-spin"></i>
+          <p>Loading upcoming sermon...</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section id="whats-new" class="whats-new-section">
     <div class="container">
       <div class="whats-new-header">
-        <h2>Latest Sermons and Podcasts</h2>
-        <p>The latest sermons, podcast episodes, and media from our church.</p>
+        <h2>Latest Sermons</h2>
+        <p>The latest Sunday sermons from our church.</p>
       </div>
       <div id="whats-new-container">
         <!-- Content will be injected by whats-new.js -->
@@ -236,6 +253,8 @@
   <script src="./src/js/homepage-lazy-load.js"></script>
   <!-- Highlights -->
   <script src="./src/js/highlights.js"></script>
+  <!-- Upcoming Sermon -->
+  <script src="./src/js/homepage-upcoming-sermon.js"></script>
   <!-- What's New -->
   <script src="./src/js/whats-new.js"></script>
 </body>
