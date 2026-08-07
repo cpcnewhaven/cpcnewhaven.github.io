@@ -2,19 +2,19 @@
   "announcements": [
     {
       "id": "2026-060",
-      "title": "Last Thursday Picnic Next Week! | July 30 at 6pm",
-      "description": "Join us for our final Summer Thursday Picnic! This is a wonderful opportunity to enjoy fellowship, food, and fun together as a church family.<br/>Please sign up on the sheet in the foyer to help set up.<br/>Each picnic will have two key leaders and three support volunteers responsible for utilizing the provided budget to select the meal and coordinating setup and cleanup.",
-      "dateEntered": "2026-06-21",
+      "title": "Parent Meeting | Sunday, August 23",
+      "description": "As we prepare for another year of Sunday School, we'd love for all parents of children participating in Sunday School (2 &amp; 3 year olds through 12th grade) to join us for a brief meeting immediately following the morning worship service in the Lecture Room. Pastor Jerry and our Sunday School teachers will share the vision for the coming year, introduce the new curriculum, explain what families can expect and give space for questions. We look forward to partnering with you as we seek to help our covenant children know, love, and follow Christ.",
+      "dateEntered": "2026-08-07",
       "active": true,
       "type": "event",
       "category": "event",
-      "tag": "community"
+      "tag": "family"
     },
     {
       "id": "2026-068",
       "title": "Mercy Day! | August 29",
-      "description": "BOTH Volunteers and Mercy Projects Needed! To truly love and serve one another, we'll tackle projects for those who need any help. Each project will have a dedicated project lead/captain who will give instructions to volunteers.<br/><a href=\"https://us.list-manage.com/\" target=\"_blank\">Sign up here!</a>",
-      "dateEntered": "2026-07-25",
+      "description": "BOTH Volunteers and Mercy Projects Needed! To truly love and serve one another, we'll tackle projects for those who need any help. Each project will have a dedicated project lead/captain who will give instructions to volunteers.<br/><a href=\"https://us.list-manage.com/Um6Ff7b001b?e=9da175cc40&amp;c2id=6df9b900f2d1d0ec64fac5dfc299411c\" target=\"_blank\">Sign up here!</a>",
+      "dateEntered": "2026-08-07",
       "active": true,
       "type": "event",
       "category": "event",
@@ -23,8 +23,8 @@
     {
       "id": "2026-061",
       "title": "Volunteers Still Needed! | Serve with CPC in the Hill",
-      "description": "Wednesday Night Summer BBQs (July 1-August 19) | Trowbridge Square Park in the Hill: 169 Cedar St, New Haven, CT 06519. Volunteers needed to help set up, serve, and clean up (4:45pm–7:00pm).<br/><a href=\"https://us.list-manage.com/mSHNqshleo6?e=9da175cc40&amp;c2id=6df9b900f2d1d0ec64fac5dfc299411c\" target=\"_blank\">Sign up here!</a>",
-      "dateEntered": "2026-06-21",
+      "description": "Wednesday Night Summer BBQs (July 1-August 19) | Trowbridge Square Park in the Hill: 169 Cedar St, New Haven, CT 06519. Volunteers needed to help set up, serve, and clean up (4:45pm-7:00pm).<br/><a href=\"https://us.list-manage.com/TjLgfgRTZ9j?e=9da175cc40&amp;c2id=6df9b900f2d1d0ec64fac5dfc299411c\" target=\"_blank\">Sign up here!</a>",
+      "dateEntered": "2026-08-07",
       "active": true,
       "type": "event",
       "category": "event",
@@ -42,9 +42,9 @@
     },
     {
       "id": "2026-064",
-      "title": "Ongoing: Save the Dates!",
-      "description": "• August 1 - Men's Bike Ride &amp; Lunch<br/>• August 23 - Regular Sunday Lunches Resume<br/>• October 3rd - CPC Women's Conference",
-      "dateEntered": "2026-06-21",
+      "title": "New Ministry Year Begins! | Save these Dates:",
+      "description": "Regular Sunday Lunches Resume | August 23<br/>Congregational Meeting During Lunch | August 30<br/>Welcome Sunday | September 13<br/>&nbsp;&nbsp;Sunday Studies Begin<br/>&nbsp;&nbsp;New Sermon Series<br/>&nbsp;&nbsp;Outdoor Welcome Lunch<br/>Men's Night | Friday September 18<br/>CPC Women's Conference | Saturday October 3",
+      "dateEntered": "2026-08-07",
       "active": true,
       "type": "announcement",
       "category": "announcement",
@@ -55,7 +55,7 @@
       "title": "CPC Mom's Group",
       "description": "Moms with young kids: join our WhatsApp group to stay up to date with meet-ups this summer! Some happening on weekends too! Reach out to Meg Bogue for more information: <a href=\"mailto:mhbogue@me.com\">mhbogue@me.com</a>",
       "dateEntered": "2026-06-21",
-      "active": true,
+      "active": false,
       "type": "announcement",
       "category": "announcement",
       "tag": "community"
@@ -75,7 +75,7 @@
       "title": "Summer Schedule Now in Effect",
       "description": "We're on a summer break from Sunday school, Fellowship Lunches, and pastor drop-in office hours. You're always welcome to set up a separate time with Pastor Craig <a href=\"mailto:craig.luekens@cpcnewhaven.org\">(craig.luekens@cpcnewhaven.org)</a>, or Pastor Jerry <a href=\"mailto:jerry.ornelas@cpcnewhaven.org\">(jerry.ornelas@cpcnewhaven.org)</a>.",
       "dateEntered": "2026-05-11",
-      "active": true,
+      "active": false,
       "type": "announcement",
       "category": "announcement",
       "tag": "schedule"
