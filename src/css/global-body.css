@@ -1040,12 +1040,11 @@ body:not(.mobile-nav-open) .mobile-navigation {
 
 @media screen and (min-width: 868px) {
     .hamburger-menu-button-container {
-        display: flex;
-        z-index: 1100;
+        display: none;
     }
 
     .mobile-navigation {
-        display: block;
+        display: none;
     }
 }
 
