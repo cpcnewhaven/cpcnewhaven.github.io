@@ -3,6 +3,30 @@
   "description": "Weekly sermons from our Sunday worship services",
   "episodes": [
     {
+      "id": "26-08-16",
+      "title": "Jesus Dies: The Shock of Judgement and Faithfulness at the Cross",
+      "author": "Rev. Craig Luekens",
+      "scripture": "Luke 23:44-56",
+      "date": "2026-08-16",
+      "apple_podcasts_url": "",
+      "spotify_url": "",
+      "link": "https://www.cpcnewhaven.org/sermons/sermon/2026-08-16/jesus-dies-the-shock-of-judgement-and-faithfulness-at-the-cross",
+      "podcast-thumbnail_url": "",
+      "audio_url": "https://www.cpcnewhaven.org/download/4734"
+    },
+    {
+      "id": "26-08-09",
+      "title": "Jesus' Astonishing Love on the Cross",
+      "author": "Rev. Craig Luekens",
+      "scripture": "Luke 23:26-43",
+      "date": "2026-08-09",
+      "apple_podcasts_url": "",
+      "spotify_url": "",
+      "link": "https://www.cpcnewhaven.org/sermons/sermon/2026-08-09/jesus-astonishing-love-on-the-cross",
+      "podcast-thumbnail_url": "",
+      "audio_url": "https://www.cpcnewhaven.org/download/4731"
+    },
+    {
       "id": "26-08-02",
       "title": "The Darkness of Christ",
       "author": "Rev. Craig Luekens",

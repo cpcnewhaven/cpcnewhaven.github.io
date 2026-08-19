@@ -194,7 +194,7 @@ h3 {
 
 .new-page-header {
     width: 100%;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     padding-top: 40px;
@@ -863,6 +863,8 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: nowrap;
+    gap: clamp(2px, 0.8vw, 12px);
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -872,7 +874,7 @@ p {
     /* Enhanced blur for glassy effect */
     border-bottom: 1px solid rgba(255, 255, 255, 0.15);
     /* More subtle border */
-    padding: 5px 0;
+    padding: 5px 14px;
     /* Reduced padding for sleeker header */
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     /* Softer, lower shadow */
@@ -891,14 +893,15 @@ p {
     color: rgba(255, 255, 255, 0.92);
     /* Slightly transparent white */
     text-decoration: none;
-    font-size: 18px;
+    font-size: clamp(15px, 1.55vw, 18px);
     /* Slightly larger */
     font-weight: 500;
     /* Medium weight */
     letter-spacing: 0.3px;
     /* Subtle spacing */
-    margin: 0 10px;
-    padding: 6px 12px;
+    margin: 0;
+    padding: 6px 10px;
+    white-space: nowrap;
     border-bottom: 2px solid rgba(255, 255, 255, 0);
     transition: all 0.2s ease;
 }
@@ -4314,10 +4317,13 @@ body:not(.mobile-nav-open) .mobile-navigation {
 /* Dropdown for Main Navigation */
 .nav-dropdown {
     position: relative;
-    display: inline-block;
+    display: inline-flex;
+    flex: 0 0 auto;
+    align-items: center;
 }
 .nav-dropdown .nav-dropbtn {
     cursor: pointer;
+    white-space: nowrap;
 }
 .nav-dropdown-content {
     display: none;
