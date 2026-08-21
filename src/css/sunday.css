@@ -39,6 +39,7 @@ body {
 
 /* Enhanced Parallax Hero Section */
 #sunday-hero.splash-hero--sunday {
+    display: flex !important;
     height: 80vh;
     /* Avoid scroll jank from fixed backgrounds */
     background-attachment: scroll;
