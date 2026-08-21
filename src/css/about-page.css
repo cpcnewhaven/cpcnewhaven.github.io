@@ -472,14 +472,16 @@
 }
 
 .story-disclosure {
-    border: 1px solid rgba(0, 68, 136, 0.18);
+    background: #ffffff;
+    border: 1px solid rgba(0, 68, 136, 0.16);
     border-radius: 12px;
+    box-shadow: 0 12px 30px rgba(0, 34, 68, 0.08);
     overflow: hidden;
 }
 
 .story-disclosure summary {
     align-items: center;
-    background: rgba(0, 68, 136, 0.06);
+    background: linear-gradient(135deg, rgba(0, 68, 136, 0.08), rgba(0, 68, 136, 0.03));
     color: var(--cpc-blue);
     cursor: pointer;
     display: flex;
@@ -502,7 +504,7 @@
 }
 
 .story-disclosure[open] summary {
-    border-bottom: 1px solid rgba(0, 68, 136, 0.18);
+    border-bottom: 1px solid rgba(0, 68, 136, 0.16);
 }
 
 .story-disclosure[open] summary::after {
@@ -510,11 +512,11 @@
 }
 
 .story-disclosure .about-body-text {
-    padding: 0 clamp(1.25rem, 4vw, 2.5rem) 1rem;
+    padding: 2rem clamp(1.25rem, 4vw, 2.5rem) 1.5rem;
 }
 
 #missionAnabaino {
-    padding-bottom: clamp(2.5rem, 4vw, 4rem);
+    padding-bottom: 1.25rem;
 }
 
 .anabaino-link {
@@ -545,8 +547,8 @@
 }
 
 #ourStory {
-    padding-top: clamp(2.5rem, 4vw, 4rem);
-    padding-bottom: clamp(2.5rem, 4vw, 4rem);
+    padding-top: 1.25rem;
+    padding-bottom: clamp(2rem, 4vw, 3rem);
 }
 
 #ourStory .about-sub-title {
