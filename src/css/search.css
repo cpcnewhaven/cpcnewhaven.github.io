@@ -19,18 +19,38 @@
 }
 
 .search-hero {
+  position: relative;
+  overflow: hidden;
+  min-height: 230px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   text-align: center;
-  padding: 16px 10px 10px 10px;
+  padding: 34px 24px;
+  border-radius: 0 0 24px 24px;
+  color: #fff;
+  background:
+    linear-gradient(rgba(0, 42, 68, 0.80), rgba(0, 42, 68, 0.80)),
+    url("https://storage.googleapis.com/cpc-public-website/2026/MISC%20WEBSITE%20GRAPHICS/WEBSITE%20HERO%20-%20CONGREGATION.jpg") center / cover no-repeat;
+  box-shadow: 0 8px 24px rgba(0, 45, 75, 0.16);
 }
 
 .search-hero h1 {
-  margin: 8px 0 6px 0;
-  font-size: 2.2rem;
+  position: relative;
+  z-index: 1;
+  margin: 0 0 8px 0;
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  color: #fff;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
 }
 
 .search-hero p {
+  position: relative;
+  z-index: 1;
   margin: 0;
-  color: #334155;
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 1.15rem;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
 }
 
 /* Many pages use dark hero backgrounds; keep this readable on the global background. */
@@ -236,4 +256,3 @@
     backdrop-filter: none;
   }
 }
-
