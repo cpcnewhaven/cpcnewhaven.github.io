@@ -454,6 +454,38 @@
     font-size: inherit;
 }
 
+.story-era-title {
+    color: var(--cpc-blue);
+    font-size: clamp(1.35rem, 2vw, 1.8rem) !important;
+    font-weight: 700;
+    line-height: 1.2 !important;
+    margin: 3rem 0 1rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(0, 68, 136, 0.2);
+    text-align: left !important;
+}
+
+.story-era-title:first-child {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: 0;
+}
+
+.story-strategy {
+    margin: 0 0 2rem;
+    padding-left: 1.5rem;
+}
+
+.story-strategy li {
+    margin-bottom: 1rem;
+    padding-left: 0.4rem;
+}
+
+.story-strategy li::marker {
+    color: var(--cpc-blue);
+    font-weight: 700;
+}
+
 .mission-church-image {
     margin: 0 0 2rem;
 }
