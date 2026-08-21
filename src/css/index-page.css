@@ -23,8 +23,13 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    transition: background-color 0.3s ease;
+    background: linear-gradient(
+        180deg,
+        rgba(3, 25, 48, 0.22) 0%,
+        rgba(3, 25, 48, 0.42) 52%,
+        rgba(3, 25, 48, 0.74) 100%
+    );
+    transition: background 0.3s ease;
 }
 
 .hero-content {

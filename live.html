@@ -18,7 +18,7 @@
             content="CPC New Haven, live worship, church services, sermons, community events, faith, church family">
         <meta name="author" content="CPC New Haven Church">
         <title>Live Worship Services and Events - CPC New Haven Church</title>
-        <link rel="stylesheet" href="./src/css/global-body.css?v=20260821-nav-2">
+        <link rel="stylesheet" href="./src/css/global-body.css?v=20260821-heroes-5">
         <link rel="stylesheet" href="./src/css/global-footer-cta.css">
 
         <link rel="stylesheet"
@@ -93,8 +93,11 @@
         <!-- Toggle mobile menu script -->
         <script src="./src/js/function_toggle_mobileMenu.js"></script>
 
-        <div class="hero-image-container">
-            <div class="hero-text">Live Stream</div>
+        <div class="hero-image-container splash-hero--live">
+            <div class="hero-title-lockup">
+                <p class="hero-eyebrow">Live at CPC</p>
+                <h1>Live Stream</h1>
+            </div>
             <img
                 src="https://storage.googleapis.com/cpc-public-website/web-assets/heros/live/1.jpg"
                 class="hero-image active" alt="Live Stream Hero 1">
@@ -109,7 +112,11 @@
         <script>
             // Image rotation logic
             const heroImages = document.querySelectorAll('.hero-image');
-            let currentImageIndex = 0;
+            // Start on a different image from time to time so the hero feels fresh.
+            let currentImageIndex = Math.floor(Math.random() * heroImages.length);
+            heroImages.forEach((image, index) => {
+                image.classList.toggle('active', index === currentImageIndex);
+            });
 
             function rotateImages() {
                 heroImages[currentImageIndex].classList.remove('active');
@@ -221,21 +228,6 @@
                 overflow: hidden;
             }
 
-            .hero-text {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                color: white;
-                font-size: 4rem;
-                font-weight: 400;
-                text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-                z-index: 1;
-                white-space: nowrap;
-                text-align: center;
-                width: 100%;
-            }
-
             .hero-image {
                 position: absolute;
                 width: 100%;
@@ -327,4 +319,3 @@
       </form>
     </div>
   </section>
-

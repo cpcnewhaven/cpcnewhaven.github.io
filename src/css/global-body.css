@@ -3173,18 +3173,138 @@ body:not(.mobile-nav-open) .mobile-navigation {
     }
 }
 
-/* -------------------------------------------------------
-   Global override to disable all page subheaders/heroes
-   (Unification: remove splash banners site-wide)
---------------------------------------------------------*/
+/* Shared page-header system */
 .splash-hero--about,
 .splash-hero--podcasts,
-.splash-hero--sunday,
-.splash-hero--events,
 .splash-hero--announcements,
 .splash-hero--community,
-.splash-hero--live {
-    display: none !important;
+.splash-hero--live,
+.splash-hero--connect {
+    display: flex !important;
+    min-height: 15rem;
+    height: clamp(15rem, 24vw, 22rem) !important;
+    padding: clamp(2rem, 5vw, 4rem) 1.5rem;
+    background-attachment: scroll;
+    background-position: center;
+    isolation: isolate;
+}
+
+.splash-hero--about::before,
+.splash-hero--podcasts::before,
+.splash-hero--announcements::before,
+.splash-hero--community::before,
+.splash-hero--live::before,
+.splash-hero--connect::before {
+    background: linear-gradient(110deg, rgba(0, 24, 56, 0.76), rgba(0, 59, 102, 0.42)) !important;
+}
+
+.splash-hero--about h1,
+.splash-hero--podcasts h1,
+.splash-hero--announcements h1,
+.splash-hero--community h1,
+.splash-hero--live h1,
+.splash-hero--connect h1 {
+    max-width: 14ch;
+    margin: 0;
+    color: #fff !important;
+    font-size: clamp(2.4rem, 5vw, 4.4rem) !important;
+    font-weight: 700;
+    line-height: 0.96;
+    letter-spacing: -0.04em;
+    text-wrap: balance;
+    text-shadow: 0 3px 18px rgba(0, 0, 0, 0.35);
+}
+
+.splash-hero--about h1::after,
+.splash-hero--podcasts h1::after,
+.splash-hero--announcements h1::after,
+.splash-hero--community h1::after,
+.splash-hero--live h1::after,
+.splash-hero--connect h1::after {
+    content: '';
+    display: block;
+    width: 2.75rem;
+    height: 0.2rem;
+    margin: 1rem auto 0;
+    border-radius: 999px;
+    background: #fff;
+}
+
+/* Full-photo pages use a compact title lockup that leaves room for the image. */
+#sunday-hero.splash-hero--sunday::before,
+#events-hero.splash-hero--events::before {
+    background: linear-gradient(
+        180deg,
+        rgba(3, 25, 48, 0.36) 0%,
+        rgba(3, 25, 48, 0.52) 52%,
+        rgba(3, 25, 48, 0.78) 100%
+    ) !important;
+}
+
+#sunday-hero.splash-hero--sunday .hero-title-lockup,
+#events-hero.splash-hero--events .hero-title-lockup,
+.splash-hero--live .hero-title-lockup {
+    position: relative;
+    z-index: 2;
+    width: min(calc(100% - 3rem), 34rem);
+    padding: clamp(1.25rem, 2.5vw, 2rem);
+    border-left: 0.25rem solid #fff;
+    border-radius: 0 0.9rem 0.9rem 0;
+    background: linear-gradient(90deg, rgba(0, 18, 42, 0.78), rgba(0, 18, 42, 0.22));
+    box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, 0.22);
+}
+
+#sunday-hero.splash-hero--sunday .hero-eyebrow,
+#events-hero.splash-hero--events .hero-eyebrow,
+.splash-hero--live .hero-eyebrow {
+    margin: 0 0 0.65rem;
+    color: rgba(255, 255, 255, 0.82);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+#sunday-hero.splash-hero--sunday h1,
+#events-hero.splash-hero--events h1,
+.splash-hero--live .hero-title-lockup h1 {
+    max-width: 11ch !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: transparent;
+    box-shadow: none;
+    font-size: clamp(2.5rem, 4.8vw, 4.35rem) !important;
+    line-height: 0.97;
+    letter-spacing: -0.045em;
+    text-align: left !important;
+    text-wrap: balance;
+}
+
+@media (max-width: 768px) {
+    .splash-hero--about,
+    .splash-hero--podcasts,
+    .splash-hero--announcements,
+    .splash-hero--community,
+    .splash-hero--live,
+    .splash-hero--connect {
+        min-height: 12.5rem;
+        height: clamp(12.5rem, 55vw, 17rem) !important;
+    }
+
+    #sunday-hero.splash-hero--sunday h1,
+    #events-hero.splash-hero--events h1 {
+        max-width: 12ch !important;
+        padding: 0 !important;
+    }
+
+    #sunday-hero.splash-hero--sunday .hero-title-lockup,
+    #events-hero.splash-hero--events .hero-title-lockup {
+        width: min(calc(100% - 2rem), 28rem);
+        padding: 1.15rem 1.25rem;
+        border-left-width: 0.2rem;
+        border-radius: 0 0.75rem 0.75rem 0;
+    }
 }
 
 
