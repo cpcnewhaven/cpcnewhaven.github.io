@@ -6,6 +6,14 @@
     },
     {
       "date": "23 Aug 2026",
+      "description": "Fellowship Lunch, 12:00pm"
+    },
+    {
+      "date": "23 Aug 2026",
+      "description": "Parent Meeting, immediately after worship, Sanctuary"
+    },
+    {
+      "date": "23 Aug 2026",
       "description": "Life Group: East Rock Sunday, 1:00pm"
     },
     {
@@ -18,7 +26,27 @@
     },
     {
       "date": "29 Aug 2026",
-      "description": "Mercy Day"
+      "description": "Mercy Day, volunteers and projects needed"
+    },
+    {
+      "date": "30 Aug 2026",
+      "description": "Congregational Meeting during Fellowship Lunch"
+    },
+    {
+      "date": "13 Sep 2026",
+      "description": "Welcome Sunday, Sunday Studies and new sermon series begin"
+    },
+    {
+      "date": "18 Sep 2026",
+      "description": "Men's Night"
+    },
+    {
+      "date": "03 Oct 2026",
+      "description": "CPC Women's Conference"
+    },
+    {
+      "date": "07 Nov 2026",
+      "description": "Parenting Seminar"
     }
   ]
 }

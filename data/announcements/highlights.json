@@ -1,9 +1,29 @@
 {
   "announcements": [
     {
+      "id": "2026-069",
+      "title": "10:30am Worship This Sunday",
+      "description": "Due to Yale's move-in day, we suggest avoiding downtown on your way to church this Sunday.",
+      "dateEntered": "2026-08-21",
+      "active": true,
+      "type": "announcement",
+      "category": "schedule",
+      "tag": "sunday"
+    },
+    {
+      "id": "2026-070",
+      "title": "Fellowship Lunch Is Back This Sunday",
+      "description": "All are welcome! Consider grabbing a seat with someone new for our weekly meal together in the Fellowship Hall.",
+      "dateEntered": "2026-08-21",
+      "active": true,
+      "type": "event",
+      "category": "event",
+      "tag": "community"
+    },
+    {
       "id": "2026-060",
       "title": "Parent Meeting | Sunday, August 23",
-      "description": "As we prepare for another year of Sunday School, we'd love for all parents of children participating in Sunday School (2 &amp; 3 year olds through 12th grade) to join us for a brief meeting immediately following the morning worship service in the Lecture Room. Pastor Jerry and our Sunday School teachers will share the vision for the coming year, introduce the new curriculum, explain what families can expect and give space for questions. We look forward to partnering with you as we seek to help our covenant children know, love, and follow Christ.",
+      "description": "As we prepare for another year of Sunday School, we'd love for all parents of children participating in Sunday School (2 &amp; 3 year olds through 12th grade) to join us for a brief meeting immediately following the morning worship service in the Sanctuary. Pastor Jerry and our Sunday School teachers will share the vision for the coming year, introduce the new curriculum, explain what families can expect and give space for questions. We look forward to partnering with you as we seek to help our covenant children know, love, and follow Christ.",
       "dateEntered": "2026-08-07",
       "active": true,
       "type": "event",
@@ -43,7 +63,7 @@
     {
       "id": "2026-064",
       "title": "New Ministry Year Begins! | Save these Dates:",
-      "description": "Regular Sunday Lunches Resume | August 23<br/>Congregational Meeting During Lunch | August 30<br/>Welcome Sunday | September 13<br/>&nbsp;&nbsp;Sunday Studies Begin<br/>&nbsp;&nbsp;New Sermon Series<br/>&nbsp;&nbsp;Outdoor Welcome Lunch<br/>Men's Night | Friday September 18<br/>CPC Women's Conference | Saturday October 3",
+      "description": "Regular Sunday Lunches Resume | Sunday, August 23<br/>Congregational Meeting During Lunch | August 30<br/>Welcome Sunday | September 13<br/>&nbsp;&nbsp;Sunday Studies Begin<br/>&nbsp;&nbsp;New Sermon Series<br/>&nbsp;&nbsp;Outdoor Welcome Lunch<br/>Men's Night | Friday September 18<br/>CPC Women's Conference | Saturday October 3<br/>Parenting Seminar | Saturday November 7",
       "dateEntered": "2026-08-07",
       "active": true,
       "type": "announcement",
