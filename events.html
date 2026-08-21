@@ -118,7 +118,7 @@
     <p class="events-eyebrow">What's next</p>
     <h2 id="upcoming-events-title">Upcoming Events</h2>
     <div class="fall-events-list">
-      <div class="fall-event-item highlight-event">
+      <div class="fall-event-item">
         <div class="event-date"><span>Aug</span>23</div>
         <div class="event-info">
           <h3>Worship Service <span>10:30am-12:00pm</span></h3>
@@ -429,7 +429,7 @@
     .upcoming-events-section {
       max-width: 900px;
       margin: 0 auto;
-      padding: clamp(3rem, 7vw, 6rem) clamp(1.25rem, 4vw, 2rem);
+      padding: clamp(2.5rem, 5vw, 4.5rem) clamp(1.25rem, 4vw, 2rem);
     }
 
     .events-eyebrow {
@@ -443,7 +443,7 @@
     }
 
     .upcoming-events-section h2 {
-      margin: 0 0 2rem;
+      margin: 0 0 1.5rem;
       color: #063f74;
       font-size: clamp(2rem, 4vw, 3rem);
       letter-spacing: -0.03em;
@@ -458,7 +458,8 @@
 
     .fall-event-item {
       display: flex;
-      align-items: flex-start;
+      align-items: center;
+      min-height: 7rem;
       padding: 1.125rem;
       background: #fff;
       border-radius: 14px;
@@ -470,15 +471,6 @@
     .fall-event-item:hover {
       box-shadow: 0 4px 16px rgba(0, 120, 212, 0.15);
       transform: translateY(-1px);
-    }
-
-    .highlight-event {
-      border-left: 4px solid #ff6b35;
-      background: linear-gradient(135deg, #fff 0%, #fff8f5 100%);
-    }
-
-    .highlight-event .event-date {
-      background: #ff6b35;
     }
 
     .event-date {
@@ -509,6 +501,13 @@
       font-size: 1.15rem;
       color: #333;
       font-weight: 600;
+      text-align: left !important;
+    }
+
+    .event-info {
+      flex: 1;
+      min-width: 0;
+      text-align: left;
     }
 
     .event-info p {
