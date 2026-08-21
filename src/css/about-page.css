@@ -419,6 +419,41 @@
     /* prevent sticky header overlap on anchor jumps */
 }
 
+/* Keep the long-form About page comfortable to read at every viewport width. */
+.about-content-section {
+    min-height: auto;
+    width: min(100%, 76rem);
+    margin: 0 auto;
+    padding: clamp(2.75rem, 6vw, 5rem) clamp(1.5rem, 5vw, 4rem);
+    font-size: clamp(1rem, 0.97rem + 0.15vw, 1.125rem);
+    line-height: 1.7;
+}
+
+.about-inner-section {
+    width: min(100%, 66ch);
+    margin: 0 auto;
+}
+
+.about-sub-title {
+    font-size: clamp(2rem, 4vw, 3.5rem) !important;
+    line-height: 1.05 !important;
+    margin: 0 0 1.1rem;
+    text-wrap: balance;
+}
+
+.about-body-text,
+.about-content-section p,
+.about-content-section li {
+    max-width: 66ch;
+    font-size: inherit;
+    line-height: 1.7;
+    margin-bottom: 1.25rem;
+}
+
+.mission-church-image {
+    margin: 0 0 2rem;
+}
+
 .about-mobile-navigation {
     -webkit-overflow-scrolling: touch;
     /* smooth scrolling on iOS */
