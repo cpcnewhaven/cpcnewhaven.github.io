@@ -154,14 +154,16 @@
         display: none !important;
     }
 
-    .about-hamburger-menu-button-container {
-        display: flex !important;
-    }
-
     .about-content-section {
         margin-left: 0;
         padding: 20px 15px;
         font-size: 15px;
+    }
+}
+
+@media (max-width: 680px) {
+    .about-hamburger-menu-button-container {
+        display: flex !important;
     }
 }
 

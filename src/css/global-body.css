@@ -3765,7 +3765,7 @@ body:not(.mobile-nav-open) .mobile-navigation {
     display: block;
 }
 
-@media (max-width: 868px) {
+@media (max-width: 680px) {
     .about-hamburger-menu-button-container {
         display: flex;
     }
@@ -3785,7 +3785,7 @@ body:not(.mobile-nav-open) .mobile-navigation {
     }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 680px) {
     .about-floating-nav {
         display: none !important;
     }
