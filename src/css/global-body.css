@@ -3786,10 +3786,6 @@ body:not(.mobile-nav-open) .mobile-navigation {
 }
 
 @media (max-width: 680px) {
-    .about-floating-nav {
-        display: none !important;
-    }
-
     .about-hamburger-menu-button-container {
         display: flex !important;
         position: fixed;

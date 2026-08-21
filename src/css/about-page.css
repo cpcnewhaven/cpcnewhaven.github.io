@@ -6,76 +6,6 @@
     position: relative;
 }
 
-/* Floating Navigation - Sleek Dark Design */
-.about-floating-nav {
-    position: fixed;
-    top: 50%;
-    left: 20px;
-    transform: translateY(-50%);
-    background: linear-gradient(135deg, rgba(0, 15, 50, 0.95) 0%, rgba(0, 34, 68, 0.95) 100%);
-    padding: 12px 10px;
-    border-radius: 8px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25), 0 2px 8px rgba(0, 0, 0, 0.15);
-    z-index: 1000;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    backdrop-filter: blur(15px);
-    max-height: 80vh;
-    overflow-y: auto;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.about-floating-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-}
-
-.about-floating-nav a {
-    color: rgba(255, 255, 255, 0.85);
-    text-decoration: none;
-    font-size: 13px;
-    font-weight: 500;
-    letter-spacing: 0.3px;
-    transition: all 0.2s ease;
-    padding: 10px 14px;
-    border-radius: 6px;
-    white-space: nowrap;
-    border-left: 3px solid transparent;
-}
-
-.about-floating-nav a:hover,
-.about-floating-nav a.active {
-    background: rgba(255, 255, 255, 0.15);
-    color: #ffffff;
-    border-left-color: rgba(255, 255, 255, 0.8);
-    padding-left: 18px;
-}
-
-/* Custom scrollbar for floating nav */
-.about-floating-nav::-webkit-scrollbar {
-    width: 6px;
-}
-
-.about-floating-nav::-webkit-scrollbar-track {
-    background: rgba(0, 0, 0, 0.2);
-    border-radius: 3px;
-}
-
-.about-floating-nav::-webkit-scrollbar-thumb {
-    background: rgba(255, 255, 255, 0.3);
-    border-radius: 3px;
-    transition: background 0.2s ease;
-}
-
-.about-floating-nav::-webkit-scrollbar-thumb:hover {
-    background: rgba(255, 255, 255, 0.5);
-}
-
 /* Content Sections */
 .about-content-section {
     min-height: 60vh;
@@ -87,7 +17,7 @@
     max-width: 800px;
     font-size: 16px;
     line-height: 1.6;
-    margin-left: 180px;
+    margin-left: 0;
 }
 
 .about-content-section.visible {
@@ -150,10 +80,6 @@
 
 /* Responsive adjustments */
 @media (max-width: 900px) {
-    .about-floating-nav {
-        display: none !important;
-    }
-
     .about-content-section {
         margin-left: 0;
         padding: 20px 15px;
