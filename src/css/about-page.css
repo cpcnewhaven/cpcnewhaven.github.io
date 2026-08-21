@@ -430,7 +430,7 @@
 }
 
 .about-inner-section {
-    width: min(100%, 66ch);
+    width: min(100%, 58ch);
     margin: 0 auto;
 }
 
@@ -444,14 +444,23 @@
 .about-body-text,
 .about-content-section p,
 .about-content-section li {
-    max-width: 66ch;
+    max-width: 58ch;
     font-size: inherit;
     line-height: 1.7;
     margin-bottom: 1.25rem;
 }
 
+.about-content-section strong {
+    font-size: inherit;
+}
+
 .mission-church-image {
     margin: 0 0 2rem;
+}
+
+/* The site-wide mobile menu already exposes About; avoid a second menu button. */
+.about-hamburger-menu-button-container {
+    display: none !important;
 }
 
 .about-mobile-navigation {
