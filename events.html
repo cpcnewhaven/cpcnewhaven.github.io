@@ -23,7 +23,7 @@
   <link rel="stylesheet" href="src/css/global-nav-bar.css">
   <title>Announcements | CPC New Haven Church</title>
   <link rel="stylesheet" href="./src/css/footer.css">
-  <link rel="stylesheet" href="./src/css/global-body.css">
+  <link rel="stylesheet" href="./src/css/global-body.css?v=20260821-events-1">
   <link rel="stylesheet" href="./src/css/global-footer-cta.css">
   <link rel="stylesheet" href="./src/css/highlights.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
@@ -89,51 +89,85 @@
     </ul>
   </nav>
 
-  <section id="community-calendar">
-    <div class="calendar-container">
-      <h1>CPC Community Calendar</h1>
-      <hr>
-      <div class="calendar-wrapper">
-        <iframe
-          src="https://calendar.google.com/calendar/embed?src=baf2h147ghi7nu8ifijjrt994k%40group.calendar.google.com&ctz=America%2FNew_York"
-          frameborder="0" scrolling="no"></iframe>
-      </div>
-    </div>
-  </section>
-
-  <div x-data="{ 
-        images: [
-       
-           
-            'https://storage.googleapis.com/cpc-public-website/web-assets/heros/%5BHERO%5D%5BComm%7D6.jpg',
-            'https://storage.googleapis.com/cpc-public-website/web-assets/heros/%5BHERO%5D%5BComm%7D5.jpg',
-            'https://storage.googleapis.com/cpc-public-website/events/Young%20Adults%20Cookout%20-%20September%202025/2.jpg',
-            'https://storage.googleapis.com/cpc-public-website/events/Young%20Adults%20Cookout%20-%20September%202025/3.jpg',
-            'https://storage.googleapis.com/cpc-public-website/events/Young%20Adults%20Cookout%20-%20September%202025/4.jpg',
-            'https://storage.googleapis.com/cpc-public-website/events/Young%20Adults%20Cookout%20-%20September%202025/5.jpg',
-            'https://storage.googleapis.com/cpc-public-website/events/Young%20Adults%20Cookout%20-%20September%202025/6.jpg',
-            'https://storage.googleapis.com/cpc-public-website/events/Young%20Adults%20Cookout%20-%20September%202025/7.jpg',
-            'https://storage.googleapis.com/cpc-public-website/events/Young%20Adults%20Cookout%20-%20September%202025/8.jpg',
-            'https://storage.googleapis.com/cpc-public-website/events/Young%20Adults%20Cookout%20-%20September%202025/9.jpg'
-        ],
-        currentIndex: 0,
-        shuffleArray(array) {
-            for (let i = array.length - 1; i > 0; i--) {
-                const j = Math.floor(Math.random() * (i + 1));
-                [array[i], array[j]] = [array[j], array[i]];
-            }
-            return array;
-        }
-    }" x-init="
-        images = shuffleArray(images);
-        setInterval(() => { currentIndex = (currentIndex + 1) % images.length }, 5000)
-    " class="splash-hero--events parallax-hero" :style="`background-image: url('${images[currentIndex]}')`">
+  <div id="events-hero" class="splash-hero--events parallax-hero">
     <h1>Events and Announcements</h1>
   </div>
 
   <style>
     /* moved to global-body.css: splash-hero--events and community calendar styles */
+    #events-hero.splash-hero--events {
+      display: flex !important;
+      height: clamp(22rem, 55vh, 42rem);
+      min-height: 22rem;
+      background-attachment: scroll;
+      background-position: center 58%;
+    }
+
+    #events-hero.splash-hero--events::before {
+      background: rgba(0, 25, 38, 0.42);
+    }
+
+    #events-hero.splash-hero--events h1 {
+      max-width: 18ch;
+      padding: 0 1rem;
+      text-align: center;
+    }
   </style>
+
+  <section class="upcoming-events-section" aria-labelledby="upcoming-events-title">
+    <p class="events-eyebrow">What's next</p>
+    <h2 id="upcoming-events-title">Upcoming Events</h2>
+    <div class="fall-events-list">
+      <div class="fall-event-item highlight-event">
+        <div class="event-date"><span>Aug</span>23</div>
+        <div class="event-info">
+          <h3>Worship Service <span>10:30am-12:00pm</span></h3>
+          <p>Join us for Sunday worship at CPC.</p>
+        </div>
+      </div>
+      <div class="fall-event-item">
+        <div class="event-date"><span>Aug</span>23</div>
+        <div class="event-info">
+          <h3>Life Group: East Rock <span>1:00pm</span></h3>
+          <p>Connect with the East Rock Sunday life group.</p>
+        </div>
+      </div>
+      <div class="fall-event-item">
+        <div class="event-date"><span>Aug</span>25</div>
+        <div class="event-info">
+          <h3>Young at Heart 60+ <span>10:30am-1:00pm</span></h3>
+          <p>A discipleship gathering for adults 60 and older.</p>
+        </div>
+      </div>
+      <div class="fall-event-item">
+        <div class="event-date"><span>Aug</span>27</div>
+        <div class="event-info">
+          <h3>Life Group: Downtown New Haven <span>1:00pm</span></h3>
+          <p>Join the Thursday Downtown New Haven life group.</p>
+        </div>
+      </div>
+      <div class="fall-event-item">
+        <div class="event-date"><span>Aug</span>29</div>
+        <div class="event-info">
+          <h3>Mercy Day</h3>
+          <p>Serve alongside CPC neighbors through practical projects and care.</p>
+        </div>
+      </div>
+    </div>
+    <p class="events-calendar-note">See the calendar below for the complete and most current schedule.</p>
+  </section>
+
+  <section id="community-calendar">
+    <div class="calendar-container">
+      <h2>CPC Community Calendar</h2>
+      <hr>
+      <div class="calendar-wrapper">
+        <iframe
+          src="https://calendar.google.com/calendar/embed?src=baf2h147ghi7nu8ifijjrt994k%40group.calendar.google.com&ctz=America%2FNew_York"
+          frameborder="0" scrolling="no" title="CPC Community Calendar"></iframe>
+      </div>
+    </div>
+  </section>
 
   <style>
     /* Featured Poster Widget */
@@ -172,7 +206,7 @@
       margin: 0 auto;
     }
 
-    #community-calendar h1 {
+    #community-calendar h2 {
       text-align: center;
       font-size: 2.5em;
       margin-bottom: 20px;
@@ -209,7 +243,7 @@
       #community-calendar {
         padding: 30px 15px;
       }
-      #community-calendar h1 {
+      #community-calendar h2 {
         font-size: 1.8em;
       }
       .calendar-wrapper {
@@ -383,41 +417,6 @@
       </div>
   </section>
 
-
-  <section class="upcoming-events-section">
-    <h2 style="text-align:center; font-size:2em; margin-bottom:30px; letter-spacing:1px; color:#0078D4;">Upcoming Events</h2>
-    <div class="fall-events-list">
-      <div class="fall-event-item highlight-event">
-        <div class="event-date">Jul 30<br>2026</div>
-        <div class="event-info">
-          <h3>Last Thursday Picnic Next Week! | 6pm</h3>
-          <p>Join us for our final Summer Thursday Picnic! This is a wonderful opportunity to enjoy fellowship, food, and fun together as a church family. Please sign up on the sheet in the foyer to help set up.</p>
-        </div>
-      </div>
-      <div class="fall-event-item">
-        <div class="event-date">Aug 1<br>2026</div>
-        <div class="event-info">
-          <h3>Men's Bike Ride &amp; Lunch | 11am</h3>
-          <p>Bike ride the Canal trail to Mikro for lunch. Meeting at 11am at CPC parking lot. Sign up sheet in the foyer.</p>
-        </div>
-      </div>
-      <div class="fall-event-item">
-        <div class="event-date">Jul 1-<br>Aug 19</div>
-        <div class="event-info">
-          <h3>Wednesday Night Summer BBQs</h3>
-          <p>Trowbridge Square Park in the Hill: 169 Cedar St, New Haven, CT 06519. Volunteers needed to help set up, serve, and clean up (4:45pm–7:00pm). <a href="https://us.list-manage.com/mSHNqshleo6?e=9da175cc40&c2id=6df9b900f2d1d0ec64fac5dfc299411c" target="_blank" style="color: #0078D4;">Sign up here!</a></p>
-        </div>
-      </div>
-      <div class="fall-event-item">
-        <div class="event-date">Aug 29<br>2026</div>
-        <div class="event-info">
-          <h3>Mercy Day!</h3>
-          <p>BOTH Volunteers and Mercy Projects Needed! To truly love and serve one another, we'll tackle projects for those who need any help. Each project will have a dedicated project lead/captain who will give instructions to volunteers. <a href="https://us.list-manage.com/" target="_blank" style="color: #0078D4;">Sign up here!</a></p>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <section id="highlights">
     <div class="highlights-content">
       <!-- Highlights will be populated here by the JavaScript -->
@@ -428,31 +427,49 @@
 
   <style>
     .upcoming-events-section {
-      padding: 40px 20px;
-      max-width: 800px;
+      max-width: 900px;
       margin: 0 auto;
+      padding: clamp(3rem, 7vw, 6rem) clamp(1.25rem, 4vw, 2rem);
+    }
+
+    .events-eyebrow {
+      margin: 0 0 0.5rem;
+      color: #0078D4;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    .upcoming-events-section h2 {
+      margin: 0 0 2rem;
+      color: #063f74;
+      font-size: clamp(2rem, 4vw, 3rem);
+      letter-spacing: -0.03em;
+      text-align: center;
     }
 
     .fall-events-list {
       display: flex;
       flex-direction: column;
-      gap: 20px;
+      gap: 0.875rem;
     }
 
     .fall-event-item {
       display: flex;
       align-items: flex-start;
-      padding: 20px;
+      padding: 1.125rem;
       background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 14px;
+      box-shadow: 0 8px 24px rgba(6, 63, 116, 0.08);
       border-left: 4px solid #0078D4;
       transition: box-shadow 0.3s ease, transform 0.2s ease;
     }
 
     .fall-event-item:hover {
       box-shadow: 0 4px 16px rgba(0, 120, 212, 0.15);
-      transform: translateY(-2px);
+      transform: translateY(-1px);
     }
 
     .highlight-event {
@@ -468,18 +485,28 @@
       background: #0078D4;
       color: #fff;
       font-weight: bold;
-      font-size: 1.1em;
-      border-radius: 8px;
-      padding: 12px 16px;
-      margin-right: 20px;
-      min-width: 120px;
+      font-size: 1.55rem;
+      border-radius: 10px;
+      line-height: 1;
+      padding: 0.75rem;
+      margin-right: 1.125rem;
+      min-width: 4.75rem;
       text-align: center;
       flex-shrink: 0;
     }
 
+    .event-date span {
+      display: block;
+      margin-bottom: 0.2rem;
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
     .event-info h3 {
       margin: 0 0 8px 0;
-      font-size: 1.2em;
+      font-size: 1.15rem;
       color: #333;
       font-weight: 600;
     }
@@ -489,6 +516,20 @@
       color: #666;
       font-size: 1em;
       line-height: 1.5;
+    }
+
+    .event-info h3 span {
+      color: #607080;
+      font-size: 0.82em;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .events-calendar-note {
+      margin: 1.5rem 0 0;
+      color: #607080;
+      font-size: 0.95rem;
+      text-align: center;
     }
 
     @media (max-width: 768px) {
@@ -503,7 +544,7 @@
         align-self: center;
       }
 
-      .fall-events-section {
+      .upcoming-events-section {
         padding: 20px 15px;
       }
     }
@@ -646,98 +687,6 @@
       </iframe>
     </div>
   </section>
-
-
-  <!-- PAST EVENTS SECTION -->
-  <section class="past-events-section">
-    <div class="past-events-container">
-      <h2 style="text-align:center; font-size:2em; margin-bottom:30px; letter-spacing:1px; color:#0078D4;">Past Events
-      </h2>
-      <p
-        style="text-align:center; font-size:1.1em; color:#666; margin-bottom:40px; max-width:600px; margin-left:auto; margin-right:auto;">
-        Take a look at some of our recent church events and community gatherings. These photos capture the fellowship,
-        worship, and joy we share together as a church family.
-      </p>
-      <div id="events-gallery-container" class="gallery-grid">
-        <!-- Event photos will be populated here by JavaScript -->
-      </div>
-    </div>
-  </section>
-
-  <!-- Lightbox for gallery images -->
-  <div id="lightbox" style="display: none;">
-    <img id="lightbox-img" src="" alt="">
-  </div>
-
-  <style>
-    .past-events-section {
-      padding: 60px 20px;
-      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-      margin: 40px 0;
-    }
-
-    .past-events-container {
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      margin-top: 20px;
-    }
-
-    .gallery-image {
-      width: 100%;
-      height: 250px;
-      object-fit: cover;
-      border-radius: 12px;
-      cursor: pointer;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    .gallery-image:hover {
-      transform: scale(1.05);
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    }
-
-    #lightbox {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.9);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      z-index: 1000;
-      cursor: pointer;
-    }
-
-    #lightbox-img {
-      max-width: 90%;
-      max-height: 90%;
-      object-fit: contain;
-      border-radius: 8px;
-    }
-
-    @media (max-width: 768px) {
-      .gallery-grid {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 15px;
-      }
-
-      .gallery-image {
-        height: 200px;
-      }
-    }
-  </style>
-
-
-
 
   <section class="general-announcements">
     <hr>
@@ -913,4 +862,3 @@
       </form>
     </div>
   </section>
-

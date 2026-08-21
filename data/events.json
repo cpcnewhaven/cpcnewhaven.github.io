@@ -1,20 +1,24 @@
 {
   "events": [
     {
-      "date": "15 May 2026",
-      "description": "Final CLT Meeting, 6:30pm, Fellowship Hall"
+      "date": "23 Aug 2026",
+      "description": "Worship Service, 10:30am-12:00pm"
     },
     {
-      "date": "17 May 2026",
-      "description": "HEART Final Class: Emotions & Relationships, 9:30am, Fellowship Hall"
+      "date": "23 Aug 2026",
+      "description": "Life Group: East Rock Sunday, 1:00pm"
     },
     {
-      "date": "24 May 2026",
-      "description": "Summer Break Begins — Sunday School, Fellowship Lunch & Pastor Drop-in Hours on break through August"
+      "date": "25 Aug 2026",
+      "description": "Discipleship Group: Young at Heart 60+, 10:30am-1:00pm"
     },
     {
-      "date": "6 Jun 2026",
-      "description": "I Heart New Haven Day! Bridges of Hope, Church-Wide"
+      "date": "27 Aug 2026",
+      "description": "Life Group: Downtown New Haven Thursday, 1:00pm"
+    },
+    {
+      "date": "29 Aug 2026",
+      "description": "Mercy Day"
     }
   ]
 }

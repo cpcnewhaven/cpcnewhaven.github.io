@@ -2986,7 +2986,7 @@ body:not(.mobile-nav-open) .mobile-navigation {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url("https://storage.googleapis.com/cpc-public-website/web-assets/heros/events-splash-1.jpg");
+    background-image: url("https://storage.googleapis.com/cpc-public-website/2026/MISC%20WEBSITE%20GRAPHICS/WEBSITE%20HERO%20-%20FALL%20RETREAT%20GROUP%20PHOTO.jpg");
 }
 
 .splash-hero--events::before {
@@ -4267,7 +4267,7 @@ body:not(.mobile-nav-open) .mobile-navigation {
     z-index: auto;
 }
 
-#community-calendar h1 {
+#community-calendar h2 {
     text-align: center;
     font-size: 1.5em;
     margin-bottom: 20px;
