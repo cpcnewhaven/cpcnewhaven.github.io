@@ -513,6 +513,46 @@
     padding: 0 clamp(1.25rem, 4vw, 2.5rem) 1rem;
 }
 
+#missionAnabaino {
+    padding-bottom: clamp(2.5rem, 4vw, 4rem);
+}
+
+.anabaino-link {
+    align-items: center;
+    background: var(--cpc-blue);
+    border-radius: 999px;
+    box-shadow: 0 8px 18px rgba(0, 68, 136, 0.16);
+    color: #ffffff;
+    display: inline-flex;
+    font-size: 0.95em;
+    font-weight: 700;
+    gap: 0.65rem;
+    margin-top: 0.25rem;
+    padding: 0.8rem 1.1rem;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.anabaino-link:hover {
+    box-shadow: 0 12px 24px rgba(0, 68, 136, 0.22);
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+.anabaino-link span {
+    font-size: 1.2em;
+    line-height: 1;
+}
+
+#ourStory {
+    padding-top: clamp(2.5rem, 4vw, 4rem);
+    padding-bottom: clamp(2.5rem, 4vw, 4rem);
+}
+
+#ourStory .about-sub-title {
+    margin-bottom: 1.5rem;
+}
+
 .story-strategy {
     margin: 0 0 2rem;
     padding-left: 1.5rem;
