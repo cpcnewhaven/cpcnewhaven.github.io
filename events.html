@@ -204,15 +204,19 @@
     <p class="events-calendar-note">See the calendar below for the complete and most current schedule.</p>
   </section>
 
-  <section id="community-calendar">
+  <section id="community-calendar" aria-labelledby="community-calendar-title">
     <div class="calendar-container">
-      <h2>CPC Community Calendar</h2>
-      <hr>
+      <div class="calendar-intro">
+        <p class="calendar-kicker">Plan your week</p>
+        <h2 id="community-calendar-title">CPC Community Calendar</h2>
+        <p>See worship, gatherings, and opportunities to serve—all in one place.</p>
+      </div>
       <div class="calendar-wrapper">
         <iframe
           src="https://calendar.google.com/calendar/embed?src=baf2h147ghi7nu8ifijjrt994k%40group.calendar.google.com&ctz=America%2FNew_York"
           frameborder="0" scrolling="no" title="CPC Community Calendar"></iframe>
       </div>
+      <p class="calendar-footnote">For the most current details, select an event in the calendar.</p>
     </div>
   </section>
 
@@ -240,41 +244,64 @@
       }
     }
 
-    /* Community Calendar Styles (Moved to Top) */
+    /* Community Calendar */
     #community-calendar {
-      padding: 40px 20px;
-      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-      margin-bottom: 40px;
-      border-bottom: 1px solid #e1e5e9;
+      padding: clamp(3.5rem, 7vw, 6.5rem) clamp(1.25rem, 4vw, 3rem);
+      margin: 0;
+      background:
+        radial-gradient(circle at 8% 12%, rgba(87, 163, 220, 0.2), transparent 31rem),
+        linear-gradient(135deg, #f7fafc 0%, #e8f1f7 100%);
+      border-top: 1px solid rgba(6, 63, 116, 0.08);
+      border-bottom: 1px solid rgba(6, 63, 116, 0.1);
     }
 
     .calendar-container {
-      max-width: 1100px;
+      display: grid;
+      grid-template-columns: minmax(14rem, 0.72fr) minmax(0, 1.65fr);
+      column-gap: clamp(2rem, 5vw, 5rem);
+      row-gap: 1.25rem;
+      align-items: center;
+      width: min(100%, 1240px);
+      max-width: 1240px;
       margin: 0 auto;
     }
 
-    #community-calendar h2 {
-      text-align: center;
-      font-size: 2.5em;
-      margin-bottom: 20px;
-      color: #333;
-      letter-spacing: 1px;
+    .calendar-intro {
+      max-width: 22rem;
     }
 
-    #community-calendar hr {
-      margin: 10px auto 30px;
-      max-width: 150px;
-      border: 2.5px solid #0078D4;
+    .calendar-kicker {
+      margin: 0 0 0.75rem;
+      color: #0078d4;
+      font-size: 0.75rem;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    #community-calendar h2 {
+      margin: 0;
+      color: #063f74;
+      font-size: clamp(2rem, 3.5vw, 3.4rem);
+      letter-spacing: -0.045em;
+      line-height: 1.04;
+    }
+
+    .calendar-intro > p:last-child {
+      margin: 1.25rem 0 0;
+      color: #405668;
+      font-size: 1.05rem;
+      line-height: 1.65;
     }
 
     .calendar-wrapper {
       position: relative;
       overflow: hidden;
-      padding-top: 75%; /* Responsive Aspect Ratio */
-      border-radius: 12px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+      height: clamp(30rem, 48vw, 38rem);
+      border-radius: 1.25rem;
+      box-shadow: 0 1.5rem 3.5rem rgba(6, 63, 116, 0.18);
       background: white;
-      border: 1px solid #e1e5e9;
+      border: 1px solid rgba(6, 63, 116, 0.12);
     }
 
     .calendar-wrapper iframe {
@@ -286,15 +313,34 @@
       border: 0;
     }
 
-    @media (max-width: 768px) {
+    .calendar-footnote {
+      grid-column: 2;
+      margin: 0;
+      color: #607080;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 820px) {
       #community-calendar {
-        padding: 30px 15px;
+        padding: 3.5rem 1.25rem;
       }
-      #community-calendar h2 {
-        font-size: 1.8em;
+
+      .calendar-container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
       }
+
+      .calendar-intro {
+        max-width: 34rem;
+      }
+
       .calendar-wrapper {
-        padding-top: 100%; /* Square-ish for mobile */
+        height: clamp(34rem, 135vw, 42rem);
+        border-radius: 1rem;
+      }
+
+      .calendar-footnote {
+        grid-column: auto;
       }
     }
 
