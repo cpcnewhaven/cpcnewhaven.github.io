@@ -148,15 +148,15 @@
         const [year, month, day] = event.date.split('-').map(Number);
         const eventDate = new Date(year, month - 1, day);
         const card = document.createElement('article');
-        const dateBlock = document.createElement('div');
-        const monthLabel = document.createElement('span');
+        const dateBlock = document.createElement('time');
         const eventInfo = document.createElement('div');
-        const title = document.createElement('h3');
+        const title = document.createElement('h4');
 
         card.className = event.description ? 'fall-event-item' : 'fall-event-item fall-event-item--brief';
         dateBlock.className = 'event-date';
-        monthLabel.textContent = new Intl.DateTimeFormat('en-US', { month: 'short' }).format(eventDate);
-        dateBlock.append(monthLabel, document.createTextNode(String(day)));
+        dateBlock.dateTime = event.date;
+        dateBlock.textContent = String(day);
+        dateBlock.setAttribute('aria-label', new Intl.DateTimeFormat('en-US', { dateStyle: 'long' }).format(eventDate));
         eventInfo.className = 'event-info';
         title.textContent = event.title;
         eventInfo.append(title);
@@ -169,6 +169,22 @@
 
         card.append(dateBlock, eventInfo);
         return card;
+      };
+
+      const createMonthGroup = (monthKey, events) => {
+        const [year, month] = monthKey.split('-').map(Number);
+        const group = document.createElement('section');
+        const heading = document.createElement('h3');
+        const list = document.createElement('div');
+
+        group.className = 'upcoming-month';
+        heading.className = 'upcoming-month-heading';
+        heading.textContent = new Intl.DateTimeFormat('en-US', { month: 'long', year: 'numeric' })
+          .format(new Date(year, month - 1, 1));
+        list.className = 'upcoming-month-list';
+        list.append(...events.map(createEventCard));
+        group.append(heading, list);
+        return group;
       };
 
       fetch('data/events.json')
@@ -189,7 +205,16 @@
             return;
           }
 
-          eventList.replaceChildren(...events.map(createEventCard));
+          const eventsByMonth = events.reduce((groups, event) => {
+            const monthKey = event.date.slice(0, 7);
+            if (!groups.has(monthKey)) groups.set(monthKey, []);
+            groups.get(monthKey).push(event);
+            return groups;
+          }, new Map());
+
+          eventList.replaceChildren(
+            ...Array.from(eventsByMonth, ([monthKey, monthEvents]) => createMonthGroup(monthKey, monthEvents))
+          );
         })
         .catch(() => {
           upcomingSection.hidden = true;
@@ -519,14 +544,37 @@
     .fall-events-list {
       display: flex;
       flex-direction: column;
-      gap: 0.875rem;
+      gap: 2rem;
+    }
+
+    .upcoming-month {
+      display: flex;
+      flex-direction: column;
+      gap: 0.625rem;
+    }
+
+    .upcoming-month-heading {
+      margin: 0;
+      padding-bottom: 0.55rem;
+      color: #063f74;
+      font-size: 1rem;
+      font-weight: 800;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      border-bottom: 1px solid rgba(6, 63, 116, 0.16);
+    }
+
+    .upcoming-month-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
     }
 
     .fall-event-item {
       display: flex;
       align-items: center;
-      min-height: 7rem;
-      padding: 1.125rem;
+      min-height: 4.5rem;
+      padding: 0.65rem 0.9rem;
       background: #fff;
       border-radius: 14px;
       box-shadow: 0 8px 24px rgba(6, 63, 116, 0.08);
@@ -540,41 +588,32 @@
     }
 
     .fall-event-item--brief {
-      min-height: 5.25rem;
+      min-height: 4.5rem;
     }
 
     .event-date {
       background: #0078D4;
       color: #fff;
       font-weight: bold;
-      font-size: 1.55rem;
-      border-radius: 10px;
+      font-size: 1.25rem;
+      border-radius: 9px;
       line-height: 1;
-      padding: 0.75rem;
-      margin-right: 1.125rem;
-      min-width: 4.75rem;
+      padding: 0.55rem;
+      margin-right: 0.9rem;
+      min-width: 3.6rem;
       text-align: center;
       flex-shrink: 0;
     }
 
-    .event-date span {
-      display: block;
-      margin-bottom: 0.2rem;
-      font-size: 0.65rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-    }
-
-    .event-info h3 {
-      margin: 0 0 8px 0;
-      font-size: 1.15rem;
+    .event-info h4 {
+      margin: 0 0 0.35rem;
+      font-size: 1.05rem;
       color: #333;
       font-weight: 600;
       text-align: left !important;
     }
 
-    .fall-event-item--brief .event-info h3 {
+    .fall-event-item--brief .event-info h4 {
       margin-bottom: 0;
     }
 
@@ -591,7 +630,7 @@
       line-height: 1.5;
     }
 
-    .event-info h3 span {
+    .event-info h4 span {
       color: #607080;
       font-size: 0.82em;
       font-weight: 600;
@@ -618,14 +657,13 @@
 
     @media (max-width: 768px) {
       .fall-event-item {
-        flex-direction: column;
-        text-align: center;
+        min-height: 4rem;
+        padding: 0.55rem 0.7rem;
       }
 
       .event-date {
-        margin-right: 0;
-        margin-bottom: 15px;
-        align-self: center;
+        margin-right: 0.7rem;
+        margin-bottom: 0;
       }
 
       .upcoming-events-section {
