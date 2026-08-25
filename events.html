@@ -544,40 +544,49 @@
     .fall-events-list {
       display: flex;
       flex-direction: column;
-      gap: 2rem;
+      gap: 1.5rem;
     }
 
     .upcoming-month {
       display: flex;
       flex-direction: column;
-      gap: 0.625rem;
+      gap: 0.5rem;
     }
 
     .upcoming-month-heading {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
       margin: 0;
-      padding-bottom: 0.55rem;
       color: #063f74;
-      font-size: 1rem;
+      font-size: 0.9rem;
       font-weight: 800;
       letter-spacing: 0.09em;
+      text-align: left !important;
       text-transform: uppercase;
-      border-bottom: 1px solid rgba(6, 63, 116, 0.16);
+    }
+
+    .upcoming-month-heading::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: rgba(6, 63, 116, 0.16);
     }
 
     .upcoming-month-list {
       display: flex;
       flex-direction: column;
-      gap: 0.5rem;
+      gap: 0.35rem;
     }
 
     .fall-event-item {
       display: flex;
       align-items: center;
-      min-height: 4.5rem;
-      padding: 0.65rem 0.9rem;
+      min-height: 3.9rem;
+      padding: 0.45rem 0.75rem;
       background: #fff;
-      border-radius: 14px;
-      box-shadow: 0 8px 24px rgba(6, 63, 116, 0.08);
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(6, 63, 116, 0.07);
       border-left: 4px solid #0078D4;
       transition: box-shadow 0.3s ease, transform 0.2s ease;
     }
@@ -588,26 +597,26 @@
     }
 
     .fall-event-item--brief {
-      min-height: 4.5rem;
+      min-height: 3.9rem;
     }
 
     .event-date {
       background: #0078D4;
       color: #fff;
       font-weight: bold;
-      font-size: 1.25rem;
-      border-radius: 9px;
+      font-size: 1.1rem;
+      border-radius: 8px;
       line-height: 1;
-      padding: 0.55rem;
-      margin-right: 0.9rem;
-      min-width: 3.6rem;
+      padding: 0.45rem;
+      margin-right: 0.75rem;
+      min-width: 3.1rem;
       text-align: center;
       flex-shrink: 0;
     }
 
     .event-info h4 {
       margin: 0 0 0.35rem;
-      font-size: 1.05rem;
+      font-size: 1rem;
       color: #333;
       font-weight: 600;
       text-align: left !important;
@@ -657,12 +666,12 @@
 
     @media (max-width: 768px) {
       .fall-event-item {
-        min-height: 4rem;
-        padding: 0.55rem 0.7rem;
+        min-height: 3.75rem;
+        padding: 0.45rem 0.6rem;
       }
 
       .event-date {
-        margin-right: 0.7rem;
+        margin-right: 0.6rem;
         margin-bottom: 0;
       }
 
