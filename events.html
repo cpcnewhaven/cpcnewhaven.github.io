@@ -132,7 +132,11 @@
     <p class="events-eyebrow">What's next</p>
     <h2 id="upcoming-events-title">Upcoming Events</h2>
     <div class="fall-events-list" id="upcoming-events-list" aria-live="polite"></div>
-    <p class="events-calendar-note">See the calendar below for the complete and most current schedule.</p>
+    <p class="events-calendar-note">
+      Based on the Google Calendar above. <a
+        href="https://calendar.google.com/calendar/u/0?cid=baf2h147ghi7nu8ifijjrt994k%40group.calendar.google.com"
+        target="_blank" rel="noopener">Add the CPC Community Calendar to your calendar <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>.
+    </p>
   </section>
 
   <script>
@@ -599,6 +603,17 @@
       color: #607080;
       font-size: 0.95rem;
       text-align: center;
+    }
+
+    .events-calendar-note a {
+      color: #0078d4;
+      font-weight: 700;
+      text-decoration-thickness: 1.5px;
+      text-underline-offset: 0.18em;
+    }
+
+    .events-calendar-note a:hover {
+      color: #063f74;
     }
 
     @media (max-width: 768px) {
