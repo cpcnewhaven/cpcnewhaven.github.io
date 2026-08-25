@@ -132,84 +132,84 @@
     <p class="events-eyebrow">What's next</p>
     <h2 id="upcoming-events-title">Upcoming Events</h2>
     <div class="fall-events-list">
-      <div class="fall-event-item">
+      <div class="fall-event-item" data-event-date="2026-08-23">
         <div class="event-date"><span>Aug</span>23</div>
         <div class="event-info">
           <h3>Worship Service</h3>
           <p>Join us for worship at CPC. Due to Yale's move-in day, consider avoiding downtown on your way to church.</p>
         </div>
       </div>
-      <div class="fall-event-item">
+      <div class="fall-event-item" data-event-date="2026-08-23">
         <div class="event-date"><span>Aug</span>23</div>
         <div class="event-info">
           <h3>Fellowship Lunch</h3>
           <p>Fellowship Lunch is back. All are welcome in the Fellowship Hall.</p>
         </div>
       </div>
-      <div class="fall-event-item">
+      <div class="fall-event-item" data-event-date="2026-08-23">
         <div class="event-date"><span>Aug</span>23</div>
         <div class="event-info">
           <h3>Parent Meeting</h3>
           <p>Parents of Sunday School children from 2- and 3-year-olds through 12th grade are invited to meet in the Sanctuary.</p>
         </div>
       </div>
-      <div class="fall-event-item">
+      <div class="fall-event-item" data-event-date="2026-08-23">
         <div class="event-date"><span>Aug</span>23</div>
         <div class="event-info">
           <h3>Life Group: East Rock</h3>
           <p>Connect with the East Rock Sunday life group.</p>
         </div>
       </div>
-      <div class="fall-event-item">
+      <div class="fall-event-item" data-event-date="2026-08-25">
         <div class="event-date"><span>Aug</span>25</div>
         <div class="event-info">
           <h3>Young at Heart 60+</h3>
           <p>A discipleship gathering for adults 60 and older.</p>
         </div>
       </div>
-      <div class="fall-event-item">
+      <div class="fall-event-item" data-event-date="2026-08-27">
         <div class="event-date"><span>Aug</span>27</div>
         <div class="event-info">
           <h3>Life Group: Downtown New Haven</h3>
           <p>Join the Thursday Downtown New Haven life group.</p>
         </div>
       </div>
-      <div class="fall-event-item">
+      <div class="fall-event-item" data-event-date="2026-08-29">
         <div class="event-date"><span>Aug</span>29</div>
         <div class="event-info">
           <h3>Mercy Day</h3>
           <p>Volunteers and Mercy projects are needed. Serve alongside CPC neighbors through practical projects and care.</p>
         </div>
       </div>
-      <div class="fall-event-item">
+      <div class="fall-event-item" data-event-date="2026-08-30">
         <div class="event-date"><span>Aug</span>30</div>
         <div class="event-info">
           <h3>Congregational Meeting</h3>
           <p>Join us during Fellowship Lunch as we begin the new ministry year.</p>
         </div>
       </div>
-      <div class="fall-event-item">
+      <div class="fall-event-item" data-event-date="2026-09-13">
         <div class="event-date"><span>Sep</span>13</div>
         <div class="event-info">
           <h3>Welcome Sunday</h3>
           <p>Sunday Studies, a new sermon series, and an outdoor welcome lunch begin.</p>
         </div>
       </div>
-      <div class="fall-event-item">
+      <div class="fall-event-item" data-event-date="2026-09-18">
         <div class="event-date"><span>Sep</span>18</div>
         <div class="event-info">
           <h3>Men's Night</h3>
           <p>Men of CPC are invited to gather together.</p>
         </div>
       </div>
-      <div class="fall-event-item">
+      <div class="fall-event-item" data-event-date="2026-10-03">
         <div class="event-date"><span>Oct</span>3</div>
         <div class="event-info">
           <h3>CPC Women's Conference</h3>
           <p>Join us for the CPC Women's Conference.</p>
         </div>
       </div>
-      <div class="fall-event-item">
+      <div class="fall-event-item" data-event-date="2026-11-07">
         <div class="event-date"><span>Nov</span>7</div>
         <div class="event-info">
           <h3>Parenting Seminar</h3>
@@ -219,6 +219,29 @@
     </div>
     <p class="events-calendar-note">See the calendar below for the complete and most current schedule.</p>
   </section>
+
+  <script>
+    (() => {
+      const today = new Date();
+      today.setHours(0, 0, 0, 0);
+
+      const upcomingSection = document.querySelector('.upcoming-events-section');
+      const eventCards = Array.from(document.querySelectorAll('.fall-event-item[data-event-date]'));
+
+      eventCards.forEach((card) => {
+        const [year, month, day] = card.dataset.eventDate.split('-').map(Number);
+        const eventDate = new Date(year, month - 1, day);
+
+        if (eventDate < today) {
+          card.hidden = true;
+        }
+      });
+
+      if (eventCards.length && eventCards.every((card) => card.hidden)) {
+        upcomingSection.hidden = true;
+      }
+    })();
+  </script>
 
   <style>
     /* Featured Poster Widget */
