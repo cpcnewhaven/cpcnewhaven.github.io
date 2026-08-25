@@ -1,52 +1,78 @@
 {
+  "generatedAt": "2026-08-25T11:50:55.385699-04:00",
+  "source": "CPC Google Calendar",
   "events": [
     {
-      "date": "23 Aug 2026",
-      "description": "Worship Service"
+      "date": "2026-08-29",
+      "title": "Mercy Day",
+      "description": "",
+      "allDay": true
     },
     {
-      "date": "23 Aug 2026",
-      "description": "Fellowship Lunch"
+      "date": "2026-08-30",
+      "title": "Congregational Meeting",
+      "description": "",
+      "allDay": false
     },
     {
-      "date": "23 Aug 2026",
-      "description": "Parent Meeting, Sanctuary"
+      "date": "2026-08-30",
+      "title": "Fellowship Lunch",
+      "description": "",
+      "allDay": false
     },
     {
-      "date": "23 Aug 2026",
-      "description": "Life Group: East Rock Sunday"
+      "date": "2026-08-30",
+      "title": "Worship Service",
+      "description": "",
+      "allDay": false
     },
     {
-      "date": "25 Aug 2026",
-      "description": "Discipleship Group: Young at Heart 60+"
+      "date": "2026-09-06",
+      "title": "Fellowship Lunch",
+      "description": "",
+      "allDay": false
     },
     {
-      "date": "27 Aug 2026",
-      "description": "Life Group: Downtown New Haven Thursday"
+      "date": "2026-09-06",
+      "title": "Worship Service",
+      "description": "",
+      "allDay": false
     },
     {
-      "date": "29 Aug 2026",
-      "description": "Mercy Day, volunteers and projects needed"
+      "date": "2026-09-12",
+      "title": "Young Adults Beach Event",
+      "description": "",
+      "allDay": true
     },
     {
-      "date": "30 Aug 2026",
-      "description": "Congregational Meeting during Fellowship Lunch"
+      "date": "2026-09-13",
+      "title": "Fellowship Lunch",
+      "description": "",
+      "allDay": false
     },
     {
-      "date": "13 Sep 2026",
-      "description": "Welcome Sunday, Sunday Studies and new sermon series begin"
+      "date": "2026-09-13",
+      "title": "Sunday School Adults and Children",
+      "description": "",
+      "allDay": false
     },
     {
-      "date": "18 Sep 2026",
-      "description": "Men's Night"
+      "date": "2026-09-13",
+      "title": "Welcome Sunday & Ministry Fair",
+      "description": "",
+      "allDay": false
     },
     {
-      "date": "03 Oct 2026",
-      "description": "CPC Women's Conference"
+      "date": "2026-09-13",
+      "title": "Worship Service",
+      "description": "",
+      "allDay": false
     },
     {
-      "date": "07 Nov 2026",
-      "description": "Parenting Seminar"
+      "date": "2026-09-18",
+      "title": "Men's Discipleship Fall Gathering",
+      "description": "",
+      "allDay": true
     }
   ]
 }
