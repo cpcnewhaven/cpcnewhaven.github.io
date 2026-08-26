@@ -99,6 +99,7 @@
     font-weight: 700;
     letter-spacing: 0.13em;
     text-transform: uppercase;
+    color: #b9e0ff;
 }
 
 .welcome-sunday-feature__date strong {
@@ -124,6 +125,7 @@
     flex-wrap: wrap;
     justify-content: flex-end;
     gap: 10px;
+    align-self: end;
 }
 
 .welcome-sunday-feature__actions a {
@@ -173,6 +175,7 @@
     .welcome-sunday-feature__actions {
         grid-column: 1 / -1;
         justify-content: flex-start;
+        align-self: auto;
     }
 }
 
