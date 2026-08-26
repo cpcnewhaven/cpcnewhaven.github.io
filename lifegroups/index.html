@@ -36,6 +36,18 @@
     <h1>SMALL GROUPS THIS FALL</h1>
     <p>Life Groups are our way of doing church in the small with all sorts of people engaged in prayer, teaching, fellowship and care.</p>
 
+    <section class="lifegroup-video-feature" aria-labelledby="lifegroup-video-title">
+        <div class="lifegroup-video-copy">
+            <p class="lifegroup-video-kicker">Find your people</p>
+            <h2 id="lifegroup-video-title">Find a Life Group in New Haven and beyond.</h2>
+            <p>Life Groups are a place to be known, to grow, and to share the ordinary rhythms of life together.</p>
+            <a href="https://youtu.be/q1yV-kpugTA?si=YOIMbTaW7IY-UEqM" target="_blank" rel="noopener">Watch on YouTube</a>
+        </div>
+        <div class="lifegroup-video-frame">
+            <iframe src="https://www.youtube-nocookie.com/embed/q1yV-kpugTA?rel=0" title="Find a Life Group in New Haven and beyond" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </section>
+
     <table>
         <thead>
             <tr>
@@ -84,6 +96,69 @@
     </table>
 
 <style>
+    .lifegroup-video-feature {
+        display: grid;
+        grid-template-columns: minmax(14rem, 0.8fr) minmax(0, 1.25fr);
+        gap: clamp(1.5rem, 4vw, 3rem);
+        align-items: center;
+        max-width: 1120px;
+        margin: 40px auto;
+        padding: clamp(1.5rem, 4vw, 3rem);
+        color: #fff;
+        background: linear-gradient(135deg, #063f74 0%, #0a5a9d 100%);
+        border-radius: 18px;
+        box-shadow: 0 1.25rem 3rem rgba(6, 63, 116, 0.2);
+    }
+
+    .lifegroup-video-kicker {
+        margin: 0 0 0.75rem;
+        color: #8fd0ff;
+        font-size: 0.8rem;
+        font-weight: 800;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+    }
+
+    .lifegroup-video-feature h2 {
+        margin: 0;
+        color: #fff;
+        font-size: clamp(1.75rem, 3vw, 2.6rem);
+        line-height: 1.05;
+    }
+
+    .lifegroup-video-feature p:not(.lifegroup-video-kicker) {
+        margin: 1.15rem 0 0;
+        color: rgba(255, 255, 255, 0.88);
+        font-size: 1.05rem;
+        line-height: 1.65;
+    }
+
+    .lifegroup-video-feature a {
+        display: inline-block;
+        margin-top: 1.4rem;
+        padding: 0.75rem 1rem;
+        color: #063f74;
+        font-weight: 800;
+        text-decoration: none;
+        background: #fff;
+        border-radius: 999px;
+    }
+
+    .lifegroup-video-frame {
+        aspect-ratio: 16 / 9;
+        overflow: hidden;
+        background: #001f3d;
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        border-radius: 12px;
+        box-shadow: 0 0.75rem 1.5rem rgba(0, 25, 55, 0.35);
+    }
+
+    .lifegroup-video-frame iframe {
+        width: 100%;
+        height: 100%;
+        border: 0;
+    }
+
     #lifegroup-map-wrap {
         width:100%;
         display:flex;
@@ -92,6 +167,14 @@
         padding-top:40px;
         padding-bottom:40px;
         mix-blend-mode: multiply;
+    }
+
+    @media (max-width: 768px) {
+        .lifegroup-video-feature {
+            grid-template-columns: 1fr;
+            margin: 30px auto;
+            padding: 1.5rem;
+        }
     }
 </style>
 <div id="lifegroup-map-wrap">
