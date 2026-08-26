@@ -43,10 +43,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (!container || !href || !text) return;
 
-    // Already present?
-    const existing = container.querySelector('a[href="' + href + '"]');
-    if (existing) return;
-
     if (kind === 'mobile') {
       // Expected structure: <ul class="mobile-nav-links"><li><a class="mobile-menu-link" ...>...</a></li>...</ul>
       const ul =
@@ -54,6 +50,7 @@ document.addEventListener('DOMContentLoaded', function () {
           ? container
           : container.querySelector('.mobile-nav-links');
       if (!ul) return;
+      if (ul.querySelector('a[href="' + href + '"]')) return;
 
       const li = document.createElement('li');
       const a = document.createElement('a');
@@ -72,6 +69,7 @@ document.addEventListener('DOMContentLoaded', function () {
           ? container
           : container.querySelector('.main-navigation');
       if (!nav) return;
+      if (nav.querySelector('a[href="' + href + '"]')) return;
 
       const a = document.createElement('a');
       a.href = href;
@@ -136,8 +134,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (!hamburgerButton || !mobileNav) return null;
 
-    // Ensure the site-wide Search link exists in the mobile menu (without editing every HTML file).
+    // Ensure site-wide utility links exist in the mobile menu (without editing every HTML file).
     // Do this before we attach "close on link click" listeners so it inherits the behavior.
+    ensureNavLink(mobileNav, { kind: 'mobile', href: 'announcements.html', text: 'Announcements' });
     ensureNavLink(mobileNav, { kind: 'mobile', href: 'search.html', text: 'Search' });
 
     // Basic accessibility hints (safe if attributes already exist)
@@ -254,6 +253,9 @@ document.addEventListener('DOMContentLoaded', function () {
       mainMobileNav.setAttribute('aria-hidden', 'true');
     }
   }
+
+  // Keep the current announcements page visible from every site-wide navigation.
+  ensureNavLink(document, { kind: 'desktop', href: 'announcements.html', text: 'Announcements' });
 
   // Also add Search to the desktop nav where present.
   ensureNavLink(document, { kind: 'desktop', href: 'search.html', text: 'Search' });

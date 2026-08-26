@@ -63,6 +63,93 @@
     color: white;
 }
 
+/* Welcome Sunday feature */
+.welcome-sunday-feature {
+    max-width: 1120px;
+    margin: -52px auto 42px;
+    padding: 28px 32px;
+    position: relative;
+    z-index: 3;
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 26px;
+    border-radius: 18px;
+    background: linear-gradient(135deg, #06325f 0%, #075eae 100%);
+    color: #fff;
+    box-shadow: 0 18px 44px rgba(5, 45, 82, 0.24);
+}
+
+.welcome-sunday-feature__date {
+    min-width: 78px;
+    padding: 11px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.12);
+    line-height: 1;
+}
+
+.welcome-sunday-feature__date span,
+.welcome-sunday-feature__eyebrow {
+    margin: 0;
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+}
+
+.welcome-sunday-feature__date strong {
+    margin-top: 4px;
+    font-size: 2.25rem;
+}
+
+.welcome-sunday-feature h2 {
+    margin: 3px 0 8px;
+    font-size: clamp(1.55rem, 3vw, 2.2rem);
+    color: #fff;
+}
+
+.welcome-sunday-feature__content > p:last-child {
+    max-width: 650px;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.55;
+}
+
+.welcome-sunday-feature__actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.welcome-sunday-feature__actions a {
+    padding: 11px 15px;
+    border-radius: 999px;
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.welcome-sunday-feature__primary {
+    background: #fff;
+    color: #064b8e;
+}
+
+.welcome-sunday-feature__secondary {
+    border: 1px solid rgba(255, 255, 255, 0.68);
+    color: #fff;
+}
+
+.welcome-sunday-feature__actions a:hover,
+.welcome-sunday-feature__actions a:focus-visible {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.16);
+}
+
 @media (max-width: 768px) {
     .splash-hero--home h1 {
         font-size: 2.5rem;
@@ -74,6 +161,18 @@
 
     .hero-logo-img {
         max-width: 150px;
+    }
+
+    .welcome-sunday-feature {
+        grid-template-columns: auto 1fr;
+        margin: -24px 16px 32px;
+        padding: 22px;
+        gap: 16px;
+    }
+
+    .welcome-sunday-feature__actions {
+        grid-column: 1 / -1;
+        justify-content: flex-start;
     }
 }
 
