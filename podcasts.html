@@ -299,6 +299,20 @@
         }
 
         @media (max-width: 768px) {
+            .hamburger-menu-button-container {
+                display: flex;
+                top: max(12px, env(safe-area-inset-top));
+                right: 12px;
+                width: 44px;
+                height: 44px;
+                border-radius: 12px;
+            }
+
+            .hamburger-menu-button-container #closeMobileMenuButton {
+                font-size: 18px;
+                line-height: 1;
+            }
+
             .podcast-grid {
                 grid-template-columns: 1fr;
                 gap: 14px;
