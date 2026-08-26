@@ -259,15 +259,43 @@
         }
 
         .podcast-card-button {
-            display: inline-block;
-            background: #0078D4;
+            align-self: center;
+            min-width: 178px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 9px;
+            background: #0879cf;
             color: white;
-            padding: 12px 24px;
-            border-radius: 8px;
+            padding: 12px 20px;
+            border: 1px solid rgba(4, 76, 135, 0.2);
+            border-radius: 999px;
             text-decoration: none;
-            font-weight: 600;
-            margin-bottom: 30px;
+            font-weight: 700;
+            line-height: 1.2;
+            box-shadow: 0 5px 12px rgba(5, 88, 153, 0.2);
+            transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+            margin: auto 30px 30px;
             margin-top: auto;
+        }
+
+        .podcast-card-button::after {
+            content: '→';
+            font-size: 1.1em;
+            transition: transform 0.2s ease;
+        }
+
+        .podcast-card-button:hover,
+        .podcast-card-button:focus-visible {
+            color: white;
+            background: #005a9f;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 18px rgba(5, 88, 153, 0.28);
+        }
+
+        .podcast-card-button:hover::after,
+        .podcast-card-button:focus-visible::after {
+            transform: translateX(3px);
         }
 
         @media (max-width: 768px) {
@@ -311,8 +339,9 @@
 
             .podcast-card-button {
                 font-size: 0.8em;
-                padding: 8px 12px;
-                margin: 8px;
+                min-width: 0;
+                padding: 9px 12px;
+                margin: auto 8px 10px;
                 margin-top: auto;
             }
 
