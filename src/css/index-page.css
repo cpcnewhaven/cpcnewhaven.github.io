@@ -74,10 +74,19 @@
     grid-template-columns: auto minmax(0, 1fr) auto;
     align-items: center;
     gap: 26px;
-    border-radius: 18px;
+    border-radius: 0;
     background: linear-gradient(135deg, #06325f 0%, #075eae 100%);
     color: #fff;
     box-shadow: 0 18px 44px rgba(5, 45, 82, 0.24);
+}
+
+.congregational-meeting-feature {
+    margin-top: -52px;
+    margin-bottom: 18px;
+}
+
+.congregational-meeting-feature + .welcome-sunday-feature {
+    margin-top: 0;
 }
 
 .welcome-sunday-feature__date {
@@ -111,6 +120,7 @@
     margin: 3px 0 8px;
     font-size: clamp(1.55rem, 3vw, 2.2rem);
     color: #fff;
+    text-align: left;
 }
 
 .welcome-sunday-feature__content > p:last-child {
@@ -170,6 +180,11 @@
         margin: -24px 16px 32px;
         padding: 22px;
         gap: 16px;
+    }
+
+    .congregational-meeting-feature {
+        margin-top: -24px;
+        margin-bottom: 16px;
     }
 
     .welcome-sunday-feature__actions {

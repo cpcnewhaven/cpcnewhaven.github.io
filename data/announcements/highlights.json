@@ -3,7 +3,7 @@
     {
       "id": "2026-069",
       "title": "10:30am Worship This Sunday",
-      "description": "Due to Yale's move-in day, we suggest avoiding downtown on your way to church this Sunday.",
+      "description": "Due to Yale's move-in day, we suggest avoiding downtown on your way to church this Sunday. <a href=\"https://us.list-manage.com/uDdotqLHkMv?e=9da175cc40&amp;c2id=6df9b900f2d1d0ec64fac5dfc299411c\" target=\"_blank\" rel=\"noopener\">View the Large Print Bulletin</a>",
       "dateEntered": "2026-08-21",
       "active": true,
       "type": "announcement",
@@ -23,7 +23,7 @@
     {
       "id": "2026-071",
       "title": "Congregational Meeting | Sunday, August 30",
-      "description": "Join us for a congregational meeting during Fellowship Lunch this Sunday, immediately following worship in the Fellowship Hall.",
+      "description": "All are welcome to join us during Fellowship Lunch this Sunday as we announce our plan for the ministry year. This is an important church-wide discussion so we can start the year off united in mission! <a href=\"congregational-meeting-2026-08-30.html\">Meeting details and livestream</a>",
       "dateEntered": "2026-08-28",
       "active": true,
       "type": "event",
@@ -73,7 +73,7 @@
     {
       "id": "2026-064",
       "title": "New Ministry Year Begins! | Save these Dates:",
-      "description": "Regular Sunday Lunches Resume | Sunday, August 23<br/>Congregational Meeting During Lunch | August 30<br/>Welcome Sunday | September 13<br/>&nbsp;&nbsp;Sunday Studies Begin<br/>&nbsp;&nbsp;New Sermon Series<br/>&nbsp;&nbsp;Outdoor Welcome Lunch<br/>Men's Night | Friday September 18<br/>CPC Women's Conference | Saturday October 3<br/>Parenting Seminar | Saturday November 7",
+      "description": "Young Adults Beach Hang | Saturday, September 12<br/>CPC Women's Conference | Saturday, October 3<br/>Parenting Seminar | Saturday, November 7",
       "dateEntered": "2026-08-07",
       "active": true,
       "type": "announcement",
@@ -81,21 +81,41 @@
       "tag": "community"
     },
     {
+      "id": "2026-072",
+      "title": "Welcome Sunday | September 13",
+      "description": "Everything launches this Sunday! We’ll be starting our new Sermon Series in the Book of Acts, and our normal Sunday schedule resumes with Children’s Sunday School and Adult Sunday Studies beginning at 9:30am. All are welcome.",
+      "dateEntered": "2026-08-28",
+      "active": true,
+      "type": "event",
+      "category": "event",
+      "tag": "community"
+    },
+    {
+      "id": "2026-073",
+      "title": "Adult Class | The Wonders of Communal Worship",
+      "description": "This class will be a great opportunity to discuss all that God promises to do through communal worship, and why we worship the way we do at CPC. We’ll study exciting theology, insight into how we’re created, principles for deciding worship styles, and more. All are welcome.",
+      "dateEntered": "2026-08-28",
+      "active": true,
+      "type": "event",
+      "category": "event",
+      "tag": "education"
+    },
+    {
+      "id": "2026-074",
+      "title": "Men’s Night | Friday, September 18 @ 6:30pm",
+      "description": "All men are invited for a night of worship, prayer, and fellowship as we launch the year’s men’s ministry. We’re praying for more intentional engagement with each other, so don’t miss that launching event!",
+      "dateEntered": "2026-08-28",
+      "active": true,
+      "type": "event",
+      "category": "event",
+      "tag": "men"
+    },
+    {
       "id": "2026-063",
       "title": "CPC Mom's Group",
       "description": "Moms with young kids: join our WhatsApp group to stay up to date with meet-ups this summer! Some happening on weekends too! Reach out to Meg Bogue for more information: <a href=\"mailto:mhbogue@me.com\">mhbogue@me.com</a>",
       "dateEntered": "2026-06-21",
       "active": false,
-      "type": "announcement",
-      "category": "announcement",
-      "tag": "community"
-    },
-    {
-      "id": "2026-051",
-      "title": "Vocation Journal | \"Koinonia\" Now Available!",
-      "description": "\"Koinonia\", CPC's inaugural journal, is now available! Pick up a copy — it highlights different members of CPC and how they view their work in light of God's grace.",
-      "dateEntered": "2026-05-11",
-      "active": true,
       "type": "announcement",
       "category": "announcement",
       "tag": "community"
