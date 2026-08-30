@@ -419,6 +419,44 @@
             box-shadow: 0 0.75rem 1.5rem rgba(0, 25, 55, 0.35);
         }
 
+        .life-groups-video-thumb {
+            position: relative;
+            display: block;
+            width: 100%;
+            height: 100%;
+            color: #fff;
+            text-decoration: none;
+            background: #001f3d;
+        }
+
+        .life-groups-video-thumb img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .life-groups-video-thumb::after {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            display: grid;
+            width: 4.5rem;
+            height: 4.5rem;
+            place-items: center;
+            color: #fff;
+            font-size: 2rem;
+            content: '▶';
+            background: rgba(0, 0, 0, 0.72);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .life-groups-video-thumb:focus-visible {
+            outline: 3px solid #8fd0ff;
+            outline-offset: -3px;
+        }
+
         .life-groups-video-frame iframe {
             width: 100%;
             height: 100%;
@@ -885,10 +923,11 @@
                         <p class="life-groups-video-kicker">Featured video</p>
                         <h3 id="life-groups-video-title">Find a Life Group in New Haven and beyond.</h3>
                         <p>See how Life Groups create a place for friendship, prayer, and practical care throughout our community.</p>
-                        <a class="life-groups-video-link" href="https://youtu.be/q1yV-kpugTA?si=YOIMbTaW7IY-UEqM" target="_blank" rel="noopener">Watch on YouTube <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
                     </div>
                     <div class="life-groups-video-frame">
-                        <iframe src="https://www.youtube-nocookie.com/embed/q1yV-kpugTA?rel=0" title="Find a Life Group in New Haven and beyond" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <a class="life-groups-video-thumb" href="https://www.youtube.com/watch?v=q1yV-kpugTA" target="_blank" rel="noopener" aria-label="Watch Find a Life Group in New Haven and beyond on YouTube">
+                            <img src="https://i.ytimg.com/vi/q1yV-kpugTA/hqdefault.jpg" alt="Thumbnail for Find a Life Group in New Haven and beyond">
+                        </a>
                     </div>
                 </section>
 
