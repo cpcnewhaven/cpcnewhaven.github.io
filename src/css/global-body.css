@@ -4510,7 +4510,9 @@ body:not(.mobile-nav-open) .mobile-navigation {
     display: none;
     position: absolute;
     /* Always open below its trigger; some legacy nav rules use a bottom anchor. */
-    top: calc(100% + 5px) !important;
+    /* Touch the trigger so the pointer can travel into the submenu without
+       crossing a hover gap that closes it. */
+    top: 100% !important;
     right: auto;
     bottom: auto !important;
     left: 0;
@@ -4537,4 +4539,15 @@ body:not(.mobile-nav-open) .mobile-navigation {
 }
 .nav-dropdown:hover .nav-dropdown-content {
     display: block;
+}
+
+/* Keep dropdowns usable with keyboard focus and click/touch toggles. */
+.nav-dropdown:focus-within .nav-dropdown-content,
+.nav-dropdown.is-open .nav-dropdown-content {
+    display: block;
+}
+
+.nav-dropdown.is-open .nav-dropbtn,
+.nav-dropdown:focus-within .nav-dropbtn {
+    color: #ffffff;
 }

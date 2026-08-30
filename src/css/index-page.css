@@ -12,8 +12,31 @@
     /* "fixed" backgrounds are a common cause of scroll jank on many devices */
     background-attachment: scroll;
     position: relative;
-    transition: background-image 1s ease-in-out;
     margin-top: -60px;
+}
+
+.splash-hero--home .hero-background {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+    z-index: 0;
+}
+
+.hero-fade-enter,
+.hero-fade-leave {
+    transition: opacity 900ms ease-in-out;
+}
+
+.hero-fade-enter-start,
+.hero-fade-leave-end {
+    opacity: 0;
+}
+
+.hero-fade-enter-end,
+.hero-fade-leave-start {
+    opacity: 1;
 }
 
 .splash-hero--home::before {

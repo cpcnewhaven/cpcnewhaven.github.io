@@ -54,12 +54,7 @@
         <a href="sunday-sermons.html">Sermons</a>
         <a href="about.html">About</a>
         <a href="podcasts.html">Podcasts</a>
-        <div class="nav-dropdown">
-            <a href="community.html" class="nav-dropbtn">Community <i class="fas fa-caret-down" style="font-size: 0.8em;"></i></a>
-            <div class="nav-dropdown-content">
-                <a href="events.html">Events</a>
-            </div>
-        </div>
+        <a href="community.html">Community</a>
         <a href="live.html">Live</a>
         <div class="nav-dropdown">
             <a href="#" class="nav-dropbtn" onclick="event.preventDefault();">More <i class="fas fa-caret-down" style="font-size: 0.8em;"></i></a>
@@ -127,8 +122,11 @@
 
     setInterval(() => { currentIndex = (currentIndex + 1) % images.length }, 5000);
   })()
-" class="splash-hero--home" :style="`background-image: url('${images[currentIndex]}')`">
-    <div class="hero-content">
+" class="splash-hero--home">
+  <template x-for="(image, index) in images" :key="image">
+    <div class="hero-background" x-show="index === currentIndex" x-transition:enter="hero-fade-enter" x-transition:enter-start="hero-fade-enter-start" x-transition:enter-end="hero-fade-enter-end" x-transition:leave="hero-fade-leave" x-transition:leave-start="hero-fade-leave-start" x-transition:leave-end="hero-fade-leave-end" :style="'background-image: url(' + image + ')'" aria-hidden="true"></div>
+  </template>
+  <div class="hero-content">
       <img class="hero-logo-img" src="assets/web-assets/cpcLOGO.png" alt="CPC Logo" decoding="async"
         fetchpriority="high" />
       <h1>Come Worship with Us</h1>
@@ -269,6 +267,7 @@
 
   <!-- Toggle mobile menu -->
   <script src="./src/js/function_toggle_mobileMenu.js"></script>
+  <script src="./src/nav-code.js"></script>
   <!-- Handle dynamic banner -->
   <script src="./src/js/dynamic-banner.js"></script>
   <!-- Lazy-load expensive homepage sections -->
