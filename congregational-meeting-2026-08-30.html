@@ -17,6 +17,7 @@
     .meeting-links a:hover { background: var(--cpc-blue-dark); }
     .meeting-links a[aria-disabled="true"] { background: #e8edf2; color: #596572; pointer-events: none; }
     .note { margin-top: 24px; color: var(--text-color); font-size: .95rem; }
+    .video-fallback { margin: 16px 20px 0; color: var(--text-color); text-align: center; }
   </style>
 </head>
 <body>
@@ -39,9 +40,23 @@
     <p class="meeting-date"><strong>Sunday, August 30, 2026</strong><br>During Fellowship Lunch, after worship</p>
     <p>Join us in the Fellowship Hall for our congregational meeting. For those unable to attend in person, the meeting will be available through the CPC YouTube livestream.</p>
 
+    <div class="youtube-video-section" aria-label="Congregational meeting video">
+      <div class="video-container">
+        <iframe
+          src="https://www.youtube.com/embed/jtZqR6GTZXI"
+          title="Congregational Meeting livestream"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          onerror="this.hidden = true; this.nextElementSibling.hidden = false;"
+          allowfullscreen></iframe>
+        <p class="video-fallback" hidden>Video coming soon.</p>
+      </div>
+    </div>
+
     <div class="meeting-links">
-      <a href="https://storage.googleapis.com/cpc-public-website/handouts/congregational-meeting/08_30_2026%20Congregational%20Meeting%20Slides.pptx.pdf" target="_blank" rel="noopener">View the presentation slides (PDF)</a>
-      <a href="https://www.youtube.com/@CPCNewHaven/streams" target="_blank" rel="noopener">Watch the YouTube livestream</a>
+      <a href="https://storage.googleapis.com/cpc-public-website/handouts/congregational-meeting/updated08_30_2026%20Congregational%20Meeting%20Slides.pptx%20(1).pdf" target="_blank" rel="noopener">View the presentation slides (PDF)</a>
+      <a href="https://www.youtube.com/watch?v=jtZqR6GTZXI" target="_blank" rel="noopener">Watch the YouTube livestream</a>
     </div>
     <p class="note" id="slides">The presentation slides open as a PDF in a new tab.</p>
   </main>
