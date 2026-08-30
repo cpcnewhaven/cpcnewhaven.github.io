@@ -17,7 +17,8 @@
     .meeting-links a:hover { background: var(--cpc-blue-dark); }
     .meeting-links a[aria-disabled="true"] { background: #e8edf2; color: #596572; pointer-events: none; }
     .note { margin-top: 24px; color: var(--text-color); font-size: .95rem; }
-    .video-fallback { margin: 16px 20px 0; color: var(--text-color); text-align: center; }
+    .video-fallback { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; margin: 0; padding: 24px; background: #282828; color: white; text-align: center; }
+    .video-fallback[hidden] { display: none; }
   </style>
 </head>
 <body>
@@ -50,7 +51,7 @@
           referrerpolicy="strict-origin-when-cross-origin"
           onerror="this.hidden = true; this.nextElementSibling.hidden = false;"
           allowfullscreen></iframe>
-        <p class="video-fallback" hidden>Video coming soon.</p>
+        <p class="video-fallback" hidden>Video coming soon. <a href="https://www.youtube.com/watch?v=jtZqR6GTZXI" target="_blank" rel="noopener" style="color: white;">Watch it on YouTube.</a></p>
       </div>
     </div>
 
@@ -60,5 +61,13 @@
     </div>
     <p class="note" id="slides">The presentation slides open as a PDF in a new tab.</p>
   </main>
+  <script>
+    // YouTube cannot configure an embedded player from a local file:// page.
+    if (window.location.protocol === 'file:') {
+      const videoFrame = document.querySelector('.video-container iframe');
+      videoFrame.hidden = true;
+      videoFrame.nextElementSibling.hidden = false;
+    }
+  </script>
 </body>
 </html>
