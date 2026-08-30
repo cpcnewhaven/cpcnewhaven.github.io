@@ -3970,6 +3970,15 @@ body:not(.mobile-nav-open) .mobile-navigation {
     }
 }
 
+/* The full navigation is available on desktop, so do not show the mobile
+   hamburger beside it. Keep this late in the stylesheet to override legacy
+   page-specific hamburger rules. */
+@media screen and (min-width: 869px) {
+    .hamburger-menu-button-container {
+        display: none !important;
+    }
+}
+
 @media (max-width: 680px) {
     .about-hamburger-menu-button-container {
         display: flex !important;
