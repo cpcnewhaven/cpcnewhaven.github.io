@@ -122,7 +122,7 @@
 
     setInterval(() => { currentIndex = (currentIndex + 1) % images.length }, 5000);
   })()
-" class="splash-hero--home">
+" class="splash-hero--home" style="background-image: url('https://storage.googleapis.com/cpc-public-website/featuredIMGs/homepage/Homepage%20-%20FEATURED%20IMG-NewHaven.jpg');">
   <template x-for="(image, index) in images" :key="image">
     <div class="hero-background" x-show="index === currentIndex" x-transition:enter="hero-fade-enter" x-transition:enter-start="hero-fade-enter-start" x-transition:enter-end="hero-fade-enter-end" x-transition:leave="hero-fade-leave" x-transition:leave-start="hero-fade-leave-start" x-transition:leave-end="hero-fade-leave-end" :style="'background-image: url(' + image + ')'" aria-hidden="true"></div>
   </template>
