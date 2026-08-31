@@ -1,25 +1,7 @@
 {
-  "generatedAt": "2026-08-30T11:21:09.527874-04:00",
+  "generatedAt": "2026-08-31T14:01:11.976053-04:00",
   "source": "CPC Google Calendar",
   "events": [
-    {
-      "date": "2026-08-30",
-      "title": "Congregational Meeting",
-      "description": "",
-      "allDay": false
-    },
-    {
-      "date": "2026-08-30",
-      "title": "Fellowship Lunch",
-      "description": "",
-      "allDay": false
-    },
-    {
-      "date": "2026-08-30",
-      "title": "Worship Service",
-      "description": "",
-      "allDay": false
-    },
     {
       "date": "2026-09-06",
       "title": "Fellowship Lunch",
@@ -71,6 +53,24 @@
     {
       "date": "2026-09-20",
       "title": "Fellowship Lunch",
+      "description": "",
+      "allDay": false
+    },
+    {
+      "date": "2026-09-20",
+      "title": "LG Leader Training",
+      "description": "",
+      "allDay": false
+    },
+    {
+      "date": "2026-09-20",
+      "title": "Sunday School Adults and Children",
+      "description": "",
+      "allDay": false
+    },
+    {
+      "date": "2026-09-20",
+      "title": "Worship Service",
       "description": "",
       "allDay": false
     }
