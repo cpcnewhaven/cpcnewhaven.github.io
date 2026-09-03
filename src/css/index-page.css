@@ -104,12 +104,23 @@
 }
 
 .congregational-meeting-feature {
-    margin-top: -52px;
     margin-bottom: 18px;
 }
 
+.care-teams-feature {
+    margin-top: -52px;
+    margin-bottom: 18px;
+    background: linear-gradient(135deg, #184936 0%, #0d6b65 100%);
+}
+
+.care-teams-feature + .congregational-meeting-feature,
 .congregational-meeting-feature + .welcome-sunday-feature {
     margin-top: 0;
+}
+
+.care-teams-feature__icon strong {
+    margin-top: 8px;
+    font-size: 1.6rem;
 }
 
 .welcome-sunday-feature__date {
@@ -206,6 +217,10 @@
     }
 
     .congregational-meeting-feature {
+        margin-bottom: 16px;
+    }
+
+    .care-teams-feature {
         margin-top: -24px;
         margin-bottom: 16px;
     }
