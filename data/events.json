@@ -1,19 +1,7 @@
 {
-  "generatedAt": "2026-09-06T10:11:41.893378-04:00",
+  "generatedAt": "2026-09-07T12:28:41.075515-04:00",
   "source": "CPC Google Calendar",
   "events": [
-    {
-      "date": "2026-09-06",
-      "title": "Fellowship Lunch",
-      "description": "",
-      "allDay": false
-    },
-    {
-      "date": "2026-09-06",
-      "title": "Worship Service",
-      "description": "",
-      "allDay": false
-    },
     {
       "date": "2026-09-12",
       "title": "Young Adults Beach Event",
@@ -71,6 +59,18 @@
     {
       "date": "2026-09-20",
       "title": "Worship Service",
+      "description": "",
+      "allDay": false
+    },
+    {
+      "date": "2026-09-27",
+      "title": "Fellowship Lunch",
+      "description": "",
+      "allDay": false
+    },
+    {
+      "date": "2026-09-27",
+      "title": "Sunday School Adults and Children",
       "description": "",
       "allDay": false
     }
