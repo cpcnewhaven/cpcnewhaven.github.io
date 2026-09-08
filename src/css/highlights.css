@@ -158,6 +158,28 @@
     color: var(--link-hover-color);
 }
 
+.highlight-description .highlight-cta {
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
+    margin-top: 12px;
+    padding: 9px 13px;
+    border: 1px solid var(--link-color);
+    border-radius: 999px;
+    background: #fff;
+    color: var(--link-color);
+    font-size: 0.9rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.highlight-description .highlight-cta:hover,
+.highlight-description .highlight-cta:focus-visible {
+    background: var(--link-color);
+    color: #fff;
+    text-decoration: none;
+}
+
 
 
 .highlight-error,

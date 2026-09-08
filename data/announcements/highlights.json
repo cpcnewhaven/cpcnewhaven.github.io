@@ -5,7 +5,7 @@
       "title": "10:30am Worship This Sunday",
       "description": "Due to Yale's move-in day, we suggest avoiding downtown on your way to church this Sunday. <a href=\"https://us.list-manage.com/uDdotqLHkMv?e=9da175cc40&amp;c2id=6df9b900f2d1d0ec64fac5dfc299411c\" target=\"_blank\" rel=\"noopener\">View the Large Print Bulletin</a>",
       "dateEntered": "2026-08-21",
-      "active": true,
+      "active": false,
       "type": "announcement",
       "category": "schedule",
       "tag": "sunday"
@@ -15,7 +15,7 @@
       "title": "Fellowship Lunch Is Back This Sunday",
       "description": "All are welcome! Consider grabbing a seat with someone new for our weekly meal together in the Fellowship Hall.",
       "dateEntered": "2026-08-21",
-      "active": true,
+      "active": false,
       "type": "event",
       "category": "event",
       "tag": "community"
@@ -83,7 +83,7 @@
     {
       "id": "2026-072",
       "title": "Welcome Sunday | September 13",
-      "description": "Everything launches this Sunday! We’ll be starting our new Sermon Series in the Book of Acts, and our normal Sunday schedule resumes with Children’s Sunday School and Adult Sunday Studies beginning at 9:30am. All are welcome.",
+      "description": "Everything launches this Sunday! We’ll be starting our new Sermon Series in the Book of Acts, and our normal Sunday schedule resumes with Children’s Sunday School and Adult Sunday Studies beginning at 9:30am. All are welcome. <a class=\"highlight-cta\" href=\"welcome-sunday-2026-09-13.html\">View Welcome Sunday details</a>",
       "dateEntered": "2026-08-28",
       "active": true,
       "type": "event",
@@ -93,7 +93,7 @@
     {
       "id": "2026-073",
       "title": "Adult Class | The Wonders of Communal Worship",
-      "description": "This class will be a great opportunity to discuss all that God promises to do through communal worship, and why we worship the way we do at CPC. We’ll study exciting theology, insight into how we’re created, principles for deciding worship styles, and more. All are welcome.",
+      "description": "This class will be a great opportunity to discuss all that God promises to do through communal worship, and why we worship the way we do at CPC. We’ll study exciting theology, insight into how we’re created, principles for deciding worship styles, and more. All are welcome. <a class=\"highlight-cta\" href=\"sunday-studies/wonders-of-communal-worship.html\">View class details</a>",
       "dateEntered": "2026-08-28",
       "active": true,
       "type": "event",
@@ -135,7 +135,7 @@
       "title": "Pastor's Book Pick | Life Together, by Dietrich Bonhoeffer",
       "description": "A modern classic, we're treading into deep waters with this one! Written by pastor-theologian and martyr, Life Together is Bonhoeffer's vision for the Christian life, both individually and communally.<br/>Copies in the foyer — suggested donation of $15.",
       "dateEntered": "2026-03-13",
-      "active": true,
+      "active": false,
       "type": "ongoing",
       "category": "ongoing",
       "tag": "books"
