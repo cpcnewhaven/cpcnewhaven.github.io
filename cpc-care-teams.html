@@ -19,18 +19,21 @@
     .form-actions { display: flex; flex-wrap: wrap; gap: 12px; margin: 34px 0; }
     .form-actions a { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 13px 18px; border-radius: 8px; font-weight: 700; text-decoration: none; }
     .form-actions .primary { background: var(--cpc-blue); color: #fff; }
-    .form-actions .secondary { border: 1px solid #b7c3cf; color: var(--cpc-blue); background: #fff; }
     .form-actions a:hover, .form-actions a:focus-visible { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12); }
     .team-list { margin-top: 32px; padding: 26px; background: #fff; border: 1px solid #d9e1e8; }
     .team-list h2 { margin: 0 0 16px; color: var(--heading-color); font-size: 1.45rem; }
-    .team-list ul { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px 18px; list-style: none; }
-    .team-list li { position: relative; padding-left: 22px; color: var(--text-color); line-height: 1.45; }
-    .team-list li::before { content: ""; position: absolute; top: .55em; left: 0; width: 8px; height: 8px; background: var(--cpc-blue); }
+    .team-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+    .team-card { padding: 20px; border: 1px solid #d9e1e8; border-top: 4px solid var(--cpc-blue); background: #f9fbfc; }
+    .team-card h3 { margin: 0 0 8px; color: var(--cpc-blue); font-size: 1.15rem; font-weight: 800; line-height: 1.25; }
+    .team-card h3::after { content: "Ways this team can help"; display: block; margin-top: 3px; color: #66717d; font-size: .72rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+    .team-card ul { margin: 0; padding-left: 20px; list-style: disc; }
+    .team-card li { margin: 0 0 8px; color: var(--text-color); line-height: 1.5; }
+    .team-card li:last-child { margin-bottom: 0; }
     .fields-note { margin-top: 18px; color: #66717d; font-size: .95rem; }
     @media (max-width: 640px) {
       main { padding: 82px 18px 90px; }
       .team-list { padding: 22px; }
-      .team-list ul { grid-template-columns: 1fr; }
+      .team-grid { grid-template-columns: 1fr; }
       .form-actions a { width: 100%; }
     }
   </style>
@@ -64,27 +67,72 @@
 
     <p>With freedom to say no to any request, we ask that you sign up with the expectation that you can give time to <strong>2-3 projects/needs a year</strong>. Please sign up for one or multiple teams by selecting from the list below.</p>
 
-    <p>To see descriptions of each team, follow this link: <a href="https://docs.google.com/document/d/1HAUcz7oBFqCvtisRXgL_VoUVr1Eu4c2EIveIi6BGnC0/edit?usp=sharing" target="_blank" rel="noopener">CPC Care Team Descriptions</a>.</p>
-
     <p>We are excited for what the Lord will do through this system, and the people of our Church serving one another!</p>
 
     <div class="form-actions">
       <a class="primary" href="https://docs.google.com/forms/d/e/1FAIpQLScUIlkTv3cYaP8L2fxHsoQ4G5VFvNMU5-9c2gC15rWr2TbhfQ/viewform?fbzx=-8224853650635582304" target="_blank" rel="noopener">Open interest form</a>
-      <a class="secondary" href="https://docs.google.com/document/d/1HAUcz7oBFqCvtisRXgL_VoUVr1Eu4c2EIveIi6BGnC0/edit?usp=sharing" target="_blank" rel="noopener">Team descriptions</a>
     </div>
 
     <section class="team-list" aria-labelledby="care-team-options">
-      <h2 id="care-team-options">Care Teams</h2>
-      <ul>
-        <li>Hospitality</li>
-        <li>House &amp; Lawn Maintenance</li>
-        <li>Home &amp; Family Support</li>
-        <li>Transportation</li>
-        <li>Referrals &amp; Resources</li>
-        <li>Tech Help (kids and students welcome!)</li>
-        <li>Legal &amp; Financial</li>
-        <li>Medical</li>
-      </ul>
+      <h2 id="care-team-options">CPC Mercy Ministry Care Teams</h2>
+      <div class="team-grid">
+        <article class="team-card">
+          <h3>Hospitality</h3>
+          <ul>
+            <li>Provide visits to individuals and/or outings for those in need of community.</li>
+            <li>Go with someone to an appointment for support.</li>
+            <li>Join shepherds for communion with those who cannot attend Sunday service.</li>
+          </ul>
+        </article>
+        <article class="team-card">
+          <h3>House &amp; Lawn Maintenance</h3>
+          <ul>
+            <li>Assist individuals or families in yard work and lawn maintenance.</li>
+            <li>Additional specialty tasks, including mechanical, carpentry, and more.</li>
+          </ul>
+        </article>
+        <article class="team-card">
+          <h3>Home &amp; Family Support</h3>
+          <ul>
+            <li>Childcare</li>
+            <li>Home and personal organizing</li>
+            <li>Life Transition care</li>
+          </ul>
+        </article>
+        <article class="team-card">
+          <h3>Transportation</h3>
+          <ul>
+            <li>Provide transportation to church, medical appointments, job interviews, outings, and more.</li>
+          </ul>
+        </article>
+        <article class="team-card">
+          <h3>Referrals &amp; Resources</h3>
+          <ul>
+            <li>Referrals to social, housing, and mental health services.</li>
+          </ul>
+        </article>
+        <article class="team-card">
+          <h3>Tech Help</h3>
+          <ul>
+            <li>Help with technology.</li>
+            <li>Set up a home printer, create an email account, or assist in navigating phones or computers.</li>
+            <li>Especially great opportunity for our kids and students!</li>
+          </ul>
+        </article>
+        <article class="team-card">
+          <h3>Legal &amp; Financial</h3>
+          <ul>
+            <li>Provide legal direction and referrals.</li>
+            <li>Assist in financial advising or tax assistance.</li>
+          </ul>
+        </article>
+        <article class="team-card">
+          <h3>Medical</h3>
+          <ul>
+            <li>Support and advice.</li>
+          </ul>
+        </article>
+      </div>
       <p class="fields-note">The form asks for first and last name, email, and the Care Teams you would like to join. Please submit separate forms for kids and family members.</p>
     </section>
   </main>
