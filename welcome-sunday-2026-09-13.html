@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Welcome Sunday at CPC New Haven on September 13, 2026.">
+  <title>Welcome Sunday · September 13, 2026 | CPC New Haven</title>
+  <link rel="stylesheet" href="./src/css/global-body.css?v=20260821-heroes-6">
+  <link rel="stylesheet" href="./src/css/global-footer-cta.css">
+  <style>
+    body { background: #f6f8f9; color: var(--heading-color); }
+    main { max-width: 860px; margin: 0 auto; padding: 96px 24px 120px; }
+    .eyebrow { color: var(--cpc-blue); font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+    h1 { margin: 12px 0 14px; color: var(--heading-color); line-height: 1.05; }
+    .date { margin-bottom: 28px; color: var(--cpc-blue); font-weight: 700; }
+    p { margin: 0 0 18px; color: var(--text-color); line-height: 1.7; }
+    .schedule { margin: 30px 0 34px; padding: 22px 24px; border-left: 5px solid var(--cpc-blue); background: #fff; }
+    .schedule h2 { margin: 0 0 8px; color: var(--heading-color); font-size: 1.2rem; }
+    .schedule p { margin: 0; font-weight: 700; }
+    .welcome-details { padding: 26px; background: #fff; border: 1px solid #d9e1e8; }
+    .welcome-details h2 { margin: 0 0 16px; color: var(--heading-color); font-size: 1.45rem; }
+    .detail-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+    .detail-card { padding: 20px; border: 1px solid #d9e1e8; border-top: 4px solid var(--cpc-blue); background: #f9fbfc; }
+    .detail-card h3 { margin: 0 0 10px; color: var(--cpc-blue); font-size: 1.15rem; font-weight: 800; line-height: 1.25; }
+    .detail-card p { margin: 0; }
+    .form-actions { display: flex; flex-wrap: wrap; gap: 12px; margin: 34px 0 0; }
+    .form-actions a { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 13px 18px; border-radius: 8px; background: var(--cpc-blue); color: #fff; font-weight: 700; text-decoration: none; }
+    .form-actions a:hover, .form-actions a:focus-visible { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12); }
+    @media (max-width: 640px) {
+      main { padding: 82px 18px 90px; }
+      .welcome-details { padding: 22px; }
+      .detail-grid { grid-template-columns: 1fr; }
+      .form-actions a { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <header id="stickyHeader" class="sticky">
+    <nav class="main-navigation">
+      <a href="index.html">Home</a>
+      <a href="sundays.html">Sundays</a>
+      <a href="sunday-sermons.html">Sermons</a>
+      <a href="about.html">About</a>
+      <a href="podcasts.html">Podcasts</a>
+      <a href="community.html">Community</a>
+      <a href="events.html">Events</a>
+      <a href="live.html">Live</a>
+    </nav>
+  </header>
+
+  <main>
+    <p class="eyebrow">Life together</p>
+    <h1>Welcome Sunday</h1>
+    <p class="date">Sunday, September 13, 2026</p>
+
+    <p>Everything launches this Sunday! We’ll be starting our new Sermon Series in the Book of Acts, and our normal Sunday schedule resumes with Children’s Sunday School and Adult Sunday Studies. All are welcome.</p>
+
+    <section class="schedule" aria-labelledby="sunday-schedule-title">
+      <h2 id="sunday-schedule-title">Sunday schedule</h2>
+      <p>Children’s Sunday School and Adult Sunday Studies begin at 9:30am.</p>
+    </section>
+
+    <section class="welcome-details" aria-labelledby="welcome-details-title">
+      <h2 id="welcome-details-title">What’s happening</h2>
+      <div class="detail-grid">
+        <article class="detail-card">
+          <h3>Adult Class: The Wonders of Communal Worship</h3>
+          <p>This class will be a great opportunity to discuss all that God promises to do through communal worship, and why we worship the way we do at CPC. We’ll study exciting theology, insight into how we’re created, principles for deciding worship styles, and more. All are welcome.</p>
+        </article>
+        <article class="detail-card">
+          <h3>New Ministry Year Begins</h3>
+          <p><strong>Save these dates:</strong><br>Young Adults Beach Hang · Saturday, September 12<br>CPC Women’s Conference · Saturday, October 3<br>Parenting Seminar · Saturday, November 7</p>
+        </article>
+        <article class="detail-card">
+          <h3>Men’s Night</h3>
+          <p><strong>Friday, September 18 · 6:30pm</strong></p>
+          <p>All men are invited for a night of worship, prayer, and fellowship as we launch the year’s men’s ministry. We’re praying for more intentional engagement with each other, so don’t miss that launching event!</p>
+        </article>
+      </div>
+    </section>
+
+    <div class="form-actions">
+      <a href="events.html">View calendar</a>
+    </div>
+  </main>
+</body>
+</html>
