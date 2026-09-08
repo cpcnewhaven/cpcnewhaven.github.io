@@ -14,21 +14,36 @@
     h1 { margin: 12px 0 14px; color: var(--heading-color); line-height: 1.05; }
     .date { margin-bottom: 28px; color: var(--cpc-blue); font-weight: 700; }
     p { margin: 0 0 18px; color: var(--text-color); line-height: 1.7; }
-    .schedule { margin: 30px 0 34px; padding: 22px 24px; border-left: 5px solid var(--cpc-blue); background: #fff; }
-    .schedule h2 { margin: 0 0 8px; color: var(--heading-color); font-size: 1.2rem; }
-    .schedule p { margin: 0; font-weight: 700; }
-    .welcome-details { padding: 26px; background: #fff; border: 1px solid #d9e1e8; }
+    .schedule { margin: 30px 0 26px; padding: 26px; border: 1px solid #d9e1e8; border-left: 5px solid var(--cpc-blue); background: #fff; }
+    .schedule h2 { margin: 0 0 16px; color: var(--heading-color); font-size: 1.35rem; text-align: left; }
+    .schedule-list { display: grid; width: 100%; gap: 0; margin: 0; padding: 0; list-style: none; }
+    .schedule-list li { display: grid; grid-template-columns: 100px minmax(0, 1fr); width: 100%; box-sizing: border-box; gap: 16px; margin: 0; padding: 12px 0; border-top: 1px solid #d9e1e8; color: var(--text-color); font-family: inherit; font-size: 1rem; line-height: 1.5; text-align: left; }
+    .schedule-list li:first-child { padding-top: 0; border-top: 0; }
+    .schedule-list li:last-child { padding-bottom: 0; }
+    .schedule-list li span { text-align: left; }
+    .schedule-time { color: var(--cpc-blue); font-weight: 800; }
+    .schedule-list strong { color: var(--heading-color); }
+    .welcome-details { margin-top: 26px; padding: 26px; background: #fff; border: 1px solid #d9e1e8; }
     .welcome-details h2 { margin: 0 0 16px; color: var(--heading-color); font-size: 1.45rem; }
     .detail-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
     .detail-card { padding: 20px; border: 1px solid #d9e1e8; border-top: 4px solid var(--cpc-blue); background: #f9fbfc; }
     .detail-card h3 { margin: 0 0 10px; color: var(--cpc-blue); font-size: 1.15rem; font-weight: 800; line-height: 1.25; }
     .detail-card p { margin: 0; }
+    .detail-card p + p { margin-top: 12px; }
+    .card-meta { color: #66717d; font-size: .92rem; font-weight: 700; }
+    .contact-line { color: #66717d; font-size: .88rem; line-height: 1.45; }
+    .detail-card a { color: var(--cpc-blue); font-weight: 700; }
+    .dates-list { margin: 0; padding: 0; list-style: none; }
+    .dates-list li { padding: 10px 0; border-top: 1px solid #d9e1e8; color: var(--text-color); }
+    .dates-list li:first-child { padding-top: 0; border-top: 0; }
+    .dates-list strong { color: var(--heading-color); }
     .form-actions { display: flex; flex-wrap: wrap; gap: 12px; margin: 34px 0 0; }
     .form-actions a { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 13px 18px; border-radius: 8px; background: var(--cpc-blue); color: #fff; font-weight: 700; text-decoration: none; }
     .form-actions a:hover, .form-actions a:focus-visible { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12); }
     @media (max-width: 640px) {
       main { padding: 82px 18px 90px; }
       .welcome-details { padding: 22px; }
+      .schedule-list li { grid-template-columns: 78px 1fr; gap: 12px; }
       .detail-grid { grid-template-columns: 1fr; }
       .form-actions a { width: 100%; }
     }
@@ -53,30 +68,64 @@
     <h1>Welcome Sunday</h1>
     <p class="date">Sunday, September 13, 2026</p>
 
-    <p>Everything launches this Sunday! We’ll be starting our new Sermon Series in the Book of Acts, and our normal Sunday schedule resumes with Children’s Sunday School and Adult Sunday Studies. All are welcome.</p>
+    <p>Everything launches this Sunday! We’ll begin our new Sermon Series in the Book of Acts, and our regular Sunday schedule resumes. All are welcome.</p>
 
     <section class="schedule" aria-labelledby="sunday-schedule-title">
       <h2 id="sunday-schedule-title">Sunday schedule</h2>
-      <p>Children’s Sunday School and Adult Sunday Studies begin at 9:30am.</p>
+      <ul class="schedule-list">
+        <li><span class="schedule-time">8:30am</span><span><strong>Prayer in the Parlor</strong></span></li>
+        <li><span class="schedule-time">9:30am</span><span><strong>Children’s Sunday School</strong></span></li>
+        <li><span class="schedule-time">9:30am</span><span><strong>Adult Sunday Studies</strong> · The Wonders of Communal Worship</span></li>
+        <li><span class="schedule-time">10:30am</span><span><strong>Worship Service</strong></span></li>
+        <li><span class="schedule-time">12:00pm</span><span><strong>Fellowship Lunch</strong></span></li>
+      </ul>
     </section>
 
     <section class="welcome-details" aria-labelledby="welcome-details-title">
-      <h2 id="welcome-details-title">What’s happening</h2>
+      <h2 id="welcome-details-title">This week at CPC</h2>
       <div class="detail-grid">
         <article class="detail-card">
           <h3>Adult Class: The Wonders of Communal Worship</h3>
           <p>This class will be a great opportunity to discuss all that God promises to do through communal worship, and why we worship the way we do at CPC. We’ll study exciting theology, insight into how we’re created, principles for deciding worship styles, and more. All are welcome.</p>
         </article>
         <article class="detail-card">
-          <h3>New Ministry Year Begins</h3>
-          <p><strong>Save these dates:</strong><br>Young Adults Beach Hang · Saturday, September 12<br>CPC Women’s Conference · Saturday, October 3<br>Parenting Seminar · Saturday, November 7</p>
+          <h3>Young Adults Beach Hang</h3>
+          <p class="card-meta">Saturday, September 12 · 2:00pm</p>
+          <p>Come hang with us at Woodmont Beach in Milford. Bring a chair or blanket to sit on and a snack to share. The beach has a volleyball net, playground, and swimming access.</p>
+          <p class="contact-line">Need a ride? <a href="mailto:joshuatsanders@yahoo.com">Email Josh Sanders</a>.</p>
         </article>
         <article class="detail-card">
           <h3>Men’s Night</h3>
-          <p><strong>Friday, September 18 · 6:30pm</strong></p>
+          <p class="card-meta">Friday, September 18 · 6:30pm</p>
           <p>All men are invited for a night of worship, prayer, and fellowship as we launch the year’s men’s ministry. We’re praying for more intentional engagement with each other, so don’t miss that launching event!</p>
         </article>
+        <article class="detail-card">
+          <h3>CPC Women’s Conference</h3>
+          <p class="card-meta">Saturday, October 3</p>
+          <p>Women of all ages are warmly invited to explore what it means to flourish through our participation in the body of Christ together. Refreshments and lunch will be provided, followed by a mocktail happy hour.</p>
+          <p><a href="https://us.list-manage.com/WCZEDb6ULkW?e=9da175cc40&amp;c2id=6df9b900f2d1d0ec64fac5dfc299411c" target="_blank" rel="noopener">Register today</a> · Optional contributions may be made on the <a href="https://us.list-manage.com/11Z45SlxOwv?e=9da175cc40&amp;c2id=6df9b900f2d1d0ec64fac5dfc299411c" target="_blank" rel="noopener">giving page</a> and applied to “Women’s Conference.”</p>
+        </article>
+        <article class="detail-card">
+          <h3>CPC Mercy Ministry Care Teams</h3>
+          <p>Care Teams serve church-wide needs and help our congregation lean upon the gifts and resources within our church family.</p>
+          <p><a href="https://us.list-manage.com/B3eFmB0AXDI?e=9da175cc40&amp;c2id=6df9b900f2d1d0ec64fac5dfc299411c" target="_blank" rel="noopener">Complete the interest form</a></p>
+        </article>
+        <article class="detail-card">
+          <h3>Congregational Meeting</h3>
+          <p>The livestream and presentation slides are available for anyone who was unable to attend or would like to review.</p>
+          <p><a href="https://us.list-manage.com/xGq8Wi_Dqt4?e=9da175cc40&amp;c2id=6df9b900f2d1d0ec64fac5dfc299411c" target="_blank" rel="noopener">View the meeting materials</a></p>
+        </article>
       </div>
+    </section>
+
+    <section class="welcome-details" aria-labelledby="upcoming-dates-title">
+      <h2 id="upcoming-dates-title">Save these dates</h2>
+      <ul class="dates-list">
+        <li><strong>Young Adults Beach Hang</strong> · Saturday, September 12</li>
+        <li><strong>Men’s Night</strong> · Friday, September 18 · 6:30pm</li>
+        <li><strong>CPC Women’s Conference</strong> · Saturday, October 3</li>
+        <li><strong>Parenting Seminar</strong> · Saturday, November 7</li>
+      </ul>
     </section>
 
     <div class="form-actions">
