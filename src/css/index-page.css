@@ -89,7 +89,7 @@
 /* Welcome Sunday feature */
 .welcome-sunday-feature {
     max-width: 1120px;
-    margin: -52px auto 42px;
+    margin: 0 auto 18px;
     padding: 28px 32px;
     position: relative;
     z-index: 3;
@@ -104,13 +104,8 @@
 }
 
 .care-teams-feature {
-    margin-top: -52px;
-    margin-bottom: 18px;
-    background: linear-gradient(135deg, #184936 0%, #0d6b65 100%);
-}
-
-.care-teams-feature + .welcome-sunday-feature {
-    margin-top: 0;
+    margin: -52px auto 18px;
+    background: linear-gradient(135deg, #28634d 0%, #3b8970 100%);
 }
 
 .care-teams-feature__icon strong {
@@ -206,14 +201,13 @@
 
     .welcome-sunday-feature {
         grid-template-columns: auto 1fr;
-        margin: -24px 16px 32px;
+        margin: 0 16px 16px;
         padding: 22px;
         gap: 16px;
     }
 
     .care-teams-feature {
-        margin-top: -24px;
-        margin-bottom: 16px;
+        margin: -24px 16px 16px;
     }
 
     .welcome-sunday-feature__actions {
