@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-09T11:07:54.415596-04:00",
+  "generatedAt": "2026-09-10T10:59:26.071928-04:00",
   "source": "CPC Google Calendar",
   "events": [
     {
@@ -33,6 +33,12 @@
       "allDay": false
     },
     {
+      "date": "2026-09-16",
+      "title": "Young Mom's Group",
+      "description": "",
+      "allDay": false
+    },
+    {
       "date": "2026-09-18",
       "title": "Men's Discipleship Fall Gathering",
       "description": "",
@@ -46,7 +52,7 @@
     },
     {
       "date": "2026-09-20",
-      "title": "LG Leader Training",
+      "title": "LG Leadership Training",
       "description": "",
       "allDay": false
     },
@@ -65,12 +71,6 @@
     {
       "date": "2026-09-27",
       "title": "Fellowship Lunch",
-      "description": "",
-      "allDay": false
-    },
-    {
-      "date": "2026-09-27",
-      "title": "Sunday School Adults and Children",
       "description": "",
       "allDay": false
     }
