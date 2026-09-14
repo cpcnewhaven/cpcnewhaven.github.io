@@ -7,7 +7,7 @@ class WhatsNewManager {
     constructor() {
         this.sermonsUrl = './data/sunday-sermons.json';
         this.container = document.getElementById('whats-new-container');
-        this.limit = 3; // Total items to show
+        this.limit = 1; // Show only the latest item
         this.init();
     }
 
