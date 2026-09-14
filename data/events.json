@@ -1,31 +1,7 @@
 {
-  "generatedAt": "2026-09-13T10:55:20.102162-04:00",
+  "generatedAt": "2026-09-14T12:58:22.030083-04:00",
   "source": "CPC Google Calendar",
   "events": [
-    {
-      "date": "2026-09-13",
-      "title": "Fellowship Lunch",
-      "description": "",
-      "allDay": false
-    },
-    {
-      "date": "2026-09-13",
-      "title": "Sunday School Adults and Children",
-      "description": "",
-      "allDay": false
-    },
-    {
-      "date": "2026-09-13",
-      "title": "Welcome Sunday & Ministry Fair",
-      "description": "",
-      "allDay": false
-    },
-    {
-      "date": "2026-09-13",
-      "title": "Worship Service",
-      "description": "",
-      "allDay": false
-    },
     {
       "date": "2026-09-16",
       "title": "Young Mom's Group",
@@ -70,6 +46,30 @@
     },
     {
       "date": "2026-09-27",
+      "title": "Sunday School Adults and Children",
+      "description": "",
+      "allDay": false
+    },
+    {
+      "date": "2026-09-27",
+      "title": "Worship Service",
+      "description": "",
+      "allDay": false
+    },
+    {
+      "date": "2026-10-03",
+      "title": "Women's Conference at CPC",
+      "description": "",
+      "allDay": true
+    },
+    {
+      "date": "2026-10-04",
+      "title": "Fellowship Lunch",
+      "description": "",
+      "allDay": false
+    },
+    {
+      "date": "2026-10-04",
       "title": "Sunday School Adults and Children",
       "description": "",
       "allDay": false
