@@ -55,7 +55,10 @@ class WhatsNewManager {
                 title: s.title,
                 description: `${s.scripture} | ${s.author}`,
                 date: s.date,
-                link: s.link || s.spotify_url || 'sunday-sermons.html'
+                link: s.link || s.spotify_url || 'sunday-sermons.html',
+                spotifyUrl: s.spotify_url,
+                youtubeUrl: s.youtube_url,
+                appleUrl: s.apple_podcasts_url
             }));
         } catch (error) {
             console.warn('Sermons fetch failed:', error);
@@ -86,20 +89,20 @@ class WhatsNewManager {
         grid.className = 'whats-new-grid';
 
         items.forEach(item => {
-            const card = document.createElement('a');
-            card.href = item.link;
+            const card = document.createElement('article');
             card.className = 'whats-new-card tag-sermon';
-            if (item.link.includes('spotify.com') || item.link.includes('youtube.com')) {
-                card.target = '_blank';
-            }
 
             card.innerHTML = `
                 <div class="card-tag">${item.tag}</div>
-                <h3>${item.title}</h3>
+                <h3><a href="${item.link}" target="_blank" rel="noopener">${item.title}</a></h3>
                 <p>${item.description}</p>
                 <div class="card-footer">
                     <span class="card-date"><i class="far fa-calendar-alt"></i> ${this.formatDate(item.date)}</span>
-                    <span class="card-link">Listen Now <i class="fas fa-arrow-right"></i></span>
+                    <div class="card-platform-links" aria-label="Listen on">
+                        ${item.spotifyUrl ? `<a href="${item.spotifyUrl}" target="_blank" rel="noopener" aria-label="Listen on Spotify" title="Spotify"><i class="fab fa-spotify"></i></a>` : ''}
+                        ${item.youtubeUrl ? `<a href="${item.youtubeUrl}" target="_blank" rel="noopener" aria-label="Watch on YouTube" title="YouTube"><i class="fab fa-youtube"></i></a>` : ''}
+                        ${item.appleUrl ? `<a href="${item.appleUrl}" target="_blank" rel="noopener" aria-label="Listen on Apple Podcasts" title="Apple Podcasts"><i class="fas fa-podcast"></i></a>` : ''}
+                    </div>
                 </div>
             `;
             grid.appendChild(card);
