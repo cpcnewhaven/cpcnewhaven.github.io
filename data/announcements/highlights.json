@@ -102,9 +102,9 @@
     },
     {
       "id": "2026-074",
-      "title": "Men’s Night | Friday, September 18 @ 6:30pm",
-      "description": "All men are invited for a night of worship, prayer, and fellowship as we launch the year’s men’s ministry. We’re praying for more intentional engagement with each other, so don’t miss that launching event!",
-      "dateEntered": "2026-08-28",
+      "title": "Men’s Night | Next Friday, September 18 @ 6:30pm",
+      "description": "All men are invited for a night of worship, prayer, and fellowship as we launch the year’s men’s ministry. We’re praying for more intentional engagement with each other, so don’t miss this launching event!",
+      "dateEntered": "2026-09-15",
       "active": true,
       "type": "event",
       "category": "event",
@@ -113,11 +113,31 @@
     {
       "id": "2026-075",
       "title": "CPC Women’s Conference | Saturday, October 3",
-      "description": "Women of all ages are warmly invited to join us to explore what it means to flourish through our participation in the body of Christ together. Refreshments and lunch will be provided, with plenty of time throughout the day for fellowship and meaningful conversation with sisters in Christ. Followed by a mocktail happy hour! <a class=\"highlight-cta\" href=\"cpc-womens-conference-2026-10-03.html\">Learn more</a>",
+      "description": "<a class=\"highlight-cta\" href=\"https://us.list-manage.com/9gh5NxznxOJ?e=9da175cc40&amp;c2id=6df9b900f2d1d0ec64fac5dfc299411c\" target=\"_blank\" rel=\"noopener\">Register</a> today!<br>Women of all ages are warmly invited to join us to explore what it means to flourish through our participation in the body of Christ together. Refreshments and lunch will be provided, with plenty of time throughout the day for fellowship and meaningful conversation with sisters in Christ. Followed by a mocktail happy hour!",
       "dateEntered": "2026-09-15",
       "active": true,
       "type": "event",
       "category": "event",
+      "tag": "women"
+    },
+    {
+      "id": "2026-076",
+      "title": "Mom’s Discipleship Group | Wednesday, September 16 @ 9:45am",
+      "description": "Please join us! CPC Moms discipleship group will begin meeting monthly on 9/16/26 in the Fellowship Hall at 9:45am. Children are welcome to play near us while we meet. We will discuss selected podcasts from Ruth Chou Simons, a gifted writer of over 10 books, artist, mother of 6, podcaster, and founder of GraceLaced. Future dates: 10/14, 11/11, no Dec, 1/13/27. Please inquire with any young mom, or Meg Bogue with questions, <a href=\"mailto:mhbogue@me.com\">mhbogue@me.com</a>.",
+      "dateEntered": "2026-09-15",
+      "active": true,
+      "type": "ongoing",
+      "category": "ongoing",
+      "tag": "women"
+    },
+    {
+      "id": "2026-077",
+      "title": "Women’s Discipleship Group",
+      "description": "The Women's Discipleship group is starting a new book on October 5 - is this the right time for you to join? We'll be going through the book <em>Side by Side</em> by Edward T Welch. This is an opportunity to encourage and challenge one another as we seek to follow Christ by loving those around us! We meet virtually on the 1st and 3rd Mondays of each month at 7:30pm. If interested, please reach out to Lisa Graham (<a href=\"mailto:lisahgraham44@gmail.com\">lisahgraham44@gmail.com</a>)<br>or Diane Miller (<a href=\"mailto:auntiediane@att.net\">auntiediane@att.net</a>).",
+      "dateEntered": "2026-09-15",
+      "active": true,
+      "type": "ongoing",
+      "category": "ongoing",
       "tag": "women"
     },
     {
