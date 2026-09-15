@@ -301,5 +301,6 @@
             </div>
         </div>
         <script src="../src/js/function_toggle_mobileMenu.js"></script>
-    </body>
+      <script>(() => { const source = window.location.protocol === "file:" ? new URL("../src/js/back-home-button.js", window.location.href).href : window.location.origin + "/src/js/back-home-button.js"; const script = document.createElement("script"); script.defer = true; script.src = source; document.head.append(script); })();</script>
+</body>
 </html>
