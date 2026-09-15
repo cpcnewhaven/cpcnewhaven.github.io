@@ -116,6 +116,32 @@
     border-top-color: #0b5f78;
 }
 
+.communal-worship-feature {
+    background-color: #eaf1f3;
+    background-image:
+        linear-gradient(90deg, rgba(250, 253, 253, 0.97) 0%, rgba(250, 253, 253, 0.91) 51%, rgba(232, 241, 244, 0.56) 100%),
+        url("https://storage.googleapis.com/cpc-public-website/adult-studies/fall2026/THE%20WONDERS%20OF%20COMMUNAL%20WORSHIP.jpg");
+    background-position: center, right center;
+    background-repeat: no-repeat;
+    background-size: cover, 56% auto;
+    border-top-color: #315f73;
+}
+
+.communal-worship-feature .welcome-sunday-feature__date {
+    background: rgba(244, 249, 250, 0.94);
+    border-color: #a7c1ca;
+}
+
+.communal-worship-feature .welcome-sunday-feature__primary {
+    background: #315f73;
+}
+
+.communal-worship-feature .welcome-sunday-feature__secondary {
+    background: rgba(255, 255, 255, 0.76);
+    border-color: #527b8b;
+    color: #204e63;
+}
+
 .care-teams-feature__icon strong {
     margin-top: 8px;
     font-size: 1.6rem;
@@ -221,6 +247,14 @@
 
     .womens-conference-feature {
         margin: -24px 16px 16px;
+    }
+
+    .communal-worship-feature {
+        background-image:
+            linear-gradient(180deg, rgba(250, 253, 253, 0.96) 0%, rgba(250, 253, 253, 0.88) 65%, rgba(232, 241, 244, 0.62) 100%),
+            url("https://storage.googleapis.com/cpc-public-website/adult-studies/fall2026/THE%20WONDERS%20OF%20COMMUNAL%20WORSHIP.jpg");
+        background-position: center, center bottom;
+        background-size: cover, 100% auto;
     }
 
     .welcome-sunday-feature__actions {

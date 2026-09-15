@@ -18,6 +18,7 @@
     .sidebar.fixed-sidebar { box-sizing: border-box; position: sticky; top: 40px; width: auto; height: calc(100vh - 40px); }
     .main-content { box-sizing: border-box; min-width: 0; margin-left: 0; padding: 2rem clamp(1.5rem, 4vw, 4rem) 4rem; }
     .study-hero { max-width: 900px; margin: 0 auto 2rem; padding: 2.5rem; border-radius: 12px; background: rgba(0, 60, 109, .08); text-align: center; }
+    .study-image { display: block; width: 100%; max-width: 900px; margin: 0 auto 2rem; border-radius: 12px; }
     .study-hero .eyebrow { color: #003c6d; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
     .study-hero h1 { color: #003c6d; font-size: clamp(2rem, 5vw, 3.4rem); margin: .4rem 0 1rem; }
     .study-hero p { max-width: 650px; margin: 0 auto; font-size: 1.1rem; line-height: 1.65; }
@@ -45,7 +46,7 @@
     @media (max-width: 768px) { .dashboard-container { display: block; } .sidebar.fixed-sidebar { display: none; } .main-content { width: 100%; padding: 1rem; } .study-hero { padding: 1.8rem 1.2rem; } .roadmap-grid { grid-template-columns: 1fr; } }
   </style>
 </head>
-<body>
+<body class="adult-studies-page">
   <header id="stickyHeader" class="sticky">
     <nav class="main-navigation">
       <a href="index.html">Home</a><a href="sundays.html">Sundays</a><a href="sunday-sermons.html">Sermons</a><a href="about.html">About</a><a href="podcasts.html">Podcasts</a>
@@ -77,6 +78,7 @@
         <h1>The Wonders of Communal Worship</h1>
         <p>A six-week study of the God-centered worship Christ gives to his church—shaped by his Word, shared by his people, and offered together in the life of the church.</p>
       </section>
+      <img class="study-image" src="https://storage.googleapis.com/cpc-public-website/adult-studies/fall2026/THE%20WONDERS%20OF%20COMMUNAL%20WORSHIP.jpg" alt="The Wonders of Communal Worship">
       <section class="course-roadmap" aria-labelledby="course-roadmap-title">
         <div class="course-roadmap__intro">
           <p class="course-roadmap__eyebrow">Fall 2026 · Course outline</p>
