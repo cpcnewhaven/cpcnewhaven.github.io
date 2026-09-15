@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-14T12:58:22.030083-04:00",
+  "generatedAt": "2026-09-15T11:34:35.661496-04:00",
   "source": "CPC Google Calendar",
   "events": [
     {
@@ -59,8 +59,8 @@
     {
       "date": "2026-10-03",
       "title": "Women's Conference at CPC",
-      "description": "Women of all ages are warmly invited to join us to explore what it means to flourish through our participation in the body of Christ together. Refreshments and lunch will be provided, with plenty of time throughout the day for fellowship and meaningful conversation with sisters in Christ. Followed by a mocktail happy hour!",
-      "allDay": true
+      "description": "",
+      "allDay": false
     },
     {
       "date": "2026-10-04",
