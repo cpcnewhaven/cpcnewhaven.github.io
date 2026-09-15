@@ -1,6 +1,16 @@
 (() => {
   const scriptUrl = document.currentScript?.src;
 
+  const markCurrentAdultStudy = () => {
+    const studyLinks = document.querySelectorAll('.adult-studies-page .sidebar ul li a[href]');
+    const currentFile = window.location.pathname.split('/').pop();
+
+    studyLinks.forEach((link) => {
+      const targetFile = new URL(link.getAttribute('href'), document.baseURI).pathname.split('/').pop();
+      if (targetFile === currentFile) link.setAttribute('aria-current', 'page');
+    });
+  };
+
   const addBackHomeButton = () => {
     if (document.querySelector('[data-back-home-button]')) return;
 
@@ -20,6 +30,7 @@
     label.textContent = 'Home';
     button.append(arrow, label);
     document.body.append(button);
+    markCurrentAdultStudy();
 
     const style = document.createElement('style');
     style.textContent = `

@@ -1817,6 +1817,119 @@ body:not(.mobile-nav-open) .mobile-navigation {
     margin-left: 250px;
 }
 
+/* Adult Sunday Studies: calm course-library navigation shared by the landing page and each class page. */
+body.adult-studies-page .dashboard-container {
+    display: grid;
+    grid-template-columns: minmax(14rem, 16rem) minmax(0, 1fr);
+    align-items: start;
+    min-height: calc(100vh - 64px);
+    background: #fbfcfd;
+}
+
+body.adult-studies-page .sidebar.fixed-sidebar {
+    box-sizing: border-box;
+    position: sticky;
+    top: 64px;
+    width: auto;
+    height: calc(100vh - 64px);
+    padding: 26px 18px 44px;
+    border-right: 1px solid #dbe5ea;
+    background: #f3f7f9;
+    box-shadow: none;
+}
+
+body.adult-studies-page .sidebar-logo {
+    width: 92px;
+    margin: 0 0 24px;
+}
+
+body.adult-studies-page .sidebar h1 {
+    margin: 0;
+    color: #123e5d;
+    font-size: 1.08rem !important;
+    line-height: 1.25;
+    text-align: left;
+}
+
+body.adult-studies-page .sidebar h1::before {
+    content: "Course library";
+    display: block;
+    margin-bottom: 7px;
+    color: #537181;
+    font-size: 0.69rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+body.adult-studies-page .sidebar h1 a {
+    color: inherit;
+    text-decoration: none;
+}
+
+body.adult-studies-page .sidebar hr {
+    margin: 18px 0 12px;
+    border: 0;
+    border-top: 1px solid #cddae1;
+}
+
+body.adult-studies-page .sidebar ul {
+    display: grid;
+    gap: 3px;
+}
+
+body.adult-studies-page .sidebar ul li {
+    margin: 0;
+}
+
+body.adult-studies-page .sidebar ul li a {
+    display: block;
+    padding: 9px 10px;
+    border-left: 3px solid transparent;
+    border-radius: 0 6px 6px 0;
+    color: #40515c;
+    font-size: 0.95rem;
+    line-height: 1.35;
+    text-decoration: none;
+    transition: background 160ms ease, border-color 160ms ease, color 160ms ease;
+}
+
+body.adult-studies-page .sidebar ul li a:hover,
+body.adult-studies-page .sidebar ul li a:focus-visible {
+    background: #e5eff4;
+    color: #0b4f78;
+}
+
+body.adult-studies-page .sidebar ul li a[aria-current="page"] {
+    border-left-color: #0b5f78;
+    background: #dcecf3;
+    color: #0b4f78;
+    font-weight: 800;
+}
+
+body.adult-studies-page .main-content {
+    box-sizing: border-box;
+    min-width: 0;
+    margin-left: 0;
+    padding: clamp(1.75rem, 4vw, 3.5rem) clamp(1.5rem, 4vw, 4rem) 5rem;
+}
+
+@media (max-width: 768px) {
+    body.adult-studies-page .dashboard-container {
+        display: block;
+        min-height: 0;
+    }
+
+    body.adult-studies-page .sidebar.fixed-sidebar {
+        display: none;
+    }
+
+    body.adult-studies-page .main-content {
+        width: 100%;
+        padding: 1rem;
+    }
+}
+
 /* Add these styles to your resources.css file */
 
 .bulletin-table a {
