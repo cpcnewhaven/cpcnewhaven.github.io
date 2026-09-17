@@ -1,13 +1,7 @@
 {
-  "generatedAt": "2026-09-16T11:25:44.036322-04:00",
+  "generatedAt": "2026-09-17T11:33:59.054489-04:00",
   "source": "CPC Google Calendar",
   "events": [
-    {
-      "date": "2026-09-16",
-      "title": "Young Mom's Group",
-      "description": "",
-      "allDay": false
-    },
     {
       "date": "2026-09-18",
       "title": "Men's Discipleship Fall Gathering",
@@ -71,6 +65,12 @@
     {
       "date": "2026-10-04",
       "title": "Sunday School Adults and Children",
+      "description": "",
+      "allDay": false
+    },
+    {
+      "date": "2026-10-04",
+      "title": "Worship Service",
       "description": "",
       "allDay": false
     }
