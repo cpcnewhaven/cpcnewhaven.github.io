@@ -1,13 +1,7 @@
 {
-  "generatedAt": "2026-09-18T11:00:20.088247-04:00",
+  "generatedAt": "2026-09-19T10:26:30.069794-04:00",
   "source": "CPC Google Calendar",
   "events": [
-    {
-      "date": "2026-09-18",
-      "title": "Men's Discipleship Fall Gathering",
-      "description": "",
-      "allDay": true
-    },
     {
       "date": "2026-09-20",
       "title": "Fellowship Lunch",
@@ -71,6 +65,12 @@
     {
       "date": "2026-10-04",
       "title": "Worship Service",
+      "description": "",
+      "allDay": false
+    },
+    {
+      "date": "2026-10-11",
+      "title": "Fellowship Lunch",
       "description": "",
       "allDay": false
     }
