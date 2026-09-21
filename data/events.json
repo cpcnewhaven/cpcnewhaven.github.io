@@ -1,31 +1,7 @@
 {
-  "generatedAt": "2026-09-20T10:42:08.965153-04:00",
+  "generatedAt": "2026-09-21T13:04:30.706728-04:00",
   "source": "CPC Google Calendar",
   "events": [
-    {
-      "date": "2026-09-20",
-      "title": "Fellowship Lunch",
-      "description": "",
-      "allDay": false
-    },
-    {
-      "date": "2026-09-20",
-      "title": "LG Leadership Training",
-      "description": "",
-      "allDay": false
-    },
-    {
-      "date": "2026-09-20",
-      "title": "Sunday School Adults and Children",
-      "description": "",
-      "allDay": false
-    },
-    {
-      "date": "2026-09-20",
-      "title": "Worship Service",
-      "description": "",
-      "allDay": false
-    },
     {
       "date": "2026-09-27",
       "title": "Fellowship Lunch",
@@ -71,6 +47,30 @@
     {
       "date": "2026-10-11",
       "title": "Fellowship Lunch",
+      "description": "",
+      "allDay": false
+    },
+    {
+      "date": "2026-10-11",
+      "title": "Sunday School Adults and Children",
+      "description": "",
+      "allDay": false
+    },
+    {
+      "date": "2026-10-11",
+      "title": "Worship Service",
+      "description": "",
+      "allDay": false
+    },
+    {
+      "date": "2026-10-12",
+      "title": "SLB Meeting",
+      "description": "",
+      "allDay": false
+    },
+    {
+      "date": "2026-10-13",
+      "title": "Shepherd Meeting",
       "description": "",
       "allDay": false
     }
