@@ -189,6 +189,19 @@
         "title": "Sunday Sermons",
         "episodes": [
             {
+                "id": "26-09-20",
+                "title": "Jesus Gathers: The Witnesses to the New World | The Sunday Sermon | Acts 1: 12-26 | Rev. Jerry Ornelas",
+                "author": "Rev. Jerry Ornelas",
+                "scripture": "Acts 1: 12-26",
+                "date": "2026-09-20",
+                "apple_podcasts_url": "",
+                "spotify_url": "https://open.spotify.com/episode/2v8ZCHnIrTMrvncHuL56NI?si=PS2otyfZRjWZfrLArOswXQ",
+                "youtube_url": "",
+                "link": "https://open.spotify.com/episode/2v8ZCHnIrTMrvncHuL56NI?si=PS2otyfZRjWZfrLArOswXQ",
+                "podcast-thumbnail_url": "https://s3-us-west-2.amazonaws.com/anchor-generated-image-bank/staging/podcast_uploaded_episode400/12709107/12709107-1789998830651-1e0f541ba8c6c.jpg",
+                "audio_url": ""
+            },
+            {
                 "id": "26-09-13",
                 "title": "Jesus Ascends: The Promise and Power of the New World | The Sunday Sermon | Acts 1:1-11 | Rev. Craig Luekens",
                 "author": "Rev. Craig Luekens",
@@ -832,6 +845,18 @@
     "beyond": {
         "title": "Beyond",
         "episodes": [
+            {
+                "number": 66,
+                "title": "Beyond the Sunday Sermon | Acts 1 : 1-11 | with Guest Seth Bollinger",
+                "link": "https://open.spotify.com/episode/4OLmKghVRPdlt1DnBXubXu?si=ScHvOJJ8ReitGowKTTKchA",
+                "guest": "Seth Bollinger",
+                "date_added": "2026-09-16",
+                "published_at": "2026-09-16T09:45:00",
+                "duration": "37 min",
+                "season": "fall 2026",
+                "scripture": "Acts 1 : 1-11",
+                "podcast-thumbnail_url": "https://storage.googleapis.com/cpc-public-website/podcast-thumbnails/beyond/upBEYOND%20SUNDAY%20SERMON%20PODCAST.png"
+            },
             {
                 "number": 65,
                 "title": "Beyond the Sunday Sermon | Luke 18: 9-30 | With Rev. Jerry Ornelas and Rev. Craig Luekens",
