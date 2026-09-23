@@ -49,45 +49,45 @@ Christ Presbyterian Church, New Haven, is a member of the Presbyterian Church in
 ## Staff
 - **Craig Luekens** - Senior Pastor
 - **Jerry Ornelas** - Assistant Pastor
-- **Alexis Peterson** - Administrative Coordinator
+- **Alexis Vano** - Administrative Coordinator
 - **Alex Gonzalez** - AV Director
 - **Christopher Battista** - Audio and IT Specialist
-- **Paul Wildey** - Sexton
 - **Jennifer Cheng** - Music Coordinator
+- **Paul Wildey** - Sexton
+- **Barbara Battista** - Facilities Coordinator
+- **Preston Graham** - Pastor Emeritus
 
 ## Session
-- **Craig Luekens** - Senior Pastor
-- **Rob Hawkes** (Sabbatical 24-25)
-- **George Levesque**
+- **Craig Luekens** - Senior Pastor / Moderator
 - **David Taylor**
+- **Rob Hawkes** - Emeritus Member
 - **Tyler Rice** - Clerk
-- **Josh Kebabian**
-- **Peter Chuchta** - Apprentice
+- **George Levesque**
 - **Alan Phillips** - Emeritus Member
+- **Josh Kebabian** - Sabbatical
+- **Peter Chuchta**
+- **Preston Graham** - Emeritus Member
 
 ## Women's Leadership Board
-- **Lisa Hawkes** (Sabbatical 24-25)
+- **Stacy Roney** - Moderator
 - **Diane Miller** - Clerk
 - **Peggy Kebabian**
-- **Jennifer Cheng** (Sabbatical 24-25)
 - **Meg Bogue**
-- **Stacy Roney** - Moderator
-- **Tanilla Brown** - Apprentice
-- **Patty Chuchta** - Apprentice
+- **Tanilla Brown**
+- **Lisa Hawkes** - Emeritus
+- **Patty Chuchta**
+- **Jennifer Cheng** - Sabbatical
 
 ## Servant Leadership Board
-- **Craig Luekens** (Moderator)
-- **Gary Wininger** (Security)
-- **Paul Wildey** (Sexton)
-- **Crossan Cooper** (Welcome)
-- **Anna Graham**
-- **Colleen Rice** (Sabbatical 24-25)
-- **Elena Gerard** (Sabbatical 24-25)
-- **Kaitlyn Jessee** (Mercy)
-- **Julie Walker** (Nursery)
-- **Fred Walker** (Facilities)
+- **Craig Luekens** - Moderator
+- **Gary Wininger** - Security
+- **Paul Wildey** - Sexton
+- **Crossan Cooper** - Welcome
+- **Barbara Battista** - Facilities
+- **Layne Boles** - Mercy
+- **Michelle Chabla Ornelas** - Nursery
 - **Evan Finch**
-- **Megan Paek** (Food Service)
+- **Megan Paek** - Food Service
 - **Josh Sanders**
 - **Pat Clendenen**
 
