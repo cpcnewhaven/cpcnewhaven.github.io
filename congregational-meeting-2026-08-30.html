@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CPC New Haven congregational meeting during Fellowship Lunch on Sunday, August 30, 2026.">
+  <title>Congregational Meeting · August 30, 2026 | CPC New Haven</title>
+  <link rel="stylesheet" href="./src/css/global-body.css?v=20260821-heroes-6">
+  <link rel="stylesheet" href="./src/css/global-footer-cta.css">
+  <style>
+    main { max-width: 720px; margin: 0 auto; padding: 96px 24px 120px; }
+    .eyebrow { color: var(--cpc-blue); font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+    h1 { margin: 12px 0 20px; color: var(--heading-color); }
+    .meeting-date { font-size: 1.2rem; margin-bottom: 32px; }
+    .meeting-links { display: grid; gap: 14px; margin-top: 32px; }
+    .meeting-links a { display: block; padding: 16px 18px; border-radius: 8px; background: var(--cpc-blue); color: white; text-decoration: none; }
+    .meeting-links a:hover { background: var(--cpc-blue-dark); }
+    .meeting-links a[aria-disabled="true"] { background: #e8edf2; color: #596572; pointer-events: none; }
+    .note { margin-top: 24px; color: var(--text-color); font-size: .95rem; }
+    .video-fallback { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; margin: 0; padding: 24px; background: #282828; color: white; text-align: center; }
+    .video-fallback[hidden] { display: none; }
+  </style>
+</head>
+<body>
+  <header id="stickyHeader" class="sticky">
+    <nav class="main-navigation">
+      <a href="index.html">Home</a>
+      <a href="sundays.html">Sundays</a>
+      <a href="sunday-sermons.html">Sermons</a>
+      <a href="about.html">About</a>
+      <a href="podcasts.html">Podcasts</a>
+      <a href="community.html">Community</a>
+      <a href="events.html">Events</a>
+      <a href="live.html">Live</a>
+    </nav>
+  </header>
+
+  <main>
+    <p class="eyebrow">Life together</p>
+    <h1>Congregational Meeting</h1>
+    <p class="meeting-date"><strong>Sunday, August 30, 2026</strong><br>During Fellowship Lunch, after worship</p>
+    <p>Join us in the Fellowship Hall for our congregational meeting. For those unable to attend in person, the meeting will be available through the CPC YouTube livestream.</p>
+
+    <div class="youtube-video-section" aria-label="Congregational meeting video">
+      <div class="video-container">
+        <iframe
+          src="https://www.youtube.com/embed/jtZqR6GTZXI"
+          title="Congregational Meeting livestream"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          onerror="this.hidden = true; this.nextElementSibling.hidden = false;"
+          allowfullscreen></iframe>
+        <p class="video-fallback" hidden>Video coming soon. Watch it on YouTube.</p>
+      </div>
+    </div>
+
+    <div class="meeting-links">
+      <a href="https://storage.googleapis.com/cpc-public-website/handouts/congregational-meeting/updated08_30_2026%20Congregational%20Meeting%20Slides.pptx%20(1).pdf" target="_blank" rel="noopener">View the presentation slides (PDF)</a>
+      <a href="https://www.youtube.com/watch?v=jtZqR6GTZXI" target="_blank" rel="noopener">Watch the YouTube livestream</a>
+    </div>
+    <p class="note" id="slides">The presentation slides open as a PDF in a new tab.</p>
+  </main>
+  <script>
+    // YouTube cannot configure an embedded player from a local file:// page.
+    if (window.location.protocol === 'file:') {
+      const videoFrame = document.querySelector('.video-container iframe');
+      videoFrame.hidden = true;
+      videoFrame.nextElementSibling.hidden = false;
+    }
+  </script>
+  <script defer src="./src/js/back-home-button.js"></script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The Wonders of Communal Worship, an Adult Sunday Study at CPC New Haven.">
+  <title>The Wonders of Communal Worship - CPC New Haven Church</title>
+  <base href="https://cpcnewhaven.org/">
+  <link rel="stylesheet" href="src/css/global-body.css?v=20260821-heroes-6">
+  <link rel="stylesheet" href="src/css/global-nav-bar.css">
+  <link rel="stylesheet" href="src/css/global-footer-cta.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="icon" href="https://files.cpcnewhaven.org/web-assets/CPC - FAVICON - FALL 2024.png" type="image/png">
+  <style>
+    body { overflow-x: hidden; }
+    header { text-align: center; margin: 20px 0; }
+    .dashboard-container { display: grid; grid-template-columns: minmax(190px, 220px) minmax(0, 1fr); align-items: start; }
+    .sidebar.fixed-sidebar { box-sizing: border-box; position: sticky; top: 40px; width: auto; height: calc(100vh - 40px); }
+    .main-content { box-sizing: border-box; min-width: 0; margin-left: 0; padding: 2rem clamp(1.5rem, 4vw, 4rem) 4rem; }
+    .study-hero { max-width: 900px; margin: 0 auto 2rem; padding: 2.5rem; border-radius: 12px; background: rgba(0, 60, 109, .08); text-align: center; }
+    .study-image { display: block; width: 100%; max-width: 900px; margin: 0 auto 2rem; border-radius: 12px; }
+    .study-hero .eyebrow { color: #003c6d; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+    .study-hero h1 { color: #003c6d; font-size: clamp(2rem, 5vw, 3.4rem); margin: .4rem 0 1rem; }
+    .study-hero p { max-width: 650px; margin: 0 auto; font-size: 1.1rem; line-height: 1.65; }
+    .materials { max-width: 900px; margin: 2rem auto 4rem; }
+    .materials h2 { text-align: center; color: #003c6d; }
+    .materials-intro { text-align: center; margin-bottom: 1.5rem; }
+    .material-card { display: grid; grid-template-columns: 2rem minmax(0, 1fr); align-items: start; gap: 1rem; padding: 1.3rem; margin-bottom: 1rem; border: 1px solid rgba(0,60,109,.2); border-radius: 10px; background: rgba(255,255,255,.55); }
+    .material-icon { margin-top: .25rem; color: #003c6d; font-size: 1.8rem; }
+    .material-card h3 { margin: 0 0 .35rem; color: #003c6d; text-align: left; }
+    .material-card p { margin: 0; }
+    .handout-link { display: inline-flex; align-items: center; gap: .45rem; margin-top: .3rem; color: #003c6d; font-weight: 700; text-decoration: none; }
+    .handout-link::after { content: "↗"; font-size: .85em; }
+    .handout-link:hover, .handout-link:focus-visible { color: #0b5f78; text-decoration: underline; }
+    .course-roadmap { max-width: 900px; margin: 0 auto 2.5rem; }
+    .course-roadmap__intro { max-width: 650px; margin: 0 auto 1.5rem; text-align: center; }
+    .course-roadmap__eyebrow { margin: 0 0 .35rem; color: #34627d; font-size: .78rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+    .course-roadmap h2 { margin: 0; color: #003c6d; font-size: clamp(1.65rem, 3vw, 2.25rem); text-align: center; }
+    .course-roadmap__intro > p:last-child { margin: .75rem 0 0; line-height: 1.6; }
+    .roadmap-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+    .lesson-card { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 13px; padding: 18px; border: 1px solid rgba(0, 60, 109, .18); border-radius: 10px; background: #fff; }
+    .lesson-card__number { display: grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; background: #e7f0f5; color: #003c6d; font-size: .78rem; font-weight: 800; }
+    .lesson-card h3 { margin: 0 0 .35rem; color: #003c6d; font-size: 1.05rem; line-height: 1.25; }
+    .lesson-card p { margin: 0; color: #445765; font-size: .95rem; line-height: 1.5; }
+    .back-link { display: inline-block; margin-top: 1.5rem; color: #003c6d; font-weight: 700; }
+    @media (max-width: 768px) { .dashboard-container { display: block; } .sidebar.fixed-sidebar { display: none; } .main-content { width: 100%; padding: 1rem; } .study-hero { padding: 1.8rem 1.2rem; } .roadmap-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body class="adult-studies-page">
+  <header id="stickyHeader" class="sticky">
+    <nav class="main-navigation">
+      <a href="index.html">Home</a><a href="sundays.html">Sundays</a><a href="sunday-sermons.html">Sermons</a><a href="about.html">About</a><a href="podcasts.html">Podcasts</a>
+      <div class="nav-dropdown"><a href="community.html" class="nav-dropbtn">Community <i class="fas fa-caret-down" style="font-size: .8em;"></i></a><div class="nav-dropdown-content"><a href="events.html">Events</a></div></div>
+      <a href="live.html">Live</a>
+      <div class="nav-dropdown"><a href="#" class="nav-dropbtn" onclick="event.preventDefault();">More <i class="fas fa-caret-down" style="font-size: .8em;"></i></a><div class="nav-dropdown-content"><a href="past-services.html">Past Services</a><a href="resources.html">Resources</a><a href="give.html">Give</a><a href="search.html">Search</a><a href="past-announcements.html">Past Announcements</a></div></div>
+    </nav>
+  </header>
+  <div class="hamburger-menu-button-container" id="hamburgerMenu"><i id="closeMobileMenuButton" class="fas fa-bars"></i></div>
+  <nav class="mobile-navigation" id="mobileNavigation"><div class="mobile-nav-header"><button id="closeMenuButton" aria-label="Close menu"><i class="fas fa-times"></i></button></div><ul class="mobile-nav-links"><li><a class="mobile-menu-link" href="index.html">Home</a></li><li><a class="mobile-menu-link" href="sundays.html">Sundays</a></li><li><a class="mobile-menu-link" href="adult-sunday-school.html">Adult Sunday Studies</a></li><li><a class="mobile-menu-link" href="sunday-sermons.html">Sermons</a></li><li><a class="mobile-menu-link" href="about.html">About</a></li><li><a class="mobile-menu-link" href="community.html">Community</a></li><li><a class="mobile-menu-link" href="events.html">Events</a></li><li><a class="mobile-menu-link" href="give.html">Give</a></li></ul></nav>
+  <div class="dashboard-container">
+    <aside class="sidebar fixed-sidebar">
+      <img src="./assets/CPC_LOGO_24.png" class="sidebar-logo" alt="CPC New Haven Church">
+      <h1><a href="adult-sunday-school.html">Adult Sunday Studies</a></h1><hr>
+      <ul>
+        <li><a href="/sunday-studies/wonders-of-communal-worship.html">The Wonders of Communal Worship</a></li>
+        <li><a href="/sunday-studies/emotions-spirituality.html">Emotions &amp; Spirituality</a></li>
+        <li><a href="/sunday-studies/mission-study.html">Mission Study</a></li>
+        <li><a href="/sunday-studies/walking-through-sinai.html">Walking With Jesus Through Sinai</a></li>
+        <li><a href="/sunday-studies/what-we-believe.html">What We Believe</a></li>
+        <li><a href="/sunday-studies/confessional-theology.html">Confessional Theology</a></li>
+        <li><a href="/sunday-studies/biblical-interpretation.html">Biblical Interpretation</a></li>
+        <li><a href="/sunday-studies/total-christ.html">Total Christ</a></li>
+      </ul>
+    </aside>
+    <main class="main-content">
+      <section class="study-hero">
+        <p class="eyebrow">Adult Sunday Studies · 9:30am</p>
+        <h1>The Wonders of Communal Worship</h1>
+        <p>A six-week study of the God-centered worship Christ gives to his church—shaped by his Word, shared by his people, and offered together in the life of the church.</p>
+      </section>
+      <img class="study-image" src="https://storage.googleapis.com/cpc-public-website/adult-studies/fall2026/THE%20WONDERS%20OF%20COMMUNAL%20WORSHIP.jpg" alt="The Wonders of Communal Worship">
+      <section class="course-roadmap" aria-labelledby="course-roadmap-title">
+        <div class="course-roadmap__intro">
+          <p class="course-roadmap__eyebrow">Fall 2026 · Course outline</p>
+          <h2 id="course-roadmap-title">A six-week roadmap</h2>
+          <p>We will trace the theology, practices, and gospel-shaped movements of worship from gathering to benediction.</p>
+        </div>
+        <div class="roadmap-grid">
+          <article class="lesson-card"><span class="lesson-card__number">01</span><div><h3>Overall Theology of Worship</h3><p>God-centered worship, worship in general and communal worship, and the Sabbath and Lord’s Day.</p></div></article>
+          <article class="lesson-card"><span class="lesson-card__number">02</span><div><h3>Distinctives of Communal Worship</h3><p>Elements and forms, God’s presence, and Trinitarian worship.</p></div></article>
+          <article class="lesson-card"><span class="lesson-card__number">03</span><div><h3>Adoration &amp; Confession</h3><p>Biblical patterns, the holiness of God, and the gospel arc.</p></div></article>
+          <article class="lesson-card"><span class="lesson-card__number">04</span><div><h3>Preaching of the Word</h3><p>What a sermon is, why preaching matters, and its guidelines and goals.</p></div></article>
+          <article class="lesson-card"><span class="lesson-card__number">05</span><div><h3>The Lord’s Supper</h3><p>The purpose and vision of the Supper, its practice, and its relationship to the Word.</p></div></article>
+          <article class="lesson-card"><span class="lesson-card__number">06</span><div><h3>Coronation &amp; Benediction</h3><p>Christ’s kingship, biblical blessing, and a review of the course.</p></div></article>
+        </div>
+      </section>
+      <section class="materials" aria-labelledby="class-materials-title">
+        <h2 id="class-materials-title">Class materials</h2>
+        <p class="materials-intro">Episodes 1 and 2 are available now. Recordings and additional handouts will be added as the class continues.</p>
+        <article class="material-card"><i class="fab fa-spotify material-icon" aria-hidden="true"></i><div><h3>Episode 1 | Overall Theology of Worship</h3><p>God-centered worship, worship in general and communal worship, and the Sabbath and Lord’s Day.</p><p><strong>Originally recorded on 9.13.26</strong></p><a class="handout-link" href="https://open.spotify.com/episode/0wKxmVxWaDIJX9XmTx6AlL?si=57zIjHO5QD2TaBvggMnVBg" target="_blank" rel="noopener">Listen on Spotify</a></div></article>
+        <article class="material-card"><i class="fab fa-spotify material-icon" aria-hidden="true"></i><div><h3>Episode 2 | Distinctives of Communal Worship</h3><p>Elements and forms, God’s presence, and Trinitarian worship.</p><p>A six-week study of the God-centered worship Christ gives to his church—shaped by his Word, shared by his people, and offered together in the life of the church.</p><a class="handout-link" href="https://open.spotify.com/episode/0o3ooNOg20VrOmHJaZhkYN?si=EQlnDXaqR0i9BfypEABMDQ" target="_blank" rel="noopener">Listen on Spotify</a></div></article>
+        <article class="material-card"><i class="fas fa-file-pdf material-icon" aria-hidden="true"></i><div><h3>Handouts</h3><p>Session 1 is available now.</p><a class="handout-link" href="/sunday-studies/handouts/worship/Worship_SS_1_Intro_Theology_2026.pdf" target="_blank" rel="noopener">Session 1: Introduction &amp; Theology (PDF)</a></div></article>
+        <a class="back-link" href="adult-sunday-school.html">← View all Adult Sunday Studies</a>
+      </section>
+    </main>
+  </div>
+  <footer><div class="footer-content-logo"><a href="index.html"><img src="assets/CPC_LOGO_24.png" alt="CPC New Haven Church" loading="lazy"></a></div><div class="footer-links"><a href="sundays.html">Sundays</a><a href="contact.html">Contact</a><a href="podcasts.html">Podcasts</a><a href="events.html">Events</a><a href="give.html">Give</a></div><p>203.777.6960 · <a href="mailto:admin@cpcnewhaven.org">admin@cpcnewhaven.org</a> · 135 Whitney Ave, New Haven CT 06510</p><p class="footer-copyright">© 2026 Christ Presbyterian Church. All rights reserved.</p></footer>
+  <script src="src/js/function_toggle_mobileMenu.js"></script>
+  <script>(() => { const source = window.location.protocol === "file:" ? new URL("../src/js/back-home-button.js", window.location.href).href : window.location.origin + "/src/js/back-home-button.js"; const script = document.createElement("script"); script.defer = true; script.src = source; document.head.append(script); })();</script>
+</body>
+</html>

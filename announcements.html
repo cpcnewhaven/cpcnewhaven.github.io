@@ -24,7 +24,7 @@
         <link rel="stylesheet" href="src/css/global-nav-bar.css">
         <title>Announcements | CPC New Haven Church</title>
         <link rel="stylesheet" href="./src/css/footer.css">
-        <link rel="stylesheet" href="./src/css/global-body.css">
+        <link rel="stylesheet" href="./src/css/global-body.css?v=20260821-heroes-6">
     <link rel="stylesheet" href="./src/css/global-footer-cta.css">
         <link rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
@@ -34,18 +34,23 @@
         <a href="index.html">Home</a>
         <a href="sundays.html">Sundays</a>
         <a href="sunday-sermons.html">Sermons</a>
-        <a href="past-services.html">Past Services</a>
+        <a href="about.html">About</a>
         <a href="podcasts.html">Podcasts</a>
-        <a href="community.html">Community</a>
-        <a href="events.html">Events</a>
+        <div class="nav-dropdown">
+            <a href="community.html" class="nav-dropbtn">Community <i class="fas fa-caret-down" style="font-size: 0.8em;"></i></a>
+            <div class="nav-dropdown-content">
+                <a href="events.html">Events</a>
+            </div>
+        </div>
         <a href="live.html">Live</a>
         <div class="nav-dropdown">
             <a href="#" class="nav-dropbtn" onclick="event.preventDefault();">More <i class="fas fa-caret-down" style="font-size: 0.8em;"></i></a>
             <div class="nav-dropdown-content">
-                <a href="about.html">About</a>
+                <a href="past-services.html">Past Services</a>
                 <a href="resources.html">Resources</a>
                 <a href="give.html">Give</a>
                 <a href="search.html">Search</a>
+                <a href="past-announcements.html">Past Announcements</a>
             </div>
         </div>
     </nav>
@@ -67,16 +72,17 @@
         <li><a class="mobile-menu-link" href="index.html">Home</a></li>
         <li><a class="mobile-menu-link" href="sundays.html">Sundays</a></li>
         <li><a class="mobile-menu-link" href="sunday-sermons.html">Sermons</a></li>
-        <li><a class="mobile-menu-link" href="past-services.html">Past Services</a></li>
+        <li><a class="mobile-menu-link" href="about.html">About</a></li>
         <li><a class="mobile-menu-link" href="podcasts.html">Podcasts</a></li>
         <li><a class="mobile-menu-link" href="community.html">Community</a></li>
-        <li><a class="mobile-menu-link" href="events.html">Events</a></li>
+        <li><a class="mobile-menu-link" href="events.html" style="padding-left: 40px; border-left: 2px solid rgba(255,255,255,0.2);">- Events</a></li>
         <li><a class="mobile-menu-link" href="live.html">Live</a></li>
         <li><div  class="mobile-menu-link" style="color: rgba(255, 255, 255, 0.5); pointer-events: none;">More</div></li>
-        <li><a class="mobile-menu-link" href="about.html" style="padding-left: 40px; border-left: 2px solid rgba(255,255,255,0.2);">- About</a></li>
+        <li><a class="mobile-menu-link" href="past-services.html" style="padding-left: 40px; border-left: 2px solid rgba(255,255,255,0.2);">- Past Services</a></li>
         <li><a class="mobile-menu-link" href="resources.html" style="padding-left: 40px; border-left: 2px solid rgba(255,255,255,0.2);">- Resources</a></li>
         <li><a class="mobile-menu-link" href="give.html" style="padding-left: 40px; border-left: 2px solid rgba(255,255,255,0.2);">- Give</a></li>
         <li><a class="mobile-menu-link" href="search.html" style="padding-left: 40px; border-left: 2px solid rgba(255,255,255,0.2);">- Search</a></li>
+        <li><a class="mobile-menu-link" href="past-announcements.html" style="padding-left: 40px; border-left: 2px solid rgba(255,255,255,0.2);">- Past Announcements</a></li>
     </ul>
         </nav>
     <div class="splash-hero--announcements">
@@ -141,8 +147,32 @@
                 <h2>Pastor's Book Pick</h2>
                 <div class="book-content">
                     <img
+                        src="https://zondervanacademic.nyc3.cdn.digitaloceanspaces.com/production/transforms/media_zondervan_com/images/product/highres/9780310167990_c25124cf117d5566842eaaf05a27d036.jpg"
+                        alt="The Challenge of Acts book cover"
+                        class="book-cover">
+                    <div class="book-details">
+                        <h3>The Challenge of Acts</h3>
+                        <p class="author">by N. T. Wright</p>
+                        <div class="book-description">
+                            <p class="body-text">
+                                A new and inviting introduction to the Acts of the Apostles from New Testament scholar and theologian N. T. Wright.
+                            </p>
+                            <p class="body-text">
+                                Acts is a substantial book. It sits right in the middle of the New Testament, looking back to the four Gospels and ahead to the mission of the early church. It provides a framework for our understanding of the letters; but it does more than that. Acts offers a sophisticated and nuanced view of what it means to think of the gospel of Jesus, Israel's Messiah, going out into the world over which Israel's Messiah claims the status of Lord.
+                            </p>
+                            <p class="body-text">
+                                N. T. Wright brings to the book of Acts his expert's eye on theological nuance and cultural context, distilling it down into an introductory commentary for anyone looking to take their reading a little deeper and discover the potential of the church and the Way of Jesus Christ.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="book-pick-container previous-book-pick">
+                <h2>Previous Pastor's Book Pick</h2>
+                <div class="book-content">
+                    <img
                         src="https://files.cpcnewhaven.org/announcements/LifeTogether.jpg"
-                        alt="Life Together Book Cover"
+                        alt="Life Together book cover"
                         class="book-cover">
                     <div class="book-details">
                         <h3>Life Together</h3>
@@ -244,3 +274,6 @@
     </div>
   </section>
 
+
+  <script src="./src/js/highlights.js?v=20260915-4"></script>
+  <script defer src="./src/js/back-home-button.js"></script>

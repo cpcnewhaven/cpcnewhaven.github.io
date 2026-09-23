@@ -12,8 +12,31 @@
     /* "fixed" backgrounds are a common cause of scroll jank on many devices */
     background-attachment: scroll;
     position: relative;
-    transition: background-image 1s ease-in-out;
     margin-top: -60px;
+}
+
+.splash-hero--home .hero-background {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+    z-index: 0;
+}
+
+.hero-fade-enter,
+.hero-fade-leave {
+    transition: opacity 900ms ease-in-out;
+}
+
+.hero-fade-enter-start,
+.hero-fade-leave-end {
+    opacity: 0;
+}
+
+.hero-fade-enter-end,
+.hero-fade-leave-start {
+    opacity: 1;
 }
 
 .splash-hero--home::before {
@@ -23,8 +46,13 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    transition: background-color 0.3s ease;
+    background: linear-gradient(
+        180deg,
+        rgba(3, 25, 48, 0.22) 0%,
+        rgba(3, 25, 48, 0.42) 52%,
+        rgba(3, 25, 48, 0.74) 100%
+    );
+    transition: background 0.3s ease;
 }
 
 .hero-content {
@@ -58,6 +86,141 @@
     color: white;
 }
 
+/* Welcome Sunday feature */
+.welcome-sunday-feature {
+    max-width: 1120px;
+    margin: 0 auto 18px;
+    padding: 28px 32px;
+    position: relative;
+    z-index: 3;
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 26px;
+    border: 1px solid #d6e0e5;
+    border-top: 5px solid #0b4f78;
+    border-radius: 2px;
+    background: #fff;
+    color: #183344;
+    box-shadow: 0 10px 26px rgba(11, 50, 77, 0.10);
+}
+
+.care-teams-feature {
+    background: #f6faf9;
+    border-top-color: #2e6c6e;
+}
+
+.womens-conference-feature {
+    margin: -52px auto 18px;
+    background: #f4f8fa;
+    border-top-color: #0b5f78;
+}
+
+.communal-worship-feature {
+    background-color: #eaf1f3;
+    background-image:
+        linear-gradient(90deg, rgba(250, 253, 253, 0.97) 0%, rgba(250, 253, 253, 0.91) 51%, rgba(232, 241, 244, 0.56) 100%),
+        url("https://storage.googleapis.com/cpc-public-website/adult-studies/fall2026/THE%20WONDERS%20OF%20COMMUNAL%20WORSHIP.jpg");
+    background-position: center, right center;
+    background-repeat: no-repeat;
+    background-size: cover, 56% auto;
+    border-top-color: #315f73;
+}
+
+.communal-worship-feature .welcome-sunday-feature__date {
+    background: rgba(244, 249, 250, 0.94);
+    border-color: #a7c1ca;
+}
+
+.communal-worship-feature .welcome-sunday-feature__primary {
+    background: #315f73;
+}
+
+.communal-worship-feature .welcome-sunday-feature__secondary {
+    background: rgba(255, 255, 255, 0.76);
+    border-color: #527b8b;
+    color: #204e63;
+}
+
+.care-teams-feature__icon strong {
+    margin-top: 8px;
+    font-size: 1.6rem;
+}
+
+.welcome-sunday-feature__date {
+    min-width: 78px;
+    padding: 11px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #bfd2de;
+    border-radius: 2px;
+    background: #edf4f8;
+    line-height: 1;
+}
+
+.welcome-sunday-feature__date span,
+.welcome-sunday-feature__eyebrow {
+    margin: 0;
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: #34627d;
+}
+
+.welcome-sunday-feature__date strong {
+    margin-top: 4px;
+    font-size: 2.25rem;
+    color: #0c4164;
+}
+
+.welcome-sunday-feature h2 {
+    margin: 3px 0 8px;
+    font-size: clamp(1.55rem, 3vw, 2.2rem);
+    color: #123e5d;
+    text-align: left;
+}
+
+.welcome-sunday-feature__content > p:last-child {
+    max-width: 650px;
+    margin: 0;
+    color: #3d515f;
+    line-height: 1.55;
+}
+
+.welcome-sunday-feature__actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 10px;
+    align-self: end;
+}
+
+.welcome-sunday-feature__actions a {
+    padding: 11px 15px;
+    border-radius: 999px;
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.welcome-sunday-feature__primary {
+    background: #0b4f78;
+    color: #fff;
+}
+
+.welcome-sunday-feature__secondary {
+    border: 1px solid #6a8ca0;
+    color: #0b4f78;
+}
+
+.welcome-sunday-feature__actions a:hover,
+.welcome-sunday-feature__actions a:focus-visible {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.16);
+}
+
 @media (max-width: 768px) {
     .splash-hero--home h1 {
         font-size: 2.5rem;
@@ -69,6 +232,35 @@
 
     .hero-logo-img {
         max-width: 150px;
+    }
+
+    .welcome-sunday-feature {
+        grid-template-columns: auto 1fr;
+        margin: 0 16px 16px;
+        padding: 22px;
+        gap: 16px;
+    }
+
+    .care-teams-feature {
+        margin: -24px 16px 16px;
+    }
+
+    .womens-conference-feature {
+        margin: -24px 16px 16px;
+    }
+
+    .communal-worship-feature {
+        background-image:
+            linear-gradient(180deg, rgba(250, 253, 253, 0.96) 0%, rgba(250, 253, 253, 0.88) 65%, rgba(232, 241, 244, 0.62) 100%),
+            url("https://storage.googleapis.com/cpc-public-website/adult-studies/fall2026/THE%20WONDERS%20OF%20COMMUNAL%20WORSHIP.jpg");
+        background-position: center, center bottom;
+        background-size: cover, 100% auto;
+    }
+
+    .welcome-sunday-feature__actions {
+        grid-column: 1 / -1;
+        justify-content: flex-start;
+        align-self: auto;
     }
 }
 

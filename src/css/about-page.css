@@ -6,76 +6,6 @@
     position: relative;
 }
 
-/* Floating Navigation - Sleek Dark Design */
-.about-floating-nav {
-    position: fixed;
-    top: 50%;
-    left: 20px;
-    transform: translateY(-50%);
-    background: linear-gradient(135deg, rgba(0, 15, 50, 0.95) 0%, rgba(0, 34, 68, 0.95) 100%);
-    padding: 12px 10px;
-    border-radius: 8px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25), 0 2px 8px rgba(0, 0, 0, 0.15);
-    z-index: 1000;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    backdrop-filter: blur(15px);
-    max-height: 80vh;
-    overflow-y: auto;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.about-floating-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-}
-
-.about-floating-nav a {
-    color: rgba(255, 255, 255, 0.85);
-    text-decoration: none;
-    font-size: 13px;
-    font-weight: 500;
-    letter-spacing: 0.3px;
-    transition: all 0.2s ease;
-    padding: 10px 14px;
-    border-radius: 6px;
-    white-space: nowrap;
-    border-left: 3px solid transparent;
-}
-
-.about-floating-nav a:hover,
-.about-floating-nav a.active {
-    background: rgba(255, 255, 255, 0.15);
-    color: #ffffff;
-    border-left-color: rgba(255, 255, 255, 0.8);
-    padding-left: 18px;
-}
-
-/* Custom scrollbar for floating nav */
-.about-floating-nav::-webkit-scrollbar {
-    width: 6px;
-}
-
-.about-floating-nav::-webkit-scrollbar-track {
-    background: rgba(0, 0, 0, 0.2);
-    border-radius: 3px;
-}
-
-.about-floating-nav::-webkit-scrollbar-thumb {
-    background: rgba(255, 255, 255, 0.3);
-    border-radius: 3px;
-    transition: background 0.2s ease;
-}
-
-.about-floating-nav::-webkit-scrollbar-thumb:hover {
-    background: rgba(255, 255, 255, 0.5);
-}
-
 /* Content Sections */
 .about-content-section {
     min-height: 60vh;
@@ -87,7 +17,7 @@
     max-width: 800px;
     font-size: 16px;
     line-height: 1.6;
-    margin-left: 180px;
+    margin-left: 0;
 }
 
 .about-content-section.visible {
@@ -150,18 +80,16 @@
 
 /* Responsive adjustments */
 @media (max-width: 900px) {
-    .about-floating-nav {
-        display: none !important;
-    }
-
-    .about-hamburger-menu-button-container {
-        display: flex !important;
-    }
-
     .about-content-section {
         margin-left: 0;
         padding: 20px 15px;
         font-size: 15px;
+    }
+}
+
+@media (max-width: 680px) {
+    .about-hamburger-menu-button-container {
+        display: flex !important;
     }
 }
 
@@ -415,6 +343,166 @@
 .about-content-section {
     scroll-margin-top: 72px;
     /* prevent sticky header overlap on anchor jumps */
+}
+
+/* Keep the long-form About page comfortable to read at every viewport width. */
+.about-content-section {
+    min-height: auto;
+    width: min(100%, 76rem);
+    margin: 0 auto;
+    padding: clamp(2.75rem, 6vw, 5rem) clamp(1.5rem, 5vw, 4rem);
+    font-size: clamp(1rem, 0.97rem + 0.15vw, 1.125rem);
+    line-height: 1.7;
+}
+
+.about-inner-section {
+    width: min(100%, 58ch);
+    margin: 0 auto;
+}
+
+.about-sub-title {
+    font-size: clamp(2rem, 4vw, 3.5rem) !important;
+    line-height: 1.05 !important;
+    margin: 0 0 1.1rem;
+    text-wrap: balance;
+}
+
+.about-body-text,
+.about-content-section p,
+.about-content-section li {
+    max-width: 58ch;
+    font-size: inherit;
+    line-height: 1.7;
+    margin-bottom: 1.25rem;
+}
+
+.about-content-section strong {
+    font-size: inherit;
+}
+
+.story-era-title {
+    color: var(--cpc-blue);
+    font-size: clamp(1.35rem, 2vw, 1.8rem) !important;
+    font-weight: 700;
+    line-height: 1.2 !important;
+    margin: 3rem 0 1rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(0, 68, 136, 0.2);
+    text-align: left !important;
+}
+
+.story-era-title:first-child {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: 0;
+}
+
+.story-disclosure {
+    background: #ffffff;
+    border: 1px solid rgba(0, 68, 136, 0.16);
+    border-radius: 12px;
+    box-shadow: 0 12px 30px rgba(0, 34, 68, 0.08);
+    overflow: hidden;
+}
+
+.story-disclosure summary {
+    align-items: center;
+    background: linear-gradient(135deg, rgba(0, 68, 136, 0.08), rgba(0, 68, 136, 0.03));
+    color: var(--cpc-blue);
+    cursor: pointer;
+    display: flex;
+    font-size: 1.05em;
+    font-weight: 700;
+    justify-content: space-between;
+    list-style: none;
+    padding: 1.1rem 1.25rem;
+}
+
+.story-disclosure summary::-webkit-details-marker {
+    display: none;
+}
+
+.story-disclosure summary::after {
+    content: "+";
+    font-size: 1.5em;
+    font-weight: 400;
+    line-height: 1;
+}
+
+.story-disclosure[open] summary {
+    border-bottom: 1px solid rgba(0, 68, 136, 0.16);
+}
+
+.story-disclosure[open] summary::after {
+    content: "-";
+}
+
+.story-disclosure .about-body-text {
+    padding: 2rem clamp(1.25rem, 4vw, 2.5rem) 1.5rem;
+}
+
+#missionAnabaino {
+    padding-bottom: 1.25rem;
+}
+
+.anabaino-link {
+    align-items: center;
+    background: var(--cpc-blue);
+    border-radius: 999px;
+    box-shadow: 0 8px 18px rgba(0, 68, 136, 0.16);
+    color: #ffffff;
+    display: inline-flex;
+    font-size: 0.95em;
+    font-weight: 700;
+    gap: 0.65rem;
+    margin-top: 0.25rem;
+    padding: 0.8rem 1.1rem;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.anabaino-link:hover {
+    box-shadow: 0 12px 24px rgba(0, 68, 136, 0.22);
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+.anabaino-link span {
+    font-size: 1.2em;
+    line-height: 1;
+}
+
+#ourStory {
+    padding-top: 1.25rem;
+    padding-bottom: clamp(2rem, 4vw, 3rem);
+}
+
+#ourStory .about-sub-title {
+    margin-bottom: 1.5rem;
+}
+
+.story-strategy {
+    margin: 0 0 2rem;
+    padding-left: 1.5rem;
+}
+
+.story-strategy li {
+    margin-bottom: 1rem;
+    padding-left: 0.4rem;
+}
+
+.story-strategy li::marker {
+    color: var(--cpc-blue);
+    font-weight: 700;
+}
+
+.mission-church-image {
+    margin: 0 0 2rem;
+}
+
+/* The site-wide mobile menu already exposes About; avoid a second menu button. */
+.about-hamburger-menu-button-container {
+    display: none !important;
 }
 
 .about-mobile-navigation {

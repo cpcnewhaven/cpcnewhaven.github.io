@@ -194,7 +194,7 @@ h3 {
 
 .new-page-header {
     width: 100%;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     padding-top: 40px;
@@ -709,6 +709,71 @@ p {
     }
 }
 
+/* Generic subpages use the same calm, editorial header language as named heroes. */
+.splash-hero:not(.splash-hero--home) {
+    position: relative;
+    min-height: 15rem;
+    height: clamp(15rem, 24vw, 22rem) !important;
+    margin: 0;
+    padding: clamp(2rem, 5vw, 4rem) 1.5rem;
+    overflow: hidden;
+    isolation: isolate;
+    background-position: center;
+    background-size: cover;
+}
+
+.splash-hero:not(.splash-hero--home)::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background: linear-gradient(110deg, rgba(0, 24, 56, 0.76), rgba(0, 59, 102, 0.42));
+}
+
+.splash-hero:not(.splash-hero--home) .hero-content {
+    position: relative;
+    z-index: 1;
+    width: min(100%, 62rem);
+    padding: clamp(1.25rem, 2.5vw, 2rem);
+    text-align: left;
+}
+
+.splash-hero:not(.splash-hero--home) .hero-content h1 {
+    max-width: 14ch;
+    margin: 0;
+    color: #fff !important;
+    font-size: clamp(2.4rem, 5vw, 4.4rem) !important;
+    font-weight: 700;
+    line-height: 0.96;
+    letter-spacing: -0.04em;
+    text-wrap: balance;
+    text-shadow: 0 3px 18px rgba(0, 0, 0, 0.35);
+}
+
+.splash-hero:not(.splash-hero--home) .hero-content p {
+    max-width: 42rem;
+    margin: 1rem 0 0;
+    color: rgba(255, 255, 255, 0.84) !important;
+    font-size: clamp(1rem, 1.8vw, 1.25rem);
+    line-height: 1.45;
+}
+
+.splash-hero:not(.splash-hero--home) .breadcrumbs {
+    margin-bottom: 0.85rem;
+}
+
+@media (max-width: 768px) {
+    .splash-hero:not(.splash-hero--home) {
+        min-height: 12.5rem;
+        height: clamp(12.5rem, 55vw, 17rem) !important;
+        padding: 1.25rem;
+    }
+
+    .splash-hero:not(.splash-hero--home) .hero-content {
+        padding: 1rem;
+    }
+}
+
 @media (max-width: 576px) {
     .splash-image {
         height: 200px;
@@ -863,6 +928,8 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: nowrap;
+    gap: clamp(2px, 0.8vw, 12px);
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -872,7 +939,7 @@ p {
     /* Enhanced blur for glassy effect */
     border-bottom: 1px solid rgba(255, 255, 255, 0.15);
     /* More subtle border */
-    padding: 5px 0;
+    padding: 5px 14px;
     /* Reduced padding for sleeker header */
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     /* Softer, lower shadow */
@@ -891,14 +958,15 @@ p {
     color: rgba(255, 255, 255, 0.92);
     /* Slightly transparent white */
     text-decoration: none;
-    font-size: 18px;
+    font-size: clamp(15px, 1.55vw, 18px);
     /* Slightly larger */
     font-weight: 500;
     /* Medium weight */
     letter-spacing: 0.3px;
     /* Subtle spacing */
-    margin: 0 10px;
-    padding: 6px 12px;
+    margin: 0;
+    padding: 6px 10px;
+    white-space: nowrap;
     border-bottom: 2px solid rgba(255, 255, 255, 0);
     transition: all 0.2s ease;
 }
@@ -1039,8 +1107,10 @@ body:not(.mobile-nav-open) .mobile-navigation {
 }
 
 @media screen and (min-width: 868px) {
+    .hamburger-menu-button-container {
+        display: none;
+    }
 
-    .hamburger-menu-button-container,
     .mobile-navigation {
         display: none;
     }
@@ -1745,6 +1815,119 @@ body:not(.mobile-nav-open) .mobile-navigation {
     flex-grow: 1;
     padding: 20px;
     margin-left: 250px;
+}
+
+/* Adult Sunday Studies: calm course-library navigation shared by the landing page and each class page. */
+body.adult-studies-page .dashboard-container {
+    display: grid;
+    grid-template-columns: minmax(14rem, 16rem) minmax(0, 1fr);
+    align-items: start;
+    min-height: calc(100vh - 64px);
+    background: #fbfcfd;
+}
+
+body.adult-studies-page .sidebar.fixed-sidebar {
+    box-sizing: border-box;
+    position: sticky;
+    top: 64px;
+    width: auto;
+    height: calc(100vh - 64px);
+    padding: 26px 18px 44px;
+    border-right: 1px solid #dbe5ea;
+    background: #f3f7f9;
+    box-shadow: none;
+}
+
+body.adult-studies-page .sidebar-logo {
+    width: 92px;
+    margin: 0 0 24px;
+}
+
+body.adult-studies-page .sidebar h1 {
+    margin: 0;
+    color: #123e5d;
+    font-size: 1.08rem !important;
+    line-height: 1.25;
+    text-align: left;
+}
+
+body.adult-studies-page .sidebar h1::before {
+    content: "Course library";
+    display: block;
+    margin-bottom: 7px;
+    color: #537181;
+    font-size: 0.69rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+body.adult-studies-page .sidebar h1 a {
+    color: inherit;
+    text-decoration: none;
+}
+
+body.adult-studies-page .sidebar hr {
+    margin: 18px 0 12px;
+    border: 0;
+    border-top: 1px solid #cddae1;
+}
+
+body.adult-studies-page .sidebar ul {
+    display: grid;
+    gap: 3px;
+}
+
+body.adult-studies-page .sidebar ul li {
+    margin: 0;
+}
+
+body.adult-studies-page .sidebar ul li a {
+    display: block;
+    padding: 9px 10px;
+    border-left: 3px solid transparent;
+    border-radius: 0 6px 6px 0;
+    color: #40515c;
+    font-size: 0.95rem;
+    line-height: 1.35;
+    text-decoration: none;
+    transition: background 160ms ease, border-color 160ms ease, color 160ms ease;
+}
+
+body.adult-studies-page .sidebar ul li a:hover,
+body.adult-studies-page .sidebar ul li a:focus-visible {
+    background: #e5eff4;
+    color: #0b4f78;
+}
+
+body.adult-studies-page .sidebar ul li a[aria-current="page"] {
+    border-left-color: #0b5f78;
+    background: #dcecf3;
+    color: #0b4f78;
+    font-weight: 800;
+}
+
+body.adult-studies-page .main-content {
+    box-sizing: border-box;
+    min-width: 0;
+    margin-left: 0;
+    padding: clamp(1.75rem, 4vw, 3.5rem) clamp(1.5rem, 4vw, 4rem) 5rem;
+}
+
+@media (max-width: 768px) {
+    body.adult-studies-page .dashboard-container {
+        display: block;
+        min-height: 0;
+    }
+
+    body.adult-studies-page .sidebar.fixed-sidebar {
+        display: none;
+    }
+
+    body.adult-studies-page .main-content {
+        width: 100%;
+        padding: 1rem;
+    }
 }
 
 /* Add these styles to your resources.css file */
@@ -2930,7 +3113,7 @@ body:not(.mobile-nav-open) .mobile-navigation {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url("https://storage.googleapis.com/cpc-public-website/65.jpg");
+    background-image: url("https://storage.googleapis.com/cpc-public-website/2026/MISC%20WEBSITE%20GRAPHICS/WEBSITE%20HERO%20-%20CONGREGATION.jpg");
 }
 
 .splash-hero--sunday::before {
@@ -2981,7 +3164,7 @@ body:not(.mobile-nav-open) .mobile-navigation {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url("https://storage.googleapis.com/cpc-public-website/web-assets/heros/events-splash-1.jpg");
+    background-image: url("https://storage.googleapis.com/cpc-public-website/2026/MISC%20WEBSITE%20GRAPHICS/WEBSITE%20HERO%20-%20FALL%20RETREAT%20GROUP%20PHOTO.jpg");
 }
 
 .splash-hero--events::before {
@@ -3168,18 +3351,138 @@ body:not(.mobile-nav-open) .mobile-navigation {
     }
 }
 
-/* -------------------------------------------------------
-   Global override to disable all page subheaders/heroes
-   (Unification: remove splash banners site-wide)
---------------------------------------------------------*/
+/* Shared page-header system */
 .splash-hero--about,
 .splash-hero--podcasts,
-.splash-hero--sunday,
-.splash-hero--events,
 .splash-hero--announcements,
 .splash-hero--community,
-.splash-hero--live {
-    display: none !important;
+.splash-hero--live,
+.splash-hero--connect {
+    display: flex !important;
+    min-height: 15rem;
+    height: clamp(15rem, 24vw, 22rem) !important;
+    padding: clamp(2rem, 5vw, 4rem) 1.5rem;
+    background-attachment: scroll;
+    background-position: center;
+    isolation: isolate;
+}
+
+.splash-hero--about::before,
+.splash-hero--podcasts::before,
+.splash-hero--announcements::before,
+.splash-hero--community::before,
+.splash-hero--live::before,
+.splash-hero--connect::before {
+    background: linear-gradient(110deg, rgba(0, 24, 56, 0.76), rgba(0, 59, 102, 0.42)) !important;
+}
+
+.splash-hero--about h1,
+.splash-hero--podcasts h1,
+.splash-hero--announcements h1,
+.splash-hero--community h1,
+.splash-hero--live h1,
+.splash-hero--connect h1 {
+    max-width: 14ch;
+    margin: 0;
+    color: #fff !important;
+    font-size: clamp(2.4rem, 5vw, 4.4rem) !important;
+    font-weight: 700;
+    line-height: 0.96;
+    letter-spacing: -0.04em;
+    text-wrap: balance;
+    text-shadow: 0 3px 18px rgba(0, 0, 0, 0.35);
+}
+
+.splash-hero--about h1::after,
+.splash-hero--podcasts h1::after,
+.splash-hero--announcements h1::after,
+.splash-hero--community h1::after,
+.splash-hero--live h1::after,
+.splash-hero--connect h1::after {
+    content: '';
+    display: block;
+    width: 2.75rem;
+    height: 0.2rem;
+    margin: 1rem auto 0;
+    border-radius: 999px;
+    background: #fff;
+}
+
+/* Full-photo pages use a compact title lockup that leaves room for the image. */
+#sunday-hero.splash-hero--sunday::before,
+#events-hero.splash-hero--events::before {
+    background: linear-gradient(
+        180deg,
+        rgba(3, 25, 48, 0.36) 0%,
+        rgba(3, 25, 48, 0.52) 52%,
+        rgba(3, 25, 48, 0.78) 100%
+    ) !important;
+}
+
+#sunday-hero.splash-hero--sunday .hero-title-lockup,
+#events-hero.splash-hero--events .hero-title-lockup,
+.splash-hero--live .hero-title-lockup {
+    position: relative;
+    z-index: 2;
+    width: min(calc(100% - 3rem), 34rem);
+    padding: clamp(1.25rem, 2.5vw, 2rem);
+    border-left: 0.25rem solid #fff;
+    border-radius: 0 0.9rem 0.9rem 0;
+    background: linear-gradient(90deg, rgba(0, 18, 42, 0.78), rgba(0, 18, 42, 0.22));
+    box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, 0.22);
+}
+
+#sunday-hero.splash-hero--sunday .hero-eyebrow,
+#events-hero.splash-hero--events .hero-eyebrow,
+.splash-hero--live .hero-eyebrow {
+    margin: 0 0 0.65rem;
+    color: rgba(255, 255, 255, 0.82);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+#sunday-hero.splash-hero--sunday h1,
+#events-hero.splash-hero--events h1,
+.splash-hero--live .hero-title-lockup h1 {
+    max-width: 11ch !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: transparent;
+    box-shadow: none;
+    font-size: clamp(2.5rem, 4.8vw, 4.35rem) !important;
+    line-height: 0.97;
+    letter-spacing: -0.045em;
+    text-align: left !important;
+    text-wrap: balance;
+}
+
+@media (max-width: 768px) {
+    .splash-hero--about,
+    .splash-hero--podcasts,
+    .splash-hero--announcements,
+    .splash-hero--community,
+    .splash-hero--live,
+    .splash-hero--connect {
+        min-height: 12.5rem;
+        height: clamp(12.5rem, 55vw, 17rem) !important;
+    }
+
+    #sunday-hero.splash-hero--sunday h1,
+    #events-hero.splash-hero--events h1 {
+        max-width: 12ch !important;
+        padding: 0 !important;
+    }
+
+    #sunday-hero.splash-hero--sunday .hero-title-lockup,
+    #events-hero.splash-hero--events .hero-title-lockup {
+        width: min(calc(100% - 2rem), 28rem);
+        padding: 1.15rem 1.25rem;
+        border-left-width: 0.2rem;
+        border-radius: 0 0.75rem 0.75rem 0;
+    }
 }
 
 
@@ -3760,7 +4063,7 @@ body:not(.mobile-nav-open) .mobile-navigation {
     display: block;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 680px) {
     .about-hamburger-menu-button-container {
         display: flex;
     }
@@ -3780,11 +4083,16 @@ body:not(.mobile-nav-open) .mobile-navigation {
     }
 }
 
-@media (max-width: 900px) {
-    .about-floating-nav {
+/* The full navigation is available on desktop, so do not show the mobile
+   hamburger beside it. Keep this late in the stylesheet to override legacy
+   page-specific hamburger rules. */
+@media screen and (min-width: 869px) {
+    .hamburger-menu-button-container {
         display: none !important;
     }
+}
 
+@media (max-width: 680px) {
     .about-hamburger-menu-button-container {
         display: flex !important;
         position: fixed;
@@ -3817,42 +4125,6 @@ body:not(.mobile-nav-open) .mobile-navigation {
     }
 
     .about-hamburger-menu-button-container:hover i {
-        transform: scale(1.05);
-    }
-
-    .hamburger-menu-button-container {
-        display: flex !important;
-        position: fixed !important;
-        top: 16px !important;
-        right: 16px !important;
-        z-index: 3001 !important;
-        background: rgba(0, 60, 109, 0.95) !important;
-        backdrop-filter: blur(10px);
-        width: 48px !important;
-        height: 48px !important;
-        border-radius: 8px !important;
-        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15), 0 1px 3px rgba(0, 0, 0, 0.1) !important;
-        border: none !important;
-        align-items: center;
-        justify-content: center;
-        padding: 0;
-        transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-        cursor: pointer !important;
-    }
-
-    .hamburger-menu-button-container:hover {
-        background: rgba(0, 34, 68, 0.98) !important;
-        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2), 0 2px 6px rgba(0, 0, 0, 0.15) !important;
-        transform: translateY(-1px);
-    }
-
-    .hamburger-menu-button-container i {
-        color: #ffffff !important;
-        font-size: 18px !important;
-        transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    .hamburger-menu-button-container:hover i {
         transform: scale(1.05);
     }
 
@@ -4298,7 +4570,7 @@ body:not(.mobile-nav-open) .mobile-navigation {
     z-index: auto;
 }
 
-#community-calendar h1 {
+#community-calendar h2 {
     text-align: center;
     font-size: 1.5em;
     margin-bottom: 20px;
@@ -4348,21 +4620,31 @@ body:not(.mobile-nav-open) .mobile-navigation {
 /* Dropdown for Main Navigation */
 .nav-dropdown {
     position: relative;
-    display: inline-block;
+    display: inline-flex;
+    flex: 0 0 auto;
+    align-items: center;
 }
 .nav-dropdown .nav-dropbtn {
     cursor: pointer;
+    white-space: nowrap;
 }
 .nav-dropdown-content {
     display: none;
     position: absolute;
+    /* Always open below its trigger; some legacy nav rules use a bottom anchor. */
+    /* Touch the trigger so the pointer can travel into the submenu without
+       crossing a hover gap that closes it. */
+    top: 100% !important;
+    right: auto;
+    bottom: auto !important;
+    left: 0;
     background: rgba(0, 15, 50, 0.95);
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1001;
     border-radius: 8px;
     padding: 8px 0;
-    margin-top: 5px;
+    margin-top: 0;
 }
 .nav-dropdown-content a {
     color: white !important;
@@ -4379,4 +4661,15 @@ body:not(.mobile-nav-open) .mobile-navigation {
 }
 .nav-dropdown:hover .nav-dropdown-content {
     display: block;
+}
+
+/* Keep dropdowns usable with keyboard focus and click/touch toggles. */
+.nav-dropdown:focus-within .nav-dropdown-content,
+.nav-dropdown.is-open .nav-dropdown-content {
+    display: block;
+}
+
+.nav-dropdown.is-open .nav-dropbtn,
+.nav-dropdown:focus-within .nav-dropbtn {
+    color: #ffffff;
 }

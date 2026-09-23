@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Walking with Jesus Through Sinai - CPC New Haven Church</title>
         <base href="https://cpcnewhaven.org/">
-        <link rel="stylesheet" href="src/css/global-body.css">
+        <link rel="stylesheet" href="src/css/global-body.css?v=20260821-heroes-6">
         <link rel="stylesheet" href="src/css/global-nav-bar.css">
         <link rel="stylesheet" href="src/css/global-footer-cta.css">
         <link rel="stylesheet"
@@ -65,24 +65,29 @@ header {
 }
             </style>
     </head>
-    <body>
+    <body class="adult-studies-page">
         <header id="stickyHeader" class="sticky">
             <nav class="main-navigation">
         <a href="index.html">Home</a>
         <a href="sundays.html">Sundays</a>
         <a href="sunday-sermons.html">Sermons</a>
-        <a href="past-services.html">Past Services</a>
+        <a href="about.html">About</a>
         <a href="podcasts.html">Podcasts</a>
-        <a href="community.html">Community</a>
-        <a href="events.html">Events</a>
+        <div class="nav-dropdown">
+            <a href="community.html" class="nav-dropbtn">Community <i class="fas fa-caret-down" style="font-size: 0.8em;"></i></a>
+            <div class="nav-dropdown-content">
+                <a href="events.html">Events</a>
+            </div>
+        </div>
         <a href="live.html">Live</a>
         <div class="nav-dropdown">
             <a href="#" class="nav-dropbtn" onclick="event.preventDefault();">More <i class="fas fa-caret-down" style="font-size: 0.8em;"></i></a>
             <div class="nav-dropdown-content">
-                <a href="about.html">About</a>
+                <a href="past-services.html">Past Services</a>
                 <a href="resources.html">Resources</a>
                 <a href="give.html">Give</a>
                 <a href="search.html">Search</a>
+                <a href="past-announcements.html">Past Announcements</a>
             </div>
         </div>
     </nav>
@@ -103,16 +108,17 @@ header {
         <li><a class="mobile-menu-link" href="index.html">Home</a></li>
         <li><a class="mobile-menu-link" href="sundays.html">Sundays</a></li>
         <li><a class="mobile-menu-link" href="sunday-sermons.html">Sermons</a></li>
-        <li><a class="mobile-menu-link" href="past-services.html">Past Services</a></li>
+        <li><a class="mobile-menu-link" href="about.html">About</a></li>
         <li><a class="mobile-menu-link" href="podcasts.html">Podcasts</a></li>
         <li><a class="mobile-menu-link" href="community.html">Community</a></li>
-        <li><a class="mobile-menu-link" href="events.html">Events</a></li>
+        <li><a class="mobile-menu-link" href="events.html" style="padding-left: 40px; border-left: 2px solid rgba(255,255,255,0.2);">- Events</a></li>
         <li><a class="mobile-menu-link" href="live.html">Live</a></li>
         <li><div  class="mobile-menu-link" style="color: rgba(255, 255, 255, 0.5); pointer-events: none;">More</div></li>
-        <li><a class="mobile-menu-link" href="about.html" style="padding-left: 40px; border-left: 2px solid rgba(255,255,255,0.2);">- About</a></li>
+        <li><a class="mobile-menu-link" href="past-services.html" style="padding-left: 40px; border-left: 2px solid rgba(255,255,255,0.2);">- Past Services</a></li>
         <li><a class="mobile-menu-link" href="resources.html" style="padding-left: 40px; border-left: 2px solid rgba(255,255,255,0.2);">- Resources</a></li>
         <li><a class="mobile-menu-link" href="give.html" style="padding-left: 40px; border-left: 2px solid rgba(255,255,255,0.2);">- Give</a></li>
         <li><a class="mobile-menu-link" href="search.html" style="padding-left: 40px; border-left: 2px solid rgba(255,255,255,0.2);">- Search</a></li>
+        <li><a class="mobile-menu-link" href="past-announcements.html" style="padding-left: 40px; border-left: 2px solid rgba(255,255,255,0.2);">- Past Announcements</a></li>
     </ul>
         </nav>
 
@@ -544,5 +550,6 @@ header {
             <script
                 src="./src/js/function_toggle_mobileMenu.js"></script>
             <script src="./src/js/fetch-podcasts.js"></script>
-        </body>
+          <script>(() => { const source = window.location.protocol === "file:" ? new URL("../src/js/back-home-button.js", window.location.href).href : window.location.origin + "/src/js/back-home-button.js"; const script = document.createElement("script"); script.defer = true; script.src = source; document.head.append(script); })();</script>
+</body>
     </html>

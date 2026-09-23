@@ -1,20 +1,78 @@
 {
+  "generatedAt": "2026-09-22T11:31:34.497799-04:00",
+  "source": "CPC Google Calendar",
   "events": [
     {
-      "date": "15 May 2026",
-      "description": "Final CLT Meeting, 6:30pm, Fellowship Hall"
+      "date": "2026-09-27",
+      "title": "Fellowship Lunch",
+      "description": "",
+      "allDay": false
     },
     {
-      "date": "17 May 2026",
-      "description": "HEART Final Class: Emotions & Relationships, 9:30am, Fellowship Hall"
+      "date": "2026-09-27",
+      "title": "Sunday School Adults and Children",
+      "description": "",
+      "allDay": false
     },
     {
-      "date": "24 May 2026",
-      "description": "Summer Break Begins — Sunday School, Fellowship Lunch & Pastor Drop-in Hours on break through August"
+      "date": "2026-09-27",
+      "title": "Worship Service",
+      "description": "",
+      "allDay": false
     },
     {
-      "date": "6 Jun 2026",
-      "description": "I Heart New Haven Day! Bridges of Hope, Church-Wide"
+      "date": "2026-10-03",
+      "title": "Women's Conference at CPC",
+      "description": "",
+      "allDay": false
+    },
+    {
+      "date": "2026-10-04",
+      "title": "Fellowship Lunch",
+      "description": "",
+      "allDay": false
+    },
+    {
+      "date": "2026-10-04",
+      "title": "Sunday School Adults and Children",
+      "description": "",
+      "allDay": false
+    },
+    {
+      "date": "2026-10-04",
+      "title": "Worship Service",
+      "description": "",
+      "allDay": false
+    },
+    {
+      "date": "2026-10-11",
+      "title": "Fellowship Lunch",
+      "description": "",
+      "allDay": false
+    },
+    {
+      "date": "2026-10-11",
+      "title": "Sunday School Adults and Children",
+      "description": "",
+      "allDay": false
+    },
+    {
+      "date": "2026-10-11",
+      "title": "Worship Service",
+      "description": "",
+      "allDay": false
+    },
+    {
+      "date": "2026-10-12",
+      "title": "SLB Meeting",
+      "description": "",
+      "allDay": false
+    },
+    {
+      "date": "2026-10-13",
+      "title": "Shepherd Meeting",
+      "description": "",
+      "allDay": false
     }
   ]
 }

@@ -22,7 +22,7 @@
     <meta name="author" content="CPC New Haven">
   
 
-    <link rel="stylesheet" href="src/css/global-body.css">
+    <link rel="stylesheet" href="src/css/global-body.css?v=20260821-heroes-6">
     <link rel="stylesheet" href="src/css/global-footer-cta.css">
     <title>Community | CPC New Haven Church</title>
 
@@ -30,6 +30,7 @@
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <!-- Cache clearing script - runs on every page load -->
     <script src="./src/js/clear-cache.js"></script>
+    <script src="./src/nav-code.js"></script>
 
 </head>
 
@@ -40,15 +41,14 @@
         <a href="index.html">Home</a>
         <a href="sundays.html">Sundays</a>
         <a href="sunday-sermons.html">Sermons</a>
-        <a href="past-services.html">Past Services</a>
+        <a href="about.html">About</a>
         <a href="podcasts.html">Podcasts</a>
         <a href="community.html">Community</a>
-        <a href="events.html">Events</a>
         <a href="live.html">Live</a>
         <div class="nav-dropdown">
             <a href="#" class="nav-dropbtn" onclick="event.preventDefault();">More <i class="fas fa-caret-down" style="font-size: 0.8em;"></i></a>
             <div class="nav-dropdown-content">
-                <a href="about.html">About</a>
+                <a href="past-services.html">Past Services</a>
                 <a href="resources.html">Resources</a>
                 <a href="give.html">Give</a>
                 <a href="search.html">Search</a>
@@ -74,13 +74,12 @@
         <li><a class="mobile-menu-link" href="index.html">Home</a></li>
         <li><a class="mobile-menu-link" href="sundays.html">Sundays</a></li>
         <li><a class="mobile-menu-link" href="sunday-sermons.html">Sermons</a></li>
-        <li><a class="mobile-menu-link" href="past-services.html">Past Services</a></li>
+        <li><a class="mobile-menu-link" href="about.html">About</a></li>
         <li><a class="mobile-menu-link" href="podcasts.html">Podcasts</a></li>
         <li><a class="mobile-menu-link" href="community.html">Community</a></li>
-        <li><a class="mobile-menu-link" href="events.html">Events</a></li>
         <li><a class="mobile-menu-link" href="live.html">Live</a></li>
         <li><div  class="mobile-menu-link" style="color: rgba(255, 255, 255, 0.5); pointer-events: none;">More</div></li>
-        <li><a class="mobile-menu-link" href="about.html" style="padding-left: 40px; border-left: 2px solid rgba(255,255,255,0.2);">- About</a></li>
+        <li><a class="mobile-menu-link" href="past-services.html" style="padding-left: 40px; border-left: 2px solid rgba(255,255,255,0.2);">- Past Services</a></li>
         <li><a class="mobile-menu-link" href="resources.html" style="padding-left: 40px; border-left: 2px solid rgba(255,255,255,0.2);">- Resources</a></li>
         <li><a class="mobile-menu-link" href="give.html" style="padding-left: 40px; border-left: 2px solid rgba(255,255,255,0.2);">- Give</a></li>
         <li><a class="mobile-menu-link" href="search.html" style="padding-left: 40px; border-left: 2px solid rgba(255,255,255,0.2);">- Search</a></li>
@@ -356,21 +355,107 @@
             overflow: hidden;
             box-shadow: 0 8px 30px rgba(0,0,0,0.15);
         }
-        
-        .video-responsive {
-            position: relative;
-            padding-bottom: 56.25%;
-            height: 0;
-            overflow: hidden;
-            background: #000;
+
+        .life-groups-video-feature {
+            display: grid;
+            grid-template-columns: minmax(15rem, 0.8fr) minmax(0, 1.35fr);
+            gap: clamp(1.5rem, 4vw, 3.5rem);
+            align-items: center;
+            margin: 3rem 0;
+            padding: clamp(1.5rem, 4vw, 3rem);
+            color: #fff;
+            background: linear-gradient(135deg, #063f74 0%, #0a5a9d 100%);
+            border-radius: 18px;
+            box-shadow: 0 1.25rem 3rem rgba(6, 63, 116, 0.2);
         }
-        
-        .video-responsive iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
+
+        .life-groups-video-kicker {
+            margin: 0 0 0.75rem;
+            color: #8fd0ff;
+            font-size: 0.8rem;
+            font-weight: 800;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+        }
+
+        .life-groups-video-feature h3 {
+            margin: 0;
+            padding: 0;
+            color: #fff;
+            font-size: clamp(1.75rem, 3vw, 2.6rem);
+            line-height: 1.05;
+            border: 0;
+        }
+
+        .life-groups-video-feature p:not(.life-groups-video-kicker) {
+            margin: 1.15rem 0 0;
+            color: rgba(255, 255, 255, 0.88);
+            font-size: 1.05rem;
+            line-height: 1.65;
+        }
+
+        .life-groups-video-link {
+            display: inline-flex;
+            margin-top: 1.4rem;
+            padding: 0.75rem 1rem;
+            color: #063f74;
+            font-weight: 800;
+            text-decoration: none;
+            background: #fff;
+            border-radius: 999px;
+        }
+
+        .life-groups-video-frame {
+            aspect-ratio: 16 / 9;
+            overflow: hidden;
+            background: #001f3d;
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            border-radius: 12px;
+            box-shadow: 0 0.75rem 1.5rem rgba(0, 25, 55, 0.35);
+        }
+
+        .life-groups-video-thumb {
+            position: relative;
+            display: block;
             width: 100%;
             height: 100%;
+            color: #fff;
+            text-decoration: none;
+            background: #001f3d;
+        }
+
+        .life-groups-video-thumb img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .life-groups-video-thumb::after {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            display: grid;
+            width: 4.5rem;
+            height: 4.5rem;
+            place-items: center;
+            color: #fff;
+            font-size: 2rem;
+            content: '▶';
+            background: rgba(0, 0, 0, 0.72);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .life-groups-video-thumb:focus-visible {
+            outline: 3px solid #8fd0ff;
+            outline-offset: -3px;
+        }
+
+        .life-groups-video-frame iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
         }
         
         /* CTA Section - Modern Design */
@@ -524,6 +609,11 @@
             
             .image-gallery {
                 grid-template-columns: 1fr;
+            }
+
+            .life-groups-video-feature {
+                grid-template-columns: 1fr;
+                padding: 1.5rem;
             }
             
             .cta-section {
@@ -823,6 +913,19 @@
                 
                 <p class="body-text">Life Groups are our way of doing church in the small with all sorts of people engaged in prayer, teaching, fellowship and care. They are the vehicle that we use to help its participants continue to experience Christ outside of our worship gatherings and to impart the pastoral care that Christ provides through the love of His people. Thus, the worship, teaching, fellowship, and care for one another supply a more intimate and hands-on encounter with the living Christ.</p>
 
+                <section class="life-groups-video-feature" aria-labelledby="life-groups-video-title">
+                    <div>
+                        <p class="life-groups-video-kicker">Featured video</p>
+                        <h3 id="life-groups-video-title">Find a Life Group in New Haven and beyond.</h3>
+                        <p>See how Life Groups create a place for friendship, prayer, and practical care throughout our community.</p>
+                    </div>
+                    <div class="life-groups-video-frame">
+                        <a class="life-groups-video-thumb" href="https://www.youtube.com/watch?v=q1yV-kpugTA" target="_blank" rel="noopener" aria-label="Watch Find a Life Group in New Haven and beyond on YouTube">
+                            <img src="https://i.ytimg.com/vi/q1yV-kpugTA/hqdefault.jpg" alt="Thumbnail for Find a Life Group in New Haven and beyond">
+                        </a>
+                    </div>
+                </section>
+
                 <div class="image-gallery">
                     <template x-for="(image, index) in galleryImages" :key="index">
                         <img :src="image.src" :alt="image.alt" class="gallery-image" @click="openLightbox(image.src, image.alt)">
@@ -856,18 +959,6 @@
                         <div class="lightbox-counter" x-show="galleryImages.length > 1">
                             <span x-text="currentImageIndex + 1"></span> / <span x-text="galleryImages.length"></span>
                         </div>
-                    </div>
-                </div>
-
-                <div class="video-container">
-                    <div class="video-responsive">
-                        <iframe width="560" height="315" 
-                            src="https://www.youtube.com/embed/q1yV-kpugTA"
-                            title="YouTube video player" 
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                            allowfullscreen>
-                        </iframe>
                     </div>
                 </div>
 
@@ -1307,20 +1398,6 @@
 
     </div>
     
-    <!-- YouTube Video Section - Centered -->
-    <section class="youtube-video-section">
-        <div class="video-container">
-            <iframe 
-                src="https://www.youtube.com/embed/nN_0zTD-OyU?si=L0ClaAWzKkZg41K3" 
-                title="YouTube video player" 
-                frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                referrerpolicy="strict-origin-when-cross-origin" 
-                allowfullscreen>
-            </iframe>
-        </div>
-    </section>
-    
   <section id="footer-cta-a" class="styled-section-a">
     <div class="form-container">
       <h1 class="headline">Subscribe to our Newsletter</h1>
@@ -1336,3 +1413,4 @@
     </div>
   </section>
 
+  <script defer src="./src/js/back-home-button.js"></script>

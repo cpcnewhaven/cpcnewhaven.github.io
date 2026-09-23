@@ -28,13 +28,13 @@
   <link rel="preload" as="image"
     href="https://storage.googleapis.com/cpc-public-website/featuredIMGs/homepage/Homepage%20-%20FEATURED%20IMG-NewHaven.jpg"
     fetchpriority="high" />
-  <link rel="stylesheet" href="./src/css/global-body.css" />
+  <link rel="stylesheet" href="./src/css/global-body.css?v=20260821-heroes-6" />
 
   <link rel="stylesheet" href="./src/css/global-footer-cta.css" />
   <link rel="stylesheet" href="./src/css/homepage-additional-css.css" />
-  <link rel="stylesheet" href="./src/css/highlights.css" />
+  <link rel="stylesheet" href="./src/css/highlights.css?v=20260908-1" />
   <link rel="stylesheet" href="./src/css/whats-new.css" />
-  <link rel="stylesheet" href="./src/css/index-page.css" />
+  <link rel="stylesheet" href="./src/css/index-page.css?v=20260915-communal-worship" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
   <link rel="icon"
     href="https://storage.googleapis.com/cpc-public-website/web-assets/CPC%20-%20FAVICON%20-%20FALL%202024.png"
@@ -52,15 +52,14 @@
         <a href="index.html">Home</a>
         <a href="sundays.html">Sundays</a>
         <a href="sunday-sermons.html">Sermons</a>
-        <a href="past-services.html">Past Services</a>
+        <a href="about.html">About</a>
         <a href="podcasts.html">Podcasts</a>
         <a href="community.html">Community</a>
-        <a href="events.html">Events</a>
         <a href="live.html">Live</a>
         <div class="nav-dropdown">
             <a href="#" class="nav-dropbtn" onclick="event.preventDefault();">More <i class="fas fa-caret-down" style="font-size: 0.8em;"></i></a>
             <div class="nav-dropdown-content">
-                <a href="about.html">About</a>
+                <a href="past-services.html">Past Services</a>
                 <a href="resources.html">Resources</a>
                 <a href="give.html">Give</a>
                 <a href="search.html">Search</a>
@@ -86,13 +85,13 @@
         <li><a class="mobile-menu-link" href="index.html">Home</a></li>
         <li><a class="mobile-menu-link" href="sundays.html">Sundays</a></li>
         <li><a class="mobile-menu-link" href="sunday-sermons.html">Sermons</a></li>
-        <li><a class="mobile-menu-link" href="past-services.html">Past Services</a></li>
+        <li><a class="mobile-menu-link" href="about.html">About</a></li>
         <li><a class="mobile-menu-link" href="podcasts.html">Podcasts</a></li>
         <li><a class="mobile-menu-link" href="community.html">Community</a></li>
-        <li><a class="mobile-menu-link" href="events.html">Events</a></li>
+        <li><a class="mobile-menu-link" href="events.html" style="padding-left: 40px; border-left: 2px solid rgba(255,255,255,0.2);">- Events</a></li>
         <li><a class="mobile-menu-link" href="live.html">Live</a></li>
         <li><div  class="mobile-menu-link" style="color: rgba(255, 255, 255, 0.5); pointer-events: none;">More</div></li>
-        <li><a class="mobile-menu-link" href="about.html" style="padding-left: 40px; border-left: 2px solid rgba(255,255,255,0.2);">- About</a></li>
+        <li><a class="mobile-menu-link" href="past-services.html" style="padding-left: 40px; border-left: 2px solid rgba(255,255,255,0.2);">- Past Services</a></li>
         <li><a class="mobile-menu-link" href="resources.html" style="padding-left: 40px; border-left: 2px solid rgba(255,255,255,0.2);">- Resources</a></li>
         <li><a class="mobile-menu-link" href="give.html" style="padding-left: 40px; border-left: 2px solid rgba(255,255,255,0.2);">- Give</a></li>
         <li><a class="mobile-menu-link" href="search.html" style="padding-left: 40px; border-left: 2px solid rgba(255,255,255,0.2);">- Search</a></li>
@@ -107,7 +106,8 @@
     images: [
         'https://storage.googleapis.com/cpc-public-website/featuredIMGs/homepage/Homepage%20-%20FEATURED%20IMG-NewHaven.jpg',
         'https://storage.googleapis.com/cpc-public-website/featuredIMGs/homepage/Homepage%20-%20FEATURED%20IMG-Sermon.jpg',
-        'https://storage.googleapis.com/cpc-public-website/featuredIMGs/homepage/Homepage%20-%20FEATURED%20IMG-congregation.jpg'
+        'https://storage.googleapis.com/cpc-public-website/featuredIMGs/homepage/Homepage%20-%20FEATURED%20IMG-congregation.jpg',
+        'https://storage.googleapis.com/cpc-public-website/2026/MISC%20WEBSITE%20GRAPHICS/MENBIKE.jpg'
     ],
     currentIndex: 0
 }" x-init="
@@ -122,8 +122,11 @@
 
     setInterval(() => { currentIndex = (currentIndex + 1) % images.length }, 5000);
   })()
-" class="splash-hero--home" :style="`background-image: url('${images[currentIndex]}')`">
-    <div class="hero-content">
+" class="splash-hero--home" style="background-image: url('https://storage.googleapis.com/cpc-public-website/featuredIMGs/homepage/Homepage%20-%20FEATURED%20IMG-NewHaven.jpg');">
+  <template x-for="(image, index) in images" :key="image">
+    <div class="hero-background" x-show="index === currentIndex" x-transition:enter="hero-fade-enter" x-transition:enter-start="hero-fade-enter-start" x-transition:enter-end="hero-fade-enter-end" x-transition:leave="hero-fade-leave" x-transition:leave-start="hero-fade-leave-start" x-transition:leave-end="hero-fade-leave-end" :style="'background-image: url(' + image + ')'" aria-hidden="true"></div>
+  </template>
+  <div class="hero-content">
       <img class="hero-logo-img" src="assets/web-assets/cpcLOGO.png" alt="CPC Logo" decoding="async"
         fetchpriority="high" />
       <h1>Come Worship with Us</h1>
@@ -131,6 +134,54 @@
       <p>135 Whitney Ave - New Haven,CT</p>
     </div>
   </div>
+
+  <section class="welcome-sunday-feature womens-conference-feature" aria-labelledby="womens-conference-title">
+    <div class="welcome-sunday-feature__date" aria-label="Saturday, October 3">
+      <span>OCT</span>
+      <strong>3</strong>
+    </div>
+    <div class="welcome-sunday-feature__content">
+      <p class="welcome-sunday-feature__eyebrow">Save the date</p>
+      <h2 id="womens-conference-title">CPC Women’s Conference</h2>
+      <p>A day to explore what it means to flourish through our participation in the body of Christ together—with lunch, fellowship, meaningful conversation, and a mocktail happy hour.</p>
+    </div>
+    <div class="welcome-sunday-feature__actions">
+      <a href="cpc-womens-conference-2026-10-03.html" class="welcome-sunday-feature__primary">Learn more</a>
+      <a href="events.html" class="welcome-sunday-feature__secondary">View calendar</a>
+    </div>
+  </section>
+
+  <section class="welcome-sunday-feature care-teams-feature" aria-labelledby="care-teams-title">
+    <div class="welcome-sunday-feature__date care-teams-feature__icon" aria-hidden="true">
+      <span>CARE</span>
+      <strong><i class="fas fa-hands-helping"></i></strong>
+    </div>
+    <div class="welcome-sunday-feature__content">
+      <p class="welcome-sunday-feature__eyebrow">Mercy Ministries</p>
+      <h2 id="care-teams-title">CPC Care Teams Interest Form</h2>
+      <p>Sign up to serve church-wide care needs through hospitality, transportation, tech help, home support, referrals, medical care, and more.</p>
+    </div>
+    <div class="welcome-sunday-feature__actions">
+      <a href="cpc-care-teams.html" class="welcome-sunday-feature__primary">Learn more</a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLScUIlkTv3cYaP8L2fxHsoQ4G5VFvNMU5-9c2gC15rWr2TbhfQ/viewform?fbzx=-8224853650635582304" class="welcome-sunday-feature__secondary" target="_blank" rel="noopener">Open form</a>
+    </div>
+  </section>
+
+  <section class="welcome-sunday-feature communal-worship-feature" aria-labelledby="communal-worship-title">
+    <div class="welcome-sunday-feature__date" aria-hidden="true">
+      <span>9:30</span>
+      <strong><i class="fas fa-users"></i></strong>
+    </div>
+    <div class="welcome-sunday-feature__content">
+      <p class="welcome-sunday-feature__eyebrow">Adult Sunday Studies</p>
+      <h2 id="communal-worship-title">The Wonders of Communal Worship</h2>
+      <p>A six-week study of the God-centered worship Christ gives to his church. Episode 1 is now available on Spotify, with PDF handouts gathered on the class page.</p>
+    </div>
+    <div class="welcome-sunday-feature__actions">
+      <a href="sunday-studies/wonders-of-communal-worship.html" class="welcome-sunday-feature__primary">Explore the class</a>
+      <a href="adult-sunday-school.html" class="welcome-sunday-feature__secondary">All Sunday Studies</a>
+    </div>
+  </section>
 
 
 
@@ -182,11 +233,13 @@
     <div id="highlights-container" class="highlights-content" style="padding: 40px 20px;">
       <!-- Highlights will be injected here by highlights.js -->
     </div>
+  </section>
+
   <section id="whats-new" class="whats-new-section">
     <div class="container">
       <div class="whats-new-header">
-        <h2>Latest Sermons and Podcasts</h2>
-        <p>The latest sermons, podcast episodes, and media from our church.</p>
+        <h2>Latest Sermons</h2>
+        <p>The latest Sunday sermons from our church.</p>
       </div>
       <div id="whats-new-container">
         <!-- Content will be injected by whats-new.js -->
@@ -230,14 +283,15 @@
 
   <!-- Toggle mobile menu -->
   <script src="./src/js/function_toggle_mobileMenu.js"></script>
+  <script src="./src/nav-code.js"></script>
   <!-- Handle dynamic banner -->
   <script src="./src/js/dynamic-banner.js"></script>
   <!-- Lazy-load expensive homepage sections -->
   <script src="./src/js/homepage-lazy-load.js"></script>
   <!-- Highlights -->
-  <script src="./src/js/highlights.js"></script>
+  <script src="./src/js/highlights.js?v=20260915-1"></script>
   <!-- What's New -->
-  <script src="./src/js/whats-new.js"></script>
+  <script src="./src/js/whats-new.js?v=20260914-1"></script>
 </body>
 
 </html>

@@ -20,7 +20,7 @@
             content="CPC New Haven, Church, New Haven, CT, Worship, Fellowship">
         <meta name="author" content="CPC New Haven">
         <title>Podcasts - CPC New Haven Church</title>
-        <link rel="stylesheet" href="./src/css/global-body.css">
+        <link rel="stylesheet" href="./src/css/global-body.css?v=20260821-heroes-6">
         <link rel="stylesheet" href="./src/css/global-footer-cta.css">
         <link rel="stylesheet" href="./src/css/podcasts.css">
         <link rel="stylesheet" href="./src/css/index-page.css">
@@ -42,15 +42,19 @@
         <a href="index.html">Home</a>
         <a href="sundays.html">Sundays</a>
         <a href="sunday-sermons.html">Sermons</a>
-        <a href="past-services.html">Past Services</a>
+        <a href="about.html">About</a>
         <a href="podcasts.html">Podcasts</a>
-        <a href="community.html">Community</a>
-        <a href="events.html">Events</a>
+        <div class="nav-dropdown">
+            <a href="community.html" class="nav-dropbtn">Community <i class="fas fa-caret-down" style="font-size: 0.8em;"></i></a>
+            <div class="nav-dropdown-content">
+                <a href="events.html">Events</a>
+            </div>
+        </div>
         <a href="live.html">Live</a>
         <div class="nav-dropdown">
             <a href="#" class="nav-dropbtn" onclick="event.preventDefault();">More <i class="fas fa-caret-down" style="font-size: 0.8em;"></i></a>
             <div class="nav-dropdown-content">
-                <a href="about.html">About</a>
+                <a href="past-services.html">Past Services</a>
                 <a href="resources.html">Resources</a>
                 <a href="give.html">Give</a>
                 <a href="search.html">Search</a>
@@ -76,19 +80,28 @@
         <li><a class="mobile-menu-link" href="index.html">Home</a></li>
         <li><a class="mobile-menu-link" href="sundays.html">Sundays</a></li>
         <li><a class="mobile-menu-link" href="sunday-sermons.html">Sermons</a></li>
-        <li><a class="mobile-menu-link" href="past-services.html">Past Services</a></li>
+        <li><a class="mobile-menu-link" href="about.html">About</a></li>
         <li><a class="mobile-menu-link" href="podcasts.html">Podcasts</a></li>
         <li><a class="mobile-menu-link" href="community.html">Community</a></li>
-        <li><a class="mobile-menu-link" href="events.html">Events</a></li>
+        <li><a class="mobile-menu-link" href="events.html" style="padding-left: 40px; border-left: 2px solid rgba(255,255,255,0.2);">- Events</a></li>
         <li><a class="mobile-menu-link" href="live.html">Live</a></li>
         <li><div  class="mobile-menu-link" style="color: rgba(255, 255, 255, 0.5); pointer-events: none;">More</div></li>
-        <li><a class="mobile-menu-link" href="about.html" style="padding-left: 40px; border-left: 2px solid rgba(255,255,255,0.2);">- About</a></li>
+        <li><a class="mobile-menu-link" href="past-services.html" style="padding-left: 40px; border-left: 2px solid rgba(255,255,255,0.2);">- Past Services</a></li>
         <li><a class="mobile-menu-link" href="resources.html" style="padding-left: 40px; border-left: 2px solid rgba(255,255,255,0.2);">- Resources</a></li>
         <li><a class="mobile-menu-link" href="give.html" style="padding-left: 40px; border-left: 2px solid rgba(255,255,255,0.2);">- Give</a></li>
         <li><a class="mobile-menu-link" href="search.html" style="padding-left: 40px; border-left: 2px solid rgba(255,255,255,0.2);">- Search</a></li>
         <li><a class="mobile-menu-link" href="past-announcements.html" style="padding-left: 40px; border-left: 2px solid rgba(255,255,255,0.2);">- Past Announcements</a></li>
     </ul>
             </nav>
+
+            <!-- Podcast page hero -->
+            <section class="splash-hero--podcasts"
+                style="background-image: url('https://storage.googleapis.com/cpc-public-website/2026/MISC%20WEBSITE%20GRAPHICS/CPC_PODCAST_B.jpg');"
+                aria-label="Podcasts">
+                <div class="hero-content">
+                    <h1>Podcasts</h1>
+                </div>
+            </section>
 
             <!-- Main Content -->
             <div class="main-content-a">
@@ -118,7 +131,7 @@
                             <a href="beyond-podcast.html"
                                 class="podcast-thumbnail-link">
                                 <img
-                                    src="https://storage.googleapis.com/cpc-public-website/podcast-thumbnails/beyond/1_BEYOND%20-%20THE%20SUNDAY%20SERMON_001.jpg"
+                                    src="https://storage.googleapis.com/cpc-public-website/podcast-thumbnails/beyond/upBEYOND%20SUNDAY%20SERMON%20PODCAST.png"
                                     alt="Beyond the Sunday Sermon"
                                     class="podcast-thumbnail">
                             </a>
@@ -146,59 +159,6 @@
                                 class="podcast-card-button">Browse Classes</a>
                         </div>
                     </div>
-                </section>
-
-                <!-- Teaching Series Widget: Emotions & Spirituality -->
-                <section id="emotions-study-featured" class="featured-study-widget-section">
-                  <div class="featured-study-container">
-                    <div class="featured-study-card">
-                      <div class="featured-study-image">
-                        <img src="assets/web-assets/emotions-class.png" alt="Emotions & Spirituality Class">
-                      </div>
-                      <div class="featured-study-info">
-                        <span class="featured-study-eyebrow">Adult Sunday Studies | CPC Spring 2026</span>
-                        <h2 class="featured-study-title">HEART | Emotions & Spirituality</h2>
-                        <p class="featured-study-text">
-                          A 4-week teaching series exploring the connection between our faith and our feelings.
-                        </p>
-                        <div class="featured-series-list" aria-label="HEART Emotions and Spirituality episodes">
-                          <a class="featured-series-row is-available" href="https://open.spotify.com/episode/4IdMJVPZC9a0PHVV2RT6nZ?si=R0OzoQcGQEms8WIg6VKZJQ" target="_blank" rel="noopener">
-                            <span class="series-number">1</span>
-                            <span class="series-copy">
-                              <strong>Introduction and Why?</strong>
-                              <span>April 26 | Listen now</span>
-                            </span>
-                            <i class="fab fa-spotify" aria-hidden="true"></i>
-                          </a>
-                          <div class="featured-series-row">
-                            <span class="series-number">2</span>
-                            <span class="series-copy">
-                              <strong>Shame, its monsters, and healing from it</strong>
-                              <span>May 3</span>
-                            </span>
-                          </div>
-                          <div class="featured-series-row">
-                            <span class="series-number">3</span>
-                            <span class="series-copy">
-                              <strong>Facing all our emotions and how we cope with them</strong>
-                              <span>May 10</span>
-                            </span>
-                          </div>
-                          <div class="featured-series-row">
-                            <span class="series-number">4</span>
-                            <span class="series-copy">
-                              <strong>Emotions and relationships</strong>
-                              <span>May 17</span>
-                            </span>
-                          </div>
-                        </div>
-                        <div class="featured-study-actions">
-                          <a href="sunday-studies/emotions-spirituality.html" class="featured-study-cta">View series page</a>
-                          <a href="https://open.spotify.com/episode/4IdMJVPZC9a0PHVV2RT6nZ?si=R0OzoQcGQEms8WIg6VKZJQ" target="_blank" rel="noopener" class="featured-study-secondary-cta">Listen to episode 1</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
                 </section>
 
             </div>
@@ -299,61 +259,122 @@
         }
 
         .podcast-card-button {
-            display: inline-block;
-            background: #0078D4;
+            align-self: center;
+            min-width: 178px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 9px;
+            background: #0879cf;
             color: white;
-            padding: 12px 24px;
-            border-radius: 8px;
+            padding: 12px 20px;
+            border: 1px solid rgba(4, 76, 135, 0.2);
+            border-radius: 999px;
             text-decoration: none;
-            font-weight: 600;
-            margin-bottom: 30px;
+            font-weight: 700;
+            line-height: 1.2;
+            box-shadow: 0 5px 12px rgba(5, 88, 153, 0.2);
+            transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+            margin: auto 30px 30px;
             margin-top: auto;
         }
 
+        .podcast-card-button::after {
+            content: '→';
+            font-size: 1.1em;
+            transition: transform 0.2s ease;
+        }
+
+        .podcast-card-button:hover,
+        .podcast-card-button:focus-visible {
+            color: white;
+            background: #005a9f;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 18px rgba(5, 88, 153, 0.28);
+        }
+
+        .podcast-card-button:hover::after,
+        .podcast-card-button:focus-visible::after {
+            transform: translateX(3px);
+        }
+
         @media (max-width: 768px) {
+            .hamburger-menu-button-container {
+                display: flex;
+                top: max(12px, env(safe-area-inset-top));
+                right: 12px;
+                width: 44px;
+                height: 44px;
+                border-radius: 12px;
+            }
+
+            .hamburger-menu-button-container #closeMobileMenuButton {
+                font-size: 18px;
+                line-height: 1;
+            }
+
             .podcast-grid {
-                grid-template-columns: repeat(3, 1fr);
-                gap: 8px;
+                grid-template-columns: 1fr;
+                gap: 14px;
                 margin: 20px auto;
                 max-width: 100%;
-                padding: 0 10px;
+                padding: 0;
             }
 
             .podcast-card {
-                padding: 0;
+                display: grid;
+                grid-template-columns: 104px minmax(0, 1fr);
+                grid-template-areas:
+                    "image title"
+                    "image description"
+                    "image button";
+                column-gap: 16px;
+                align-items: center;
+                padding: 12px;
                 max-width: 100%;
-                border-radius: 8px;
+                border-radius: 14px;
                 box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
             }
 
+            .podcast-thumbnail-link { grid-area: image; }
+
             .podcast-thumbnail {
-                width: 70%;
+                width: 100%;
                 border-radius: 8px;
-                margin: 8px auto;
+                margin: 0;
                 aspect-ratio: 1 / 1;
             }
 
             .podcast-card h3 {
-                font-size: 0.9em;
-                margin: 0 8px 8px 8px;
+                grid-area: title;
+                align-self: end;
+                font-size: 1.12em;
+                margin: 0;
                 line-height: 1.2;
+                text-align: left;
             }
 
             .podcast-card p {
-                font-size: 0.8em;
-                margin: 0 8px 8px 8px;
-                line-height: 1.3;
+                grid-area: description;
+                align-self: center;
+                font-size: 0.9em;
+                margin: 6px 0 10px;
+                line-height: 1.4;
+                text-align: left;
                 display: -webkit-box;
-                -webkit-line-clamp: 2;
+                -webkit-line-clamp: 3;
                 -webkit-box-orient: vertical;
                 overflow: hidden;
             }
 
             .podcast-card-button {
-                font-size: 0.8em;
-                padding: 8px 12px;
-                margin: 8px;
-                margin-top: auto;
+                grid-area: button;
+                justify-self: start;
+                align-self: start;
+                min-width: 0;
+                font-size: 0.88em;
+                padding: 9px 14px;
+                margin: 0;
             }
 
             .podcast-grid-section h2 {
@@ -402,5 +423,6 @@
     <p class="footer-copyright">© 2026 Christ Presbyterian Church. All rights reserved.</p>
   </footer>
 
-    </body>
+      <script defer src="./src/js/back-home-button.js"></script>
+</body>
 </html>

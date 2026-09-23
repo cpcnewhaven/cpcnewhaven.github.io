@@ -43,10 +43,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (!container || !href || !text) return;
 
-    // Already present?
-    const existing = container.querySelector('a[href="' + href + '"]');
-    if (existing) return;
-
     if (kind === 'mobile') {
       // Expected structure: <ul class="mobile-nav-links"><li><a class="mobile-menu-link" ...>...</a></li>...</ul>
       const ul =
@@ -54,6 +50,7 @@ document.addEventListener('DOMContentLoaded', function () {
           ? container
           : container.querySelector('.mobile-nav-links');
       if (!ul) return;
+      if (ul.querySelector('a[href="' + href + '"]')) return;
 
       const li = document.createElement('li');
       const a = document.createElement('a');
@@ -72,6 +69,7 @@ document.addEventListener('DOMContentLoaded', function () {
           ? container
           : container.querySelector('.main-navigation');
       if (!nav) return;
+      if (nav.querySelector('a[href="' + href + '"]')) return;
 
       const a = document.createElement('a');
       a.href = href;
@@ -125,6 +123,117 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
+  function normalizeSiteNavigation() {
+    const nav = document.querySelector('.main-navigation');
+    if (nav) {
+      const findLink = function (href) {
+        return nav.querySelector('a[href="' + href + '"]');
+      };
+      const getLink = function (href, label) {
+        const existing = findLink(href);
+        if (existing) return existing;
+        const link = document.createElement('a');
+        link.href = href;
+        link.textContent = label;
+        return link;
+      };
+      const moreLink = Array.from(nav.querySelectorAll('.nav-dropbtn')).find(function (link) {
+        return link.textContent.trim().startsWith('More');
+      });
+      const moreGroup = moreLink && moreLink.closest('.nav-dropdown');
+      const moreContent = moreGroup && moreGroup.querySelector('.nav-dropdown-content');
+      const communityLink = getLink('community.html', 'Community');
+      const communityGroup = communityLink.closest('.nav-dropdown') || communityLink;
+      const eventsLink = getLink('events.html', 'Events');
+
+      if (moreContent) {
+        [
+          ['sunday-sermons.html', 'Sermons'],
+          ['announcements.html', 'Announcements'],
+          ['past-services.html', 'Past Services'],
+          ['resources.html', 'Resources'],
+          ['give.html', 'Give'],
+          ['search.html', 'Search'],
+          ['past-announcements.html', 'Past Announcements']
+        ].forEach(function (item) {
+          const link = getLink(item[0], item[1]);
+          link.textContent = item[1];
+          moreContent.appendChild(link);
+        });
+      }
+
+      eventsLink.textContent = 'Events';
+      eventsLink.className = '';
+      const oldEventsMenu = eventsLink.parentElement;
+      if (oldEventsMenu && oldEventsMenu.classList.contains('nav-dropdown-content') && oldEventsMenu.children.length === 1) {
+        oldEventsMenu.parentElement.remove();
+      }
+
+      [
+        getLink('index.html', 'Home'),
+        getLink('about.html', 'About'),
+        getLink('sundays.html', 'Sundays'),
+        getLink('podcasts.html', 'Podcasts'),
+        communityGroup,
+        eventsLink,
+        getLink('live.html', 'Live'),
+        moreGroup
+      ].filter(Boolean).forEach(function (item) {
+        nav.appendChild(item);
+      });
+    }
+
+    const mobileList = document.querySelector('.mobile-nav-links');
+    if (!mobileList) return;
+    const mobileItem = function (href, label, nested) {
+      let link = mobileList.querySelector('a[href="' + href + '"]');
+      if (!link) {
+        link = document.createElement('a');
+        link.className = 'mobile-menu-link';
+        link.href = href;
+        const li = document.createElement('li');
+        li.appendChild(link);
+        mobileList.appendChild(li);
+      }
+      link.textContent = nested ? '- ' + label : label;
+      if (nested) {
+        link.style.paddingLeft = '40px';
+        link.style.borderLeft = '2px solid rgba(255,255,255,0.2)';
+      } else {
+        link.style.paddingLeft = '';
+        link.style.borderLeft = '';
+      }
+      return link.closest('li');
+    };
+    let moreItem = Array.from(mobileList.children).find(function (item) {
+      return item.textContent.trim() === 'More';
+    });
+    if (!moreItem) {
+      moreItem = document.createElement('li');
+      moreItem.innerHTML = '<div class="mobile-menu-link" style="color: rgba(255, 255, 255, 0.5); pointer-events: none;">More</div>';
+    }
+
+    [
+      mobileItem('index.html', 'Home'),
+      mobileItem('about.html', 'About'),
+      mobileItem('sundays.html', 'Sundays'),
+      mobileItem('podcasts.html', 'Podcasts'),
+      mobileItem('community.html', 'Community'),
+      mobileItem('events.html', 'Events'),
+      mobileItem('live.html', 'Live'),
+      moreItem,
+      mobileItem('sunday-sermons.html', 'Sermons', true),
+      mobileItem('announcements.html', 'Announcements', true),
+      mobileItem('past-services.html', 'Past Services', true),
+      mobileItem('resources.html', 'Resources', true),
+      mobileItem('give.html', 'Give', true),
+      mobileItem('search.html', 'Search', true),
+      mobileItem('past-announcements.html', 'Past Announcements', true)
+    ].forEach(function (item) {
+      mobileList.appendChild(item);
+    });
+  }
+
   function wireMobileNav(options) {
     const hamburgerButton = options.hamburgerButton;
     const mobileNav = options.mobileNav;
@@ -135,10 +244,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const openBodyClass = options.openBodyClass || 'mobile-nav-open';
 
     if (!hamburgerButton || !mobileNav) return null;
-
-    // Ensure the site-wide Search link exists in the mobile menu (without editing every HTML file).
-    // Do this before we attach "close on link click" listeners so it inherits the behavior.
-    ensureNavLink(mobileNav, { kind: 'mobile', href: 'search.html', text: 'Search' });
 
     // Basic accessibility hints (safe if attributes already exist)
     try {
@@ -255,8 +360,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
-  // Also add Search to the desktop nav where present.
-  ensureNavLink(document, { kind: 'desktop', href: 'search.html', text: 'Search' });
+  normalizeSiteNavigation();
 
   const mainNavController = wireMobileNav({
     hamburgerButton: mainHamburger,

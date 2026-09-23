@@ -1,0 +1,43 @@
+name: Update Calendar Events
+
+on:
+  workflow_dispatch: {}
+  schedule:
+    - cron: "15 11 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-calendar-events
+  cancel-in-progress: true
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install calendar dependencies
+        run: python -m pip install -r scripts/requirements-calendar.txt
+
+      - name: Generate upcoming calendar events
+        run: python scripts/update-calendar-events.py
+
+      - name: Commit changes when needed
+        run: |
+          if git diff --quiet; then
+            echo "No calendar changes to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/events.json
+          git commit -m "Update calendar event data"
+          git push

@@ -189,6 +189,117 @@
         "title": "Sunday Sermons",
         "episodes": [
             {
+                "id": "26-09-20",
+                "title": "Jesus Gathers: The Witnesses to the New World | The Sunday Sermon | Acts 1: 12-26 | Rev. Jerry Ornelas",
+                "author": "Rev. Jerry Ornelas",
+                "scripture": "Acts 1: 12-26",
+                "date": "2026-09-20",
+                "apple_podcasts_url": "",
+                "spotify_url": "https://open.spotify.com/episode/2v8ZCHnIrTMrvncHuL56NI?si=PS2otyfZRjWZfrLArOswXQ",
+                "youtube_url": "",
+                "link": "https://open.spotify.com/episode/2v8ZCHnIrTMrvncHuL56NI?si=PS2otyfZRjWZfrLArOswXQ",
+                "podcast-thumbnail_url": "https://s3-us-west-2.amazonaws.com/anchor-generated-image-bank/staging/podcast_uploaded_episode400/12709107/12709107-1789998830651-1e0f541ba8c6c.jpg",
+                "audio_url": ""
+            },
+            {
+                "id": "26-09-13",
+                "title": "Jesus Ascends: The Promise and Power of the New World | The Sunday Sermon | Acts 1:1-11 | Rev. Craig Luekens",
+                "author": "Rev. Craig Luekens",
+                "scripture": "Acts 1:1-11",
+                "date": "2026-09-13",
+                "apple_podcasts_url": "",
+                "spotify_url": "https://open.spotify.com/episode/0Yl2KQ90ZYn0PqMNt8QEsU?si=BPuDnz0dSJyx3CHd0k64DQ",
+                "youtube_url": "",
+                "link": "https://open.spotify.com/episode/0Yl2KQ90ZYn0PqMNt8QEsU?si=BPuDnz0dSJyx3CHd0k64DQ",
+                "podcast-thumbnail_url": "",
+                "audio_url": ""
+            },
+            {
+                "id": "26-09-06",
+                "title": "It Is Finished. Now, Go, Get Started! Mission, Joy, and the New Proclamation | The Sunday Sermon | Rev. Craig Luekens | Luke 24: 36-53",
+                "author": "Rev. Craig Luekens",
+                "scripture": "Luke 24: 36-53",
+                "date": "2026-09-06",
+                "apple_podcasts_url": "",
+                "spotify_url": "https://open.spotify.com/episode/2Y7DwR7W6D5tgNl8dTkPBC?si=_uQ9CUksQoWo9fZhHr1I-g",
+                "youtube_url": "",
+                "link": "https://open.spotify.com/episode/2Y7DwR7W6D5tgNl8dTkPBC?si=_uQ9CUksQoWo9fZhHr1I-g",
+                "podcast-thumbnail_url": "",
+                "audio_url": ""
+            },
+            {
+                "id": "26-08-30",
+                "title": "Do You See Jesus? The Wonders of Word and Sacrament | The Sunday Sermon | Rev. Craig Luekens | Luke 24:13-35",
+                "author": "Rev. Craig Luekens",
+                "scripture": "Luke 24:13-35",
+                "date": "2026-08-30",
+                "apple_podcasts_url": "",
+                "spotify_url": "https://open.spotify.com/episode/37fPCjqsuIAkfNqHJJqmCX?si=e0J-0X2GT3eHLZo4Nyh8aQ",
+                "youtube_url": "https://www.youtube.com/watch?v=ySZmGVNL9w8",
+                "link": "https://www.cpcnewhaven.org/sermons/sermon/2026-08-30/do-you-see-jesus-the-wonders-of-word-and-sacrament",
+                "podcast-thumbnail_url": "",
+                "audio_url": "https://www.cpcnewhaven.org/download/4740"
+            },
+            {
+                "id": "26-08-23",
+                "title": "The Resurrection: Faith Before Sight | The Sunday Sermon | Luke 24:1-12 | Rev. Jerry Ornelas",
+                "author": "Rev. Jerry Ornelas",
+                "scripture": "Luke 24:1-12",
+                "date": "2026-08-23",
+                "apple_podcasts_url": "",
+                "spotify_url": "https://open.spotify.com/episode/0npWS5uHojZLU2Fraj42XM?si=weGuQ7z_QFuY8UEY_bi1TA",
+                "youtube_url": "https://www.youtube.com/watch?v=ShMmV-565NA",
+                "link": "https://www.cpcnewhaven.org/sermons/sermon/2026-08-23/the-resurrection-faith-before-sight",
+                "podcast-thumbnail_url": "",
+                "audio_url": "https://www.cpcnewhaven.org/download/4737"
+            },
+      {
+                "id": "26-08-16",
+                "title": "Jesus Dies: The Shock of Judgement and Faithfulness at the Cross",
+                "author": "Rev. Craig Luekens",
+                "scripture": "Luke 23:44-56",
+                "date": "2026-08-16",
+                "apple_podcasts_url": "",
+                "spotify_url": "",
+                "link": "https://www.cpcnewhaven.org/sermons/sermon/2026-08-16/jesus-dies-the-shock-of-judgement-and-faithfulness-at-the-cross",
+                "podcast-thumbnail_url": "",
+                "audio_url": "https://www.cpcnewhaven.org/download/4734"
+            },
+            {
+                "id": "26-08-09",
+                "title": "Jesus' Astonishing Love on the Cross",
+                "author": "Rev. Craig Luekens",
+                "scripture": "Luke 23:26-43",
+                "date": "2026-08-09",
+                "apple_podcasts_url": "",
+                "spotify_url": "",
+                "link": "https://www.cpcnewhaven.org/sermons/sermon/2026-08-09/jesus-astonishing-love-on-the-cross",
+                "podcast-thumbnail_url": "",
+                "audio_url": "https://www.cpcnewhaven.org/download/4731"
+            },
+            {
+                "id": "26-07-12",
+                "title": "How Do You Keep Your Confidence in God?",
+                "author": "Rev. Jerry Ornelas",
+                "scripture": "Psalm 31:1-24",
+                "date": "2026-07-12",
+                "apple_podcasts_url": "",
+                "spotify_url": "https://open.spotify.com/episode/2wrw0uUsMJW1fjapfUL5gr?si=6Vy4rfdMRfyyBbC4wh6Owg",
+                "link": "https://open.spotify.com/episode/2wrw0uUsMJW1fjapfUL5gr?si=6Vy4rfdMRfyyBbC4wh6Owg",
+                "podcast-thumbnail_url": ""
+            },
+            {
+                "id": "26-07-19",
+                "title": "Devoted Discipleship: A Battle Worth Fighting",
+                "author": "Rev. Brandon Farquhar (guest preacher)",
+                "scripture": "1 Timothy 3:15-4:16",
+                "date": "2026-07-19",
+                "apple_podcasts_url": "",
+                "spotify_url": "https://open.spotify.com/episode/4lUpuWtz3umIjqB3N4wQ7Z?si=T7DKBn2NRyeBiCAInrYxrA",
+                "link": "https://open.spotify.com/episode/4lUpuWtz3umIjqB3N4wQ7Z?si=T7DKBn2NRyeBiCAInrYxrA",
+                "podcast-thumbnail_url": ""
+            },
+            {
                 "id": "26-04-26",
                 "title": "Salvation Has Come!",
                 "author": "Rev. Craig Luekens",
@@ -735,13 +846,26 @@
         "title": "Beyond",
         "episodes": [
             {
+                "number": 66,
+                "title": "Beyond the Sunday Sermon | Acts 1 : 1-11 | with Guest Seth Bollinger",
+                "link": "https://open.spotify.com/episode/4OLmKghVRPdlt1DnBXubXu?si=ScHvOJJ8ReitGowKTTKchA",
+                "guest": "Seth Bollinger",
+                "date_added": "2026-09-16",
+                "published_at": "2026-09-16T09:45:00",
+                "duration": "37 min",
+                "season": "fall 2026",
+                "scripture": "Acts 1 : 1-11",
+                "podcast-thumbnail_url": "https://storage.googleapis.com/cpc-public-website/podcast-thumbnails/beyond/upBEYOND%20SUNDAY%20SERMON%20PODCAST.png"
+            },
+            {
                 "number": 65,
                 "title": "Beyond the Sunday Sermon | Luke 18: 9-30 | With Rev. Jerry Ornelas and Rev. Craig Luekens",
                 "link": "https://open.spotify.com/episode/5kbOlaGftd6nQzp8nfSWj8?si=dZi5jfxDR4KVcX0nn166RA",
                 "guest": "Rev. Jerry Ornelas and Rev. Craig Luekens",
                 "date_added": "2026-04-20",
                 "season": "spring 2026",
-                "scripture": "Luke 18: 9-30"
+                "scripture": "Luke 18: 9-30",
+                "podcast-thumbnail_url": "https://storage.googleapis.com/cpc-public-website/podcast-thumbnails/beyond/upBEYOND%20SUNDAY%20SERMON%20PODCAST.png"
             },
         
             {
@@ -750,7 +874,8 @@
                 "link": "https://open.spotify.com/episode/789JSDdGUWU4xU9f3lHOL5?si=1ada1052e21e4b00",
                 "guest": "Seth Bollinger",
                 "date_added": "2024-09-10",
-                "season": "fall 2024"
+                "season": "fall 2024",
+                "podcast-thumbnail_url": "https://storage.googleapis.com/cpc-public-website/podcast-thumbnails/beyond/upBEYOND%20SUNDAY%20SERMON%20PODCAST.png"
             },
             {
                 "number": 14,
@@ -758,7 +883,8 @@
                 "link": "https://open.spotify.com/episode/2jtlPEHyOrYDc3lslkKyt9?si=893c72ad058d4722",
                 "guest": "Ellen Martin",
                 "date_added": "2024-09-18",
-                "season": "fall 2024"
+                "season": "fall 2024",
+                "podcast-thumbnail_url": "https://storage.googleapis.com/cpc-public-website/podcast-thumbnails/beyond/upBEYOND%20SUNDAY%20SERMON%20PODCAST.png"
             },
             {
                 "number": 15,
@@ -766,7 +892,8 @@
                 "link": "https://open.spotify.com/episode/30ywfi7U7TjnmV2gR4ypMn?si=855f1e0dcbd0494a",
                 "guest": "Pat Clendenen",
                 "date_added": "2024-09-25",
-                "season": "fall 2024"
+                "season": "fall 2024",
+                "podcast-thumbnail_url": "https://storage.googleapis.com/cpc-public-website/podcast-thumbnails/beyond/upBEYOND%20SUNDAY%20SERMON%20PODCAST.png"
             },
             {
                 "number": 16,
@@ -774,7 +901,8 @@
                 "link": "https://open.spotify.com/episode/7n38oro8p6p1PHldavudrh?si=c6dc99c0973145f6",
                 "guest": "Alex Gonzalez",
                 "date_added": "2024-10-02",
-                "season": "fall 2024"
+                "season": "fall 2024",
+                "podcast-thumbnail_url": "https://storage.googleapis.com/cpc-public-website/podcast-thumbnails/beyond/upBEYOND%20SUNDAY%20SERMON%20PODCAST.png"
             },
             {
                 "number": 17,
@@ -782,7 +910,8 @@
                 "link": "https://open.spotify.com/episode/1a2b3c4d5e6f7g8h9i0jkl?si=abcdef123456",
                 "guest": "Layne Boles",
                 "date_added": "2024-10-09",
-                "season": "fall 2024"
+                "season": "fall 2024",
+                "podcast-thumbnail_url": "https://storage.googleapis.com/cpc-public-website/podcast-thumbnails/beyond/upBEYOND%20SUNDAY%20SERMON%20PODCAST.png"
             },
             {
                 "number": 18,
@@ -808,7 +937,8 @@
                 "link": "https://open.spotify.com/episode/1ZMbwD93JcHmpMMby1nJeU?si=058314a953dd4b7b",
                 "guest": "Seth Bollinger",
                 "date_added": "2024-10-30",
-                "season": "fall 2024"
+                "season": "fall 2024",
+                "podcast-thumbnail_url": "https://storage.googleapis.com/cpc-public-website/podcast-thumbnails/beyond/upBEYOND%20SUNDAY%20SERMON%20PODCAST.png"
             },
             {
                 "number": 21,
@@ -888,7 +1018,8 @@
                 "link": "https://open.spotify.com/episode/0drS1ayw06pi8LvOcoIEEH",
                 "guest": "Patrick Clendenen",
                 "date_added": "2025-02-13",
-                "season": "winter 2025"
+                "season": "winter 2025",
+                "podcast-thumbnail_url": "https://storage.googleapis.com/cpc-public-website/podcast-thumbnails/beyond/upBEYOND%20SUNDAY%20SERMON%20PODCAST.png"
             },
             {
                 "number": 30,
@@ -896,7 +1027,8 @@
                 "link": "https://open.spotify.com/episode/6y7UXtbPSSTyfv0buZ4fAb?si=241cadeac4b044d9",
                 "guest": "Karen Peck",
                 "date_added": "2025-02-20",
-                "season": "winter 2025"
+                "season": "winter 2025",
+                "podcast-thumbnail_url": "https://storage.googleapis.com/cpc-public-website/podcast-thumbnails/beyond/upBEYOND%20SUNDAY%20SERMON%20PODCAST.png"
             },
             {
                 "number": 31,
@@ -905,7 +1037,8 @@
                 "guest": "Crossan Cooper",
                 "date_added": "2025-02-20",
                 "season": "winter 2025",
-                "scripture": "Exodus 34"
+                "scripture": "Exodus 34",
+                "podcast-thumbnail_url": "https://storage.googleapis.com/cpc-public-website/podcast-thumbnails/beyond/upBEYOND%20SUNDAY%20SERMON%20PODCAST.png"
             },
             {
                 "number": 32,
@@ -914,7 +1047,8 @@
                 "guest": "Rev. Jerry Ornelas",
                 "date_added": "2025-03-05",
                 "season": "winter 2025",
-                "scripture": "Proverbs 1"
+                "scripture": "Proverbs 1",
+                "podcast-thumbnail_url": "https://storage.googleapis.com/cpc-public-website/podcast-thumbnails/beyond/upBEYOND%20SUNDAY%20SERMON%20PODCAST.png"
             },
             {
                 "number": 33,
@@ -923,7 +1057,8 @@
                 "guest": "Rev. Jerry Ornelas",
                 "date_added": "2025-03-26",
                 "season": "spring 2025",
-                "scripture": "Proverbs 6"
+                "scripture": "Proverbs 6",
+                "podcast-thumbnail_url": "https://storage.googleapis.com/cpc-public-website/podcast-thumbnails/beyond/upBEYOND%20SUNDAY%20SERMON%20PODCAST.png"
             },
             {
                 "number": 34,
@@ -932,7 +1067,8 @@
                 "guest": "Rev. Jerry Ornelas",
                 "date_added": "2025-04-02",
                 "season": "spring 2025",
-                "scripture": "Proverbs 18"
+                "scripture": "Proverbs 18",
+                "podcast-thumbnail_url": "https://storage.googleapis.com/cpc-public-website/podcast-thumbnails/beyond/upBEYOND%20SUNDAY%20SERMON%20PODCAST.png"
             },
             {
                 "number": 35,
@@ -941,7 +1077,8 @@
                 "guest": "Rev. Craig Luekens",
                 "date_added": "2025-04-09",
                 "season": "spring 2025",
-                "scripture": "Romans 8"
+                "scripture": "Romans 8",
+                "podcast-thumbnail_url": "https://storage.googleapis.com/cpc-public-website/podcast-thumbnails/beyond/upBEYOND%20SUNDAY%20SERMON%20PODCAST.png"
             },
             {
                 "number": 36,
@@ -950,7 +1087,8 @@
                 "guest": "Rev. Jerry Ornelas",
                 "date_added": "2025-04-16",
                 "season": "spring 2025",
-                "scripture": "Romans 8:14"
+                "scripture": "Romans 8:14",
+                "podcast-thumbnail_url": "https://storage.googleapis.com/cpc-public-website/podcast-thumbnails/beyond/upBEYOND%20SUNDAY%20SERMON%20PODCAST.png"
             },
             {
                 "number": 37,
@@ -959,7 +1097,8 @@
                 "guest": "Rev. Jerry Ornelas",
                 "date_added": "2025-04-23",
                 "season": "spring 2025",
-                "scripture": "Romans 8:28"
+                "scripture": "Romans 8:28",
+                "podcast-thumbnail_url": "https://storage.googleapis.com/cpc-public-website/podcast-thumbnails/beyond/upBEYOND%20SUNDAY%20SERMON%20PODCAST.png"
             },
             {
                 "number": 38,
@@ -968,7 +1107,8 @@
                 "guest": "Seth Bollinger",
                 "date_added": "2025-05-06",
                 "season": "spring 2025",
-                "scripture": "Luke 1:1-4"
+                "scripture": "Luke 1:1-4",
+                "podcast-thumbnail_url": "https://storage.googleapis.com/cpc-public-website/podcast-thumbnails/beyond/upBEYOND%20SUNDAY%20SERMON%20PODCAST.png"
             },
             {
                 "number": 39,
@@ -977,7 +1117,8 @@
                 "guest": "Rev. Craig Luekens and Rev. Jerry Ornelas",
                 "date_added": "2026-03-23",
                 "season": "spring 2026",
-                "scripture": "Luke 17"
+                "scripture": "Luke 17",
+                "podcast-thumbnail_url": "https://storage.googleapis.com/cpc-public-website/podcast-thumbnails/beyond/upBEYOND%20SUNDAY%20SERMON%20PODCAST.png"
             },
             {
                 "number": 40,
@@ -986,7 +1127,8 @@
                 "guest": "Greg Weese",
                 "date_added": "2026-04-14",
                 "season": "spring 2026",
-                "scripture": "Luke 18"
+                "scripture": "Luke 18",
+                "podcast-thumbnail_url": "https://storage.googleapis.com/cpc-public-website/podcast-thumbnails/beyond/upBEYOND%20SUNDAY%20SERMON%20PODCAST.png"
             }
         ]
     },

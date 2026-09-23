@@ -66,7 +66,6 @@ def process_file(filepath):
         <a href="{prefix}index.html">Home</a>
         <a href="{prefix}sundays.html">Sundays</a>
         <a href="{prefix}sunday-sermons.html">Sermons</a>
-        <a href="{prefix}past-services.html">Past Services</a>
         <a href="{prefix}about.html">About</a>
         <a href="{prefix}podcasts.html">Podcasts</a>
         <div class="nav-dropdown">
@@ -79,10 +78,13 @@ def process_file(filepath):
         <div class="nav-dropdown">
             <a href="#" class="nav-dropbtn" onclick="event.preventDefault();">More <i class="fas fa-caret-down" style="font-size: 0.8em;"></i></a>
             <div class="nav-dropdown-content">
+                <a href="{prefix}past-services.html">Past Services</a>
                 <a href="{prefix}resources.html">Resources</a>
+                <a href="{prefix}give.html">Give</a>
+                <a href="{prefix}search.html">Search</a>
+                <a href="{prefix}past-announcements.html">Past Announcements</a>
             </div>
         </div>
-        <a href="{prefix}give.html">Give</a>
     '''
         
         new_nav = f'<nav class="main-navigation">{replacement_main}</nav>'
@@ -105,15 +107,17 @@ def process_file(filepath):
         <li><a{class_str} href="{prefix}index.html">Home</a></li>
         <li><a{class_str} href="{prefix}sundays.html">Sundays</a></li>
         <li><a{class_str} href="{prefix}sunday-sermons.html">Sermons</a></li>
-        <li><a{class_str} href="{prefix}past-services.html">Past Services</a></li>
         <li><a{class_str} href="{prefix}about.html">About</a></li>
         <li><a{class_str} href="{prefix}podcasts.html">Podcasts</a></li>
         <li><a{class_str} href="{prefix}community.html">Community</a></li>
         <li><a{class_str} href="{prefix}events.html" style="padding-left: 40px; border-left: 2px solid rgba(255,255,255,0.2);">- Events</a></li>
         <li><a{class_str} href="{prefix}live.html">Live</a></li>
         <li><div {class_str} style="color: rgba(255, 255, 255, 0.5); pointer-events: none;">More</div></li>
+        <li><a{class_str} href="{prefix}past-services.html" style="padding-left: 40px; border-left: 2px solid rgba(255,255,255,0.2);">- Past Services</a></li>
         <li><a{class_str} href="{prefix}resources.html" style="padding-left: 40px; border-left: 2px solid rgba(255,255,255,0.2);">- Resources</a></li>
-        <li><a{class_str} href="{prefix}give.html">Give</a></li>
+        <li><a{class_str} href="{prefix}give.html" style="padding-left: 40px; border-left: 2px solid rgba(255,255,255,0.2);">- Give</a></li>
+        <li><a{class_str} href="{prefix}search.html" style="padding-left: 40px; border-left: 2px solid rgba(255,255,255,0.2);">- Search</a></li>
+        <li><a{class_str} href="{prefix}past-announcements.html" style="padding-left: 40px; border-left: 2px solid rgba(255,255,255,0.2);">- Past Announcements</a></li>
     '''
         new_mobile_nav = f'<ul class="mobile-nav-links">{replacement_mobile}</ul>'
 
