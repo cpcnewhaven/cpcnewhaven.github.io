@@ -8,9 +8,11 @@
 
 ## Directory Structure
 
+See **[DIRECTORY_STRUCTURE.md](file:///Users/agworkywork/work/cpcnewhaven.github.io/DIRECTORY_STRUCTURE.md)** for the full, detailed architecture mapping.
+
 ```
 /
-├── *.html              # 41 static pages (main content)
+├── *.html              # 43 static pages (main content)
 ├── src/css/            # Stylesheets by feature
 ├── src/js/             # Client-side JavaScript
 ├── data/               # JSON content files
