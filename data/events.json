@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-23T11:27:28.267596-04:00",
+  "generatedAt": "2026-09-24T11:49:25.076144-04:00",
   "source": "CPC Google Calendar",
   "events": [
     {
@@ -23,6 +23,12 @@
     {
       "date": "2026-10-03",
       "title": "Women's Conference at CPC",
+      "description": "",
+      "allDay": false
+    },
+    {
+      "date": "2026-10-04",
+      "title": "Congregational Photo",
       "description": "",
       "allDay": false
     },
@@ -65,12 +71,6 @@
     {
       "date": "2026-10-12",
       "title": "SLB Meeting",
-      "description": "",
-      "allDay": false
-    },
-    {
-      "date": "2026-10-13",
-      "title": "Shepherd Meeting",
       "description": "",
       "allDay": false
     }
