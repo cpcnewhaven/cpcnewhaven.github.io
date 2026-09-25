@@ -35,7 +35,7 @@
       "title": "Parent Meeting | Sunday, August 23",
       "description": "As we prepare for another year of Sunday School, we'd love for all parents of children participating in Sunday School (2 &amp; 3 year olds through 12th grade) to join us for a brief meeting immediately following the morning worship service in the Sanctuary. Pastor Jerry and our Sunday School teachers will share the vision for the coming year, introduce the new curriculum, explain what families can expect and give space for questions. We look forward to partnering with you as we seek to help our covenant children know, love, and follow Christ.",
       "dateEntered": "2026-08-07",
-      "active": true,
+      "active": false,
       "type": "event",
       "category": "event",
       "tag": "family"
@@ -45,7 +45,7 @@
       "title": "Mercy Day! | August 29",
       "description": "BOTH Volunteers and Mercy Projects Needed! To truly love and serve one another, we'll tackle projects for those who need any help. Each project will have a dedicated project lead/captain who will give instructions to volunteers.<br/><a href=\"https://us.list-manage.com/Um6Ff7b001b?e=9da175cc40&amp;c2id=6df9b900f2d1d0ec64fac5dfc299411c\" target=\"_blank\">Sign up here!</a>",
       "dateEntered": "2026-08-07",
-      "active": true,
+      "active": false,
       "type": "event",
       "category": "event",
       "tag": "mercy"
@@ -55,7 +55,7 @@
       "title": "Volunteers Still Needed! | Serve with CPC in the Hill",
       "description": "Wednesday Night Summer BBQs (July 1-August 19) | Trowbridge Square Park in the Hill: 169 Cedar St, New Haven, CT 06519. Volunteers needed to help set up, serve, and clean up (4:45pm-7:00pm).<br/><a href=\"https://us.list-manage.com/TjLgfgRTZ9j?e=9da175cc40&amp;c2id=6df9b900f2d1d0ec64fac5dfc299411c\" target=\"_blank\">Sign up here!</a>",
       "dateEntered": "2026-08-07",
-      "active": true,
+      "active": false,
       "type": "event",
       "category": "event",
       "tag": "mercy"
@@ -65,7 +65,7 @@
       "title": "Men's Bike Ride &amp; Lunch | Saturday, August 1 @11am",
       "description": "Bike ride the Canal trail to Mikro for lunch, meeting at 11am at CPC parking lot.<br/>Sign up sheet in the foyer.",
       "dateEntered": "2026-06-21",
-      "active": true,
+      "active": false,
       "type": "event",
       "category": "event",
       "tag": "men"
@@ -75,7 +75,7 @@
       "title": "New Ministry Year Begins! | Save these Dates:",
       "description": "Young Adults Beach Hang | Saturday, September 12<br/>CPC Women's Conference | Saturday, October 3<br/>Parenting Seminar | Saturday, November 7",
       "dateEntered": "2026-08-07",
-      "active": true,
+      "active": false,
       "type": "announcement",
       "category": "announcement",
       "tag": "community"
@@ -85,7 +85,7 @@
       "title": "Welcome Sunday | September 13",
       "description": "Everything launches this Sunday! We’ll be starting our new Sermon Series in the Book of Acts, and our normal Sunday schedule resumes with Children’s Sunday School and Adult Sunday Studies beginning at 9:30am. All are welcome. <a class=\"highlight-cta\" href=\"welcome-sunday-2026-09-13.html\">View Welcome Sunday details</a>",
       "dateEntered": "2026-08-28",
-      "active": true,
+      "active": false,
       "type": "event",
       "category": "event",
       "tag": "community"
@@ -105,7 +105,7 @@
       "title": "Men’s Night | Next Friday, September 18 @ 6:30pm",
       "description": "All men are invited for a night of worship, prayer, and fellowship as we launch the year’s men’s ministry. We’re praying for more intentional engagement with each other, so don’t miss this launching event!",
       "dateEntered": "2026-09-15",
-      "active": true,
+      "active": false,
       "type": "event",
       "category": "event",
       "tag": "men"
@@ -113,7 +113,7 @@
     {
       "id": "2026-075",
       "title": "CPC Women’s Conference | Saturday, October 3",
-      "description": "<a class=\"highlight-cta\" href=\"https://us.list-manage.com/9gh5NxznxOJ?e=9da175cc40&amp;c2id=6df9b900f2d1d0ec64fac5dfc299411c\" target=\"_blank\" rel=\"noopener\">Register</a> today!<br>Women of all ages are warmly invited to join us to explore what it means to flourish through our participation in the body of Christ together. Refreshments and lunch will be provided, with plenty of time throughout the day for fellowship and meaningful conversation with sisters in Christ. Followed by a mocktail happy hour!",
+      "description": "<a class=\"highlight-cta\" href=\"cpc-womens-conference-2026-10-03.html\">Event Details &amp; Registration</a><br>Women of all ages are warmly invited to join us to explore what it means to flourish through our participation in the body of Christ together. Refreshments and lunch will be provided, with plenty of time throughout the day for fellowship and meaningful conversation with sisters in Christ. Followed by a mocktail happy hour! <a href=\"https://us.list-manage.com/9gh5NxznxOJ?e=9da175cc40&amp;c2id=6df9b900f2d1d0ec64fac5dfc299411c\" target=\"_blank\" rel=\"noopener\">Register directly &rarr;</a>",
       "dateEntered": "2026-09-15",
       "active": true,
       "type": "event",
@@ -125,7 +125,7 @@
       "title": "Mom’s Discipleship Group | Wednesday, September 16 @ 9:45am",
       "description": "Please join us! CPC Moms discipleship group will begin meeting monthly on 9/16/26 in the Fellowship Hall at 9:45am. Children are welcome to play near us while we meet. We will discuss selected podcasts from Ruth Chou Simons, a gifted writer of over 10 books, artist, mother of 6, podcaster, and founder of GraceLaced. Future dates: 10/14, 11/11, no Dec, 1/13/27. Please inquire with any young mom, or Meg Bogue with questions, <a href=\"mailto:mhbogue@me.com\">mhbogue@me.com</a>.",
       "dateEntered": "2026-09-15",
-      "active": true,
+      "active": false,
       "type": "ongoing",
       "category": "ongoing",
       "tag": "women"
@@ -139,6 +139,26 @@
       "type": "ongoing",
       "category": "ongoing",
       "tag": "women"
+    },
+    {
+      "id": "2026-078",
+      "title": "CPC Mercy Ministry Care Teams",
+      "description": "As a part of the wider mercy ministries at CPC, Care Teams have been created to serve as church-wide care for anyone in our congregation with a need. You can sign up for a team that matches your serving-ability or skill set, so that people at CPC are aware of the resources and gifts we have within our family, and thus can lean upon one another. <a class=\"highlight-cta\" href=\"cpc-care-teams.html\">Complete the interest form</a>.",
+      "dateEntered": "2026-09-22",
+      "active": true,
+      "type": "ongoing",
+      "category": "ongoing",
+      "tag": "mercy"
+    },
+    {
+      "id": "2026-079",
+      "title": "Sign Up For Our Weekly Communication!",
+      "description": "Each week we send an e-newsletter out to the congregation to help everyone connect! To sign up to receive the newsletter, <a class=\"highlight-cta\" href=\"connect.html#footer-cta-a\">visit the link to enter your email address</a>.",
+      "dateEntered": "2026-09-22",
+      "active": true,
+      "type": "ongoing",
+      "category": "ongoing",
+      "tag": "community"
     },
     {
       "id": "2026-063",

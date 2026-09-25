@@ -6,9 +6,14 @@
       "category": "Education"
     },
     {
-      "title": "2025 Missions Trip",
-      "url": "2025-missions-trip.html",
-      "category": "Missions"
+      "title": "CPC Women’s Conference – October 3, 2026",
+      "url": "cpc-womens-conference-2026-10-03.html",
+      "category": "Events"
+    },
+    {
+      "title": "CPC Care Teams Interest Form",
+      "url": "cpc-care-teams.html",
+      "category": "Events"
     },
     {
       "title": "Media Gallery",
@@ -17,7 +22,7 @@
     },
     {
       "title": "Church Community Builder",
-      "url": "https://ccb.cpcnewhaven.org",
+      "url": "https://cpcnewhaven.ccbchurch.com/goto/login",
       "category": "Community"
     },
     {
@@ -54,6 +59,26 @@
       "title": "Admin Control Center",
       "url": "a-c-c.html",
       "category": "Administrative"
+    },
+    {
+      "title": "Congregational Meeting – August 30, 2026",
+      "url": "congregational-meeting-2026-08-30.html",
+      "category": "Archive"
+    },
+    {
+      "title": "Mercy Day Registration – May 2, 2026",
+      "url": "mercy.html",
+      "category": "Archive"
+    },
+    {
+      "title": "2025 Missions Trip",
+      "url": "2025-missions-trip.html",
+      "category": "Archive"
+    },
+    {
+      "title": "Thanksgiving Fellowship Meals – November 27, 2025",
+      "url": "https://cpcnewhaven.ccbchurch.com/goto/forms/171/responses/new",
+      "category": "Archive"
     }
   ]
 } 

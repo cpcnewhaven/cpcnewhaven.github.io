@@ -1,0 +1,56 @@
+{
+  "staff": [
+    { "name": "Craig Luekens", "title": "Senior Pastor", "email": "craig.luekens@cpcnewhaven.org", "slug": "craig-luekens" },
+    { "name": "Jerry Ornelas", "title": "Assistant Pastor", "email": "jerry.ornelas@cpcnewhaven.org", "slug": "jerry-ornelas" },
+    { "name": "Preston Graham", "title": "Pastor Emeritus", "email": "preston.graham@cpcnewhaven.org", "slug": "preston-graham" },
+    { "name": "Alexis Vano", "title": "Administrative Coordinator", "email": "admin@cpcnewhaven.org", "slug": "alexis-vano" },
+    { "name": "Alex Gonzalez", "title": "AV Director", "email": "alex@cpcnewhaven.org", "slug": "alex-gonzalez" },
+    { "name": "Christopher Battista", "title": "Audio and IT Specialist", "email": "chris@cpcnewhaven.org", "slug": "christopher-battista" },
+    { "name": "Jennifer Cheng", "title": "Music Coordinator", "email": "jennifer@cpcnewhaven.org", "status": "sabbatical", "slug": "jennifer-cheng" },
+    { "name": "Paul Wildey", "title": "Sexton", "email": "paulwildy2018@gmail.com", "slug": "paul-wildey" },
+    { "name": "Barbara Battista", "title": "Facilities Coordinator", "email": "barbbattista@yahoo.com", "slug": "barbara-battista" }
+  ],
+  "session": [
+    { "name": "Craig Luekens", "role": "Senior Pastor / Moderator", "email": "craig.luekens@cpcnewhaven.org" },
+    { "name": "Tyler Rice", "role": "Clerk", "email": "tylerarice@gmail.com" },
+    { "name": "David Taylor", "role": "Finance", "email": "david.taylor@cpcnewhaven.org" },
+    { "name": "George Levesque", "role": "Elder", "email": "george.levesque@yale.edu" },
+    { "name": "Peter Chuchta", "role": "Elder", "email": "lilwndr32@yahoo.com" },
+    { "name": "Preston Graham", "role": "Emeritus", "email": "preston.graham@cpcnewhaven.org" },
+    { "name": "Rob Hawkes", "role": "Emeritus", "email": null },
+    { "name": "Alan Phillips", "role": "Emeritus Member", "email": null },
+    { "name": "Josh Kebabian", "role": "Elder (Sabbatical)", "email": null }
+  ],
+  "womensLeadershipBoard": [
+    { "name": "Stacy Roney", "role": "Moderator", "email": "mrsprofdoc@icloud.com" },
+    { "name": "Diane Miller", "role": "Clerk", "email": "diane.miller@cpcnewhaven.org" },
+    { "name": "Peggy Kebabian", "role": "Member", "email": "kebabianp@gmail.com" },
+    { "name": "Jennifer Cheng", "role": "Member (Sabbatical)", "email": "jennifer@cpcnewhaven.org" },
+    { "name": "Meg Bogue", "role": "Member", "email": "mhbogue@me.com" },
+    { "name": "Tanilla Brown", "role": "Member", "email": "tanillabrown@yahoo.com" },
+    { "name": "Patty Chuchta", "role": "Member", "email": "patty.gantenbein@comcast.net" },
+    { "name": "Lisa Hawkes", "role": "Emeritus", "email": "lisa.m.hawkes@gmail.com" }
+  ],
+  "servantLeadershipBoard": [
+    { "name": "Craig Luekens", "role": "Moderator", "email": "craig.luekens@cpcnewhaven.org" },
+    { "name": "Gary Wininger", "role": "Security", "email": "gwininger@proton.me" },
+    { "name": "Paul Wildey", "role": "Sexton", "email": "paulwildy2018@gmail.com" },
+    { "name": "Crossan Cooper", "role": "Welcome", "email": "crossan.cooper@yale.edu" },
+    { "name": "Layne Boles", "role": "Mercy Coordinator", "email": "admin@cpcnewhaven.org" },
+    { "name": "Michelle Chabla Ornelas", "role": "Nursery", "email": "michelle.chabla@gmail.com" },
+    { "name": "Barbara Battista", "role": "Facilities", "email": "barbbattista@yahoo.com" },
+    { "name": "Evan Finch", "role": "Member", "email": "LEvanFinch@gmail.com" },
+    { "name": "Josh Sanders", "role": "Member", "email": "joshuatsanders@yahoo.com" },
+    { "name": "Pat Clendenen", "role": "Member", "email": "pat.clendenen@gmail.com" },
+    { "name": "Megan Paek", "role": "Food Service", "email": null }
+  ],
+  "lifeGroupLeaders": [
+    { "group": "Downtown New Haven Wednesday", "leader": "Colleen Rice", "email": "c.mccormack418@gmail.com" },
+    { "group": "Downtown New Haven Thursday", "leader": "Allison Luekens", "email": "allison.luekens@gmail.com" },
+    { "group": "Hamden / North Haven", "leader": "Peter Chuchta", "email": "lilwndr32@yahoo.com" },
+    { "group": "East Rock", "leader": "Trey Billings", "email": "treybillings@gmail.com" },
+    { "group": "Trumbull", "leader": "Stacy Roney", "email": "mrsprofdoc@icloud.com" },
+    { "group": "Shoreline Saturday", "leader": "Cliff Bogue", "email": "mhbogue@yahoo.com" },
+    { "group": "West Side (Woodbridge/Westville)", "leader": "Miranda Healy", "email": "mirandajrdn8@gmail.com" }
+  ]
+}

@@ -149,7 +149,7 @@
                 <template x-for="episode in filteredEpisodes" :key="episode.number">
                     <div class="episode-card">
                         <div class="episode-number">Episode <span x-text="episode.number"></span></div>
-                        <div class="episode-date" x-text="episode.date_added"></div>
+                        <div class="episode-date"><span x-text="episode.date_added"></span><span x-show="episode.duration"> · <span x-text="episode.duration"></span></span></div>
                         <h3 class="episode-title" x-text="episode.title"></h3>
                         <div class="episode-guest" x-text="episode.guest"></div>
                         <a :href="episode.link" class="episode-listen-btn" target="_blank">
@@ -165,7 +165,7 @@
                     <div class="episode-list-item">
                         <div class="episode-list-info">
                             <div class="episode-list-number">Episode <span x-text="episode.number"></span></div>
-                            <div class="episode-list-date" x-text="episode.date_added"></div>
+                            <div class="episode-list-date"><span x-text="episode.date_added"></span><span x-show="episode.duration"> · <span x-text="episode.duration"></span></span></div>
                             <h3 class="episode-list-title" x-text="episode.title"></h3>
                             <div class="episode-list-guest" x-text="episode.guest"></div>
                         </div>
