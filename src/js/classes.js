@@ -17,9 +17,9 @@ window.classesData = function() {
             
             // Load all class data
             const classFiles = [
-                { name: 'Biblical Interpretation', file: 'biblical-interpretation.json' },
-                { name: 'Confessional Theology', file: 'confessional-theology.json' },
-                { name: 'Membership Seminar', file: 'membership-seminar.json' }
+                { tag: 'biblical-interpretation', name: 'Biblical Interpretation', file: 'biblical-interpretation.json' },
+                { tag: 'confessional-theology', name: 'Confessional Theology', file: 'confessional-theology.json' },
+                { tag: 'membership-seminar', name: 'Membership Seminar', file: 'membership-seminar.json' }
             ];
             
             const loadPromises = classFiles.map(classInfo => 
@@ -33,6 +33,7 @@ window.classesData = function() {
                     .then(data => ({
                         ...data,
                         className: classInfo.name,
+                        classTag: classInfo.tag,
                         episodeCount: data.episodes ? data.episodes.length : 0
                     }))
                     .catch(error => {
@@ -47,6 +48,19 @@ window.classesData = function() {
                     this.filteredClasses = [...this.classes];
                     this.loadingComplete = true;
                     console.log('Classes loaded:', this.classes.length);
+
+                    // Handle URL hash after classes have been loaded
+                    if (window.location.hash) {
+                        this.$nextTick(() => {
+                            const target = document.getElementById(window.location.hash.substring(1));
+                            if (target) {
+                                target.scrollIntoView({
+                                    behavior: 'smooth',
+                                    block: 'start'
+                                });
+                            }
+                        });
+                    }
                 })
                 .catch(error => {
                     console.error('Error loading classes:', error);

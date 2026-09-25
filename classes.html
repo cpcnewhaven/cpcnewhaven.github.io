@@ -146,7 +146,7 @@
             <div x-show="classes.length > 0 && viewMode === 'card'" class="classes-grid">
                 <template x-for="classData in filteredClasses" :key="classData.className">
                     <div class="class-card">
-                        <div class="class-header">
+                        <div class="class-header" :id="classData.classTag">
                             <h3 x-text="classData.title"></h3>
                             <span class="episode-count" x-text="`${classData.episodeCount} episodes`"></span>
                         </div>
@@ -198,7 +198,7 @@
             <div x-show="classes.length > 0 && viewMode === 'list'" class="classes-list">
                 <template x-for="classData in filteredClasses" :key="classData.className">
                     <div class="class-list-section">
-                        <div class="class-list-header">
+                        <div class="class-list-header" :id="classData.classTag">
                             <h3 x-text="classData.title"></h3>
                             <span class="episode-count" x-text="`${classData.episodeCount} episodes`"></span>
                         </div>
@@ -300,6 +300,7 @@
             margin-bottom: 1.5rem;
             padding-bottom: 1rem;
             border-bottom: 2px solid #f3f4f6;
+            scroll-margin-top: 80px;
         }
 
         .class-header h3 {
