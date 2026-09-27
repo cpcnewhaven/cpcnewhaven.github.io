@@ -1,23 +1,23 @@
 /* What's New Section Styling */
 .whats-new-section {
-    padding: 80px 20px;
+    padding: 56px 20px 64px;
     background: linear-gradient(180deg, #ffffff 0%, #f4f7f9 100%);
     position: relative;
     overflow: hidden;
 }
 
 .whats-new-section .container {
-    max-width: 1200px; /* Calculated 3 cards at 447.52px each with two 30px gaps when full. Not sure what is limiting width when there is plenty of space. Can set to min-width instead of max-width, but will not collapse properly on small screens. Header is not centered.*/
+    max-width: 1320px;
     margin: 0 auto;
 }
 
 .whats-new-header {
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 32px;
 }
 
 .whats-new-header h2 {
-    font-size: 3rem;
+    font-size: clamp(2.2rem, 4vw, 2.8rem);
     color: #1a1a1a;
     margin-bottom: 15px;
     font-weight: 700;
@@ -33,8 +33,10 @@
 
 .whats-new-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 350px), 1fr));
+    gap: 24px;
+    max-width: 960px;
+    margin: 0 auto;
 }
 
 /* Card Styling */
@@ -44,9 +46,9 @@
     -webkit-backdrop-filter: blur(10px);
     border-radius: 24px;
     border: 1px solid rgba(255, 255, 255, 0.8);
-    padding: 30px;
+    padding: 26px 30px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -69,7 +71,7 @@
 }
 
 .whats-new-card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-4px);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
     background: rgba(255, 255, 255, 0.9);
 }
@@ -107,7 +109,7 @@
 }
 
 .whats-new-card h3 {
-    font-size: 1.5rem;
+    font-size: 1.35rem;
     font-weight: 600;
     line-height: 1.3;
     margin-bottom: 15px;
@@ -329,7 +331,7 @@
 /* Responsive Adjustments */
 @media (max-width: 768px) {
     .whats-new-section {
-        padding: 50px 15px;
+        padding: 42px 16px 48px;
     }
 
     .whats-new-header h2 {
