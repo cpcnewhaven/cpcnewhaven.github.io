@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-28T14:36:21.385181-04:00",
+  "generatedAt": "2026-09-29T12:53:53.942406-04:00",
   "source": "CPC Google Calendar",
   "events": [
     {
@@ -22,12 +22,6 @@
     },
     {
       "date": "2026-10-04",
-      "title": "Newcomer's Lunch",
-      "description": "",
-      "allDay": true
-    },
-    {
-      "date": "2026-10-04",
       "title": "Sunday School Adults and Children",
       "description": "",
       "allDay": false
@@ -41,6 +35,12 @@
     {
       "date": "2026-10-11",
       "title": "Fellowship Lunch",
+      "description": "",
+      "allDay": false
+    },
+    {
+      "date": "2026-10-11",
+      "title": "Newcomer's Lunch",
       "description": "",
       "allDay": false
     },
