@@ -102,7 +102,8 @@ data/
 │   ├── confessional-theology.json
 │   ├── emotions-spirituality.json
 │   ├── membership-seminar.json
-│   └── mission-study.json
+│   ├── mission-study.json
+│   └── wonders-of-communal-worship.json
 ├── wwb/
 │   ├── wwb-data.json             # What We Believe class outlines
 │   └── wwb1.pdf ... wwb30.pdf    # Class handout PDFs
@@ -197,7 +198,7 @@ PDF study materials organized by topic:
 - `clt/` (Christian Leadership Training): `CLT_1.pdf`, `Keller_centrality gospel.pdf`
 - `mission/`: `Mission_SS_2026_1.pdf`
 - `totalchrist/`: `1_TC.pdf` through `6_TC.pdf`
-- `worship/`: `Worship_SS_1_Intro_Theology_2026.pdf`
+- `worship/`: `Worship_SS_1_Intro_Theology_2026.pdf`, `Worship_SS_2_Distinctives_2026.pdf`, `Worship_SS_3_Purpose_2026.pdf`
 - `data/wwb/`: What We Believe booklets (`wwb1.pdf` through `wwb30.pdf`)
 
 ---

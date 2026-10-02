@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="The Wonders of Communal Worship, an Adult Sunday Study at CPC New Haven.">
+  <meta name="description" content="The Wonders of Communal Worship, an Adult Sunday Study at CPC New Haven. Explore episodes, recordings, and class study handouts.">
   <title>The Wonders of Communal Worship - CPC New Haven Church</title>
   <base href="https://cpcnewhaven.org/">
   <link rel="stylesheet" href="src/css/global-body.css?v=20260821-heroes-6">
@@ -17,33 +17,91 @@
     .dashboard-container { display: grid; grid-template-columns: minmax(190px, 220px) minmax(0, 1fr); align-items: start; }
     .sidebar.fixed-sidebar { box-sizing: border-box; position: sticky; top: 40px; width: auto; height: calc(100vh - 40px); }
     .main-content { box-sizing: border-box; min-width: 0; margin-left: 0; padding: 2rem clamp(1.5rem, 4vw, 4rem) 4rem; }
-    .study-hero { max-width: 900px; margin: 0 auto 2rem; padding: 2.5rem; border-radius: 12px; background: rgba(0, 60, 109, .08); text-align: center; }
-    .study-image { display: block; width: 100%; max-width: 900px; margin: 0 auto 2rem; border-radius: 12px; }
-    .study-hero .eyebrow { color: #003c6d; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
-    .study-hero h1 { color: #003c6d; font-size: clamp(2rem, 5vw, 3.4rem); margin: .4rem 0 1rem; }
-    .study-hero p { max-width: 650px; margin: 0 auto; font-size: 1.1rem; line-height: 1.65; }
-    .materials { max-width: 900px; margin: 2rem auto 4rem; }
-    .materials h2 { text-align: center; color: #003c6d; }
-    .materials-intro { text-align: center; margin-bottom: 1.5rem; }
-    .material-card { display: grid; grid-template-columns: 2rem minmax(0, 1fr); align-items: start; gap: 1rem; padding: 1.3rem; margin-bottom: 1rem; border: 1px solid rgba(0,60,109,.2); border-radius: 10px; background: rgba(255,255,255,.55); }
-    .material-icon { margin-top: .25rem; color: #003c6d; font-size: 1.8rem; }
-    .material-card h3 { margin: 0 0 .35rem; color: #003c6d; text-align: left; }
-    .material-card p { margin: 0; }
-    .handout-link { display: inline-flex; align-items: center; gap: .45rem; margin-top: .3rem; color: #003c6d; font-weight: 700; text-decoration: none; }
-    .handout-link::after { content: "↗"; font-size: .85em; }
-    .handout-link:hover, .handout-link:focus-visible { color: #0b5f78; text-decoration: underline; }
-    .course-roadmap { max-width: 900px; margin: 0 auto 2.5rem; }
-    .course-roadmap__intro { max-width: 650px; margin: 0 auto 1.5rem; text-align: center; }
-    .course-roadmap__eyebrow { margin: 0 0 .35rem; color: #34627d; font-size: .78rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
-    .course-roadmap h2 { margin: 0; color: #003c6d; font-size: clamp(1.65rem, 3vw, 2.25rem); text-align: center; }
-    .course-roadmap__intro > p:last-child { margin: .75rem 0 0; line-height: 1.6; }
-    .roadmap-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
-    .lesson-card { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 13px; padding: 18px; border: 1px solid rgba(0, 60, 109, .18); border-radius: 10px; background: #fff; }
-    .lesson-card__number { display: grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; background: #e7f0f5; color: #003c6d; font-size: .78rem; font-weight: 800; }
-    .lesson-card h3 { margin: 0 0 .35rem; color: #003c6d; font-size: 1.05rem; line-height: 1.25; }
-    .lesson-card p { margin: 0; color: #445765; font-size: .95rem; line-height: 1.5; }
-    .back-link { display: inline-block; margin-top: 1.5rem; color: #003c6d; font-weight: 700; }
-    @media (max-width: 768px) { .dashboard-container { display: block; } .sidebar.fixed-sidebar { display: none; } .main-content { width: 100%; padding: 1rem; } .study-hero { padding: 1.8rem 1.2rem; } .roadmap-grid { grid-template-columns: 1fr; } }
+
+    /* Study hero banner */
+    .study-hero { max-width: 920px; margin: 0 auto 1.5rem; padding: 2.5rem 2rem; border-radius: 14px; background: rgba(0, 60, 109, .08); text-align: center; border: 1px solid rgba(0, 60, 109, 0.12); }
+    .study-hero .eyebrow { color: #003c6d; font-weight: 700; font-size: 0.85rem; letter-spacing: .08em; text-transform: uppercase; margin-bottom: 0.5rem; }
+    .study-hero h1 { color: #003c6d; font-size: clamp(2rem, 5vw, 3.2rem); margin: 0.2rem 0 1rem; line-height: 1.15; }
+    .study-hero p { max-width: 680px; margin: 0 auto; font-size: 1.1rem; line-height: 1.65; color: #334155; }
+    
+    .hero-quick-links { display: flex; justify-content: center; gap: 0.75rem; flex-wrap: wrap; margin-top: 1.5rem; }
+    .hero-pill { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1.1rem; border-radius: 999px; background: #ffffff; color: #003c6d; font-size: 0.88rem; font-weight: 700; text-decoration: none; border: 1px solid rgba(0, 60, 109, 0.2); transition: all 0.2s ease; }
+    .hero-pill:hover { background: #003c6d; color: #ffffff; transform: translateY(-1px); box-shadow: 0 4px 12px rgba(0, 60, 109, 0.15); }
+
+    .study-image { display: block; width: 100%; max-width: 920px; margin: 0 auto 2.5rem; border-radius: 14px; box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08); }
+
+    /* Section intro blocks */
+    .section-intro-block { max-width: 720px; margin: 0 auto 2rem; text-align: center; }
+    .section-eyebrow { margin: 0 0 .35rem; color: #34627d; font-size: .8rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+    .section-title { margin: 0; color: #003c6d; font-size: clamp(1.75rem, 3.2vw, 2.3rem); }
+    .section-desc { margin: .75rem 0 0; line-height: 1.6; color: #475569; font-size: 1.02rem; }
+
+    /* Episode Cards */
+    .episodes-section { max-width: 920px; margin: 0 auto 3.5rem; }
+    .episode-list { display: flex; flex-direction: column; gap: 1.25rem; }
+    .episode-card { background: #ffffff; border: 1px solid rgba(0, 60, 109, 0.18); border-radius: 14px; padding: 1.6rem; box-shadow: 0 4px 18px rgba(0, 40, 80, 0.05); transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease; position: relative; overflow: hidden; }
+    .episode-card:hover { transform: translateY(-2px); box-shadow: 0 8px 26px rgba(0, 60, 109, 0.12); border-color: rgba(0, 60, 109, 0.35); }
+    .episode-card.is-latest { border-left: 5px solid #003c6d; background: linear-gradient(to right, rgba(0, 60, 109, 0.02), #ffffff); }
+    
+    .episode-meta-bar { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.75rem; }
+    .episode-badge-group { display: flex; align-items: center; gap: 0.5rem; }
+    .episode-badge { display: inline-block; padding: 0.25rem 0.75rem; border-radius: 6px; font-size: 0.8rem; font-weight: 800; background: #e7f0f5; color: #003c6d; text-transform: uppercase; letter-spacing: 0.05em; }
+    .episode-badge.new-badge { background: #003c6d; color: #ffffff; }
+    .episode-date { color: #64748b; font-size: 0.88rem; font-weight: 600; }
+    
+    .episode-card h3 { margin: 0 0 0.55rem; color: #003c6d; font-size: 1.35rem; line-height: 1.3; }
+    .episode-card p { margin: 0 0 1.2rem; color: #475569; font-size: 0.98rem; line-height: 1.6; }
+    
+    .episode-buttons { display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center; }
+    .btn-spotify { display: inline-flex; align-items: center; gap: 0.55rem; padding: 0.65rem 1.25rem; border-radius: 8px; background: #121212; color: #ffffff; font-weight: 700; font-size: 0.9rem; text-decoration: none; transition: all 0.2s ease; }
+    .btn-spotify:hover { background: #1db954; color: #ffffff; transform: translateY(-1px); }
+    .btn-handout { display: inline-flex; align-items: center; gap: 0.55rem; padding: 0.65rem 1.25rem; border-radius: 8px; background: rgba(0, 60, 109, 0.08); color: #003c6d; font-weight: 700; font-size: 0.9rem; text-decoration: none; border: 1px solid rgba(0, 60, 109, 0.2); transition: all 0.2s ease; }
+    .btn-handout:hover { background: rgba(0, 60, 109, 0.16); color: #002244; transform: translateY(-1px); }
+    .btn-disabled { display: inline-flex; align-items: center; gap: 0.55rem; padding: 0.65rem 1.25rem; border-radius: 8px; background: #f1f5f9; color: #94a3b8; font-weight: 700; font-size: 0.9rem; border: 1px solid #cbd5e1; cursor: not-allowed; }
+
+    /* Handouts Grid */
+    .handouts-section { max-width: 920px; margin: 0 auto 3.5rem; padding: 2.2rem; background: rgba(0, 60, 109, 0.04); border-radius: 14px; border: 1px solid rgba(0, 60, 109, 0.12); }
+    .handouts-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin-top: 1.5rem; }
+    .handout-item { background: #ffffff; border: 1px solid rgba(0, 60, 109, 0.16); border-radius: 10px; padding: 1.2rem; display: flex; flex-direction: column; justify-content: space-between; transition: all 0.2s ease; }
+    .handout-item:hover { border-color: #003c6d; transform: translateY(-2px); box-shadow: 0 4px 14px rgba(0, 60, 109, 0.08); }
+    .handout-item-top { display: flex; align-items: flex-start; gap: 0.85rem; margin-bottom: 1rem; }
+    .handout-pdf-icon { font-size: 1.8rem; color: #c0392b; flex-shrink: 0; margin-top: 0.1rem; }
+    .handout-item h4 { margin: 0 0 0.25rem; color: #003c6d; font-size: 1.02rem; line-height: 1.35; }
+    .handout-item-meta { font-size: 0.8rem; color: #64748b; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; }
+    .handout-item-btn { display: inline-flex; align-items: center; justify-content: center; gap: 0.45rem; padding: 0.5rem 0.85rem; border-radius: 6px; background: #e7f0f5; color: #003c6d; font-weight: 700; font-size: 0.85rem; text-decoration: none; transition: all 0.2s ease; }
+    .handout-item-btn:hover { background: #003c6d; color: #ffffff; }
+
+    /* Course Roadmap */
+    .course-roadmap { max-width: 920px; margin: 0 auto 3rem; }
+    .roadmap-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+    .lesson-card { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 14px; padding: 20px; border: 1px solid rgba(0, 60, 109, .18); border-radius: 12px; background: #fff; transition: all 0.2s ease; }
+    .lesson-card:hover { border-color: rgba(0, 60, 109, 0.4); transform: translateY(-2px); box-shadow: 0 6px 18px rgba(0, 60, 109, 0.08); }
+    .lesson-card.is-active { border-color: #003c6d; box-shadow: 0 4px 16px rgba(0, 60, 109, 0.09); }
+    .lesson-card__number { display: grid; place-items: center; width: 38px; height: 38px; border-radius: 50%; background: #e7f0f5; color: #003c6d; font-size: .85rem; font-weight: 800; flex-shrink: 0; }
+    .lesson-card.is-active .lesson-card__number { background: #003c6d; color: #ffffff; }
+    .lesson-card-header { display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; margin-bottom: 0.35rem; }
+    .lesson-status-tag { font-size: 0.72rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em; padding: 2px 7px; border-radius: 4px; }
+    .status-available { background: #e8f5e9; color: #2e7d32; }
+    .status-latest { background: #003c6d; color: #ffffff; }
+    .status-upcoming { background: #f1f5f9; color: #64748b; }
+    .lesson-card h3 { margin: 0; color: #003c6d; font-size: 1.05rem; line-height: 1.3; }
+    .lesson-card p { margin: 0.35rem 0 0; color: #445765; font-size: .93rem; line-height: 1.5; }
+
+    .back-nav { max-width: 920px; margin: 2rem auto 0; text-align: left; }
+    .back-link { display: inline-flex; align-items: center; gap: 0.5rem; color: #003c6d; font-weight: 700; text-decoration: none; font-size: 1rem; }
+    .back-link:hover { color: #0b5f78; text-decoration: underline; }
+
+    @media (max-width: 768px) {
+      .dashboard-container { display: block; }
+      .sidebar.fixed-sidebar { display: none; }
+      .main-content { width: 100%; padding: 1.25rem; }
+      .study-hero { padding: 1.8rem 1.2rem; }
+      .roadmap-grid { grid-template-columns: 1fr; }
+      .episode-card { padding: 1.25rem; }
+      .episode-buttons { flex-direction: column; align-items: stretch; }
+      .btn-spotify, .btn-handout { justify-content: center; }
+      .handouts-section { padding: 1.5rem 1rem; }
+    }
   </style>
 </head>
 <body class="adult-studies-page">
@@ -57,12 +115,13 @@
   </header>
   <div class="hamburger-menu-button-container" id="hamburgerMenu"><i id="closeMobileMenuButton" class="fas fa-bars"></i></div>
   <nav class="mobile-navigation" id="mobileNavigation"><div class="mobile-nav-header"><button id="closeMenuButton" aria-label="Close menu"><i class="fas fa-times"></i></button></div><ul class="mobile-nav-links"><li><a class="mobile-menu-link" href="index.html">Home</a></li><li><a class="mobile-menu-link" href="sundays.html">Sundays</a></li><li><a class="mobile-menu-link" href="adult-sunday-school.html">Adult Sunday Studies</a></li><li><a class="mobile-menu-link" href="sunday-sermons.html">Sermons</a></li><li><a class="mobile-menu-link" href="about.html">About</a></li><li><a class="mobile-menu-link" href="community.html">Community</a></li><li><a class="mobile-menu-link" href="events.html">Events</a></li><li><a class="mobile-menu-link" href="give.html">Give</a></li></ul></nav>
+
   <div class="dashboard-container">
     <aside class="sidebar fixed-sidebar">
       <img src="./assets/CPC_LOGO_24.png" class="sidebar-logo" alt="CPC New Haven Church">
       <h1><a href="adult-sunday-school.html">Adult Sunday Studies</a></h1><hr>
       <ul>
-        <li><a href="/sunday-studies/wonders-of-communal-worship.html">The Wonders of Communal Worship</a></li>
+        <li><a href="/sunday-studies/wonders-of-communal-worship.html" aria-current="page">The Wonders of Communal Worship</a></li>
         <li><a href="/sunday-studies/emotions-spirituality.html">Emotions &amp; Spirituality</a></li>
         <li><a href="/sunday-studies/mission-study.html">Mission Study</a></li>
         <li><a href="/sunday-studies/walking-through-sinai.html">Walking With Jesus Through Sinai</a></li>
@@ -72,39 +131,269 @@
         <li><a href="/sunday-studies/total-christ.html">Total Christ</a></li>
       </ul>
     </aside>
+
     <main class="main-content">
       <section class="study-hero">
-        <p class="eyebrow">Adult Sunday Studies · 9:30am</p>
+        <p class="eyebrow">Adult Sunday Studies · Sundays at 9:30am · Fall 2026</p>
         <h1>The Wonders of Communal Worship</h1>
         <p>A six-week study of the God-centered worship Christ gives to his church—shaped by his Word, shared by his people, and offered together in the life of the church.</p>
+        <div class="hero-quick-links">
+          <a href="#episodes" class="hero-pill"><i class="fab fa-spotify"></i> Listen to Episodes</a>
+          <a href="#handouts" class="hero-pill"><i class="fas fa-file-pdf"></i> Class Handouts</a>
+          <a href="#course-roadmap" class="hero-pill"><i class="fas fa-list-ol"></i> 6-Week Roadmap</a>
+        </div>
       </section>
+
       <img class="study-image" src="https://storage.googleapis.com/cpc-public-website/adult-studies/fall2026/THE%20WONDERS%20OF%20COMMUNAL%20WORSHIP.jpg" alt="The Wonders of Communal Worship">
-      <section class="course-roadmap" aria-labelledby="course-roadmap-title">
-        <div class="course-roadmap__intro">
-          <p class="course-roadmap__eyebrow">Fall 2026 · Course outline</p>
-          <h2 id="course-roadmap-title">A six-week roadmap</h2>
-          <p>We will trace the theology, practices, and gospel-shaped movements of worship from gathering to benediction.</p>
+
+      <!-- EPISODES SECTION -->
+      <section class="episodes-section" id="episodes" aria-labelledby="episodes-heading">
+        <div class="section-intro-block">
+          <p class="section-eyebrow">Audio Recordings &amp; Handouts</p>
+          <h2 class="section-title" id="episodes-heading">Class Episodes</h2>
+          <p class="section-desc">Listen to classroom recordings on Spotify and study along with the companion handouts. Episodes 1 through 3 are available now, with Episode 4 coming soon.</p>
         </div>
+
+        <div class="episode-list">
+          <!-- Episode 4 (Upcoming) -->
+          <article class="episode-card">
+            <div class="episode-meta-bar">
+              <div class="episode-badge-group">
+                <span class="episode-badge">Episode 04</span>
+                <span class="lesson-status-tag status-upcoming">Coming Soon · Oct 4</span>
+              </div>
+              <span class="episode-date">October 4, 2026</span>
+            </div>
+            <h3>Entering God’s Presence: Adoration &amp; Confession</h3>
+            <p>Exploring Movements 1 &amp; 2 of covenantal worship: biblical patterns of entering God’s presence, the transcendent holiness of God, and the gospel arc shaped by adoration, confession, and assurance of pardon.</p>
+            <div class="episode-buttons">
+              <span class="btn-disabled">
+                <i class="fab fa-spotify" aria-hidden="true"></i> Spotify Recording Coming Soon
+              </span>
+              <span class="btn-disabled">
+                <i class="fas fa-file-pdf" aria-hidden="true"></i> Handout #4 (Coming Soon)
+              </span>
+            </div>
+          </article>
+
+          <!-- Episode 3 (Latest Available) -->
+          <article class="episode-card is-latest">
+            <div class="episode-meta-bar">
+              <div class="episode-badge-group">
+                <span class="episode-badge new-badge">Episode 03</span>
+                <span class="lesson-status-tag status-latest">Latest Episode</span>
+              </div>
+              <span class="episode-date">September 27, 2026</span>
+            </div>
+            <h3>The Purposes of Communal Worship</h3>
+            <p>Expanding on how the Word becomes flesh with the purpose of drawing all people into communion with God in Christ by the Spirit. Contrasting true communion against revivalism/decisionism and duty/works-based worship, understanding the incarnation and ascension paradigms, and considering gospel priorities for culture, language, and doxological evangelism.</p>
+            <div class="episode-buttons">
+              <a href="https://open.spotify.com/episode/4I2ZY2RsmbZVAA7KRcx8hr?si=LzdGyDgOQoONzHWDZuRBAA" target="_blank" rel="noopener" class="btn-spotify">
+                <i class="fab fa-spotify" aria-hidden="true"></i> Listen on Spotify
+              </a>
+              <a href="/sunday-studies/handouts/worship/Worship_SS_3_Purpose_2026.pdf" target="_blank" rel="noopener" class="btn-handout">
+                <i class="fas fa-file-pdf" aria-hidden="true"></i> Handout #3 (PDF)
+              </a>
+            </div>
+          </article>
+
+          <!-- Episode 2 -->
+          <article class="episode-card">
+            <div class="episode-meta-bar">
+              <div class="episode-badge-group">
+                <span class="episode-badge">Episode 02</span>
+                <span class="lesson-status-tag status-available">Available</span>
+              </div>
+              <span class="episode-date">September 20, 2026</span>
+            </div>
+            <h3>The Distinctives of Communal Worship</h3>
+            <p>The when, how, and what of worship. Examining why we worship on the Lord’s Day, the 7 core principles of communal worship, the regulative principle (Word-prescribed elements: songs/prayers, Word, sacraments, fellowship), and distinguishing God's prescribed elements from culturally directed forms. Jesus is our elder brother, high priest, and true Worship Leader.</p>
+            <div class="episode-buttons">
+              <a href="https://open.spotify.com/episode/0o3ooNOg20VrOmHJaZhkYN?si=EQlnDXaqR0i9BfypEABMDQ" target="_blank" rel="noopener" class="btn-spotify">
+                <i class="fab fa-spotify" aria-hidden="true"></i> Listen on Spotify
+              </a>
+              <a href="/sunday-studies/handouts/worship/Worship_SS_2_Distinctives_2026.pdf" target="_blank" rel="noopener" class="btn-handout">
+                <i class="fas fa-file-pdf" aria-hidden="true"></i> Handout #2 (PDF)
+              </a>
+            </div>
+          </article>
+
+          <!-- Episode 1 -->
+          <article class="episode-card">
+            <div class="episode-meta-bar">
+              <div class="episode-badge-group">
+                <span class="episode-badge">Episode 01</span>
+                <span class="lesson-status-tag status-available">Available</span>
+              </div>
+              <span class="episode-date">September 13, 2026</span>
+            </div>
+            <h3>Overall Theology of Worship</h3>
+            <p>Laying the foundation: worship starts and ends with God. God-centered worship reflects who God is, creation's purpose to worship Him, Old Testament temple presence fulfilled in Christ and the Church, and why the Sabbath rest points toward the new creation as an eschatological sign.</p>
+            <div class="episode-buttons">
+              <a href="https://open.spotify.com/episode/0wKxmVxWaDIJX9XmTx6AlL?si=57zIjHO5QD2TaBvggMnVBg" target="_blank" rel="noopener" class="btn-spotify">
+                <i class="fab fa-spotify" aria-hidden="true"></i> Listen on Spotify
+              </a>
+              <a href="/sunday-studies/handouts/worship/Worship_SS_1_Intro_Theology_2026.pdf" target="_blank" rel="noopener" class="btn-handout">
+                <i class="fas fa-file-pdf" aria-hidden="true"></i> Handout #1 (PDF)
+              </a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- HANDOUTS SECTION -->
+      <section class="handouts-section" id="handouts" aria-labelledby="handouts-heading">
+        <div class="section-intro-block" style="margin-bottom: 1.25rem;">
+          <p class="section-eyebrow">Study Guides &amp; Readings</p>
+          <h2 class="section-title" id="handouts-heading">Class Handouts</h2>
+          <p class="section-desc">Download or print companion study guides, Scripture passages, and discussion outlines prepared for each session.</p>
+        </div>
+
+        <div class="handouts-grid">
+          <div class="handout-item">
+            <div class="handout-item-top">
+              <i class="fas fa-file-pdf handout-pdf-icon" aria-hidden="true"></i>
+              <div>
+                <h4>Session 1: Introduction &amp; Theology</h4>
+                <div class="handout-item-meta">Fall 2026 · Handout #1</div>
+              </div>
+            </div>
+            <a href="/sunday-studies/handouts/worship/Worship_SS_1_Intro_Theology_2026.pdf" target="_blank" rel="noopener" class="handout-item-btn">
+              <i class="fas fa-download" aria-hidden="true"></i> Download PDF
+            </a>
+          </div>
+
+          <div class="handout-item">
+            <div class="handout-item-top">
+              <i class="fas fa-file-pdf handout-pdf-icon" aria-hidden="true"></i>
+              <div>
+                <h4>Session 2: The Distinctives of Communal Worship</h4>
+                <div class="handout-item-meta">Fall 2026 · Handout #2</div>
+              </div>
+            </div>
+            <a href="/sunday-studies/handouts/worship/Worship_SS_2_Distinctives_2026.pdf" target="_blank" rel="noopener" class="handout-item-btn">
+              <i class="fas fa-download" aria-hidden="true"></i> Download PDF
+            </a>
+          </div>
+
+          <div class="handout-item">
+            <div class="handout-item-top">
+              <i class="fas fa-file-pdf handout-pdf-icon" aria-hidden="true"></i>
+              <div>
+                <h4>Session 3: The Purposes of Communal Worship</h4>
+                <div class="handout-item-meta">Fall 2026 · Handout #3</div>
+              </div>
+            </div>
+            <a href="/sunday-studies/handouts/worship/Worship_SS_3_Purpose_2026.pdf" target="_blank" rel="noopener" class="handout-item-btn">
+              <i class="fas fa-download" aria-hidden="true"></i> Download PDF
+            </a>
+          </div>
+
+          <div class="handout-item" style="background: rgba(255, 255, 255, 0.65);">
+            <div class="handout-item-top">
+              <i class="fas fa-file-pdf handout-pdf-icon" style="color: #94a3b8;" aria-hidden="true"></i>
+              <div>
+                <h4>Session 4: Entering God’s Presence</h4>
+                <div class="handout-item-meta">Fall 2026 · Handout #4 (Upcoming)</div>
+              </div>
+            </div>
+            <span class="handout-item-btn" style="background: #e2e8f0; color: #64748b; cursor: default;">
+              <i class="fas fa-clock" aria-hidden="true"></i> Coming for Class
+            </span>
+          </div>
+        </div>
+      </section>
+
+      <!-- COURSE ROADMAP -->
+      <section class="course-roadmap" id="course-roadmap" aria-labelledby="course-roadmap-title">
+        <div class="section-intro-block">
+          <p class="section-eyebrow">Fall 2026 · Course outline</p>
+          <h2 class="section-title" id="course-roadmap-title">A Six-Week Roadmap</h2>
+          <p class="section-desc">Tracing the theology, practices, and gospel-shaped movements of worship from gathering to benediction.</p>
+        </div>
+
         <div class="roadmap-grid">
-          <article class="lesson-card"><span class="lesson-card__number">01</span><div><h3>Overall Theology of Worship</h3><p>God-centered worship, worship in general and communal worship, and the Sabbath and Lord’s Day.</p></div></article>
-          <article class="lesson-card"><span class="lesson-card__number">02</span><div><h3>Distinctives of Communal Worship</h3><p>Elements and forms, God’s presence, and Trinitarian worship.</p></div></article>
-          <article class="lesson-card"><span class="lesson-card__number">03</span><div><h3>Adoration &amp; Confession</h3><p>Biblical patterns, the holiness of God, and the gospel arc.</p></div></article>
-          <article class="lesson-card"><span class="lesson-card__number">04</span><div><h3>Preaching of the Word</h3><p>What a sermon is, why preaching matters, and its guidelines and goals.</p></div></article>
-          <article class="lesson-card"><span class="lesson-card__number">05</span><div><h3>The Lord’s Supper</h3><p>The purpose and vision of the Supper, its practice, and its relationship to the Word.</p></div></article>
-          <article class="lesson-card"><span class="lesson-card__number">06</span><div><h3>Coronation &amp; Benediction</h3><p>Christ’s kingship, biblical blessing, and a review of the course.</p></div></article>
+          <article class="lesson-card is-active">
+            <span class="lesson-card__number">01</span>
+            <div>
+              <div class="lesson-card-header">
+                <h3>Overall Theology of Worship</h3>
+                <span class="lesson-status-tag status-available">Available</span>
+              </div>
+              <p>God-centered worship, worship in general and communal worship, and the Sabbath and Lord’s Day.</p>
+            </div>
+          </article>
+
+          <article class="lesson-card is-active">
+            <span class="lesson-card__number">02</span>
+            <div>
+              <div class="lesson-card-header">
+                <h3>Distinctives of Communal Worship</h3>
+                <span class="lesson-status-tag status-available">Available</span>
+              </div>
+              <p>Elements and forms, God’s presence, the regulative principle, and Trinitarian worship.</p>
+            </div>
+          </article>
+
+          <article class="lesson-card is-active">
+            <span class="lesson-card__number">03</span>
+            <div>
+              <div class="lesson-card-header">
+                <h3>The Purposes of Communal Worship</h3>
+                <span class="lesson-status-tag status-latest">Latest</span>
+              </div>
+              <p>Communion with God in Christ across cultures, incarnation &amp; ascension paradigms, and gospel-shaped styles and forms.</p>
+            </div>
+          </article>
+
+          <article class="lesson-card">
+            <span class="lesson-card__number">04</span>
+            <div>
+              <div class="lesson-card-header">
+                <h3>Covenantal Logic &amp; Gospel Liturgy</h3>
+                <span class="lesson-status-tag status-upcoming">Oct 4</span>
+              </div>
+              <p>Adoration, confession, assurance, and the biblical gospel arc in worship.</p>
+            </div>
+          </article>
+
+          <article class="lesson-card">
+            <span class="lesson-card__number">05</span>
+            <div>
+              <div class="lesson-card-header">
+                <h3>The Word &amp; The Lord’s Supper</h3>
+                <span class="lesson-status-tag status-upcoming">Oct 11</span>
+              </div>
+              <p>The preaching of the Word, the purpose and vision of the Supper, and their communion in Christ.</p>
+            </div>
+          </article>
+
+          <article class="lesson-card">
+            <span class="lesson-card__number">06</span>
+            <div>
+              <div class="lesson-card-header">
+                <h3>Coronation &amp; Benediction</h3>
+                <span class="lesson-status-tag status-upcoming">Oct 18</span>
+              </div>
+              <p>Christ’s kingship, biblical blessing, course review, and sending the church out in mission.</p>
+            </div>
+          </article>
         </div>
       </section>
-      <section class="materials" aria-labelledby="class-materials-title">
-        <h2 id="class-materials-title">Class materials</h2>
-        <p class="materials-intro">Episodes 1 and 2 are available now. Recordings and additional handouts will be added as the class continues.</p>
-        <article class="material-card"><i class="fab fa-spotify material-icon" aria-hidden="true"></i><div><h3>Episode 1 | Overall Theology of Worship</h3><p>God-centered worship, worship in general and communal worship, and the Sabbath and Lord’s Day.</p><p><strong>Originally recorded on 9.13.26</strong></p><a class="handout-link" href="https://open.spotify.com/episode/0wKxmVxWaDIJX9XmTx6AlL?si=57zIjHO5QD2TaBvggMnVBg" target="_blank" rel="noopener">Listen on Spotify</a></div></article>
-        <article class="material-card"><i class="fab fa-spotify material-icon" aria-hidden="true"></i><div><h3>Episode 2 | Distinctives of Communal Worship</h3><p>Elements and forms, God’s presence, and Trinitarian worship.</p><p>A six-week study of the God-centered worship Christ gives to his church—shaped by his Word, shared by his people, and offered together in the life of the church.</p><a class="handout-link" href="https://open.spotify.com/episode/0o3ooNOg20VrOmHJaZhkYN?si=EQlnDXaqR0i9BfypEABMDQ" target="_blank" rel="noopener">Listen on Spotify</a></div></article>
-        <article class="material-card"><i class="fas fa-file-pdf material-icon" aria-hidden="true"></i><div><h3>Handouts</h3><p>Session 1 is available now.</p><a class="handout-link" href="/sunday-studies/handouts/worship/Worship_SS_1_Intro_Theology_2026.pdf" target="_blank" rel="noopener">Session 1: Introduction &amp; Theology (PDF)</a></div></article>
+
+      <div class="back-nav">
         <a class="back-link" href="adult-sunday-school.html">← View all Adult Sunday Studies</a>
-      </section>
+      </div>
     </main>
   </div>
-  <footer><div class="footer-content-logo"><a href="index.html"><img src="assets/CPC_LOGO_24.png" alt="CPC New Haven Church" loading="lazy"></a></div><div class="footer-links"><a href="sundays.html">Sundays</a><a href="contact.html">Contact</a><a href="podcasts.html">Podcasts</a><a href="events.html">Events</a><a href="give.html">Give</a></div><p>203.777.6960 · <a href="mailto:admin@cpcnewhaven.org">admin@cpcnewhaven.org</a> · 135 Whitney Ave, New Haven CT 06510</p><p class="footer-copyright">© 2026 Christ Presbyterian Church. All rights reserved.</p></footer>
+
+  <footer>
+    <div class="footer-content-logo"><a href="index.html"><img src="assets/CPC_LOGO_24.png" alt="CPC New Haven Church" loading="lazy"></a></div>
+    <div class="footer-links"><a href="sundays.html">Sundays</a><a href="contact.html">Contact</a><a href="podcasts.html">Podcasts</a><a href="events.html">Events</a><a href="give.html">Give</a></div>
+    <p>203.777.6960 · <a href="mailto:admin@cpcnewhaven.org">admin@cpcnewhaven.org</a> · 135 Whitney Ave, New Haven CT 06510</p>
+    <p class="footer-copyright">© 2026 Christ Presbyterian Church. All rights reserved.</p>
+  </footer>
+
   <script src="src/js/function_toggle_mobileMenu.js"></script>
   <script>(() => { const source = window.location.protocol === "file:" ? new URL("../src/js/back-home-button.js", window.location.href).href : window.location.origin + "/src/js/back-home-button.js"; const script = document.createElement("script"); script.defer = true; script.src = source; document.head.append(script); })();</script>
 </body>
