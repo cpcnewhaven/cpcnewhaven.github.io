@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-02T12:38:44.742144-04:00",
+  "generatedAt": "2026-10-03T11:08:52.081665-04:00",
   "source": "CPC Google Calendar",
   "events": [
     {
@@ -57,12 +57,6 @@
       "allDay": false
     },
     {
-      "date": "2026-10-12",
-      "title": "SLB Meeting",
-      "description": "",
-      "allDay": false
-    },
-    {
       "date": "2026-10-13",
       "title": "Shepherd Meeting",
       "description": "",
@@ -71,6 +65,12 @@
     {
       "date": "2026-10-14",
       "title": "Young Mom's Group",
+      "description": "",
+      "allDay": false
+    },
+    {
+      "date": "2026-10-18",
+      "title": "Fellowship Lunch",
       "description": "",
       "allDay": false
     }
