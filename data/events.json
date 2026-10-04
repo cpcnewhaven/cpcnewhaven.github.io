@@ -1,13 +1,7 @@
 {
-  "generatedAt": "2026-10-03T11:08:52.081665-04:00",
+  "generatedAt": "2026-10-04T11:48:24.858323-04:00",
   "source": "CPC Google Calendar",
   "events": [
-    {
-      "date": "2026-10-03",
-      "title": "Women's Conference at CPC",
-      "description": "",
-      "allDay": false
-    },
     {
       "date": "2026-10-04",
       "title": "Congregational Photo",
@@ -71,6 +65,12 @@
     {
       "date": "2026-10-18",
       "title": "Fellowship Lunch",
+      "description": "",
+      "allDay": false
+    },
+    {
+      "date": "2026-10-18",
+      "title": "Sunday School Adults and Children",
       "description": "",
       "allDay": false
     }
