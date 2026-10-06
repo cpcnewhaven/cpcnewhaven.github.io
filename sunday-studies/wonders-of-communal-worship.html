@@ -53,11 +53,9 @@
     .episode-card p { margin: 0 0 1.2rem; color: #475569; font-size: 0.98rem; line-height: 1.6; }
     
     .episode-buttons { display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center; }
-    .btn-spotify { display: inline-flex; align-items: center; gap: 0.55rem; padding: 0.65rem 1.25rem; border-radius: 8px; background: #121212; color: #ffffff; font-weight: 700; font-size: 0.9rem; text-decoration: none; transition: all 0.2s ease; }
-    .btn-spotify:hover { background: #1db954; color: #ffffff; transform: translateY(-1px); }
-    .btn-handout { display: inline-flex; align-items: center; gap: 0.55rem; padding: 0.65rem 1.25rem; border-radius: 8px; background: rgba(0, 60, 109, 0.08); color: #003c6d; font-weight: 700; font-size: 0.9rem; text-decoration: none; border: 1px solid rgba(0, 60, 109, 0.2); transition: all 0.2s ease; }
-    .btn-handout:hover { background: rgba(0, 60, 109, 0.16); color: #002244; transform: translateY(-1px); }
-    .btn-disabled { display: inline-flex; align-items: center; gap: 0.55rem; padding: 0.65rem 1.25rem; border-radius: 8px; background: #f1f5f9; color: #94a3b8; font-weight: 700; font-size: 0.9rem; border: 1px solid #cbd5e1; cursor: not-allowed; }
+    .episode-buttons > a, .episode-buttons > .btn-disabled { box-sizing: border-box; display: inline-flex; align-items: center; justify-content: center; gap: 0.55rem; flex: 1 1 220px; max-width: 280px; min-height: 44px; padding: 0.65rem 1.25rem; border: 1px solid #003c6d; border-radius: 8px; background: #003c6d; color: #ffffff; font-weight: 700; font-size: 0.9rem; text-align: center; text-decoration: none; transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease; }
+    .episode-buttons > a:hover { background: #0b5f78; border-color: #0b5f78; color: #ffffff; transform: translateY(-1px); }
+    .episode-buttons > .btn-disabled { background: #f1f5f9; color: #64748b; border-color: #cbd5e1; cursor: not-allowed; }
 
     /* Handouts Grid */
     .handouts-section { max-width: 920px; margin: 0 auto 3.5rem; padding: 2.2rem; background: rgba(0, 60, 109, 0.04); border-radius: 14px; border: 1px solid rgba(0, 60, 109, 0.12); }
@@ -99,10 +97,12 @@
       .roadmap-grid { grid-template-columns: 1fr; }
       .episode-card { padding: 1.25rem; }
       .episode-buttons { flex-direction: column; align-items: stretch; }
-      .btn-spotify, .btn-handout { justify-content: center; }
+      .episode-buttons > a, .episode-buttons > .btn-disabled { flex-basis: 100%; max-width: none; }
       .handouts-section { padding: 1.5rem 1rem; }
     }
   </style>
+  <link rel="stylesheet" href="../src/css/adult-studies-unified.css">
+  <script src="../src/js/adult-studies-shell.js" defer></script>
 </head>
 <body class="adult-studies-page">
   <header id="stickyHeader" class="sticky">
