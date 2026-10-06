@@ -107,7 +107,7 @@
 
 .course-overview {
     display: grid;
-    grid-template-columns: minmax(240px, 0.72fr) minmax(0, 1.28fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     max-width: 1080px;
     margin: 0 auto 28px;
     overflow: hidden;
@@ -116,7 +116,12 @@
     background: #fff;
     box-shadow: 0 10px 32px rgba(24, 52, 72, 0.06);
 }
-.course-overview__image { min-height: 280px; background: var(--study-blue-soft); }
+.course-overview__image {
+    align-self: start;
+    aspect-ratio: 1;
+    min-height: 0;
+    background: var(--study-blue-soft);
+}
 .course-overview__image img { width: 100%; height: 100%; object-fit: cover; }
 .course-overview__content { padding: clamp(26px, 4vw, 46px); }
 .course-overview h1 {
