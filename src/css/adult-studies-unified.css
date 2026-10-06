@@ -139,10 +139,11 @@
 }
 .course-calendar {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 10px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
     margin-top: 26px;
 }
+.course-calendar > div:first-child { grid-column: 1 / -1; }
 .course-calendar > div {
     display: flex;
     align-items: flex-start;
@@ -155,7 +156,7 @@
 }
 .course-calendar i { margin-top: 2px; }
 .course-calendar span { color: var(--study-muted); font-size: .88rem; line-height: 1.4; }
-.course-calendar strong { display: block; color: var(--study-ink); font-size: .78rem; letter-spacing: .04em; text-transform: uppercase; }
+.course-calendar strong { display: block; color: var(--study-ink); font-size: .78rem; letter-spacing: .04em; text-transform: uppercase; white-space: nowrap; }
 
 .course-sessions {
     max-width: 1080px;
