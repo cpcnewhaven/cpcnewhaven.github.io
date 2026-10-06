@@ -179,7 +179,8 @@
     border-radius: 7px;
     background: #fff;
     color: var(--study-blue);
-    font-size: .86rem;
+    min-width: 78px;
+    font-size: .82rem;
     font-weight: 700;
     line-height: 1.2;
     text-decoration: none;

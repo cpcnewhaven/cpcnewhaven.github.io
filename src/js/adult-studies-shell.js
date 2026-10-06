@@ -128,10 +128,10 @@
 
   const actionFor = (source, className) => {
     const action = document.createElement(source.tagName === 'A' ? 'a' : 'span');
-    action.className = source.classList.contains('btn-disabled') || source.classList.contains('session-action--unavailable')
+    action.className = source.classList.contains('btn-disabled') || source.classList.contains('disabled') || source.classList.contains('session-action--unavailable')
       ? `${className} session-table-action--unavailable`
       : className;
-    action.textContent = source.textContent.trim();
+    action.textContent = source.textContent.trim().replace(/^[^A-Za-z]+/, '');
     if (source.tagName === 'A') {
       action.href = source.href;
       action.target = source.target || '_blank';
@@ -150,7 +150,7 @@
     const title = row.querySelector('.episode-title')?.textContent.trim();
     const number = row.querySelector('.list-number')?.textContent.trim();
     if (!title) return;
-    const actions = [...row.querySelectorAll('a, .session-action')];
+    const actions = [...row.querySelectorAll('a, .session-action, .glass-button')];
     sessionRows.push({ number, title, actions });
   });
   document.querySelectorAll('.adult-studies-page .episode-table tbody tr').forEach((row, index) => {
