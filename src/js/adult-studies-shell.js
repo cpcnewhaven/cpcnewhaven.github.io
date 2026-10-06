@@ -174,7 +174,7 @@
       actions: [...card.querySelectorAll('a, .btn-disabled')]
     });
   });
-  if (generalResources.length) {
+  if (currentCourse !== 'wonders-of-communal-worship.html' && generalResources.length) {
     sessionRows.push({ number: '—', title: 'Course materials', actions: generalResources });
   }
 
