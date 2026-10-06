@@ -131,7 +131,10 @@
     action.className = source.classList.contains('btn-disabled') || source.classList.contains('disabled') || source.classList.contains('session-action--unavailable')
       ? `${className} session-table-action--unavailable`
       : className;
-    action.textContent = source.textContent.trim().replace(/^[^A-Za-z]+/, '');
+    action.textContent = source.textContent.trim()
+      .replace(/^[^A-Za-z]+/, '')
+      .replace(/\s*\(PDF\)\s*/gi, ' ')
+      .trim();
     if (source.tagName === 'A') {
       action.href = source.href;
       action.target = source.target || '_blank';
@@ -204,6 +207,7 @@
       const listen = document.createElement('td');
       const resources = document.createElement('td');
       session.actions.forEach((action) => {
+        if (action.classList.contains('btn-disabled') || action.classList.contains('disabled') || action.classList.contains('session-action--unavailable')) return;
         const isListen = action.classList.contains('episode-coming') || /listen|spotify|recording/i.test(action.textContent);
         (isListen ? listen : resources).append(actionFor(action, isListen ? 'session-table-action session-table-action--listen' : 'session-table-action'));
       });
