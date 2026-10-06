@@ -174,9 +174,6 @@
       actions: [...card.querySelectorAll('a, .btn-disabled')]
     });
   });
-  if (currentCourse !== 'wonders-of-communal-worship.html' && generalResources.length) {
-    sessionRows.push({ number: '—', title: 'Course materials', actions: generalResources });
-  }
 
   if (course && mainContent && sessionRows.length) {
     document.body.classList.add('course-shell-ready');
@@ -194,6 +191,15 @@
           <div><i class="fas fa-map-marker-alt" aria-hidden="true"></i><span><strong>Location</strong>${course.location}</span></div>
         </div>
       </div>`;
+
+    if (generalResources.length) {
+      const materials = document.createElement('div');
+      materials.className = 'course-overview__resources';
+      generalResources.forEach((resource) => {
+        materials.append(actionFor(resource, 'course-material-link'));
+      });
+      overview.querySelector('.course-overview__content').append(materials);
+    }
 
     const sessions = document.createElement('section');
     sessions.className = 'course-sessions';

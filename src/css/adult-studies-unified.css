@@ -163,6 +163,25 @@
 .course-calendar i { margin-top: 2px; }
 .course-calendar span { color: var(--study-muted); font-size: .88rem; line-height: 1.4; }
 .course-calendar strong { display: block; color: var(--study-ink); font-size: .78rem; letter-spacing: .04em; text-transform: uppercase; white-space: nowrap; }
+.course-overview__resources {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 16px;
+}
+.course-material-link {
+    display: inline-flex;
+    align-items: center;
+    min-height: 38px;
+    padding: 7px 12px;
+    border: 1px solid rgba(0, 60, 109, .22);
+    border-radius: 8px;
+    color: var(--study-blue);
+    font-size: .88rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+.course-material-link:hover { border-color: var(--study-blue); background: var(--study-blue); color: #fff; }
 
 .course-sessions {
     max-width: 1080px;
