@@ -347,6 +347,8 @@ def json_entries_for_known_files(root: Path, json_path: Path) -> List["SearchEnt
         for a in (payload.get("announcements") or []):
             if not isinstance(a, dict):
                 continue
+            if a.get("active") not in (True, "true"):
+                continue
             add_entry(
                 url="announcements.html",
                 title=a.get("title", "") or "Announcement",
@@ -716,4 +718,3 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-
