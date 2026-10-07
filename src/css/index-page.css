@@ -106,14 +106,9 @@
 }
 
 .care-teams-feature {
+    margin-top: -52px;
     background: #f6faf9;
     border-top-color: #2e6c6e;
-}
-
-.womens-conference-feature {
-    margin: -52px auto 18px;
-    background: #f4f8fa;
-    border-top-color: #0b5f78;
 }
 
 .communal-worship-feature {
@@ -242,10 +237,6 @@
     }
 
     .care-teams-feature {
-        margin: -24px 16px 16px;
-    }
-
-    .womens-conference-feature {
         margin: -24px 16px 16px;
     }
 
