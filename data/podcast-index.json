@@ -189,6 +189,32 @@
         "title": "Sunday Sermons",
         "episodes": [
             {
+                "id": "26-10-11",
+                "title": "Jesus Creates the New Community: Responding to the New World | The Sunday Sermon | Acts 2 :37-47 | Rev. Craig Luekens",
+                "author": "Rev. Craig Luekens",
+                "scripture": "Acts 2:37-47",
+                "date": "2026-10-11",
+                "apple_podcasts_url": "",
+                "spotify_url": "https://open.spotify.com/episode/3C7OI2EszoUKPToXiIQnDW?si=1JfJJ0eeR8a-ikXiCX1WYw",
+                "youtube_url": "",
+                "link": "https://open.spotify.com/episode/3C7OI2EszoUKPToXiIQnDW?si=1JfJJ0eeR8a-ikXiCX1WYw",
+                "podcast-thumbnail_url": "",
+                "audio_url": ""
+            },
+            {
+                "id": "26-10-04",
+                "title": "Jesus Reigns: Proclaiming the Good News of the New World | The Sunday Sermon | Acts 2:22-36 | Rev. Craig Luekens",
+                "author": "Rev. Craig Luekens",
+                "scripture": "Acts 2:22-36",
+                "date": "2026-10-04",
+                "apple_podcasts_url": "",
+                "spotify_url": "https://open.spotify.com/episode/6c5x7M2B17mgPM325UJIZx?si=3LvPCn3QRu2owsQZIRTy5A",
+                "youtube_url": "",
+                "link": "https://open.spotify.com/episode/6c5x7M2B17mgPM325UJIZx?si=3LvPCn3QRu2owsQZIRTy5A",
+                "podcast-thumbnail_url": "https://s3-us-west-2.amazonaws.com/anchor-generated-image-bank/staging/podcast_uploaded_episode400/12709107/12709107-1791231131562-10b643c325619.jpg",
+                "audio_url": ""
+            },
+            {
                 "id": "26-09-27",
                 "title": "Jesus Sends the Spirit: Empowering for the New World | The Sunday Sermon | Acts 2 : 1-21 | Rev. Craig Luekens",
                 "author": "Rev. Craig Luekens",
