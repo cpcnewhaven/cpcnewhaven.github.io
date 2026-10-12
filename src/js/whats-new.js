@@ -43,7 +43,7 @@ class WhatsNewManager {
 
     async fetchSermons() {
         try {
-            const response = await fetch(this.sermonsUrl);
+            const response = await fetch(this.sermonsUrl, { cache: 'no-cache' });
             if (!response.ok) throw new Error('Failed to fetch sermons');
 
             const data = await response.json();

@@ -18,7 +18,7 @@ window.sermonData = function() {
         loadSermons() {
             console.log('loadSermons called');
             console.log('Fetching from: data/sunday-sermons.json');
-            fetch('data/sunday-sermons.json')
+            fetch('data/sunday-sermons.json', { cache: 'no-cache' })
                 .then(response => {
                     console.log('Response received:', response);
                     console.log('Response status:', response.status);
