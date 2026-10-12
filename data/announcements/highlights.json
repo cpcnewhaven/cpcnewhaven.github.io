@@ -1,224 +1,84 @@
 {
   "announcements": [
     {
-      "id": "2026-069",
-      "title": "10:30am Worship This Sunday",
-      "description": "Due to Yale's move-in day, we suggest avoiding downtown on your way to church this Sunday. <a href=\"https://us.list-manage.com/uDdotqLHkMv?e=9da175cc40&amp;c2id=6df9b900f2d1d0ec64fac5dfc299411c\" target=\"_blank\" rel=\"noopener\">View the Large Print Bulletin</a>",
-      "dateEntered": "2026-08-21",
-      "active": false,
-      "type": "announcement",
-      "category": "schedule",
-      "tag": "sunday"
-    },
-    {
-      "id": "2026-070",
-      "title": "Fellowship Lunch Is Back This Sunday",
-      "description": "All are welcome! Consider grabbing a seat with someone new for our weekly meal together in the Fellowship Hall.",
-      "dateEntered": "2026-08-21",
-      "active": false,
-      "type": "event",
-      "category": "event",
-      "tag": "community"
-    },
-    {
-      "id": "2026-071",
-      "title": "Congregational Meeting | Sunday, August 30",
-      "description": "All are welcome to join us during Fellowship Lunch this Sunday as we announce our plan for the ministry year. This is an important church-wide discussion so we can start the year off united in mission! <a href=\"congregational-meeting-2026-08-30.html\">Meeting details and livestream</a>",
-      "dateEntered": "2026-08-28",
-      "active": false,
-      "type": "event",
-      "category": "event",
-      "tag": "community"
-    },
-    {
-      "id": "2026-060",
-      "title": "Parent Meeting | Sunday, August 23",
-      "description": "As we prepare for another year of Sunday School, we'd love for all parents of children participating in Sunday School (2 &amp; 3 year olds through 12th grade) to join us for a brief meeting immediately following the morning worship service in the Sanctuary. Pastor Jerry and our Sunday School teachers will share the vision for the coming year, introduce the new curriculum, explain what families can expect and give space for questions. We look forward to partnering with you as we seek to help our covenant children know, love, and follow Christ.",
-      "dateEntered": "2026-08-07",
-      "active": false,
-      "type": "event",
-      "category": "event",
-      "tag": "family"
-    },
-    {
-      "id": "2026-068",
-      "title": "Mercy Day! | August 29",
-      "description": "BOTH Volunteers and Mercy Projects Needed! To truly love and serve one another, we'll tackle projects for those who need any help. Each project will have a dedicated project lead/captain who will give instructions to volunteers.<br/><a href=\"https://us.list-manage.com/Um6Ff7b001b?e=9da175cc40&amp;c2id=6df9b900f2d1d0ec64fac5dfc299411c\" target=\"_blank\">Sign up here!</a>",
-      "dateEntered": "2026-08-07",
-      "active": false,
-      "type": "event",
-      "category": "event",
-      "tag": "mercy"
-    },
-    {
-      "id": "2026-061",
-      "title": "Volunteers Still Needed! | Serve with CPC in the Hill",
-      "description": "Wednesday Night Summer BBQs (July 1-August 19) | Trowbridge Square Park in the Hill: 169 Cedar St, New Haven, CT 06519. Volunteers needed to help set up, serve, and clean up (4:45pm-7:00pm).<br/><a href=\"https://us.list-manage.com/TjLgfgRTZ9j?e=9da175cc40&amp;c2id=6df9b900f2d1d0ec64fac5dfc299411c\" target=\"_blank\">Sign up here!</a>",
-      "dateEntered": "2026-08-07",
-      "active": false,
-      "type": "event",
-      "category": "event",
-      "tag": "mercy"
-    },
-    {
-      "id": "2026-062",
-      "title": "Men's Bike Ride &amp; Lunch | Saturday, August 1 @11am",
-      "description": "Bike ride the Canal trail to Mikro for lunch, meeting at 11am at CPC parking lot.<br/>Sign up sheet in the foyer.",
-      "dateEntered": "2026-06-21",
-      "active": false,
-      "type": "event",
-      "category": "event",
-      "tag": "men"
-    },
-    {
-      "id": "2026-064",
-      "title": "New Ministry Year Begins! | Save these Dates:",
-      "description": "Young Adults Beach Hang | Saturday, September 12<br/>CPC Women's Conference | Saturday, October 3<br/>Parenting Seminar | Saturday, November 7",
-      "dateEntered": "2026-08-07",
-      "active": false,
-      "type": "announcement",
-      "category": "announcement",
-      "tag": "community"
-    },
-    {
-      "id": "2026-072",
-      "title": "Welcome Sunday | September 13",
-      "description": "Everything launches this Sunday! We’ll be starting our new Sermon Series in the Book of Acts, and our normal Sunday schedule resumes with Children’s Sunday School and Adult Sunday Studies beginning at 9:30am. All are welcome. <a class=\"highlight-cta\" href=\"welcome-sunday-2026-09-13.html\">View Welcome Sunday details</a>",
-      "dateEntered": "2026-08-28",
-      "active": false,
-      "type": "event",
-      "category": "event",
-      "tag": "community"
-    },
-    {
-      "id": "2026-073",
-      "title": "Adult Class | The Wonders of Communal Worship",
-      "description": "This six-week class explores what God promises to do through communal worship and why CPC worships the way it does. Episodes 1–4 and their handouts are available now. All are welcome. <a class=\"highlight-cta\" href=\"sunday-studies/wonders-of-communal-worship.html\">View class details</a>",
-      "dateEntered": "2026-08-28",
+      "id": "2026-080",
+      "title": "Newcomer’s Lunch | THIS Sunday! | Lecture Room",
+      "description": "For those who are new, or new-ish, join us for a “Newcomer’s Lunch” to learn more about CPC and to meet some of our leadership teams. Lunch will be provided in the Lecture Room for you, just head there! Please fill out a Welcome Card from the pew and return it to the Welcome Bar in the foyer.",
+      "dateEntered": "2026-10-09",
       "active": true,
       "type": "event",
       "category": "event",
-      "tag": "education"
-    },
-    {
-      "id": "2026-074",
-      "title": "Men’s Night | Next Friday, September 18 @ 6:30pm",
-      "description": "All men are invited for a night of worship, prayer, and fellowship as we launch the year’s men’s ministry. We’re praying for more intentional engagement with each other, so don’t miss this launching event!",
-      "dateEntered": "2026-09-15",
-      "active": false,
-      "type": "event",
-      "category": "event",
-      "tag": "men"
-    },
-    {
-      "id": "2026-075",
-      "title": "CPC Women’s Conference | Saturday, October 3",
-      "description": "The October 3, 2026 conference has concluded. <a class=\"highlight-cta\" href=\"cpc-womens-conference-2026-10-03.html\">View event details</a>.",
-      "dateEntered": "2026-09-15",
-      "active": false,
-      "type": "event",
-      "category": "event",
-      "tag": "women"
-    },
-    {
-      "id": "2026-076",
-      "title": "Mom’s Discipleship Group | Wednesday, September 16 @ 9:45am",
-      "description": "Please join us! CPC Moms discipleship group will begin meeting monthly on 9/16/26 in the Fellowship Hall at 9:45am. Children are welcome to play near us while we meet. We will discuss selected podcasts from Ruth Chou Simons, a gifted writer of over 10 books, artist, mother of 6, podcaster, and founder of GraceLaced. Future dates: 10/14, 11/11, no Dec, 1/13/27. Please inquire with any young mom, or Meg Bogue with questions, <a href=\"mailto:mhbogue@me.com\">mhbogue@me.com</a>.",
-      "dateEntered": "2026-09-15",
-      "active": false,
-      "type": "ongoing",
-      "category": "ongoing",
-      "tag": "women"
-    },
-    {
-      "id": "2026-077",
-      "title": "Women’s Discipleship Group",
-      "description": "The Women's Discipleship group is reading <em>Side by Side</em> by Edward T. Welch. This is an opportunity to encourage and challenge one another as we seek to follow Christ by loving those around us! We meet virtually on the 1st and 3rd Mondays of each month at 7:30pm. If interested, please reach out to Lisa Graham (<a href=\"mailto:lisahgraham44@gmail.com\">lisahgraham44@gmail.com</a>)<br>or Diane Miller (<a href=\"mailto:auntiediane@att.net\">auntiediane@att.net</a>).",
-      "dateEntered": "2026-09-15",
-      "active": true,
-      "type": "ongoing",
-      "category": "ongoing",
-      "tag": "women"
-    },
-    {
-      "id": "2026-078",
-      "title": "CPC Mercy Ministry Care Teams",
-      "description": "As a part of the wider mercy ministries at CPC, Care Teams have been created to serve as church-wide care for anyone in our congregation with a need. You can sign up for a team that matches your serving-ability or skill set, so that people at CPC are aware of the resources and gifts we have within our family, and thus can lean upon one another. <a class=\"highlight-cta\" href=\"cpc-care-teams.html\">Complete the interest form</a>.",
-      "dateEntered": "2026-09-22",
-      "active": true,
-      "type": "ongoing",
-      "category": "ongoing",
-      "tag": "mercy"
-    },
-    {
-      "id": "2026-079",
-      "title": "Sign Up For Our Weekly Communication!",
-      "description": "Each week we send an e-newsletter out to the congregation to help everyone connect! To sign up to receive the newsletter, <a class=\"highlight-cta\" href=\"connect.html#footer-cta-a\">visit the link to enter your email address</a>.",
-      "dateEntered": "2026-09-22",
-      "active": true,
-      "type": "ongoing",
-      "category": "ongoing",
       "tag": "community"
-    },
-    {
-      "id": "2026-063",
-      "title": "CPC Mom's Group",
-      "description": "Moms with young kids: join our WhatsApp group to stay up to date with meet-ups this summer! Some happening on weekends too! Reach out to Meg Bogue for more information: <a href=\"mailto:mhbogue@me.com\">mhbogue@me.com</a>",
-      "dateEntered": "2026-06-21",
-      "active": false,
-      "type": "announcement",
-      "category": "announcement",
-      "tag": "community"
-    },
-    {
-      "id": "2026-050",
-      "title": "Summer Schedule Now in Effect",
-      "description": "We're on a summer break from Sunday school, Fellowship Lunches, and pastor drop-in office hours. You're always welcome to set up a separate time with Pastor Craig <a href=\"mailto:craig.luekens@cpcnewhaven.org\">(craig.luekens@cpcnewhaven.org)</a>, or Pastor Jerry <a href=\"mailto:jerry.ornelas@cpcnewhaven.org\">(jerry.ornelas@cpcnewhaven.org)</a>.",
-      "dateEntered": "2026-05-11",
-      "active": false,
-      "type": "announcement",
-      "category": "announcement",
-      "tag": "schedule"
-    },
-    {
-      "id": "2026-039",
-      "title": "Pastor's Book Pick | Life Together, by Dietrich Bonhoeffer",
-      "description": "A modern classic, we're treading into deep waters with this one! Written by pastor-theologian and martyr, Life Together is Bonhoeffer's vision for the Christian life, both individually and communally.<br/>Copies in the foyer — suggested donation of $15.",
-      "dateEntered": "2026-03-13",
-      "active": false,
-      "type": "ongoing",
-      "category": "ongoing",
-      "tag": "books"
     },
     {
       "id": "2026-029",
       "title": "Interested in Joining the Body of Christ at CPC?",
-      "description": "We consider the church an essential element of the gospel, so joining CPC as a member is a way to truly join the body of Christ, in all its blessings and with all its flaws! Before joining, you'll meet one-on-one with a pastor and then discuss how you've come to know Christ with the Shepherd Leaders.<br/>Contact Alexis Vano <a href=\"mailto:admin@cpcnewhaven.org\">(admin@cpcnewhaven.org)</a> to begin the process.",
-      "dateEntered": "2026-02-10",
+      "description": "We consider the church an essential element of the gospel, so joining CPC as a member is a way to truly join the body of Christ, in all its blessings and with all its flaws! Before joining, you’ll meet one-on-one with a pastor and then discuss how you’ve come to know Christ with the Shepherd Leaders. Contact Alexis Vano (<a href=\"mailto:admin@cpcnewhaven.org\">admin@cpcnewhaven.org</a>) to begin the process.<br/><strong>NOTE THE DATE CHANGE:</strong> Our next joining will take place on Sunday, November 15.",
+      "dateEntered": "2026-10-09",
       "active": true,
       "type": "announcement",
       "category": "membership",
       "tag": "membership"
     },
     {
+      "id": "2026-081",
+      "title": "CPC Worship Night | Friday, October 23 from 7-8pm",
+      "description": "Join our music team for an evening of musical worship. We’ll sing some familiar songs and new songs too! We’d love for anybody to join.",
+      "dateEntered": "2026-10-09",
+      "active": true,
+      "type": "event",
+      "category": "event",
+      "tag": "worship"
+    },
+    {
+      "id": "2026-082",
+      "title": "Mom’s Discipleship Group | Wednesday, October 14 @9:45am",
+      "description": "Please join us! CPC Moms discipleship group meets monthly on Wednesdays in the Fellowship Hall at 9:45am. Children are welcome to play near us while we meet. We will discuss selected podcasts from Ruth Chou Simons, a gifted writer of over 10 books, artist, mother of 6, podcaster, and founder of GraceLaced. Future dates: 11/11, no Dec, 1/13/27. Please inquire with any young mom, or Meg Bogue (<a href=\"mailto:mhbogue@me.com\">mhbogue@me.com</a>) or Kristen Jensen (<a href=\"mailto:kristin.jensen358@gmail.com\">kristin.jensen358@gmail.com</a>) with questions.",
+      "dateEntered": "2026-10-09",
+      "active": true,
+      "type": "event",
+      "category": "event",
+      "tag": "women"
+    },
+    {
+      "id": "2026-083",
+      "title": "Fall Festival | October 31 from 10:30am-12:00pm",
+      "description": "All children and families are invited to join CPC for Fall Fun and Trunk-or-Treat! Interested in decorating your trunk, hosting an activity, or volunteering at the event? <a class=\"highlight-cta\" href=\"https://us.list-manage.com/_PBFMMUJYbK?e=9da175cc40&amp;c2id=6df9b900f2d1d0ec64fac5dfc299411c\" target=\"_blank\" rel=\"noopener\">Sign up here!</a>",
+      "dateEntered": "2026-10-09",
+      "active": true,
+      "type": "event",
+      "category": "event",
+      "tag": "family"
+    },
+    {
       "id": "2026-027",
       "title": "Life Groups and Discipleship Groups",
-      "description": "Life Groups and Discipleship Groups are our way of doing \"church in the small\" where we meet throughout Greater New Haven to be engaged in prayer, teaching, fellowship and care.<br/>For information on which Life Group may be a good fit, contact Alexis, <a href=\"mailto:admin@cpcnewhaven.org\">(admin@cpcnewhaven.org)</a>.",
-      "dateEntered": "2026-01-29",
+      "description": "Life Groups and Discipleship Groups are our way of doing “church in the small” where we meet throughout Greater New Haven to be engaged in prayer, teaching, fellowship and care.<br/>For information on which Life Group may be a good fit, contact Alexis, <a href=\"mailto:admin@cpcnewhaven.org\">admin@cpcnewhaven.org</a>.",
+      "dateEntered": "2026-10-09",
       "active": true,
       "type": "ongoing",
       "category": "ongoing",
       "tag": "groups"
     },
     {
-      "id": "2026-065",
-      "title": "Join \"CPC Social!\" on WhatsApp",
-      "description": "If you're interested in connecting more spontaneously with CPC folks, you're welcome to join our WhatsApp group \"CPC Social!\"",
-      "dateEntered": "2026-06-30",
+      "id": "2026-084",
+      "title": "Pastor Drop-in Office Hours | Craig, Fridays 7:30-10:30am | Jerry, Wednesdays Noon-3:00pm | Other hours available upon request",
+      "description": "Drop in for a casual time of discussion, Q&A, prayer, coffee, tea, really whatever you want to make it! If you have a more private or formal need, you’re always welcome to set up a separate time with Pastor Craig (<a href=\"mailto:craig.luekens@cpcnewhaven.org\">craig.luekens@cpcnewhaven.org</a>), or Pastor Jerry (<a href=\"mailto:jerry.ornelas@cpcnewhaven.org\">jerry.ornelas@cpcnewhaven.org</a>) but this is meant to be a space where anyone can drop in.",
+      "dateEntered": "2026-10-09",
       "active": true,
       "type": "ongoing",
       "category": "ongoing",
       "tag": "community"
+    },
+    {
+      "id": "2026-085",
+      "title": "Parenting Seminar | Saturday, November 7, 9am-11:30am",
+      "description": "CPC Fellowship Hall | Light Breakfast | Childcare provided.<br/>Young and older/wiser parents are all welcome to attend. We’re hoping for helpful cross-pollination among all stages of parenting. There will be time for discussion, collaboration, and prayer.",
+      "dateEntered": "2026-10-09",
+      "active": true,
+      "type": "event",
+      "category": "event",
+      "tag": "family"
     }
   ]
 }
