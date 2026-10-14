@@ -1,13 +1,7 @@
 {
-  "generatedAt": "2026-10-13T14:19:20.215327-04:00",
+  "generatedAt": "2026-10-14T11:49:48.732060-04:00",
   "source": "CPC Google Calendar",
   "events": [
-    {
-      "date": "2026-10-13",
-      "title": "Shepherd Meeting",
-      "description": "",
-      "allDay": false
-    },
     {
       "date": "2026-10-14",
       "title": "Young Mom's Group",
@@ -71,6 +65,12 @@
     {
       "date": "2026-11-01",
       "title": "Worship Service",
+      "description": "",
+      "allDay": false
+    },
+    {
+      "date": "2026-11-07",
+      "title": "Parenting Seminar",
       "description": "",
       "allDay": false
     }
