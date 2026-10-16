@@ -32,10 +32,17 @@
     },
     {
       "number": 5,
-      "title": "Episode 5 | The Word & The Lord’s Supper",
+      "title": "Episode 5 | Hearing from Christ in Communal Worship",
       "date": "October 11, 2026",
       "link": "https://open.spotify.com/episode/3wpdvH6wCRdmQ2I8Efq4wf?si=fxPLM1ZtRHq6wZ8C2ff7Jw",
-      "handout": null
+      "handout": "/sunday-studies/handouts/worship/Worship_SS_5_Sermon_2026.pdf"
+    },
+    {
+      "number": 6,
+      "title": "Episode 6 | The Sacrament of Communal Worship",
+      "date": "October 18, 2026",
+      "link": null,
+      "handout": "/sunday-studies/handouts/worship/Worship_SS_6_Sacrament_2026.pdf"
     }
   ]
 }
