@@ -41,8 +41,15 @@
       "number": 6,
       "title": "Episode 6 | The Sacrament of Communal Worship",
       "date": "October 18, 2026",
-      "link": null,
+      "link": "https://open.spotify.com/episode/18AqfEQVnQfDS1gxKDRYDp?si=zzrf5Fi7T02w-JZenC3s-w",
       "handout": "/sunday-studies/handouts/worship/Worship_SS_6_Sacrament_2026.pdf"
+    },
+    {
+      "number": 7,
+      "title": "Episode 7 | The Conclusion of Communal Worship",
+      "date": "October 25, 2026",
+      "link": null,
+      "handout": "/sunday-studies/handouts/worship/Worship_SS_7_Conclusion_2026.pdf"
     }
   ]
 }

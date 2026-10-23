@@ -129,6 +129,16 @@
       "type": "announcement",
       "category": "announcement",
       "tag": "schedule"
+    },
+    {
+      "id": "2026-088",
+      "title": "Women’s Discipleship Group | Monday, October 19 | Virtual",
+      "description": "We’ll be going through the book <em>Side by Side</em> by Edward T. Welch. This is an opportunity to encourage and challenge one another as we seek to follow Christ by loving those around us! We meet virtually on the first and third Mondays of each month at 7:30pm. If interested, please reach out to Lisa Graham (<a href=\"mailto:lisahgraham44@gmail.com\">lisahgraham44@gmail.com</a>) or Diane Miller (<a href=\"mailto:auntiediane@att.net\">auntiediane@att.net</a>).",
+      "dateEntered": "2026-10-16",
+      "active": false,
+      "type": "event",
+      "category": "event",
+      "tag": "women"
     }
   ]
 }

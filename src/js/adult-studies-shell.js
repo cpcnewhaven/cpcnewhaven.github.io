@@ -13,7 +13,7 @@
     'wonders-of-communal-worship.html': {
       title: 'The Wonders of Communal Worship',
       image: 'https://storage.googleapis.com/cpc-public-website/adult-studies/fall2026/THE%20WONDERS%20OF%20COMMUNAL%20WORSHIP.jpg',
-      description: 'A six-week study of the God-centered worship Christ gives to his church, shaped by his Word and shared by his people.',
+      description: 'A seven-week study of the God-centered worship Christ gives to his church, shaped by his Word and shared by his people.',
       calendar: 'Fall 2026', time: 'Sundays · 9:30am', location: 'CPC New Haven'
     },
     'emotions-spirituality.html': {
