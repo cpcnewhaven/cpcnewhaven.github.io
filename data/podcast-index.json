@@ -906,6 +906,60 @@
             }
         ]
     },
+    "wondersOfCommunalWorship": {
+        "title": "The Wonders of Communal Worship",
+        "episodes": [
+            {
+                "number": 1,
+                "title": "Episode 1 | Overall Theology of Worship",
+                "date": "September 13, 2026",
+                "link": "https://open.spotify.com/episode/0wKxmVxWaDIJX9XmTx6AlL?si=57zIjHO5QD2TaBvggMnVBg",
+                "handout": "/sunday-studies/handouts/worship/Worship_SS_1_Intro_Theology_2026.pdf"
+            },
+            {
+                "number": 2,
+                "title": "Episode 2 | The Distinctives of Communal Worship",
+                "date": "September 20, 2026",
+                "link": "https://open.spotify.com/episode/0o3ooNOg20VrOmHJaZhkYN?si=EQlnDXaqR0i9BfypEABMDQ",
+                "handout": "/sunday-studies/handouts/worship/Worship_SS_2_Distinctives_2026.pdf"
+            },
+            {
+                "number": 3,
+                "title": "Episode 3 | The Purposes of Communal Worship",
+                "date": "September 27, 2026",
+                "link": "https://open.spotify.com/episode/4I2ZY2RsmbZVAA7KRcx8hr?si=LzdGyDgOQoONzHWDZuRBAA",
+                "handout": "/sunday-studies/handouts/worship/Worship_SS_3_Purpose_2026.pdf"
+            },
+            {
+                "number": 4,
+                "title": "Episode 4 | The Structure of Communal Worship",
+                "date": "October 4, 2026",
+                "link": "https://open.spotify.com/episode/1yDXXGZLpkPjR8Ztk3h54P?si=lD1u3_RPR5OqjkwBp0J6GA",
+                "handout": "/sunday-studies/handouts/worship/Worship_SS_4_Structure_2026.pdf"
+            },
+            {
+                "number": 5,
+                "title": "Episode 5 | Hearing from Christ in Communal Worship",
+                "date": "October 11, 2026",
+                "link": "https://open.spotify.com/episode/3wpdvH6wCRdmQ2I8Efq4wf?si=fxPLM1ZtRHq6wZ8C2ff7Jw",
+                "handout": "/sunday-studies/handouts/worship/Worship_SS_5_Sermon_2026.pdf"
+            },
+            {
+                "number": 6,
+                "title": "Episode 6 | The Sacrament of Communal Worship",
+                "date": "October 18, 2026",
+                "link": "https://open.spotify.com/episode/18AqfEQVnQfDS1gxKDRYDp?si=zzrf5Fi7T02w-JZenC3s-w",
+                "handout": "/sunday-studies/handouts/worship/Worship_SS_6_Sacrament_2026.pdf"
+            },
+            {
+                "number": 7,
+                "title": "Episode 7 | The Conclusion of Communal Worship",
+                "date": "October 25, 2026",
+                "link": "https://open.spotify.com/episode/2CPEWdw5xZIIlnAH88fqPf?si=3f5fe799d9c245ce",
+                "handout": "/sunday-studies/handouts/worship/Worship_SS_7_Conclusion_2026.pdf"
+            }
+        ]
+    },
     "beyond": {
         "title": "Beyond",
         "episodes": [
