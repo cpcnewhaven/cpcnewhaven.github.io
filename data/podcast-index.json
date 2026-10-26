@@ -187,7 +187,20 @@
     },
     "sundaySermons": {
         "title": "Sunday Sermons",
-        "episodes": [
+        "episodes":         [
+            {
+                "id": "26-10-25",
+                "title": "Will the Real King Please Stand Up? | The Sunday Sermon | Acts 4: 1-22 | Rev. Craig Luekens",
+                "author": "Rev. Craig Luekens",
+                "scripture": "Acts 4: 1-22",
+                "date": "2026-10-25",
+                "apple_podcasts_url": "",
+                "spotify_url": "https://open.spotify.com/episode/2Mvf4bPYbTkpEKcHchTZau?si=9f176acb29d5450e",
+                "youtube_url": "",
+                "link": "https://open.spotify.com/episode/2Mvf4bPYbTkpEKcHchTZau?si=9f176acb29d5450e",
+                "podcast-thumbnail_url": "https://d3t3ozftmdmh3i.cloudfront.net/staging/podcast_uploaded_episode/12709107/12709107-1793043948440-6ed96043099a2.jpg",
+                "audio_url": ""
+            },
             {
                 "id": "26-10-18",
                 "title": "Shocked, Confronted & Comforted by Jesus | The Sunday Sermon | Acts 3: 1-26 | Rev. Jerry Ornelas",
@@ -305,7 +318,7 @@
                 "podcast-thumbnail_url": "",
                 "audio_url": "https://www.cpcnewhaven.org/download/4737"
             },
-      {
+            {
                 "id": "26-08-16",
                 "title": "Jesus Dies: The Shock of Judgement and Faithfulness at the Cross",
                 "author": "Rev. Craig Luekens",
@@ -484,7 +497,7 @@
                 "spotify_url": "https://open.spotify.com/episode/0qlFD5VsIIKVLBPGtgFER6?si=878b0725fb8649e5",
                 "link": "https://open.spotify.com/episode/0qlFD5VsIIKVLBPGtgFER6?si=878b0725fb8649e5",
                 "podcast-thumbnail_url": "https://storage.googleapis.com/cpc-public-website/podcast-thumbnails/10.27.24%20-%20CPC.jpg",
-                "youtube_url": "" 
+                "youtube_url": ""
             },
             {
                 "id": "24-11-04",
@@ -626,7 +639,8 @@
                 "spotify_url": "https://open.spotify.com/episode/2UTPspn6xytphDhhW5l4Wv?si=vLg1aeuoTXusQksEPPNvKg",
                 "link": "https://open.spotify.com/episode/2UTPspn6xytphDhhW5l4Wv?si=vLg1aeuoTXusQksEPPNvKg",
                 "podcast-thumbnail_url": ""
-            },   {
+            },
+            {
                 "id": "25-01-26",
                 "title": "For God's Sake: Dealing with the Unthinkable Offense",
                 "author": "Rev. Craig Luekens",
@@ -786,7 +800,7 @@
                 "author": "Rev. Craig Luekens",
                 "scripture": "Luke 1: 1-4",
                 "date": "2025-05-04",
-                "apple_podcasts_url": "",   
+                "apple_podcasts_url": "",
                 "spotify_url": "https://open.spotify.com/episode/7FegowK3jjJdA5It567kIO?si=29e85ab45ba04bf7",
                 "link": "https://open.spotify.com/episode/7FegowK3jjJdA5It567kIO?si=29e85ab45ba04bf7",
                 "podcast-thumbnail_url": ""
@@ -796,7 +810,7 @@
                 "title": "God's Great and Merciful Reversals",
                 "author": "Rev. Jerry Ornelas",
                 "scripture": "Luke 1: 39-56",
-                "date": "2025-05-18", 
+                "date": "2025-05-18",
                 "apple_podcasts_url": "",
                 "spotify_url": "https://creators.spotify.com/pod/show/cpcpodcasts/episodes/Gods-Great-and-Merciful-Reversals--The-Sunday-Sermon--Rev--Jerry-Ornelas--Luke-1-39-56-e332r3l",
                 "link": "https://creators.spotify.com/pod/show/cpcpodcasts/episodes/Gods-Great-and-Merciful-Reversals--The-Sunday-Sermon--Rev--Jerry-Ornelas--Luke-1-39-56-e332r3l",
@@ -812,86 +826,84 @@
                 "spotify_url": "https://open.spotify.com/episode/08Hn0WDE3t2m9qP6n94dYw?si=4df84f3e34e8424c",
                 "link": "https://open.spotify.com/episode/08Hn0WDE3t2m9qP6n94dYw?si=4df84f3e34e8424c",
                 "podcast-thumbnail_url": ""
-                },
-                {
-                    "id": "25-06-01",
-                    "title": "The Good News of Great Joy!",
-                    "author": "Rev. Craig Luekens",
-                    "scripture": "Luke 2: 1-20",
-                    "date": "2025-06-01",
-                    "apple_podcasts_url": "",
-                    "spotify_url": "https://open.spotify.com/episode/4saebNOFAQrBoVtVUmeZba?si=JaV8j9gFTXKLF7OoP5rZMg",
-                    "link": "https://open.spotify.com/episode/4saebNOFAQrBoVtVUmeZba?si=JaV8j9gFTXKLF7OoP5rZMg",
-                    "podcast-thumbnail_url": ""
-                },
-                {
-                    "id": "25-06-08",
-                    "title": "Jesus in the Temple: The Wait is Over, The Purpose Revealed",
-                    "author": "Rev. Craig Luekens",
-                    "scripture": "Luke 2: 21-52",
-                    "date": "2025-06-08",
-                    "apple_podcasts_url": "",
-                    "spotify_url": "https://open.spotify.com/episode/0QzA0VN845J0Etz9RbzS3R?si=JrAQBnnsRuGcDf3S1VIQHA",
-                    "link": "https://open.spotify.com/episode/0QzA0VN845J0Etz9RbzS3R?si=JrAQBnnsRuGcDf3S1VIQHA",
-                    "podcast-thumbnail_url": ""
-                },
-                {
-                    "id": "25-06-15",
-                    "title": "Repent and Prepare for the Lord to Come",
-                    "author": "Rev. Craig Luekens",
-                    "scripture": "Luke 3: 1-14",
-                    "date": "2025-06-15",
-                    "apple_podcasts_url": "",
-                    "spotify_url": "https://open.spotify.com/episode/3JiyPKeddx2xY1XNXuVxac?si=w9ftpZj9Sb6LSymlw9q5WA",
-                    "link": "https://open.spotify.com/episode/3JiyPKeddx2xY1XNXuVxac?si=w9ftpZj9Sb6LSymlw9q5WAA",
-                    "podcast-thumbnail_url": ""
-                },
-                {
-                    "id": "25-06-22",
-                    "title": "The Beloved Son Has Come",
-                    "author": "Rev. Craig Luekens",
-                    "scripture": "Luke 3: 15-38",
-                    "date": "2025-06-22",
-                    "apple_podcasts_url": "",
-                    "spotify_url": "https://open.spotify.com/episode/2Wl66RakViqtlVLSCoR9mw?si=_XQSpj-kRLKP3lIlt--qog",
-                    "link": "https://open.spotify.com/episode/2Wl66RakViqtlVLSCoR9mw?si=_XQSpj-kRLKP3lIlt--qog",
-                    "podcast-thumbnail_url": ""
-                },
-                {
-                    "id": "25-06-29",
-                    "title": "The Great Invitation",
-                    "author": "Rev. Benjamin Sheldon",
-                    "scripture": "Pslam 8",
-                    "date": "2025-06-29",
-                    "apple_podcasts_url": "",
-                    "spotify_url": "https://open.spotify.com/episode/4ROVEK06jyrnP3ieUo8CeL?si=8BFIzGKRSOSDoduuVKqhWw",
-                    "link": "https://open.spotify.com/episode/4ROVEK06jyrnP3ieUo8CeL?si=8BFIzGKRSOSDoduuVKqhWw",
-                    "podcast-thumbnail_url": ""
-                },
-                {
-                    "id": "25-07-06",
-                    "title": "The Tempation of Jesus: New Life in the Spirit",
-                    "author": "Rev. Craig Luekens",
-                    "scripture": "Luke 4: 1-13",
-                    "date": "2025-07-06",
-                    "apple_podcasts_url": "",
-                    "spotify_url": "https://open.spotify.com/episode/5APAn4plODYiEjmhmWX9sP?si=3b02e2c34b2b4ca4",
-                    "link": "https://open.spotify.com/episode/5APAn4plODYiEjmhmWX9sP?si=3b02e2c34b2b4ca4",
-                    "podcast-thumbnail_url": ""
-                },
-                {
-                    "id": "25-07-13",
-                    "title": "Sabbath Pleasure: A Day for Reflecting... on Justice for Our Neighbors",
-                    "author": "Rev. Chip Anderson",
-                    "scripture": "Isaiah 58: 1-14",
-                    "date": "2025-07-13",
-                    "apple_podcasts_url": "",
-                    "spotify_url": "https://open.spotify.com/episode/5LDP4RMUapxVX074jxnync?si=53fedd04df054be5",
-                    "link": "https://open.spotify.com/episode/5LDP4RMUapxVX074jxnync?si=53fedd04df054be5",
-                    "podcast-thumbnail_url": ""
-                }
-            
-
+            },
+            {
+                "id": "25-06-01",
+                "title": "The Good News of Great Joy!",
+                "author": "Rev. Craig Luekens",
+                "scripture": "Luke 2: 1-20",
+                "date": "2025-06-01",
+                "apple_podcasts_url": "",
+                "spotify_url": "https://open.spotify.com/episode/4saebNOFAQrBoVtVUmeZba?si=JaV8j9gFTXKLF7OoP5rZMg",
+                "link": "https://open.spotify.com/episode/4saebNOFAQrBoVtVUmeZba?si=JaV8j9gFTXKLF7OoP5rZMg",
+                "podcast-thumbnail_url": ""
+            },
+            {
+                "id": "25-06-08",
+                "title": "Jesus in the Temple: The Wait is Over, The Purpose Revealed",
+                "author": "Rev. Craig Luekens",
+                "scripture": "Luke 2: 21-52",
+                "date": "2025-06-08",
+                "apple_podcasts_url": "",
+                "spotify_url": "https://open.spotify.com/episode/0QzA0VN845J0Etz9RbzS3R?si=JrAQBnnsRuGcDf3S1VIQHA",
+                "link": "https://open.spotify.com/episode/0QzA0VN845J0Etz9RbzS3R?si=JrAQBnnsRuGcDf3S1VIQHA",
+                "podcast-thumbnail_url": ""
+            },
+            {
+                "id": "25-06-15",
+                "title": "Repent and Prepare for the Lord to Come",
+                "author": "Rev. Craig Luekens",
+                "scripture": "Luke 3: 1-14",
+                "date": "2025-06-15",
+                "apple_podcasts_url": "",
+                "spotify_url": "https://open.spotify.com/episode/3JiyPKeddx2xY1XNXuVxac?si=w9ftpZj9Sb6LSymlw9q5WA",
+                "link": "https://open.spotify.com/episode/3JiyPKeddx2xY1XNXuVxac?si=w9ftpZj9Sb6LSymlw9q5WAA",
+                "podcast-thumbnail_url": ""
+            },
+            {
+                "id": "25-06-22",
+                "title": "The Beloved Son Has Come",
+                "author": "Rev. Craig Luekens",
+                "scripture": "Luke 3: 15-38",
+                "date": "2025-06-22",
+                "apple_podcasts_url": "",
+                "spotify_url": "https://open.spotify.com/episode/2Wl66RakViqtlVLSCoR9mw?si=_XQSpj-kRLKP3lIlt--qog",
+                "link": "https://open.spotify.com/episode/2Wl66RakViqtlVLSCoR9mw?si=_XQSpj-kRLKP3lIlt--qog",
+                "podcast-thumbnail_url": ""
+            },
+            {
+                "id": "25-06-29",
+                "title": "The Great Invitation",
+                "author": "Rev. Benjamin Sheldon",
+                "scripture": "Pslam 8",
+                "date": "2025-06-29",
+                "apple_podcasts_url": "",
+                "spotify_url": "https://open.spotify.com/episode/4ROVEK06jyrnP3ieUo8CeL?si=8BFIzGKRSOSDoduuVKqhWw",
+                "link": "https://open.spotify.com/episode/4ROVEK06jyrnP3ieUo8CeL?si=8BFIzGKRSOSDoduuVKqhWw",
+                "podcast-thumbnail_url": ""
+            },
+            {
+                "id": "25-07-06",
+                "title": "The Tempation of Jesus: New Life in the Spirit",
+                "author": "Rev. Craig Luekens",
+                "scripture": "Luke 4: 1-13",
+                "date": "2025-07-06",
+                "apple_podcasts_url": "",
+                "spotify_url": "https://open.spotify.com/episode/5APAn4plODYiEjmhmWX9sP?si=3b02e2c34b2b4ca4",
+                "link": "https://open.spotify.com/episode/5APAn4plODYiEjmhmWX9sP?si=3b02e2c34b2b4ca4",
+                "podcast-thumbnail_url": ""
+            },
+            {
+                "id": "25-07-13",
+                "title": "Sabbath Pleasure: A Day for Reflecting... on Justice for Our Neighbors",
+                "author": "Rev. Chip Anderson",
+                "scripture": "Isaiah 58: 1-14",
+                "date": "2025-07-13",
+                "apple_podcasts_url": "",
+                "spotify_url": "https://open.spotify.com/episode/5LDP4RMUapxVX074jxnync?si=53fedd04df054be5",
+                "link": "https://open.spotify.com/episode/5LDP4RMUapxVX074jxnync?si=53fedd04df054be5",
+                "podcast-thumbnail_url": ""
+            }
         ]
     },
     "beyond": {
