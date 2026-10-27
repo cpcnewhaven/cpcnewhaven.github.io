@@ -180,6 +180,31 @@
     text-decoration: none;
 }
 
+.highlight-description .highlight-calendar-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    width: fit-content;
+    margin-top: 10px;
+    padding: 8px 14px;
+    border: 1px solid var(--link-color);
+    border-radius: 999px;
+    background: #f0f7ff;
+    color: var(--link-color);
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.highlight-description .highlight-calendar-btn:hover,
+.highlight-description .highlight-calendar-btn:focus-visible {
+    background: var(--link-color);
+    color: #ffffff;
+    text-decoration: none;
+    box-shadow: 0 2px 6px rgba(0, 60, 109, 0.2);
+}
+
 
 
 .highlight-error,

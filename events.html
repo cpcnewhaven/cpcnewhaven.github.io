@@ -165,6 +165,21 @@
           eventInfo.append(description);
         }
 
+        const pad = (n) => String(n).padStart(2, '0');
+        const startStr = `${year}${pad(month)}${pad(day)}`;
+        const nextDate = new Date(year, month - 1, day + 1);
+        const nextStr = `${nextDate.getFullYear()}${pad(nextDate.getMonth() + 1)}${pad(nextDate.getDate())}`;
+        const gcalUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(event.title)}&dates=${startStr}/${nextStr}&details=${encodeURIComponent(event.description || '')}&location=${encodeURIComponent('135 Whitney Ave, New Haven, CT 06510')}`;
+
+        const calLink = document.createElement('a');
+        calLink.href = gcalUrl;
+        calLink.target = '_blank';
+        calLink.rel = 'noopener';
+        calLink.className = 'event-cal-link';
+        calLink.setAttribute('aria-label', `Add ${event.title} to Google Calendar`);
+        calLink.innerHTML = '<i class="far fa-calendar-plus" aria-hidden="true"></i> Add to Calendar';
+        eventInfo.append(calLink);
+
         card.append(dateBlock, eventInfo);
         return card;
       };
@@ -643,6 +658,28 @@
 
     .events-calendar-note a:hover {
       color: #063f74;
+    }
+
+    .event-cal-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      margin-top: 6px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #0078D4;
+      text-decoration: none;
+      padding: 3px 8px;
+      border-radius: 4px;
+      background: #f0f7ff;
+      transition: background 0.2s ease, color 0.2s ease;
+      width: fit-content;
+    }
+
+    .event-cal-link:hover {
+      background: #0078D4;
+      color: #fff;
+      text-decoration: none;
     }
 
     @media (max-width: 768px) {

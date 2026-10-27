@@ -77,12 +77,37 @@ class HighlightsManager {
                 return true; // Keep ongoing announcements regardless of date
             }
 
+            // Check explicit expiresAt property if provided
+            if (announcement.expiresAt) {
+                const expires = new Date(announcement.expiresAt);
+                expires.setHours(23, 59, 59, 999);
+                if (expires < today) return false;
+            }
+
+            // Check explicit eventDate property if provided
+            if (announcement.eventDate) {
+                const evt = new Date(announcement.eventDate);
+                evt.setHours(23, 59, 59, 999);
+                if (evt < today) return false;
+            }
+
+            // Handle "This Sunday" announcements automatically
+            if (/this sunday/i.test(announcement.title) || /this sunday/i.test(announcement.description)) {
+                if (announcement.dateEntered) {
+                    const entered = new Date(announcement.dateEntered);
+                    const daysUntilSunday = (7 - entered.getDay()) % 7;
+                    const sundayDate = new Date(entered);
+                    sundayDate.setDate(sundayDate.getDate() + daysUntilSunday);
+                    sundayDate.setHours(23, 59, 59, 999);
+                    if (sundayDate < today) return false;
+                }
+            }
+
             // For event-type announcements, try to parse dates from title or description
             if (announcement.type === 'event' || announcement.category === 'event') {
                 const eventDate = this.parseEventDateFromContent(announcement);
                 if (eventDate) {
                     // If we found an event date, check if it's in the past
-                    // Events beyond today's date should be filtered out (unless ongoing)
                     return eventDate >= today;
                 }
             }
@@ -98,6 +123,14 @@ class HighlightsManager {
     }
 
     parseEventDateFromContent(announcement) {
+        // If explicit eventDate is provided, parse it
+        if (announcement.eventDate) {
+            const parts = announcement.eventDate.split('-').map(Number);
+            if (parts.length === 3) {
+                return new Date(parts[0], parts[1] - 1, parts[2]);
+            }
+        }
+
         // First try to parse from title
         let eventDate = this.parseEventDateFromTitle(announcement.title);
         if (eventDate) return eventDate;
@@ -246,10 +279,66 @@ class HighlightsManager {
         const description = document.createElement('div');
         description.className = 'highlight-description';
         description.innerHTML = announcement.description;
+
+        // If this is an event with a date, add an "Add to Calendar" link
+        if (announcement.type === 'event' || announcement.category === 'event' || announcement.eventDate) {
+            const eventDate = this.parseEventDateFromContent(announcement);
+            if (eventDate) {
+                const calLink = this.createGoogleCalendarLink(announcement, eventDate);
+                if (calLink) {
+                    description.appendChild(calLink);
+                }
+            }
+        }
+
         contentContainer.appendChild(description);
 
         element.appendChild(contentContainer);
         return element;
+    }
+
+    createGoogleCalendarLink(announcement, eventDate) {
+        if (!eventDate || isNaN(eventDate.getTime())) return null;
+
+        const pad = (n) => String(n).padStart(2, '0');
+        const startStr = `${eventDate.getFullYear()}${pad(eventDate.getMonth() + 1)}${pad(eventDate.getDate())}`;
+
+        // Check if time is mentioned in title or description (e.g. 10:30am, 7-8pm, 9am-11:30am)
+        const combinedText = `${announcement.title} ${announcement.description || ''}`;
+        const timeMatch = combinedText.match(/(\d{1,2})(?::(\d{2}))?\s*(am|pm)/i);
+        let datesParam = `${startStr}/${startStr}`;
+
+        if (timeMatch) {
+            let hour = parseInt(timeMatch[1], 10);
+            const min = timeMatch[2] ? parseInt(timeMatch[2], 10) : 0;
+            const ampm = timeMatch[3].toLowerCase();
+            if (ampm === 'pm' && hour < 12) hour += 12;
+            if (ampm === 'am' && hour === 12) hour = 0;
+
+            const dt = new Date(eventDate.getFullYear(), eventDate.getMonth(), eventDate.getDate(), hour, min);
+            const endDt = new Date(dt.getTime() + 2 * 60 * 60 * 1000); // 2-hour default duration
+            const toUtcIso = (d) => d.toISOString().replace(/[-:]/g, '').replace(/\.\d{3}/, '');
+            datesParam = `${toUtcIso(dt)}/${toUtcIso(endDt)}`;
+        } else {
+            const nextDay = new Date(eventDate);
+            nextDay.setDate(nextDay.getDate() + 1);
+            const nextDayStr = `${nextDay.getFullYear()}${pad(nextDay.getMonth() + 1)}${pad(nextDay.getDate())}`;
+            datesParam = `${startStr}/${nextDayStr}`;
+        }
+
+        const cleanTitle = announcement.title.replace(/<[^>]*>/g, '').trim();
+        const cleanDesc = announcement.description ? announcement.description.replace(/<[^>]*>/g, '').trim() : '';
+        const location = '135 Whitney Ave, New Haven, CT 06510';
+
+        const gcalUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(cleanTitle)}&dates=${datesParam}&details=${encodeURIComponent(cleanDesc)}&location=${encodeURIComponent(location)}`;
+
+        const link = document.createElement('a');
+        link.href = gcalUrl;
+        link.target = '_blank';
+        link.rel = 'noopener noreferrer';
+        link.className = 'highlight-calendar-btn';
+        link.innerHTML = '<i class="far fa-calendar-plus" aria-hidden="true"></i> Add to Calendar';
+        return link;
     }
 
     createImageContainer(imageUrl, imageDisplayType) {

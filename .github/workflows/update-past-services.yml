@@ -1,0 +1,47 @@
+name: Update Past Services
+
+on:
+  workflow_dispatch: {}
+  schedule:
+    - cron: "0 18 * * 0"
+    - cron: "0 12 * * 1"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-past-services
+  cancel-in-progress: true
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: python -m pip install yt-dlp
+
+      - name: Fetch past services from YouTube
+        run: python scripts/fetch_past_services.py
+
+      - name: Rebuild search index
+        run: python scripts/build-search-index.py
+
+      - name: Commit changes when needed
+        run: |
+          if git diff --quiet data/past-services.json; then
+            echo "No past services changes to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/past-services.json data/search-index.json data/search-manifest.json
+          git commit -m "Update past services livestream archive"
+          git push

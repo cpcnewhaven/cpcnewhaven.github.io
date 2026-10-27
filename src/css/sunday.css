@@ -386,6 +386,128 @@ body {
     }
 }
 
+/* Plan Your Visit Section */
+.plan-visit-section {
+    background: white;
+    border-radius: 12px;
+    padding: 2.5rem 2rem;
+    margin: 0 auto 3rem;
+    max-width: 1000px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border-top: 4px solid #0078D4;
+}
+
+.plan-visit-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.plan-visit-header h3 {
+    font-size: 2rem;
+    color: #003c6d;
+    margin-bottom: 0.5rem;
+}
+
+.plan-visit-header p {
+    color: #64748b;
+    font-size: 1.05rem;
+}
+
+.plan-visit-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.plan-visit-card {
+    background: #f8fafd;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.plan-visit-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 120, 212, 0.1);
+}
+
+.plan-visit-card-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: #e0f2fe;
+    color: #0078D4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    margin-bottom: 0.25rem;
+}
+
+.plan-visit-card h4 {
+    font-size: 1.15rem;
+    color: #1e293b;
+    margin: 0;
+    font-weight: 700;
+}
+
+.plan-visit-card p {
+    font-size: 0.95rem;
+    color: #475569;
+    line-height: 1.55;
+    margin: 0;
+}
+
+.plan-visit-cta-bar {
+    text-align: center;
+    padding-top: 1rem;
+    border-top: 1px solid #e2e8f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.plan-visit-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 22px;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.plan-visit-btn.primary {
+    background: #0078D4;
+    color: white;
+}
+
+.plan-visit-btn.primary:hover {
+    background: #005a9e;
+    color: white;
+    box-shadow: 0 4px 12px rgba(0, 120, 212, 0.25);
+}
+
+.plan-visit-btn.secondary {
+    background: white;
+    color: #0078D4;
+    border: 1.5px solid #0078D4;
+}
+
+.plan-visit-btn.secondary:hover {
+    background: #f0f7ff;
+    color: #005a9e;
+}
+
 /* Mobile Responsive */
 @media (max-width: 768px) {
     #sunday-hero.splash-hero--sunday {

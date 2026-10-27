@@ -22,7 +22,7 @@
     <link rel="icon" href="https://files.cpcnewhaven.org/web-assets/CPC - FAVICON - FALL 2024.png" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
-    <script src="./src/js/sunday-sermons.js?v=20261012-1"></script>
+    <script src="./src/js/sunday-sermons.js?v=20261026-1"></script>
     
     <style>
         .breadcrumbs {
@@ -185,6 +185,52 @@
                 </div>
             </div>
 
+            <!-- Sermon Filter Bar -->
+            <div class="sermon-filter-bar">
+                <div class="filter-group">
+                    <label for="filter-preacher"><i class="fas fa-user"></i> Preacher:</label>
+                    <select id="filter-preacher" x-model="selectedPreacher" @change="filterSermons()">
+                        <option value="all">All Preachers</option>
+                        <template x-for="p in availablePreachers" :key="p">
+                            <option :value="p" x-text="p"></option>
+                        </template>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="filter-book"><i class="fas fa-book-open"></i> Scripture / Series:</label>
+                    <select id="filter-book" x-model="selectedBook" @change="filterSermons()">
+                        <option value="all">All Books</option>
+                        <template x-for="b in availableBooks" :key="b">
+                            <option :value="b" x-text="b"></option>
+                        </template>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="filter-year"><i class="fas fa-calendar-alt"></i> Year:</label>
+                    <select id="filter-year" x-model="selectedYear" @change="filterSermons()">
+                        <option value="all">All Years</option>
+                        <template x-for="y in availableYears" :key="y">
+                            <option :value="y" x-text="y"></option>
+                        </template>
+                    </select>
+                </div>
+
+                <button 
+                    type="button"
+                    x-show="hasActiveFilters()" 
+                    @click="resetFilters()" 
+                    class="reset-filters-btn"
+                >
+                    <i class="fas fa-times-circle"></i> Clear Filters
+                </button>
+
+                <div class="sermon-count-badge" x-show="loadingComplete">
+                    <span x-text="`${filteredSermons.length} ${filteredSermons.length === 1 ? 'sermon' : 'sermons'}`"></span>
+                </div>
+            </div>
+
             <!-- Card View -->
             <div class="sermon-grid" x-show="filteredSermons.length > 0 && viewMode === 'card'">
                 <template x-for="sermon in filteredSermons" :key="sermon.id">
@@ -315,9 +361,73 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
             flex-wrap: wrap;
             gap: 20px;
+        }
+
+        .sermon-filter-bar {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px 18px;
+            margin-bottom: 30px;
+            padding: 12px 18px;
+            background: #f8fafd;
+            border: 1px solid #e1e8ed;
+            border-radius: 8px;
+        }
+
+        .filter-group {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .filter-group label {
+            font-size: 0.88rem;
+            font-weight: 600;
+            color: #4a5568;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .filter-group select {
+            padding: 6px 10px;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            background: white;
+            font-size: 0.88rem;
+            color: #1e293b;
+            cursor: pointer;
+        }
+
+        .reset-filters-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            padding: 6px 12px;
+            background: #e2e8f0;
+            border: none;
+            border-radius: 6px;
+            color: #334155;
+            font-size: 0.82rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s ease, color 0.2s ease;
+        }
+
+        .reset-filters-btn:hover {
+            background: #cbd5e1;
+            color: #0f172a;
+        }
+
+        .sermon-count-badge {
+            margin-left: auto;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #64748b;
         }
 
         .search-container {
@@ -527,6 +637,26 @@
             .sermon-controls {
                 flex-direction: column;
                 align-items: stretch;
+            }
+
+            .sermon-filter-bar {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 10px;
+            }
+
+            .filter-group {
+                justify-content: space-between;
+            }
+
+            .filter-group select {
+                flex: 1;
+                max-width: 65%;
+            }
+
+            .sermon-count-badge {
+                margin-left: 0;
+                text-align: right;
             }
 
             .search-container {
