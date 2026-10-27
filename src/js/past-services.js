@@ -6,6 +6,9 @@ window.serviceData = function() {
         sortKey: 'date',
         sortAsc: false,
         searchQuery: '',
+        selectedYear: 'all',
+        availableYears: [],
+        displayLimit: 24,
         viewMode: 'card', // Default to card view
         services: [],
         filteredServices: [],
@@ -16,19 +19,14 @@ window.serviceData = function() {
         },
         
         loadServices() {
-            console.log('loadServices called');
-            console.log('Fetching from: data/past-services.json');
-            fetch('data/past-services.json')
+            fetch('data/past-services.json', { cache: 'no-cache' })
                 .then(response => {
-                    console.log('Response received:', response);
                     if (!response.ok) {
                         throw new Error(`HTTP error! status: ${response.status}`);
                     }
                     return response.json();
                 })
                 .then(data => {
-                    console.log('Data loaded:', data);
-                    // Format dates for display
                     this.services = (data.services || []).map(service => {
                         let displayD = service.date;
                         if (displayD && displayD !== "Unknown Date") {
@@ -39,10 +37,19 @@ window.serviceData = function() {
                             displayDate: displayD
                         };
                     });
+
+                    // Extract available years
+                    const years = new Set();
+                    this.services.forEach(s => {
+                        if (s.date && s.date !== "Unknown Date" && s.date.length >= 4) {
+                            years.add(s.date.substring(0, 4));
+                        }
+                    });
+                    this.availableYears = Array.from(years).sort().reverse();
+
                     this.filteredServices = [...this.services];
                     this.sortServices();
                     this.loadingComplete = true;
-                    console.log('Services loaded:', this.services.length);
                 })
                 .catch(error => {
                     console.error('Error loading services:', error);
@@ -53,30 +60,50 @@ window.serviceData = function() {
         },
 
         formatSundayDate(dateString) {
-            // Parse the date string and ensure it's treated as local time, not UTC
             const [year, month, day] = dateString.split('-').map(num => parseInt(num, 10));
-            const date = new Date(year, month - 1, day); // month is 0-indexed in JavaScript
-            
+            const date = new Date(year, month - 1, day);
             const options = { 
                 year: 'numeric', 
                 month: 'long', 
                 day: 'numeric' 
             };
-            // Most are Sundays, but just format the date nicely
             return date.toLocaleDateString('en-US', options);
         },
 
         filterServices() {
-            if (!this.searchQuery.trim()) {
-                this.filteredServices = [...this.services];
-            } else {
-                const query = this.searchQuery.toLowerCase();
-                this.filteredServices = this.services.filter(service => 
+            let result = [...this.services];
+
+            if (this.searchQuery && this.searchQuery.trim()) {
+                const query = this.searchQuery.toLowerCase().trim();
+                result = result.filter(service => 
                     service.title?.toLowerCase().includes(query) ||
                     service.date?.toLowerCase().includes(query)
                 );
             }
+
+            if (this.selectedYear !== 'all') {
+                result = result.filter(service => 
+                    service.date && service.date.startsWith(this.selectedYear)
+                );
+            }
+
+            this.filteredServices = result;
+            this.displayLimit = 24; // reset pagination on filter change
             this.sortServices();
+        },
+
+        resetFilters() {
+            this.searchQuery = '';
+            this.selectedYear = 'all';
+            this.filterServices();
+        },
+
+        hasActiveFilters() {
+            return (this.searchQuery && this.searchQuery.trim() !== '') || this.selectedYear !== 'all';
+        },
+
+        loadMore() {
+            this.displayLimit += 24;
         },
 
         sortServices() {
@@ -84,14 +111,11 @@ window.serviceData = function() {
                 let aValue = a[this.sortKey] || '';
                 let bValue = b[this.sortKey] || '';
                 
-                // Handle date sorting
                 if (this.sortKey === 'date') {
-                    // Treat "Unknown Date" as very old
                     const defaultDate = new Date("2000-01-01").getTime();
                     aValue = new Date(aValue).getTime() || defaultDate;
                     bValue = new Date(bValue).getTime() || defaultDate;
                 } else {
-                    // String sorting
                     aValue = aValue.toString().toLowerCase();
                     bValue = bValue.toString().toLowerCase();
                 }

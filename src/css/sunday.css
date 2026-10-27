@@ -1,400 +1,304 @@
-/* Reset any potential margin issues */
-body {
-    margin: 0;
-    padding: 0;
+/* ==========================================================================
+   Sundays at CPC New Haven - Modern Stylesheet
+   Matches site-wide design system (global-body.css, about.css, podcasts.css)
+   ========================================================================== */
+
+/* Main Content Area */
+.sunday-main-container {
+    width: 100%;
+    background: #f8fafd;
+    padding: clamp(2rem, 5vw, 4rem) 1.25rem;
 }
 
-.main-navigation {
-    margin: 0;
-    padding: 0;
+.sunday-content-wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
 }
 
-/* Override global section styles that limit width */
-#sunday-main-content section p {
-    max-width: none !important;
-    width: 100% !important;
-}
-
-#sunday-main-content section h3 {
-    max-width: none !important;
-    width: 100% !important;
-}
-
-#sunday-main-content section h1,
-#sunday-main-content section h2 {
-    max-width: none !important;
-    width: 100% !important;
-}
-
-/* Ensure all text elements in our sections are not constrained */
-#sunday-main-content p,
-#sunday-main-content h1,
-#sunday-main-content h2,
-#sunday-main-content h3,
-#sunday-main-content h4,
-#sunday-main-content h5,
-#sunday-main-content h6 {
-    max-width: none !important;
-}
-
-/* Enhanced Parallax Hero Section */
-#sunday-hero.splash-hero--sunday {
-    display: flex !important;
-    height: 80vh;
-    /* Avoid scroll jank from fixed backgrounds */
-    background-attachment: scroll;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+/* Service Overview Card */
+.sunday-overview-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: clamp(1.75rem, 4vw, 3rem);
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 60, 109, 0.06);
     position: relative;
     overflow: hidden;
-    will-change: transform;
-    transform: translateZ(0);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-position-y: 0;
-    transition: background-position 0.1s ease-out;
-    margin: 0;
-    padding: 0;
 }
 
-#sunday-hero.splash-hero--sunday::before {
+.sunday-overview-card::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.4);
-    z-index: 1;
+    height: 4px;
+    background: linear-gradient(90deg, #003c6d, #0078D4);
 }
 
-#sunday-hero.splash-hero--sunday h1 {
-    position: relative;
-    z-index: 2;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    font-size: 4rem;
+.sunday-eyebrow {
+    font-size: 0.85rem;
     font-weight: 700;
-    color: white;
-    text-align: center;
-    margin: 0;
-    padding: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: #0078D4;
+    margin-bottom: 0.5rem;
 }
 
-/* Main Content */
-#sunday-main-content.main-content {
-    padding: 4rem 2rem;
-    background: #f8f9fa;
-    margin: 0;
-    width: 100%;
+.sunday-main-heading {
+    font-size: clamp(2rem, 3.5vw, 2.75rem);
+    font-weight: 800;
+    color: #003c6d;
+    margin: 0 0 0.75rem;
+    letter-spacing: -0.03em;
+    line-height: 1.15;
 }
 
-#sunday-content-container.content-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem;
+.sunday-lead {
+    font-size: clamp(1.05rem, 1.8vw, 1.2rem);
+    color: #4a5568;
+    max-width: 650px;
+    margin: 0 auto 2rem;
+    line-height: 1.6;
 }
 
-#sunday-service-overview.service-overview {
-    text-align: center;
-    margin-bottom: 3rem;
-    padding: 2rem;
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-#sunday-main-title {
-    font-size: 2.5rem;
-    color: #333;
-    margin-bottom: 1rem;
-}
-
-#sunday-subtitle.subtitle {
-    font-size: 1.2rem;
-    color: #666;
-    margin-bottom: 2rem;
-    text-align: center;
-}
-
-#sunday-service-highlights.service-highlights {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    flex-wrap: wrap;
-    margin-top: 1rem;
-}
-
-#sunday-worship-banner.worship-banner {
-    margin: 1.5rem auto 0;
-    max-width: 520px;
-    width: 100%;
-    padding: 1rem 1.5rem;
-    border-radius: 999px;
-    background: linear-gradient(135deg, rgba(0, 120, 212, 0.08), rgba(0, 120, 212, 0.02));
-    border: 1px solid rgba(0, 120, 212, 0.22);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+/* Service Times Banner */
+.sunday-times-banner {
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: clamp(1rem, 3vw, 2.5rem);
+    flex-wrap: wrap;
+    background: #f0f7ff;
+    border: 1px solid rgba(0, 120, 212, 0.2);
+    border-radius: 12px;
+    padding: 1.25rem 2rem;
+    margin: 0 auto 2rem;
+    max-width: 720px;
+}
+
+.sunday-time-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.sunday-time-label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #64748b;
+}
+
+.sunday-time-value {
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: #003c6d;
+}
+
+.sunday-time-divider {
+    width: 1px;
+    height: 36px;
+    background: #cbd5e1;
+}
+
+/* Service Highlights Pills */
+.sunday-pills {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.85rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+.sunday-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1.15rem;
+    border-radius: 999px;
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: #003c6d;
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.sunday-pill i {
+    color: #0078D4;
+}
+
+/* Action Buttons */
+.sunday-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 1rem;
     flex-wrap: wrap;
 }
 
-.worship-banner-label {
-    font-size: 0.95rem;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: #666;
-    font-weight: 700;
-}
-
-.worship-banner-time {
-    font-size: 1.35rem;
-    font-weight: 700;
-    color: #0078D4;
-}
-
-.highlight-item {
-    display: flex;
+.sunday-btn {
+    display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    font-size: 1.1rem;
-    color: #333;
-    background: #f8f9fa;
-    padding: 0.75rem 1.5rem;
-    border-radius: 25px;
-    border: 2px solid #0078D4;
+    padding: 0.75rem 1.6rem;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: all 0.2s ease;
 }
 
-.highlight-item i {
-    color: #0078D4;
+.sunday-btn.primary {
+    background: #003c6d;
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 60, 109, 0.2);
 }
 
-/* Info Grid */
-#sunday-info-grid.info-grid {
+.sunday-btn.primary:hover {
+    background: #002647;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 60, 109, 0.3);
+}
+
+.sunday-btn.secondary {
+    background: #ffffff;
+    color: #003c6d;
+    border: 1.5px solid #003c6d;
+}
+
+.sunday-btn.secondary:hover {
+    background: #f0f7ff;
+    color: #002647;
+    transform: translateY(-2px);
+}
+
+/* Info Grid (2 Columns) */
+.sunday-info-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-    margin: 0 auto 3rem;
-    max-width: 1000px;
-    width: 100%;
-    justify-items: stretch;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.75rem;
 }
 
-#sunday-info-grid .info-card {
-    background: white;
-    padding: 1.5rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    border-left: 4px solid #0078D4;
-    width: 100%;
-    margin: 0;
+.sunday-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    padding: 1.75rem;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
     display: flex;
     flex-direction: column;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-#sunday-info-grid .info-card h3 {
-    color: #333;
-    margin-bottom: 1rem;
-    font-size: 1.3rem;
-    text-align: center;
+.sunday-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 60, 109, 0.08);
 }
 
-.schedule-list {
+.sunday-card-header {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    margin-bottom: 1.25rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.sunday-card-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    background: #f0f7ff;
+    color: #0078D4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.sunday-card-header h3 {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #003c6d;
+}
+
+.sunday-card-body {
+    flex: 1;
+    color: #4a5568;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.sunday-card-body p {
+    margin: 0 0 0.85rem;
+}
+
+.sunday-card-body p:last-child {
+    margin-bottom: 0;
+}
+
+.sunday-badge-notice {
+    background: #f8fafd;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 0.85rem 1rem;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #334155;
+}
+
+.sunday-badge-notice i {
+    color: #0078D4;
+    margin-right: 0.4rem;
+}
+
+/* Classes list */
+.sunday-class-list {
     display: flex;
     flex-direction: column;
     gap: 0.75rem;
+    margin-top: 0.5rem;
 }
 
-.schedule-item {
+.sunday-class-row {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.5rem 0;
-    border-bottom: 1px solid #eee;
-}
-
-.schedule-item:last-child {
-    border-bottom: none;
-}
-
-.time {
-    font-weight: bold;
-    color: #0078D4;
-    min-width: 80px;
-}
-
-.activity {
-    color: #666;
-    flex: 1;
-    text-align: right;
-}
-
-.location-info p {
-    margin-bottom: 0.75rem;
-    color: #333;
-}
-
-.location-detail {
-    font-size: 0.9rem;
-    color: #888;
-}
-
-.parking-info {
-    background: #f8f9fa;
-    padding: 0.75rem;
+    padding: 0.65rem 0.85rem;
+    background: #f8fafd;
     border-radius: 8px;
     font-size: 0.9rem;
-    color: #666;
 }
 
-.parking-info i {
-    color: #0078D4;
-    margin-right: 0.5rem;
+.sunday-class-age {
+    font-weight: 700;
+    color: #003c6d;
 }
 
-.class-locations {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-}
-
-.class-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.5rem 0;
-    border-bottom: 1px solid #eee;
-}
-
-.class-item:last-child {
-    border-bottom: none;
-}
-
-.age {
-    font-weight: bold;
-    color: #0078D4;
-    min-width: 100px;
-}
-
-.location {
-    color: #666;
-    flex: 1;
-    text-align: right;
-    font-size: 0.9rem;
-}
-
-.study-info {
-    text-align: center;
-}
-
-.study-info p {
-    margin: 0.5rem 0;
-    color: #888;
-    font-size: 0.9rem;
-    text-align: center;
-}
-
-/* Map Section */
-#sunday-map-section.map-section {
-    margin: 0 auto 3rem;
-    text-align: center;
-    max-width: 1000px;
-    width: 100%;
-}
-
-#sunday-map-title {
-    font-size: 2rem;
-    color: #333;
-    margin-bottom: 1.5rem;
-}
-
-.find-us-image {
-    display: block;
-    width: 100%;
-    max-height: 320px;
-    margin: 0 auto 1.5rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    object-fit: cover;
-    object-position: center;
-}
-
-.map-container {
-    position: relative;
-    width: 100%;
-    height: 400px;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.map {
-    width: 100%;
-    height: 100%;
-    border: none;
-}
-
-/* Fellowship Section */
-#sunday-fellowship-section.fellowship-section {
-    background: white;
-    padding: 2rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    margin: 0 auto 3rem;
-    text-align: center;
-    max-width: 1000px;
-    width: 100%;
-}
-
-#sunday-fellowship-section.fellowship-section p {
-    max-width: none !important;
-    width: 100% !important;
-}
-
-#sunday-fellowship-title {
-    font-size: 1.5rem;
-    color: #333;
-    margin-bottom: 1rem;
-    text-align: center;
-}
-
-.fellowship-section p {
-    font-size: 1.1rem;
-    color: #666;
-    line-height: 1.6;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-/* Desktop Specific Improvements */
-@media (min-width: 769px) {
-    #sunday-info-grid.info-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 2.5rem;
-    }
-
-    #sunday-service-highlights.service-highlights {
-        gap: 3rem;
-    }
-
-    .highlight-item {
-        padding: 1rem 2rem;
-        font-size: 1.2rem;
-    }
+.sunday-class-room {
+    color: #64748b;
+    font-weight: 500;
 }
 
 /* Plan Your Visit Section */
 .plan-visit-section {
-    background: white;
-    border-radius: 12px;
-    padding: 2.5rem 2rem;
-    margin: 0 auto 3rem;
-    max-width: 1000px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    border-top: 4px solid #0078D4;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: clamp(1.75rem, 4vw, 3rem);
+    box-shadow: 0 4px 20px rgba(0, 60, 109, 0.06);
 }
 
 .plan-visit-header {
@@ -403,19 +307,22 @@ body {
 }
 
 .plan-visit-header h3 {
-    font-size: 2rem;
+    font-size: clamp(1.75rem, 3vw, 2.25rem);
     color: #003c6d;
-    margin-bottom: 0.5rem;
+    margin: 0 0 0.5rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
 }
 
 .plan-visit-header p {
     color: #64748b;
     font-size: 1.05rem;
+    margin: 0;
 }
 
 .plan-visit-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 1.5rem;
     margin-bottom: 2rem;
 }
@@ -423,49 +330,48 @@ body {
 .plan-visit-card {
     background: #f8fafd;
     border: 1px solid #e2e8f0;
-    border-radius: 10px;
+    border-radius: 12px;
     padding: 1.5rem;
     display: flex;
     flex-direction: column;
-    gap: 0.75rem;
+    gap: 0.65rem;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .plan-visit-card:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 120, 212, 0.1);
+    box-shadow: 0 6px 18px rgba(0, 60, 109, 0.08);
 }
 
 .plan-visit-card-icon {
-    width: 44px;
-    height: 44px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     background: #e0f2fe;
     color: #0078D4;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.2rem;
-    margin-bottom: 0.25rem;
+    font-size: 1.15rem;
 }
 
 .plan-visit-card h4 {
     font-size: 1.15rem;
-    color: #1e293b;
+    color: #003c6d;
     margin: 0;
     font-weight: 700;
 }
 
 .plan-visit-card p {
-    font-size: 0.95rem;
-    color: #475569;
+    font-size: 0.92rem;
+    color: #4a5568;
     line-height: 1.55;
     margin: 0;
 }
 
 .plan-visit-cta-bar {
     text-align: center;
-    padding-top: 1rem;
+    padding-top: 1.5rem;
     border-top: 1px solid #e2e8f0;
     display: flex;
     justify-content: center;
@@ -474,11 +380,75 @@ body {
     flex-wrap: wrap;
 }
 
-.plan-visit-btn {
+/* Map & Location Section */
+.sunday-map-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 60, 109, 0.06);
+}
+
+.sunday-map-header {
+    padding: 1.75rem 2rem 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.sunday-map-header h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #003c6d;
+}
+
+.sunday-map-container {
+    width: 100%;
+    height: 380px;
+    border: none;
+}
+
+.sunday-map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* Fellowship Lunch Callout */
+.sunday-fellowship-card {
+    background: linear-gradient(135deg, #003c6d 0%, #002244 100%);
+    color: #ffffff;
+    border-radius: 16px;
+    padding: clamp(1.75rem, 4vw, 2.75rem);
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(0, 60, 109, 0.15);
+}
+
+.sunday-fellowship-card h3 {
+    color: #ffffff;
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+    margin: 0 0 0.75rem;
+    font-weight: 800;
+}
+
+.sunday-fellowship-card p {
+    color: rgba(255, 255, 255, 0.88);
+    font-size: 1.05rem;
+    max-width: 650px;
+    margin: 0 auto 1.5rem;
+    line-height: 1.6;
+}
+
+.sunday-fellowship-btn {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
-    padding: 10px 22px;
+    gap: 0.5rem;
+    background: #ffffff;
+    color: #003c6d;
+    padding: 0.75rem 1.75rem;
     border-radius: 999px;
     font-weight: 700;
     font-size: 0.95rem;
@@ -486,79 +456,34 @@ body {
     transition: all 0.2s ease;
 }
 
-.plan-visit-btn.primary {
-    background: #0078D4;
-    color: white;
-}
-
-.plan-visit-btn.primary:hover {
-    background: #005a9e;
-    color: white;
-    box-shadow: 0 4px 12px rgba(0, 120, 212, 0.25);
-}
-
-.plan-visit-btn.secondary {
-    background: white;
-    color: #0078D4;
-    border: 1.5px solid #0078D4;
-}
-
-.plan-visit-btn.secondary:hover {
+.sunday-fellowship-btn:hover {
     background: #f0f7ff;
-    color: #005a9e;
+    color: #002244;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Mobile Responsive */
+/* Responsive Styles */
 @media (max-width: 768px) {
-    #sunday-hero.splash-hero--sunday {
-        height: 60vh;
-        background-attachment: scroll;
-    }
-
-    #sunday-hero.splash-hero--sunday h1 {
-        font-size: 2.5rem;
-    }
-
-    #sunday-main-content.main-content {
-        padding: 2rem 1rem;
-    }
-
-    #sunday-main-title {
-        font-size: 2rem;
-    }
-
-    .service-highlights {
+    .sunday-times-banner {
         flex-direction: column;
         gap: 1rem;
     }
 
-    #sunday-info-grid.info-grid {
+    .sunday-time-divider {
+        width: 60px;
+        height: 1px;
+    }
+
+    .sunday-info-grid {
         grid-template-columns: 1fr;
-        gap: 1rem;
     }
 
-    .schedule-item,
-    .class-item {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.25rem;
+    .plan-visit-grid {
+        grid-template-columns: 1fr;
     }
 
-    .time,
-    .age {
-        min-width: auto;
-    }
-
-    .activity,
-    .location {
-        text-align: left;
-    }
-
-    .map-container {
-        height: 300px;
-    }
-
-    .find-us-image {
-        max-height: 220px;
+    .sunday-map-container {
+        height: 280px;
     }
 }

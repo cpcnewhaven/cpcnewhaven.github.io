@@ -3357,6 +3357,7 @@ body.adult-studies-page .main-content {
 .splash-hero--announcements,
 .splash-hero--community,
 .splash-hero--live,
+.splash-hero--sunday,
 .splash-hero--connect {
     display: flex !important;
     min-height: 15rem;
@@ -3372,6 +3373,7 @@ body.adult-studies-page .main-content {
 .splash-hero--announcements::before,
 .splash-hero--community::before,
 .splash-hero--live::before,
+.splash-hero--sunday::before,
 .splash-hero--connect::before {
     background: linear-gradient(110deg, rgba(0, 24, 56, 0.76), rgba(0, 59, 102, 0.42)) !important;
 }
@@ -3381,6 +3383,7 @@ body.adult-studies-page .main-content {
 .splash-hero--announcements h1,
 .splash-hero--community h1,
 .splash-hero--live h1,
+.splash-hero--sunday h1,
 .splash-hero--connect h1 {
     max-width: 14ch;
     margin: 0;
@@ -3398,6 +3401,7 @@ body.adult-studies-page .main-content {
 .splash-hero--announcements h1::after,
 .splash-hero--community h1::after,
 .splash-hero--live h1::after,
+.splash-hero--sunday h1::after,
 .splash-hero--connect h1::after {
     content: '';
     display: block;
@@ -3409,7 +3413,6 @@ body.adult-studies-page .main-content {
 }
 
 /* Full-photo pages use a compact title lockup that leaves room for the image. */
-#sunday-hero.splash-hero--sunday::before,
 #events-hero.splash-hero--events::before {
     background: linear-gradient(
         180deg,
@@ -3419,7 +3422,6 @@ body.adult-studies-page .main-content {
     ) !important;
 }
 
-#sunday-hero.splash-hero--sunday .hero-title-lockup,
 #events-hero.splash-hero--events .hero-title-lockup,
 .splash-hero--live .hero-title-lockup {
     position: relative;

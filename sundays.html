@@ -15,13 +15,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="CPC New Haven Church - Sundays Worship Service. Join us for worship, fellowship, and community.">
-    <meta name="keywords" content="CPC New Haven, Church, Worship, Fellowship, Sundays">
+        content="Join us for Sunday worship at 10:30am at CPC New Haven. Total Christ spirituality, vibrant community, fellowship lunch, and nursery care at 135 Whitney Ave.">
+    <meta name="keywords" content="CPC New Haven, Church, Sunday Worship, New Haven, CT, Fellowship">
     <meta name="author" content="CPC New Haven">
-    <title>Every Sunday at 10:30am CPC New Haven Church</title>
+    <title>Sundays at CPC New Haven | 10:30am Worship Service</title>
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Christ Presbyterian Church New Haven">
+    <meta property="og:title" content="Sundays at CPC New Haven | 10:30am Worship">
+    <meta property="og:description" content="Experience worship, community, and spiritual growth in Greater New Haven. Join us Sundays at 10:30am.">
+    <meta property="og:image" content="https://storage.googleapis.com/cpc-public-website/2026/MISC%20WEBSITE%20GRAPHICS/WEBSITE%20HERO%20-%20CONGREGATION.jpg">
+    <meta property="og:url" content="https://cpcnewhaven.org/sundays.html">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sundays at CPC New Haven | 10:30am Worship">
+    <meta name="twitter:description" content="Experience worship, community, and spiritual growth in Greater New Haven. Join us Sundays at 10:30am.">
+    <meta name="twitter:image" content="https://storage.googleapis.com/cpc-public-website/2026/MISC%20WEBSITE%20GRAPHICS/WEBSITE%20HERO%20-%20CONGREGATION.jpg">
+
     <link rel="stylesheet" href="./src/css/global-body.css?v=20260821-heroes-6">
     <link rel="stylesheet" href="./src/css/global-footer-cta.css">
-    <link rel="stylesheet" href="./src/css/sunday.css?v=20261026-1">
+    <link rel="stylesheet" href="./src/css/sunday.css?v=20261026-2">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="icon"
         href="https://storage.googleapis.com/cpc-public-website/web-assets/CPC%20-%20FAVICON%20-%20FALL%202024.png"
@@ -87,75 +102,109 @@
     </ul>
     </nav>
 
-    <div id="sunday-hero" class="splash-hero--sunday">
-        <div class="hero-title-lockup">
-            <p class="hero-eyebrow">Sundays at CPC</p>
-            <h1>Sunday <br>Worship Service</h1>
-        </div>
+    <!-- Standard Site Splash Hero -->
+    <div class="splash-hero--sunday" style="background-image: url('https://storage.googleapis.com/cpc-public-website/2026/MISC%20WEBSITE%20GRAPHICS/WEBSITE%20HERO%20-%20CONGREGATION.jpg');">
+        <h1>Sundays</h1>
     </div>
 
-    <!-- MAIN CONTENT SECTION -->
-    <section id="sunday-main-content" class="main-content">
-        <div id="sunday-content-container" class="content-container">
-            <!-- Service Overview -->
-            <div id="sunday-service-overview" class="service-overview">
-                <h2 id="sunday-main-title">Join Us This Sunday</h2>
-                <p id="sunday-subtitle" class="subtitle">Experience worship, community, and spiritual growth at 10:30am
+    <!-- MAIN CONTENT -->
+    <main class="sunday-main-container">
+        <div class="sunday-content-wrapper">
+
+            <!-- Welcome & Overview Card -->
+            <section class="sunday-overview-card" aria-labelledby="sunday-welcome-heading">
+                <p class="sunday-eyebrow">Worship &amp; Community</p>
+                <h2 id="sunday-welcome-heading" class="sunday-main-heading">Join Us This Sunday</h2>
+                <p class="sunday-lead">
+                    Whether you are exploring Christianity for the first time or looking for a church home in Greater New Haven, you are warmly invited to worship with us.
                 </p>
 
-                <div id="sunday-service-highlights" class="service-highlights">
-                    <div class="highlight-item">
-                        <i class="fas fa-child"></i>
-                        <span>Children Welcome</span>
+                <!-- Times Banner -->
+                <div class="sunday-times-banner" role="region" aria-label="Sunday schedule times">
+                    <div class="sunday-time-item">
+                        <span class="sunday-time-label">Sunday Studies &amp; Classes</span>
+                        <span class="sunday-time-value">9:30 AM</span>
                     </div>
-                    <div class="highlight-item">
-                        <i class="fas fa-utensils"></i>
-                        <span>Fellowship Lunch</span>
+                    <div class="sunday-time-divider" aria-hidden="true"></div>
+                    <div class="sunday-time-item">
+                        <span class="sunday-time-label">Worship Service</span>
+                        <span class="sunday-time-value">10:30 AM</span>
                     </div>
-                </div>
-
-                <div id="sunday-worship-banner" class="worship-banner" aria-label="Sunday worship time">
-                    <span class="worship-banner-label">Worship</span>
-                    <span class="worship-banner-time">10:30am</span>
-                </div>
-            </div>
-
-            <!-- Schedule & Location Grid -->
-            <div id="sunday-info-grid" class="info-grid">
-                <!-- Location & Parking -->
-                <div id="sunday-location-card" class="info-card location-card">
-                    <h3 id="sunday-location-title">Location & Parking</h3>
-                    <div class="location-info">
-                        <p><strong>135 Whitney Avenue</strong><br>
-                            New Haven, CT 06510</p>
-                        <p class="location-detail">Next to Yale School of Management<br>
-                            Corner of Whitney Ave. and Bradley St.</p>
-                        <p class="parking-info">
-                            <i class="fas fa-parking"></i> Limited on-site parking<br>
-                            Additional parking on Bradley Street
-                        </p>
+                    <div class="sunday-time-divider" aria-hidden="true"></div>
+                    <div class="sunday-time-item">
+                        <span class="sunday-time-label">Fellowship Lunch</span>
+                        <span class="sunday-time-value">12:00 PM</span>
                     </div>
                 </div>
 
-                <!-- Children's Classes -->
-                <div id="sunday-children-card" class="info-card classes-card">
-                    <h3 id="sunday-children-title">Children's Sunday School</h3>
-                    <div class="class-locations">
-                        <div class="class-item">
-                            <span class="age">Ages 2.5 - Pre-K</span>
-                            <span class="location">Basement Study Center</span>
+                <!-- Highlights Pills -->
+                <div class="sunday-pills">
+                    <span class="sunday-pill"><i class="fas fa-child" aria-hidden="true"></i> Children Welcome</span>
+                    <span class="sunday-pill"><i class="fas fa-baby" aria-hidden="true"></i> Nursery Provided</span>
+                    <span class="sunday-pill"><i class="fas fa-utensils" aria-hidden="true"></i> Free Fellowship Lunch</span>
+                    <span class="sunday-pill"><i class="fas fa-broadcast-tower" aria-hidden="true"></i> Livestream Available</span>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="sunday-actions">
+                    <a href="#plan-your-visit" class="sunday-btn primary">
+                        <i class="fas fa-compass" aria-hidden="true"></i> Plan Your Visit
+                    </a>
+                    <a href="sunday-sermons.html" class="sunday-btn secondary">
+                        <i class="fas fa-microphone-alt" aria-hidden="true"></i> Latest Sermons
+                    </a>
+                    <a href="live.html" class="sunday-btn secondary">
+                        <i class="fas fa-video" aria-hidden="true"></i> Watch Live
+                    </a>
+                </div>
+            </section>
+
+            <!-- Location & Children's Info Grid -->
+            <div class="sunday-info-grid">
+                <!-- Location & Parking Card -->
+                <article class="sunday-card">
+                    <div class="sunday-card-header">
+                        <div class="sunday-card-icon"><i class="fas fa-map-marker-alt" aria-hidden="true"></i></div>
+                        <h3>Location &amp; Parking</h3>
+                    </div>
+                    <div class="sunday-card-body">
+                        <p><strong>135 Whitney Avenue</strong><br>New Haven, CT 06510</p>
+                        <p>Located on the corner of Whitney Avenue and Bradley Street, right next to the Yale School of Management.</p>
+                        <div class="sunday-badge-notice">
+                            <i class="fas fa-parking" aria-hidden="true"></i>
+                            <strong>Parking:</strong> On-site parking behind the church, plus free Sunday on-street parking on Bradley St., Lincoln St., and Whitney Ave.
                         </div>
-                        <div class="class-item">
-                            <span class="age">K - 2nd Grade</span>
-                            <span class="location">2nd Floor, Conference Room</span>
+                    </div>
+                </article>
+
+                <!-- Children's Ministry Card -->
+                <article class="sunday-card">
+                    <div class="sunday-card-header">
+                        <div class="sunday-card-icon"><i class="fas fa-shapes" aria-hidden="true"></i></div>
+                        <h3>Sunday School (9:30am)</h3>
+                    </div>
+                    <div class="sunday-card-body">
+                        <p>Age-appropriate classes exploring God’s Word through teaching, crafts, and music during the school year:</p>
+                        <div class="sunday-class-list">
+                            <div class="sunday-class-row">
+                                <span class="sunday-class-age">Ages 2.5 – Pre-K</span>
+                                <span class="sunday-class-room">Basement Study Center</span>
+                            </div>
+                            <div class="sunday-class-row">
+                                <span class="sunday-class-age">K – 2nd Grade</span>
+                                <span class="sunday-class-room">2nd Floor, Conference Room</span>
+                            </div>
+                            <div class="sunday-class-row">
+                                <span class="sunday-class-age">5th – High School</span>
+                                <span class="sunday-class-room">Youth Room</span>
+                            </div>
                         </div>
-                        <div class="class-item">
-                            <span class="age">5th - High School</span>
-                            <span class="location">Youth Room</span>
+                        <div class="sunday-badge-notice">
+                            <i class="fas fa-info-circle" aria-hidden="true"></i>
+                            <strong>During 10:30am Service:</strong> Staffed nursery is provided for infants &amp; toddlers.
                         </div>
                     </div>
-                </div>
-
+                </article>
             </div>
 
             <!-- Plan Your Visit Section for Newcomers -->
@@ -167,74 +216,79 @@
 
                 <div class="plan-visit-grid">
                     <div class="plan-visit-card">
-                        <div class="plan-visit-card-icon"><i class="fas fa-church"></i></div>
+                        <div class="plan-visit-card-icon"><i class="fas fa-church" aria-hidden="true"></i></div>
                         <h4>The Service</h4>
                         <p>Our 10:30am service lasts about 75 minutes. We sing historic hymns and contemporary songs, confess our faith, hear scripture preached expositorily, and celebrate the Lord's Supper each week.</p>
                     </div>
 
                     <div class="plan-visit-card">
-                        <div class="plan-visit-card-icon"><i class="fas fa-tshirt"></i></div>
+                        <div class="plan-visit-card-icon"><i class="fas fa-tshirt" aria-hidden="true"></i></div>
                         <h4>What to Wear</h4>
                         <p>Come as you are! You will see everything from jeans and t-shirts to business casual. Wear whatever is comfortable for you.</p>
                     </div>
 
                     <div class="plan-visit-card">
-                        <div class="plan-visit-card-icon"><i class="fas fa-parking"></i></div>
+                        <div class="plan-visit-card-icon"><i class="fas fa-parking" aria-hidden="true"></i></div>
                         <h4>Parking &amp; Transit</h4>
                         <p>Free on-site parking is available behind the church building, with ample free Sunday street parking along Bradley Street, Lincoln Street, and Whitney Ave. Convenient walking distance to Yale campus.</p>
                     </div>
 
                     <div class="plan-visit-card">
-                        <div class="plan-visit-card-icon"><i class="fas fa-baby-carriage"></i></div>
+                        <div class="plan-visit-card-icon"><i class="fas fa-baby-carriage" aria-hidden="true"></i></div>
                         <h4>For Children</h4>
                         <p>Children are always welcome in worship! A staffed nursery is available for infants and toddlers, and children's activity bulletins with crayons are available at the entrance.</p>
                     </div>
 
                     <div class="plan-visit-card">
-                        <div class="plan-visit-card-icon"><i class="fas fa-utensils"></i></div>
+                        <div class="plan-visit-card-icon"><i class="fas fa-utensils" aria-hidden="true"></i></div>
                         <h4>Fellowship Lunch</h4>
                         <p>Join us in Fellowship Hall immediately after worship for lunch! It is completely free for visitors and one of the best ways to get to know our church family and pastors.</p>
                     </div>
 
                     <div class="plan-visit-card">
-                        <div class="plan-visit-card-icon"><i class="fas fa-graduation-cap"></i></div>
+                        <div class="plan-visit-card-icon"><i class="fas fa-graduation-cap" aria-hidden="true"></i></div>
                         <h4>Students &amp; Scholars</h4>
                         <p>New Haven is home to undergraduate, graduate, and international scholars. We have active student rides, mentorship, and home hospitality throughout the academic year.</p>
                     </div>
                 </div>
 
                 <div class="plan-visit-cta-bar">
-                    <a href="connect.html" class="plan-visit-btn primary">
-                        <i class="fas fa-user-plus"></i> Connect With Us
+                    <a href="connect.html" class="sunday-btn primary">
+                        <i class="fas fa-user-plus" aria-hidden="true"></i> Connect With Us
                     </a>
-                    <a href="mailto:admin@cpcnewhaven.org?subject=Visiting%20CPC%20New%20Haven" class="plan-visit-btn secondary">
-                        <i class="fas fa-envelope"></i> Ask a Question
+                    <a href="mailto:admin@cpcnewhaven.org?subject=Visiting%20CPC%20New%20Haven" class="sunday-btn secondary">
+                        <i class="fas fa-envelope" aria-hidden="true"></i> Ask a Question
                     </a>
                 </div>
             </section>
 
-            <!-- Map Section -->
-            <div id="sunday-map-section" class="map-section">
-                <h3 id="sunday-map-title">Find Us</h3>
-                <img class="find-us-image"
-                    src="https://storage.googleapis.com/cpc-public-website/2026/MISC%20WEBSITE%20GRAPHICS/WEBSITE%20HERO%20-%20ABOUT%20-%20NEW%20HAVEN.jpg"
-                    alt="View from Christ Presbyterian Church toward downtown New Haven">
-                <div class="map-container">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3031.998456789123!2d-72.923456789!3d41.3123456789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x123456789abcdef!2s135%20Whitney%20Ave%2C%20New%20Haven%2C%20CT%2006510!5e0!3m2!1sen!2sus!4v1616161616161!5m2!1sen!2sus"
-                        allowfullscreen loading="lazy" class="map"></iframe>
+            <!-- Map Card -->
+            <section class="sunday-map-card" aria-labelledby="sunday-map-heading">
+                <div class="sunday-map-header">
+                    <h3 id="sunday-map-heading"><i class="fas fa-map-marked-alt" aria-hidden="true"></i> Find Us in New Haven</h3>
+                    <a href="https://maps.google.com/?q=135+Whitney+Ave,+New+Haven,+CT+06510" target="_blank" rel="noopener" class="sunday-btn secondary" style="padding: 0.5rem 1.25rem; font-size: 0.88rem;">
+                        <i class="fas fa-external-link-alt" aria-hidden="true"></i> Open in Google Maps
+                    </a>
                 </div>
-            </div>
+                <div class="sunday-map-container">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2998.2430335016576!2d-72.9234856!3d41.3144158!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e7d9b9356d47d5%3A0x6e9f16ef062f592!2s135%20Whitney%20Ave%2C%20New%20Haven%2C%20CT%2006510!5e0!3m2!1sen!2sus!4v1710000000000!5m2!1sen!2sus"
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Map of Christ Presbyterian Church New Haven">
+                    </iframe>
+                </div>
+            </section>
 
-            <!-- Fellowship Info -->
-            <div id="sunday-fellowship-section" class="fellowship-section">
-                <h3 id="sunday-fellowship-title">Fellowship Lunch</h3>
-                <p>All are welcome to join us for Fellowship Lunch in the Fellowship Hall after worship.</p>
-            </div>
+            <!-- Fellowship Lunch Card -->
+            <aside class="sunday-fellowship-card">
+                <h3>Fellowship Lunch Every Sunday</h3>
+                <p>Join us downstairs in the Fellowship Hall immediately following worship. Lunch is our gift to visitors and newcomers—come enjoy good food and fellowship!</p>
+                <a href="connect.html" class="sunday-fellowship-btn">
+                    <i class="fas fa-heart" aria-hidden="true"></i> Get Connected
+                </a>
+            </aside>
+
         </div>
-    </section>
-
-
+    </main>
 
     <section id="footer-cta-a" class="styled-section-a">
         <div class="form-container">
@@ -251,26 +305,26 @@
         </div>
     </section>
 
-      <footer>
-    <div class="footer-content-logo">
-      <a href="index.html">
-        <img src="./assets/CPC_LOGO_24.png" alt="CPC New Haven Church" loading="lazy" decoding="async">
-      </a>
-    </div>
-    <div class="footer-links">
-      <a href="sundays.html">Sundays</a>
-      <a href="contact.html">Contact</a>
-      <a href="podcasts.html">Podcasts</a>
-      <a href="events.html">Events</a>
-      <a href="give.html">Give</a>
-    </div>
-    <p>203.777.6960 &nbsp;·&nbsp; <a href="mailto:admin@cpcnewhaven.org">admin@cpcnewhaven.org</a> &nbsp;·&nbsp; 135 Whitney Ave, New Haven CT 06510</p>
-    <p class="footer-copyright">© 2026 Christ Presbyterian Church. All rights reserved.</p>
-  </footer>
+    <footer>
+        <div class="footer-content-logo">
+            <a href="index.html">
+                <img src="./assets/CPC_LOGO_24.png" alt="CPC New Haven Church" loading="lazy" decoding="async">
+            </a>
+        </div>
+        <div class="footer-links">
+            <a href="sundays.html">Sundays</a>
+            <a href="contact.html">Contact</a>
+            <a href="podcasts.html">Podcasts</a>
+            <a href="events.html">Events</a>
+            <a href="give.html">Give</a>
+        </div>
+        <p>203.777.6960 &nbsp;·&nbsp; <a href="mailto:admin@cpcnewhaven.org">admin@cpcnewhaven.org</a> &nbsp;·&nbsp; 135 Whitney Ave, New Haven CT 06510</p>
+        <p class="footer-copyright">© 2026 Christ Presbyterian Church. All rights reserved.</p>
+    </footer>
 
     <script src="./src/js/function_toggle_mobileMenu.js"></script>
     <script src="./src/js/background-fetch-splash-image.js"></script>
-  <script defer src="./src/js/back-home-button.js"></script>
+    <script defer src="./src/js/back-home-button.js"></script>
 </body>
 
 </html>

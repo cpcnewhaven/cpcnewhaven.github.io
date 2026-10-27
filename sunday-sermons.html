@@ -22,7 +22,7 @@
     <link rel="icon" href="https://files.cpcnewhaven.org/web-assets/CPC - FAVICON - FALL 2024.png" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
-    <script src="./src/js/sunday-sermons.js?v=20261026-1"></script>
+    <script src="./src/js/sunday-sermons.js?v=20261026-2"></script>
     
     <style>
         .breadcrumbs {
@@ -239,9 +239,14 @@
                         <h3 class="sermon-title" x-text="sermon.title"></h3>
                         <div class="sermon-speaker" x-text="sermon.author"></div>
                         <div class="sermon-scripture" x-text="sermon.scripture"></div>
-                        <a :href="sermon.link" class="sermon-listen-btn" target="_blank">
-                            <i class="fas fa-play"></i> Listen
-                        </a>
+                        <div class="sermon-card-actions">
+                            <a :href="sermon.link" class="sermon-listen-btn" target="_blank" rel="noopener">
+                                <i class="fas fa-play"></i> Listen
+                            </a>
+                            <button type="button" @click="shareSermon(sermon)" class="sermon-share-btn" :title="`Share ${sermon.title}`">
+                                <i class="fas fa-share-alt"></i> Share
+                            </button>
+                        </div>
                     </div>
                 </template>
             </div>
@@ -256,9 +261,14 @@
                             <div class="sermon-list-speaker" x-text="sermon.author"></div>
                             <div class="sermon-list-scripture" x-text="sermon.scripture"></div>
                         </div>
-                        <a :href="sermon.link" class="sermon-listen-btn" target="_blank">
-                            <i class="fas fa-play"></i> Listen
-                        </a>
+                        <div class="sermon-card-actions">
+                            <a :href="sermon.link" class="sermon-listen-btn" target="_blank" rel="noopener">
+                                <i class="fas fa-play"></i> Listen
+                            </a>
+                            <button type="button" @click="shareSermon(sermon)" class="sermon-share-btn" :title="`Share ${sermon.title}`">
+                                <i class="fas fa-share-alt"></i> Share
+                            </button>
+                        </div>
                     </div>
                 </template>
             </div>
@@ -273,14 +283,8 @@
                 <p>Loading sermons...</p>
             </div>
 
-            <!-- Debug info (remove this later) -->
-            <div style="background: #f0f0f0; padding: 10px; margin: 20px 0; font-family: monospace; font-size: 12px;">
-                <strong>Debug Info:</strong><br>
-                Sermons loaded: <span x-text="sermons.length"></span><br>
-                Filtered sermons: <span x-text="filteredSermons.length"></span><br>
-                Loading complete: <span x-text="loadingComplete"></span><br>
-                Search query: <span x-text="searchQuery"></span>
-            </div>
+            <!-- Toast notification for copy -->
+            <div class="sermon-toast" x-show="copiedToast" x-text="copiedToast" style="display: none;"></div>
         </section>
     </div>
 
@@ -631,6 +635,48 @@
             font-size: 2em;
             margin-bottom: 10px;
             color: #999;
+        }
+
+        .sermon-card-actions {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .sermon-share-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 14px;
+            border-radius: 6px;
+            border: 1px solid #cbd5e1;
+            background: #ffffff;
+            color: #475569;
+            font-weight: 600;
+            font-size: 0.9em;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .sermon-share-btn:hover {
+            background: #f1f5f9;
+            color: #0078D4;
+            border-color: #0078D4;
+        }
+
+        .sermon-toast {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            background: #003c6d;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+            z-index: 9999;
+            font-weight: 600;
+            font-size: 0.95rem;
         }
 
         @media (max-width: 768px) {

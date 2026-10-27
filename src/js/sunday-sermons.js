@@ -153,6 +153,24 @@ window.sermonData = function() {
                    this.selectedYear !== 'all';
         },
 
+        copiedToast: '',
+
+        shareSermon(sermon) {
+            const shareUrl = sermon.link || window.location.href;
+            if (navigator.share) {
+                navigator.share({
+                    title: sermon.title,
+                    text: `${sermon.title} - ${sermon.author} (${sermon.scripture})`,
+                    url: shareUrl
+                }).catch(() => {});
+            } else if (navigator.clipboard) {
+                navigator.clipboard.writeText(shareUrl).then(() => {
+                    this.copiedToast = 'Link copied to clipboard!';
+                    setTimeout(() => { this.copiedToast = ''; }, 3000);
+                });
+            }
+        },
+
         sortSermons() {
             this.filteredSermons.sort((a, b) => {
                 let aValue = a[this.sortKey] || '';

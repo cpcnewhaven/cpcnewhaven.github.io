@@ -18,6 +18,21 @@
             content="CPC New Haven, past services, church services, sermons, faith">
         <meta name="author" content="CPC New Haven Church">
         <title>Past Church Services - CPC New Haven Church</title>
+
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website">
+        <meta property="og:site_name" content="Christ Presbyterian Church New Haven">
+        <meta property="og:title" content="Past Church Services - CPC New Haven Church">
+        <meta property="og:description" content="Watch past livestream worship services from CPC New Haven Church. Stay connected with our church family.">
+        <meta property="og:image" content="https://storage.googleapis.com/cpc-public-website/2026/MISC%20WEBSITE%20GRAPHICS/WEBSITE%20HERO%20-%20CONGREGATION.jpg">
+        <meta property="og:url" content="https://cpcnewhaven.org/past-services.html">
+
+        <!-- Twitter -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Past Church Services - CPC New Haven Church">
+        <meta name="twitter:description" content="Watch past livestream worship services from CPC New Haven Church.">
+        <meta name="twitter:image" content="https://storage.googleapis.com/cpc-public-website/2026/MISC%20WEBSITE%20GRAPHICS/WEBSITE%20HERO%20-%20CONGREGATION.jpg">
+
         <link rel="stylesheet" href="./src/css/global-body.css?v=20260821-heroes-6">
         <link rel="stylesheet" href="./src/css/global-footer-cta.css">
 
@@ -31,7 +46,7 @@
         <script src="./src/js/clear-cache.js"></script>
         <link rel="stylesheet" href="./src/css/podcasts.css">
         <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
-        <script src="./src/js/past-services.js"></script>
+        <script src="./src/js/past-services.js?v=20261026-2"></script>
     </head>
     <body>
 
@@ -164,12 +179,38 @@
                 </div>
             </div>
 
+            <!-- Past Services Filter Bar -->
+            <div class="sermon-filter-bar" style="margin-bottom: 25px;">
+                <div class="filter-group">
+                    <label for="filter-year"><i class="fas fa-calendar-alt"></i> Year:</label>
+                    <select id="filter-year" x-model="selectedYear" @change="filterServices()">
+                        <option value="all">All Years</option>
+                        <template x-for="y in availableYears" :key="y">
+                            <option :value="y" x-text="y"></option>
+                        </template>
+                    </select>
+                </div>
+
+                <button 
+                    type="button"
+                    x-show="hasActiveFilters()" 
+                    @click="resetFilters()" 
+                    class="reset-filters-btn"
+                >
+                    <i class="fas fa-times-circle"></i> Clear Filters
+                </button>
+
+                <div class="sermon-count-badge" x-show="loadingComplete" style="margin-left: auto;">
+                    <span x-text="`Showing ${Math.min(displayLimit, filteredServices.length)} of ${filteredServices.length} services`"></span>
+                </div>
+            </div>
+
             <!-- Card View -->
             <div class="sermon-grid yt-grid" x-show="filteredServices.length > 0 && viewMode === 'card'">
-                <template x-for="service in filteredServices" :key="service.id">
-                    <a :href="service.url" class="yt-card" target="_blank">
+                <template x-for="service in filteredServices.slice(0, displayLimit)" :key="service.id">
+                    <a :href="service.url" class="yt-card" target="_blank" rel="noopener">
                         <div class="yt-thumbnail-container">
-                            <img :src="service.thumbnail" alt="thumbnail" class="yt-thumbnail">
+                            <img :src="service.thumbnail" alt="thumbnail" class="yt-thumbnail" loading="lazy">
                             <div class="yt-play-overlay">
                                 <i class="fas fa-play"></i>
                             </div>
@@ -188,18 +229,29 @@
 
             <!-- List View -->
             <div class="sermon-list" x-show="filteredServices.length > 0 && viewMode === 'list'">
-                <template x-for="service in filteredServices" :key="service.id">
+                <template x-for="service in filteredServices.slice(0, displayLimit)" :key="service.id">
                     <div class="sermon-list-item">
-                        <img :src="service.thumbnail" alt="thumbnail" style="width: 120px; border-radius: 4px; margin-right: 15px; aspect-ratio: 16/9; object-fit: cover;">
+                        <img :src="service.thumbnail" alt="thumbnail" loading="lazy" style="width: 120px; border-radius: 4px; margin-right: 15px; aspect-ratio: 16/9; object-fit: cover;">
                         <div class="sermon-list-info">
                             <div class="sermon-list-date" x-text="service.displayDate || service.date"></div>
                             <h3 class="sermon-list-title" x-text="service.title"></h3>
                         </div>
-                        <a :href="service.url" class="sermon-listen-btn" target="_blank">
+                        <a :href="service.url" class="sermon-listen-btn" target="_blank" rel="noopener">
                             <i class="fab fa-youtube"></i> Watch
                         </a>
                     </div>
                 </template>
+            </div>
+
+            <!-- Load More Button -->
+            <div x-show="displayLimit < filteredServices.length" style="text-align: center; margin: 35px 0;">
+                <button 
+                    @click="loadMore()" 
+                    class="view-toggle-btn" 
+                    style="margin: 0 auto; padding: 12px 28px; font-size: 1rem; border-radius: 999px; background: #0078D4; color: white; border: none; cursor: pointer; box-shadow: 0 4px 12px rgba(0, 120, 212, 0.25);"
+                >
+                    <i class="fas fa-chevron-down"></i> Load More Services (<span x-text="filteredServices.length - displayLimit"></span> remaining)
+                </button>
             </div>
 
             <div class="no-results" x-show="filteredServices.length === 0 && services.length > 0">
