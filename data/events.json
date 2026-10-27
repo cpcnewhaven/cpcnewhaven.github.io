@@ -1,13 +1,7 @@
 {
-  "generatedAt": "2026-10-26T13:23:48.287063-04:00",
+  "generatedAt": "2026-10-27T12:41:07.806649-04:00",
   "source": "CPC Google Calendar",
   "events": [
-    {
-      "date": "2026-10-26",
-      "title": "SLB Meeting",
-      "description": "",
-      "allDay": false
-    },
     {
       "date": "2026-10-28",
       "title": "Pastor Jerry Drop-in Office Hours",
@@ -71,6 +65,12 @@
     {
       "date": "2026-11-08",
       "title": "Worship Service",
+      "description": "",
+      "allDay": false
+    },
+    {
+      "date": "2026-11-11",
+      "title": "Pastor Jerry Drop-in Office Hours",
       "description": "",
       "allDay": false
     }
