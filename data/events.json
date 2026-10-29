@@ -1,13 +1,7 @@
 {
-  "generatedAt": "2026-10-28T13:10:29.814422-04:00",
+  "generatedAt": "2026-10-29T13:26:36.112596-04:00",
   "source": "CPC Google Calendar",
   "events": [
-    {
-      "date": "2026-10-28",
-      "title": "Pastor Jerry Drop-in Office Hours",
-      "description": "",
-      "allDay": false
-    },
     {
       "date": "2026-10-30",
       "title": "Pastor Craig Drop-in Office Hours",
@@ -71,6 +65,12 @@
     {
       "date": "2026-11-11",
       "title": "Pastor Jerry Drop-in Office Hours",
+      "description": "",
+      "allDay": false
+    },
+    {
+      "date": "2026-11-11",
+      "title": "Young Mom's Group",
       "description": "",
       "allDay": false
     }
