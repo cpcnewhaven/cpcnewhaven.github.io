@@ -1,5 +1,6 @@
 (() => {
   const courses = [
+    ['deeper-into-acts.html', 'Deeper into Acts'],
     ['wonders-of-communal-worship.html', 'The Wonders of Communal Worship'],
     ['emotions-spirituality.html', 'Emotions & Spirituality'],
     ['mission-study.html', 'Mission Study'],
