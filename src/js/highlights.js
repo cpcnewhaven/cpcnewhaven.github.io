@@ -25,7 +25,7 @@ class HighlightsManager {
 
     async loadHighlights() {
         // Add version parameter for cache-busting (update this when highlights.json changes)
-        const cacheBuster = `?v=20261030-2`;
+        const cacheBuster = `?v=20261030-3`;
         const response = await fetch(this.dataUrl + cacheBuster, { cache: 'no-cache' });
 
         if (!response.ok) {
@@ -51,9 +51,14 @@ class HighlightsManager {
 
         // Handle General Section
         this.container.innerHTML = '';
-        sortedAnnouncements.forEach(announcement => {
-            const element = this.createAnnouncementElement(announcement);
-            this.container.appendChild(element);
+        const posters = sortedAnnouncements.filter(item => item.featuredImage);
+        const notices = sortedAnnouncements.filter(item => !item.featuredImage);
+        [posters, notices].forEach((items, index) => {
+            if (!items.length) return;
+            const group = document.createElement('div');
+            group.className = index === 0 ? 'highlights-poster-grid' : 'highlights-notice-grid';
+            items.forEach(item => group.appendChild(this.createAnnouncementElement(item)));
+            this.container.appendChild(group);
         });
 
         // Add no content message if no announcements
@@ -249,7 +254,7 @@ class HighlightsManager {
 
     createAnnouncementElement(announcement) {
         const element = document.createElement('article');
-        element.className = `highlight-card ${announcement.type || 'announcement'}`;
+        element.className = `highlight-card ${announcement.featuredImage ? 'has-poster' : 'text-notice'} ${announcement.type || 'announcement'}`;
 
         // Add featured image if available
         if (announcement.featuredImage) {
@@ -260,6 +265,19 @@ class HighlightsManager {
         // Create content container
         const contentContainer = document.createElement('div');
         contentContainer.className = 'highlight-content';
+
+        const label = document.createElement('p');
+        label.className = 'highlight-label';
+        const labels = { worship: 'Worship', membership: 'Membership', mercy: 'Serving', ongoing: 'Church life', event: 'Gathering' };
+        label.textContent = labels[announcement.category] || 'Announcement';
+        const date = announcement.eventDate || announcement.expiresAt;
+        if (date) {
+            const [year, month, day] = date.split('-').map(Number);
+            const displayDate = new Intl.DateTimeFormat('en-US', { month: 'short', day: 'numeric' })
+                .format(new Date(year, month - 1, day));
+            label.textContent += ` · ${announcement.eventDate ? '' : 'Through '}${displayDate}`;
+        }
+        contentContainer.appendChild(label);
 
         // Add title
         const title = document.createElement('h3');
@@ -338,8 +356,12 @@ class HighlightsManager {
     }
 
     createImageContainer(imageUrl, imageDisplayType, imageAlt) {
-        const container = document.createElement('div');
+        const container = document.createElement('a');
         container.className = 'highlight-image-container';
+        container.href = imageUrl;
+        container.target = '_blank';
+        container.rel = 'noopener';
+        container.setAttribute('aria-label', 'View announcement poster at full size');
 
         // Add special class for poster display type
         if (imageDisplayType === 'poster') {

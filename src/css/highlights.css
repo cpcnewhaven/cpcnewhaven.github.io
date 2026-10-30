@@ -278,3 +278,76 @@
         transform: translateY(0);
     }
 }
+
+/* Keep poster sizes consistent and text notices compact on every page. */
+#highlights .highlights-content {
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    gap: 28px;
+}
+#highlights .highlights-poster-grid,
+#highlights .highlights-notice-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+    align-items: start;
+}
+#highlights .highlight-card { min-width: 0; box-sizing: border-box; }
+#highlights .highlight-card.text-notice { border-top: 4px solid #003c6d; }
+#highlights .highlight-card .highlight-content { padding: 26px; gap: 12px; }
+#highlights .highlight-label {
+    margin: 0;
+    color: #426680;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    line-height: 1.5;
+}
+#highlights .highlight-title { margin: 0; line-height: 1.35; text-align: left; }
+#highlights .highlight-description { text-align: left; }
+#highlights .highlight-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 440px;
+    padding: 16px;
+    margin: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    background: #edf1f5;
+    border-bottom: 1px solid #e1e5e9;
+}
+#highlights .highlight-image-container .highlight-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    max-height: none;
+    object-fit: contain;
+    border-radius: 0;
+    background: transparent;
+}
+#seasonal-events-poster {
+    max-width: 560px;
+    margin: 24px auto 36px;
+}
+#seasonal-events-poster a {
+    display: flex;
+    justify-content: center;
+    height: 440px;
+    padding: 16px;
+    box-sizing: border-box;
+    border: 1px solid #e1e5e9;
+    border-radius: 12px;
+    background: #edf1f5;
+}
+#seasonal-events-poster img { width: 100%; height: 100%; object-fit: contain; }
+@media (max-width: 639px) {
+    #highlights .highlights-poster-grid,
+    #highlights .highlights-notice-grid { grid-template-columns: 1fr; gap: 20px; }
+    #highlights .highlight-card .highlight-content { padding: 22px; }
+    #highlights .highlight-image-container,
+    #seasonal-events-poster a { height: 380px; }
+}
