@@ -24,7 +24,7 @@
   <link rel="stylesheet" href="./src/css/footer.css">
   <link rel="stylesheet" href="./src/css/global-body.css?v=20260821-heroes-6">
   <link rel="stylesheet" href="./src/css/global-footer-cta.css">
-  <link rel="stylesheet" href="./src/css/highlights.css">
+  <link rel="stylesheet" href="./src/css/highlights.css?v=20261030-2">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
   <!-- Cache clearing script - runs on every page load -->
@@ -129,6 +129,11 @@
   <section class="upcoming-events-section" aria-labelledby="upcoming-events-title">
     <p class="events-eyebrow">What's next</p>
     <h2 id="upcoming-events-title">Upcoming Events</h2>
+    <figure id="seasonal-events-poster" hidden style="max-width:520px; margin:24px auto 36px;">
+      <a href="assets/announcements/2026/upcoming-events-fall.jpg" target="_blank" rel="noopener" aria-label="Open the fall upcoming-events poster at full size">
+        <img src="assets/announcements/2026/upcoming-events-fall.jpg" width="1394" height="1754" loading="lazy" style="display:block; width:100%; height:auto; border-radius:12px;" alt="Upcoming CPC events in 2026: Parenting Seminar November 7; Thanksgiving Fellowship Meals November 26; Fall Work Day and Decor Set Up December 5; Christmas Service December 12; last day of Sunday School and weekly lunches December 13.">
+      </a>
+    </figure>
     <div class="fall-events-list" id="upcoming-events-list" aria-live="polite"></div>
     <p class="events-calendar-note">
       From the CPC calendar and weekly newsletter. <a
@@ -139,6 +144,11 @@
 
   <script>
     (() => {
+      // Retire the static poster once its first listed event has passed.
+      const churchDay = new Intl.DateTimeFormat('en-CA', {
+        timeZone: 'America/New_York', year: 'numeric', month: '2-digit', day: '2-digit'
+      }).format(new Date());
+      document.querySelector('#seasonal-events-poster').hidden = churchDay > '2026-11-07';
       const upcomingSection = document.querySelector('.upcoming-events-section');
       const eventList = document.querySelector('#upcoming-events-list');
 
@@ -1048,5 +1058,5 @@
     </div>
   </section>
 
-  <script src="./src/js/highlights.js?v=20261030-1"></script>
+  <script src="./src/js/highlights.js?v=20261030-2"></script>
   <script defer src="./src/js/back-home-button.js"></script>

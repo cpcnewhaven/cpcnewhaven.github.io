@@ -25,7 +25,7 @@ class HighlightsManager {
 
     async loadHighlights() {
         // Add version parameter for cache-busting (update this when highlights.json changes)
-        const cacheBuster = `?v=20261030-1`;
+        const cacheBuster = `?v=20261030-2`;
         const response = await fetch(this.dataUrl + cacheBuster, { cache: 'no-cache' });
 
         if (!response.ok) {
@@ -253,7 +253,7 @@ class HighlightsManager {
 
         // Add featured image if available
         if (announcement.featuredImage) {
-            const imageContainer = this.createImageContainer(announcement.featuredImage, announcement.imageDisplayType);
+            const imageContainer = this.createImageContainer(announcement.featuredImage, announcement.imageDisplayType, announcement.imageAlt);
             element.appendChild(imageContainer);
         }
 
@@ -337,7 +337,7 @@ class HighlightsManager {
         return link;
     }
 
-    createImageContainer(imageUrl, imageDisplayType) {
+    createImageContainer(imageUrl, imageDisplayType, imageAlt) {
         const container = document.createElement('div');
         container.className = 'highlight-image-container';
 
@@ -348,7 +348,7 @@ class HighlightsManager {
 
         const image = document.createElement('img');
         image.src = imageUrl;
-        image.alt = 'Highlight image';
+        image.alt = imageAlt || 'Announcement poster';
         image.className = 'highlight-image';
         image.loading = 'lazy';
         image.decoding = 'async';

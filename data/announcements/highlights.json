@@ -23,12 +23,15 @@
       "expiresAt": "2026-10-31",
       "eventDate": "2026-10-31",
       "startTime": "10:30",
-      "endTime": "12:00"
+      "endTime": "12:00",
+      "featuredImage": "assets/announcements/2026/fall-festival-october-31.jpg",
+      "imageDisplayType": "poster",
+      "imageAlt": "Fall Festival at CPC, October 31, 2026, 10:30am–noon, 135 Whitney Avenue, New Haven. Fall fun, trunk-or-treat, games and treats for children and families."
     },
     {
       "id": "2026-085",
       "title": "Parenting Seminar | Saturday, November 7, 9am-11:30am",
-      "description": "CPC Fellowship Hall | Light Breakfast | Childcare provided.<br/>We’re hoping for helpful cross-pollination among all stages of parenting. There will be time for discussion, collaboration, and prayer.<br/>For all parents and children that are planning to attend, please <a class=\"highlight-cta\" href=\"https://us.list-manage.com/LQCsZcglJKg?e=9da175cc40&amp;c2id=6df9b900f2d1d0ec64fac5dfc299411c\" target=\"_blank\" rel=\"noopener\">RSVP here</a>.",
+      "description": "<strong>Saturday, November 7, 9am–11:30am.</strong> The poster’s PM label is a typo.<br/>CPC Fellowship Hall | Light Breakfast | Childcare provided.<br/>We’re hoping for helpful cross-pollination among all stages of parenting. There will be time for discussion, collaboration, and prayer.<br/>For all parents and children that are planning to attend, please <a class=\"highlight-cta\" href=\"https://us.list-manage.com/LQCsZcglJKg?e=9da175cc40&amp;c2id=6df9b900f2d1d0ec64fac5dfc299411c\" target=\"_blank\" rel=\"noopener\">RSVP here</a>.",
       "dateEntered": "2026-10-30",
       "active": true,
       "type": "event",
@@ -37,7 +40,10 @@
       "expiresAt": "2026-11-07",
       "eventDate": "2026-11-07",
       "startTime": "09:00",
-      "endTime": "11:30"
+      "endTime": "11:30",
+      "featuredImage": "assets/announcements/2026/parenting-seminar-november-7.jpg",
+      "imageDisplayType": "poster",
+      "imageAlt": "CPC Parenting Seminar, Saturday, November 7 in Fellowship Hall. Light breakfast and childcare provided. The correct time is 9am–11:30am; the poster’s PM label is a typo."
     },
     {
       "id": "2026-029",
