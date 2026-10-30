@@ -11,9 +11,9 @@
     },
     {
       "id": "2024-004",
-      "title": "Full Sunday Schedule",
-      "description": "<ul><li>Worship Service @ 10:30am, </li><li>Weekly Fellowship Lunches after worship</li></ul>",
-      "dateEntered": "2024-08-30",
+      "title": "Regular Sunday Schedule",
+      "description": "<ul><li>8:30am | Prayer in the Parlor</li><li>9:30am | Children’s Sunday School</li><li>9:30am | Adult Sunday Studies — Deeper into Acts: 6 weeks on the Book of Acts, beginning November 1</li><li>10:30am | Worship Service</li><li>12:00pm | Fellowship Lunch</li></ul>",
+      "dateEntered": "2026-10-30",
       "active": "true",
       "type": "ongoing",
       "category": "ongoing"
@@ -21,8 +21,8 @@
     {
       "id": "2024-005",
       "title": "Pastor Drop-in Office Hours",
-      "description": "<ul><li>Craig: Fridays 7:30-10:30am</li><li>Jerry: Wednesdays 3:30-6:00pm</li></ul>",
-      "dateEntered": "2024-09-01",
+      "description": "<ul><li>Craig: Fridays 7:30-10:30am</li><li>Jerry: Wednesdays Noon-3:00pm</li></ul>",
+      "dateEntered": "2026-10-30",
       "active": "true",
       "type": "ongoing",
       "category": "ongoing"
@@ -33,6 +33,15 @@
       "description": "Join us this Sunday for our special welcome sunday celebration!",
       "dateEntered": "2024-12-19",
       "active": "false",
+      "type": "ongoing",
+      "category": "ongoing"
+    },
+    {
+      "id": "2026-092",
+      "title": "Women’s Discipleship Group",
+      "description": "We meet virtually on the 1st and 3rd Mondays of each month at 7:30pm. If interested, please reach out to <a href=\"mailto:lisahgraham44@gmail.com\">Lisa Graham</a> or <a href=\"mailto:auntiediane@att.net\">Diane Miller</a>.",
+      "dateEntered": "2026-10-30",
+      "active": "true",
       "type": "ongoing",
       "category": "ongoing"
     }

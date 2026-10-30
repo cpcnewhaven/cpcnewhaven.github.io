@@ -3,52 +3,76 @@
     {
       "id": "2026-086",
       "title": "10:30am Worship This Sunday",
-      "description": "Join us for worship this Sunday. <a class=\"highlight-cta\" href=\"https://us.list-manage.com/h9yktXt2WPt?e=9da175cc40&amp;c2id=6df9b900f2d1d0ec64fac5dfc299411c\" target=\"_blank\" rel=\"noopener\">Large Print Bulletin</a>",
-      "dateEntered": "2026-10-23",
+      "description": "Join us for worship this Sunday, November 1 at 10:30am. <a class=\"highlight-cta\" href=\"https://files.cpcnewhaven.org/bulletins/latest.pdf\" target=\"_blank\" rel=\"noopener\">Download the bulletin</a>.",
+      "dateEntered": "2026-10-30",
       "active": true,
       "type": "announcement",
       "category": "worship",
-      "tag": "service"
+      "tag": "service",
+      "expiresAt": "2026-11-01"
     },
     {
       "id": "2026-083",
       "title": "Fall Festival | Saturday, October 31 from 10:30am-12:00pm",
-      "description": "All children and families are invited to join CPC for Fall Fun and Trunk-or-Treat! If you are interested in attending, <a class=\"highlight-cta\" href=\"https://us.list-manage.com/5z0Lcn6F6Oh?e=9da175cc40&amp;c2id=6df9b900f2d1d0ec64fac5dfc299411c\" target=\"_blank\" rel=\"noopener\">RSVP here</a> and fill out the <a class=\"highlight-cta\" href=\"https://us.list-manage.com/9P3UY_tm1Fl?e=9da175cc40&amp;c2id=6df9b900f2d1d0ec64fac5dfc299411c\" target=\"_blank\" rel=\"noopener\">form</a> if you are interested in decorating your trunk, hosting an activity, or volunteering at the event.",
-      "dateEntered": "2026-10-23",
+      "description": "All children and families are invited to join CPC for Fall Fun and Trunk-or-Treat! If you are interested in attending, <a class=\"highlight-cta\" href=\"https://us.list-manage.com/5z0Lcn6F6Oh?e=9da175cc40&amp;c2id=6df9b900f2d1d0ec64fac5dfc299411c\" target=\"_blank\" rel=\"noopener\">RSVP here</a>.",
+      "dateEntered": "2026-10-30",
       "active": true,
       "type": "event",
       "category": "event",
-      "tag": "family"
+      "tag": "family",
+      "expiresAt": "2026-10-31",
+      "eventDate": "2026-10-31",
+      "startTime": "10:30",
+      "endTime": "12:00"
     },
     {
       "id": "2026-085",
       "title": "Parenting Seminar | Saturday, November 7, 9am-11:30am",
-      "description": "CPC Fellowship Hall | Light Breakfast | Childcare provided.<br/>For all parents and children that are planning to attend, please <a class=\"highlight-cta\" href=\"https://us.list-manage.com/LQCsZcglJKg?e=9da175cc40&amp;c2id=6df9b900f2d1d0ec64fac5dfc299411c\" target=\"_blank\" rel=\"noopener\">RSVP here</a>.",
-      "dateEntered": "2026-10-23",
+      "description": "CPC Fellowship Hall | Light Breakfast | Childcare provided.<br/>We’re hoping for helpful cross-pollination among all stages of parenting. There will be time for discussion, collaboration, and prayer.<br/>For all parents and children that are planning to attend, please <a class=\"highlight-cta\" href=\"https://us.list-manage.com/LQCsZcglJKg?e=9da175cc40&amp;c2id=6df9b900f2d1d0ec64fac5dfc299411c\" target=\"_blank\" rel=\"noopener\">RSVP here</a>.",
+      "dateEntered": "2026-10-30",
       "active": true,
       "type": "event",
       "category": "event",
-      "tag": "family"
+      "tag": "family",
+      "expiresAt": "2026-11-07",
+      "eventDate": "2026-11-07",
+      "startTime": "09:00",
+      "endTime": "11:30"
     },
     {
       "id": "2026-029",
       "title": "Interested in Joining the Body of Christ at CPC?",
       "description": "We consider the church an essential element of the gospel, so joining CPC as a member is a way to truly join the body of Christ, in all its blessings and with all its flaws! Before joining, you’ll meet one-on-one with a pastor and then discuss how you’ve come to know Christ with the Shepherd Leaders. Email <a href=\"mailto:admin@cpcnewhaven.org\">admin@cpcnewhaven.org</a> to begin the process.<br/><strong>Our next joining will take place on Sunday, November 15.</strong>",
-      "dateEntered": "2026-10-23",
+      "dateEntered": "2026-10-30",
       "active": true,
       "type": "announcement",
       "category": "membership",
-      "tag": "membership"
+      "tag": "membership",
+      "expiresAt": "2026-11-15",
+      "eventDate": "2026-11-15"
     },
     {
       "id": "2026-087",
       "title": "Thanksgiving Fellowship Meals | Thursday, November 26",
       "description": "<a class=\"highlight-cta\" href=\"https://us.list-manage.com/P_cBw6be6CY?e=9da175cc40&amp;c2id=6df9b900f2d1d0ec64fac5dfc299411c\" target=\"_blank\" rel=\"noopener\">Sign up here as host or guest</a><br/>Staying local for Thanksgiving? Come celebrate with your brothers and sisters in Christ! As we’ve done in the past, we’re coordinating hosts &amp; guests to have a Thanksgiving meal together on November 26. If you’re interested, please email <a href=\"mailto:admin@cpcnewhaven.org\">admin@cpcnewhaven.org</a> or fill out the form.",
-      "dateEntered": "2026-10-23",
+      "dateEntered": "2026-10-30",
       "active": true,
       "type": "event",
       "category": "event",
-      "tag": "fellowship"
+      "tag": "fellowship",
+      "expiresAt": "2026-11-26",
+      "eventDate": "2026-11-26"
+    },
+    {
+      "id": "2026-090",
+      "title": "Hill Christmas Store | Donate by Sunday, December 6",
+      "description": "Please join us in our 13th annual Hill Christmas Store! We will be sharing Christmas joy with families from New Haven’s Hill community. Purchase and leave an unwrapped gift valued at $20 or more for a child in the designated category (e.g., “Girl, 9–14”). In the spirit of empowerment, your gift will in turn be bought at a very reduced price by families in the Hill at the store. Please reach out to <a href=\"mailto:kaijessee@gmail.com\">Kaitlyn Jessee</a> with any questions.",
+      "dateEntered": "2026-10-30",
+      "active": true,
+      "type": "volunteer",
+      "category": "mercy",
+      "tag": "Christmas",
+      "expiresAt": "2026-12-06"
     },
     {
       "id": "2026-084",
@@ -79,6 +103,26 @@
       "type": "ongoing",
       "category": "ongoing",
       "tag": "mercy"
+    },
+    {
+      "id": "2026-091",
+      "title": "Regular Sunday Schedule",
+      "description": "<ul><li>8:30am | Prayer in the Parlor</li><li>9:30am | Children’s Sunday School</li><li>9:30am | Adult Sunday Studies — Deeper into Acts: 6 weeks on the Book of Acts, beginning November 1</li><li>10:30am | Worship Service</li><li>12:00pm | Fellowship Lunch</li></ul>",
+      "dateEntered": "2026-10-30",
+      "active": true,
+      "type": "ongoing",
+      "category": "ongoing",
+      "tag": "Sunday"
+    },
+    {
+      "id": "2026-092",
+      "title": "Women’s Discipleship Group",
+      "description": "We meet virtually on the 1st and 3rd Mondays of each month at 7:30pm. If interested, please reach out to <a href=\"mailto:lisahgraham44@gmail.com\">Lisa Graham</a> or <a href=\"mailto:auntiediane@att.net\">Diane Miller</a>.",
+      "dateEntered": "2026-10-30",
+      "active": true,
+      "type": "ongoing",
+      "category": "ongoing",
+      "tag": "groups"
     }
   ]
 }

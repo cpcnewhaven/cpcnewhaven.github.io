@@ -131,7 +131,7 @@
     <h2 id="upcoming-events-title">Upcoming Events</h2>
     <div class="fall-events-list" id="upcoming-events-list" aria-live="polite"></div>
     <p class="events-calendar-note">
-      Based on the Google Calendar above. <a
+      From the CPC calendar and weekly newsletter. <a
         href="https://calendar.google.com/calendar/u/0?cid=baf2h147ghi7nu8ifijjrt994k%40group.calendar.google.com"
         target="_blank" rel="noopener">Add the CPC Community Calendar to your calendar <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>.
     </p>
@@ -169,7 +169,10 @@
         const startStr = `${year}${pad(month)}${pad(day)}`;
         const nextDate = new Date(year, month - 1, day + 1);
         const nextStr = `${nextDate.getFullYear()}${pad(nextDate.getMonth() + 1)}${pad(nextDate.getDate())}`;
-        const gcalUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(event.title)}&dates=${startStr}/${nextStr}&details=${encodeURIComponent(event.description || '')}&location=${encodeURIComponent('135 Whitney Ave, New Haven, CT 06510')}`;
+        const dates = event.startTime && event.endTime
+          ? `${startStr}T${event.startTime.replace(':', '')}00/${startStr}T${event.endTime.replace(':', '')}00`
+          : `${startStr}/${nextStr}`;
+        const gcalUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(event.title)}&dates=${dates}&ctz=America%2FNew_York&details=${encodeURIComponent(event.description || '')}&location=${encodeURIComponent('135 Whitney Ave, New Haven, CT 06510')}`;
 
         const calLink = document.createElement('a');
         calLink.href = gcalUrl;
@@ -200,18 +203,35 @@
         return group;
       };
 
-      fetch('data/events.json')
-        .then((response) => {
+      Promise.all([
+        fetch('data/events.json', { cache: 'no-cache' }).then(response => {
           if (!response.ok) throw new Error('Unable to load calendar events.');
           return response.json();
+        }),
+        fetch('data/announcements/highlights.json', { cache: 'no-cache' }).then(response => {
+          if (!response.ok) throw new Error('Unable to load newsletter events.');
+          return response.json();
         })
-        .then((data) => {
+      ])
+        .then(([data, newsletter]) => {
+          // Merge at display time so the daily calendar refresh cannot erase newsletter events.
+          const newsletterEvents = (newsletter.announcements || [])
+            .filter(item => (item.active === true || item.active === 'true') && item.eventDate)
+            .map(item => {
+              const text = document.createElement('div');
+              text.innerHTML = item.description.replace(/<br\s*\/?>/gi, ' ');
+              return { date: item.eventDate, title: item.title.split(' | ')[0], description: text.textContent, startTime: item.startTime, endTime: item.endTime };
+            });
+          const combined = new Map();
+          [...(data.events || []), ...newsletterEvents].forEach(event => {
+            combined.set(`${event.date}|${event.title.toLowerCase().trim()}`, event);
+          });
           const today = new Date();
           today.setHours(0, 0, 0, 0);
-          const events = (data.events || []).filter((event) => {
+          const events = [...combined.values()].filter((event) => {
             const [year, month, day] = event.date.split('-').map(Number);
             return new Date(year, month - 1, day) >= today;
-          });
+          }).sort((a, b) => a.date.localeCompare(b.date));
 
           if (!events.length) {
             upcomingSection.hidden = true;
@@ -462,11 +482,13 @@
         <div class="schedule-card">
           <h3>Regular Sunday Gatherings</h3>
           <div class="schedule-times">
+            <div class="time-item"><span class="time">8:30am</span><span class="activity">Prayer in the Parlor</span></div>
+            <div class="time-item"><span class="time">9:30am</span><span class="activity">Children’s Sunday School &amp; Adult Sunday Studies — <a href="adult-sunday-school.html#deeper-into-acts">Deeper into Acts</a></span></div>
             <div class="time-item">
-              <span class="activity">Worship Service</span>
+              <span class="time">10:30am</span><span class="activity">Worship Service</span>
             </div>
             <div class="time-item">
-              <span class="activity">Fellowship Lunch</span>
+              <span class="time">12:00pm</span><span class="activity">Fellowship Lunch</span>
             </div>
           </div>
         </div>
@@ -494,11 +516,11 @@
           <h3 style="text-align:left; margin:40px 0 20px 0; color:#333;">Ongoing Events</h3>
           <div class="ongoing-item">
             <div class="ongoing-title">Pastor Drop-in Office Hours</div>
-            <div class="ongoing-details">Craig: Fridays 7:30–10:30am &bull; Jerry: Wednesdays 3:30–6:00pm (or by appointment: <a href="mailto:craig.luekens@cpcnewhaven.org">craig.luekens@cpcnewhaven.org</a>, <a href="mailto:jerry.ornelas@cpcnewhaven.org">jerry.ornelas@cpcnewhaven.org</a>).</div>
+            <div class="ongoing-details">Craig: Fridays 7:30–10:30am &bull; Jerry: Wednesdays Noon–3:00pm (or by appointment: <a href="mailto:craig.luekens@cpcnewhaven.org">craig.luekens@cpcnewhaven.org</a>, <a href="mailto:jerry.ornelas@cpcnewhaven.org">jerry.ornelas@cpcnewhaven.org</a>).</div>
           </div>
           <div class="ongoing-item">
             <div class="ongoing-title">Women's Discipleship Group</div>
-            <div class="ongoing-details">CPC Parlor Room</div>
+            <div class="ongoing-details">We meet virtually on the 1st and 3rd Mondays of each month at 7:30pm. If interested, please reach out to <a href="mailto:lisahgraham44@gmail.com">Lisa Graham</a> or <a href="mailto:auntiediane@att.net">Diane Miller</a>.</div>
           </div>
         </div>
       </div>
@@ -827,15 +849,6 @@
     }
   </style>
 
-  <section class="youtube-video-section">
-    <div class="video-container">
-      <iframe src="https://www.youtube.com/embed/nN_0zTD-OyU?si=L0ClaAWzKkZg41K3" title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-      </iframe>
-    </div>
-  </section>
 
   <section class="general-announcements">
     <hr>
@@ -1035,4 +1048,5 @@
     </div>
   </section>
 
+  <script src="./src/js/highlights.js?v=20261030-1"></script>
   <script defer src="./src/js/back-home-button.js"></script>

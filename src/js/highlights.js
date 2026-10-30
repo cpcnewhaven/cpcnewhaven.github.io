@@ -25,8 +25,8 @@ class HighlightsManager {
 
     async loadHighlights() {
         // Add version parameter for cache-busting (update this when highlights.json changes)
-        const cacheBuster = `?v=20261023-1`;
-        const response = await fetch(this.dataUrl + cacheBuster);
+        const cacheBuster = `?v=20261030-1`;
+        const response = await fetch(this.dataUrl + cacheBuster, { cache: 'no-cache' });
 
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
@@ -63,38 +63,30 @@ class HighlightsManager {
     }
 
     filterActiveAnnouncements(announcements) {
-        const today = new Date(); // Use current date
-        today.setHours(0, 0, 0, 0); // Reset time to start of day for accurate comparison
+        // Use the church's calendar day, including for visitors in other time zones.
+        const churchDay = new Intl.DateTimeFormat('en-CA', {
+            timeZone: 'America/New_York', year: 'numeric', month: '2-digit', day: '2-digit'
+        }).format(new Date());
+        const [year, month, day] = churchDay.split('-').map(Number);
+        const today = new Date(year, month - 1, day);
+        const localDate = value => new Date(`${value}T00:00:00`);
 
         return announcements.filter(announcement => {
             // First check if announcement is active
             const isActive = announcement.active === "true" || announcement.active === true;
             if (!isActive) return false;
 
-            // Check if this is an ongoing announcement (should always be shown if active)
+            // Explicit dates apply to every notice, including ongoing classes.
+            if (announcement.expiresAt && localDate(announcement.expiresAt) < today) return false;
+            if (announcement.eventDate && localDate(announcement.eventDate) < today) return false;
+
             const isOngoing = announcement.type === 'ongoing' || announcement.category === 'ongoing';
-            if (isOngoing) {
-                return true; // Keep ongoing announcements regardless of date
-            }
-
-            // Check explicit expiresAt property if provided
-            if (announcement.expiresAt) {
-                const expires = new Date(announcement.expiresAt);
-                expires.setHours(23, 59, 59, 999);
-                if (expires < today) return false;
-            }
-
-            // Check explicit eventDate property if provided
-            if (announcement.eventDate) {
-                const evt = new Date(announcement.eventDate);
-                evt.setHours(23, 59, 59, 999);
-                if (evt < today) return false;
-            }
+            if (isOngoing) return true;
 
             // Handle "This Sunday" announcements automatically
             if (/this sunday/i.test(announcement.title) || /this sunday/i.test(announcement.description)) {
                 if (announcement.dateEntered) {
-                    const entered = new Date(announcement.dateEntered);
+                    const entered = localDate(announcement.dateEntered);
                     const daysUntilSunday = (7 - entered.getDay()) % 7;
                     const sundayDate = new Date(entered);
                     sundayDate.setDate(sundayDate.getDate() + daysUntilSunday);
@@ -308,7 +300,11 @@ class HighlightsManager {
         const timeMatch = combinedText.match(/(\d{1,2})(?::(\d{2}))?\s*(am|pm)/i);
         let datesParam = `${startStr}/${startStr}`;
 
-        if (timeMatch) {
+        if (announcement.startTime && announcement.endTime) {
+            const start = announcement.startTime.replace(':', '') + '00';
+            const end = announcement.endTime.replace(':', '') + '00';
+            datesParam = `${startStr}T${start}/${startStr}T${end}`;
+        } else if (timeMatch) {
             let hour = parseInt(timeMatch[1], 10);
             const min = timeMatch[2] ? parseInt(timeMatch[2], 10) : 0;
             const ampm = timeMatch[3].toLowerCase();
@@ -330,7 +326,7 @@ class HighlightsManager {
         const cleanDesc = announcement.description ? announcement.description.replace(/<[^>]*>/g, '').trim() : '';
         const location = '135 Whitney Ave, New Haven, CT 06510';
 
-        const gcalUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(cleanTitle)}&dates=${datesParam}&details=${encodeURIComponent(cleanDesc)}&location=${encodeURIComponent(location)}`;
+        const gcalUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(cleanTitle)}&dates=${datesParam}&ctz=America%2FNew_York&details=${encodeURIComponent(cleanDesc)}&location=${encodeURIComponent(location)}`;
 
         const link = document.createElement('a');
         link.href = gcalUrl;
