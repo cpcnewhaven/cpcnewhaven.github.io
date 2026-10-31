@@ -1,13 +1,7 @@
 {
-  "generatedAt": "2026-10-30T13:01:15.071281-04:00",
+  "generatedAt": "2026-10-31T12:07:00.652610-04:00",
   "source": "CPC Google Calendar",
   "events": [
-    {
-      "date": "2026-10-30",
-      "title": "Pastor Craig Drop-in Office Hours",
-      "description": "",
-      "allDay": false
-    },
     {
       "date": "2026-11-01",
       "title": "Fellowship Lunch",
@@ -71,6 +65,12 @@
     {
       "date": "2026-11-11",
       "title": "Young Mom's Group",
+      "description": "",
+      "allDay": false
+    },
+    {
+      "date": "2026-11-13",
+      "title": "Pastor Craig Drop-in Office Hours",
       "description": "",
       "allDay": false
     }
