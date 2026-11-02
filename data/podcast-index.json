@@ -187,7 +187,20 @@
     },
     "sundaySermons": {
         "title": "Sunday Sermons",
-        "episodes":         [
+        "episodes":                 [
+            {
+                "id": "26-11-01",
+                "title": "Prayer is Life: Humble Boldness and the Risen Jesus | The Sunday Sermon | Acts 4: 23-31 | Rev. Craig Luekens",
+                "author": "Rev. Craig Luekens",
+                "scripture": "Acts 4: 23-31",
+                "date": "2026-11-01",
+                "apple_podcasts_url": "",
+                "spotify_url": "https://open.spotify.com/episode/6bLkCY8Z6bnO8JeLmiS9h6?si=_BP-fCZkRZKdnSFY4dNqVw",
+                "youtube_url": "https://www.youtube.com/watch?v=vtPLCG2RHCc",
+                "link": "https://open.spotify.com/episode/6bLkCY8Z6bnO8JeLmiS9h6?si=_BP-fCZkRZKdnSFY4dNqVw",
+                "podcast-thumbnail_url": "https://s3-us-west-2.amazonaws.com/anchor-generated-image-bank/staging/podcast_uploaded_episode400/12709107/12709107-1793627867169-10a755e618071.jpg",
+                "audio_url": ""
+            },
             {
                 "id": "26-10-25",
                 "title": "Will the Real King Please Stand Up? | The Sunday Sermon | Acts 4: 1-22 | Rev. Craig Luekens",
