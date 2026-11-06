@@ -124,16 +124,28 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function normalizeSiteNavigation() {
+    function navPathKey(href) {
+      if (!href) return '';
+      try {
+        return new URL(href, window.location.href).pathname.split('/').filter(Boolean).pop().toLowerCase();
+      } catch (_) {
+        return href.split(/[?#]/)[0].split('/').pop().toLowerCase();
+      }
+    }
+
     const nav = document.querySelector('.main-navigation');
     if (nav) {
       const findLink = function (href) {
-        return nav.querySelector('a[href="' + href + '"]');
+        const key = navPathKey(href);
+        return Array.from(nav.querySelectorAll('a')).find(function (link) {
+          return navPathKey(link.getAttribute('href')) === key;
+        });
       };
       const getLink = function (href, label) {
         const existing = findLink(href);
         if (existing) return existing;
         const link = document.createElement('a');
-        link.href = href;
+        link.href = '/' + href.replace(/^(\.\/|\.\.\/)+/, '');
         link.textContent = label;
         return link;
       };
@@ -186,11 +198,14 @@ document.addEventListener('DOMContentLoaded', function () {
     const mobileList = document.querySelector('.mobile-nav-links');
     if (!mobileList) return;
     const mobileItem = function (href, label, nested) {
-      let link = mobileList.querySelector('a[href="' + href + '"]');
+      const key = navPathKey(href);
+      let link = Array.from(mobileList.querySelectorAll('a')).find(function (item) {
+        return navPathKey(item.getAttribute('href')) === key;
+      });
       if (!link) {
         link = document.createElement('a');
         link.className = 'mobile-menu-link';
-        link.href = href;
+        link.href = '/' + href.replace(/^(\.\/|\.\.\/)+/, '');
         const li = document.createElement('li');
         li.appendChild(link);
         mobileList.appendChild(li);
