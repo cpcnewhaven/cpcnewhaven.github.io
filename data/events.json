@@ -1,13 +1,7 @@
 {
-  "generatedAt": "2026-11-06T12:58:36.342572-05:00",
+  "generatedAt": "2026-11-07T11:50:34.125685-05:00",
   "source": "CPC Google Calendar",
   "events": [
-    {
-      "date": "2026-11-06",
-      "title": "Pastor Craig Drop-in Office Hours",
-      "description": "",
-      "allDay": false
-    },
     {
       "date": "2026-11-07",
       "title": "Parenting Seminar",
@@ -71,6 +65,12 @@
     {
       "date": "2026-11-15",
       "title": "Worship Service",
+      "description": "",
+      "allDay": false
+    },
+    {
+      "date": "2026-11-16",
+      "title": "Shepherd Meeting",
       "description": "",
       "allDay": false
     }
