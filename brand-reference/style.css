@@ -26,10 +26,32 @@ section>p:not(.label){max-width:72ch}
 .plate,.example{aspect-ratio:1.9;display:grid;align-content:center;padding:clamp(.85rem,3vw,2rem);border:1px solid var(--line);border-radius:.35rem;overflow:hidden}
 .plate{background:white;justify-items:center;container-type:inline-size}
 .original{width:88%;aspect-ratio:447/248;object-fit:cover}
-.lockup{display:flex;align-items:center;gap:2%;width:90%;color:#211e1f}
-.lockup svg{width:48%;flex:none}
-.wordmark{font-size:5.7cqw;font-weight:700;line-height:1;letter-spacing:-.025em;text-transform:uppercase}
-.wordmark span{display:block;font-size:.59em;font-weight:600;letter-spacing:.13em;margin-top:.45em}
+.anchored-lockup {
+  position: relative;
+  width: min(100%, 27rem);
+  container-type: inline-size;
+  color: #211e1f;
+}
+.anchored-lockup svg {
+  width: 53%;
+}
+.anchored-name {
+  position: absolute;
+  top: 43%;
+  left: 41%;
+  font-size: 6.5cqw;
+  font-weight: 700;
+  line-height: .95;
+  letter-spacing: -.025em;
+  text-transform: uppercase;
+}
+.anchored-name span {
+  display: block;
+  margin-top: .32em;
+  font-size: .59em;
+  font-weight: 600;
+  letter-spacing: .11em;
+}
 figcaption{margin-top:.65rem;color:var(--muted);font-size:.88rem}
 figcaption strong{color:var(--navy)}
 .note,.review{background:var(--pale);border-radius:.35rem;padding:clamp(1.2rem,4vw,2.2rem)}
