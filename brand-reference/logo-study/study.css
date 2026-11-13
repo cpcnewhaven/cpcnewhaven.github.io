@@ -1,0 +1,114 @@
+.definitions {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+.study-header {
+  padding-block: clamp(2.5rem, 6vw, 5rem) 2rem;
+}
+.study-header .lede {
+  max-width: 62ch;
+}
+.options {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.option {
+  display: grid;
+  grid-template-rows: auto 1fr auto auto auto;
+  gap: .75rem;
+  min-width: 0;
+  padding: clamp(1rem, 2vw, 1.4rem);
+  border: 1px solid var(--line);
+  border-radius: .45rem;
+  background: white;
+}
+.option h2 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+.option > p {
+  color: var(--muted);
+  font-size: .875rem;
+}
+.lockup-preview {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .55rem;
+  min-height: 9.5rem;
+  color: #211e1f;
+}
+.mark {
+  width: 34%;
+  max-width: 6rem;
+  flex: none;
+}
+.name {
+  font-size: clamp(.82rem, 1.42vw, 1.15rem);
+  font-weight: 700;
+  line-height: 1.05;
+  text-transform: uppercase;
+}
+.name span {
+  display: block;
+  margin-top: .35em;
+  font-size: .62em;
+  font-weight: 600;
+  letter-spacing: .12em;
+}
+.small-preview {
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: .75rem;
+  border-block: 1px solid var(--line);
+  color: #211e1f;
+}
+.small-preview > div {
+  display: grid;
+  place-items: center;
+  gap: .25rem;
+  font-size: .75rem;
+}
+.medium { width: 48px; }
+.small { width: 24px; }
+.sign-preview {
+  display: flex;
+  align-items: center;
+  gap: .55rem;
+  min-height: 4.5rem;
+  margin-top: .3rem;
+  padding: .65rem;
+  background: var(--blue);
+  color: white;
+  border-radius: .25rem;
+}
+.sign-mark {
+  width: 32px;
+  flex: none;
+}
+.sign-mark:has(use[href="#circle"]) {
+  filter: invert(1) grayscale(1) contrast(4);
+  mix-blend-mode: screen;
+}
+.sign-preview div span {
+  display: block;
+  font-size: .63rem;
+  line-height: 1.25;
+}
+.arrow {
+  margin-inline-start: auto;
+  font-size: 1.35rem;
+}
+@media (max-width: 840px) {
+  .options { grid-template-columns: 1fr; }
+  .name { font-size: clamp(1rem, 4.5vw, 1.35rem); }
+}
+@media print {
+  .option { break-inside: avoid; }
+}
