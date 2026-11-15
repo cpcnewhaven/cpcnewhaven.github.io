@@ -12,7 +12,7 @@
       "spotify_url": "https://open.spotify.com/episode/4pBjoHk48KLU0doIhC7ePV?si=0NZ7P9a5QTS_WtB6PFcuJw",
       "youtube_url": "https://www.youtube.com/watch?v=jhlYNzi6KcY",
       "link": "https://open.spotify.com/episode/4pBjoHk48KLU0doIhC7ePV?si=0NZ7P9a5QTS_WtB6PFcuJw",
-      "podcast-thumbnail_url": "https://s3-us-west-2.amazonaws.com/anchor-generated-image-bank/staging/podcast_uploaded_episode400/12709107/12709107-1794235685109-39ae063227c79.jpg",
+      "podcast-thumbnail_url": "https://image-cdn-fa.spotifycdn.com/image/ab67656300005f1f021ca3da14c020e67270be44",
       "audio_url": ""
     },
     {
@@ -64,7 +64,7 @@
       "spotify_url": "https://open.spotify.com/episode/3C7OI2EszoUKPToXiIQnDW?si=1JfJJ0eeR8a-ikXiCX1WYw",
       "youtube_url": "",
       "link": "https://open.spotify.com/episode/3C7OI2EszoUKPToXiIQnDW?si=1JfJJ0eeR8a-ikXiCX1WYw",
-      "podcast-thumbnail_url": "",
+      "podcast-thumbnail_url": "../assets/sermon-thumbnails/26-10-11.jpg",
       "audio_url": ""
     },
     {
@@ -116,7 +116,7 @@
       "spotify_url": "https://open.spotify.com/episode/0Yl2KQ90ZYn0PqMNt8QEsU?si=BPuDnz0dSJyx3CHd0k64DQ",
       "youtube_url": "",
       "link": "https://open.spotify.com/episode/0Yl2KQ90ZYn0PqMNt8QEsU?si=BPuDnz0dSJyx3CHd0k64DQ",
-      "podcast-thumbnail_url": "",
+      "podcast-thumbnail_url": "../assets/sermon-thumbnails/26-09-13.jpg",
       "audio_url": ""
     },
     {
@@ -129,7 +129,7 @@
       "spotify_url": "https://open.spotify.com/episode/2Y7DwR7W6D5tgNl8dTkPBC?si=_uQ9CUksQoWo9fZhHr1I-g",
       "youtube_url": "",
       "link": "https://open.spotify.com/episode/2Y7DwR7W6D5tgNl8dTkPBC?si=_uQ9CUksQoWo9fZhHr1I-g",
-      "podcast-thumbnail_url": "",
+      "podcast-thumbnail_url": "../assets/sermon-thumbnails/26-09-06.jpg",
       "audio_url": ""
     },
     {
@@ -142,7 +142,7 @@
       "spotify_url": "https://open.spotify.com/episode/37fPCjqsuIAkfNqHJJqmCX?si=e0J-0X2GT3eHLZo4Nyh8aQ",
       "youtube_url": "https://www.youtube.com/watch?v=ySZmGVNL9w8",
       "link": "https://www.cpcnewhaven.org/sermons/sermon/2026-08-30/do-you-see-jesus-the-wonders-of-word-and-sacrament",
-      "podcast-thumbnail_url": "",
+      "podcast-thumbnail_url": "../assets/sermon-thumbnails/26-08-30.jpg",
       "audio_url": "https://www.cpcnewhaven.org/download/4740"
     },
     {
@@ -155,7 +155,7 @@
       "spotify_url": "https://open.spotify.com/episode/0npWS5uHojZLU2Fraj42XM?si=weGuQ7z_QFuY8UEY_bi1TA",
       "youtube_url": "https://www.youtube.com/watch?v=ShMmV-565NA",
       "link": "https://www.cpcnewhaven.org/sermons/sermon/2026-08-23/the-resurrection-faith-before-sight",
-      "podcast-thumbnail_url": "",
+      "podcast-thumbnail_url": "../assets/sermon-thumbnails/26-08-23.jpg",
       "audio_url": "https://www.cpcnewhaven.org/download/4737"
     },
     {
@@ -191,7 +191,7 @@
       "apple_podcasts_url": "",
       "spotify_url": "https://open.spotify.com/episode/1dmAIRmuJMsrJ1FWRJzUUi?si=h8Sfe5qxSuWwbWE0Qs0NjA",
       "link": "https://open.spotify.com/episode/1dmAIRmuJMsrJ1FWRJzUUi?si=h8Sfe5qxSuWwbWE0Qs0NjA",
-      "podcast-thumbnail_url": ""
+      "podcast-thumbnail_url": "../assets/sermon-thumbnails/26-08-02.jpg"
     },
     {
       "id": "26-07-26",
@@ -202,7 +202,7 @@
       "apple_podcasts_url": "",
       "spotify_url": "https://open.spotify.com/episode/4ITJ9Q04dbHKrGunYdRtiF?si=lYqyK08WRUeRL5v4VXFHhA",
       "link": "https://open.spotify.com/episode/4ITJ9Q04dbHKrGunYdRtiF?si=lYqyK08WRUeRL5v4VXFHhA",
-      "podcast-thumbnail_url": ""
+      "podcast-thumbnail_url": "../assets/sermon-thumbnails/26-07-26.jpg"
     },
     {
       "id": "26-07-12",
@@ -213,7 +213,7 @@
       "apple_podcasts_url": "",
       "spotify_url": "https://open.spotify.com/episode/2wrw0uUsMJW1fjapfUL5gr?si=6Vy4rfdMRfyyBbC4wh6Owg",
       "link": "https://open.spotify.com/episode/2wrw0uUsMJW1fjapfUL5gr?si=6Vy4rfdMRfyyBbC4wh6Owg",
-      "podcast-thumbnail_url": ""
+      "podcast-thumbnail_url": "../assets/sermon-thumbnails/26-07-12.jpg"
     },
     {
       "id": "26-07-19",
@@ -224,7 +224,7 @@
       "apple_podcasts_url": "",
       "spotify_url": "https://open.spotify.com/episode/4lUpuWtz3umIjqB3N4wQ7Z?si=T7DKBn2NRyeBiCAInrYxrA",
       "link": "https://open.spotify.com/episode/4lUpuWtz3umIjqB3N4wQ7Z?si=T7DKBn2NRyeBiCAInrYxrA",
-      "podcast-thumbnail_url": ""
+      "podcast-thumbnail_url": "../assets/sermon-thumbnails/26-07-19.jpg"
     },
     {
       "id": "26-07-06",
@@ -246,7 +246,7 @@
       "apple_podcasts_url": "",
       "spotify_url": "https://open.spotify.com/episode/1Q2KKdC3BpdH5l8GtDGCkK?si=ugvC-iosR7aT5l7r3F_UKw",
       "link": "https://open.spotify.com/episode/1Q2KKdC3BpdH5l8GtDGCkK?si=ugvC-iosR7aT5l7r3F_UKw",
-      "podcast-thumbnail_url": ""
+      "podcast-thumbnail_url": "../assets/sermon-thumbnails/26-06-29.jpg"
     },
     {
       "id": "26-06-14",
@@ -257,7 +257,7 @@
       "apple_podcasts_url": "",
       "spotify_url": "https://open.spotify.com/episode/6hwWYZpGrmq5zdraXxwW04?si=e2lfTbI5Ru6zDRCQnV-Wng",
       "link": "https://open.spotify.com/episode/6hwWYZpGrmq5zdraXxwW04?si=e2lfTbI5Ru6zDRCQnV-Wng",
-      "podcast-thumbnail_url": ""
+      "podcast-thumbnail_url": "../assets/sermon-thumbnails/26-06-14.jpg"
     },
     {
       "id": "26-05-18",
@@ -268,7 +268,7 @@
       "apple_podcasts_url": "",
       "spotify_url": "https://open.spotify.com/episode/0cbxJJyrWIeHtHnEwuxCeq?si=wU7lrQLbQCmTVDsfve7zyg",
       "link": "https://open.spotify.com/episode/0cbxJJyrWIeHtHnEwuxCeq?si=wU7lrQLbQCmTVDsfve7zyg",
-      "podcast-thumbnail_url": ""
+      "podcast-thumbnail_url": "../assets/sermon-thumbnails/26-05-18.jpg"
     },
     {
       "id": "26-05-11",
@@ -279,7 +279,7 @@
       "apple_podcasts_url": "",
       "spotify_url": "https://open.spotify.com/episode/0MpH6r5SqpC060hLStvo1e?si=793b3c1eda074b76",
       "link": "https://open.spotify.com/episode/0MpH6r5SqpC060hLStvo1e?si=793b3c1eda074b76",
-      "podcast-thumbnail_url": ""
+      "podcast-thumbnail_url": "../assets/sermon-thumbnails/26-05-11.jpg"
     },
     {
       "id": "26-05-04",
@@ -290,7 +290,7 @@
       "apple_podcasts_url": "",
       "spotify_url": "https://open.spotify.com/episode/0YSCQZ68Xe6kMKopoPm00A?si=1dmDNbgJRLumlrqa8A0bAQ",
       "link": "https://open.spotify.com/episode/0YSCQZ68Xe6kMKopoPm00A?si=1dmDNbgJRLumlrqa8A0bAQ",
-      "podcast-thumbnail_url": ""
+      "podcast-thumbnail_url": "../assets/sermon-thumbnails/26-05-04.jpg"
     },
     {
       "id": "26-04-26",
@@ -301,7 +301,7 @@
       "apple_podcasts_url": "",
       "spotify_url": "https://open.spotify.com/episode/25YXGQzbLzTJS3epDIhHkS?si=THftvwsUSOqTJOWsmGT5hA",
       "link": "https://open.spotify.com/episode/25YXGQzbLzTJS3epDIhHkS?si=THftvwsUSOqTJOWsmGT5hA",
-      "podcast-thumbnail_url": ""
+      "podcast-thumbnail_url": "../assets/sermon-thumbnails/26-04-26.jpg"
     },
     {
       "id": "26-04-19",
@@ -312,7 +312,7 @@
       "apple_podcasts_url": "",
       "spotify_url": "https://open.spotify.com/episode/4Q7RCUqzXQxlxVddr0VbHm?si=f0AewhjJTpaTBrZQoUKevw",
       "link": "https://open.spotify.com/episode/4Q7RCUqzXQxlxVddr0VbHm?si=f0AewhjJTpaTBrZQoUKevw",
-      "podcast-thumbnail_url": ""
+      "podcast-thumbnail_url": "../assets/sermon-thumbnails/26-04-19.jpg"
     },
     {
       "id": "26-04-05",
@@ -334,7 +334,7 @@
       "apple_podcasts_url": "",
       "spotify_url": "https://open.spotify.com/episode/0bn3CG4qVAb0LhmUwELRFW?si=4e6cd50a96aa40ff",
       "link": "https://open.spotify.com/episode/0bn3CG4qVAb0LhmUwELRFW?si=4e6cd50a96aa40ff",
-      "podcast-thumbnail_url": ""
+      "podcast-thumbnail_url": "../assets/sermon-thumbnails/26-03-29.jpg"
     },
     {
       "id": "26-03-23",
@@ -345,7 +345,7 @@
       "apple_podcasts_url": "",
       "spotify_url": "https://open.spotify.com/episode/514qIjRimZaiVWv4GUovKB?si=8QvIQQzTSk-lyENtk5aKEQ",
       "link": "https://open.spotify.com/episode/514qIjRimZaiVWv4GUovKB?si=8QvIQQzTSk-lyENtk5aKEQ",
-      "podcast-thumbnail_url": ""
+      "podcast-thumbnail_url": "../assets/sermon-thumbnails/26-03-23.jpg"
     },
     {
       "id": "26-03-15",
@@ -356,7 +356,7 @@
       "apple_podcasts_url": "",
       "spotify_url": "https://open.spotify.com/episode/4dvZCMMeobTsMgzT8MukSm?si=64658186fa904295",
       "link": "https://open.spotify.com/episode/4dvZCMMeobTsMgzT8MukSm?si=64658186fa904295",
-      "podcast-thumbnail_url": ""
+      "podcast-thumbnail_url": "../assets/sermon-thumbnails/26-03-15.jpg"
     },
     {
       "id": "26-03-08",
@@ -367,7 +367,7 @@
       "apple_podcasts_url": "",
       "spotify_url": "https://open.spotify.com/episode/5XDIrfDwputTu4e2zkJ9mT",
       "link": "https://open.spotify.com/episode/5XDIrfDwputTu4e2zkJ9mT",
-      "podcast-thumbnail_url": ""
+      "podcast-thumbnail_url": "../assets/sermon-thumbnails/26-03-08.jpg"
     },
     {
       "id": "26-03-01",
@@ -378,7 +378,7 @@
       "apple_podcasts_url": "",
       "spotify_url": "https://open.spotify.com/episode/0fuyongSLKLpgge4hgXUp3",
       "link": "https://open.spotify.com/episode/0fuyongSLKLpgge4hgXUp3",
-      "podcast-thumbnail_url": ""
+      "podcast-thumbnail_url": "../assets/sermon-thumbnails/26-03-01.jpg"
     },
     {
       "id": "26-02-22",
@@ -389,7 +389,7 @@
       "apple_podcasts_url": "",
       "spotify_url": "https://open.spotify.com/episode/2FJKTZN8wwBzSFPoG1K3GR",
       "link": "https://open.spotify.com/episode/2FJKTZN8wwBzSFPoG1K3GR",
-      "podcast-thumbnail_url": ""
+      "podcast-thumbnail_url": "../assets/sermon-thumbnails/26-02-22.jpg"
     },
     {
       "id": "26-02-15",
@@ -400,7 +400,7 @@
       "apple_podcasts_url": "",
       "spotify_url": "https://open.spotify.com/episode/6AvCvFDSPb9nS5QKj9Jm99?si=6f03726f9198444e",
       "link": "https://open.spotify.com/episode/6AvCvFDSPb9nS5QKj9Jm99?si=6f03726f9198444e",
-      "podcast-thumbnail_url": ""
+      "podcast-thumbnail_url": "../assets/sermon-thumbnails/26-02-15.jpg"
     },
     {
       "id": "26-02-01",
@@ -411,7 +411,7 @@
       "apple_podcasts_url": "",
       "spotify_url": "https://open.spotify.com/episode/78Zuys4k7zMkh4gATJ2tZt?si=cc611eff60e347b8",
       "link": "https://open.spotify.com/episode/78Zuys4k7zMkh4gATJ2tZt?si=cc611eff60e347b8",
-      "podcast-thumbnail_url": ""
+      "podcast-thumbnail_url": "../assets/sermon-thumbnails/26-02-01.jpg"
     },
     {
       "id": "26-01-25",
@@ -422,7 +422,7 @@
       "apple_podcasts_url": "",
       "spotify_url": "https://open.spotify.com/episode/5Pryj1VNlFDl3deMFFvDIa?si=G9EszNibQZa40xMwH0IwxA",
       "link": "https://open.spotify.com/episode/5Pryj1VNlFDl3deMFFvDIa?si=G9EszNibQZa40xMwH0IwxA",
-      "podcast-thumbnail_url": ""
+      "podcast-thumbnail_url": "../assets/sermon-thumbnails/26-01-25.jpg"
     },
     {
       "id": "26-01-11",
@@ -433,7 +433,7 @@
       "apple_podcasts_url": "",
       "spotify_url": "https://open.spotify.com/episode/1SSsXOM4LweztVkr4ajC6y?si=94a1037640524669",
       "link": "https://open.spotify.com/episode/1SSsXOM4LweztVkr4ajC6y?si=94a1037640524669",
-      "podcast-thumbnail_url": ""
+      "podcast-thumbnail_url": "../assets/sermon-thumbnails/26-01-11.jpg"
     },
     {
       "id": "26-01-04",
@@ -444,7 +444,7 @@
       "apple_podcasts_url": "",
       "spotify_url": "https://open.spotify.com/episode/31izj4fCjg0OKh4ZoTYYYb?si=ed9bd42376db44e8",
       "link": "https://open.spotify.com/episode/31izj4fCjg0OKh4ZoTYYYb?si=ed9bd42376db44e8",
-      "podcast-thumbnail_url": ""
+      "podcast-thumbnail_url": "../assets/sermon-thumbnails/26-01-04.jpg"
     },
     {
       "id": "25-12-28",
@@ -455,7 +455,7 @@
       "apple_podcasts_url": "",
       "spotify_url": "https://open.spotify.com/episode/0SetTxRKzWykeMUi9tYOcS?si=ih7AEoVJSgmdQarzhTTtxQ",
       "link": "https://open.spotify.com/episode/0SetTxRKzWykeMUi9tYOcS?si=ih7AEoVJSgmdQarzhTTtxQ",
-      "podcast-thumbnail_url": ""
+      "podcast-thumbnail_url": "../assets/sermon-thumbnails/25-12-28.jpg"
     },
     {
       "id": "24-09-08",
@@ -557,7 +557,7 @@
       "apple_podcasts_url": "",
       "spotify_url": "https://open.spotify.com/episode/0vkXcaX1weeaNzrTs9uQ7A?si=d225ff668b3d478f",
       "link": "https://open.spotify.com/episode/0vkXcaX1weeaNzrTs9uQ7A?si=d225ff668b3d478f",
-      "podcast-thumbnail_url": "",
+      "podcast-thumbnail_url": "../assets/sermon-thumbnails/24-11-04.jpg",
       "youtube_url": ""
     },
     {
@@ -665,7 +665,7 @@
       "apple_podcasts_url": "",
       "spotify_url": "https://open.spotify.com/episode/3bFEgngq1P0m3y7h9DpwVk?si=37850649837b4a89",
       "link": "https://open.spotify.com/episode/3bFEgngq1P0m3y7h9DpwVk?si=37850649837b4a89",
-      "podcast-thumbnail_url": ""
+      "podcast-thumbnail_url": "../assets/sermon-thumbnails/25-01-05.jpg"
     },
     {
       "id": "25-01-12",
@@ -676,7 +676,7 @@
       "apple_podcasts_url": "",
       "spotify_url": "https://open.spotify.com/episode/0GmvMYw3yPpKAHsaAi0N3X?si=1742be414c404551",
       "link": "https://open.spotify.com/episode/0GmvMYw3yPpKAHsaAi0N3X?si=1742be414c404551",
-      "podcast-thumbnail_url": ""
+      "podcast-thumbnail_url": "../assets/sermon-thumbnails/25-01-12.jpg"
     },
     {
       "id": "25-01-19",
@@ -687,7 +687,7 @@
       "apple_podcasts_url": "",
       "spotify_url": "https://open.spotify.com/episode/2UTPspn6xytphDhhW5l4Wv?si=vLg1aeuoTXusQksEPPNvKg",
       "link": "https://open.spotify.com/episode/2UTPspn6xytphDhhW5l4Wv?si=vLg1aeuoTXusQksEPPNvKg",
-      "podcast-thumbnail_url": ""
+      "podcast-thumbnail_url": "../assets/sermon-thumbnails/25-01-19.jpg"
     },
     {
       "id": "25-01-26",
@@ -698,7 +698,7 @@
       "apple_podcasts_url": "",
       "spotify_url": "https://open.spotify.com/episode/3e7doJzcslm0gjhsxBjNOY?si=0VGC1ozySNKO1fI1A8jbzw",
       "link": "https://open.spotify.com/episode/3e7doJzcslm0gjhsxBjNOY?si=0VGC1ozySNKO1fI1A8jbzw",
-      "podcast-thumbnail_url": ""
+      "podcast-thumbnail_url": "../assets/sermon-thumbnails/25-01-26.jpg"
     },
     {
       "id": "25-02-02",
@@ -709,7 +709,7 @@
       "apple_podcasts_url": "",
       "spotify_url": "https://open.spotify.com/episode/0FyJcEpB6GkJeauPMNGwMZ?si=de45f6e3765b4fe3",
       "link": "https://open.spotify.com/episode/0FyJcEpB6GkJeauPMNGwMZ?si=de45f6e3765b4fe3",
-      "podcast-thumbnail_url": ""
+      "podcast-thumbnail_url": "../assets/sermon-thumbnails/25-02-02.jpg"
     },
     {
       "id": "25-02-09",
@@ -720,7 +720,7 @@
       "apple_podcasts_url": "",
       "spotify_url": "https://open.spotify.com/episode/7BnZ3ZgqGQNbcr9LVn2Oo9?si=1ad5da53ca494483",
       "link": "https://open.spotify.com/episode/7BnZ3ZgqGQNbcr9LVn2Oo9?si=1ad5da53ca494483",
-      "podcast-thumbnail_url": ""
+      "podcast-thumbnail_url": "../assets/sermon-thumbnails/25-02-09.jpg"
     },
     {
       "id": "25-02-16",
@@ -731,7 +731,7 @@
       "apple_podcasts_url": "",
       "spotify_url": "https://open.spotify.com/episode/0Azt628vb5FyVTMHeK1wnp",
       "link": "https://open.spotify.com/episode/0Azt628vb5FyVTMHeK1wnp",
-      "podcast-thumbnail_url": ""
+      "podcast-thumbnail_url": "../assets/sermon-thumbnails/25-02-16.jpg"
     },
     {
       "id": "25-02-23",
@@ -742,7 +742,7 @@
       "apple_podcasts_url": "",
       "spotify_url": "https://open.spotify.com/episode/6dEL2HNqw1ZqS5JaSDIY4b?si=be83c5d5eb304d72",
       "link": "https://open.spotify.com/episode/6dEL2HNqw1ZqS5JaSDIY4b?si=be83c5d5eb304d72",
-      "podcast-thumbnail_url": ""
+      "podcast-thumbnail_url": "../assets/sermon-thumbnails/25-02-23.jpg"
     },
     {
       "id": "25-03-02",
@@ -753,7 +753,7 @@
       "apple_podcasts_url": "",
       "spotify_url": "https://open.spotify.com/episode/72GaPTPs7MBMvcrfK46fhp?si=16d4358d3e164983",
       "link": "https://open.spotify.com/episode/72GaPTPs7MBMvcrfK46fhp?si=16d4358d3e164983",
-      "podcast-thumbnail_url": ""
+      "podcast-thumbnail_url": "../assets/sermon-thumbnails/25-03-02.jpg"
     },
     {
       "id": "25-03-09",
@@ -764,7 +764,7 @@
       "apple_podcasts_url": "",
       "spotify_url": "https://open.spotify.com/episode/0WOfOhpyvwGMAv5vR5ZpaX?si=90c2b41bc51d41c3",
       "link": "https://open.spotify.com/episode/0WOfOhpyvwGMAv5vR5ZpaX?si=90c2b41bc51d41c3",
-      "podcast-thumbnail_url": ""
+      "podcast-thumbnail_url": "../assets/sermon-thumbnails/25-03-09.jpg"
     },
     {
       "id": "25-03-16",
@@ -786,7 +786,7 @@
       "apple_podcasts_url": "",
       "spotify_url": "https://open.spotify.com/episode/0Gv9ALz732OhNJjlz3TYVi?si=37c26daff0b94cd9",
       "link": "https://www.youtube.com/watch?v=yLNdKyrlEUQ",
-      "podcast-thumbnail_url": ""
+      "podcast-thumbnail_url": "../assets/sermon-thumbnails/25-03-23.jpg"
     },
     {
       "id": "25-03-31",
@@ -797,7 +797,7 @@
       "apple_podcasts_url": "",
       "spotify_url": "https://open.spotify.com/episode/5CWHU0FlO9Hrqg28n43LUC?si=c310b51ee8764ea5",
       "link": "https://open.spotify.com/episode/5CWHU0FlO9Hrqg28n43LUC?si=c310b51ee8764ea5",
-      "podcast-thumbnail_url": ""
+      "podcast-thumbnail_url": "../assets/sermon-thumbnails/25-03-31.jpg"
     },
     {
       "id": "25-04-06",
@@ -808,7 +808,7 @@
       "apple_podcasts_url": "",
       "spotify_url": "https://open.spotify.com/episode/2lomBc1lAHSbGAnoghx1ad?si=c9bc02bd11cd4012",
       "link": "https://open.spotify.com/episode/2lomBc1lAHSbGAnoghx1ad?si=c9bc02bd11cd4012",
-      "podcast-thumbnail_url": ""
+      "podcast-thumbnail_url": "../assets/sermon-thumbnails/25-04-06.jpg"
     },
     {
       "id": "25-04-13",
@@ -819,7 +819,7 @@
       "apple_podcasts_url": "",
       "spotify_url": "https://open.spotify.com/episode/2nDnkuEV7Il77jMsQiFJEO?si=27c357e1100f4fb3",
       "link": "https://open.spotify.com/episode/5VWdFa7UnWbH7wMPHOHhdP?si=56117cb3d5d34972",
-      "podcast-thumbnail_url": ""
+      "podcast-thumbnail_url": "../assets/sermon-thumbnails/25-04-13.jpg"
     },
     {
       "id": "25-04-20",
@@ -830,7 +830,7 @@
       "apple_podcasts_url": "",
       "spotify_url": "https://open.spotify.com/episode/6HQsDUOb5irkkcyojOredX?si=4a6ebda6ee914173",
       "link": "https://open.spotify.com/episode/6ylA59OYNX32WpAoZXqvCs?si=55f9d5328b0549d0",
-      "podcast-thumbnail_url": ""
+      "podcast-thumbnail_url": "../assets/sermon-thumbnails/25-04-20.jpg"
     },
     {
       "id": "25-04-27",
@@ -841,7 +841,7 @@
       "apple_podcasts_url": "",
       "spotify_url": "https://open.spotify.com/episode/6m3QoxA2s06owWWLLzZiyk?si=11d392a79e56437b",
       "link": "https://open.spotify.com/episode/6m3QoxA2s06owWWLLzZiyk?si=11d392a79e56437b",
-      "podcast-thumbnail_url": ""
+      "podcast-thumbnail_url": "../assets/sermon-thumbnails/25-04-27.jpg"
     },
     {
       "id": "25-05-04",
@@ -852,7 +852,7 @@
       "apple_podcasts_url": "",
       "spotify_url": "https://open.spotify.com/episode/7FegowK3jjJdA5It567kIO?si=29e85ab45ba04bf7",
       "link": "https://open.spotify.com/episode/7FegowK3jjJdA5It567kIO?si=29e85ab45ba04bf7",
-      "podcast-thumbnail_url": ""
+      "podcast-thumbnail_url": "../assets/sermon-thumbnails/25-05-04.jpg"
     },
     {
       "id": "25-05-18",
@@ -874,7 +874,7 @@
       "apple_podcasts_url": "",
       "spotify_url": "https://open.spotify.com/episode/08Hn0WDE3t2m9qP6n94dYw?si=4df84f3e34e8424c",
       "link": "https://open.spotify.com/episode/08Hn0WDE3t2m9qP6n94dYw?si=4df84f3e34e8424c",
-      "podcast-thumbnail_url": ""
+      "podcast-thumbnail_url": "../assets/sermon-thumbnails/25-05-25.jpg"
     },
     {
       "id": "25-06-01",
@@ -885,7 +885,7 @@
       "apple_podcasts_url": "",
       "spotify_url": "https://open.spotify.com/episode/4saebNOFAQrBoVtVUmeZba?si=JaV8j9gFTXKLF7OoP5rZMg",
       "link": "https://open.spotify.com/episode/4saebNOFAQrBoVtVUmeZba?si=JaV8j9gFTXKLF7OoP5rZMg",
-      "podcast-thumbnail_url": ""
+      "podcast-thumbnail_url": "../assets/sermon-thumbnails/25-06-01.jpg"
     },
     {
       "id": "25-06-08",
@@ -896,7 +896,7 @@
       "apple_podcasts_url": "",
       "spotify_url": "https://open.spotify.com/episode/0QzA0VN845J0Etz9RbzS3R?si=JrAQBnnsRuGcDf3S1VIQHA",
       "link": "https://open.spotify.com/episode/0QzA0VN845J0Etz9RbzS3R?si=JrAQBnnsRuGcDf3S1VIQHA",
-      "podcast-thumbnail_url": ""
+      "podcast-thumbnail_url": "../assets/sermon-thumbnails/25-06-08.jpg"
     },
     {
       "id": "25-06-15",
@@ -907,7 +907,7 @@
       "apple_podcasts_url": "",
       "spotify_url": "https://open.spotify.com/episode/3JiyPKeddx2xY1XNXuVxac?si=w9ftpZj9Sb6LSymlw9q5WA",
       "link": "https://open.spotify.com/episode/3JiyPKeddx2xY1XNXuVxac?si=w9ftpZj9Sb6LSymlw9q5WAA",
-      "podcast-thumbnail_url": ""
+      "podcast-thumbnail_url": "../assets/sermon-thumbnails/25-06-15.jpg"
     },
     {
       "id": "25-06-22",
@@ -918,7 +918,7 @@
       "apple_podcasts_url": "",
       "spotify_url": "https://open.spotify.com/episode/2Wl66RakViqtlVLSCoR9mw?si=_XQSpj-kRLKP3lIlt--qog",
       "link": "https://open.spotify.com/episode/2Wl66RakViqtlVLSCoR9mw?si=_XQSpj-kRLKP3lIlt--qog",
-      "podcast-thumbnail_url": ""
+      "podcast-thumbnail_url": "../assets/sermon-thumbnails/25-06-22.jpg"
     },
     {
       "id": "25-06-29",
@@ -929,7 +929,7 @@
       "apple_podcasts_url": "",
       "spotify_url": "https://open.spotify.com/episode/4ROVEK06jyrnP3ieUo8CeL?si=8BFIzGKRSOSDoduuVKqhWw",
       "link": "https://open.spotify.com/episode/4ROVEK06jyrnP3ieUo8CeL?si=8BFIzGKRSOSDoduuVKqhWw",
-      "podcast-thumbnail_url": ""
+      "podcast-thumbnail_url": "../assets/sermon-thumbnails/25-06-29.jpg"
     },
     {
       "id": "25-07-06",
@@ -940,7 +940,7 @@
       "apple_podcasts_url": "",
       "spotify_url": "https://open.spotify.com/episode/5APAn4plODYiEjmhmWX9sP?si=3b02e2c34b2b4ca4",
       "link": "https://open.spotify.com/episode/5APAn4plODYiEjmhmWX9sP?si=3b02e2c34b2b4ca4",
-      "podcast-thumbnail_url": ""
+      "podcast-thumbnail_url": "../assets/sermon-thumbnails/25-07-06.jpg"
     },
     {
       "id": "25-07-13",
@@ -951,7 +951,7 @@
       "apple_podcasts_url": "",
       "spotify_url": "https://open.spotify.com/episode/5LDP4RMUapxVX074jxnync?si=53fedd04df054be5",
       "link": "https://open.spotify.com/episode/5LDP4RMUapxVX074jxnync?si=53fedd04df054be5",
-      "podcast-thumbnail_url": ""
+      "podcast-thumbnail_url": "../assets/sermon-thumbnails/25-07-13.jpg"
     },
     {
       "id": "25-07-20",
@@ -962,7 +962,7 @@
       "apple_podcasts_url": "",
       "spotify_url": "https://open.spotify.com/episode/6khuPiZTXgyxFte8zH9aRb?si=fd5944f785c84903",
       "link": "https://open.spotify.com/episode/6khuPiZTXgyxFte8zH9aRb?si=fd5944f785c84903",
-      "podcast-thumbnail_url": ""
+      "podcast-thumbnail_url": "../assets/sermon-thumbnails/25-07-20.jpg"
     },
     {
       "id": "25-07-27",
@@ -973,7 +973,7 @@
       "apple_podcasts_url": "",
       "spotify_url": "https://open.spotify.com/episode/1ZsDiF3BPsHYVVosa2Z7UP?si=591fdf3865144b98",
       "link": "https://open.spotify.com/episode/1ZsDiF3BPsHYVVosa2Z7UP?si=591fdf3865144b98",
-      "podcast-thumbnail_url": ""
+      "podcast-thumbnail_url": "../assets/sermon-thumbnails/25-07-27.jpg"
     },
     {
       "id": "25-08-03",
@@ -984,7 +984,7 @@
       "apple_podcasts_url": "",
       "spotify_url": "https://open.spotify.com/episode/116dxAyeij9t5NeBxexju7?si=6ec6821aa4d54fba",
       "link": "https://open.spotify.com/episode/116dxAyeij9t5NeBxexju7?si=6ec6821aa4d54fba",
-      "podcast-thumbnail_url": ""
+      "podcast-thumbnail_url": "../assets/sermon-thumbnails/25-08-03.jpg"
     },
     {
       "id": "25-08-10",
@@ -995,7 +995,7 @@
       "apple_podcasts_url": "",
       "spotify_url": "https://open.spotify.com/episode/3ChyF5ovYmcZjg9jSqGl07?si=babcd77c9c0b4cd8",
       "link": "https://open.spotify.com/episode/3ChyF5ovYmcZjg9jSqGl07?si=babcd77c9c0b4cd8",
-      "podcast-thumbnail_url": ""
+      "podcast-thumbnail_url": "../assets/sermon-thumbnails/25-08-10.jpg"
     },
     {
       "id": "25-08-17",
@@ -1006,7 +1006,7 @@
       "apple_podcasts_url": "",
       "spotify_url": "https://open.spotify.com/episode/3hTjb2CyHh5Y1x6y2ypahm?si=Nzu5DXCNQ5mLRMhnQBFVvQ",
       "link": "https://open.spotify.com/episode/3hTjb2CyHh5Y1x6y2ypahm?si=Nzu5DXCNQ5mLRMhnQBFVvQ",
-      "podcast-thumbnail_url": ""
+      "podcast-thumbnail_url": "../assets/sermon-thumbnails/25-08-17.jpg"
     },
     {
       "id": "25-08-24",
@@ -1017,7 +1017,7 @@
       "apple_podcasts_url": "",
       "spotify_url": "https://open.spotify.com/episode/5xXcnpAcgOgdcLiKpdwxuk?si=5125e8adeeeb43e7",
       "link": "https://open.spotify.com/episode/5xXcnpAcgOgdcLiKpdwxuk?si=5125e8adeeeb43e7",
-      "podcast-thumbnail_url": ""
+      "podcast-thumbnail_url": "../assets/sermon-thumbnails/25-08-24.jpg"
     },
     {
       "id": "25-09-07",
@@ -1028,7 +1028,7 @@
       "apple_podcasts_url": "",
       "spotify_url": "https://open.spotify.com/episode/045vh0ZGnnIAcCMXg7ZGjy?si=a4ea41e718f240e8",
       "link": "https://open.spotify.com/episode/045vh0ZGnnIAcCMXg7ZGjy?si=a4ea41e718f240e8",
-      "podcast-thumbnail_url": ""
+      "podcast-thumbnail_url": "../assets/sermon-thumbnails/25-09-07.jpg"
     },
     {
       "id": "25-09-14",
@@ -1039,7 +1039,7 @@
       "apple_podcasts_url": "",
       "spotify_url": "https://open.spotify.com/episode/2UoHWP24hvauF2PHtxuXzz?si=14d59785c5e94f26",
       "link": "https://open.spotify.com/episode/2UoHWP24hvauF2PHtxuXzz?si=14d59785c5e94f26",
-      "podcast-thumbnail_url": ""
+      "podcast-thumbnail_url": "../assets/sermon-thumbnails/25-09-14.jpg"
     },
     {
       "id": "25-09-21",
@@ -1050,7 +1050,7 @@
       "apple_podcasts_url": "",
       "spotify_url": "https://open.spotify.com/episode/5epMJZcoo4IpuOI9Gh04ax?si=23037c70e8534643",
       "link": "https://open.spotify.com/episode/5epMJZcoo4IpuOI9Gh04ax?si=23037c70e8534643",
-      "podcast-thumbnail_url": ""
+      "podcast-thumbnail_url": "../assets/sermon-thumbnails/25-09-21.jpg"
     },
     {
       "id": "25-09-28",
@@ -1061,7 +1061,7 @@
       "apple_podcasts_url": "",
       "spotify_url": "https://open.spotify.com/episode/59K8LdeIXzCJqsFFkKJJHT?si=effcbf1e3ea1498c",
       "link": "https://open.spotify.com/episode/59K8LdeIXzCJqsFFkKJJHT?si=effcbf1e3ea1498c",
-      "podcast-thumbnail_url": ""
+      "podcast-thumbnail_url": "../assets/sermon-thumbnails/25-09-28.jpg"
     },
     {
       "id": "25-10-05",
@@ -1072,7 +1072,7 @@
       "apple_podcasts_url": "",
       "spotify_url": "https://open.spotify.com/episode/3thHalaJXnb6ygjEx1TAV0?si=82b9f186bc7743ae",
       "link": "https://open.spotify.com/episode/3thHalaJXnb6ygjEx1TAV0?si=82b9f186bc7743ae",
-      "podcast-thumbnail_url": ""
+      "podcast-thumbnail_url": "../assets/sermon-thumbnails/25-10-05.jpg"
     },
     {
       "id": "25-10-12",
@@ -1083,7 +1083,7 @@
       "apple_podcasts_url": "",
       "spotify_url": "https://open.spotify.com/episode/0C0WUWKDMpqHh0j0MVoA6X?si=87a4f961a4ae456c",
       "link": "https://open.spotify.com/episode/0C0WUWKDMpqHh0j0MVoA6X?si=87a4f961a4ae456c",
-      "podcast-thumbnail_url": ""
+      "podcast-thumbnail_url": "../assets/sermon-thumbnails/25-10-12.jpg"
     },
     {
       "id": "25-10-19",
@@ -1094,7 +1094,7 @@
       "apple_podcasts_url": "",
       "spotify_url": "https://open.spotify.com/episode/0iDpR260Vcqo6ZrLXIKXYz?si=3abb8216f7d547ed",
       "link": "https://open.spotify.com/episode/0iDpR260Vcqo6ZrLXIKXYz?si=3abb8216f7d547ed",
-      "podcast-thumbnail_url": ""
+      "podcast-thumbnail_url": "../assets/sermon-thumbnails/25-10-19.jpg"
     },
     {
       "id": "25-10-26",
@@ -1105,7 +1105,7 @@
       "apple_podcasts_url": "",
       "spotify_url": "https://open.spotify.com/episode/0rGaRvFOwAM2rdo2xl9R17?si=1b901ea8a06b4701",
       "link": "https://open.spotify.com/episode/0rGaRvFOwAM2rdo2xl9R17?si=1b901ea8a06b4701",
-      "podcast-thumbnail_url": ""
+      "podcast-thumbnail_url": "../assets/sermon-thumbnails/25-10-26.jpg"
     },
     {
       "id": "21-11-01",
@@ -1303,7 +1303,7 @@
       "apple_podcasts_url": "",
       "spotify_url": "https://open.spotify.com/episode/2k5fUTF8NUvoyrM9uG4051?si=84f64e63e1184d26",
       "link": "https://open.spotify.com/episode/2k5fUTF8NUvoyrM9uG4051?si=84f64e63e1184d26",
-      "podcast-thumbnail_url": ""
+      "podcast-thumbnail_url": "../assets/sermon-thumbnails/25-11-30.jpg"
     },
     {
       "id": "25-12-07",
@@ -1314,7 +1314,7 @@
       "apple_podcasts_url": "",
       "spotify_url": "https://open.spotify.com/episode/1yBPj3d53BFnxIEtOtT5C0?si=e9e8a60ebd2949ff",
       "link": "https://open.spotify.com/episode/1yBPj3d53BFnxIEtOtT5C0?si=e9e8a60ebd2949ff",
-      "podcast-thumbnail_url": ""
+      "podcast-thumbnail_url": "../assets/sermon-thumbnails/25-12-07.jpg"
     }
   ]
 }

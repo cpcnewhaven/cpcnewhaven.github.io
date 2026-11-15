@@ -162,22 +162,23 @@
     display: inline-flex;
     align-items: center;
     width: fit-content;
-    margin-top: 12px;
-    padding: 9px 13px;
-    border: 1px solid var(--link-color);
-    border-radius: 999px;
-    background: #fff;
-    color: var(--link-color);
-    font-size: 0.9rem;
+    margin: 14px 8px 4px 0;
+    padding: 11px 18px;
+    border: 2px solid var(--link-color);
+    border-radius: 8px;
+    background: var(--link-color);
+    color: #fff;
+    font-size: 0.95rem;
     font-weight: 700;
     line-height: 1.2;
 }
 
 .highlight-description .highlight-cta:hover,
 .highlight-description .highlight-cta:focus-visible {
-    background: var(--link-color);
-    color: #fff;
+    background: #fff;
+    color: var(--link-color);
     text-decoration: none;
+    box-shadow: 0 3px 10px rgba(0, 60, 109, 0.16);
 }
 
 .highlight-description .highlight-calendar-btn {

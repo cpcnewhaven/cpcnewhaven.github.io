@@ -20,6 +20,8 @@ import argparse
 import json
 import subprocess
 import sys
+import urllib.parse
+import urllib.request
 from datetime import date
 from pathlib import Path
 from textwrap import indent
@@ -31,6 +33,32 @@ SERMONS_PATH = ROOT / "data/sunday-sermons.json"
 PODCAST_INDEX_PATH = ROOT / "data/podcast-index.json"
 CURRENT_SERMON_PATH = ROOT / "data/upcomingSermon.json"
 SEARCH_BUILDER_PATH = ROOT / "scripts/build-search-index.py"
+THUMBNAIL_DIR = ROOT / "assets/sermon-thumbnails"
+
+
+def spotify_thumbnail(url: str, sermon_id: str) -> str:
+    """Download Spotify episode artwork when a new sermon has no supplied image."""
+    if not url or "open.spotify.com/episode/" not in url:
+        return ""
+    headers = {"User-Agent": "CPCNewHavenWebsite/1.0 (+https://cpcnewhaven.org)"}
+    endpoint = "https://open.spotify.com/oembed?url=" + urllib.parse.quote(url, safe="")
+    try:
+        request = urllib.request.Request(endpoint, headers=headers)
+        with urllib.request.urlopen(request, timeout=20) as response:
+            image_url = json.load(response).get("thumbnail_url")
+        if not image_url:
+            return ""
+        request = urllib.request.Request(image_url, headers=headers)
+        with urllib.request.urlopen(request, timeout=30) as response:
+            image = response.read()
+            extension = {"image/png": ".png", "image/webp": ".webp"}.get(response.headers.get_content_type(), ".jpg")
+        THUMBNAIL_DIR.mkdir(parents=True, exist_ok=True)
+        filename = f"{sermon_id}{extension}"
+        (THUMBNAIL_DIR / filename).write_bytes(image)
+        return f"../assets/sermon-thumbnails/{filename}"
+    except Exception as error:
+        print(f"Spotify artwork lookup failed: {error}", file=sys.stderr)
+        return ""
 
 
 def parse_args() -> argparse.Namespace:
@@ -115,6 +143,8 @@ def main() -> int:
         return 2
 
     sermon_id = sermon_date.strftime("%y-%m-%d")
+    if args.spotify_url.strip() and not args.thumbnail_url.strip():
+        args.thumbnail_url = spotify_thumbnail(args.spotify_url.strip(), sermon_id)
     episode = make_podcast_episode(args, sermon_id)
     current_record = {
         "active": True,

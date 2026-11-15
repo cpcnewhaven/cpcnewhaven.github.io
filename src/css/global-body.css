@@ -445,6 +445,12 @@ footer p {
     line-height: 1.6;
 }
 
+footer .footer-office-hours {
+    max-width: 760px;
+    font-size: 13px;
+    color: #4a5568;
+}
+
 footer .footer-links {
     display: flex;
     flex-wrap: wrap;
