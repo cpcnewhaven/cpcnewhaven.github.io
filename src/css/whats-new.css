@@ -80,6 +80,16 @@
     opacity: 1;
 }
 
+.whats-new-card .whats-new-thumbnail {
+    display: block;
+    width: calc(100% + 60px);
+    max-height: 340px;
+    aspect-ratio: 16 / 9;
+    margin: -26px -30px 24px;
+    object-fit: cover;
+    background: #e8edf0;
+}
+
 .whats-new-card .card-tag {
     display: inline-block;
     padding: 6px 12px;
@@ -330,6 +340,11 @@
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
+    .whats-new-card .whats-new-thumbnail {
+        width: calc(100% + 52px);
+        margin: -26px -26px 20px;
+    }
+
     .whats-new-section {
         padding: 42px 16px 48px;
     }

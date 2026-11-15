@@ -58,7 +58,8 @@ class WhatsNewManager {
                 link: s.link || s.spotify_url || 'sunday-sermons.html',
                 spotifyUrl: s.spotify_url,
                 youtubeUrl: s.youtube_url,
-                appleUrl: s.apple_podcasts_url
+                appleUrl: s.apple_podcasts_url,
+                thumbnailUrl: s['podcast-thumbnail_url']
             }));
         } catch (error) {
             console.warn('Sermons fetch failed:', error);
@@ -105,6 +106,18 @@ class WhatsNewManager {
                     </div>
                 </div>
             `;
+
+            if (item.thumbnailUrl) {
+                const thumbnail = document.createElement('img');
+                thumbnail.className = 'whats-new-thumbnail';
+                thumbnail.src = item.thumbnailUrl;
+                thumbnail.alt = `${item.title} thumbnail`;
+                thumbnail.loading = 'lazy';
+                thumbnail.decoding = 'async';
+                thumbnail.addEventListener('error', () => thumbnail.remove(), { once: true });
+                card.prepend(thumbnail);
+            }
+
             grid.appendChild(card);
         });
 
