@@ -92,17 +92,20 @@ class WhatsNewManager {
         items.forEach(item => {
             const card = document.createElement('article');
             card.className = 'whats-new-card tag-sermon';
+            if (item.thumbnailUrl) card.classList.add('has-thumbnail');
 
             card.innerHTML = `
-                <div class="card-tag">${item.tag}</div>
-                <h3><a href="${item.link}" target="_blank" rel="noopener">${item.title}</a></h3>
-                <p>${item.description}</p>
-                <div class="card-footer">
-                    <span class="card-date"><i class="far fa-calendar-alt"></i> ${this.formatDate(item.date)}</span>
-                    <div class="card-platform-links" aria-label="Listen on">
-                        ${item.spotifyUrl ? `<a href="${item.spotifyUrl}" target="_blank" rel="noopener" aria-label="Listen on Spotify" title="Spotify"><i class="fab fa-spotify"></i></a>` : ''}
-                        ${item.youtubeUrl ? `<a href="${item.youtubeUrl}" target="_blank" rel="noopener" aria-label="Watch on YouTube" title="YouTube"><i class="fab fa-youtube"></i></a>` : ''}
-                        ${item.appleUrl ? `<a href="${item.appleUrl}" target="_blank" rel="noopener" aria-label="Listen on Apple Podcasts" title="Apple Podcasts"><i class="fas fa-podcast"></i></a>` : ''}
+                <div class="whats-new-card-content">
+                    <div class="card-tag">${item.tag}</div>
+                    <h3><a href="${item.link}" target="_blank" rel="noopener">${item.title}</a></h3>
+                    <p>${item.description}</p>
+                    <div class="card-footer">
+                        <span class="card-date"><i class="far fa-calendar-alt"></i> ${this.formatDate(item.date)}</span>
+                        <div class="card-platform-links" aria-label="Listen on">
+                            ${item.spotifyUrl ? `<a href="${item.spotifyUrl}" target="_blank" rel="noopener" aria-label="Listen on Spotify" title="Spotify"><i class="fab fa-spotify"></i></a>` : ''}
+                            ${item.youtubeUrl ? `<a href="${item.youtubeUrl}" target="_blank" rel="noopener" aria-label="Watch on YouTube" title="YouTube"><i class="fab fa-youtube"></i></a>` : ''}
+                            ${item.appleUrl ? `<a href="${item.appleUrl}" target="_blank" rel="noopener" aria-label="Listen on Apple Podcasts" title="Apple Podcasts"><i class="fas fa-podcast"></i></a>` : ''}
+                        </div>
                     </div>
                 </div>
             `;

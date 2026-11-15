@@ -82,12 +82,26 @@
 
 .whats-new-card .whats-new-thumbnail {
     display: block;
-    width: calc(100% + 60px);
-    max-height: 340px;
-    aspect-ratio: 16 / 9;
-    margin: -26px -30px 24px;
+    width: 150px;
+    height: 150px;
+    flex: 0 0 150px;
+    margin: 0 24px 0 0;
+    border-radius: 12px;
     object-fit: cover;
     background: #e8edf0;
+}
+
+.whats-new-card.has-thumbnail {
+    flex-direction: row;
+    align-items: center;
+}
+
+.whats-new-card-content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    min-width: 0;
+    height: 100%;
 }
 
 .whats-new-card .card-tag {
@@ -340,11 +354,6 @@
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
-    .whats-new-card .whats-new-thumbnail {
-        width: calc(100% + 52px);
-        margin: -26px -26px 20px;
-    }
-
     .whats-new-section {
         padding: 42px 16px 48px;
     }
