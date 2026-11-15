@@ -155,7 +155,23 @@ document.addEventListener('DOMContentLoaded', function () {
       const moreGroup = moreLink && moreLink.closest('.nav-dropdown');
       const moreContent = moreGroup && moreGroup.querySelector('.nav-dropdown-content');
       const communityLink = getLink('community.html', 'Community');
-      const communityGroup = communityLink.closest('.nav-dropdown') || communityLink;
+      let communityGroup = communityLink.closest('.nav-dropdown');
+      if (!communityGroup) {
+        communityGroup = document.createElement('div');
+        communityGroup.className = 'nav-dropdown';
+        communityLink.classList.add('nav-dropbtn');
+        const caret = document.createElement('i');
+        caret.className = 'fas fa-caret-down';
+        caret.style.fontSize = '0.8em';
+        communityLink.append(' ', caret);
+        communityGroup.appendChild(communityLink);
+      }
+      let communityContent = communityGroup.querySelector('.nav-dropdown-content');
+      if (!communityContent) {
+        communityContent = document.createElement('div');
+        communityContent.className = 'nav-dropdown-content';
+        communityGroup.appendChild(communityContent);
+      }
       const eventsLink = getLink('events.html', 'Events');
 
       if (moreContent) {
@@ -176,10 +192,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
       eventsLink.textContent = 'Events';
       eventsLink.className = '';
-      const oldEventsMenu = eventsLink.parentElement;
-      if (oldEventsMenu && oldEventsMenu.classList.contains('nav-dropdown-content') && oldEventsMenu.children.length === 1) {
-        oldEventsMenu.parentElement.remove();
-      }
+      communityContent.appendChild(eventsLink);
 
       [
         getLink('index.html', 'Home'),
@@ -187,7 +200,6 @@ document.addEventListener('DOMContentLoaded', function () {
         getLink('sundays.html', 'Sundays'),
         getLink('podcasts.html', 'Podcasts'),
         communityGroup,
-        eventsLink,
         getLink('live.html', 'Live'),
         moreGroup
       ].filter(Boolean).forEach(function (item) {
