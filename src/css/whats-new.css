@@ -91,6 +91,51 @@
     background: #e8edf0;
 }
 
+.whats-new-thumbnail-wrap {
+    position: relative;
+    flex: 0 0 150px;
+    width: 150px;
+    height: 150px;
+    margin: 0 24px 0 0;
+}
+
+.whats-new-thumbnail-wrap .whats-new-thumbnail {
+    margin: 0;
+}
+
+.whats-new-play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: grid;
+    place-items: center;
+    width: 68px;
+    height: 68px;
+    padding-left: 5px;
+    border: 3px solid rgba(255, 255, 255, 0.94);
+    border-radius: 50%;
+    color: #fff;
+    background: #0078d4;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.38);
+    font-size: 1.65rem;
+    text-decoration: none;
+    transform: translate(-50%, -50%);
+    transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.whats-new-play-button:hover,
+.whats-new-play-button:focus-visible {
+    color: #fff;
+    background: #005a9e;
+    box-shadow: 0 7px 22px rgba(0, 0, 0, 0.45);
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+.whats-new-play-button:focus-visible {
+    outline: 3px solid #fff;
+    outline-offset: 3px;
+}
+
 .whats-new-card.has-thumbnail {
     flex-direction: row;
     align-items: center;
@@ -112,7 +157,7 @@
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    margin-bottom: 20px;
+    margin-bottom: 12px;
     background: rgba(0, 120, 212, 0.1);
     color: #0078D4;
 }
@@ -140,6 +185,10 @@
     color: #1a1a1a;
 }
 
+.whats-new-card .card-date {
+    margin-bottom: 10px;
+}
+
 .whats-new-card h3 a {
     color: inherit;
     text-decoration: none;
@@ -155,7 +204,7 @@
 
 .whats-new-card .card-footer {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     padding-top: 20px;
     border-top: 1px solid rgba(0, 0, 0, 0.05);
@@ -188,11 +237,13 @@
     color: #0078D4;
     font-size: 1.45rem;
     line-height: 1;
-    transition: transform 0.2s ease, color 0.2s ease;
+    opacity: 0.55;
+    transition: transform 0.2s ease, color 0.2s ease, opacity 0.2s ease;
 }
 
 .card-platform-links a:hover {
     color: #005a9e;
+    opacity: 1;
     transform: translateY(-2px);
 }
 
@@ -355,7 +406,7 @@
 /* Responsive Adjustments */
 @media (max-width: 768px) {
     .whats-new-section {
-        padding: 42px 16px 48px;
+        padding: 42px 16px 24px;
     }
 
     .whats-new-header h2 {
@@ -364,6 +415,51 @@
 
     .whats-new-grid {
         grid-template-columns: 1fr;
+    }
+
+    .whats-new-card.has-thumbnail {
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+        min-width: 0;
+        height: auto;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .whats-new-card-content {
+        width: 100%;
+        min-width: 0;
+        height: auto;
+        box-sizing: border-box;
+        align-items: center;
+        text-align: center;
+    }
+
+    .whats-new-card .card-date {
+        justify-content: center;
+    }
+
+    .whats-new-card p {
+        text-align: center;
+    }
+
+    .whats-new-card .card-footer {
+        display: none;
+    }
+
+    .whats-new-thumbnail-wrap {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1;
+        flex: 0 0 auto;
+        margin: 0 0 18px;
+        box-sizing: border-box;
+    }
+
+    .whats-new-thumbnail-wrap .whats-new-thumbnail {
+        width: 100%;
+        height: 100%;
     }
 
     .upcoming-sermon-section {

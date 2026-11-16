@@ -476,6 +476,59 @@ footer .footer-copyright {
     margin-top: 4px;
 }
 
+@media (max-width: 600px) {
+    footer {
+        width: 100%;
+        padding: 30px 20px 24px;
+        gap: 18px;
+        box-sizing: border-box;
+    }
+
+    footer .footer-content-logo {
+        margin-bottom: 0;
+    }
+
+    footer img {
+        width: 78px;
+    }
+
+    footer .footer-links {
+        width: 100%;
+        gap: 4px 14px;
+        font-size: 14px;
+    }
+
+    footer .footer-links a {
+        display: inline-block;
+        padding: 7px 2px;
+    }
+
+    footer .footer-office-hours,
+    footer .footer-contact {
+        max-width: 36ch;
+        font-size: 13px;
+        line-height: 1.65;
+        overflow-wrap: anywhere;
+    }
+
+    footer .footer-contact {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2px;
+        font-size: 12.5px;
+    }
+
+    footer .footer-contact span {
+        max-width: 100%;
+    }
+
+    footer .footer-copyright {
+        margin-top: 0;
+    }
+}
+
 .heading-1 {
     font-size: 48px;
 }

@@ -111,10 +111,34 @@
 @media (max-width: 639px) {
     #footer-cta-a {
         padding: 60px 16px;
+        display: flex;
+        justify-content: center;
+        box-sizing: border-box;
     }
 
     .form-container {
+        width: 100%;
+        max-width: 480px;
         padding: 32px 20px;
+        box-sizing: border-box;
+    }
+
+    #footer-cta-a .neumorphic-form {
+        width: 100%;
+        max-width: 360px;
+        margin: 0 auto;
+        align-items: center;
+    }
+
+    #footer-cta-a .neumorphic-form input,
+    #footer-cta-a .neumorphic-form button {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    #footer-cta-a .neumorphic-form button {
+        min-height: 52px;
     }
 
     #footer-cta-a h1,

@@ -217,16 +217,60 @@
 }
 
 @media (max-width: 768px) {
-    .splash-hero--home h1 {
-        font-size: 2.5rem;
+    .splash-hero--home {
+        height: 100vh;
+        height: 100svh;
+        min-height: 560px;
+        margin-top: 0;
+        padding: 72px 16px 32px;
+        box-sizing: border-box;
+        background-position: center;
     }
 
-    .splash-hero--home h2 {
-        font-size: 1.5rem;
+    .splash-hero--home .hero-background {
+        background-position: center;
+    }
+
+    .splash-hero--home::before {
+        background: linear-gradient(
+            180deg,
+            rgba(3, 25, 48, 0.38) 0%,
+            rgba(3, 25, 48, 0.46) 48%,
+            rgba(3, 25, 48, 0.68) 100%
+        );
+    }
+
+    .splash-hero--home .hero-content {
+        width: 100%;
+        max-width: 560px;
+        padding: 16px 8px;
+        box-sizing: border-box;
     }
 
     .hero-logo-img {
-        max-width: 150px;
+        width: min(132px, 38vw);
+        max-width: none;
+        margin-bottom: 18px;
+    }
+
+    .splash-hero--home h1 {
+        max-width: 100%;
+        margin: 0 auto 12px;
+        font-size: clamp(2rem, 8.5vw, 2.5rem);
+        line-height: 1.1;
+        text-wrap: balance;
+    }
+
+    .splash-hero--home h2 {
+        margin-bottom: 8px;
+        font-size: clamp(1.25rem, 5vw, 1.5rem);
+        line-height: 1.25;
+    }
+
+    .splash-hero--home p {
+        margin: 0 auto;
+        font-size: clamp(1rem, 4vw, 1.2rem);
+        line-height: 1.45;
     }
 
     .welcome-sunday-feature {

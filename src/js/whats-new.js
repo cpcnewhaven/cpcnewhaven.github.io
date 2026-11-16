@@ -97,10 +97,10 @@ class WhatsNewManager {
             card.innerHTML = `
                 <div class="whats-new-card-content">
                     <div class="card-tag">${item.tag}</div>
+                    <span class="card-date"><i class="far fa-calendar-alt"></i> ${this.formatDate(item.date)}</span>
                     <h3><a href="${item.link}" target="_blank" rel="noopener">${item.title}</a></h3>
                     <p>${item.description}</p>
                     <div class="card-footer">
-                        <span class="card-date"><i class="far fa-calendar-alt"></i> ${this.formatDate(item.date)}</span>
                         <div class="card-platform-links" aria-label="Listen on">
                             ${item.spotifyUrl ? `<a href="${item.spotifyUrl}" target="_blank" rel="noopener" aria-label="Listen on Spotify" title="Spotify"><i class="fab fa-spotify"></i></a>` : ''}
                             ${item.youtubeUrl ? `<a href="${item.youtubeUrl}" target="_blank" rel="noopener" aria-label="Watch on YouTube" title="YouTube"><i class="fab fa-youtube"></i></a>` : ''}
@@ -111,14 +111,29 @@ class WhatsNewManager {
             `;
 
             if (item.thumbnailUrl) {
+                const thumbnailWrap = document.createElement('div');
+                thumbnailWrap.className = 'whats-new-thumbnail-wrap';
                 const thumbnail = document.createElement('img');
                 thumbnail.className = 'whats-new-thumbnail';
                 thumbnail.src = item.thumbnailUrl;
                 thumbnail.alt = `${item.title} thumbnail`;
                 thumbnail.loading = 'lazy';
                 thumbnail.decoding = 'async';
-                thumbnail.addEventListener('error', () => thumbnail.remove(), { once: true });
-                card.prepend(thumbnail);
+                thumbnail.addEventListener('error', () => thumbnailWrap.remove(), { once: true });
+                thumbnailWrap.appendChild(thumbnail);
+
+                if (item.spotifyUrl) {
+                    const playButton = document.createElement('a');
+                    playButton.className = 'whats-new-play-button';
+                    playButton.href = item.spotifyUrl;
+                    playButton.target = '_blank';
+                    playButton.rel = 'noopener';
+                    playButton.setAttribute('aria-label', `Listen to ${item.title} on Spotify`);
+                    playButton.innerHTML = '<i class="fas fa-play" aria-hidden="true"></i>';
+                    thumbnailWrap.appendChild(playButton);
+                }
+
+                card.prepend(thumbnailWrap);
             }
 
             grid.appendChild(card);
