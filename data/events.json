@@ -1,31 +1,7 @@
 {
-  "generatedAt": "2026-11-15T12:43:28.140172-05:00",
+  "generatedAt": "2026-11-16T16:02:45.981672-05:00",
   "source": "CPC Google Calendar",
   "events": [
-    {
-      "date": "2026-11-15",
-      "title": "Fellowship Lunch",
-      "description": "",
-      "allDay": false
-    },
-    {
-      "date": "2026-11-15",
-      "title": "Membership Joining",
-      "description": "",
-      "allDay": true
-    },
-    {
-      "date": "2026-11-15",
-      "title": "Sunday School Adults and Children",
-      "description": "",
-      "allDay": false
-    },
-    {
-      "date": "2026-11-15",
-      "title": "Worship Service",
-      "description": "",
-      "allDay": false
-    },
     {
       "date": "2026-11-16",
       "title": "Shepherd Meeting",
@@ -71,6 +47,30 @@
     {
       "date": "2026-11-29",
       "title": "Worship Service",
+      "description": "",
+      "allDay": false
+    },
+    {
+      "date": "2026-11-30",
+      "title": "SLB Meeting",
+      "description": "",
+      "allDay": false
+    },
+    {
+      "date": "2026-12-02",
+      "title": "Pastor Jerry Drop-in Office Hours",
+      "description": "",
+      "allDay": false
+    },
+    {
+      "date": "2026-12-04",
+      "title": "Pastor Craig Drop-in Office Hours",
+      "description": "",
+      "allDay": false
+    },
+    {
+      "date": "2026-12-05",
+      "title": "Fall Work Day",
       "description": "",
       "allDay": false
     }
