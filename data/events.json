@@ -1,13 +1,7 @@
 {
-  "generatedAt": "2026-11-16T16:02:45.981672-05:00",
+  "generatedAt": "2026-11-17T14:52:02.663449-05:00",
   "source": "CPC Google Calendar",
   "events": [
-    {
-      "date": "2026-11-16",
-      "title": "Shepherd Meeting",
-      "description": "",
-      "allDay": false
-    },
     {
       "date": "2026-11-18",
       "title": "Pastor Jerry Drop-in Office Hours",
@@ -71,6 +65,12 @@
     {
       "date": "2026-12-05",
       "title": "Fall Work Day",
+      "description": "",
+      "allDay": false
+    },
+    {
+      "date": "2026-12-06",
+      "title": "Fellowship Lunch",
       "description": "",
       "allDay": false
     }
