@@ -112,3 +112,18 @@
 @media print {
   .option { break-inside: avoid; }
 }
+
+.serif-lockup {
+  display: block;
+  width: 100%;
+  max-width: 19rem;
+  overflow: visible;
+  fill: currentColor;
+  font: 700 23px "Source Serif 4", Georgia, serif;
+}
+
+.serif-lockup .lockup-city {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: .09em;
+}
