@@ -1,0 +1,11 @@
+{
+  "colors": {
+    "cpcBlue": "#003C6D",
+    "white": "#FFFFFF"
+  },
+  "typography": {
+    "sansSerif": "Poppins",
+    "serif": "Source Serif 4"
+  },
+  "logoStudy": "https://cpcnewhaven.org/brand-reference/logo-study/"
+}

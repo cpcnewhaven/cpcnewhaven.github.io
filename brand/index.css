@@ -1,0 +1,95 @@
+:root {
+  color-scheme: light;
+  font-family: system-ui, sans-serif;
+  color: #37352f;
+  background: #fff;
+}
+
+main {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: clamp(48px, 11vw, 112px) 24px 48px;
+}
+
+h1 {
+  margin: 0 0 24px;
+  font-size: clamp(2rem, 6vw, 2.5rem);
+  line-height: 1.2;
+  letter-spacing: -.035em;
+}
+
+ul {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+li {
+  padding: .35rem 0;
+}
+
+a {
+  color: inherit;
+  text-underline-offset: .2em;
+  text-decoration-color: #96928b;
+}
+
+a:hover {
+  text-decoration-color: currentColor;
+}
+
+a:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
+}
+
+.brand-page {
+  --cpc-blue: #003c6d;
+}
+
+.brand-page h1,
+.brand-page a {
+  color: var(--cpc-blue);
+}
+
+.brand-page .back {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.brand-page section {
+  margin-block: 28px;
+}
+
+.brand-page h2 {
+  font-size: 1.125rem;
+  margin: 0 0 8px;
+}
+
+.brand-page section p {
+  margin: 0 0 8px;
+}
+
+.palette {
+  list-style: none;
+  padding: 0;
+}
+
+.palette li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.swatch {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #d4dfea;
+  border-radius: 3px;
+}
+
+.logo-preview {
+  display: block;
+  width: 120px;
+  height: auto;
+  margin-bottom: 12px;
+}
