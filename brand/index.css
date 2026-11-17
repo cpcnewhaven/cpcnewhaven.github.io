@@ -93,3 +93,97 @@ a:focus-visible {
   height: auto;
   margin-bottom: 12px;
 }
+
+.logo-draft {
+  margin: 16px 0;
+}
+
+.logo-draft img {
+  display: block;
+  width: min(100%, 360px);
+  height: auto;
+  border: 1px solid #d4dfea;
+}
+
+.logo-draft figcaption {
+  margin-top: 6px;
+  font-size: .875rem;
+}
+
+.brand-page {
+  margin: 0;
+  background: #f7f9fc;
+  color: #002244;
+  line-height: 1.6;
+}
+
+.brand-page .brand-wrap {
+  box-sizing: border-box;
+  width: min(100% - 48px, 960px);
+  max-width: none;
+  margin-inline: auto;
+}
+
+.brand-mast {
+  background: #fff;
+  border-bottom: 1px solid #d4dfea;
+  padding-block: 12px;
+  font-size: .9rem;
+}
+
+.brand-mast .back {
+  margin: 0;
+}
+
+.brand-page main {
+  padding: 0 0 48px;
+}
+
+.brand-intro {
+  padding-block: clamp(28px, 6vw, 64px) 28px;
+}
+
+.brand-label {
+  margin: 0 0 8px;
+  color: #455b71;
+  font-size: .875rem;
+}
+
+.brand-intro h1 {
+  font-family: Poppins, system-ui, sans-serif;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.brand-lede {
+  margin: 0 0 20px;
+}
+
+.brand-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.brand-links a {
+  display: inline-block;
+  background: #fff;
+  border: 1px solid #d4dfea;
+  border-radius: 6px;
+  padding: 7px 12px;
+  text-decoration: none;
+  font-size: .92rem;
+}
+
+.brand-links a:hover {
+  background: #e6f0ff;
+}
+
+.brand-page section {
+  margin-block: 0 16px;
+  padding: clamp(16px, 3vw, 28px);
+  background: #fff;
+  border: 1px solid #d4dfea;
+  border-radius: 8px;
+  scroll-margin-top: 16px;
+}
