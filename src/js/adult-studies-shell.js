@@ -240,10 +240,11 @@
     newsletter.innerHTML = `
       <div class="form-container">
         <h2 id="study-newsletter-title">Subscribe to our Newsletter</h2>
-        <p>Our weekly newsletter shares Sunday service information, highlights, upcoming events, and useful links.</p>
-        <form action="https://formspree.io/f/meojowwg" method="POST" class="neumorphic-form">
-          <input type="text" name="name" placeholder="Your name" required>
-          <input type="email" name="email" placeholder="Your email" required>
+        <p>Our Wednesday and Friday emails share Sunday service information, highlights, upcoming events, and useful links.</p>
+        <form action="https://formspree.io/f/xpwaqlwd" method="POST" class="neumorphic-form">
+          <input type="text" name="first_name" aria-label="First name (required)" autocomplete="given-name" pattern=".*\\S.*" placeholder="First name (required)" required>
+          <input type="text" name="last_name" aria-label="Last name (required)" autocomplete="family-name" pattern=".*\\S.*" placeholder="Last name (required)" required>
+          <input type="email" name="email" aria-label="Your email (required)" autocomplete="email" placeholder="Email (required)" required>
           <button type="submit">Subscribe to CPC New Haven</button>
         </form>
       </div>`;

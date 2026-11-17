@@ -88,7 +88,12 @@
     transition: all 0.2s ease;
 }
 
-.neumorphic-form button:hover {
+.neumorphic-form button:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
+.neumorphic-form button:hover:not(:disabled) {
     background: #2c5282;
     transform: translateY(-1px);
     box-shadow: 0 4px 12px rgba(43, 108, 176, 0.3);
@@ -97,14 +102,17 @@
 @media (min-width: 640px) {
     .neumorphic-form {
         flex-direction: row;
+        flex-wrap: wrap;
     }
 
     .neumorphic-form input {
-        flex: 1;
+        flex: 1 1 180px;
+        min-width: 0;
     }
 
     .neumorphic-form button {
         width: auto;
+        flex: 1 1 240px;
     }
 }
 
