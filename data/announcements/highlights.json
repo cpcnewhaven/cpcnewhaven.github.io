@@ -1,6 +1,18 @@
 {
   "announcements": [
     {
+      "id": "2026-095",
+      "title": "No Sunday School or Fellowship Lunch Next Week!",
+      "description": "There will be no Sunday School or Fellowship Lunch on Sunday, November 29. Join us for worship at 10:30am.",
+      "dateEntered": "2026-11-20",
+      "active": true,
+      "type": "announcement",
+      "category": "worship",
+      "tag": "Sunday",
+      "eventDate": "2026-11-29",
+      "expiresAt": "2026-11-29"
+    },
+    {
       "id": "2026-086",
       "title": "10:30am Worship This Sunday",
       "description": "Join us for worship this Sunday, November 8 at 10:30am. <a class=\"highlight-cta\" href=\"https://files.cpcnewhaven.org/bulletins/latest.pdf\" target=\"_blank\" rel=\"noopener\">Large Print Bulletin</a>.",
@@ -59,9 +71,9 @@
     },
     {
       "id": "2026-087",
-      "title": "Thanksgiving Fellowship Meals | Sign Up Here as Host or Guest",
-      "description": "<a class=\"highlight-cta\" href=\"https://us.list-manage.com/P_cBw6be6CY?e=9da175cc40&amp;c2id=6df9b900f2d1d0ec64fac5dfc299411c\" target=\"_blank\" rel=\"noopener\">Sign Up Here as Host or Guest</a><br/>Staying local for Thanksgiving? Come celebrate with your brothers and sisters in Christ! As we’ve done in the past, we’re coordinating hosts &amp; guests to have a Thanksgiving meal together on November 26. If you're interested, please email <a href=\"mailto:admin@cpcnewhaven.org\">admin@cpcnewhaven.org</a> or fill out the form.",
-      "dateEntered": "2026-11-06",
+      "title": "LAST CALL! | Thanksgiving Fellowship Meals | Sign Up Here as Host or Guest",
+      "description": "<a class=\"highlight-cta\" href=\"https://us.list-manage.com/120r0jFRWa0?e=9da175cc40&amp;c2id=6df9b900f2d1d0ec64fac5dfc299411c\" target=\"_blank\" rel=\"noopener\">Sign Up Here as Host or Guest</a><br/>Staying local for Thanksgiving? Come celebrate with your brothers and sisters in Christ! As we’ve done in the past, we’re coordinating hosts &amp; guests to have a Thanksgiving meal together on November 26. If you're interested, please email <a href=\"mailto:admin@cpcnewhaven.org\">admin@cpcnewhaven.org</a> or fill out the form.",
+      "dateEntered": "2026-11-20",
       "active": true,
       "type": "event",
       "category": "event",
@@ -73,7 +85,7 @@
       "id": "2026-090",
       "title": "Hill Christmas Store | Donate by Sunday, December 6",
       "description": "Please join us in our 13th annual Hill Christmas Store! We will be sharing Christmas joy with some wonderful families from New Haven’s Hill community. Purchase and leave an unwrapped gift valued at $20 or more for a child in the designated category (e.g., “Girl, 9-14”). In the spirit of empowerment, your gift will in turn be bought at a very reduced price by families in the Hill at the store. Please reach out to <a href=\"mailto:kaijessee@gmail.com\">Kaitlyn Jessee (kaijessee@gmail.com)</a> with any questions.",
-      "dateEntered": "2026-10-30",
+      "dateEntered": "2026-11-20",
       "active": true,
       "type": "volunteer",
       "category": "mercy",
@@ -83,8 +95,8 @@
     {
       "id": "2026-093",
       "title": "CPC Christmas Service | A Light in the Darkness: The Christmas Story of Hope | Saturday, December 12 @ 5pm",
-      "description": "Join us for a lessons-and-carols style service with joyful congregational carols, a Christmas choir, and Christmas story reading for children. Stay afterward for snacks and a take-home craft for all children (and adults too!). Kids are encouraged to wear Christmas attire/pajamas. Please invite neighbors and friends as well, all are welcome! We would love your help providing food and refreshments to enjoy after the service. If you are interested in bringing something you’d love to share, <a class=\"highlight-cta\" href=\"https://us.list-manage.com/P_cBw6be6CY?e=9da175cc40&amp;c2id=6df9b900f2d1d0ec64fac5dfc299411c\" target=\"_blank\" rel=\"noopener\">sign up here</a> to fill your slot.",
-      "dateEntered": "2026-11-06",
+      "description": "Join us for a lessons-and-carols style service with joyful congregational carols, a Christmas choir, and Christmas story reading for children. Stay afterward for snacks and a take-home craft for all children (and adults too!). Kids are encouraged to wear Christmas attire/pajamas. Please invite neighbors and friends as well, all are welcome! We would love your help providing food and refreshments to enjoy after the service. If you are interested in bringing something you’d love to share, <a class=\"highlight-cta\" href=\"https://us.list-manage.com/ix2BrplM5PO?e=9da175cc40&amp;c2id=6df9b900f2d1d0ec64fac5dfc299411c\" target=\"_blank\" rel=\"noopener\">sign up here</a> to fill your slot.",
+      "dateEntered": "2026-11-20",
       "active": true,
       "type": "event",
       "category": "event",
@@ -97,7 +109,7 @@
       "id": "2026-094",
       "title": "Fall Work Day & Decor Setup | Saturday, December 5, from 9am-12pm | All Hands on Deck!",
       "description": "Calling all volunteer elves to decorate our church with a festive touch and to start the holiday season off with a winter wonderland of goodness and kindness (elf costume optional). Join together with your brothers and sisters in Christ to care for our facilities and grounds. This year will also include bagels, coffee and OJ that will be provided in the morning and hot cocoa and Christmas cookies to share afterward. Work activities will include raking leaves, light repairs, Christmas decorating, and more. All are welcome!",
-      "dateEntered": "2026-11-06",
+      "dateEntered": "2026-11-20",
       "active": true,
       "type": "event",
       "category": "event",
