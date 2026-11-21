@@ -1,13 +1,7 @@
 {
-  "generatedAt": "2026-11-20T14:06:38.471180-05:00",
+  "generatedAt": "2026-11-21T12:58:09.691209-05:00",
   "source": "CPC Google Calendar",
   "events": [
-    {
-      "date": "2026-11-20",
-      "title": "Pastor Craig Drop-in Office Hours",
-      "description": "",
-      "allDay": false
-    },
     {
       "date": "2026-11-22",
       "title": "Fellowship Lunch",
@@ -71,6 +65,12 @@
     {
       "date": "2026-12-06",
       "title": "Sunday School Adults and Children",
+      "description": "",
+      "allDay": false
+    },
+    {
+      "date": "2026-12-06",
+      "title": "Worship Service",
       "description": "",
       "allDay": false
     }
