@@ -27,20 +27,20 @@
   <meta property="og:site_name" content="Christ Presbyterian Church New Haven" />
   <meta property="og:title" content="CPC New Haven Church | Sundays 10:30am" />
   <meta property="og:description" content="A church committed to serving and reaching Greater New Haven. Join us for Sunday worship at 10:30am at 135 Whitney Ave, New Haven, CT." />
-  <meta property="og:image" content="https://storage.googleapis.com/cpc-public-website/featuredIMGs/homepage/Homepage%20-%20FEATURED%20IMG-NewHaven.jpg" />
+  <meta property="og:image" content="https://storage.googleapis.com/cpc-public-website/web-assets/heros/2026%20-%20December%20Hero/cpc-hero-memberjoin.jpg" />
   <meta property="og:url" content="https://cpcnewhaven.org" />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="CPC New Haven Church | Sundays 10:30am" />
   <meta name="twitter:description" content="A church committed to serving and reaching Greater New Haven. Join us for Sunday worship at 10:30am at 135 Whitney Ave, New Haven, CT." />
-  <meta name="twitter:image" content="https://storage.googleapis.com/cpc-public-website/featuredIMGs/homepage/Homepage%20-%20FEATURED%20IMG-NewHaven.jpg" />
+  <meta name="twitter:image" content="https://storage.googleapis.com/cpc-public-website/web-assets/heros/2026%20-%20December%20Hero/cpc-hero-memberjoin.jpg" />
   <link rel="preconnect" href="https://storage.googleapis.com" crossorigin />
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
   <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
   <link rel="preload" as="image"
-    href="https://storage.googleapis.com/cpc-public-website/featuredIMGs/homepage/Homepage%20-%20FEATURED%20IMG-NewHaven.jpg"
+    href="https://storage.googleapis.com/cpc-public-website/web-assets/heros/2026%20-%20December%20Hero/cpc-hero-blank%20xmas%20bg1.jpg"
     fetchpriority="high" />
   <link rel="stylesheet" href="./src/css/global-body.css?v=20261115-community-dropdown-1" />
 
@@ -49,7 +49,7 @@
   <link rel="stylesheet" href="./src/css/highlights.css?v=20261030-3" />
   <link rel="stylesheet" href="./src/css/whats-new.css?v=20261115-2" />
   <link rel="stylesheet" href="./src/css/beyond-widget.css?v=20260924-1" />
-  <link rel="stylesheet" href="./src/css/index-page.css?v=20261030-hill-video" />
+  <link rel="stylesheet" href="./src/css/index-page.css?v=20261122-christmas-hero" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
   <link rel="icon"
     href="https://storage.googleapis.com/cpc-public-website/web-assets/CPC%20-%20FAVICON%20-%20FALL%202024.png"
@@ -125,10 +125,11 @@
 
   <div x-data="{ 
     images: [
-        'https://storage.googleapis.com/cpc-public-website/featuredIMGs/homepage/Homepage%20-%20FEATURED%20IMG-NewHaven.jpg',
-        'https://storage.googleapis.com/cpc-public-website/featuredIMGs/homepage/Homepage%20-%20FEATURED%20IMG-Sermon.jpg',
-        'https://storage.googleapis.com/cpc-public-website/featuredIMGs/homepage/Homepage%20-%20FEATURED%20IMG-congregation.jpg',
-        'https://storage.googleapis.com/cpc-public-website/2026/MISC%20WEBSITE%20GRAPHICS/MENBIKE.jpg'
+        'https://storage.googleapis.com/cpc-public-website/web-assets/heros/2026%20-%20December%20Hero/cpc-hero-blank%20xmas%20bg1.jpg',
+        'https://storage.googleapis.com/cpc-public-website/web-assets/heros/2026%20-%20December%20Hero/cpc-hero-bapts.jpg',
+        'https://storage.googleapis.com/cpc-public-website/web-assets/heros/2026%20-%20December%20Hero/cpc-hero-lamp.jpg',
+        'https://storage.googleapis.com/cpc-public-website/web-assets/heros/2026%20-%20December%20Hero/cpc-hero-memberjoin.jpg',
+        'https://storage.googleapis.com/cpc-public-website/web-assets/heros/2026%20-%20December%20Hero/cpc-hero-blank%20xmas%20bg2.jpg'
     ],
     currentIndex: 0
 }" x-init="
@@ -137,22 +138,21 @@
     const preload = (url) => { const img = new Image(); img.decoding = 'async'; img.src = url; };
     setTimeout(() => {
       images.forEach((u, i) => { if (i !== currentIndex) preload(u); });
-      // Randomize after preload so the initial preload link in <head> is effective
-      currentIndex = Math.floor(Math.random() * images.length);
     }, 500);
 
     setInterval(() => { currentIndex = (currentIndex + 1) % images.length }, 5000);
   })()
-" class="splash-hero--home" style="background-image: url('https://storage.googleapis.com/cpc-public-website/featuredIMGs/homepage/Homepage%20-%20FEATURED%20IMG-NewHaven.jpg');">
+" class="splash-hero--home" style="background-image: url('https://storage.googleapis.com/cpc-public-website/web-assets/heros/2026%20-%20December%20Hero/cpc-hero-blank%20xmas%20bg1.jpg');">
   <template x-for="(image, index) in images" :key="image">
-    <div class="hero-background" x-show="index === currentIndex" x-transition:enter="hero-fade-enter" x-transition:enter-start="hero-fade-enter-start" x-transition:enter-end="hero-fade-enter-end" x-transition:leave="hero-fade-leave" x-transition:leave-start="hero-fade-leave-start" x-transition:leave-end="hero-fade-leave-end" :style="'background-image: url(' + image + ')'" aria-hidden="true"></div>
+    <div class="hero-background" :class="{ 'hero-background--christmas': index === 0 || index === 4 }" x-show="index === currentIndex" x-transition:enter="hero-fade-enter" x-transition:enter-start="hero-fade-enter-start" x-transition:enter-end="hero-fade-enter-end" x-transition:leave="hero-fade-leave" x-transition:leave-start="hero-fade-leave-start" x-transition:leave-end="hero-fade-leave-end" :style="'background-image: url(' + image + ')'" aria-hidden="true"></div>
   </template>
   <div class="hero-content">
       <img class="hero-logo-img" src="assets/web-assets/cpcLOGO.png" alt="CPC Logo" decoding="async"
         fetchpriority="high" />
+      <p class="hero-season-label">✦ Christmas at CPC ✦</p>
       <h1>Come Worship with Us</h1>
       <h2>Sundays - 10:30am</h2>
-      <p>135 Whitney Ave - New Haven,CT</p>
+      <p>135 Whitney Ave · New Haven, CT</p>
     </div>
   </div>
 
