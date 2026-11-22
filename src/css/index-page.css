@@ -70,21 +70,6 @@
     margin-bottom: 20px;
 }
 
-.splash-hero--home .hero-season-label {
-    display: table;
-    margin: 0 auto 22px;
-    padding: 9px 17px;
-    border: 1px solid rgba(240, 208, 148, 0.85);
-    border-radius: 2px;
-    background: rgba(5, 43, 35, 0.76);
-    color: #fff4dc;
-    font-size: 0.82rem;
-    font-weight: 700;
-    letter-spacing: 0.16em;
-    line-height: 1.3;
-    text-transform: uppercase;
-}
-
 .splash-hero--home h1 {
     font-size: 3.5rem;
     margin-bottom: 15px;
@@ -271,11 +256,6 @@
         width: min(132px, 38vw);
         max-width: none;
         margin-bottom: 18px;
-    }
-
-    .splash-hero--home .hero-season-label {
-        margin-bottom: 18px;
-        font-size: 0.72rem;
     }
 
     .splash-hero--home h1 {
