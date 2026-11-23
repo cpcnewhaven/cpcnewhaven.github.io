@@ -1,0 +1,777 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CPC New Haven · Brand Kit One-Pager</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap">
+  <style>
+    :root {
+      --navy: #002244;
+      --blue: #003c6d;
+      --pale: #e6f0ff;
+      --gold: #d4a359;
+      --line: #cbd5e1;
+      --line-light: #e2e8f0;
+      --text: #0f172a;
+      --muted: #475569;
+      --font-sans: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-serif: 'Source Serif 4', Georgia, serif;
+    }
+
+    * { box-sizing: border-box; }
+    
+    @page {
+      size: letter portrait;
+      margin: 0.35in;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: #f1f5f9;
+      color: var(--text);
+      font-family: var(--font-sans);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .toolbar {
+      max-width: 8.5in;
+      margin: 16px auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 16px;
+    }
+
+    .toolbar a {
+      color: var(--blue);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+
+    .toolbar button {
+      background: var(--blue);
+      color: #fff;
+      border: 0;
+      padding: 8px 16px;
+      border-radius: 4px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      cursor: pointer;
+    }
+
+    .sheet {
+      width: 8.5in;
+      height: 11in;
+      margin: 0 auto 24px;
+      padding: 0.45in 0.45in 0.35in;
+      background: #ffffff;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-sizing: border-box;
+      overflow: hidden;
+    }
+
+    /* HEADER */
+    .header {
+      border-bottom: 2px solid var(--navy);
+      padding-bottom: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+
+    .header-left .org {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin: 0 0 2px;
+    }
+
+    .header-left h1 {
+      font-family: var(--font-serif);
+      font-size: 1.85rem;
+      font-weight: 700;
+      line-height: 1.1;
+      margin: 0;
+      color: var(--navy);
+    }
+
+    .header-left .tagline {
+      font-size: 0.78rem;
+      color: var(--muted);
+      margin: 2px 0 0;
+    }
+
+    .header-right {
+      text-align: right;
+      font-size: 0.72rem;
+      color: var(--muted);
+      line-height: 1.35;
+    }
+
+    .header-right .badge {
+      display: inline-block;
+      background: var(--pale);
+      color: var(--blue);
+      font-weight: 700;
+      font-size: 0.68rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 3px 8px;
+      border-radius: 3px;
+      margin-bottom: 3px;
+    }
+
+    /* SECTION TITLES */
+    .sec-label {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--navy);
+      border-bottom: 1px solid var(--line-light);
+      padding-bottom: 3px;
+      margin: 10px 0 6px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .sec-label span {
+      font-weight: 400;
+      color: var(--muted);
+      letter-spacing: normal;
+      text-transform: none;
+      font-size: 0.66rem;
+    }
+
+    /* 01: LOGO MARKS */
+    .logo-row {
+      display: grid;
+      grid-template-columns: 1.3fr 1fr 1fr 1.1fr;
+      gap: 8px;
+    }
+
+    .logo-box {
+      border: 1px solid var(--line-light);
+      border-radius: 4px;
+      padding: 8px;
+      background: #fafafa;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .logo-box.dark {
+      background: var(--navy);
+      color: #fff;
+    }
+
+    .logo-stage {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 70px;
+    }
+
+    .logo-desc {
+      font-size: 0.65rem;
+      line-height: 1.25;
+      color: var(--muted);
+      margin-top: 4px;
+      border-top: 1px solid rgba(0,0,0,0.06);
+      padding-top: 3px;
+    }
+
+    .logo-box.dark .logo-desc {
+      color: #94a3b8;
+      border-top-color: rgba(255,255,255,0.12);
+    }
+
+    .logo-desc strong {
+      display: block;
+      color: var(--text);
+    }
+
+    .logo-box.dark .logo-desc strong {
+      color: #fff;
+    }
+
+    /* SVG Lockup styles */
+    .lockup-h {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--navy);
+    }
+    .lockup-h svg { width: 44px; height: 44px; flex-shrink: 0; }
+    .lockup-h .txt {
+      font-family: var(--font-serif);
+      font-size: 0.8rem;
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: -0.01em;
+    }
+    .lockup-h .sub {
+      font-family: var(--font-sans);
+      font-size: 0.58rem;
+      font-weight: 600;
+      color: var(--blue);
+      letter-spacing: 0.04em;
+    }
+
+    .lockup-modern {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      color: var(--blue);
+    }
+    .lockup-modern svg { width: 42px; height: 42px; flex-shrink: 0; }
+    .lockup-modern .txt {
+      font-family: var(--font-sans);
+      font-size: 0.72rem;
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: -0.01em;
+      text-transform: uppercase;
+    }
+    .lockup-modern .sub {
+      font-size: 0.55rem;
+      font-style: italic;
+      color: var(--muted);
+      text-transform: none;
+    }
+
+    .lockup-seal-preview svg { width: 56px; height: 56px; color: var(--navy); }
+
+    .lockup-dark {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      color: #ffffff;
+    }
+    .lockup-dark svg { width: 42px; height: 42px; }
+    .lockup-dark .txt {
+      font-family: var(--font-serif);
+      font-size: 0.78rem;
+      font-weight: 700;
+      line-height: 1.1;
+    }
+    .lockup-dark .sub {
+      font-family: var(--font-sans);
+      font-size: 0.56rem;
+      color: #93c5fd;
+    }
+
+    /* 02: COLOR PALETTE */
+    .palette-row {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 8px;
+    }
+
+    .swatch-card {
+      border: 1px solid var(--line-light);
+      border-radius: 4px;
+      overflow: hidden;
+      background: #ffffff;
+    }
+
+    .swatch-color {
+      height: 48px;
+      position: relative;
+    }
+
+    .swatch-card.white-card .swatch-color {
+      border-bottom: 1px solid var(--line-light);
+    }
+
+    .swatch-info {
+      padding: 6px 7px;
+      font-size: 0.65rem;
+      line-height: 1.35;
+    }
+
+    .swatch-name {
+      font-size: 0.74rem;
+      font-weight: 700;
+      margin: 0 0 2px;
+      color: var(--navy);
+    }
+
+    .color-spec {
+      display: flex;
+      justify-content: space-between;
+      margin: 1px 0;
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 0.62rem;
+    }
+
+    .color-spec span.lbl {
+      color: var(--muted);
+      font-family: var(--font-sans);
+      font-size: 0.6rem;
+    }
+
+    .swatch-role {
+      font-size: 0.58rem;
+      color: var(--muted);
+      margin-top: 3px;
+      padding-top: 3px;
+      border-top: 1px solid var(--line-light);
+      line-height: 1.2;
+    }
+
+    /* 03: TYPOGRAPHY SYSTEM */
+    .type-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .type-specimen {
+      border: 1px solid var(--line-light);
+      border-radius: 4px;
+      padding: 8px 10px;
+      background: #fafafa;
+    }
+
+    .type-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 4px;
+      border-bottom: 1px solid var(--line-light);
+      padding-bottom: 4px;
+    }
+
+    .type-name {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--navy);
+    }
+
+    .type-badge {
+      font-size: 0.6rem;
+      font-weight: 600;
+      color: var(--blue);
+      background: var(--pale);
+      padding: 2px 6px;
+      border-radius: 3px;
+    }
+
+    .type-sample-serif {
+      font-family: var(--font-serif);
+      font-size: 1.15rem;
+      line-height: 1.15;
+      margin: 3px 0;
+      color: var(--navy);
+    }
+
+    .type-sample-sans {
+      font-family: var(--font-sans);
+      font-size: 0.98rem;
+      line-height: 1.2;
+      margin: 3px 0;
+      color: var(--navy);
+    }
+
+    .type-weights {
+      font-size: 0.62rem;
+      color: var(--muted);
+      margin-top: 3px;
+    }
+
+    .type-weights strong {
+      color: var(--text);
+    }
+
+    .type-roles {
+      font-size: 0.62rem;
+      line-height: 1.3;
+      color: var(--muted);
+      margin-top: 3px;
+    }
+
+    /* 04: PRODUCTION & PRINT SPECIFICATIONS */
+    .specs-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1.2fr;
+      gap: 8px;
+    }
+
+    .spec-box {
+      border: 1px solid var(--line-light);
+      border-radius: 4px;
+      padding: 7px 9px;
+      background: #fafafa;
+    }
+
+    .spec-title {
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin: 0 0 3px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .spec-list {
+      margin: 0;
+      padding-left: 12px;
+      font-size: 0.62rem;
+      line-height: 1.4;
+      color: #334155;
+    }
+
+    .spec-list li strong {
+      color: var(--navy);
+    }
+
+    /* FOOTER */
+    .footer {
+      border-top: 1px solid var(--line);
+      padding-top: 6px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.66rem;
+      color: var(--muted);
+    }
+
+    .footer a {
+      color: var(--blue);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    @media print {
+      body { background: #ffffff; }
+      .toolbar { display: none !important; }
+      .sheet {
+        box-shadow: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+      }
+      * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="toolbar">
+  <a href="/brand-kit/">← Back to Web Brand Kit</a>
+  <button onclick="window.print()">Print / Save as One-Pager PDF</button>
+</div>
+
+<!-- SVG Vector Definitions -->
+<svg style="display:none;" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Heritage Lancet Arch Window -->
+    <g id="win-heritage">
+      <path d="M 18 84 L 18 38 C 18 20, 36 8, 50 4 C 64 8, 82 20, 82 38 L 82 84 Z" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M 24 84 L 24 45 C 24 33, 34 26, 47 18 M 53 18 C 66 26, 76 33, 76 45 L 76 84" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+      <path d="M 50 5 L 50 84" fill="none" stroke="currentColor" stroke-width="4.5" stroke-linecap="round"/>
+      <path d="M 20 40 L 80 40" fill="none" stroke="currentColor" stroke-width="4.5" stroke-linecap="round"/>
+      <path d="M 20 62 L 80 62" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+      <path d="M 12 85 L 88 85" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
+    </g>
+
+    <!-- Modern Minimalist Window -->
+    <g id="win-modern">
+      <path d="M 22 82 V 38 C 22 22, 34 10, 50 6 C 66 10, 78 22, 78 38 V 82 Z" fill="none" stroke="currentColor" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M 50 7 V 82" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round"/>
+      <path d="M 23 42 H 77" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round"/>
+      <path d="M 23 64 H 77" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/>
+    </g>
+
+    <!-- Roundel Seal -->
+    <g id="seal-roundel">
+      <circle cx="60" cy="60" r="56" fill="none" stroke="currentColor" stroke-width="3"/>
+      <circle cx="60" cy="60" r="51" fill="none" stroke="currentColor" stroke-width="1.2" stroke-dasharray="2 3"/>
+      <circle cx="60" cy="60" r="41" fill="none" stroke="currentColor" stroke-width="2.2"/>
+      <g transform="translate(30, 22) scale(0.6)">
+        <path d="M 20 84 L 20 38 C 20 20, 36 8, 50 4 C 64 8, 80 20, 80 38 L 80 84 Z" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+        <path d="M 50 6 L 50 84" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+        <path d="M 21 40 L 79 40" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+        <path d="M 21 62 L 79 62" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+      </g>
+      <path id="seal-path-top" d="M 18,60 A 42,42 0 0,1 102,60" fill="none"/>
+      <path id="seal-path-bottom" d="M 104,60 A 44,44 0 0,1 16,60" fill="none"/>
+      <text font-family="'Poppins', sans-serif" font-size="8.2" font-weight="700" letter-spacing="1.8" fill="currentColor">
+        <textPath href="#seal-path-top" startOffset="50%" text-anchor="middle">CHRIST PRESBYTERIAN</textPath>
+      </text>
+      <text font-family="'Poppins', sans-serif" font-size="7.5" font-weight="600" letter-spacing="2.2" fill="currentColor">
+        <textPath href="#seal-path-bottom" startOffset="50%" text-anchor="middle">· NEW HAVEN ·</textPath>
+      </text>
+    </g>
+  </defs>
+</svg>
+
+<div class="sheet">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-left">
+      <p class="org">Christ Presbyterian Church · New Haven, CT</p>
+      <h1>Brand Kit &amp; Style Cheat Sheet</h1>
+      <p class="tagline">Official identity standards, typography hierarchy, multi-format color formulas, and asset specs.</p>
+    </div>
+    <div class="header-right">
+      <span class="badge">Designer One-Pager</span><br>
+      <strong>cpcnewhaven.org/brand-kit</strong><br>
+      135 Whitney Ave, New Haven, CT
+    </div>
+  </header>
+
+  <!-- 01: LOGO MARKS & LOCKUPS -->
+  <section>
+    <div class="sec-label">
+      01 / Primary Identity &amp; Vector Marks
+      <span>Lossless SVG vector window marks paired with Source Serif 4 &amp; Poppins</span>
+    </div>
+    <div class="logo-row">
+      <div class="logo-box">
+        <div class="logo-stage">
+          <div class="lockup-h">
+            <svg viewBox="0 0 100 100"><use href="#win-heritage"/></svg>
+            <div>
+              <div class="txt">Christ<br>Presbyterian<br>Church</div>
+              <div class="sub">NEW HAVEN</div>
+            </div>
+          </div>
+        </div>
+        <div class="logo-desc">
+          <strong>Heritage Serif (Primary)</strong>
+          Bulletins, formal print, letterhead, plaques
+        </div>
+      </div>
+
+      <div class="logo-box">
+        <div class="logo-stage">
+          <div class="lockup-modern">
+            <svg viewBox="0 0 100 100"><use href="#win-modern"/></svg>
+            <div>
+              <div class="txt">CPC<br>NEW HAVEN</div>
+              <div class="sub">Christ Presbyterian</div>
+            </div>
+          </div>
+        </div>
+        <div class="logo-desc">
+          <strong>Modern Sans (Signage / Web)</strong>
+          Outdoor A-frames, wayfinding, mobile UI
+        </div>
+      </div>
+
+      <div class="logo-box">
+        <div class="logo-stage lockup-seal-preview">
+          <svg viewBox="0 0 120 120"><use href="#seal-roundel"/></svg>
+        </div>
+        <div class="logo-desc">
+          <strong>Collegiate Seal</strong>
+          Certificates, academic badges, stamps
+        </div>
+      </div>
+
+      <div class="logo-box dark">
+        <div class="logo-stage">
+          <div class="lockup-dark">
+            <svg viewBox="0 0 100 100"><use href="#win-heritage"/></svg>
+            <div>
+              <div class="txt">Christ<br>Presbyterian<br>Church</div>
+              <div class="sub">NEW HAVEN</div>
+            </div>
+          </div>
+        </div>
+        <div class="logo-desc">
+          <strong>Dark Mode Knockout</strong>
+          Deep Navy / video slides, dark apparel
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 02: COLOR SYSTEM -->
+  <section>
+    <div class="sec-label">
+      02 / Color Palette · Multi-Format Formula Breakdown
+      <span>Formulas for Web (HEX/RGB) &amp; Commercial Print (CMYK / Pantone PMS Coated)</span>
+    </div>
+    <div class="palette-row">
+      <!-- CPC Blue -->
+      <div class="swatch-card">
+        <div class="swatch-color" style="background:#003C6D;"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">CPC Blue</div>
+          <div class="color-spec"><span class="lbl">HEX</span><strong>#003C6D</strong></div>
+          <div class="color-spec"><span class="lbl">RGB</span><strong>0, 60, 109</strong></div>
+          <div class="color-spec"><span class="lbl">CMYK</span><strong>100, 75, 20, 25</strong></div>
+          <div class="color-spec"><span class="lbl">PMS</span><strong>2955 C</strong></div>
+          <div class="swatch-role">Primary identity, signs, main nav &amp; hero</div>
+        </div>
+      </div>
+
+      <!-- Deep Navy -->
+      <div class="swatch-card">
+        <div class="swatch-color" style="background:#002244;"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Deep Navy</div>
+          <div class="color-spec"><span class="lbl">HEX</span><strong>#002244</strong></div>
+          <div class="color-spec"><span class="lbl">RGB</span><strong>0, 34, 68</strong></div>
+          <div class="color-spec"><span class="lbl">CMYK</span><strong>100, 85, 35, 55</strong></div>
+          <div class="color-spec"><span class="lbl">PMS</span><strong>282 C</strong></div>
+          <div class="swatch-role">Primary reading text, dark bases, formal dignity</div>
+        </div>
+      </div>
+
+      <!-- Pale Blue -->
+      <div class="swatch-card">
+        <div class="swatch-color" style="background:#E6F0FF;"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Pale Blue (Light)</div>
+          <div class="color-spec"><span class="lbl">HEX</span><strong>#E6F0FF</strong></div>
+          <div class="color-spec"><span class="lbl">RGB</span><strong>230, 240, 255</strong></div>
+          <div class="color-spec"><span class="lbl">CMYK</span><strong>10, 4, 0, 0</strong></div>
+          <div class="color-spec"><span class="lbl">PMS</span><strong>2707 C</strong></div>
+          <div class="swatch-role">Soft card tints, digital callouts, subtle contrast</div>
+        </div>
+      </div>
+
+      <!-- Warm Gold -->
+      <div class="swatch-card">
+        <div class="swatch-color" style="background:#D4A359;"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Warm Gold</div>
+          <div class="color-spec"><span class="lbl">HEX</span><strong>#D4A359</strong></div>
+          <div class="color-spec"><span class="lbl">RGB</span><strong>212, 163, 89</strong></div>
+          <div class="color-spec"><span class="lbl">CMYK</span><strong>18, 38, 78, 4</strong></div>
+          <div class="color-spec"><span class="lbl">PMS</span><strong>7556 C</strong></div>
+          <div class="swatch-role">Liturgical accent, highlights, brass signage</div>
+        </div>
+      </div>
+
+      <!-- White -->
+      <div class="swatch-card white-card">
+        <div class="swatch-color" style="background:#FFFFFF;"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Pure White</div>
+          <div class="color-spec"><span class="lbl">HEX</span><strong>#FFFFFF</strong></div>
+          <div class="color-spec"><span class="lbl">RGB</span><strong>255, 255, 255</strong></div>
+          <div class="color-spec"><span class="lbl">CMYK</span><strong>0, 0, 0, 0</strong></div>
+          <div class="color-spec"><span class="lbl">Paper</span><strong>Unprinted Stock</strong></div>
+          <div class="swatch-role">Negative space, high contrast, clean boards</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03: TYPOGRAPHY SYSTEM -->
+  <section>
+    <div class="sec-label">
+      03 / Typography Hierarchy &amp; Pairing
+      <span>Google Fonts open-source pairing — free for web, print, and Figma desktop use</span>
+    </div>
+    <div class="type-row">
+      <!-- Serif -->
+      <div class="type-specimen">
+        <div class="type-header">
+          <span class="type-name" style="font-family:var(--font-serif);">Source Serif 4</span>
+          <span class="type-badge">Primary Serif · Editorial</span>
+        </div>
+        <div class="type-sample-serif">“A place to belong, rooted in grace.”</div>
+        <div class="type-weights">
+          <strong>Weights:</strong> Regular 400 · Semibold 600 · Bold 700 (with Italics)
+        </div>
+        <div class="type-roles">
+          <strong>Primary Roles:</strong> A-frame main headlines, sermon series titles, scripture passages, liturgical orders of worship, bulletin headers, church nameplate.
+        </div>
+      </div>
+
+      <!-- Sans -->
+      <div class="type-specimen">
+        <div class="type-header">
+          <span class="type-name" style="font-family:var(--font-sans);">Poppins</span>
+          <span class="type-badge" style="background:#e6f0ff;color:#003c6d;">Primary Sans · Signage &amp; UI</span>
+        </div>
+        <div class="type-sample-sans">SUNDAY WORSHIP · 10:30 AM</div>
+        <div class="type-weights">
+          <strong>Weights:</strong> Regular 400 · Semibold 600 · Bold 700
+        </div>
+        <div class="type-roles">
+          <strong>Primary Roles:</strong> Service schedules, directional arrows &amp; wayfinding, website nav &amp; buttons, metadata/dates, podcast badges, phone/address details.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04: PRODUCTION & PRINT SPECIFICATIONS -->
+  <section>
+    <div class="sec-label">
+      04 / Production Standards &amp; Media Specifications
+      <span>Checklist for printers, signage fabricators, and web developers</span>
+    </div>
+    <div class="specs-grid">
+      <!-- Print Specs -->
+      <div class="spec-box">
+        <div class="spec-title">🖨️ Commercial Print Specs</div>
+        <ul class="spec-list">
+          <li><strong>Resolution:</strong> 300 dpi minimum at 1:1 scale</li>
+          <li><strong>Color Mode:</strong> CMYK or specified Pantone (PMS)</li>
+          <li><strong>Bleed &amp; Margin:</strong> 0.125″ bleed, 0.375″ safe margin</li>
+          <li><strong>Paper Sizes:</strong> Letter (8.5×11″), Tabloid (11×17″), A4</li>
+          <li><strong>Stock:</strong> Natural white uncoated or matte coated</li>
+        </ul>
+      </div>
+
+      <!-- Signage Specs -->
+      <div class="spec-box">
+        <div class="spec-title">🪧 Outdoor &amp; A-Frame Signs</div>
+        <ul class="spec-list">
+          <li><strong>Dimensions:</strong> Standard 24″ × 36″ sandwich board (2:3)</li>
+          <li><strong>Materials:</strong> Black metal architectural frame or cedar</li>
+          <li><strong>Faces:</strong> White or CPC Blue Polycarbonate</li>
+          <li><strong>Distance Check:</strong> 15–30 ft sidewalk legibility (Poppins)</li>
+          <li><strong>Resolution:</strong> 150–300 dpi at full physical scale</li>
+        </ul>
+      </div>
+
+      <!-- Digital Specs -->
+      <div class="spec-box">
+        <div class="spec-title">💻 Digital &amp; Screen Formats</div>
+        <ul class="spec-list">
+          <li><strong>Color Mode:</strong> sRGB color space for all displays</li>
+          <li><strong>Sermon Slides:</strong> 16:9 ratio (1920 × 1080 px)</li>
+          <li><strong>Podcast Cover:</strong> 1:1 ratio (min 1400×1400, max 3000×3000)</li>
+          <li><strong>Logo Vectors:</strong> SVG format with shapes converted to paths</li>
+          <li><strong>Web Transparency:</strong> 8-bit alpha PNG for raster icons</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div>
+      <strong>Christ Presbyterian Church</strong> · 135 Whitney Ave, New Haven, CT 06510
+    </div>
+    <div>
+      <strong>Online Brand Kit &amp; Vector Vectors:</strong> <a href="https://cpcnewhaven.org/brand-kit/">cpcnewhaven.org/brand-kit</a>
+    </div>
+  </footer>
+
+</div>
+
+</body>
+</html>

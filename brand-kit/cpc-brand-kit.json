@@ -1,0 +1,91 @@
+{
+  "name": "Christ Presbyterian Church Brand Kit",
+  "church": "Christ Presbyterian Church",
+  "location": "New Haven, Connecticut",
+  "url": "https://cpcnewhaven.org/brand-kit/",
+  "onePagerPdf": "https://cpcnewhaven.org/brand-kit/cpc-brand-kit-one-pager.pdf",
+  "colors": {
+    "cpcBlue": {
+      "name": "CPC Blue",
+      "hex": "#003C6D",
+      "rgb": "rgb(0, 60, 109)",
+      "cmyk": "100, 75, 20, 25",
+      "pantone": "PMS 2955 C",
+      "role": "Primary brand & outdoor signage"
+    },
+    "deepNavy": {
+      "name": "Deep Navy",
+      "hex": "#002244",
+      "rgb": "rgb(0, 34, 68)",
+      "cmyk": "100, 85, 35, 55",
+      "pantone": "PMS 282 C",
+      "role": "Authority, typography, dark bases, video slides"
+    },
+    "paleBlue": {
+      "name": "Pale Blue (Light)",
+      "hex": "#E6F0FF",
+      "rgb": "rgb(230, 240, 255)",
+      "cmyk": "10, 4, 0, 0",
+      "pantone": "PMS 2707 C",
+      "role": "Light blue card backgrounds, soft contrast, digital sermon cards"
+    },
+    "warmGold": {
+      "name": "Warm Gold",
+      "hex": "#D4A359",
+      "rgb": "rgb(212, 163, 89)",
+      "cmyk": "18, 38, 78, 4",
+      "pantone": "PMS 7556 C",
+      "role": "Liturgical accent, brass, & highlights"
+    },
+    "pureWhite": {
+      "name": "Pure White",
+      "hex": "#FFFFFF",
+      "rgb": "rgb(255, 255, 255)",
+      "cmyk": "0, 0, 0, 0",
+      "paper": "Unprinted Stock",
+      "role": "Pure contrast, sign boards, & reverse knockouts"
+    }
+  },
+  "typography": {
+    "sansSerif": {
+      "family": "Poppins",
+      "googleFontsUrl": "https://fonts.google.com/specimen/Poppins",
+      "weights": [400, 600, 700],
+      "roles": [
+        "A-Frame service schedules",
+        "Wayfinding & directional arrows",
+        "Website navigation & buttons",
+        "Metadata, dates & tags",
+        "Social & podcast tags"
+      ]
+    },
+    "serif": {
+      "family": "Source Serif 4",
+      "googleFontsUrl": "https://fonts.google.com/specimen/Source+Serif+4",
+      "weights": [400, 600, 700],
+      "roles": [
+        "A-Frame main headlines",
+        "Sermon titles & series",
+        "Scripture passages",
+        "Formal worship order & liturgy",
+        "Church nameplate"
+      ]
+    }
+  },
+  "formats": {
+    "print": {
+      "sizes": ["Letter (8.5 × 11 in)", "A4", "Tabloid (11 × 17 in)"],
+      "resolution": "300 dpi minimum at 100% final scale",
+      "colorMode": "CMYK or Pantone spot colors",
+      "bleedMargin": "0.125 in bleed, 0.375 in safe margin",
+      "outdoorAFrames": "24 × 36 in (2:3 ratio) at 150–300 dpi"
+    },
+    "digital": {
+      "colorSpace": "sRGB",
+      "slides": "16:9 ratio (1920 × 1080 px)",
+      "podcast": "1:1 ratio (min 1400 × 1400 px, max 3000 × 3000 px)",
+      "logoFormat": "SVG vector with outlines, 8-bit alpha PNG"
+    }
+  },
+  "logoStudy": "https://cpcnewhaven.org/brand-kit/logo-study/"
+}

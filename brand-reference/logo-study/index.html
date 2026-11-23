@@ -4,94 +4,198 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex">
-  <title>CPC New Haven · Logo study</title>
-  <meta name="description" content="Compare the CPC window mark with and without its outer circle, paired with Poppins.">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap">
-  <link rel="stylesheet" href="../style.css?v=window-1">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@600;700&amp;display=swap">
-  <link rel="stylesheet" href="study.css?v=serif-lockup">
+  <title>CPC New Haven · Logo Study & Vector Explorations</title>
+  <meta name="description" content="Compare the CPC window mark vector options, paired with Poppins and Source Serif Pro.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap">
+  <link rel="stylesheet" href="../style.css?v=2026-typography-aframes">
+  <link rel="stylesheet" href="study.css">
 </head>
 <body>
   <svg class="definitions" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
     <defs>
+      <!-- Original Clipped Bitmap Symbol -->
       <clipPath id="supplied-mark" clipPathUnits="userSpaceOnUse">
         <path d="M6 106H238V204H181V304H203V341H6Z"/>
       </clipPath>
       <symbol id="circle" viewBox="6 106 232 235">
         <image href="../references/original.png" width="447" height="447" clip-path="url(#supplied-mark)"/>
       </symbol>
-      <symbol id="open" viewBox="0 0 120 120">
-        <path d="M30 104V49C30 31 42 18 60 12C78 18 90 31 90 49V104ZM60 13V104M26 53H94M30 78H90"
-          fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+
+      <!-- Vector Option 1: Heritage Lancet with Gothic Tracery & Cross -->
+      <symbol id="heritage" viewBox="0 0 100 100">
+        <path d="M 18 84 L 18 38 C 18 20, 36 8, 50 4 C 64 8, 82 20, 82 38 L 82 84 Z" 
+              fill="none" stroke="currentColor" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M 24 84 L 24 45 C 24 33, 34 26, 47 18 M 53 18 C 66 26, 76 33, 76 45 L 76 84" 
+              fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+        <path d="M 50 5 L 50 84" fill="none" stroke="currentColor" stroke-width="4.2" stroke-linecap="round"/>
+        <path d="M 20 40 L 80 40" fill="none" stroke="currentColor" stroke-width="4.2" stroke-linecap="round"/>
+        <path d="M 20 62 L 80 62" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+        <path d="M 12 85 L 88 85" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
       </symbol>
-      <symbol id="simple" viewBox="0 0 120 120">
-        <path d="M30 103V49C30 31 42 18 60 12C78 18 90 31 90 49V103ZM60 13V103M30 58H90"
-          fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+
+      <!-- Vector Option 2: Modern Architectural Lancet -->
+      <symbol id="modern" viewBox="0 0 100 100">
+        <path d="M 22 82 V 38 C 22 22, 34 10, 50 6 C 66 10, 78 22, 78 38 V 82 Z" 
+              fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M 50 7 V 82" fill="none" stroke="currentColor" stroke-width="5.5" stroke-linecap="round"/>
+        <path d="M 23 42 H 77" fill="none" stroke="currentColor" stroke-width="5.5" stroke-linecap="round"/>
+        <path d="M 23 64 H 77" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+      </symbol>
+
+      <!-- Vector Option 3: Minimalist 2-Column Icon Mark -->
+      <symbol id="simple" viewBox="0 0 100 100">
+        <path d="M 24 82 V 42 C 24 25, 36 12, 50 8 C 64 12, 76 25, 76 42 V 82 Z" 
+              fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M 50 10 V 82" fill="none" stroke="currentColor" stroke-width="6.5" stroke-linecap="round"/>
+        <path d="M 26 46 H 74" fill="none" stroke="currentColor" stroke-width="6.5" stroke-linecap="round"/>
+      </symbol>
+
+      <!-- Vector Option 4: Collegiate Roundel / Seal -->
+      <symbol id="seal" viewBox="0 0 120 120">
+        <circle cx="60" cy="60" r="56" fill="none" stroke="currentColor" stroke-width="3"/>
+        <circle cx="60" cy="60" r="51" fill="none" stroke="currentColor" stroke-width="1.2" stroke-dasharray="2 3"/>
+        <circle cx="60" cy="60" r="41" fill="none" stroke="currentColor" stroke-width="2.2"/>
+        <g transform="translate(30, 22) scale(0.6)">
+          <path d="M 20 84 L 20 38 C 20 20, 36 8, 50 4 C 64 8, 80 20, 80 38 L 80 84 Z" 
+                fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+          <path d="M 50 6 L 50 84" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+          <path d="M 21 40 L 79 40" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+          <path d="M 21 62 L 79 62" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+        </g>
+        <path id="seal-text-path-top2" d="M 18,60 A 42,42 0 0,1 102,60" fill="none"/>
+        <path id="seal-text-path-bottom2" d="M 104,60 A 44,44 0 0,1 16,60" fill="none"/>
+        <text font-family="'Poppins', sans-serif" font-size="8.2" font-weight="700" letter-spacing="1.8" fill="currentColor">
+          <textPath href="#seal-text-path-top2" startOffset="50%" text-anchor="middle">
+            CHRIST PRESBYTERIAN
+          </textPath>
+        </text>
+        <text font-family="'Poppins', sans-serif" font-size="7.5" font-weight="600" letter-spacing="2.2" fill="currentColor">
+          <textPath href="#seal-text-path-bottom2" startOffset="50%" text-anchor="middle">
+            · NEW HAVEN ·
+          </textPath>
+        </text>
       </symbol>
     </defs>
   </svg>
-  <header class="mast"><div class="wrap mast-inner"><a href="../#identity">← CPC Brand reference</a><span>Team review · Draft</span></div></header>
+
+  <header class="mast">
+    <div class="wrap mast-inner">
+      <a href="/brand-kit/#logos">← CPC Brand Kit</a>
+      <span>Logo Study &amp; Vector Explorations</span>
+    </div>
+  </header>
+
   <main class="wrap">
     <header class="study-header">
       <p class="label">Christ Presbyterian Church</p>
-      <h1>Logo study</h1>
-      <p class="lede">The original window leads this round. Its panes and cross stay intact, with the Poppins lettering tucked into the opening on the right. Compare it with the two simplified marks below.</p>
+      <h1>Logo Study &amp; Options</h1>
+      <p class="lede">Exploring scalable SVG vector interpretations of the CPC lancet window mark, paired with Source Serif Pro and Poppins. Test each option at large display, small icon (48px and 24px), and signage scales.</p>
     </header>
-    <div class="options">
-    <article class="option">
-      <h2>Window 1 · Original mark</h2>
-      <p>The original panes and cross anchor the lettering, which sits close to the window.</p>
-      <div class="lockup-preview">
-        <div class="anchored-lockup">
-          <svg viewBox="0 0 120 120" role="img" aria-label="Original CPC window and cross"><use href="#circle"/></svg>
-          <div class="anchored-name">Christ<br>Presbyterian<br>Church<span>New Haven</span></div>
+
+    <div class="options" style="grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));">
+      
+      <!-- Option 1: Heritage Lancet & Source Serif Pro -->
+      <article class="option">
+        <h2>Option 1 · Heritage Serif</h2>
+        <p>Gothic lancet tracery with delicate mullions, paired with classical Source Serif Pro.</p>
+        <div class="lockup-preview">
+          <div class="lockup-heritage-serif">
+            <svg viewBox="0 0 100 100" style="width:54px;height:68px;" aria-hidden="true"><use href="#heritage"/></svg>
+            <div class="text">
+              <div class="church" style="font-family:var(--font-serif);font-size:1.15rem;font-weight:700;line-height:1.05;">Christ<br>Presbyterian<br>Church</div>
+              <div class="location" style="font-family:var(--font-sans);font-size:.65rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-top:.3rem;">New Haven</div>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="small-preview" aria-label="Mark shown at 48 and 24 pixels">
-        <div><svg class="medium" viewBox="0 0 120 120" aria-hidden="true"><use href="#circle"/></svg><span>48 px</span></div>
-        <div><svg class="small" viewBox="0 0 120 120" aria-hidden="true"><use href="#circle"/></svg><span>24 px</span></div>
-      </div>
-      <div class="sign-preview"><svg class="sign-mark" viewBox="0 0 120 120" aria-hidden="true"><use href="#circle"/></svg><div><strong>Sanctuary</strong><span>Christ Presbyterian Church</span></div><span class="arrow" aria-hidden="true">→</span></div>
-    </article>
-    <article class="option">
-      <h2>Window without circle</h2>
-      <p>The arched top, two columns and three rows carry the identity on their own.</p>
-      <div class="lockup-preview">
-        <svg class="mark" viewBox="0 0 120 120" aria-hidden="true"><use href="#open"/></svg>
-        <div class="name">Christ<br>Presbyterian<br>Church<span>New Haven</span></div>
-      </div>
-      <div class="small-preview" aria-label="Mark shown at 48 and 24 pixels">
-        <div><svg class="medium" viewBox="0 0 120 120" aria-hidden="true"><use href="#open"/></svg><span>48 px</span></div>
-        <div><svg class="small" viewBox="0 0 120 120" aria-hidden="true"><use href="#open"/></svg><span>24 px</span></div>
-      </div>
-      <div class="sign-preview"><svg class="sign-mark" viewBox="0 0 120 120" aria-hidden="true"><use href="#open"/></svg><div><strong>Sanctuary</strong><span>Christ Presbyterian Church</span></div><span class="arrow" aria-hidden="true">→</span></div>
-    </article>
-    <article class="option">
-      <h2>Simplified window</h2>
-      <p>One crossbar and a heavier stroke make the window easier to distinguish at small sizes.</p>
-      <div class="lockup-preview">
-        <svg class="serif-lockup" viewBox="0 0 252 99" role="img" aria-label="Simplified window beside Christ Presbyterian Church, New Haven">
-          <svg width="68" height="99" viewBox="26 8 68 99" aria-hidden="true">
-            <use href="#simple" width="120" height="120"/>
-          </svg>
-          <text x="73" y="16">CHRIST</text>
-          <text x="73" y="42">PRESBYTERIAN</text>
-          <text x="73" y="68">CHURCH</text>
-          <text class="lockup-city" x="73" y="99">NEW HAVEN</text>
-        </svg>
-      </div>
-      <div class="small-preview" aria-label="Mark shown at 48 and 24 pixels">
-        <div><svg class="medium" viewBox="0 0 120 120" aria-hidden="true"><use href="#simple"/></svg><span>48 px</span></div>
-        <div><svg class="small" viewBox="0 0 120 120" aria-hidden="true"><use href="#simple"/></svg><span>24 px</span></div>
-      </div>
-      <div class="sign-preview"><svg class="sign-mark" viewBox="0 0 120 120" aria-hidden="true"><use href="#simple"/></svg><div><strong>Sanctuary</strong><span>Christ Presbyterian Church</span></div><span class="arrow" aria-hidden="true">→</span></div>
-    </article>
+        <div class="small-preview" aria-label="Mark shown at 48 and 24 pixels">
+          <div><svg class="medium" viewBox="0 0 100 100" aria-hidden="true"><use href="#heritage"/></svg><span>48 px</span></div>
+          <div><svg class="small" viewBox="0 0 100 100" aria-hidden="true"><use href="#heritage"/></svg><span>24 px</span></div>
+        </div>
+        <div class="sign-preview">
+          <svg class="sign-mark" viewBox="0 0 100 100" aria-hidden="true"><use href="#heritage"/></svg>
+          <div><strong>Sanctuary</strong><span>Christ Presbyterian Church</span></div>
+          <span class="arrow" aria-hidden="true">→</span>
+        </div>
+      </article>
+
+      <!-- Option 2: Modern Architectural & Poppins -->
+      <article class="option">
+        <h2>Option 2 · Modern Sans</h2>
+        <p>Clean architectural window silhouette with bold geometric Poppins uppercase lettering.</p>
+        <div class="lockup-preview">
+          <div class="lockup-modern-sans">
+            <svg viewBox="0 0 100 100" style="width:50px;height:64px;" aria-hidden="true"><use href="#modern"/></svg>
+            <div class="text">
+              <div class="church" style="font-family:var(--font-sans);font-size:1.05rem;font-weight:700;line-height:1.08;text-transform:uppercase;">Christ<br>Presbyterian<br>Church</div>
+              <div class="location" style="font-family:var(--font-serif);font-size:.85rem;font-style:italic;color:var(--blue);margin-top:.15rem;">New Haven</div>
+            </div>
+          </div>
+        </div>
+        <div class="small-preview" aria-label="Mark shown at 48 and 24 pixels">
+          <div><svg class="medium" viewBox="0 0 100 100" aria-hidden="true"><use href="#modern"/></svg><span>48 px</span></div>
+          <div><svg class="small" viewBox="0 0 100 100" aria-hidden="true"><use href="#modern"/></svg><span>24 px</span></div>
+        </div>
+        <div class="sign-preview">
+          <svg class="sign-mark" viewBox="0 0 100 100" aria-hidden="true"><use href="#modern"/></svg>
+          <div><strong>Sanctuary</strong><span>Christ Presbyterian Church</span></div>
+          <span class="arrow" aria-hidden="true">→</span>
+        </div>
+      </article>
+
+      <!-- Option 3: Collegiate Heritage Seal -->
+      <article class="option">
+        <h2>Option 3 · Heritage Seal</h2>
+        <p>A circular medallion roundel reflecting New Haven's historic university town character.</p>
+        <div class="lockup-preview">
+          <svg viewBox="0 0 120 120" style="width:96px;height:96px;" aria-hidden="true"><use href="#seal"/></svg>
+        </div>
+        <div class="small-preview" aria-label="Mark shown at 48 and 24 pixels">
+          <div><svg class="medium" viewBox="0 0 120 120" aria-hidden="true"><use href="#seal"/></svg><span>48 px</span></div>
+          <div><svg class="small" viewBox="0 0 120 120" aria-hidden="true"><use href="#seal"/></svg><span>24 px</span></div>
+        </div>
+        <div class="sign-preview">
+          <svg class="sign-mark" viewBox="0 0 120 120" aria-hidden="true"><use href="#seal"/></svg>
+          <div><strong>Sanctuary</strong><span>Christ Presbyterian Church</span></div>
+          <span class="arrow" aria-hidden="true">→</span>
+        </div>
+      </article>
+
+      <!-- Option 4: Minimalist Window Icon -->
+      <article class="option">
+        <h2>Option 4 · High-Legibility Icon</h2>
+        <p>One crossbar and a robust stroke weight engineered for favicons and small mobile displays.</p>
+        <div class="lockup-preview">
+          <div style="display:flex;align-items:center;gap:.8rem;">
+            <svg viewBox="0 0 100 100" style="width:48px;height:60px;" aria-hidden="true"><use href="#simple"/></svg>
+            <div style="font-family:var(--font-sans);font-weight:700;font-size:1.05rem;line-height:1.1;">
+              CPC<br><span style="font-size:.8rem;font-weight:500;color:var(--muted);">NEW HAVEN</span>
+            </div>
+          </div>
+        </div>
+        <div class="small-preview" aria-label="Mark shown at 48 and 24 pixels">
+          <div><svg class="medium" viewBox="0 0 100 100" aria-hidden="true"><use href="#simple"/></svg><span>48 px</span></div>
+          <div><svg class="small" viewBox="0 0 100 100" aria-hidden="true"><use href="#simple"/></svg><span>24 px</span></div>
+        </div>
+        <div class="sign-preview">
+          <svg class="sign-mark" viewBox="0 0 100 100" aria-hidden="true"><use href="#simple"/></svg>
+          <div><strong>Sanctuary</strong><span>Christ Presbyterian Church</span></div>
+          <span class="arrow" aria-hidden="true">→</span>
+        </div>
+      </article>
+
     </div>
-    <section class="review" aria-labelledby="review-heading">
-      <h2 id="review-heading">Next proof</h2>
-      <p>Use Window 1 for the next sign proof. Check the spacing around the cross and the readability of New Haven at the intended viewing distance.</p>
+
+    <section class="review" aria-labelledby="review-heading" style="margin-top:2rem;">
+      <h2 id="review-heading">Recommendation for Signage</h2>
+      <p>For outdoor A-frame sidewalk signage and foyer wayfinding, <strong>Option 1 (Heritage Lancet)</strong> paired with <strong>Source Serif Pro</strong> headlines and <strong>Poppins</strong> directional text delivers the highest aesthetic resonance and readability from 15–30 feet.</p>
     </section>
   </main>
-  <footer class="wrap foot"><a href="../#identity">Back to the brand reference</a><span>CPC New Haven</span></footer>
+
+  <footer class="wrap foot">
+    <a href="/brand-kit/#logos">← Back to CPC Brand Kit</a>
+    <span>CPC New Haven</span>
+  </footer>
 </body>
 </html>
