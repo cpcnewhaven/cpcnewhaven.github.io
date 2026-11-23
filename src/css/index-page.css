@@ -87,6 +87,32 @@
     color: white;
 }
 
+.splash-hero--home .hero-learn-more {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 26px;
+    padding: 4px 0 6px;
+    border-bottom: 2px solid white;
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.4;
+    text-decoration: none;
+    transition: color 160ms ease, border-color 160ms ease;
+}
+
+.splash-hero--home .hero-learn-more:hover,
+.splash-hero--home .hero-learn-more:focus-visible {
+    border-color: #f0d094;
+    color: #f0d094;
+}
+
+.splash-hero--home .hero-learn-more:focus-visible {
+    outline: 2px solid #f0d094;
+    outline-offset: 6px;
+}
+
 /* Welcome Sunday feature */
 .welcome-sunday-feature {
     max-width: 1120px;
