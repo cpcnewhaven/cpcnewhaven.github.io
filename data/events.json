@@ -1,13 +1,7 @@
 {
-  "generatedAt": "2026-11-26T15:11:24.122715-05:00",
+  "generatedAt": "2026-11-27T14:58:14.275510-05:00",
   "source": "CPC Google Calendar",
   "events": [
-    {
-      "date": "2026-11-26",
-      "title": "Thanksgiving Fellowship Meals",
-      "description": "",
-      "allDay": true
-    },
     {
       "date": "2026-11-29",
       "title": "Worship Service",
@@ -71,6 +65,12 @@
     {
       "date": "2026-12-12",
       "title": "Lessons and Carols",
+      "description": "",
+      "allDay": false
+    },
+    {
+      "date": "2026-12-13",
+      "title": "Fellowship Lunch",
       "description": "",
       "allDay": false
     }
